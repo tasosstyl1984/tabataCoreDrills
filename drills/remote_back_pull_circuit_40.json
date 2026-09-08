@@ -1,0 +1,62 @@
+{
+  "id": "remote_back_pull_circuit_40",
+  "name": "Back pull circuit",
+  "createdAtMs": 1788901315000,
+  "sets": 4,
+  "repsPerSet": 6,
+  "workSeconds": 40,
+  "restBetweenRepsSeconds": 50,
+  "restBetweenSetsSeconds": 100,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          { "workSeconds": 40, "activityId": "pullUps", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "dumbbellRow", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "reverseFly", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "kettlebellRow", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "pullover", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "pullUps", "restAfterSeconds": 50 }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          { "workSeconds": 40, "activityId": "pullUps", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "dumbbellRow", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "reverseFly", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "kettlebellRow", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "pullover", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "pullUps", "restAfterSeconds": 50 }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          { "workSeconds": 40, "activityId": "pullUps", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "dumbbellRow", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "reverseFly", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "kettlebellRow", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "pullover", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "pullUps", "restAfterSeconds": 50 }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          { "workSeconds": 40, "activityId": "pullUps", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "dumbbellRow", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "reverseFly", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "kettlebellRow", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "pullover", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "pullUps", "restAfterSeconds": 50 }
+        ],
+        "restAfterSetSeconds": 100
+      }
+    ]
+  }
+}

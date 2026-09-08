@@ -1,6 +1,6 @@
 {
-  "version": 3,
-  "updatedAtMs": 1788870000000,
+  "version": 5,
+  "updatedAtMs": 1788901720600,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -242,6 +242,22 @@
       "updatedAtMs": 1788870000000,
       "category": "core",
       "description": "Core · 3×8 · 40s work / 30s rest — abs, twists, planks, hollow, knee raises"
+    },
+    {
+      "id": "remote_back_pull_circuit_40",
+      "name": "Back pull circuit",
+      "file": "drills/remote_back_pull_circuit_40.json",
+      "updatedAtMs": 1788901315000,
+      "category": "back",
+      "description": "Back · 4×6 · 40s work / 50s rest — pull-ups, rows, reverse fly, pullover"
+    },
+    {
+      "id": "remote_combo_kettle_boxing_45",
+      "name": "Kettle · boxing",
+      "file": "drills/remote_combo_kettle_boxing_45.json",
+      "updatedAtMs": 1788901720600,
+      "category": "combos",
+      "description": "Combos · 4×6 · 45s work / 50s rest — 3 kettlebell sets + 1 shadow boxing set"
     }
   ]
 }
