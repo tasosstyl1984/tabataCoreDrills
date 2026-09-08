@@ -1,0 +1,51 @@
+{
+  "id": "remote_example_boxing_rounds",
+  "name": "Boxing rounds (online)",
+  "createdAtMs": 0,
+  "sets": 3,
+  "repsPerSet": 6,
+  "workSeconds": 45,
+  "restBetweenRepsSeconds": 45,
+  "restBetweenSetsSeconds": 120,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          { "workSeconds": 45, "activityId": "shadowBoxing", "restAfterSeconds": 45 },
+          { "workSeconds": 45, "activityId": "shadowBoxing", "restAfterSeconds": 45 },
+          { "workSeconds": 45, "activityId": "shadowBoxing", "restAfterSeconds": 45 },
+          { "workSeconds": 45, "activityId": "shadowBoxing", "restAfterSeconds": 45 },
+          { "workSeconds": 45, "activityId": "shadowBoxing", "restAfterSeconds": 45 },
+          { "workSeconds": 45, "activityId": "shadowBoxing", "restAfterSeconds": 45 }
+        ],
+        "restAfterSetSeconds": 120
+      },
+      {
+        "rounds": [
+          { "workSeconds": 45, "activityId": "shadowBoxing", "restAfterSeconds": 45 },
+          { "workSeconds": 45, "activityId": "shadowBoxing", "restAfterSeconds": 45 },
+          { "workSeconds": 45, "activityId": "shadowBoxing", "restAfterSeconds": 45 },
+          { "workSeconds": 45, "activityId": "shadowBoxing", "restAfterSeconds": 45 },
+          { "workSeconds": 45, "activityId": "shadowBoxing", "restAfterSeconds": 45 },
+          { "workSeconds": 45, "activityId": "shadowBoxing", "restAfterSeconds": 45 }
+        ],
+        "restAfterSetSeconds": 120
+      },
+      {
+        "rounds": [
+          { "workSeconds": 45, "activityId": "shadowBoxing", "restAfterSeconds": 45 },
+          { "workSeconds": 45, "activityId": "shadowBoxing", "restAfterSeconds": 45 },
+          { "workSeconds": 45, "activityId": "shadowBoxing", "restAfterSeconds": 45 },
+          { "workSeconds": 45, "activityId": "shadowBoxing", "restAfterSeconds": 45 },
+          { "workSeconds": 45, "activityId": "shadowBoxing", "restAfterSeconds": 45 },
+          { "workSeconds": 45, "activityId": "shadowBoxing", "restAfterSeconds": 45 }
+        ],
+        "restAfterSetSeconds": 120
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "updatedAtMs": 1757332800000,
+  "baseUrl": "https://tasosstyl1984.github.io/tabataCoreDrills/",
+  "drills": [
+    {
+      "id": "remote_example_wall_pass",
+      "name": "Wall pass drills (online)",
+      "file": "drills/remote_example_wall_pass.json",
+      "updatedAtMs": 1757332800000,
+      "category": "football",
+      "description": "Four sets of wall-pass and control work. Download JSON to import, or sync from the app."
+    },
+    {
+      "id": "remote_example_boxing_rounds",
+      "name": "Boxing rounds (online)",
+      "file": "drills/remote_example_boxing_rounds.json",
+      "updatedAtMs": 1757332800000,
+      "category": "boxing",
+      "description": "Three boxing rounds with shadow-boxing tags. Download JSON to import, or sync from the app."
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "id": "remote_example_wall_pass",
+  "name": "Wall pass drills (online)",
+  "createdAtMs": 0,
+  "sets": 4,
+  "repsPerSet": 6,
+  "workSeconds": 40,
+  "restBetweenRepsSeconds": 50,
+  "restBetweenSetsSeconds": 90,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          { "workSeconds": 40, "activityId": "footballWallPassing", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "footballWallPassing", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "footballControl", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "footballWallPassing", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "footballFootwork", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "footballWallPassing", "restAfterSeconds": 50 }
+        ],
+        "restAfterSetSeconds": 90
+      },
+      {
+        "rounds": [
+          { "workSeconds": 40, "activityId": "footballWallPassing", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "footballWallPassing", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "footballControl", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "footballWallPassing", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "footballFootwork", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "footballWallPassing", "restAfterSeconds": 50 }
+        ],
+        "restAfterSetSeconds": 90
+      },
+      {
+        "rounds": [
+          { "workSeconds": 40, "activityId": "footballWallPassing", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "footballWallPassing", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "footballControl", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "footballWallPassing", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "footballFootwork", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "footballWallPassing", "restAfterSeconds": 50 }
+        ],
+        "restAfterSetSeconds": 90
+      },
+      {
+        "rounds": [
+          { "workSeconds": 40, "activityId": "footballWallPassing", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "footballWallPassing", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "footballControl", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "footballWallPassing", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "footballFootwork", "restAfterSeconds": 50 },
+          { "workSeconds": 40, "activityId": "footballWallPassing", "restAfterSeconds": 50 }
+        ],
+        "restAfterSetSeconds": 90
+      }
+    ]
+  }
+}

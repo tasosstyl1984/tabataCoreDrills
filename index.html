@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tabata Core Drills</title>
+  <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+  <header class="hero">
+    <p class="brand">Tabata Core</p>
+    <h1>Drills</h1>
+    <p class="tagline">Browse plans. Download one. Import in the app.</p>
+  </header>
+
+  <main>
+    <section class="import-help" aria-labelledby="import-title">
+      <h2 id="import-title">How to import</h2>
+      <ol>
+        <li>Download the JSON for a drill.</li>
+        <li>On your phone: open the file with Tabata Core, or go to <strong>Settings → Templates → Import</strong>.</li>
+        <li>The plan appears as an imported template — Duplicate to customize.</li>
+      </ol>
+      <p class="muted">In the app you can also use <strong>Check for updates</strong> under Templates to sync online drills automatically.</p>
+    </section>
+
+    <section class="toolbar" aria-label="Filters">
+      <label class="search">
+        <span class="sr-only">Search drills</span>
+        <input id="search" type="search" placeholder="Search by name or description" autocomplete="off" />
+      </label>
+      <div id="categories" class="chips" role="group" aria-label="Categories"></div>
+    </section>
+
+    <p id="status" class="status" role="status"></p>
+    <div id="grid" class="grid"></div>
+  </main>
+
+  <footer>
+    <p>Source catalog: <a href="catalog.json">catalog.json</a> · Hosted as GitHub Pages for <code>tabataCoreDrills</code>.</p>
+  </footer>
+
+  <script src="js/catalog.js"></script>
+</body>
+</html>
