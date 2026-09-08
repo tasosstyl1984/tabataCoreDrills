@@ -29,6 +29,11 @@
     hangingKneeRaises: "Knee raises",
     birdDog: "Bird dog",
     plateRotations: "Plate rotations",
+    pullUps: "Pull-ups",
+    dumbbellRow: "DB row",
+    reverseFly: "Reverse fly",
+    kettlebellRow: "KB row",
+    pullover: "Pullover",
   };
 
   function setStatus(msg) {
