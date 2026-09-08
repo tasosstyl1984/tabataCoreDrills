@@ -1,7 +1,7 @@
 {
   "version": 1,
   "updatedAtMs": 1757332800000,
-  "baseUrl": "https://tasosstyl1984.github.io/tabataCoreDrills/",
+  "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
       "id": "remote_example_wall_pass",
