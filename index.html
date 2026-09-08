@@ -36,6 +36,22 @@
     <div id="grid" class="grid"></div>
   </main>
 
+  <dialog id="preview-dialog" class="preview-dialog" aria-labelledby="preview-title">
+    <div class="preview-panel">
+      <header class="preview-header">
+        <div>
+          <p class="brand">Preview</p>
+          <h2 id="preview-title">Drill</h2>
+        </div>
+        <button type="button" id="preview-close" class="btn-ghost" aria-label="Close preview">Close</button>
+      </header>
+      <div id="preview-body" class="preview-body"></div>
+      <footer class="preview-footer">
+        <button type="button" id="preview-download">Download JSON</button>
+      </footer>
+    </div>
+  </dialog>
+
   <footer>
     <p>Source catalog: <a href="catalog.json">catalog.json</a> · Hosted as GitHub Pages for <code>tabataCoreDrills</code>.</p>
   </footer>
