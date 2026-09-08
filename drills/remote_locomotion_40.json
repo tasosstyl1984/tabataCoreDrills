@@ -1,0 +1,158 @@
+{
+  "id": "remote_locomotion_40",
+  "name": "Locomotion",
+  "createdAtMs": 1788869228466,
+  "sets": 4,
+  "repsPerSet": 6,
+  "workSeconds": 40,
+  "restBetweenRepsSeconds": 50,
+  "restBetweenSetsSeconds": 100,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "activityId": "bearCrawl",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "inchworm",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "mountainClimbers",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "farmerCarry",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "plank",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "jumpingJacks",
+            "restAfterSeconds": 50
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "activityId": "bearCrawl",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "inchworm",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "mountainClimbers",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "farmerCarry",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "plank",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "jumpingJacks",
+            "restAfterSeconds": 50
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "activityId": "bearCrawl",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "inchworm",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "mountainClimbers",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "farmerCarry",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "plank",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "jumpingJacks",
+            "restAfterSeconds": 50
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "activityId": "bearCrawl",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "inchworm",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "mountainClimbers",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "farmerCarry",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "plank",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "jumpingJacks",
+            "restAfterSeconds": 50
+          }
+        ],
+        "restAfterSetSeconds": 100
+      }
+    ]
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "id": "remote_kb_complex_40",
+  "name": "KB complex",
+  "createdAtMs": 1788869228466,
+  "sets": 4,
+  "repsPerSet": 6,
+  "workSeconds": 40,
+  "restBetweenRepsSeconds": 55,
+  "restBetweenSetsSeconds": 100,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "activityId": "kettlebellSwings",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "kettlebellGobletSquat",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "kettlebellCleanPress",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "kettlebellRow",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "kettlebellSnatch",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "kettlebellSwings",
+            "restAfterSeconds": 55
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "activityId": "kettlebellSwings",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "kettlebellGobletSquat",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "kettlebellCleanPress",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "kettlebellRow",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "kettlebellSnatch",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "kettlebellSwings",
+            "restAfterSeconds": 55
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "activityId": "kettlebellSwings",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "kettlebellGobletSquat",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "kettlebellCleanPress",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "kettlebellRow",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "kettlebellSnatch",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "kettlebellSwings",
+            "restAfterSeconds": 55
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "activityId": "kettlebellSwings",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "kettlebellGobletSquat",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "kettlebellCleanPress",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "kettlebellRow",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "kettlebellSnatch",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "kettlebellSwings",
+            "restAfterSeconds": 55
+          }
+        ],
+        "restAfterSetSeconds": 100
+      }
+    ]
+  }
+}

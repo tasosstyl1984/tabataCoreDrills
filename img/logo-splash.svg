@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="540" height="200" viewBox="0 0 540 200" fill="none">
+  <defs>
+    <linearGradient id="card" x1="34" y1="4" x2="506" y2="196" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0B0F12"/>
+      <stop offset="55%" stop-color="#06090C"/>
+      <stop offset="100%" stop-color="#000000"/>
+    </linearGradient>
+    <linearGradient id="word" x1="186" y1="64" x2="354" y2="136" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="55%" stop-color="#E8F6FF"/>
+      <stop offset="100%" stop-color="#D8F6FF"/>
+    </linearGradient>
+    <linearGradient id="coreBoltBanner" x1="-8" y1="-22" x2="12" y2="22" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="45%" stop-color="#FFE566"/>
+      <stop offset="100%" stop-color="#FF9A2E"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="34" y="4" width="472" height="192" rx="40" fill="url(#card)"/>
+  <rect x="34" y="4" width="472" height="192" rx="40" fill="none" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="2"/>
+
+  <!-- Centered stack; horizontal center of pill = 270 -->
+  <g transform="translate(270 100)">
+    <g transform="translate(0 -48) scale(1.08)">
+      <path d="M 34,0 L 17,29.445" fill="none" stroke="#00E8FF" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M 17,29.445 L -17,29.445" fill="none" stroke="#FF3B45" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M -17,29.445 L -34,0" fill="none" stroke="#00E8FF" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M -34,0 L -17,-29.445" fill="none" stroke="#FF3B45" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M -17,-29.445 L 17,-29.445" fill="none" stroke="#00E8FF" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M 17,-29.445 L 34,0" fill="none" stroke="#FF3B45" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path
+        d="M 30.5,0 L 15.25,26.5 L -15.25,26.5 L -30.5,0 L -15.25,-26.5 L 15.25,-26.5 Z"
+        fill="none"
+        stroke="#141A1E"
+        stroke-width="1.15"/>
+      <path
+        d="M 25.5,14.7225 L 22.47,12.97 M 0,29.445 L 0,25.445 M -25.5,14.7225 L -22.04,12.72 M -25.5,-14.7225 L -22.04,-12.72 M 0,-29.445 L 0,-25.445 M 25.5,-14.7225 L 22.04,-12.72"
+        fill="none"
+        stroke="#7AB8CC"
+        stroke-width="1.35"
+        stroke-linecap="round"
+        opacity="0.75"/>
+      <path
+        fill="url(#coreBoltBanner)"
+        d="M 3.5,-21 L -7.8,3.2 L 0.4,3.2 L -5.2,21.5 L 12.8,-4.5 L 3.8,-4.5 Z"/>
+      <path
+        fill="#FFFFFF"
+        fill-opacity="0.28"
+        d="M 3.5,-21 L -7.8,3.2 L 0.4,3.2 L -5.2,21.5 L 12.8,-4.5 L 3.8,-4.5 Z"
+        transform="scale(0.88)"/>
+    </g>
+
+    <g transform="translate(0 -10)">
+      <text
+        fill="url(#word)"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
+        font-size="32"
+        font-weight="800"
+        letter-spacing="-0.35"
+        text-anchor="middle"
+        x="0"
+        y="34">Tabata</text>
+      <text
+        fill="url(#word)"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
+        font-size="32"
+        font-weight="800"
+        letter-spacing="-0.35"
+        text-anchor="middle"
+        x="0"
+        y="66">Core</text>
+      <text
+        fill="#FFFFFF"
+        fill-opacity="0.72"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
+        font-size="14"
+        font-weight="600"
+        letter-spacing="0.12"
+        text-anchor="middle"
+        x="0"
+        y="86">Work. Rest. Repeat.</text>
+    </g>
+  </g>
+</svg>

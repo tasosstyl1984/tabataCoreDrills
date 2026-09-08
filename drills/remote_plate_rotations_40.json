@@ -1,0 +1,198 @@
+{
+  "id": "remote_plate_rotations_40",
+  "name": "Plate rotations",
+  "createdAtMs": 1788869228466,
+  "sets": 4,
+  "repsPerSet": 8,
+  "workSeconds": 40,
+  "restBetweenRepsSeconds": 50,
+  "restBetweenSetsSeconds": 90,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "activityId": "plateRotations",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "plateRotations",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "plateRotations",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "plateRotations",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "plateRotations",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "plateRotations",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "plateRotations",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "plateRotations",
+            "restAfterSeconds": 50
+          }
+        ],
+        "restAfterSetSeconds": 90
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "activityId": "plateRotations",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "plateRotations",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "plateRotations",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "plateRotations",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "plateRotations",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "plateRotations",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "plateRotations",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "plateRotations",
+            "restAfterSeconds": 50
+          }
+        ],
+        "restAfterSetSeconds": 90
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "activityId": "plateRotations",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "plateRotations",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "plateRotations",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "plateRotations",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "plateRotations",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "plateRotations",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "plateRotations",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "plateRotations",
+            "restAfterSeconds": 50
+          }
+        ],
+        "restAfterSetSeconds": 90
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "activityId": "plateRotations",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "plateRotations",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "plateRotations",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "plateRotations",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "plateRotations",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "plateRotations",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "plateRotations",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "plateRotations",
+            "restAfterSeconds": 50
+          }
+        ],
+        "restAfterSetSeconds": 90
+      }
+    ]
+  }
+}

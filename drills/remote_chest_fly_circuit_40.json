@@ -1,0 +1,158 @@
+{
+  "id": "remote_chest_fly_circuit_40",
+  "name": "Chest fly circuit",
+  "createdAtMs": 1788869228466,
+  "sets": 4,
+  "repsPerSet": 6,
+  "workSeconds": 40,
+  "restBetweenRepsSeconds": 50,
+  "restBetweenSetsSeconds": 100,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "activityId": "chestFlies",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "inclineFlies",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "dumbbellChestPress",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "chestFlies",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "pushups",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "pullover",
+            "restAfterSeconds": 50
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "activityId": "chestFlies",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "inclineFlies",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "dumbbellChestPress",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "chestFlies",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "pushups",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "pullover",
+            "restAfterSeconds": 50
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "activityId": "chestFlies",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "inclineFlies",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "dumbbellChestPress",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "chestFlies",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "pushups",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "pullover",
+            "restAfterSeconds": 50
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "activityId": "chestFlies",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "inclineFlies",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "dumbbellChestPress",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "chestFlies",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "pushups",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "pullover",
+            "restAfterSeconds": 50
+          }
+        ],
+        "restAfterSetSeconds": 100
+      }
+    ]
+  }
+}

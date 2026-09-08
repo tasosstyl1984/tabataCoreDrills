@@ -1,0 +1,158 @@
+{
+  "id": "remote_lower_body_functional_40",
+  "name": "Lower body functional",
+  "createdAtMs": 1788869228466,
+  "sets": 4,
+  "repsPerSet": 6,
+  "workSeconds": 40,
+  "restBetweenRepsSeconds": 55,
+  "restBetweenSetsSeconds": 100,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "activityId": "squats",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "lunges",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "stepUps",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "thrusters",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "wallBalls",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "kettlebellGobletSquat",
+            "restAfterSeconds": 55
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "activityId": "squats",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "lunges",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "stepUps",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "thrusters",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "wallBalls",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "kettlebellGobletSquat",
+            "restAfterSeconds": 55
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "activityId": "squats",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "lunges",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "stepUps",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "thrusters",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "wallBalls",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "kettlebellGobletSquat",
+            "restAfterSeconds": 55
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "activityId": "squats",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "lunges",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "stepUps",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "thrusters",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "wallBalls",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "kettlebellGobletSquat",
+            "restAfterSeconds": 55
+          }
+        ],
+        "restAfterSetSeconds": 100
+      }
+    ]
+  }
+}

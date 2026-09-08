@@ -1,23 +1,239 @@
 {
-  "version": 1,
-  "updatedAtMs": 1757332800000,
+  "version": 2,
+  "updatedAtMs": 1788869228466,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
-      "id": "remote_example_wall_pass",
-      "name": "Wall pass drills (online)",
-      "file": "drills/remote_example_wall_pass.json",
-      "updatedAtMs": 1757332800000,
-      "category": "football",
-      "description": "Four sets of wall-pass and control work. Download JSON to import, or sync from the app."
+      "id": "remote_tabata_classic",
+      "name": "Tabata Classic",
+      "file": "drills/remote_tabata_classic.json",
+      "updatedAtMs": 1788869228466,
+      "category": "classic",
+      "description": "Classic · 1×8 · 20s work / 10s rest"
     },
     {
-      "id": "remote_example_boxing_rounds",
-      "name": "Boxing rounds (online)",
-      "file": "drills/remote_example_boxing_rounds.json",
-      "updatedAtMs": 1757332800000,
+      "id": "remote_wall_pass_drills_40",
+      "name": "Wall pass drills",
+      "file": "drills/remote_wall_pass_drills_40.json",
+      "updatedAtMs": 1788869228466,
+      "category": "football",
+      "description": "Football · 4×6 · 40s work / 50s rest"
+    },
+    {
+      "id": "remote_jump_rope_drills_50",
+      "name": "Jump rope drills",
+      "file": "drills/remote_jump_rope_drills_50.json",
+      "updatedAtMs": 1788869228466,
+      "category": "conditioning",
+      "description": "Conditioning · 4×8 · 45s work / 45s rest"
+    },
+    {
+      "id": "remote_kettlebell_drills_40",
+      "name": "Kettlebell drills",
+      "file": "drills/remote_kettlebell_drills_40.json",
+      "updatedAtMs": 1788869228466,
+      "category": "kettlebell",
+      "description": "Kettlebell · 4×6 · 40s work / 55s rest"
+    },
+    {
+      "id": "remote_kb_complex_40",
+      "name": "KB complex",
+      "file": "drills/remote_kb_complex_40.json",
+      "updatedAtMs": 1788869228466,
+      "category": "kettlebell",
+      "description": "Kettlebell · 4×6 · 40s work / 55s rest"
+    },
+    {
+      "id": "remote_dumbbell_arms_40",
+      "name": "DB arms",
+      "file": "drills/remote_dumbbell_arms_40.json",
+      "updatedAtMs": 1788869228466,
+      "category": "dumbbell",
+      "description": "Dumbbell · 4×6 · 40s work / 50s rest"
+    },
+    {
+      "id": "remote_dumbbell_shoulders_40",
+      "name": "DB shoulders · back",
+      "file": "drills/remote_dumbbell_shoulders_40.json",
+      "updatedAtMs": 1788869228466,
+      "category": "dumbbell",
+      "description": "Dumbbell · 4×6 · 40s work / 50s rest"
+    },
+    {
+      "id": "remote_chest_press_40",
+      "name": "Chest press",
+      "file": "drills/remote_chest_press_40.json",
+      "updatedAtMs": 1788869228466,
+      "category": "chest",
+      "description": "Chest · 4×6 · 40s work / 55s rest"
+    },
+    {
+      "id": "remote_chest_fly_circuit_40",
+      "name": "Chest fly circuit",
+      "file": "drills/remote_chest_fly_circuit_40.json",
+      "updatedAtMs": 1788869228466,
+      "category": "chest",
+      "description": "Chest · 4×6 · 40s work / 50s rest"
+    },
+    {
+      "id": "remote_functional_mixed_45",
+      "name": "Rope · swings · push · plyo",
+      "file": "drills/remote_functional_mixed_45.json",
+      "updatedAtMs": 1788869228466,
+      "category": "conditioning",
+      "description": "Conditioning · 4×6 · 45s work / 50s rest"
+    },
+    {
+      "id": "remote_plyo_power_30",
+      "name": "Plyo power",
+      "file": "drills/remote_plyo_power_30.json",
+      "updatedAtMs": 1788869228466,
+      "category": "plyometrics",
+      "description": "Plyometrics · 4×6 · 40s work / 50s rest"
+    },
+    {
+      "id": "remote_engine_conditioning_45",
+      "name": "Engine conditioning",
+      "file": "drills/remote_engine_conditioning_45.json",
+      "updatedAtMs": 1788869228466,
+      "category": "conditioning",
+      "description": "Conditioning · 4×6 · 45s work / 50s rest"
+    },
+    {
+      "id": "remote_lower_body_functional_40",
+      "name": "Lower body functional",
+      "file": "drills/remote_lower_body_functional_40.json",
+      "updatedAtMs": 1788869228466,
+      "category": "strength",
+      "description": "Strength · 4×6 · 40s work / 55s rest"
+    },
+    {
+      "id": "remote_push_pull_core_40",
+      "name": "Push · pull · core",
+      "file": "drills/remote_push_pull_core_40.json",
+      "updatedAtMs": 1788869228466,
+      "category": "strength",
+      "description": "Strength · 4×6 · 40s work / 50s rest"
+    },
+    {
+      "id": "remote_plate_rotations_40",
+      "name": "Plate rotations",
+      "file": "drills/remote_plate_rotations_40.json",
+      "updatedAtMs": 1788869228466,
+      "category": "core",
+      "description": "Core · 4×8 · 40s work / 50s rest"
+    },
+    {
+      "id": "remote_core_rotation_circuit_40",
+      "name": "Core rotation circuit",
+      "file": "drills/remote_core_rotation_circuit_40.json",
+      "updatedAtMs": 1788869228466,
+      "category": "core",
+      "description": "Core · 4×8 · 40s work / 50s rest"
+    },
+    {
+      "id": "remote_core_holds_40",
+      "name": "Core holds",
+      "file": "drills/remote_core_holds_40.json",
+      "updatedAtMs": 1788869228466,
+      "category": "core",
+      "description": "Core · 4×6 · 40s work / 50s rest"
+    },
+    {
+      "id": "remote_split_squat_lower_40",
+      "name": "Split squat lower",
+      "file": "drills/remote_split_squat_lower_40.json",
+      "updatedAtMs": 1788869228466,
+      "category": "strength",
+      "description": "Strength · 4×6 · 40s work / 55s rest"
+    },
+    {
+      "id": "remote_locomotion_40",
+      "name": "Locomotion",
+      "file": "drills/remote_locomotion_40.json",
+      "updatedAtMs": 1788869228466,
+      "category": "conditioning",
+      "description": "Conditioning · 4×6 · 40s work / 50s rest"
+    },
+    {
+      "id": "remote_plyo_lateral_30",
+      "name": "Plyo laterals",
+      "file": "drills/remote_plyo_lateral_30.json",
+      "updatedAtMs": 1788869228466,
+      "category": "plyometrics",
+      "description": "Plyometrics · 4×6 · 40s work / 50s rest"
+    },
+    {
+      "id": "remote_combo_wall_rope_kettle_45",
+      "name": "Wall · rope · kettle",
+      "file": "drills/remote_combo_wall_rope_kettle_45.json",
+      "updatedAtMs": 1788869228466,
+      "category": "combos",
+      "description": "Combos · 3×8 · 45s work / 50s rest"
+    },
+    {
+      "id": "remote_combo_rope_kettle_core_40",
+      "name": "Rope · kettle · core",
+      "file": "drills/remote_combo_rope_kettle_core_40.json",
+      "updatedAtMs": 1788869228466,
+      "category": "combos",
+      "description": "Combos · 3×8 · 45s work / 50s rest"
+    },
+    {
+      "id": "remote_combo_wall_wall_rope_40",
+      "name": "Wall · wall · rope",
+      "file": "drills/remote_combo_wall_wall_rope_40.json",
+      "updatedAtMs": 1788869228466,
+      "category": "combos",
+      "description": "Combos · 3×8 · 45s work / 50s rest"
+    },
+    {
+      "id": "remote_combo_full_stack_50",
+      "name": "Wall · rope · kettle · core",
+      "file": "drills/remote_combo_full_stack_50.json",
+      "updatedAtMs": 1788869228466,
+      "category": "combos",
+      "description": "Combos · 4×7 · 45s work / 50s rest"
+    },
+    {
+      "id": "remote_football_skills_30",
+      "name": "Football skills 30",
+      "file": "drills/remote_football_skills_30.json",
+      "updatedAtMs": 1788869228466,
+      "category": "football",
+      "description": "Football · 3×6 · 45s work / 45s rest"
+    },
+    {
+      "id": "remote_football_ball_mastery_30",
+      "name": "Football ball mastery 30",
+      "file": "drills/remote_football_ball_mastery_30.json",
+      "updatedAtMs": 1788869228466,
+      "category": "football",
+      "description": "Football · 4×5 · 45s work / 45s rest"
+    },
+    {
+      "id": "remote_football_control_circuit_30",
+      "name": "Football control circuit 30",
+      "file": "drills/remote_football_control_circuit_30.json",
+      "updatedAtMs": 1788869228466,
+      "category": "football",
+      "description": "Football · 4×5 · 45s work / 45s rest"
+    },
+    {
+      "id": "remote_boxing_rounds_30",
+      "name": "Boxing rounds 30",
+      "file": "drills/remote_boxing_rounds_30.json",
+      "updatedAtMs": 1788869228466,
       "category": "boxing",
-      "description": "Three boxing rounds with shadow-boxing tags. Download JSON to import, or sync from the app."
+      "description": "Boxing · 3×6 · 45s work / 45s rest"
+    },
+    {
+      "id": "remote_hiit_strength_30",
+      "name": "HIIT strength 30",
+      "file": "drills/remote_hiit_strength_30.json",
+      "updatedAtMs": 1788869228466,
+      "category": "conditioning",
+      "description": "Conditioning · 3×6 · 45s work / 45s rest"
     }
   ]
 }

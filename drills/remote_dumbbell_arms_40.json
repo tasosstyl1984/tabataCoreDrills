@@ -1,0 +1,158 @@
+{
+  "id": "remote_dumbbell_arms_40",
+  "name": "DB arms",
+  "createdAtMs": 1788869228466,
+  "sets": 4,
+  "repsPerSet": 6,
+  "workSeconds": 40,
+  "restBetweenRepsSeconds": 50,
+  "restBetweenSetsSeconds": 100,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "activityId": "bicepCurls",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "hammerCurls",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "concentrationCurls",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "tricepKickbacks",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "overheadTricepExtension",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "bicepCurls",
+            "restAfterSeconds": 50
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "activityId": "bicepCurls",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "hammerCurls",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "concentrationCurls",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "tricepKickbacks",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "overheadTricepExtension",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "bicepCurls",
+            "restAfterSeconds": 50
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "activityId": "bicepCurls",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "hammerCurls",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "concentrationCurls",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "tricepKickbacks",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "overheadTricepExtension",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "bicepCurls",
+            "restAfterSeconds": 50
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "activityId": "bicepCurls",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "hammerCurls",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "concentrationCurls",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "tricepKickbacks",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "overheadTricepExtension",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "bicepCurls",
+            "restAfterSeconds": 50
+          }
+        ],
+        "restAfterSetSeconds": 100
+      }
+    ]
+  }
+}

@@ -4,24 +4,46 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tabata Core Drills</title>
-  <link rel="stylesheet" href="css/site.css?v=3" />
+  <meta name="description" content="Browse and download Tabata Core workout drills. Import them into the Tabata Core Android app." />
+  <link rel="icon" href="img/logo-mark.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/site.css?v=5" />
 </head>
 <body>
   <header class="hero">
-    <p class="brand">Tabata Core</p>
-    <h1>Drills</h1>
-    <p class="tagline">Browse plans. Download one. Import in the app.</p>
+    <div class="hero-brand">
+      <img
+        class="hero-logo"
+        src="img/logo-mark.svg"
+        width="80"
+        height="80"
+        alt="Tabata Core logo"
+      />
+      <div class="hero-copy">
+        <p class="brand">Tabata Core</p>
+        <h1>Drills</h1>
+        <p class="tagline">Browse plans. Preview a session. Download JSON and import in the app.</p>
+      </div>
+    </div>
+    <a
+      class="play-cta"
+      href="https://play.google.com/store/apps/details?id=com.tabatacore.app&hl=en"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <span class="play-cta-icon" aria-hidden="true">▶</span>
+      Get Tabata Core on Google Play
+    </a>
   </header>
 
   <main>
     <section class="import-help" aria-labelledby="import-title">
       <h2 id="import-title">How to import</h2>
       <ol>
-        <li>Download the JSON for a drill.</li>
+        <li>Preview a drill, then download the JSON.</li>
         <li>On your phone: open the file with Tabata Core, or go to <strong>Settings → Templates → Import</strong>.</li>
         <li>The plan appears as an imported template — Duplicate to customize.</li>
       </ol>
-      <p class="muted">In the app you can also use <strong>Check for updates</strong> under Templates to sync online drills automatically.</p>
+      <p class="muted">In the app you can also use <strong>Check for online drills</strong> under Templates to sync automatically.</p>
     </section>
 
     <section class="toolbar" aria-label="Filters">
@@ -52,10 +74,31 @@
     </div>
   </dialog>
 
-  <footer>
-    <p>Source catalog: <a href="catalog.json">catalog.json</a> · Hosted as GitHub Pages for <code>tabataCoreDrills</code>.</p>
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div class="site-footer-brand">
+        <img src="img/logo-mark.svg" width="44" height="44" alt="" class="footer-logo" />
+        <div>
+          <strong>Tabata Core</strong>
+          <p>Fullscreen interval timer for gym and home workouts.</p>
+        </div>
+      </div>
+      <nav class="site-footer-links" aria-label="Footer">
+        <a
+          href="https://play.google.com/store/apps/details?id=com.tabatacore.app&hl=en"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Google Play</a>
+        <a
+          href="https://github.com/tasosstyl1984/tabataCoreDrills"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Drills source</a>
+      </nav>
+      <p class="site-footer-copy">Tabata Core · 2026</p>
+    </div>
   </footer>
 
-  <script src="js/catalog.js?v=3"></script>
+  <script src="js/catalog.js?v=5"></script>
 </body>
 </html>

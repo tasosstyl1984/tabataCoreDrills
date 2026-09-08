@@ -1,0 +1,158 @@
+{
+  "id": "remote_dumbbell_shoulders_40",
+  "name": "DB shoulders · back",
+  "createdAtMs": 1788869228466,
+  "sets": 4,
+  "repsPerSet": 6,
+  "workSeconds": 40,
+  "restBetweenRepsSeconds": 50,
+  "restBetweenSetsSeconds": 100,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "activityId": "dumbbellShoulderPress",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "lateralRaises",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "frontRaises",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "dumbbellRow",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "reverseFly",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "dumbbellShoulderPress",
+            "restAfterSeconds": 50
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "activityId": "dumbbellShoulderPress",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "lateralRaises",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "frontRaises",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "dumbbellRow",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "reverseFly",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "dumbbellShoulderPress",
+            "restAfterSeconds": 50
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "activityId": "dumbbellShoulderPress",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "lateralRaises",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "frontRaises",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "dumbbellRow",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "reverseFly",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "dumbbellShoulderPress",
+            "restAfterSeconds": 50
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "activityId": "dumbbellShoulderPress",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "lateralRaises",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "frontRaises",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "dumbbellRow",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "reverseFly",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "dumbbellShoulderPress",
+            "restAfterSeconds": 50
+          }
+        ],
+        "restAfterSetSeconds": 100
+      }
+    ]
+  }
+}

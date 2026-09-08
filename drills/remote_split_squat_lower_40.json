@@ -1,0 +1,158 @@
+{
+  "id": "remote_split_squat_lower_40",
+  "name": "Split squat lower",
+  "createdAtMs": 1788869228466,
+  "sets": 4,
+  "repsPerSet": 6,
+  "workSeconds": 40,
+  "restBetweenRepsSeconds": 55,
+  "restBetweenSetsSeconds": 100,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "activityId": "lunges",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "bulgarianSplitSquat",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "gluteBridge",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "calfRaises",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "squats",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "kettlebellGobletSquat",
+            "restAfterSeconds": 55
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "activityId": "lunges",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "bulgarianSplitSquat",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "gluteBridge",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "calfRaises",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "squats",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "kettlebellGobletSquat",
+            "restAfterSeconds": 55
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "activityId": "lunges",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "bulgarianSplitSquat",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "gluteBridge",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "calfRaises",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "squats",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "kettlebellGobletSquat",
+            "restAfterSeconds": 55
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "activityId": "lunges",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "bulgarianSplitSquat",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "gluteBridge",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "calfRaises",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "squats",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "kettlebellGobletSquat",
+            "restAfterSeconds": 55
+          }
+        ],
+        "restAfterSetSeconds": 100
+      }
+    ]
+  }
+}

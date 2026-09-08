@@ -1,0 +1,55 @@
+{
+  "id": "remote_tabata_classic",
+  "name": "Tabata Classic",
+  "createdAtMs": 1788869228466,
+  "sets": 1,
+  "repsPerSet": 8,
+  "workSeconds": 20,
+  "restBetweenRepsSeconds": 10,
+  "restBetweenSetsSeconds": 60,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10
+          }
+        ],
+        "restAfterSetSeconds": 60
+      }
+    ]
+  }
+}

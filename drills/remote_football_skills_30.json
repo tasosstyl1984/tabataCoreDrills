@@ -1,0 +1,123 @@
+{
+  "id": "remote_football_skills_30",
+  "name": "Football skills 30",
+  "createdAtMs": 1788869228466,
+  "sets": 3,
+  "repsPerSet": 6,
+  "workSeconds": 45,
+  "restBetweenRepsSeconds": 45,
+  "restBetweenSetsSeconds": 120,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "activityId": "footballWallPassing",
+            "restAfterSeconds": 45
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "footballDribbling",
+            "restAfterSeconds": 45
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "footballBallMastery",
+            "restAfterSeconds": 45
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "footballControl",
+            "restAfterSeconds": 45
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "footballFootwork",
+            "restAfterSeconds": 45
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "footballReactionDrills",
+            "restAfterSeconds": 45
+          }
+        ],
+        "restAfterSetSeconds": 120
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "activityId": "footballWallPassing",
+            "restAfterSeconds": 45
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "footballDribbling",
+            "restAfterSeconds": 45
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "footballBallMastery",
+            "restAfterSeconds": 45
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "footballControl",
+            "restAfterSeconds": 45
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "footballFootwork",
+            "restAfterSeconds": 45
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "footballReactionDrills",
+            "restAfterSeconds": 45
+          }
+        ],
+        "restAfterSetSeconds": 120
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "activityId": "footballWallPassing",
+            "restAfterSeconds": 45
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "footballDribbling",
+            "restAfterSeconds": 45
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "footballBallMastery",
+            "restAfterSeconds": 45
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "footballControl",
+            "restAfterSeconds": 45
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "footballFootwork",
+            "restAfterSeconds": 45
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "footballReactionDrills",
+            "restAfterSeconds": 45
+          }
+        ],
+        "restAfterSetSeconds": 120
+      }
+    ]
+  }
+}

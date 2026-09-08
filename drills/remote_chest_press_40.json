@@ -1,0 +1,158 @@
+{
+  "id": "remote_chest_press_40",
+  "name": "Chest press",
+  "createdAtMs": 1788869228466,
+  "sets": 4,
+  "repsPerSet": 6,
+  "workSeconds": 40,
+  "restBetweenRepsSeconds": 55,
+  "restBetweenSetsSeconds": 100,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "activityId": "benchPress",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "inclineBench",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "dumbbellChestPress",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "pushups",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "pullover",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "benchPress",
+            "restAfterSeconds": 55
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "activityId": "benchPress",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "inclineBench",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "dumbbellChestPress",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "pushups",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "pullover",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "benchPress",
+            "restAfterSeconds": 55
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "activityId": "benchPress",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "inclineBench",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "dumbbellChestPress",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "pushups",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "pullover",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "benchPress",
+            "restAfterSeconds": 55
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "activityId": "benchPress",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "inclineBench",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "dumbbellChestPress",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "pushups",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "pullover",
+            "restAfterSeconds": 55
+          },
+          {
+            "workSeconds": 40,
+            "activityId": "benchPress",
+            "restAfterSeconds": 55
+          }
+        ],
+        "restAfterSetSeconds": 100
+      }
+    ]
+  }
+}

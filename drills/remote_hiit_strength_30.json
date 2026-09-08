@@ -1,0 +1,123 @@
+{
+  "id": "remote_hiit_strength_30",
+  "name": "HIIT strength 30",
+  "createdAtMs": 1788869228466,
+  "sets": 3,
+  "repsPerSet": 6,
+  "workSeconds": 45,
+  "restBetweenRepsSeconds": 45,
+  "restBetweenSetsSeconds": 120,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "activityId": "burpees",
+            "restAfterSeconds": 45
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "thrusters",
+            "restAfterSeconds": 45
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "boxJumps",
+            "restAfterSeconds": 45
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "medBallSlams",
+            "restAfterSeconds": 45
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "farmerCarry",
+            "restAfterSeconds": 45
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "mountainClimbers",
+            "restAfterSeconds": 45
+          }
+        ],
+        "restAfterSetSeconds": 120
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "activityId": "burpees",
+            "restAfterSeconds": 45
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "thrusters",
+            "restAfterSeconds": 45
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "boxJumps",
+            "restAfterSeconds": 45
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "medBallSlams",
+            "restAfterSeconds": 45
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "farmerCarry",
+            "restAfterSeconds": 45
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "mountainClimbers",
+            "restAfterSeconds": 45
+          }
+        ],
+        "restAfterSetSeconds": 120
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "activityId": "burpees",
+            "restAfterSeconds": 45
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "thrusters",
+            "restAfterSeconds": 45
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "boxJumps",
+            "restAfterSeconds": 45
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "medBallSlams",
+            "restAfterSeconds": 45
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "farmerCarry",
+            "restAfterSeconds": 45
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "mountainClimbers",
+            "restAfterSeconds": 45
+          }
+        ],
+        "restAfterSetSeconds": 120
+      }
+    ]
+  }
+}

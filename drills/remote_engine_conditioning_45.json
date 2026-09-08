@@ -1,0 +1,158 @@
+{
+  "id": "remote_engine_conditioning_45",
+  "name": "Engine conditioning",
+  "createdAtMs": 1788869228466,
+  "sets": 4,
+  "repsPerSet": 6,
+  "workSeconds": 45,
+  "restBetweenRepsSeconds": 50,
+  "restBetweenSetsSeconds": 100,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "activityId": "battleRopes",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "medBallSlams",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "farmerCarry",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "sledPush",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "rowing",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "mountainClimbers",
+            "restAfterSeconds": 50
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "activityId": "battleRopes",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "medBallSlams",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "farmerCarry",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "sledPush",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "rowing",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "mountainClimbers",
+            "restAfterSeconds": 50
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "activityId": "battleRopes",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "medBallSlams",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "farmerCarry",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "sledPush",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "rowing",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "mountainClimbers",
+            "restAfterSeconds": 50
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "activityId": "battleRopes",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "medBallSlams",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "farmerCarry",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "sledPush",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "rowing",
+            "restAfterSeconds": 50
+          },
+          {
+            "workSeconds": 45,
+            "activityId": "mountainClimbers",
+            "restAfterSeconds": 50
+          }
+        ],
+        "restAfterSetSeconds": 100
+      }
+    ]
+  }
+}
