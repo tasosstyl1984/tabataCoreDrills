@@ -23,7 +23,7 @@
   };
 
   function setStatus(msg) {
-    statusEl.textContent = msg || "";
+    if (statusEl) statusEl.textContent = msg || "";
   }
 
   function categoriesFrom(drills) {
@@ -35,6 +35,7 @@
   }
 
   function renderChips(cats) {
+    if (!categoriesEl) return;
     categoriesEl.innerHTML = "";
     for (const cat of cats) {
       const btn = document.createElement("button");
@@ -52,7 +53,7 @@
   }
 
   function filteredDrills() {
-    const q = (searchEl.value || "").trim().toLowerCase();
+    const q = (searchEl?.value || "").trim().toLowerCase();
     return (catalog.drills || []).filter((d) => {
       if (activeCategory !== "all" && d.category !== activeCategory) return false;
       if (!q) return true;
@@ -61,13 +62,14 @@
     });
   }
 
+  /** Website always loads drills same-origin (Pages / local). App uses catalog.baseUrl. */
   function drillFileUrl(entry) {
-    return new URL(entry.file, catalog.baseUrl || window.location.href).toString();
+    return new URL(entry.file, window.location.href).toString();
   }
 
   async function fetchTemplate(entry) {
     if (templateCache.has(entry.id)) return templateCache.get(entry.id);
-    const res = await fetch(drillFileUrl(entry));
+    const res = await fetch(drillFileUrl(entry), { cache: "no-store" });
     if (!res.ok) throw new Error(`Could not fetch ${entry.file} (${res.status})`);
     const template = await res.json();
     templateCache.set(entry.id, template);
@@ -191,35 +193,59 @@
     `;
   }
 
+  function showDialog() {
+    if (!dialog) return false;
+    try {
+      if (typeof dialog.showModal === "function") {
+        if (!dialog.open) dialog.showModal();
+      } else {
+        dialog.setAttribute("open", "");
+      }
+      return true;
+    } catch (_) {
+      dialog.setAttribute("open", "");
+      return true;
+    }
+  }
+
+  function hideDialog() {
+    if (!dialog) return;
+    try {
+      if (typeof dialog.close === "function" && dialog.open) {
+        dialog.close();
+      } else {
+        dialog.removeAttribute("open");
+      }
+    } catch (_) {
+      dialog.removeAttribute("open");
+    }
+  }
+
   async function openPreview(entry) {
     previewEntry = entry;
-    previewTitle.textContent = entry.name || entry.id;
-    previewBody.innerHTML = `<p class="muted">Loading preview…</p>`;
-    previewDownloadBtn.disabled = true;
-    if (typeof dialog.showModal === "function") {
-      dialog.showModal();
-    } else {
-      dialog.setAttribute("open", "");
-    }
+    if (previewTitle) previewTitle.textContent = entry.name || entry.id;
+    if (previewBody) previewBody.innerHTML = `<p class="muted">Loading preview…</p>`;
+    if (previewDownloadBtn) previewDownloadBtn.disabled = true;
+    showDialog();
     try {
       const template = await fetchTemplate(entry);
-      previewBody.innerHTML = buildPreviewHtml(entry, template);
-      previewDownloadBtn.disabled = false;
+      if (previewBody) previewBody.innerHTML = buildPreviewHtml(entry, template);
+      if (previewDownloadBtn) previewDownloadBtn.disabled = false;
     } catch (err) {
-      previewBody.innerHTML = `<p class="error">${escapeHtml(err.message || "Preview failed")}</p>`;
+      if (previewBody) {
+        previewBody.innerHTML = `<p class="error">${escapeHtml(err.message || "Preview failed")}</p>`;
+      }
+      setStatus(err.message || "Preview failed");
     }
   }
 
   function closePreview() {
     previewEntry = null;
-    if (typeof dialog.close === "function") {
-      dialog.close();
-    } else {
-      dialog.removeAttribute("open");
-    }
+    hideDialog();
   }
 
   function renderGrid() {
+    if (!gridEl) return;
     const drills = filteredDrills();
     gridEl.innerHTML = "";
     if (!drills.length) {
@@ -248,19 +274,27 @@
       downloadBtn.type = "button";
       downloadBtn.textContent = "Download JSON";
 
-      const open = () => openPreview(d);
-      card.addEventListener("click", open);
+      const open = (e) => {
+        if (e) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+        openPreview(d);
+      };
+      card.addEventListener("click", (e) => {
+        // Ignore clicks that originated on action buttons (they have their own handlers).
+        if (e.target.closest("button")) return;
+        open(e);
+      });
       card.addEventListener("keydown", (e) => {
         if (e.key === "Enter" || e.key === " ") {
           e.preventDefault();
-          open();
+          open(e);
         }
       });
-      previewBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        open();
-      });
+      previewBtn.addEventListener("click", open);
       downloadBtn.addEventListener("click", async (e) => {
+        e.preventDefault();
         e.stopPropagation();
         downloadBtn.disabled = true;
         try {
@@ -292,16 +326,6 @@
       const res = await fetch("catalog.json", { cache: "no-store" });
       if (!res.ok) throw new Error(`catalog.json failed (${res.status})`);
       catalog = await res.json();
-      if (!catalog.baseUrl) {
-        catalog.baseUrl = new URL("./", window.location.href).toString();
-      }
-      if (
-        location.protocol === "file:" ||
-        location.hostname === "127.0.0.1" ||
-        location.hostname === "localhost"
-      ) {
-        catalog.baseUrl = new URL("./", window.location.href).toString();
-      }
       renderChips(categoriesFrom(catalog.drills || []));
       renderGrid();
     } catch (err) {
@@ -309,27 +333,33 @@
     }
   }
 
-  previewCloseBtn.addEventListener("click", () => closePreview());
-  previewDownloadBtn.addEventListener("click", async () => {
-    if (!previewEntry) return;
-    previewDownloadBtn.disabled = true;
-    try {
-      await downloadDrill(previewEntry);
-      setStatus(`Downloaded ${previewEntry.id}.json`);
-    } catch (err) {
-      setStatus(err.message || "Download failed");
-    } finally {
-      previewDownloadBtn.disabled = false;
-    }
-  });
-  dialog.addEventListener("click", (e) => {
-    if (e.target === dialog) closePreview();
-  });
-  dialog.addEventListener("cancel", (e) => {
-    e.preventDefault();
-    closePreview();
-  });
+  if (previewCloseBtn) {
+    previewCloseBtn.addEventListener("click", () => closePreview());
+  }
+  if (previewDownloadBtn) {
+    previewDownloadBtn.addEventListener("click", async () => {
+      if (!previewEntry) return;
+      previewDownloadBtn.disabled = true;
+      try {
+        await downloadDrill(previewEntry);
+        setStatus(`Downloaded ${previewEntry.id}.json`);
+      } catch (err) {
+        setStatus(err.message || "Download failed");
+      } finally {
+        previewDownloadBtn.disabled = false;
+      }
+    });
+  }
+  if (dialog) {
+    dialog.addEventListener("click", (e) => {
+      if (e.target === dialog) closePreview();
+    });
+    dialog.addEventListener("cancel", (e) => {
+      e.preventDefault();
+      closePreview();
+    });
+  }
 
-  searchEl.addEventListener("input", () => renderGrid());
+  if (searchEl) searchEl.addEventListener("input", () => renderGrid());
   init();
 })();
