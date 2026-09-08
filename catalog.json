@@ -1,6 +1,6 @@
 {
-  "version": 2,
-  "updatedAtMs": 1788869228466,
+  "version": 3,
+  "updatedAtMs": 1788870000000,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -234,6 +234,14 @@
       "updatedAtMs": 1788869228466,
       "category": "conditioning",
       "description": "Conditioning · 3×6 · 45s work / 45s rest"
+    },
+    {
+      "id": "remote_abs_alternation_40",
+      "name": "Abs alternation",
+      "file": "drills/remote_abs_alternation_40.json",
+      "updatedAtMs": 1788870000000,
+      "category": "core",
+      "description": "Core · 3×8 · 40s work / 30s rest — abs, twists, planks, hollow, knee raises"
     }
   ]
 }

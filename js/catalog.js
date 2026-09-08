@@ -20,6 +20,15 @@
     footballFootwork: "Footwork",
     shadowBoxing: "Shadow boxing",
     jumpRope: "Jump rope",
+    abs: "Abs",
+    russianTwists: "Russian twists",
+    plank: "Plank",
+    hollowHold: "Hollow hold",
+    sidePlank: "Side plank",
+    deadBug: "Dead bug",
+    hangingKneeRaises: "Knee raises",
+    birdDog: "Bird dog",
+    plateRotations: "Plate rotations",
   };
 
   function setStatus(msg) {

@@ -1,0 +1,57 @@
+{
+  "id": "remote_abs_alternation_40",
+  "name": "Abs alternation",
+  "createdAtMs": 1788870000000,
+  "sets": 3,
+  "repsPerSet": 8,
+  "workSeconds": 40,
+  "restBetweenRepsSeconds": 30,
+  "restBetweenSetsSeconds": 90,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          { "workSeconds": 40, "activityId": "abs", "restAfterSeconds": 30 },
+          { "workSeconds": 40, "activityId": "russianTwists", "restAfterSeconds": 30 },
+          { "workSeconds": 40, "activityId": "plank", "restAfterSeconds": 30 },
+          { "workSeconds": 40, "activityId": "hollowHold", "restAfterSeconds": 30 },
+          { "workSeconds": 40, "activityId": "abs", "restAfterSeconds": 30 },
+          { "workSeconds": 40, "activityId": "sidePlank", "restAfterSeconds": 30 },
+          { "workSeconds": 40, "activityId": "deadBug", "restAfterSeconds": 30 },
+          { "workSeconds": 40, "activityId": "hangingKneeRaises", "restAfterSeconds": 30 }
+        ],
+        "restAfterSetSeconds": 90
+      },
+      {
+        "rounds": [
+          { "workSeconds": 40, "activityId": "abs", "restAfterSeconds": 30 },
+          { "workSeconds": 40, "activityId": "russianTwists", "restAfterSeconds": 30 },
+          { "workSeconds": 40, "activityId": "plank", "restAfterSeconds": 30 },
+          { "workSeconds": 40, "activityId": "hollowHold", "restAfterSeconds": 30 },
+          { "workSeconds": 40, "activityId": "abs", "restAfterSeconds": 30 },
+          { "workSeconds": 40, "activityId": "sidePlank", "restAfterSeconds": 30 },
+          { "workSeconds": 40, "activityId": "deadBug", "restAfterSeconds": 30 },
+          { "workSeconds": 40, "activityId": "hangingKneeRaises", "restAfterSeconds": 30 }
+        ],
+        "restAfterSetSeconds": 90
+      },
+      {
+        "rounds": [
+          { "workSeconds": 40, "activityId": "abs", "restAfterSeconds": 30 },
+          { "workSeconds": 40, "activityId": "russianTwists", "restAfterSeconds": 30 },
+          { "workSeconds": 40, "activityId": "plank", "restAfterSeconds": 30 },
+          { "workSeconds": 40, "activityId": "hollowHold", "restAfterSeconds": 30 },
+          { "workSeconds": 40, "activityId": "abs", "restAfterSeconds": 30 },
+          { "workSeconds": 40, "activityId": "sidePlank", "restAfterSeconds": 30 },
+          { "workSeconds": 40, "activityId": "deadBug", "restAfterSeconds": 30 },
+          { "workSeconds": 40, "activityId": "hangingKneeRaises", "restAfterSeconds": 30 }
+        ],
+        "restAfterSetSeconds": 90
+      }
+    ]
+  }
+}
