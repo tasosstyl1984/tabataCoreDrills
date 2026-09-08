@@ -34,6 +34,11 @@
     reverseFly: "Reverse fly",
     kettlebellRow: "KB row",
     pullover: "Pullover",
+    kettlebellSwings: "KB swings",
+    kettlebellGobletSquat: "Goblet squat",
+    kettlebellCleanPress: "Clean + press",
+    kettlebellSnatch: "KB snatch",
+    kettlebellTurkishGetUp: "Turkish get-up",
   };
 
   function setStatus(msg) {
