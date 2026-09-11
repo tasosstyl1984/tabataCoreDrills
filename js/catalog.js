@@ -13,11 +13,15 @@
   let activeCategory = "all";
   let previewEntry = null;
   const templateCache = new Map();
+  const imageIds = new Set();
 
   const ACTIVITY_LABELS = {
     footballWallPassing: "Wall passing",
     footballControl: "Ball control",
     footballFootwork: "Footwork",
+    footballDribbling: "Dribbling",
+    footballBallMastery: "Ball mastery",
+    footballReactionDrills: "Reaction drills",
     shadowBoxing: "Shadow boxing",
     jumpRope: "Jump rope",
     abs: "Abs",
@@ -39,6 +43,8 @@
     kettlebellCleanPress: "Clean + press",
     kettlebellSnatch: "KB snatch",
     kettlebellTurkishGetUp: "Turkish get-up",
+    boxing: "Boxing",
+    burpees: "Burpees",
   };
 
   function setStatus(msg) {
@@ -76,14 +82,24 @@
     return (catalog.drills || []).filter((d) => {
       if (activeCategory !== "all" && d.category !== activeCategory) return false;
       if (!q) return true;
-      const hay = `${d.name || ""} ${d.description || ""} ${d.category || ""}`.toLowerCase();
+      const acts = (d.activityIds || []).join(" ");
+      const hay = `${d.name || ""} ${d.description || ""} ${d.category || ""} ${acts}`.toLowerCase();
       return hay.includes(q);
     });
   }
 
-  /** Website always loads drills same-origin (Pages / local). App uses catalog.baseUrl. */
   function drillFileUrl(entry) {
     return new URL(entry.file, window.location.href).toString();
+  }
+
+  function coverUrl(entry) {
+    if (entry.coverImage) return new URL(entry.coverImage, window.location.href).toString();
+    return "";
+  }
+
+  function activityImageUrl(activityId) {
+    if (!activityId || !imageIds.has(activityId)) return "";
+    return new URL(`exercise_guides/${activityId}.png`, window.location.href).toString();
   }
 
   async function fetchTemplate(entry) {
@@ -164,6 +180,10 @@
 
   function buildPreviewHtml(entry, template) {
     const sets = template.structuredPlan?.sets || [];
+    const cover = coverUrl(entry);
+    const coverHtml = cover
+      ? `<img class="preview-cover" src="${escapeAttr(cover)}" alt="" loading="lazy" />`
+      : "";
     const stats = [
       ["Sets", String(template.sets ?? sets.length ?? "—")],
       ["Rounds / set", String(template.repsPerSet ?? sets[0]?.rounds?.length ?? "—")],
@@ -184,7 +204,13 @@
                 j < rounds.length - 1
                   ? `<span class="round-rest">→ ${round.restAfterSeconds || 0}s rest</span>`
                   : "";
-              return `<li><strong>${activityLabel(round.activityId)}</strong> · ${round.workSeconds}s work ${rest}</li>`;
+              const thumb = activityImageUrl(round.activityId);
+              const thumbHtml = thumb
+                ? `<img class="round-thumb" src="${escapeAttr(thumb)}" alt="" loading="lazy" />`
+                : `<span class="round-thumb placeholder" aria-hidden="true"></span>`;
+              return `<li>${thumbHtml}<div class="round-copy"><strong>${escapeHtml(
+                activityLabel(round.activityId),
+              )}</strong> · ${round.workSeconds}s work ${rest}</div></li>`;
             })
             .join("");
           const after =
@@ -199,6 +225,7 @@
     }
 
     return `
+      ${coverHtml}
       <p class="preview-desc">${escapeHtml(entry.description || "")}</p>
       <div class="preview-stats">
         ${stats
@@ -278,7 +305,12 @@
       card.tabIndex = 0;
       card.setAttribute("role", "button");
       card.setAttribute("aria-label", `Preview ${d.name || d.id}`);
+      const cover = coverUrl(d);
+      const coverHtml = cover
+        ? `<img class="card-cover" src="${escapeAttr(cover)}" alt="" loading="lazy" />`
+        : "";
       card.innerHTML = `
+        ${coverHtml}
         <span class="badge">${escapeHtml(d.category || "drill")}</span>
         <h3>${escapeHtml(d.name || d.id)}</h3>
         <p>${escapeHtml(d.description || "")}</p>
@@ -301,7 +333,6 @@
         openPreview(d);
       };
       card.addEventListener("click", (e) => {
-        // Ignore clicks that originated on action buttons (they have their own handlers).
         if (e.target.closest("button")) return;
         open(e);
       });
@@ -339,9 +370,27 @@
       .replace(/"/g, "&quot;");
   }
 
+  function escapeAttr(s) {
+    return escapeHtml(s).replace(/'/g, "&#39;");
+  }
+
+  async function loadImageIndex() {
+    try {
+      const res = await fetch("exercise_guides_manifest.json", { cache: "no-store" });
+      if (!res.ok) return;
+      const manifest = await res.json();
+      for (const img of manifest.images || []) {
+        if (img && img.id) imageIds.add(img.id);
+      }
+    } catch (_) {
+      /* optional */
+    }
+  }
+
   async function init() {
     setStatus("Loading catalog…");
     try {
+      await loadImageIndex();
       const res = await fetch("catalog.json", { cache: "no-store" });
       if (!res.ok) throw new Error(`catalog.json failed (${res.status})`);
       catalog = await res.json();

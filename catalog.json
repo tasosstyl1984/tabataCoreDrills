@@ -1,6 +1,6 @@
 {
-  "version": 5,
-  "updatedAtMs": 1788901720600,
+  "version": 6,
+  "updatedAtMs": 1789158648077,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -9,7 +9,9 @@
       "file": "drills/remote_tabata_classic.json",
       "updatedAtMs": 1788869228466,
       "category": "classic",
-      "description": "Classic · 1×8 · 20s work / 10s rest"
+      "description": "Classic \u00b7 1\u00d78 \u00b7 20s work / 10s rest",
+      "coverImage": "exercise_guides/burpees.png",
+      "activityIds": []
     },
     {
       "id": "remote_wall_pass_drills_40",
@@ -17,7 +19,13 @@
       "file": "drills/remote_wall_pass_drills_40.json",
       "updatedAtMs": 1788869228466,
       "category": "football",
-      "description": "Football · 4×6 · 40s work / 50s rest"
+      "description": "Football \u00b7 4\u00d76 \u00b7 40s work / 50s rest \u00b7 Football Wall Passing, Football Control, Football Footwork",
+      "coverImage": "exercise_guides/footballControl.png",
+      "activityIds": [
+        "footballWallPassing",
+        "footballControl",
+        "footballFootwork"
+      ]
     },
     {
       "id": "remote_jump_rope_drills_50",
@@ -25,7 +33,11 @@
       "file": "drills/remote_jump_rope_drills_50.json",
       "updatedAtMs": 1788869228466,
       "category": "conditioning",
-      "description": "Conditioning · 4×8 · 45s work / 45s rest"
+      "description": "Conditioning \u00b7 4\u00d78 \u00b7 45s work / 45s rest \u00b7 Jump Rope",
+      "coverImage": "exercise_guides/jumpRope.png",
+      "activityIds": [
+        "jumpRope"
+      ]
     },
     {
       "id": "remote_kettlebell_drills_40",
@@ -33,7 +45,15 @@
       "file": "drills/remote_kettlebell_drills_40.json",
       "updatedAtMs": 1788869228466,
       "category": "kettlebell",
-      "description": "Kettlebell · 4×6 · 40s work / 55s rest"
+      "description": "Kettlebell \u00b7 4\u00d76 \u00b7 40s work / 55s rest \u00b7 Kettlebell Swings, Kettlebell Goblet Squat, Kettlebell Clean Press, Kettlebell Row, Kettlebell Turkish Get Up",
+      "coverImage": "exercise_guides/kettlebellSwings.png",
+      "activityIds": [
+        "kettlebellSwings",
+        "kettlebellGobletSquat",
+        "kettlebellCleanPress",
+        "kettlebellRow",
+        "kettlebellTurkishGetUp"
+      ]
     },
     {
       "id": "remote_kb_complex_40",
@@ -41,7 +61,15 @@
       "file": "drills/remote_kb_complex_40.json",
       "updatedAtMs": 1788869228466,
       "category": "kettlebell",
-      "description": "Kettlebell · 4×6 · 40s work / 55s rest"
+      "description": "Kettlebell \u00b7 4\u00d76 \u00b7 40s work / 55s rest \u00b7 Kettlebell Swings, Kettlebell Goblet Squat, Kettlebell Clean Press, Kettlebell Row, Kettlebell Snatch",
+      "coverImage": "exercise_guides/kettlebellSwings.png",
+      "activityIds": [
+        "kettlebellSwings",
+        "kettlebellGobletSquat",
+        "kettlebellCleanPress",
+        "kettlebellRow",
+        "kettlebellSnatch"
+      ]
     },
     {
       "id": "remote_dumbbell_arms_40",
@@ -49,15 +77,31 @@
       "file": "drills/remote_dumbbell_arms_40.json",
       "updatedAtMs": 1788869228466,
       "category": "dumbbell",
-      "description": "Dumbbell · 4×6 · 40s work / 50s rest"
+      "description": "Dumbbell \u00b7 4\u00d76 \u00b7 40s work / 50s rest \u00b7 Bicep Curls, Hammer Curls, Concentration Curls, Tricep Kickbacks, Overhead Tricep Extension",
+      "coverImage": "exercise_guides/bicepCurls.png",
+      "activityIds": [
+        "bicepCurls",
+        "hammerCurls",
+        "concentrationCurls",
+        "tricepKickbacks",
+        "overheadTricepExtension"
+      ]
     },
     {
       "id": "remote_dumbbell_shoulders_40",
-      "name": "DB shoulders · back",
+      "name": "DB shoulders \u00b7 back",
       "file": "drills/remote_dumbbell_shoulders_40.json",
       "updatedAtMs": 1788869228466,
       "category": "dumbbell",
-      "description": "Dumbbell · 4×6 · 40s work / 50s rest"
+      "description": "Dumbbell \u00b7 4\u00d76 \u00b7 40s work / 50s rest \u00b7 Dumbbell Shoulder Press, Lateral Raises, Front Raises, Dumbbell Row, Reverse Fly",
+      "coverImage": "exercise_guides/dumbbellShoulderPress.png",
+      "activityIds": [
+        "dumbbellShoulderPress",
+        "lateralRaises",
+        "frontRaises",
+        "dumbbellRow",
+        "reverseFly"
+      ]
     },
     {
       "id": "remote_chest_press_40",
@@ -65,7 +109,15 @@
       "file": "drills/remote_chest_press_40.json",
       "updatedAtMs": 1788869228466,
       "category": "chest",
-      "description": "Chest · 4×6 · 40s work / 55s rest"
+      "description": "Chest \u00b7 4\u00d76 \u00b7 40s work / 55s rest \u00b7 Bench Press, Incline Bench, Dumbbell Chest Press, Pushups, Pullover",
+      "coverImage": "exercise_guides/benchPress.png",
+      "activityIds": [
+        "benchPress",
+        "inclineBench",
+        "dumbbellChestPress",
+        "pushups",
+        "pullover"
+      ]
     },
     {
       "id": "remote_chest_fly_circuit_40",
@@ -73,15 +125,32 @@
       "file": "drills/remote_chest_fly_circuit_40.json",
       "updatedAtMs": 1788869228466,
       "category": "chest",
-      "description": "Chest · 4×6 · 40s work / 50s rest"
+      "description": "Chest \u00b7 4\u00d76 \u00b7 40s work / 50s rest \u00b7 Chest Flies, Incline Flies, Dumbbell Chest Press, Pushups, Pullover",
+      "coverImage": "exercise_guides/chestFlies.png",
+      "activityIds": [
+        "chestFlies",
+        "inclineFlies",
+        "dumbbellChestPress",
+        "pushups",
+        "pullover"
+      ]
     },
     {
       "id": "remote_functional_mixed_45",
-      "name": "Rope · swings · push · plyo",
+      "name": "Rope \u00b7 swings \u00b7 push \u00b7 plyo",
       "file": "drills/remote_functional_mixed_45.json",
       "updatedAtMs": 1788869228466,
       "category": "conditioning",
-      "description": "Conditioning · 4×6 · 45s work / 50s rest"
+      "description": "Conditioning \u00b7 4\u00d76 \u00b7 45s work / 50s rest \u00b7 Jump Rope, Kettlebell Swings, Pushups, Mountain Climbers, Box Jumps, Plank",
+      "coverImage": "exercise_guides/jumpRope.png",
+      "activityIds": [
+        "jumpRope",
+        "kettlebellSwings",
+        "pushups",
+        "mountainClimbers",
+        "boxJumps",
+        "plank"
+      ]
     },
     {
       "id": "remote_plyo_power_30",
@@ -89,7 +158,15 @@
       "file": "drills/remote_plyo_power_30.json",
       "updatedAtMs": 1788869228466,
       "category": "plyometrics",
-      "description": "Plyometrics · 4×6 · 40s work / 50s rest"
+      "description": "Plyometrics \u00b7 4\u00d76 \u00b7 40s work / 50s rest \u00b7 Box Jumps, Broad Jumps, Tuck Jumps, High Knees, Mountain Climbers",
+      "coverImage": "exercise_guides/boxJumps.png",
+      "activityIds": [
+        "boxJumps",
+        "broadJumps",
+        "tuckJumps",
+        "highKnees",
+        "mountainClimbers"
+      ]
     },
     {
       "id": "remote_engine_conditioning_45",
@@ -97,7 +174,16 @@
       "file": "drills/remote_engine_conditioning_45.json",
       "updatedAtMs": 1788869228466,
       "category": "conditioning",
-      "description": "Conditioning · 4×6 · 45s work / 50s rest"
+      "description": "Conditioning \u00b7 4\u00d76 \u00b7 45s work / 50s rest \u00b7 Battle Ropes, Med Ball Slams, Farmer Carry, Sled Push, Rowing, Mountain Climbers",
+      "coverImage": "exercise_guides/battleRopes.png",
+      "activityIds": [
+        "battleRopes",
+        "medBallSlams",
+        "farmerCarry",
+        "sledPush",
+        "rowing",
+        "mountainClimbers"
+      ]
     },
     {
       "id": "remote_lower_body_functional_40",
@@ -105,15 +191,32 @@
       "file": "drills/remote_lower_body_functional_40.json",
       "updatedAtMs": 1788869228466,
       "category": "strength",
-      "description": "Strength · 4×6 · 40s work / 55s rest"
+      "description": "Strength \u00b7 4\u00d76 \u00b7 40s work / 55s rest \u00b7 Squats, Lunges, Step Ups, Thrusters, Wall Balls, Kettlebell Goblet Squat",
+      "coverImage": "exercise_guides/squats.png",
+      "activityIds": [
+        "squats",
+        "lunges",
+        "stepUps",
+        "thrusters",
+        "wallBalls",
+        "kettlebellGobletSquat"
+      ]
     },
     {
       "id": "remote_push_pull_core_40",
-      "name": "Push · pull · core",
+      "name": "Push \u00b7 pull \u00b7 core",
       "file": "drills/remote_push_pull_core_40.json",
       "updatedAtMs": 1788869228466,
       "category": "strength",
-      "description": "Strength · 4×6 · 40s work / 50s rest"
+      "description": "Strength \u00b7 4\u00d76 \u00b7 40s work / 50s rest \u00b7 Pushups, Pull Ups, Dips, Plank, Hanging Knee Raises",
+      "coverImage": "exercise_guides/pushups.png",
+      "activityIds": [
+        "pushups",
+        "pullUps",
+        "dips",
+        "plank",
+        "hangingKneeRaises"
+      ]
     },
     {
       "id": "remote_plate_rotations_40",
@@ -121,7 +224,11 @@
       "file": "drills/remote_plate_rotations_40.json",
       "updatedAtMs": 1788869228466,
       "category": "core",
-      "description": "Core · 4×8 · 40s work / 50s rest"
+      "description": "Core \u00b7 4\u00d78 \u00b7 40s work / 50s rest \u00b7 Plate Rotations",
+      "coverImage": "exercise_guides/plateRotations.png",
+      "activityIds": [
+        "plateRotations"
+      ]
     },
     {
       "id": "remote_core_rotation_circuit_40",
@@ -129,7 +236,15 @@
       "file": "drills/remote_core_rotation_circuit_40.json",
       "updatedAtMs": 1788869228466,
       "category": "core",
-      "description": "Core · 4×8 · 40s work / 50s rest"
+      "description": "Core \u00b7 4\u00d78 \u00b7 40s work / 50s rest \u00b7 Plate Rotations, Abs, Plank, Hanging Knee Raises, Pushups",
+      "coverImage": "exercise_guides/plateRotations.png",
+      "activityIds": [
+        "plateRotations",
+        "abs",
+        "plank",
+        "hangingKneeRaises",
+        "pushups"
+      ]
     },
     {
       "id": "remote_core_holds_40",
@@ -137,7 +252,16 @@
       "file": "drills/remote_core_holds_40.json",
       "updatedAtMs": 1788869228466,
       "category": "core",
-      "description": "Core · 4×6 · 40s work / 50s rest"
+      "description": "Core \u00b7 4\u00d76 \u00b7 40s work / 50s rest \u00b7 Plank, Side Plank, Hollow Hold, Dead Bug, Bird Dog, Russian Twists",
+      "coverImage": "exercise_guides/plank.png",
+      "activityIds": [
+        "plank",
+        "sidePlank",
+        "hollowHold",
+        "deadBug",
+        "birdDog",
+        "russianTwists"
+      ]
     },
     {
       "id": "remote_split_squat_lower_40",
@@ -145,7 +269,16 @@
       "file": "drills/remote_split_squat_lower_40.json",
       "updatedAtMs": 1788869228466,
       "category": "strength",
-      "description": "Strength · 4×6 · 40s work / 55s rest"
+      "description": "Strength \u00b7 4\u00d76 \u00b7 40s work / 55s rest \u00b7 Lunges, Bulgarian Split Squat, Glute Bridge, Calf Raises, Squats, Kettlebell Goblet Squat",
+      "coverImage": "exercise_guides/bulgarianSplitSquat.png",
+      "activityIds": [
+        "lunges",
+        "bulgarianSplitSquat",
+        "gluteBridge",
+        "calfRaises",
+        "squats",
+        "kettlebellGobletSquat"
+      ]
     },
     {
       "id": "remote_locomotion_40",
@@ -153,7 +286,16 @@
       "file": "drills/remote_locomotion_40.json",
       "updatedAtMs": 1788869228466,
       "category": "conditioning",
-      "description": "Conditioning · 4×6 · 40s work / 50s rest"
+      "description": "Conditioning \u00b7 4\u00d76 \u00b7 40s work / 50s rest \u00b7 Bear Crawl, Inchworm, Mountain Climbers, Farmer Carry, Plank, Jumping Jacks",
+      "coverImage": "exercise_guides/bearCrawl.png",
+      "activityIds": [
+        "bearCrawl",
+        "inchworm",
+        "mountainClimbers",
+        "farmerCarry",
+        "plank",
+        "jumpingJacks"
+      ]
     },
     {
       "id": "remote_plyo_lateral_30",
@@ -161,39 +303,90 @@
       "file": "drills/remote_plyo_lateral_30.json",
       "updatedAtMs": 1788869228466,
       "category": "plyometrics",
-      "description": "Plyometrics · 4×6 · 40s work / 50s rest"
+      "description": "Plyometrics \u00b7 4\u00d76 \u00b7 40s work / 50s rest \u00b7 Squat Jumps, Jumping Lunges, Skater Hops, High Knees, Tuck Jumps, Box Jumps",
+      "coverImage": "exercise_guides/squatJumps.png",
+      "activityIds": [
+        "squatJumps",
+        "jumpingLunges",
+        "skaterHops",
+        "highKnees",
+        "tuckJumps",
+        "boxJumps"
+      ]
     },
     {
       "id": "remote_combo_wall_rope_kettle_45",
-      "name": "Wall · rope · kettle",
+      "name": "Wall \u00b7 rope \u00b7 kettle",
       "file": "drills/remote_combo_wall_rope_kettle_45.json",
       "updatedAtMs": 1788869228466,
       "category": "combos",
-      "description": "Combos · 3×8 · 45s work / 50s rest"
+      "description": "Combos \u00b7 3\u00d78 \u00b7 45s work / 50s rest \u00b7 Football Wall Passing, Jump Rope, Kettlebell Swings, Kettlebell Goblet Squat, Kettlebell Clean Press, Kettlebell Row\u2026",
+      "coverImage": "exercise_guides/jumpRope.png",
+      "activityIds": [
+        "footballWallPassing",
+        "jumpRope",
+        "kettlebellSwings",
+        "kettlebellGobletSquat",
+        "kettlebellCleanPress",
+        "kettlebellRow",
+        "kettlebellSnatch",
+        "kettlebellTurkishGetUp"
+      ]
     },
     {
       "id": "remote_combo_rope_kettle_core_40",
-      "name": "Rope · kettle · core",
+      "name": "Rope \u00b7 kettle \u00b7 core",
       "file": "drills/remote_combo_rope_kettle_core_40.json",
       "updatedAtMs": 1788869228466,
       "category": "combos",
-      "description": "Combos · 3×8 · 45s work / 50s rest"
+      "description": "Combos \u00b7 3\u00d78 \u00b7 45s work / 50s rest \u00b7 Jump Rope, Kettlebell Swings, Kettlebell Goblet Squat, Kettlebell Clean Press, Kettlebell Row, Kettlebell Snatch\u2026",
+      "coverImage": "exercise_guides/jumpRope.png",
+      "activityIds": [
+        "jumpRope",
+        "kettlebellSwings",
+        "kettlebellGobletSquat",
+        "kettlebellCleanPress",
+        "kettlebellRow",
+        "kettlebellSnatch",
+        "kettlebellTurkishGetUp",
+        "pushups",
+        "abs"
+      ]
     },
     {
       "id": "remote_combo_wall_wall_rope_40",
-      "name": "Wall · wall · rope",
+      "name": "Wall \u00b7 wall \u00b7 rope",
       "file": "drills/remote_combo_wall_wall_rope_40.json",
       "updatedAtMs": 1788869228466,
       "category": "combos",
-      "description": "Combos · 3×8 · 45s work / 50s rest"
+      "description": "Combos \u00b7 3\u00d78 \u00b7 45s work / 50s rest \u00b7 Football Wall Passing, Football Control, Jump Rope",
+      "coverImage": "exercise_guides/footballControl.png",
+      "activityIds": [
+        "footballWallPassing",
+        "footballControl",
+        "jumpRope"
+      ]
     },
     {
       "id": "remote_combo_full_stack_50",
-      "name": "Wall · rope · kettle · core",
+      "name": "Wall \u00b7 rope \u00b7 kettle \u00b7 core",
       "file": "drills/remote_combo_full_stack_50.json",
       "updatedAtMs": 1788869228466,
       "category": "combos",
-      "description": "Combos · 4×7 · 45s work / 50s rest"
+      "description": "Combos \u00b7 4\u00d77 \u00b7 45s work / 50s rest \u00b7 Football Wall Passing, Jump Rope, Kettlebell Swings, Kettlebell Goblet Squat, Kettlebell Clean Press, Kettlebell Row\u2026",
+      "coverImage": "exercise_guides/jumpRope.png",
+      "activityIds": [
+        "footballWallPassing",
+        "jumpRope",
+        "kettlebellSwings",
+        "kettlebellGobletSquat",
+        "kettlebellCleanPress",
+        "kettlebellRow",
+        "kettlebellSnatch",
+        "kettlebellTurkishGetUp",
+        "pushups",
+        "abs"
+      ]
     },
     {
       "id": "remote_football_skills_30",
@@ -201,7 +394,16 @@
       "file": "drills/remote_football_skills_30.json",
       "updatedAtMs": 1788869228466,
       "category": "football",
-      "description": "Football · 3×6 · 45s work / 45s rest"
+      "description": "Football \u00b7 3\u00d76 \u00b7 45s work / 45s rest \u00b7 Football Wall Passing, Football Dribbling, Football Ball Mastery, Football Control, Football Footwork, Football Reaction Drills",
+      "coverImage": "exercise_guides/footballDribbling.png",
+      "activityIds": [
+        "footballWallPassing",
+        "footballDribbling",
+        "footballBallMastery",
+        "footballControl",
+        "footballFootwork",
+        "footballReactionDrills"
+      ]
     },
     {
       "id": "remote_football_ball_mastery_30",
@@ -209,7 +411,14 @@
       "file": "drills/remote_football_ball_mastery_30.json",
       "updatedAtMs": 1788869228466,
       "category": "football",
-      "description": "Football · 4×5 · 45s work / 45s rest"
+      "description": "Football \u00b7 4\u00d75 \u00b7 45s work / 45s rest \u00b7 Football Ball Mastery, Football Control, Football Footwork, Football Dribbling",
+      "coverImage": "exercise_guides/footballControl.png",
+      "activityIds": [
+        "footballBallMastery",
+        "footballControl",
+        "footballFootwork",
+        "footballDribbling"
+      ]
     },
     {
       "id": "remote_football_control_circuit_30",
@@ -217,7 +426,15 @@
       "file": "drills/remote_football_control_circuit_30.json",
       "updatedAtMs": 1788869228466,
       "category": "football",
-      "description": "Football · 4×5 · 45s work / 45s rest"
+      "description": "Football \u00b7 4\u00d75 \u00b7 45s work / 45s rest \u00b7 Football Wall Passing, Football Control, Football Footwork, Football Reaction Drills, Football Dribbling",
+      "coverImage": "exercise_guides/footballControl.png",
+      "activityIds": [
+        "footballWallPassing",
+        "footballControl",
+        "footballFootwork",
+        "footballReactionDrills",
+        "footballDribbling"
+      ]
     },
     {
       "id": "remote_boxing_rounds_30",
@@ -225,7 +442,11 @@
       "file": "drills/remote_boxing_rounds_30.json",
       "updatedAtMs": 1788869228466,
       "category": "boxing",
-      "description": "Boxing · 3×6 · 45s work / 45s rest"
+      "description": "Boxing \u00b7 3\u00d76 \u00b7 45s work / 45s rest \u00b7 Shadow Boxing",
+      "coverImage": "exercise_guides/shadowBoxing.png",
+      "activityIds": [
+        "shadowBoxing"
+      ]
     },
     {
       "id": "remote_hiit_strength_30",
@@ -233,7 +454,16 @@
       "file": "drills/remote_hiit_strength_30.json",
       "updatedAtMs": 1788869228466,
       "category": "conditioning",
-      "description": "Conditioning · 3×6 · 45s work / 45s rest"
+      "description": "Conditioning \u00b7 3\u00d76 \u00b7 45s work / 45s rest \u00b7 Burpees, Thrusters, Box Jumps, Med Ball Slams, Farmer Carry, Mountain Climbers",
+      "coverImage": "exercise_guides/burpees.png",
+      "activityIds": [
+        "burpees",
+        "thrusters",
+        "boxJumps",
+        "medBallSlams",
+        "farmerCarry",
+        "mountainClimbers"
+      ]
     },
     {
       "id": "remote_abs_alternation_40",
@@ -241,7 +471,17 @@
       "file": "drills/remote_abs_alternation_40.json",
       "updatedAtMs": 1788870000000,
       "category": "core",
-      "description": "Core · 3×8 · 40s work / 30s rest — abs, twists, planks, hollow, knee raises"
+      "description": "Core \u00b7 3\u00d78 \u00b7 40s work / 30s rest \u2014 abs, twists, planks, hollow, knee raises \u00b7 Abs, Russian Twists, Plank, Hollow Hold, Side Plank, Dead Bug\u2026",
+      "coverImage": "exercise_guides/russianTwists.png",
+      "activityIds": [
+        "abs",
+        "russianTwists",
+        "plank",
+        "hollowHold",
+        "sidePlank",
+        "deadBug",
+        "hangingKneeRaises"
+      ]
     },
     {
       "id": "remote_back_pull_circuit_40",
@@ -249,15 +489,33 @@
       "file": "drills/remote_back_pull_circuit_40.json",
       "updatedAtMs": 1788901315000,
       "category": "back",
-      "description": "Back · 4×6 · 40s work / 50s rest — pull-ups, rows, reverse fly, pullover"
+      "description": "Back \u00b7 4\u00d76 \u00b7 40s work / 50s rest \u2014 pull-ups, rows, reverse fly, pullover \u00b7 Pull Ups, Dumbbell Row, Reverse Fly, Kettlebell Row, Pullover",
+      "coverImage": "exercise_guides/pullUps.png",
+      "activityIds": [
+        "pullUps",
+        "dumbbellRow",
+        "reverseFly",
+        "kettlebellRow",
+        "pullover"
+      ]
     },
     {
       "id": "remote_combo_kettle_boxing_45",
-      "name": "Kettle · boxing",
+      "name": "Kettle \u00b7 boxing",
       "file": "drills/remote_combo_kettle_boxing_45.json",
       "updatedAtMs": 1788901720600,
       "category": "combos",
-      "description": "Combos · 4×6 · 45s work / 50s rest — 3 kettlebell sets + 1 shadow boxing set"
+      "description": "Combos \u00b7 4\u00d76 \u00b7 45s work / 50s rest \u2014 3 kettlebell sets + 1 shadow boxing set \u00b7 Kettlebell Swings, Kettlebell Goblet Squat, Kettlebell Clean Press, Kettlebell Row, Kettlebell Snatch, Kettlebell Turkish Get Up\u2026",
+      "coverImage": "exercise_guides/kettlebellSwings.png",
+      "activityIds": [
+        "kettlebellSwings",
+        "kettlebellGobletSquat",
+        "kettlebellCleanPress",
+        "kettlebellRow",
+        "kettlebellSnatch",
+        "kettlebellTurkishGetUp",
+        "shadowBoxing"
+      ]
     }
   ]
 }
