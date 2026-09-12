@@ -1,9 +1,15 @@
 {
-  "version": 1,
-  "updatedAtMs": 1789157614819,
+  "version": 3,
+  "updatedAtMs": 1789210002324,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 34944990,
+  "totalBytes": 39354361,
   "images": [
+    {
+      "id": "abs",
+      "file": "exercise_guides/abs.png",
+      "bytes": 616777,
+      "sha256": "627113947d177ea7"
+    },
     {
       "id": "battleRopes",
       "file": "exercise_guides/battleRopes.png",
@@ -41,10 +47,22 @@
       "sha256": "2f9af68abd062af5"
     },
     {
+      "id": "boxing",
+      "file": "exercise_guides/boxing.png",
+      "bytes": 346417,
+      "sha256": "f376c0b0a7b71468"
+    },
+    {
       "id": "boxJumps",
       "file": "exercise_guides/boxJumps.png",
       "bytes": 619162,
       "sha256": "f0e53ce70bf3fff9"
+    },
+    {
+      "id": "broadJumps",
+      "file": "exercise_guides/broadJumps.png",
+      "bytes": 565722,
+      "sha256": "2c95da3f3cf117b7"
     },
     {
       "id": "bulgarianSplitSquat",
@@ -55,8 +73,8 @@
     {
       "id": "burpees",
       "file": "exercise_guides/burpees.png",
-      "bytes": 437101,
-      "sha256": "f6a9775a18737a66"
+      "bytes": 241168,
+      "sha256": "50235867301db3ad"
     },
     {
       "id": "calfRaises",
@@ -67,14 +85,14 @@
     {
       "id": "chestFlies",
       "file": "exercise_guides/chestFlies.png",
-      "bytes": 537802,
-      "sha256": "2041f88bb5cfa918"
+      "bytes": 529557,
+      "sha256": "d391f8591d5e1f86"
     },
     {
       "id": "concentrationCurls",
       "file": "exercise_guides/concentrationCurls.png",
-      "bytes": 798801,
-      "sha256": "254bf0dfefdd3cee"
+      "bytes": 542754,
+      "sha256": "ab092e9aa08c8b90"
     },
     {
       "id": "deadBug",
@@ -89,10 +107,22 @@
       "sha256": "3dfb9a095a90563c"
     },
     {
+      "id": "dumbbellChestPress",
+      "file": "exercise_guides/dumbbellChestPress.png",
+      "bytes": 660284,
+      "sha256": "8399fa62d3fd7b50"
+    },
+    {
       "id": "dumbbellLunges",
       "file": "exercise_guides/dumbbellLunges.png",
       "bytes": 577300,
       "sha256": "1bfdb3c9d928ffde"
+    },
+    {
+      "id": "dumbbellRow",
+      "file": "exercise_guides/dumbbellRow.png",
+      "bytes": 592252,
+      "sha256": "9c443f11ea1e695d"
     },
     {
       "id": "dumbbellShoulderPress",
@@ -107,22 +137,34 @@
       "sha256": "a2a3954a0799c511"
     },
     {
+      "id": "footballBallMastery",
+      "file": "exercise_guides/footballBallMastery.png",
+      "bytes": 525468,
+      "sha256": "e171495b6107c2a3"
+    },
+    {
       "id": "footballControl",
       "file": "exercise_guides/footballControl.png",
-      "bytes": 425393,
-      "sha256": "504c9fd12cb22f74"
+      "bytes": 437506,
+      "sha256": "c9e12b33afbd0cf1"
     },
     {
       "id": "footballDribbling",
       "file": "exercise_guides/footballDribbling.png",
-      "bytes": 559965,
-      "sha256": "41d937d48f85d123"
+      "bytes": 521440,
+      "sha256": "8c61948b9b34c354"
     },
     {
       "id": "footballReactionDrills",
       "file": "exercise_guides/footballReactionDrills.png",
-      "bytes": 704845,
-      "sha256": "36d5462d14d88c39"
+      "bytes": 577767,
+      "sha256": "f61cc48a7015eb7d"
+    },
+    {
+      "id": "footballWallPassing",
+      "file": "exercise_guides/footballWallPassing.png",
+      "bytes": 477171,
+      "sha256": "7bb0a76d22910837"
     },
     {
       "id": "frontRaises",
@@ -135,6 +177,12 @@
       "file": "exercise_guides/gluteBridge.png",
       "bytes": 501459,
       "sha256": "258a26b57cb4a675"
+    },
+    {
+      "id": "gluteKickbacks",
+      "file": "exercise_guides/gluteKickbacks.png",
+      "bytes": 378827,
+      "sha256": "5689d8c5e8577df2"
     },
     {
       "id": "hammerCurls",
@@ -199,8 +247,8 @@
     {
       "id": "kettlebellCleanPress",
       "file": "exercise_guides/kettlebellCleanPress.png",
-      "bytes": 350116,
-      "sha256": "12f866447ce6a896"
+      "bytes": 314997,
+      "sha256": "782ad6a19d2184c8"
     },
     {
       "id": "kettlebellDeadlift",
@@ -261,6 +309,12 @@
       "file": "exercise_guides/lateralRaises.png",
       "bytes": 454804,
       "sha256": "ca966a7a16a63108"
+    },
+    {
+      "id": "lunges",
+      "file": "exercise_guides/lunges.png",
+      "bytes": 435267,
+      "sha256": "2b15cebcd4359d73"
     },
     {
       "id": "medBallSlams",
@@ -361,8 +415,8 @@
     {
       "id": "sledPush",
       "file": "exercise_guides/sledPush.png",
-      "bytes": 491317,
-      "sha256": "47fd9a1e0f7cff6c"
+      "bytes": 522350,
+      "sha256": "429b3423453aeb06"
     },
     {
       "id": "squatJumps",
@@ -375,6 +429,12 @@
       "file": "exercise_guides/squats.png",
       "bytes": 591883,
       "sha256": "5b172f937e0f68ef"
+    },
+    {
+      "id": "stepUps",
+      "file": "exercise_guides/stepUps.png",
+      "bytes": 428987,
+      "sha256": "9659f3a962dd02ca"
     },
     {
       "id": "sumoSquats",
