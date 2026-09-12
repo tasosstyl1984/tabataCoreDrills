@@ -99,7 +99,7 @@
 
   function activityImageUrl(activityId) {
     if (!activityId || !imageIds.has(activityId)) return "";
-    return new URL(`exercise_guides/${activityId}.png`, window.location.href).toString();
+    return new URL(`exercise_guides/${activityId}.webp`, window.location.href).toString();
   }
 
   async function fetchTemplate(entry) {

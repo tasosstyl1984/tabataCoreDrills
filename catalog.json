@@ -1,6 +1,6 @@
 {
-  "version": 6,
-  "updatedAtMs": 1789158648077,
+  "version": 7,
+  "updatedAtMs": 1789211413358,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -10,7 +10,7 @@
       "updatedAtMs": 1788869228466,
       "category": "classic",
       "description": "Classic \u00b7 1\u00d78 \u00b7 20s work / 10s rest",
-      "coverImage": "exercise_guides/burpees.png",
+      "coverImage": "exercise_guides/burpees.webp",
       "activityIds": []
     },
     {
@@ -20,7 +20,7 @@
       "updatedAtMs": 1788869228466,
       "category": "football",
       "description": "Football \u00b7 4\u00d76 \u00b7 40s work / 50s rest \u00b7 Football Wall Passing, Football Control, Football Footwork",
-      "coverImage": "exercise_guides/footballControl.png",
+      "coverImage": "exercise_guides/footballControl.webp",
       "activityIds": [
         "footballWallPassing",
         "footballControl",
@@ -34,7 +34,7 @@
       "updatedAtMs": 1788869228466,
       "category": "conditioning",
       "description": "Conditioning \u00b7 4\u00d78 \u00b7 45s work / 45s rest \u00b7 Jump Rope",
-      "coverImage": "exercise_guides/jumpRope.png",
+      "coverImage": "exercise_guides/jumpRope.webp",
       "activityIds": [
         "jumpRope"
       ]
@@ -46,7 +46,7 @@
       "updatedAtMs": 1788869228466,
       "category": "kettlebell",
       "description": "Kettlebell \u00b7 4\u00d76 \u00b7 40s work / 55s rest \u00b7 Kettlebell Swings, Kettlebell Goblet Squat, Kettlebell Clean Press, Kettlebell Row, Kettlebell Turkish Get Up",
-      "coverImage": "exercise_guides/kettlebellSwings.png",
+      "coverImage": "exercise_guides/kettlebellSwings.webp",
       "activityIds": [
         "kettlebellSwings",
         "kettlebellGobletSquat",
@@ -62,7 +62,7 @@
       "updatedAtMs": 1788869228466,
       "category": "kettlebell",
       "description": "Kettlebell \u00b7 4\u00d76 \u00b7 40s work / 55s rest \u00b7 Kettlebell Swings, Kettlebell Goblet Squat, Kettlebell Clean Press, Kettlebell Row, Kettlebell Snatch",
-      "coverImage": "exercise_guides/kettlebellSwings.png",
+      "coverImage": "exercise_guides/kettlebellSwings.webp",
       "activityIds": [
         "kettlebellSwings",
         "kettlebellGobletSquat",
@@ -78,7 +78,7 @@
       "updatedAtMs": 1788869228466,
       "category": "dumbbell",
       "description": "Dumbbell \u00b7 4\u00d76 \u00b7 40s work / 50s rest \u00b7 Bicep Curls, Hammer Curls, Concentration Curls, Tricep Kickbacks, Overhead Tricep Extension",
-      "coverImage": "exercise_guides/bicepCurls.png",
+      "coverImage": "exercise_guides/bicepCurls.webp",
       "activityIds": [
         "bicepCurls",
         "hammerCurls",
@@ -94,7 +94,7 @@
       "updatedAtMs": 1788869228466,
       "category": "dumbbell",
       "description": "Dumbbell \u00b7 4\u00d76 \u00b7 40s work / 50s rest \u00b7 Dumbbell Shoulder Press, Lateral Raises, Front Raises, Dumbbell Row, Reverse Fly",
-      "coverImage": "exercise_guides/dumbbellShoulderPress.png",
+      "coverImage": "exercise_guides/dumbbellShoulderPress.webp",
       "activityIds": [
         "dumbbellShoulderPress",
         "lateralRaises",
@@ -110,7 +110,7 @@
       "updatedAtMs": 1788869228466,
       "category": "chest",
       "description": "Chest \u00b7 4\u00d76 \u00b7 40s work / 55s rest \u00b7 Bench Press, Incline Bench, Dumbbell Chest Press, Pushups, Pullover",
-      "coverImage": "exercise_guides/benchPress.png",
+      "coverImage": "exercise_guides/benchPress.webp",
       "activityIds": [
         "benchPress",
         "inclineBench",
@@ -126,7 +126,7 @@
       "updatedAtMs": 1788869228466,
       "category": "chest",
       "description": "Chest \u00b7 4\u00d76 \u00b7 40s work / 50s rest \u00b7 Chest Flies, Incline Flies, Dumbbell Chest Press, Pushups, Pullover",
-      "coverImage": "exercise_guides/chestFlies.png",
+      "coverImage": "exercise_guides/chestFlies.webp",
       "activityIds": [
         "chestFlies",
         "inclineFlies",
@@ -142,7 +142,7 @@
       "updatedAtMs": 1788869228466,
       "category": "conditioning",
       "description": "Conditioning \u00b7 4\u00d76 \u00b7 45s work / 50s rest \u00b7 Jump Rope, Kettlebell Swings, Pushups, Mountain Climbers, Box Jumps, Plank",
-      "coverImage": "exercise_guides/jumpRope.png",
+      "coverImage": "exercise_guides/jumpRope.webp",
       "activityIds": [
         "jumpRope",
         "kettlebellSwings",
@@ -159,7 +159,7 @@
       "updatedAtMs": 1788869228466,
       "category": "plyometrics",
       "description": "Plyometrics \u00b7 4\u00d76 \u00b7 40s work / 50s rest \u00b7 Box Jumps, Broad Jumps, Tuck Jumps, High Knees, Mountain Climbers",
-      "coverImage": "exercise_guides/boxJumps.png",
+      "coverImage": "exercise_guides/boxJumps.webp",
       "activityIds": [
         "boxJumps",
         "broadJumps",
@@ -175,7 +175,7 @@
       "updatedAtMs": 1788869228466,
       "category": "conditioning",
       "description": "Conditioning \u00b7 4\u00d76 \u00b7 45s work / 50s rest \u00b7 Battle Ropes, Med Ball Slams, Farmer Carry, Sled Push, Rowing, Mountain Climbers",
-      "coverImage": "exercise_guides/battleRopes.png",
+      "coverImage": "exercise_guides/battleRopes.webp",
       "activityIds": [
         "battleRopes",
         "medBallSlams",
@@ -192,7 +192,7 @@
       "updatedAtMs": 1788869228466,
       "category": "strength",
       "description": "Strength \u00b7 4\u00d76 \u00b7 40s work / 55s rest \u00b7 Squats, Lunges, Step Ups, Thrusters, Wall Balls, Kettlebell Goblet Squat",
-      "coverImage": "exercise_guides/squats.png",
+      "coverImage": "exercise_guides/squats.webp",
       "activityIds": [
         "squats",
         "lunges",
@@ -209,7 +209,7 @@
       "updatedAtMs": 1788869228466,
       "category": "strength",
       "description": "Strength \u00b7 4\u00d76 \u00b7 40s work / 50s rest \u00b7 Pushups, Pull Ups, Dips, Plank, Hanging Knee Raises",
-      "coverImage": "exercise_guides/pushups.png",
+      "coverImage": "exercise_guides/pushups.webp",
       "activityIds": [
         "pushups",
         "pullUps",
@@ -225,7 +225,7 @@
       "updatedAtMs": 1788869228466,
       "category": "core",
       "description": "Core \u00b7 4\u00d78 \u00b7 40s work / 50s rest \u00b7 Plate Rotations",
-      "coverImage": "exercise_guides/plateRotations.png",
+      "coverImage": "exercise_guides/plateRotations.webp",
       "activityIds": [
         "plateRotations"
       ]
@@ -237,7 +237,7 @@
       "updatedAtMs": 1788869228466,
       "category": "core",
       "description": "Core \u00b7 4\u00d78 \u00b7 40s work / 50s rest \u00b7 Plate Rotations, Abs, Plank, Hanging Knee Raises, Pushups",
-      "coverImage": "exercise_guides/plateRotations.png",
+      "coverImage": "exercise_guides/plateRotations.webp",
       "activityIds": [
         "plateRotations",
         "abs",
@@ -253,7 +253,7 @@
       "updatedAtMs": 1788869228466,
       "category": "core",
       "description": "Core \u00b7 4\u00d76 \u00b7 40s work / 50s rest \u00b7 Plank, Side Plank, Hollow Hold, Dead Bug, Bird Dog, Russian Twists",
-      "coverImage": "exercise_guides/plank.png",
+      "coverImage": "exercise_guides/plank.webp",
       "activityIds": [
         "plank",
         "sidePlank",
@@ -270,7 +270,7 @@
       "updatedAtMs": 1788869228466,
       "category": "strength",
       "description": "Strength \u00b7 4\u00d76 \u00b7 40s work / 55s rest \u00b7 Lunges, Bulgarian Split Squat, Glute Bridge, Calf Raises, Squats, Kettlebell Goblet Squat",
-      "coverImage": "exercise_guides/bulgarianSplitSquat.png",
+      "coverImage": "exercise_guides/bulgarianSplitSquat.webp",
       "activityIds": [
         "lunges",
         "bulgarianSplitSquat",
@@ -287,7 +287,7 @@
       "updatedAtMs": 1788869228466,
       "category": "conditioning",
       "description": "Conditioning \u00b7 4\u00d76 \u00b7 40s work / 50s rest \u00b7 Bear Crawl, Inchworm, Mountain Climbers, Farmer Carry, Plank, Jumping Jacks",
-      "coverImage": "exercise_guides/bearCrawl.png",
+      "coverImage": "exercise_guides/bearCrawl.webp",
       "activityIds": [
         "bearCrawl",
         "inchworm",
@@ -304,7 +304,7 @@
       "updatedAtMs": 1788869228466,
       "category": "plyometrics",
       "description": "Plyometrics \u00b7 4\u00d76 \u00b7 40s work / 50s rest \u00b7 Squat Jumps, Jumping Lunges, Skater Hops, High Knees, Tuck Jumps, Box Jumps",
-      "coverImage": "exercise_guides/squatJumps.png",
+      "coverImage": "exercise_guides/squatJumps.webp",
       "activityIds": [
         "squatJumps",
         "jumpingLunges",
@@ -321,7 +321,7 @@
       "updatedAtMs": 1788869228466,
       "category": "combos",
       "description": "Combos \u00b7 3\u00d78 \u00b7 45s work / 50s rest \u00b7 Football Wall Passing, Jump Rope, Kettlebell Swings, Kettlebell Goblet Squat, Kettlebell Clean Press, Kettlebell Row\u2026",
-      "coverImage": "exercise_guides/jumpRope.png",
+      "coverImage": "exercise_guides/jumpRope.webp",
       "activityIds": [
         "footballWallPassing",
         "jumpRope",
@@ -340,7 +340,7 @@
       "updatedAtMs": 1788869228466,
       "category": "combos",
       "description": "Combos \u00b7 3\u00d78 \u00b7 45s work / 50s rest \u00b7 Jump Rope, Kettlebell Swings, Kettlebell Goblet Squat, Kettlebell Clean Press, Kettlebell Row, Kettlebell Snatch\u2026",
-      "coverImage": "exercise_guides/jumpRope.png",
+      "coverImage": "exercise_guides/jumpRope.webp",
       "activityIds": [
         "jumpRope",
         "kettlebellSwings",
@@ -360,7 +360,7 @@
       "updatedAtMs": 1788869228466,
       "category": "combos",
       "description": "Combos \u00b7 3\u00d78 \u00b7 45s work / 50s rest \u00b7 Football Wall Passing, Football Control, Jump Rope",
-      "coverImage": "exercise_guides/footballControl.png",
+      "coverImage": "exercise_guides/footballControl.webp",
       "activityIds": [
         "footballWallPassing",
         "footballControl",
@@ -374,7 +374,7 @@
       "updatedAtMs": 1788869228466,
       "category": "combos",
       "description": "Combos \u00b7 4\u00d77 \u00b7 45s work / 50s rest \u00b7 Football Wall Passing, Jump Rope, Kettlebell Swings, Kettlebell Goblet Squat, Kettlebell Clean Press, Kettlebell Row\u2026",
-      "coverImage": "exercise_guides/jumpRope.png",
+      "coverImage": "exercise_guides/jumpRope.webp",
       "activityIds": [
         "footballWallPassing",
         "jumpRope",
@@ -395,7 +395,7 @@
       "updatedAtMs": 1788869228466,
       "category": "football",
       "description": "Football \u00b7 3\u00d76 \u00b7 45s work / 45s rest \u00b7 Football Wall Passing, Football Dribbling, Football Ball Mastery, Football Control, Football Footwork, Football Reaction Drills",
-      "coverImage": "exercise_guides/footballDribbling.png",
+      "coverImage": "exercise_guides/footballDribbling.webp",
       "activityIds": [
         "footballWallPassing",
         "footballDribbling",
@@ -412,7 +412,7 @@
       "updatedAtMs": 1788869228466,
       "category": "football",
       "description": "Football \u00b7 4\u00d75 \u00b7 45s work / 45s rest \u00b7 Football Ball Mastery, Football Control, Football Footwork, Football Dribbling",
-      "coverImage": "exercise_guides/footballControl.png",
+      "coverImage": "exercise_guides/footballControl.webp",
       "activityIds": [
         "footballBallMastery",
         "footballControl",
@@ -427,7 +427,7 @@
       "updatedAtMs": 1788869228466,
       "category": "football",
       "description": "Football \u00b7 4\u00d75 \u00b7 45s work / 45s rest \u00b7 Football Wall Passing, Football Control, Football Footwork, Football Reaction Drills, Football Dribbling",
-      "coverImage": "exercise_guides/footballControl.png",
+      "coverImage": "exercise_guides/footballControl.webp",
       "activityIds": [
         "footballWallPassing",
         "footballControl",
@@ -443,7 +443,7 @@
       "updatedAtMs": 1788869228466,
       "category": "boxing",
       "description": "Boxing \u00b7 3\u00d76 \u00b7 45s work / 45s rest \u00b7 Shadow Boxing",
-      "coverImage": "exercise_guides/shadowBoxing.png",
+      "coverImage": "exercise_guides/shadowBoxing.webp",
       "activityIds": [
         "shadowBoxing"
       ]
@@ -455,7 +455,7 @@
       "updatedAtMs": 1788869228466,
       "category": "conditioning",
       "description": "Conditioning \u00b7 3\u00d76 \u00b7 45s work / 45s rest \u00b7 Burpees, Thrusters, Box Jumps, Med Ball Slams, Farmer Carry, Mountain Climbers",
-      "coverImage": "exercise_guides/burpees.png",
+      "coverImage": "exercise_guides/burpees.webp",
       "activityIds": [
         "burpees",
         "thrusters",
@@ -472,7 +472,7 @@
       "updatedAtMs": 1788870000000,
       "category": "core",
       "description": "Core \u00b7 3\u00d78 \u00b7 40s work / 30s rest \u2014 abs, twists, planks, hollow, knee raises \u00b7 Abs, Russian Twists, Plank, Hollow Hold, Side Plank, Dead Bug\u2026",
-      "coverImage": "exercise_guides/russianTwists.png",
+      "coverImage": "exercise_guides/russianTwists.webp",
       "activityIds": [
         "abs",
         "russianTwists",
@@ -490,7 +490,7 @@
       "updatedAtMs": 1788901315000,
       "category": "back",
       "description": "Back \u00b7 4\u00d76 \u00b7 40s work / 50s rest \u2014 pull-ups, rows, reverse fly, pullover \u00b7 Pull Ups, Dumbbell Row, Reverse Fly, Kettlebell Row, Pullover",
-      "coverImage": "exercise_guides/pullUps.png",
+      "coverImage": "exercise_guides/pullUps.webp",
       "activityIds": [
         "pullUps",
         "dumbbellRow",
@@ -506,7 +506,7 @@
       "updatedAtMs": 1788901720600,
       "category": "combos",
       "description": "Combos \u00b7 4\u00d76 \u00b7 45s work / 50s rest \u2014 3 kettlebell sets + 1 shadow boxing set \u00b7 Kettlebell Swings, Kettlebell Goblet Squat, Kettlebell Clean Press, Kettlebell Row, Kettlebell Snatch, Kettlebell Turkish Get Up\u2026",
-      "coverImage": "exercise_guides/kettlebellSwings.png",
+      "coverImage": "exercise_guides/kettlebellSwings.webp",
       "activityIds": [
         "kettlebellSwings",
         "kettlebellGobletSquat",
