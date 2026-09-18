@@ -1,8 +1,8 @@
 {
-  "version": 4,
-  "updatedAtMs": 1789211413358,
+  "version": 8,
+  "updatedAtMs": 1789730379237,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 1726804,
+  "totalBytes": 1852268,
   "images": [
     {
       "id": "abs",
@@ -115,14 +115,14 @@
     {
       "id": "dumbbellLunges",
       "file": "exercise_guides/dumbbellLunges.webp",
-      "bytes": 21598,
-      "sha256": "7f02ff1241bbd56d"
+      "bytes": 20022,
+      "sha256": "841d606ee7d69251"
     },
     {
       "id": "dumbbellRow",
       "file": "exercise_guides/dumbbellRow.webp",
-      "bytes": 28988,
-      "sha256": "ca2574423eb7593a"
+      "bytes": 37372,
+      "sha256": "44d250028265eb95"
     },
     {
       "id": "dumbbellShoulderPress",
@@ -143,6 +143,12 @@
       "sha256": "aac2e813afaf2a29"
     },
     {
+      "id": "footballConeSlalom",
+      "file": "exercise_guides/footballConeSlalom.webp",
+      "bytes": 38666,
+      "sha256": "c9da52677a5e9e6d"
+    },
+    {
       "id": "footballControl",
       "file": "exercise_guides/footballControl.webp",
       "bytes": 23834,
@@ -155,6 +161,18 @@
       "sha256": "3e1eedd17094d3c4"
     },
     {
+      "id": "footballFootwork",
+      "file": "exercise_guides/footballFootwork.webp",
+      "bytes": 39570,
+      "sha256": "dfcd93f3a6e07c06"
+    },
+    {
+      "id": "footballHeadStall",
+      "file": "exercise_guides/footballHeadStall.webp",
+      "bytes": 23912,
+      "sha256": "5acd188951481c84"
+    },
+    {
       "id": "footballReactionDrills",
       "file": "exercise_guides/footballReactionDrills.webp",
       "bytes": 28844,
@@ -163,8 +181,8 @@
     {
       "id": "footballWallPassing",
       "file": "exercise_guides/footballWallPassing.webp",
-      "bytes": 23490,
-      "sha256": "ed1c0ec77d225014"
+      "bytes": 38422,
+      "sha256": "99e794884e8a1039"
     },
     {
       "id": "frontRaises",
@@ -313,8 +331,8 @@
     {
       "id": "lunges",
       "file": "exercise_guides/lunges.webp",
-      "bytes": 20022,
-      "sha256": "841d606ee7d69251"
+      "bytes": 21598,
+      "sha256": "7f02ff1241bbd56d"
     },
     {
       "id": "medBallSlams",
