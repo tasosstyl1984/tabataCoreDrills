@@ -1,8 +1,8 @@
 {
-  "version": 8,
-  "updatedAtMs": 1789730379237,
+  "version": 9,
+  "updatedAtMs": 1789778661824,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 1852268,
+  "totalBytes": 1820708,
   "images": [
     {
       "id": "abs",
@@ -145,8 +145,8 @@
     {
       "id": "footballConeSlalom",
       "file": "exercise_guides/footballConeSlalom.webp",
-      "bytes": 38666,
-      "sha256": "c9da52677a5e9e6d"
+      "bytes": 30138,
+      "sha256": "10c8e16b2ae32e8f"
     },
     {
       "id": "footballControl",
@@ -163,14 +163,14 @@
     {
       "id": "footballFootwork",
       "file": "exercise_guides/footballFootwork.webp",
-      "bytes": 39570,
-      "sha256": "dfcd93f3a6e07c06"
+      "bytes": 29288,
+      "sha256": "77a4a32c00eee6da"
     },
     {
       "id": "footballHeadStall",
       "file": "exercise_guides/footballHeadStall.webp",
-      "bytes": 23912,
-      "sha256": "5acd188951481c84"
+      "bytes": 21764,
+      "sha256": "775ebc980708b414"
     },
     {
       "id": "footballReactionDrills",
@@ -181,8 +181,8 @@
     {
       "id": "footballWallPassing",
       "file": "exercise_guides/footballWallPassing.webp",
-      "bytes": 38422,
-      "sha256": "99e794884e8a1039"
+      "bytes": 27820,
+      "sha256": "061158b535c401cf"
     },
     {
       "id": "frontRaises",
