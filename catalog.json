@@ -1,6 +1,6 @@
 {
-  "version": 7,
-  "updatedAtMs": 1789211413358,
+  "version": 8,
+  "updatedAtMs": 1789778690781,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -20,7 +20,7 @@
       "updatedAtMs": 1788869228466,
       "category": "football",
       "description": "Football \u00b7 4\u00d76 \u00b7 40s work / 50s rest \u00b7 Football Wall Passing, Football Control, Football Footwork",
-      "coverImage": "exercise_guides/footballControl.webp",
+      "coverImage": "exercise_guides/footballWallPassing.webp",
       "activityIds": [
         "footballWallPassing",
         "footballControl",
