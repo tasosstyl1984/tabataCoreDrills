@@ -299,6 +299,8 @@ main {
 }
 
 .preview-panel {
+  width: 100%;
+  min-width: 0;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -439,7 +441,6 @@ main {
 }
 
 .preview-footer button {
-  width: 100%;
   border: 0;
   border-radius: 10px;
   padding: 0.75rem 0.9rem;
@@ -544,4 +545,445 @@ code {
     height: 64px;
     border-radius: 16px;
   }
+}
+
+/* ---- Exercise detail lightbox ---- */
+.round-thumb-btn,
+.preview-cover-btn {
+  display: block;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+
+.round-thumb-btn:hover .round-thumb,
+.preview-cover-btn:hover .preview-cover {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.exercise-dialog {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  max-width: min(720px, calc(100vw - 1.5rem));
+  width: 100%;
+  color: var(--text);
+}
+
+.exercise-dialog[open],
+.exercise-dialog:modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.exercise-dialog::backdrop {
+  background: rgba(4, 8, 12, 0.8);
+}
+
+.exercise-panel {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  max-height: min(90vh, 960px);
+  display: flex;
+  flex-direction: column;
+}
+
+.exercise-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 1rem 1.2rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.exercise-header h2 {
+  margin: 0.15rem 0 0;
+  font-size: 1.35rem;
+}
+
+.exercise-body {
+  padding: 1rem 1.2rem 1.25rem;
+  overflow: auto;
+}
+
+.exercise-image {
+  display: block;
+  width: 100%;
+  max-height: min(50vh, 420px);
+  object-fit: contain;
+  background: #243040;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.exercise-section {
+  margin-bottom: 1rem;
+}
+
+.exercise-section h3 {
+  margin: 0 0 0.35rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.exercise-section p {
+  margin: 0;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* ---- Admin chrome ---- */
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  align-items: center;
+  margin-top: 1.25rem;
+}
+
+.hero-actions .play-cta {
+  margin-top: 0;
+}
+
+.btn-admin {
+  border: 1px solid var(--border);
+  background: var(--chip);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 0.65rem 1rem;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-admin:hover {
+  border-color: var(--accent);
+}
+
+.admin-bar {
+  display: none;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  background: rgba(61, 214, 198, 0.08);
+  border: 1px solid var(--accent-dim);
+  border-radius: var(--radius);
+}
+
+.admin-bar.is-visible {
+  display: flex;
+}
+
+.admin-bar strong {
+  color: var(--accent);
+  margin-right: 0.35rem;
+}
+
+.admin-bar button {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 10px;
+  padding: 0.45rem 0.75rem;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.admin-bar button.primary {
+  background: var(--accent);
+  color: #041210;
+  border-color: transparent;
+}
+
+.admin-dialog,
+.editor-dialog {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  max-width: min(820px, calc(100vw - 1.25rem));
+  width: 100%;
+  color: var(--text);
+}
+
+.admin-dialog[open],
+.admin-dialog:modal,
+.editor-dialog[open],
+.editor-dialog:modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.admin-dialog::backdrop,
+.editor-dialog::backdrop {
+  background: rgba(4, 8, 12, 0.78);
+}
+
+.admin-panel,
+.editor-panel {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  max-height: min(92vh, 980px);
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-panel header,
+.editor-panel header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.15rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.admin-panel header h2,
+.editor-panel header h2 {
+  margin: 0.15rem 0 0;
+  font-size: 1.25rem;
+}
+
+.admin-panel .form-body,
+.editor-panel .form-body {
+  padding: 1rem 1.15rem;
+  overflow: auto;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.form-row {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.form-row label {
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  background: var(--chip);
+  color: var(--text);
+  border-radius: 10px;
+  padding: 0.65rem 0.75rem;
+  font: inherit;
+}
+
+.form-row textarea {
+  min-height: 4.5rem;
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  padding: 0.85rem 1.15rem 1.1rem;
+  border-top: 1px solid var(--border);
+}
+
+.form-actions button {
+  border: 0;
+  border-radius: 10px;
+  padding: 0.65rem 0.95rem;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  background: var(--accent);
+  color: #041210;
+}
+
+.form-actions button.secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.form-actions button.danger {
+  background: #8b2e2e;
+  color: #fff;
+}
+
+.form-hint {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.form-error {
+  margin: 0;
+  color: #ff8f8f;
+  font-size: 0.9rem;
+}
+
+/* Structure editor blocks */
+.plan-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.plan-toolbar button,
+.set-actions button,
+.round-actions button,
+.stepper button {
+  border: 1px solid var(--border);
+  background: var(--chip);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 0.35rem 0.55rem;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.set-block {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #141b24;
+  overflow: hidden;
+}
+
+.set-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.65rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--chip);
+}
+
+.set-head h3 {
+  margin: 0;
+  flex: 1;
+  font-size: 1rem;
+  min-width: 5rem;
+}
+
+.set-body {
+  padding: 0.75rem;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.round-block {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.65rem;
+  background: var(--surface);
+  display: grid;
+  gap: 0.55rem;
+}
+
+.round-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  align-items: center;
+}
+
+.round-top strong {
+  flex: 1;
+  min-width: 4rem;
+}
+
+.round-fields {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.55rem;
+}
+
+@media (min-width: 640px) {
+  .round-fields {
+    grid-template-columns: 1.4fr 1fr 1fr;
+  }
+}
+
+.stepper {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.stepper span {
+  min-width: 3.2rem;
+  text-align: center;
+  font-weight: 800;
+}
+
+.set-rest-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.card-actions .btn-edit-admin,
+.card-actions .btn-delete-admin {
+  display: none;
+}
+
+body.admin-authed .card-actions .btn-edit-admin,
+body.admin-authed .card-actions .btn-delete-admin {
+  display: inline-flex;
+}
+
+.preview-footer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.preview-footer-actions button {
+  flex: 1;
+  min-width: 8rem;
+}
+
+.preview-footer-actions .btn-edit-admin,
+.preview-footer-actions .btn-delete-admin {
+  display: none;
+}
+
+body.admin-authed .preview-footer-actions .btn-edit-admin,
+body.admin-authed .preview-footer-actions .btn-delete-admin {
+  display: inline-flex;
+  background: var(--chip);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+body.admin-authed .preview-footer-actions .btn-delete-admin {
+  background: #8b2e2e;
+  color: #fff;
+  border-color: transparent;
 }

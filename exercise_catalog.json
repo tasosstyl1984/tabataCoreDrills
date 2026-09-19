@@ -1,0 +1,421 @@
+{
+  "version": 1,
+  "updatedAtMs": 1789782612005,
+  "activities": [
+    {
+      "id": "jumpRope",
+      "label": "Jump rope",
+      "group": "General"
+    },
+    {
+      "id": "jumpingJacks",
+      "label": "Jumping jacks",
+      "group": "General"
+    },
+    {
+      "id": "burpees",
+      "label": "Burpees",
+      "group": "General"
+    },
+    {
+      "id": "shadowBoxing",
+      "label": "Shadow boxing",
+      "group": "Combat"
+    },
+    {
+      "id": "boxing",
+      "label": "Boxing bell",
+      "group": "Combat"
+    },
+    {
+      "id": "abs",
+      "label": "Abs",
+      "group": "Core"
+    },
+    {
+      "id": "pushups",
+      "label": "Pushups",
+      "group": "Strength"
+    },
+    {
+      "id": "pullUps",
+      "label": "Pull ups",
+      "group": "Strength"
+    },
+    {
+      "id": "squats",
+      "label": "Squats",
+      "group": "Strength"
+    },
+    {
+      "id": "sumoSquats",
+      "label": "Sumo squats",
+      "group": "Strength"
+    },
+    {
+      "id": "lunges",
+      "label": "Lunges",
+      "group": "Strength"
+    },
+    {
+      "id": "plateRotations",
+      "label": "Plate rotations",
+      "group": "Core"
+    },
+    {
+      "id": "stepUps",
+      "label": "Step-ups",
+      "group": "Strength"
+    },
+    {
+      "id": "thrusters",
+      "label": "Thrusters",
+      "group": "Strength"
+    },
+    {
+      "id": "wallBalls",
+      "label": "Wall balls",
+      "group": "Strength"
+    },
+    {
+      "id": "dips",
+      "label": "Dips",
+      "group": "Strength"
+    },
+    {
+      "id": "gluteBridge",
+      "label": "Glute bridge",
+      "group": "Strength"
+    },
+    {
+      "id": "gluteKickbacks",
+      "label": "Glute kickbacks",
+      "group": "Strength"
+    },
+    {
+      "id": "bulgarianSplitSquat",
+      "label": "Split squat",
+      "group": "Strength"
+    },
+    {
+      "id": "calfRaises",
+      "label": "Calf raises",
+      "group": "Strength"
+    },
+    {
+      "id": "plank",
+      "label": "Plank",
+      "group": "Core"
+    },
+    {
+      "id": "hangingKneeRaises",
+      "label": "Knee raises",
+      "group": "Core"
+    },
+    {
+      "id": "sidePlank",
+      "label": "Side plank",
+      "group": "Core"
+    },
+    {
+      "id": "deadBug",
+      "label": "Dead bug",
+      "group": "Core"
+    },
+    {
+      "id": "birdDog",
+      "label": "Bird dog",
+      "group": "Core"
+    },
+    {
+      "id": "russianTwists",
+      "label": "Rus. twists",
+      "group": "Core"
+    },
+    {
+      "id": "hollowHold",
+      "label": "Hollow hold",
+      "group": "Core"
+    },
+    {
+      "id": "dumbbell",
+      "label": "Dumbbell",
+      "group": "Dumbbell"
+    },
+    {
+      "id": "bicepCurls",
+      "label": "Bicep curls",
+      "group": "Dumbbell"
+    },
+    {
+      "id": "hammerCurls",
+      "label": "Hammer curls",
+      "group": "Dumbbell"
+    },
+    {
+      "id": "concentrationCurls",
+      "label": "Conc. curls",
+      "group": "Dumbbell"
+    },
+    {
+      "id": "lateralRaises",
+      "label": "Lateral raises",
+      "group": "Dumbbell"
+    },
+    {
+      "id": "frontRaises",
+      "label": "Front raises",
+      "group": "Dumbbell"
+    },
+    {
+      "id": "dumbbellShoulderPress",
+      "label": "DB shoulder press",
+      "group": "Dumbbell"
+    },
+    {
+      "id": "dumbbellRow",
+      "label": "DB row",
+      "group": "Dumbbell"
+    },
+    {
+      "id": "reverseFly",
+      "label": "Reverse fly",
+      "group": "Dumbbell"
+    },
+    {
+      "id": "tricepKickbacks",
+      "label": "Kickbacks",
+      "group": "Dumbbell"
+    },
+    {
+      "id": "overheadTricepExtension",
+      "label": "OH tricep extension",
+      "group": "Dumbbell"
+    },
+    {
+      "id": "renegadeRow",
+      "label": "Renegade row",
+      "group": "Dumbbell"
+    },
+    {
+      "id": "dumbbellLunges",
+      "label": "DB lunges",
+      "group": "Dumbbell"
+    },
+    {
+      "id": "benchPress",
+      "label": "Bench press",
+      "group": "Chest"
+    },
+    {
+      "id": "inclineBench",
+      "label": "Incline bench",
+      "group": "Chest"
+    },
+    {
+      "id": "dumbbellChestPress",
+      "label": "DB chest press",
+      "group": "Chest"
+    },
+    {
+      "id": "chestFlies",
+      "label": "Chest flies",
+      "group": "Chest"
+    },
+    {
+      "id": "inclineFlies",
+      "label": "Incline flies",
+      "group": "Chest"
+    },
+    {
+      "id": "pullover",
+      "label": "Pullover",
+      "group": "Chest"
+    },
+    {
+      "id": "kettlebell",
+      "label": "Kettlebell",
+      "group": "Kettlebell"
+    },
+    {
+      "id": "kettlebellSwings",
+      "label": "KB swings",
+      "group": "Kettlebell"
+    },
+    {
+      "id": "kettlebellGobletSquat",
+      "label": "Goblet squat",
+      "group": "Kettlebell"
+    },
+    {
+      "id": "kettlebellCleanPress",
+      "label": "Clean & press",
+      "group": "Kettlebell"
+    },
+    {
+      "id": "kettlebellSnatch",
+      "label": "KB snatch",
+      "group": "Kettlebell"
+    },
+    {
+      "id": "kettlebellTurkishGetUp",
+      "label": "Tur. Get-Up",
+      "group": "Kettlebell"
+    },
+    {
+      "id": "kettlebellRow",
+      "label": "KB row",
+      "group": "Kettlebell"
+    },
+    {
+      "id": "kettlebellDeadlift",
+      "label": "KB deadlift",
+      "group": "Kettlebell"
+    },
+    {
+      "id": "kettlebellHalo",
+      "label": "KB halo",
+      "group": "Kettlebell"
+    },
+    {
+      "id": "kettlebellGorillaRow",
+      "label": "KB gorilla row",
+      "group": "Kettlebell"
+    },
+    {
+      "id": "kettlebellFlies",
+      "label": "KB flies",
+      "group": "Kettlebell"
+    },
+    {
+      "id": "boxJumps",
+      "label": "Box jumps",
+      "group": "Plyometrics"
+    },
+    {
+      "id": "broadJumps",
+      "label": "Broad jumps",
+      "group": "Plyometrics"
+    },
+    {
+      "id": "tuckJumps",
+      "label": "Tuck jumps",
+      "group": "Plyometrics"
+    },
+    {
+      "id": "highKnees",
+      "label": "High knees",
+      "group": "Plyometrics"
+    },
+    {
+      "id": "squatJumps",
+      "label": "Squat jumps",
+      "group": "Plyometrics"
+    },
+    {
+      "id": "jumpingLunges",
+      "label": "Jump lunges",
+      "group": "Plyometrics"
+    },
+    {
+      "id": "skaterHops",
+      "label": "Skater hops",
+      "group": "Plyometrics"
+    },
+    {
+      "id": "mountainClimbers",
+      "label": "Mt. climbers",
+      "group": "Conditioning"
+    },
+    {
+      "id": "bearCrawl",
+      "label": "Bear crawl",
+      "group": "Conditioning"
+    },
+    {
+      "id": "inchworm",
+      "label": "Inchworm",
+      "group": "Conditioning"
+    },
+    {
+      "id": "battleRopes",
+      "label": "Battle ropes",
+      "group": "Conditioning"
+    },
+    {
+      "id": "medBallSlams",
+      "label": "Med ball slams",
+      "group": "Conditioning"
+    },
+    {
+      "id": "farmerCarry",
+      "label": "Farmer carry",
+      "group": "Conditioning"
+    },
+    {
+      "id": "sledPush",
+      "label": "Sled push",
+      "group": "Conditioning"
+    },
+    {
+      "id": "rowing",
+      "label": "Rowing",
+      "group": "Conditioning"
+    },
+    {
+      "id": "bike",
+      "label": "Bike",
+      "group": "Conditioning"
+    },
+    {
+      "id": "running",
+      "label": "Running",
+      "group": "Conditioning"
+    },
+    {
+      "id": "footballWallPassing",
+      "label": "Wall passing",
+      "group": "Football"
+    },
+    {
+      "id": "footballDribbling",
+      "label": "Dribbling",
+      "group": "Football"
+    },
+    {
+      "id": "footballBallMastery",
+      "label": "Ball mastery",
+      "group": "Football"
+    },
+    {
+      "id": "footballControl",
+      "label": "Control",
+      "group": "Football"
+    },
+    {
+      "id": "footballFootwork",
+      "label": "Footwork",
+      "group": "Football"
+    },
+    {
+      "id": "footballReactionDrills",
+      "label": "Reaction drills",
+      "group": "Football"
+    },
+    {
+      "id": "footballConeSlalom",
+      "label": "Cone slalom",
+      "group": "Football"
+    },
+    {
+      "id": "footballHeadStall",
+      "label": "Head-stall",
+      "group": "Football"
+    },
+    {
+      "id": "footballElastico",
+      "label": "Elastico",
+      "group": "Football"
+    }
+  ]
+}

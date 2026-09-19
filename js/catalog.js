@@ -8,44 +8,18 @@
   const previewTitle = document.getElementById("preview-title");
   const previewDownloadBtn = document.getElementById("preview-download");
   const previewCloseBtn = document.getElementById("preview-close");
+  const exerciseDialog = document.getElementById("exercise-dialog");
+  const exerciseBody = document.getElementById("exercise-body");
+  const exerciseTitle = document.getElementById("exercise-title");
+  const exerciseCloseBtn = document.getElementById("exercise-close");
 
   let catalog = null;
   let activeCategory = "all";
   let previewEntry = null;
   const templateCache = new Map();
   const imageIds = new Set();
-
-  const ACTIVITY_LABELS = {
-    footballWallPassing: "Wall passing",
-    footballControl: "Ball control",
-    footballFootwork: "Footwork",
-    footballDribbling: "Dribbling",
-    footballBallMastery: "Ball mastery",
-    footballReactionDrills: "Reaction drills",
-    shadowBoxing: "Shadow boxing",
-    jumpRope: "Jump rope",
-    abs: "Abs",
-    russianTwists: "Russian twists",
-    plank: "Plank",
-    hollowHold: "Hollow hold",
-    sidePlank: "Side plank",
-    deadBug: "Dead bug",
-    hangingKneeRaises: "Knee raises",
-    birdDog: "Bird dog",
-    plateRotations: "Plate rotations",
-    pullUps: "Pull-ups",
-    dumbbellRow: "DB row",
-    reverseFly: "Reverse fly",
-    kettlebellRow: "KB row",
-    pullover: "Pullover",
-    kettlebellSwings: "KB swings",
-    kettlebellGobletSquat: "Goblet squat",
-    kettlebellCleanPress: "Clean + press",
-    kettlebellSnatch: "KB snatch",
-    kettlebellTurkishGetUp: "Turkish get-up",
-    boxing: "Boxing",
-    burpees: "Burpees",
-  };
+  let guidesCopy = {};
+  let activityCatalog = [];
 
   function setStatus(msg) {
     if (statusEl) statusEl.textContent = msg || "";
@@ -79,7 +53,7 @@
 
   function filteredDrills() {
     const q = (searchEl?.value || "").trim().toLowerCase();
-    return (catalog.drills || []).filter((d) => {
+    return (catalog?.drills || []).filter((d) => {
       if (activeCategory !== "all" && d.category !== activeCategory) return false;
       if (!q) return true;
       const acts = (d.activityIds || []).join(" ");
@@ -100,6 +74,18 @@
   function activityImageUrl(activityId) {
     if (!activityId || !imageIds.has(activityId)) return "";
     return new URL(`exercise_guides/${activityId}.webp`, window.location.href).toString();
+  }
+
+  function activityLabel(id) {
+    if (!id) return "Work";
+    const fromCatalog = activityCatalog.find((a) => a.id === id);
+    if (fromCatalog) return fromCatalog.label;
+    const guide = guidesCopy[id];
+    if (guide?.title) return guide.title;
+    return String(id)
+      .replace(/([A-Z])/g, " $1")
+      .replace(/^./, (c) => c.toUpperCase())
+      .trim();
   }
 
   async function fetchTemplate(entry) {
@@ -130,15 +116,6 @@
     a.click();
     a.remove();
     URL.revokeObjectURL(a.href);
-  }
-
-  function activityLabel(id) {
-    if (!id) return "Work";
-    if (ACTIVITY_LABELS[id]) return ACTIVITY_LABELS[id];
-    return String(id)
-      .replace(/([A-Z])/g, " $1")
-      .replace(/^./, (c) => c.toUpperCase())
-      .trim();
   }
 
   function formatDuration(totalSeconds) {
@@ -178,11 +155,33 @@
     return sets * perSet + (sets - 1) * restSets;
   }
 
+  function thumbButtonHtml(activityId, thumbClass) {
+    const thumb = activityImageUrl(activityId);
+    if (!thumb) {
+      return `<span class="${thumbClass} placeholder" aria-hidden="true"></span>`;
+    }
+    return `<button type="button" class="round-thumb-btn" data-open-exercise="${escapeAttr(
+      activityId || "",
+    )}" aria-label="Open ${escapeAttr(activityLabel(activityId))} details"><img class="${thumbClass}" src="${escapeAttr(
+      thumb,
+    )}" alt="" loading="lazy" /></button>`;
+  }
+
   function buildPreviewHtml(entry, template) {
     const sets = template.structuredPlan?.sets || [];
     const cover = coverUrl(entry);
+    const coverActivity =
+      (entry.activityIds && entry.activityIds[0]) ||
+      sets[0]?.rounds?.[0]?.activityId ||
+      "";
     const coverHtml = cover
-      ? `<img class="preview-cover" src="${escapeAttr(cover)}" alt="" loading="lazy" />`
+      ? coverActivity
+        ? `<button type="button" class="preview-cover-btn" data-open-exercise="${escapeAttr(
+            coverActivity,
+          )}" aria-label="Open exercise details"><img class="preview-cover" src="${escapeAttr(
+            cover,
+          )}" alt="" loading="lazy" /></button>`
+        : `<img class="preview-cover" src="${escapeAttr(cover)}" alt="" loading="lazy" />`
       : "";
     const stats = [
       ["Sets", String(template.sets ?? sets.length ?? "—")],
@@ -204,10 +203,7 @@
                 j < rounds.length - 1
                   ? `<span class="round-rest">→ ${round.restAfterSeconds || 0}s rest</span>`
                   : "";
-              const thumb = activityImageUrl(round.activityId);
-              const thumbHtml = thumb
-                ? `<img class="round-thumb" src="${escapeAttr(thumb)}" alt="" loading="lazy" />`
-                : `<span class="round-thumb placeholder" aria-hidden="true"></span>`;
+              const thumbHtml = thumbButtonHtml(round.activityId, "round-thumb");
               return `<li>${thumbHtml}<div class="round-copy"><strong>${escapeHtml(
                 activityLabel(round.activityId),
               )}</strong> · ${round.workSeconds}s work ${rest}</div></li>`;
@@ -239,32 +235,75 @@
     `;
   }
 
-  function showDialog() {
-    if (!dialog) return false;
+  function showModal(el) {
+    if (!el) return false;
     try {
-      if (typeof dialog.showModal === "function") {
-        if (!dialog.open) dialog.showModal();
+      if (typeof el.showModal === "function") {
+        if (!el.open) el.showModal();
       } else {
-        dialog.setAttribute("open", "");
+        el.setAttribute("open", "");
       }
       return true;
     } catch (_) {
-      dialog.setAttribute("open", "");
+      el.setAttribute("open", "");
       return true;
     }
   }
 
-  function hideDialog() {
-    if (!dialog) return;
+  function hideModal(el) {
+    if (!el) return;
     try {
-      if (typeof dialog.close === "function" && dialog.open) {
-        dialog.close();
-      } else {
-        dialog.removeAttribute("open");
-      }
+      if (typeof el.close === "function" && el.open) el.close();
+      else el.removeAttribute("open");
     } catch (_) {
-      dialog.removeAttribute("open");
+      el.removeAttribute("open");
     }
+  }
+
+  function openExerciseDetail(activityId) {
+    if (!activityId) return;
+    const guide = guidesCopy[activityId] || {};
+    const title = guide.title || activityLabel(activityId);
+    const img = activityImageUrl(activityId);
+    if (exerciseTitle) exerciseTitle.textContent = title;
+    const sections = [
+      ["Setup", guide.setup],
+      ["Action", guide.actionPhase],
+      ["Form check", guide.formCheck],
+    ]
+      .filter(([, text]) => text)
+      .map(
+        ([h, text]) =>
+          `<section class="exercise-section"><h3>${escapeHtml(h)}</h3><p>${escapeHtml(
+            text,
+          )}</p></section>`,
+      )
+      .join("");
+    if (exerciseBody) {
+      exerciseBody.innerHTML = `
+        ${
+          img
+            ? `<img class="exercise-image" src="${escapeAttr(img)}" alt="${escapeAttr(title)}" />`
+            : ""
+        }
+        ${
+          sections ||
+          `<p class="muted">No how-to copy for this exercise yet. Image${img ? "" : " also missing"}.</p>`
+        }
+      `;
+    }
+    showModal(exerciseDialog);
+  }
+
+  function wireExerciseClicks(root) {
+    if (!root) return;
+    root.querySelectorAll("[data-open-exercise]").forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        openExerciseDetail(btn.getAttribute("data-open-exercise"));
+      });
+    });
   }
 
   async function openPreview(entry) {
@@ -272,10 +311,13 @@
     if (previewTitle) previewTitle.textContent = entry.name || entry.id;
     if (previewBody) previewBody.innerHTML = `<p class="muted">Loading preview…</p>`;
     if (previewDownloadBtn) previewDownloadBtn.disabled = true;
-    showDialog();
+    showModal(dialog);
     try {
       const template = await fetchTemplate(entry);
-      if (previewBody) previewBody.innerHTML = buildPreviewHtml(entry, template);
+      if (previewBody) {
+        previewBody.innerHTML = buildPreviewHtml(entry, template);
+        wireExerciseClicks(previewBody);
+      }
       if (previewDownloadBtn) previewDownloadBtn.disabled = false;
     } catch (err) {
       if (previewBody) {
@@ -287,11 +329,15 @@
 
   function closePreview() {
     previewEntry = null;
-    hideDialog();
+    hideModal(dialog);
+  }
+
+  function closeExercise() {
+    hideModal(exerciseDialog);
   }
 
   function renderGrid() {
-    if (!gridEl) return;
+    if (!gridEl || !catalog) return;
     const drills = filteredDrills();
     gridEl.innerHTML = "";
     if (!drills.length) {
@@ -324,6 +370,14 @@
       const downloadBtn = document.createElement("button");
       downloadBtn.type = "button";
       downloadBtn.textContent = "Download JSON";
+      const editBtn = document.createElement("button");
+      editBtn.type = "button";
+      editBtn.className = "btn-edit-admin";
+      editBtn.textContent = "Edit";
+      const deleteBtn = document.createElement("button");
+      deleteBtn.type = "button";
+      deleteBtn.className = "btn-delete-admin";
+      deleteBtn.textContent = "Delete";
 
       const open = (e) => {
         if (e) {
@@ -356,7 +410,17 @@
           downloadBtn.disabled = false;
         }
       });
-      actions.append(previewBtn, downloadBtn);
+      editBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        window.dispatchEvent(new CustomEvent("tabata-admin-edit", { detail: { entry: d } }));
+      });
+      deleteBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        window.dispatchEvent(new CustomEvent("tabata-admin-delete", { detail: { entry: d } }));
+      });
+      actions.append(previewBtn, downloadBtn, editBtn, deleteBtn);
       card.appendChild(actions);
       gridEl.appendChild(card);
     }
@@ -387,23 +451,49 @@
     }
   }
 
+  async function loadGuidesCopy() {
+    try {
+      const res = await fetch("exercise_guides_copy.json", { cache: "no-store" });
+      if (!res.ok) return;
+      const data = await res.json();
+      guidesCopy = data.guides || {};
+    } catch (_) {
+      /* optional */
+    }
+  }
+
+  async function loadActivityCatalog() {
+    try {
+      const res = await fetch("exercise_catalog.json", { cache: "no-store" });
+      if (!res.ok) return;
+      const data = await res.json();
+      activityCatalog = data.activities || [];
+    } catch (_) {
+      /* optional */
+    }
+  }
+
+  async function reloadCatalog() {
+    templateCache.clear();
+    const res = await fetch("catalog.json", { cache: "no-store" });
+    if (!res.ok) throw new Error(`catalog.json failed (${res.status})`);
+    catalog = await res.json();
+    renderChips(categoriesFrom(catalog.drills || []));
+    renderGrid();
+    return catalog;
+  }
+
   async function init() {
     setStatus("Loading catalog…");
     try {
-      await loadImageIndex();
-      const res = await fetch("catalog.json", { cache: "no-store" });
-      if (!res.ok) throw new Error(`catalog.json failed (${res.status})`);
-      catalog = await res.json();
-      renderChips(categoriesFrom(catalog.drills || []));
-      renderGrid();
+      await Promise.all([loadImageIndex(), loadGuidesCopy(), loadActivityCatalog()]);
+      await reloadCatalog();
     } catch (err) {
       setStatus(err.message || "Failed to load catalog");
     }
   }
 
-  if (previewCloseBtn) {
-    previewCloseBtn.addEventListener("click", () => closePreview());
-  }
+  if (previewCloseBtn) previewCloseBtn.addEventListener("click", () => closePreview());
   if (previewDownloadBtn) {
     previewDownloadBtn.addEventListener("click", async () => {
       if (!previewEntry) return;
@@ -418,6 +508,24 @@
       }
     });
   }
+  const previewEditBtn = document.getElementById("preview-edit");
+  const previewDeleteBtn = document.getElementById("preview-delete");
+  if (previewEditBtn) {
+    previewEditBtn.addEventListener("click", () => {
+      if (!previewEntry) return;
+      window.dispatchEvent(
+        new CustomEvent("tabata-admin-edit", { detail: { entry: previewEntry } }),
+      );
+    });
+  }
+  if (previewDeleteBtn) {
+    previewDeleteBtn.addEventListener("click", () => {
+      if (!previewEntry) return;
+      window.dispatchEvent(
+        new CustomEvent("tabata-admin-delete", { detail: { entry: previewEntry } }),
+      );
+    });
+  }
   if (dialog) {
     dialog.addEventListener("click", (e) => {
       if (e.target === dialog) closePreview();
@@ -427,7 +535,35 @@
       closePreview();
     });
   }
+  if (exerciseCloseBtn) exerciseCloseBtn.addEventListener("click", () => closeExercise());
+  if (exerciseDialog) {
+    exerciseDialog.addEventListener("click", (e) => {
+      if (e.target === exerciseDialog) closeExercise();
+    });
+    exerciseDialog.addEventListener("cancel", (e) => {
+      e.preventDefault();
+      closeExercise();
+    });
+  }
 
   if (searchEl) searchEl.addEventListener("input", () => renderGrid());
+
+  window.TabataDrillsSite = {
+    setStatus,
+    reloadCatalog,
+    getCatalog: () => catalog,
+    getPreviewEntry: () => previewEntry,
+    closePreview,
+    openPreview,
+    fetchTemplate,
+    activityCatalog: () => activityCatalog,
+    activityLabel,
+    activityImageUrl,
+    imageIds,
+    invalidateTemplate: (id) => templateCache.delete(id),
+    escapeHtml,
+    escapeAttr,
+  };
+
   init();
 })();

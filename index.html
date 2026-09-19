@@ -6,7 +6,7 @@
   <title>Tabata Core Drills</title>
   <meta name="description" content="Browse and download Tabata Core workout drills. Import them into the Tabata Core Android app." />
   <link rel="icon" href="img/logo-mark.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="css/site.css?v=7" />
+  <link rel="stylesheet" href="css/site.css?v=10" />
 </head>
 <body>
   <header class="hero">
@@ -24,15 +24,19 @@
         <p class="tagline">Browse plans. Preview a session. Download JSON and import in the app.</p>
       </div>
     </div>
-    <a
-      class="play-cta"
-      href="https://play.google.com/store/apps/details?id=com.tabatacore.app&hl=en"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      <span class="play-cta-icon" aria-hidden="true">▶</span>
-      Get Tabata Core on Google Play
-    </a>
+    <div class="hero-actions">
+      <a
+        class="play-cta"
+        href="https://play.google.com/store/apps/details?id=com.tabatacore.app&hl=en"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="play-cta-icon" aria-hidden="true">▶</span>
+        Get Tabata Core on Google Play
+      </a>
+      <button type="button" id="admin-login-btn" class="btn-admin">Admin</button>
+      <button type="button" id="admin-logout-btn" class="btn-admin" hidden>Log out</button>
+    </div>
   </header>
 
   <main>
@@ -45,6 +49,12 @@
       </ol>
       <p class="muted">In the app you can also use <strong>Check for online drills</strong> under Templates to sync automatically.</p>
     </section>
+
+    <div id="admin-bar" class="admin-bar" aria-label="Admin tools">
+      <strong>Admin</strong>
+      <button type="button" id="admin-new-drill" class="primary">New drill</button>
+      <span class="muted" id="admin-session-hint">Signed in</span>
+    </div>
 
     <section class="toolbar" aria-label="Filters">
       <label class="search">
@@ -69,8 +79,101 @@
       </header>
       <div id="preview-body" class="preview-body"></div>
       <footer class="preview-footer">
-        <button type="button" id="preview-download">Download JSON</button>
+        <div class="preview-footer-actions">
+          <button type="button" id="preview-download">Download JSON</button>
+          <button type="button" id="preview-edit" class="btn-edit-admin">Edit</button>
+          <button type="button" id="preview-delete" class="btn-delete-admin">Delete</button>
+        </div>
       </footer>
+    </div>
+  </dialog>
+
+  <dialog id="exercise-dialog" class="exercise-dialog" aria-labelledby="exercise-title">
+    <div class="exercise-panel">
+      <header class="exercise-header">
+        <div>
+          <p class="brand">Exercise</p>
+          <h2 id="exercise-title">Exercise</h2>
+        </div>
+        <button type="button" id="exercise-close" class="btn-ghost" aria-label="Close exercise">Close</button>
+      </header>
+      <div id="exercise-body" class="exercise-body"></div>
+    </div>
+  </dialog>
+
+  <dialog id="login-dialog" class="admin-dialog" aria-labelledby="login-title">
+    <div class="admin-panel">
+      <header>
+        <div>
+          <p class="brand">Admin</p>
+          <h2 id="login-title">Sign in</h2>
+        </div>
+        <button type="button" id="login-close" class="btn-ghost">Close</button>
+      </header>
+      <form id="login-form" class="form-body">
+        <p class="form-hint">Password unlocks the editor. A GitHub PAT with Contents write access is required to save changes to the repo.</p>
+        <div class="form-row">
+          <label for="login-user">Username</label>
+          <input id="login-user" name="username" autocomplete="username" required />
+        </div>
+        <div class="form-row">
+          <label for="login-pass">Password</label>
+          <input id="login-pass" name="password" type="password" autocomplete="current-password" required />
+        </div>
+        <div class="form-row">
+          <label for="login-pat">GitHub PAT (Contents:write)</label>
+          <input id="login-pat" name="pat" type="password" autocomplete="off" required placeholder="ghp_… or github_pat_…" />
+        </div>
+        <p id="login-error" class="form-error" hidden></p>
+      </form>
+      <div class="form-actions">
+        <button type="submit" form="login-form">Sign in</button>
+        <button type="button" id="login-cancel" class="secondary">Cancel</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="editor-dialog" class="editor-dialog" aria-labelledby="editor-title">
+    <div class="editor-panel">
+      <header>
+        <div>
+          <p class="brand">Editor</p>
+          <h2 id="editor-title">New drill</h2>
+        </div>
+        <button type="button" id="editor-close" class="btn-ghost">Close</button>
+      </header>
+      <div class="form-body">
+        <div class="form-row">
+          <label for="edit-name">Name</label>
+          <input id="edit-name" required />
+        </div>
+        <div class="form-row">
+          <label for="edit-category">Category</label>
+          <input id="edit-category" list="category-suggestions" placeholder="classic, football, kettlebell…" />
+          <datalist id="category-suggestions"></datalist>
+        </div>
+        <div class="form-row">
+          <label for="edit-description">Description</label>
+          <textarea id="edit-description" rows="2"></textarea>
+        </div>
+        <div class="form-row">
+          <label for="edit-cover">Cover image path (optional)</label>
+          <input id="edit-cover" placeholder="exercise_guides/kettlebellSwings.webp" />
+        </div>
+        <div>
+          <p class="brand" style="margin-bottom:0.45rem">Custom rounds</p>
+          <div class="plan-toolbar" id="plan-toolbar">
+            <button type="button" data-action="add-set">Add set</button>
+            <button type="button" data-action="dup-last-set">Duplicate last set</button>
+          </div>
+          <div id="plan-editor" style="margin-top:0.75rem;display:grid;gap:0.75rem"></div>
+        </div>
+        <p id="editor-error" class="form-error" hidden></p>
+      </div>
+      <div class="form-actions">
+        <button type="button" id="editor-save">Save to GitHub</button>
+        <button type="button" id="editor-cancel" class="secondary">Cancel</button>
+      </div>
     </div>
   </dialog>
 
@@ -99,6 +202,7 @@
     </div>
   </footer>
 
-  <script src="js/catalog.js?v=9"></script>
+  <script src="js/catalog.js?v=10"></script>
+  <script src="js/admin.js?v=10"></script>
 </body>
 </html>
