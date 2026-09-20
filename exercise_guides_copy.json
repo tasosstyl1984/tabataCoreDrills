@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAtMs": 1789782611990,
+  "updatedAtMs": 1789917817620,
   "guides": {
     "abs": {
       "title": "Abdominal Crunch",
@@ -413,6 +413,13 @@
       "setup": "Stand upright with core braced, holding a weight completely straight up overhead past the ears with vertical upper arms.",
       "actionPhase": "Flex strictly at the elbow joints to lower the weight down behind the head, then extend the elbows forcefully to return the arms to vertical overhead lockout.",
       "formCheck": "Do not let the elbows flare outward or the lower back arch. Highlight strictly the back outer thickness blocks of the upper arms.",
+      "hasRemoteImage": true
+    },
+    "tricepKickbacks": {
+      "title": "Tricep Kickbacks",
+      "setup": "Hinge at the hips with one hand and the matching knee on a flat bench, torso parallel to the floor, free foot planted. Hold a dumbbell with the working arm, upper arm pinned tight to the side and elbow bent about 90 degrees.",
+      "actionPhase": "Keep the upper arm locked in place and extend only at the elbow until the forearm is straight back behind you, squeezing the triceps at full lockout, then control the return to the bent position.",
+      "formCheck": "Do not swing the upper arm or shrug the shoulder. Isolate the blue highlight on the rear upper-arm triceps belly of the working arm.",
       "hasRemoteImage": true
     },
     "plank": {
