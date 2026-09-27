@@ -233,11 +233,6 @@
       "group": "Chest"
     },
     {
-      "id": "kettlebell",
-      "label": "Kettlebell",
-      "group": "Kettlebell"
-    },
-    {
       "id": "kettlebellSwings",
       "label": "KB swings",
       "group": "Kettlebell"
