@@ -378,7 +378,7 @@
       return;
     }
     editingEntry = entry;
-    if (editorTitle) editorTitle.textContent = entry ? `Edit ${entry.name}` : "New drill";
+    if (editorTitle) editorTitle.textContent = entry ? `Edit ${entry.name}` : "New plan";
     if (editName) editName.value = entry?.name || "";
     if (editCategory) editCategory.value = entry?.category || "";
     if (editDescription) editDescription.value = entry?.description || "";
@@ -405,7 +405,7 @@
     const cover =
       (editCover?.value || "").trim() ||
       (activityIds[0] ? `exercise_guides/${activityIds[0]}.webp` : "exercise_guides/burpees.webp");
-    const name = (editName?.value || "").trim() || "Untitled drill";
+    const name = (editName?.value || "").trim() || "Untitled plan";
     const now = Date.now();
     const template = {
       id,
@@ -624,7 +624,7 @@
       const template = await site().fetchTemplate(entry);
       openEditor({ entry, template });
     } catch (err) {
-      toast(err.message || "Could not load drill");
+      toast(err.message || "Could not load plan");
     }
   }
 
@@ -664,7 +664,7 @@
       if (!pat) {
         if (loginError) {
           loginError.hidden = false;
-          loginError.textContent = "GitHub PAT is required to save drills";
+          loginError.textContent = "GitHub PAT is required to save plans";
         }
         return;
       }

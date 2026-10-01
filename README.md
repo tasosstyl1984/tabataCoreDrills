@@ -1,6 +1,6 @@
-# Tabata Core Drills (GitHub Pages)
+# Tabata Core Plans (GitHub Pages)
 
-Public catalog of Tabata Core workout templates (“drills”).
+Public catalog of Tabata Core workout plans.
 
 Live site: https://tasosstyl1984.github.io/tabataCoreDrills/  
 Repo: https://github.com/tasosstyl1984/tabataCoreDrills
@@ -14,9 +14,9 @@ flutter test tool/export_remote_drills_test.dart
 ```
 
 That writes shipped `default_*` templates into this repo’s `drills/` + `catalog.json`
-(online-only drills not in the app defaults are kept).
+(online-only plans not in the app defaults are kept).
 
-## Add a drill manually
+## Add a plan manually
 
 1. Add `drills/remote_your_id.json` (`id` must start with `remote_`).
 2. Append an entry to `catalog.json` and bump `version` / `updatedAtMs`.
@@ -24,7 +24,7 @@ That writes shipped `default_*` templates into this repo’s `drills/` + `catalo
 
 ## Website download → app import
 
-Browse the site, Preview a drill, Download JSON, then in Tabata Core:
+Browse the site, Preview a plan, Download JSON, then in Tabata Core:
 
 - Open the file with the app, or
-- **Settings → Templates → Import**
+- **Settings → Plans → Import**
