@@ -103,7 +103,7 @@
       format: "tabata_core_template",
       version: 2,
       sharedAtMs: Date.now(),
-      creator: { displayName: "Tabata Core Drills" },
+      creator: { displayName: "Tabata Core Plans" },
       template,
     };
     const blob = new Blob([JSON.stringify(envelope, null, 2)], {
@@ -341,10 +341,10 @@
     const drills = filteredDrills();
     gridEl.innerHTML = "";
     if (!drills.length) {
-      setStatus("No drills match your filters.");
+      setStatus("No plans match your filters.");
       return;
     }
-    setStatus(`${drills.length} drill${drills.length === 1 ? "" : "s"} — click a card to preview`);
+    setStatus(`${drills.length} plan${drills.length === 1 ? "" : "s"} — click a card to preview`);
     for (const d of drills) {
       const card = document.createElement("article");
       card.className = "card card-clickable";
@@ -357,7 +357,7 @@
         : "";
       card.innerHTML = `
         ${coverHtml}
-        <span class="badge">${escapeHtml(d.category || "drill")}</span>
+        <span class="badge">${escapeHtml(d.category || "plan")}</span>
         <h3>${escapeHtml(d.name || d.id)}</h3>
         <p>${escapeHtml(d.description || "")}</p>
       `;
