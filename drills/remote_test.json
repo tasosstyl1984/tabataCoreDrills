@@ -1,0 +1,118 @@
+{
+  "id": "remote_test",
+  "name": "test",
+  "createdAtMs": 1790929750249,
+  "sets": 4,
+  "repsPerSet": 4,
+  "workSeconds": 60,
+  "restBetweenRepsSeconds": 60,
+  "restBetweenSetsSeconds": 60,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 60,
+            "activityId": "hollowHold"
+          },
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 60,
+            "activityId": "russianTwists"
+          },
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 60,
+            "activityId": "birdDog"
+          },
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 60,
+            "activityId": "hangingKneeRaises"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 60,
+            "activityId": "hollowHold"
+          },
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 60,
+            "activityId": "russianTwists"
+          },
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 60,
+            "activityId": "birdDog"
+          },
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 60,
+            "activityId": "hangingKneeRaises"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 60,
+            "activityId": "hollowHold"
+          },
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 60,
+            "activityId": "russianTwists"
+          },
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 60,
+            "activityId": "birdDog"
+          },
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 60,
+            "activityId": "hangingKneeRaises"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 60,
+            "activityId": "dumbbellRow"
+          },
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 60,
+            "activityId": "reverseFly"
+          },
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 60,
+            "activityId": "frontRaises"
+          },
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 60,
+            "activityId": "plateRotations"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      }
+    ]
+  }
+}
