@@ -53,6 +53,7 @@
   };
 
   const categoryHint = document.getElementById("category-hint");
+  const categoryAutoBadge = document.getElementById("category-auto-badge");
 
   function site() {
     return window.TabataDrillsSite;
@@ -214,14 +215,32 @@
 
   function applySuggestedCategory({ force = false } = {}) {
     if (!editCategory) return;
-    if (categoryManual && !force) return;
+    if (categoryManual && !force) {
+      if (categoryAutoBadge) categoryAutoBadge.hidden = true;
+      if (categoryHint) {
+        categoryHint.textContent =
+          "Manual override — clear the field to auto from exercises again.";
+      }
+      return;
+    }
     const suggested = suggestCategoryFromPlan();
     editCategory.value = suggested;
+    categoryManual = false;
+    if (categoryAutoBadge) categoryAutoBadge.hidden = false;
     if (categoryHint) {
-      categoryHint.textContent = categoryManual
-        ? "Manual category (change exercises + clear field to re-auto)."
-        : `From exercises → ${suggested}`;
+      const hasExercise = (plan.sets || []).some((s) =>
+        (s.rounds || []).some((r) => r.activityId),
+      );
+      categoryHint.textContent = hasExercise
+        ? `Auto from exercises → ${suggested} (filter chip on the site).`
+        : `Auto → ${suggested} (updates when you pick exercises).`;
     }
+  }
+
+  function iconAct(act, icon, title, disabled = false) {
+    return `<button type="button" class="icon-act" data-act="${act}" title="${title}" aria-label="${title}"${
+      disabled ? " disabled" : ""
+    }><span class="material-symbols-outlined" aria-hidden="true">${icon}</span></button>`;
   }
 
   function activityLabel(id) {
@@ -273,14 +292,15 @@
                 <button type="button" data-act="rest-inc" aria-label="Increase rest">+</button>
               </div>
               <div class="round-actions">
-                <button type="button" data-act="round-up" title="Move up" ${ri === 0 ? "disabled" : ""}>↑</button>
-                <button type="button" data-act="round-down" title="Move down" ${
-                  ri >= set.rounds.length - 1 ? "disabled" : ""
-                }>↓</button>
-                <button type="button" data-act="round-dup" title="Clone round">⧉</button>
-                <button type="button" data-act="round-del" title="Delete round" ${
-                  set.rounds.length <= 1 ? "disabled" : ""
-                }>✕</button>
+                ${iconAct("round-up", "arrow_upward", "Move up", ri === 0)}
+                ${iconAct(
+                  "round-down",
+                  "arrow_downward",
+                  "Move down",
+                  ri >= set.rounds.length - 1,
+                )}
+                ${iconAct("round-dup", "content_copy", "Clone round")}
+                ${iconAct("round-del", "delete", "Delete round", set.rounds.length <= 1)}
               </div>
             </div>`;
           })
@@ -303,14 +323,15 @@
               <p class="set-summary">${escape(setSummary(set))}</p>
             </div>
             <div class="set-actions">
-              <button type="button" data-act="set-up" title="Move set up" ${si === 0 ? "disabled" : ""}>↑</button>
-              <button type="button" data-act="set-down" title="Move set down" ${
-                si >= plan.sets.length - 1 ? "disabled" : ""
-              }>↓</button>
-              <button type="button" data-act="set-dup" title="Clone set">⧉</button>
-              <button type="button" data-act="set-del" title="Delete set" ${
-                plan.sets.length <= 1 ? "disabled" : ""
-              }>✕</button>
+              ${iconAct("set-up", "arrow_upward", "Move set up", si === 0)}
+              ${iconAct(
+                "set-down",
+                "arrow_downward",
+                "Move set down",
+                si >= plan.sets.length - 1,
+              )}
+              ${iconAct("set-dup", "content_copy", "Clone set")}
+              ${iconAct("set-del", "delete", "Delete set", plan.sets.length <= 1)}
               <button type="button" data-act="round-add" title="Add round">+ Round</button>
             </div>
           </div>
@@ -598,7 +619,15 @@
     fillCategorySuggestions();
     setEditorError("");
     renderPlanEditor();
-    if (!categoryManual) applySuggestedCategory({ force: true });
+    if (categoryManual) {
+      if (categoryAutoBadge) categoryAutoBadge.hidden = true;
+      if (categoryHint) {
+        categoryHint.textContent =
+          "Saved category — clear the field to auto from exercises again.";
+      }
+    } else {
+      applySuggestedCategory({ force: true });
+    }
     showModal(editorDialog);
   }
 
@@ -671,7 +700,7 @@
     if (editorTitle) {
       editorTitle.textContent = isRemote ? `Import / update ${name}` : `Import ${name}`;
     }
-    toast(`Loaded ${name} — review and Save to GitHub`);
+    toast(`Loaded ${name} — review and Save`);
   }
 
   function parseImportedPlanJson(raw) {
@@ -1043,10 +1072,16 @@
   }
   if (editCategory) {
     editCategory.addEventListener("input", () => {
-      categoryManual = editCategory.value.trim().length > 0;
-      if (!categoryManual) applySuggestedCategory({ force: true });
-      else if (categoryHint) {
-        categoryHint.textContent = "Manual category (clear field to re-auto from exercises).";
+      if (editCategory.value.trim().length === 0) {
+        categoryManual = false;
+        applySuggestedCategory({ force: true });
+        return;
+      }
+      categoryManual = true;
+      if (categoryAutoBadge) categoryAutoBadge.hidden = true;
+      if (categoryHint) {
+        categoryHint.textContent =
+          "Manual override — clear the field to auto from exercises again.";
       }
     });
   }

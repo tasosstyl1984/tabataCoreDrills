@@ -6,8 +6,8 @@
   <title>Tabata Core Plans</title>
   <meta name="description" content="Browse and download Tabata Core workout plans. Import them into the Tabata Core Android app." />
   <link rel="icon" href="img/logo-mark.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-  <link rel="stylesheet" href="css/site.css?v=16" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400..700,0..1,0" />
+  <link rel="stylesheet" href="css/site.css?v=18" />
 </head>
 <body>
   <script>
@@ -175,10 +175,13 @@
             <input id="edit-name" required />
           </div>
           <div class="form-row">
-            <label for="edit-category">Category</label>
-            <input id="edit-category" list="category-suggestions" placeholder="Auto from exercises" />
+            <label for="edit-category">Category <span class="label-note">(site filter)</span></label>
+            <div class="category-field">
+              <input id="edit-category" list="category-suggestions" placeholder="Auto from exercises" />
+              <span id="category-auto-badge" class="category-auto-badge" hidden>Auto</span>
+            </div>
             <datalist id="category-suggestions"></datalist>
-            <p class="category-hint" id="category-hint">Filled from exercises (edit to override).</p>
+            <p class="category-hint" id="category-hint">Auto from exercises — groups plans in the filter chips.</p>
           </div>
           <div class="form-row editor-meta-wide">
             <label for="edit-description">Description</label>
@@ -204,7 +207,7 @@
         <p id="editor-error" class="form-error" hidden></p>
       </div>
       <div class="form-actions">
-        <button type="button" id="editor-save">Save to GitHub</button>
+        <button type="button" id="editor-save">Save</button>
         <button type="button" id="editor-cancel" class="secondary">Cancel</button>
       </div>
     </div>
@@ -235,7 +238,7 @@
     </div>
   </footer>
 
-  <script src="js/catalog.js?v=16"></script>
-  <script src="js/admin.js?v=16"></script>
+  <script src="js/catalog.js?v=18"></script>
+  <script src="js/admin.js?v=18"></script>
 </body>
 </html>
