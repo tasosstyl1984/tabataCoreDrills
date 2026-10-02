@@ -1,6 +1,6 @@
 {
-  "version": 12,
-  "updatedAtMs": 1790930127477,
+  "version": 13,
+  "updatedAtMs": 1790930328516,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -366,6 +366,18 @@
       "description": "Classic · 1×8 · 20s work / 10s rest",
       "coverImage": "exercise_guides/burpees.webp",
       "activityIds": []
+    },
+    {
+      "id": "remote_vbvbc",
+      "name": "vbvbc",
+      "file": "drills/remote_vbvbc.json",
+      "updatedAtMs": 1790930325179,
+      "category": "strength",
+      "description": "vcbcvb",
+      "coverImage": "exercise_guides/pushups.webp",
+      "activityIds": [
+        "pushups"
+      ]
     },
     {
       "id": "remote_combo_full_stack_50",
