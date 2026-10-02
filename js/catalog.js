@@ -133,8 +133,18 @@
   }
 
   function coverUrl(entry) {
-    if (entry.coverImage) return new URL(entry.coverImage, window.location.href).toString();
-    return "";
+    if (!entry.coverImage) return "";
+    const remoteBase =
+      catalog?.baseUrl ||
+      "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/";
+    try {
+      if (String(entry.coverImage).startsWith("plan_covers/")) {
+        return new URL(entry.coverImage, remoteBase).toString();
+      }
+      return new URL(entry.coverImage, window.location.href).toString();
+    } catch (_) {
+      return "";
+    }
   }
 
   function activityImageUrl(activityId) {
@@ -449,7 +459,7 @@
       previewBtn.textContent = "Preview";
       const downloadBtn = document.createElement("button");
       downloadBtn.type = "button";
-      downloadBtn.textContent = "Download JSON";
+      downloadBtn.textContent = "Download";
       const editBtn = document.createElement("button");
       editBtn.type = "button";
       editBtn.className = "btn-edit-admin";
