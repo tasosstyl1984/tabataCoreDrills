@@ -1,13 +1,13 @@
 {
-  "version": 23,
-  "updatedAtMs": 1790946633843,
+  "version": 24,
+  "updatedAtMs": 1790965854556,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
       "id": "remote_boxing_rounds_30",
       "name": "Boxing rounds 45",
       "file": "drills/remote_boxing_rounds_30.json",
-      "updatedAtMs": 1790926704096,
+      "updatedAtMs": 1790965851947,
       "category": "boxing",
       "description": "Boxing · 3×6 · 45s work / 45s rest · Shadow boxing",
       "coverImage": "exercise_guides/shadowBoxing.webp",
