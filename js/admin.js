@@ -1211,7 +1211,7 @@
         }
       }
 
-      await putCatalogJson((catalogJson) => {
+      const nextCatalog = await putCatalogJson((catalogJson) => {
         const drills = Array.isArray(catalogJson.drills) ? [...catalogJson.drills] : [];
         const idx = drills.findIndex((d) => d.id === id);
         if (idx >= 0) drills[idx] = catalogEntry;
@@ -1225,7 +1225,7 @@
       toast(`Saved ${id}`);
       try {
         site()?.cacheTemplate?.(id, template);
-        await site()?.reloadCatalog?.({ fromRemote: true });
+        site()?.applyCatalog?.(nextCatalog);
         site()?.openPreview?.(catalogEntry);
       } catch (refreshErr) {
         toast(`Saved ${id}, but refresh failed: ${refreshErr.message || refreshErr}`);
@@ -1245,14 +1245,23 @@
       return;
     }
     if (!entry?.id || deleteInFlight) return;
-    if (!window.confirm(`Delete ${entry.name || entry.id}? This commits to GitHub.`)) return;
+    // Close modal preview first — confirm() while a <dialog> is open often fails.
+    site()?.closePreview?.();
+    if (!window.confirm(`Delete ${entry.name || entry.id}? This commits to GitHub.`)) {
+      return;
+    }
     deleteInFlight = true;
+    toast(`Deleting ${entry.id}…`);
     try {
       // Catalog first so a later file-delete failure cannot leave a ghost card.
-      await putCatalogJson((catalogJson) => {
+      const nextCatalog = await putCatalogJson((catalogJson) => {
         catalogJson.drills = (catalogJson.drills || []).filter((d) => d.id !== entry.id);
         return catalogJson;
       }, `Catalog: remove ${entry.id}`);
+
+      // Update UI from the PUT response — raw.githubusercontent.com can stay stale.
+      site()?.invalidateTemplate?.(entry.id);
+      site()?.applyCatalog?.(nextCatalog);
 
       const drillPath = entry.file || `drills/${entry.id}.json`;
       const existing = await ghGetContent(drillPath);
@@ -1283,12 +1292,14 @@
         }
       }
 
-      site()?.invalidateTemplate?.(entry.id);
-      site()?.closePreview?.();
-      await site()?.reloadCatalog?.({ fromRemote: true });
       toast(`Deleted ${entry.id}`);
     } catch (err) {
       toast(networkError(err, "Delete").message || "Delete failed");
+      try {
+        await site()?.reloadCatalog?.({ fromRemote: true });
+      } catch (_) {
+        /* ignore */
+      }
     } finally {
       deleteInFlight = false;
     }
