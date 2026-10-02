@@ -29,6 +29,16 @@
   const editCategory = document.getElementById("edit-category");
   const editDescription = document.getElementById("edit-description");
   const editCover = document.getElementById("edit-cover");
+  const editCoverPreview = document.getElementById("edit-cover-preview");
+  const editCoverPlaceholder = document.getElementById("edit-cover-placeholder");
+  const editCoverUpload = document.getElementById("edit-cover-upload");
+  const editCoverClear = document.getElementById("edit-cover-clear");
+  const editCoverFile = document.getElementById("edit-cover-file");
+  const cropDialog = document.getElementById("crop-dialog");
+  const cropImage = document.getElementById("crop-image");
+  const cropApply = document.getElementById("crop-apply");
+  const cropCancel = document.getElementById("crop-cancel");
+  const cropClose = document.getElementById("crop-close");
   const categorySuggestions = document.getElementById("category-suggestions");
 
   let editingEntry = null;
@@ -38,6 +48,10 @@
   let dragKind = null; // 'set' | 'round'
   let dragFromSet = -1;
   let dragFromRound = -1;
+  let pendingCoverBlob = null;
+  let pendingCoverUrl = null;
+  let cropper = null;
+  let cropObjectUrl = null;
 
   const GROUP_TO_CATEGORY = {
     General: "conditioning",
@@ -613,7 +627,7 @@
     if (editName) editName.value = entry?.name || template?.name || "";
     if (editCategory) editCategory.value = entry?.category || "";
     if (editDescription) editDescription.value = entry?.description || "";
-    if (editCover) editCover.value = entry?.coverImage || "";
+    resetCoverUi(entry?.coverImage || "");
     plan = normalizePlan(template?.structuredPlan || classicStarterPlan());
     resetCollapseState({ expandFirst: true });
     fillCategorySuggestions();
@@ -843,8 +857,12 @@
 
   async function ghGetContent(path) {
     const headers = await ghHeaders();
-    const url = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${path}?ref=${GH_BRANCH}`;
-    const res = await fetch(url, { headers });
+    headers["Cache-Control"] = "no-cache";
+    headers.Pragma = "no-cache";
+    const url = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${encodeURI(
+      path,
+    )}?ref=${GH_BRANCH}&_=${Date.now()}`;
+    const res = await fetch(url, { headers, cache: "no-store" });
     if (res.status === 404) return null;
     if (!res.ok) {
       const text = await res.text();
@@ -853,14 +871,22 @@
     return res.json();
   }
 
-  function encodeContent(text) {
-    const bytes = new TextEncoder().encode(text);
+  function encodeBytes(bytes) {
     let binary = "";
     const chunk = 0x8000;
     for (let i = 0; i < bytes.length; i += chunk) {
       binary += String.fromCharCode(...bytes.subarray(i, i + chunk));
     }
     return btoa(binary);
+  }
+
+  function encodeContent(text) {
+    return encodeBytes(new TextEncoder().encode(text));
+  }
+
+  async function encodeBlob(blob) {
+    const buf = await blob.arrayBuffer();
+    return encodeBytes(new Uint8Array(buf));
   }
 
   function decodeContent(b64) {
@@ -871,16 +897,21 @@
     return new TextDecoder().decode(bytes);
   }
 
-  async function ghPutContent(path, text, message, sha) {
+  async function ghPutContent(path, textOrBase64, message, sha, { rawBase64 = false } = {}) {
     const headers = await ghHeaders();
-    const url = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${path}`;
+    const url = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${encodeURI(path)}`;
     const body = {
       message,
-      content: encodeContent(text),
+      content: rawBase64 ? textOrBase64 : encodeContent(textOrBase64),
       branch: GH_BRANCH,
     };
     if (sha) body.sha = sha;
-    const res = await fetch(url, { method: "PUT", headers, body: JSON.stringify(body) });
+    const res = await fetch(url, {
+      method: "PUT",
+      headers,
+      body: JSON.stringify(body),
+      cache: "no-store",
+    });
     if (!res.ok) {
       const t = await res.text();
       const err = new Error(`GitHub PUT ${path} failed (${res.status}): ${t.slice(0, 240)}`);
@@ -936,9 +967,12 @@
   }
 
   async function putCatalogJson(mutator, message) {
-    const maxAttempts = 4;
+    const maxAttempts = 5;
     let lastErr = null;
     for (let attempt = 0; attempt < maxAttempts; attempt++) {
+      if (attempt > 0) {
+        await new Promise((r) => setTimeout(r, 250 * attempt));
+      }
       const { file, json } = await loadRemoteCatalogJson();
       const next = mutator(clonePlan(json));
       if (!next.baseUrl) {
@@ -965,6 +999,137 @@
     throw lastErr || new Error("catalog.json update failed after retries");
   }
 
+  function revokePendingCoverUrl() {
+    if (pendingCoverUrl) {
+      URL.revokeObjectURL(pendingCoverUrl);
+      pendingCoverUrl = null;
+    }
+  }
+
+  function setCoverPreview(src) {
+    if (editCoverPreview && src) {
+      editCoverPreview.src = src;
+      editCoverPreview.hidden = false;
+      if (editCoverPlaceholder) editCoverPlaceholder.hidden = true;
+    } else {
+      if (editCoverPreview) {
+        editCoverPreview.removeAttribute("src");
+        editCoverPreview.hidden = true;
+      }
+      if (editCoverPlaceholder) editCoverPlaceholder.hidden = false;
+    }
+  }
+
+  function clearPendingCover() {
+    revokePendingCoverUrl();
+    pendingCoverBlob = null;
+  }
+
+  function resetCoverUi(path = "") {
+    clearPendingCover();
+    if (editCover) editCover.value = path || "";
+    if (path) {
+      try {
+        setCoverPreview(new URL(path, window.location.href).toString());
+      } catch (_) {
+        setCoverPreview("");
+      }
+    } else {
+      setCoverPreview("");
+    }
+  }
+
+  function destroyCropper() {
+    if (cropper) {
+      cropper.destroy();
+      cropper = null;
+    }
+    if (cropObjectUrl) {
+      URL.revokeObjectURL(cropObjectUrl);
+      cropObjectUrl = null;
+    }
+    if (cropImage) {
+      cropImage.removeAttribute("src");
+    }
+  }
+
+  function openCropDialog(file) {
+    if (!cropDialog || !cropImage || typeof Cropper === "undefined") {
+      toast("Cropper failed to load — refresh the page");
+      return;
+    }
+    destroyCropper();
+    cropObjectUrl = URL.createObjectURL(file);
+    cropImage.src = cropObjectUrl;
+    showModal(cropDialog);
+    cropImage.onload = () => {
+      cropper = new Cropper(cropImage, {
+        aspectRatio: 16 / 10,
+        viewMode: 1,
+        autoCropArea: 1,
+        background: false,
+        responsive: true,
+      });
+    };
+  }
+
+  function applyCrop() {
+    if (!cropper) return;
+    const canvas = cropper.getCroppedCanvas({
+      maxWidth: 1200,
+      maxHeight: 750,
+      imageSmoothingEnabled: true,
+      imageSmoothingQuality: "high",
+    });
+    if (!canvas) {
+      toast("Could not crop image");
+      return;
+    }
+    canvas.toBlob(
+      (blob) => {
+        if (!blob) {
+          toast("Could not encode cover image");
+          return;
+        }
+        clearPendingCover();
+        pendingCoverBlob = blob;
+        pendingCoverUrl = URL.createObjectURL(blob);
+        if (editCover) editCover.value = "";
+        setCoverPreview(pendingCoverUrl);
+        destroyCropper();
+        hideModal(cropDialog);
+      },
+      "image/webp",
+      0.88,
+    );
+  }
+
+  async function uploadPendingCover(id) {
+    if (!pendingCoverBlob) return editCover?.value?.trim() || "";
+    const path = `plan_covers/${id}.webp`;
+    const existing = await ghGetContent(path);
+    const content = await encodeBlob(pendingCoverBlob);
+    try {
+      await ghPutContent(
+        path,
+        content,
+        `Cover: ${id}`,
+        existing?.sha,
+        { rawBase64: true },
+      );
+    } catch (err) {
+      if (err.status === 409 || /\(409\)/.test(String(err.message))) {
+        const latest = await ghGetContent(path);
+        await ghPutContent(path, content, `Cover: ${id}`, latest?.sha, {
+          rawBase64: true,
+        });
+      } else {
+        throw err;
+      }
+    }
+    return path;
+  }
+
   async function saveDrill() {
     setEditorError("");
     if (!editName?.value.trim()) {
@@ -974,6 +1139,12 @@
     editorSave.disabled = true;
     try {
       const id = editingEntry?.id || uniqueId(slugify(editName.value));
+      if (pendingCoverBlob) {
+        const coverPath = await uploadPendingCover(id);
+        if (editCover) editCover.value = coverPath;
+        clearPendingCover();
+        setCoverPreview(new URL(coverPath, window.location.href).toString());
+      }
       const { template, catalogEntry } = buildTemplateFromForm(id);
 
       // Preserve createdAtMs when editing
@@ -1151,6 +1322,48 @@
         categoryHint.textContent =
           "Manual override — clear the field to auto from exercises again.";
       }
+    });
+  }
+  if (editCoverUpload && editCoverFile) {
+    editCoverUpload.addEventListener("click", () => editCoverFile.click());
+    editCoverFile.addEventListener("change", () => {
+      const file = editCoverFile.files?.[0];
+      editCoverFile.value = "";
+      if (!file) return;
+      if (!file.type.startsWith("image/")) {
+        toast("Pick an image file");
+        return;
+      }
+      openCropDialog(file);
+    });
+  }
+  if (editCoverClear) {
+    editCoverClear.addEventListener("click", () => resetCoverUi(""));
+  }
+  if (cropApply) cropApply.addEventListener("click", () => applyCrop());
+  if (cropCancel) {
+    cropCancel.addEventListener("click", () => {
+      destroyCropper();
+      hideModal(cropDialog);
+    });
+  }
+  if (cropClose) {
+    cropClose.addEventListener("click", () => {
+      destroyCropper();
+      hideModal(cropDialog);
+    });
+  }
+  if (cropDialog) {
+    cropDialog.addEventListener("click", (e) => {
+      if (e.target === cropDialog) {
+        destroyCropper();
+        hideModal(cropDialog);
+      }
+    });
+    cropDialog.addEventListener("cancel", (e) => {
+      e.preventDefault();
+      destroyCropper();
+      hideModal(cropDialog);
     });
   }
   if (editorClose) editorClose.addEventListener("click", () => hideModal(editorDialog));
