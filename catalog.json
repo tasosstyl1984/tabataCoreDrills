@@ -1,6 +1,6 @@
 {
-  "version": 14,
-  "updatedAtMs": 1790930468920,
+  "version": 15,
+  "updatedAtMs": 1790931185199,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -408,18 +408,6 @@
         "kettlebellTurkishGetUp",
         "pushups",
         "abs"
-      ]
-    },
-    {
-      "id": "remote_xfvcxb",
-      "name": "xfvcxb",
-      "file": "drills/remote_xfvcxb.json",
-      "updatedAtMs": 1790930125257,
-      "category": "core",
-      "description": "cxvxcv",
-      "coverImage": "exercise_guides/hollowHold.webp",
-      "activityIds": [
-        "hollowHold"
       ]
     }
   ]
