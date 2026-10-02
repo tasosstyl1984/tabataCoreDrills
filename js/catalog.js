@@ -602,6 +602,15 @@
     throw lastErr || new Error("catalog.json failed");
   }
 
+  /** Apply an already-fetched catalog object (e.g. after admin Save/Delete). */
+  function applyCatalog(next) {
+    if (!next || typeof next !== "object") return;
+    catalog = next;
+    renderChips(categoriesFrom(catalog.drills || []));
+    renderGrid();
+    return catalog;
+  }
+
   async function init() {
     applyTheme();
     if (themeToggleBtn) themeToggleBtn.addEventListener("click", cycleTheme);
@@ -677,6 +686,7 @@
   window.TabataDrillsSite = {
     setStatus,
     reloadCatalog,
+    applyCatalog,
     getCatalog: () => catalog,
     getPreviewEntry: () => previewEntry,
     closePreview,
