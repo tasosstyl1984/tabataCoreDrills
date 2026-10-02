@@ -48,7 +48,7 @@
           {
             "workSeconds": 60,
             "restAfterSeconds": 45,
-            "activityId": "burpees"
+            "activityId": "hangingKneeRaises"
           },
           {
             "workSeconds": 60,
