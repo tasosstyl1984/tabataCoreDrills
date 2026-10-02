@@ -116,7 +116,20 @@
   }
 
   function drillFileUrl(entry) {
-    return new URL(entry.file, window.location.href).toString();
+    const file = entry.file || `drills/${entry.id}.json`;
+    const remoteBase =
+      catalog?.baseUrl ||
+      "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/";
+    try {
+      return new URL(file, remoteBase).toString();
+    } catch (_) {
+      return new URL(file, window.location.href).toString();
+    }
+  }
+
+  function pagesDrillFileUrl(entry) {
+    const file = entry.file || `drills/${entry.id}.json`;
+    return new URL(file, window.location.href).toString();
   }
 
   function coverUrl(entry) {
@@ -143,11 +156,25 @@
 
   async function fetchTemplate(entry) {
     if (templateCache.has(entry.id)) return templateCache.get(entry.id);
-    const res = await fetch(drillFileUrl(entry), { cache: "no-store" });
-    if (!res.ok) throw new Error(`Could not fetch ${entry.file} (${res.status})`);
-    const template = await res.json();
-    templateCache.set(entry.id, template);
-    return template;
+    const urls = [drillFileUrl(entry)];
+    const pagesUrl = pagesDrillFileUrl(entry);
+    if (pagesUrl !== urls[0]) urls.push(pagesUrl);
+    let lastErr = null;
+    for (const url of urls) {
+      try {
+        const res = await fetch(url, { cache: "no-store" });
+        if (!res.ok) {
+          lastErr = new Error(`Could not fetch ${entry.file} (${res.status})`);
+          continue;
+        }
+        const template = await res.json();
+        templateCache.set(entry.id, template);
+        return template;
+      } catch (err) {
+        lastErr = err;
+      }
+    }
+    throw lastErr || new Error(`Could not fetch ${entry.file}`);
   }
 
   async function downloadDrill(entry) {
@@ -526,14 +553,42 @@
     }
   }
 
-  async function reloadCatalog() {
+  async function reloadCatalog({ fromRemote = false } = {}) {
+    const kept = new Map(templateCache);
     templateCache.clear();
-    const res = await fetch("catalog.json", { cache: "no-store" });
-    if (!res.ok) throw new Error(`catalog.json failed (${res.status})`);
-    catalog = await res.json();
-    renderChips(categoriesFrom(catalog.drills || []));
-    renderGrid();
-    return catalog;
+    const candidates = [];
+    const remoteBase =
+      catalog?.baseUrl ||
+      "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/";
+    if (fromRemote) {
+      candidates.push(new URL("catalog.json", remoteBase).toString());
+    }
+    candidates.push(new URL("catalog.json", window.location.href).toString());
+    if (!fromRemote) {
+      candidates.push(new URL("catalog.json", remoteBase).toString());
+    }
+
+    let lastErr = null;
+    for (const url of candidates) {
+      try {
+        const res = await fetch(url, { cache: "no-store" });
+        if (!res.ok) {
+          lastErr = new Error(`catalog.json failed (${res.status})`);
+          continue;
+        }
+        catalog = await res.json();
+        // Keep any templates seeded during this session (e.g. just-saved).
+        for (const [id, tpl] of kept) {
+          if (!templateCache.has(id)) templateCache.set(id, tpl);
+        }
+        renderChips(categoriesFrom(catalog.drills || []));
+        renderGrid();
+        return catalog;
+      } catch (err) {
+        lastErr = err;
+      }
+    }
+    throw lastErr || new Error("catalog.json failed");
   }
 
   async function init() {
@@ -621,6 +676,9 @@
     activityImageUrl,
     imageIds,
     invalidateTemplate: (id) => templateCache.delete(id),
+    cacheTemplate: (id, template) => {
+      if (id && template) templateCache.set(id, template);
+    },
     escapeHtml,
     escapeAttr,
   };
