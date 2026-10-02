@@ -1,6 +1,6 @@
 {
-  "version": 19,
-  "updatedAtMs": 1790934113943,
+  "version": 20,
+  "updatedAtMs": 1790943066522,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -366,6 +366,30 @@
       "description": "Classic · 1×8 · 20s work / 10s rest",
       "coverImage": "exercise_guides/burpees.webp",
       "activityIds": []
+    },
+    {
+      "id": "remote_tasos_workout",
+      "name": "Tasos Workout",
+      "file": "drills/remote_tasos_workout.json",
+      "updatedAtMs": 1790943064151,
+      "category": "combos",
+      "description": "",
+      "coverImage": "plan_covers/remote_tasos_workout.webp",
+      "activityIds": [
+        "shadowBoxing",
+        "kettlebellSwings",
+        "kettlebellHalo",
+        "kettlebellGorillaRow",
+        "kettlebellRow",
+        "kettlebellCleanPress",
+        "kettlebellSnatch",
+        "bicepCurls",
+        "abs",
+        "russianTwists",
+        "plank",
+        "sidePlank",
+        "renegadeRow"
+      ]
     },
     {
       "id": "remote_tyson",
