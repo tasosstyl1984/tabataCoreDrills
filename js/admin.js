@@ -883,7 +883,9 @@
     const res = await fetch(url, { method: "PUT", headers, body: JSON.stringify(body) });
     if (!res.ok) {
       const t = await res.text();
-      throw new Error(`GitHub PUT ${path} failed (${res.status}): ${t.slice(0, 240)}`);
+      const err = new Error(`GitHub PUT ${path} failed (${res.status}): ${t.slice(0, 240)}`);
+      err.status = res.status;
+      throw err;
     }
     return res.json();
   }
@@ -933,6 +935,36 @@
     }
   }
 
+  async function putCatalogJson(mutator, message) {
+    const maxAttempts = 4;
+    let lastErr = null;
+    for (let attempt = 0; attempt < maxAttempts; attempt++) {
+      const { file, json } = await loadRemoteCatalogJson();
+      const next = mutator(clonePlan(json));
+      if (!next.baseUrl) {
+        next.baseUrl = `https://raw.githubusercontent.com/${GH_OWNER}/${GH_REPO}/main/`;
+      }
+      next.version = Number(next.version || 0) + 1;
+      next.updatedAtMs = Date.now();
+      try {
+        await ghPutContent(
+          "catalog.json",
+          `${JSON.stringify(next, null, 2)}\n`,
+          message,
+          file.sha,
+        );
+        return next;
+      } catch (err) {
+        lastErr = err;
+        if (err.status === 409 || /\(409\)/.test(String(err.message))) {
+          continue;
+        }
+        throw err;
+      }
+    }
+    throw lastErr || new Error("catalog.json update failed after retries");
+  }
+
   async function saveDrill() {
     setEditorError("");
     if (!editName?.value.trim()) {
@@ -958,37 +990,42 @@
 
       const drillPath = `drills/${id}.json`;
       const existingDrill = await ghGetContent(drillPath);
-      await ghPutContent(
-        drillPath,
-        `${JSON.stringify(template, null, 2)}\n`,
-        editingEntry ? `Update drill ${id}` : `Add drill ${id}`,
-        existingDrill?.sha,
-      );
-
-      const { file: catalogFile, json: catalogJson } = await loadRemoteCatalogJson();
-      const drills = Array.isArray(catalogJson.drills) ? [...catalogJson.drills] : [];
-      const idx = drills.findIndex((d) => d.id === id);
-      if (idx >= 0) drills[idx] = catalogEntry;
-      else drills.push(catalogEntry);
-      drills.sort((a, b) => String(a.name).localeCompare(String(b.name)));
-      catalogJson.drills = drills;
-      catalogJson.version = Number(catalogJson.version || 0) + 1;
-      catalogJson.updatedAtMs = Date.now();
-      if (!catalogJson.baseUrl) {
-        catalogJson.baseUrl = `https://raw.githubusercontent.com/${GH_OWNER}/${GH_REPO}/main/`;
+      try {
+        await ghPutContent(
+          drillPath,
+          `${JSON.stringify(template, null, 2)}\n`,
+          editingEntry ? `Update drill ${id}` : `Add drill ${id}`,
+          existingDrill?.sha,
+        );
+      } catch (err) {
+        if (err.status === 409 || /\(409\)/.test(String(err.message))) {
+          const latest = await ghGetContent(drillPath);
+          await ghPutContent(
+            drillPath,
+            `${JSON.stringify(template, null, 2)}\n`,
+            editingEntry ? `Update drill ${id}` : `Add drill ${id}`,
+            latest?.sha,
+          );
+        } else {
+          throw err;
+        }
       }
-      await ghPutContent(
-        "catalog.json",
-        `${JSON.stringify(catalogJson, null, 2)}\n`,
-        `Catalog: ${editingEntry ? "update" : "add"} ${id}`,
-        catalogFile.sha,
-      );
+
+      await putCatalogJson((catalogJson) => {
+        const drills = Array.isArray(catalogJson.drills) ? [...catalogJson.drills] : [];
+        const idx = drills.findIndex((d) => d.id === id);
+        if (idx >= 0) drills[idx] = catalogEntry;
+        else drills.push(catalogEntry);
+        drills.sort((a, b) => String(a.name).localeCompare(String(b.name)));
+        catalogJson.drills = drills;
+        return catalogJson;
+      }, `Catalog: ${editingEntry ? "update" : "add"} ${id}`);
 
       hideModal(editorDialog);
-      toast(`Saved ${id} — Pages may take a minute to update`);
+      toast(`Saved ${id}`);
       try {
-        site()?.invalidateTemplate?.(id);
-        await site()?.reloadCatalog?.();
+        site()?.cacheTemplate?.(id, template);
+        await site()?.reloadCatalog?.({ fromRemote: true });
         site()?.openPreview?.(catalogEntry);
       } catch (refreshErr) {
         toast(`Saved ${id}, but refresh failed: ${refreshErr.message || refreshErr}`);
@@ -1013,19 +1050,13 @@
       if (existing?.sha) {
         await ghDeleteContent(drillPath, existing.sha, `Delete drill ${entry.id}`);
       }
-      const { file: catalogFile, json: catalogJson } = await loadRemoteCatalogJson();
-      catalogJson.drills = (catalogJson.drills || []).filter((d) => d.id !== entry.id);
-      catalogJson.version = Number(catalogJson.version || 0) + 1;
-      catalogJson.updatedAtMs = Date.now();
-      await ghPutContent(
-        "catalog.json",
-        `${JSON.stringify(catalogJson, null, 2)}\n`,
-        `Catalog: remove ${entry.id}`,
-        catalogFile.sha,
-      );
+      await putCatalogJson((catalogJson) => {
+        catalogJson.drills = (catalogJson.drills || []).filter((d) => d.id !== entry.id);
+        return catalogJson;
+      }, `Catalog: remove ${entry.id}`);
       site()?.invalidateTemplate?.(entry.id);
       site()?.closePreview?.();
-      await site()?.reloadCatalog?.();
+      await site()?.reloadCatalog?.({ fromRemote: true });
       toast(`Deleted ${entry.id}`);
     } catch (err) {
       toast(err.message || "Delete failed");
