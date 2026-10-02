@@ -34,6 +34,7 @@
   let editingEntry = null;
   let plan = classicStarterPlan();
   let categoryManual = false;
+  let setCollapsed = [false];
   let dragKind = null; // 'set' | 'round'
   let dragFromSet = -1;
   let dragFromRound = -1;
@@ -223,73 +224,97 @@
     }
   }
 
+  function activityLabel(id) {
+    if (!id) return "No exercise";
+    const activities = site()?.activityCatalog?.() || [];
+    return activities.find((a) => a.id === id)?.label || id;
+  }
+
+  function ensureCollapseState() {
+    while (setCollapsed.length < plan.sets.length) setCollapsed.push(false);
+    if (setCollapsed.length > plan.sets.length) {
+      setCollapsed.length = plan.sets.length;
+    }
+  }
+
+  function resetCollapseState({ expandFirst = true } = {}) {
+    setCollapsed = plan.sets.map((_, i) => (expandFirst ? i > 0 : true));
+  }
+
+  function setSummary(set) {
+    const n = set.rounds.length;
+    const first = activityLabel(set.rounds[0]?.activityId);
+    return `${n} round${n === 1 ? "" : "s"} · rest ${set.restAfterSetSeconds}s · ${first}`;
+  }
+
   function renderPlanEditor() {
     if (!planEditor) return;
     plan = normalizePlan(plan);
+    ensureCollapseState();
     applySuggestedCategory();
     planEditor.innerHTML = plan.sets
       .map((set, si) => {
+        const collapsed = Boolean(setCollapsed[si]);
         const roundsHtml = set.rounds
           .map((round, ri) => {
             return `
             <div class="round-block" data-set="${si}" data-round="${ri}">
-              <div class="round-top">
-                <span class="drag-handle" draggable="true" data-drag="round" title="Drag to reorder round" aria-label="Drag round">⋮⋮</span>
-                <strong>Round ${ri + 1}</strong>
-                <div class="round-actions">
-                  <button type="button" data-act="round-up" ${ri === 0 ? "disabled" : ""}>Up</button>
-                  <button type="button" data-act="round-down" ${
-                    ri >= set.rounds.length - 1 ? "disabled" : ""
-                  }>Down</button>
-                  <button type="button" data-act="round-dup">Clone</button>
-                  <button type="button" data-act="round-del" ${
-                    set.rounds.length <= 1 ? "disabled" : ""
-                  }>Delete</button>
-                </div>
+              <span class="drag-handle" draggable="true" data-drag="round" title="Drag round" aria-label="Drag round">⋮⋮</span>
+              <span class="round-index">R${ri + 1}</span>
+              <select class="round-exercise" data-field="activityId" aria-label="Exercise">${activityOptionsHtml(round.activityId)}</select>
+              <div class="stepper" title="Work">
+                <button type="button" data-act="work-dec" aria-label="Decrease work">−</button>
+                <span data-field="workLabel">${round.workSeconds}s</span>
+                <button type="button" data-act="work-inc" aria-label="Increase work">+</button>
               </div>
-              <div class="round-fields">
-                <div class="form-row">
-                  <label>Exercise</label>
-                  <select data-field="activityId">${activityOptionsHtml(round.activityId)}</select>
-                </div>
-                <div class="form-row">
-                  <label>Work</label>
-                  <div class="stepper">
-                    <button type="button" data-act="work-dec">−</button>
-                    <span data-field="workLabel">${round.workSeconds}s</span>
-                    <button type="button" data-act="work-inc">+</button>
-                  </div>
-                </div>
-                <div class="form-row">
-                  <label>Rest after</label>
-                  <div class="stepper">
-                    <button type="button" data-act="rest-dec">−</button>
-                    <span data-field="restLabel">${round.restAfterSeconds}s</span>
-                    <button type="button" data-act="rest-inc">+</button>
-                  </div>
-                </div>
+              <div class="stepper" title="Rest after round">
+                <button type="button" data-act="rest-dec" aria-label="Decrease rest">−</button>
+                <span data-field="restLabel">${round.restAfterSeconds}s</span>
+                <button type="button" data-act="rest-inc" aria-label="Increase rest">+</button>
+              </div>
+              <div class="round-actions">
+                <button type="button" data-act="round-up" title="Move up" ${ri === 0 ? "disabled" : ""}>↑</button>
+                <button type="button" data-act="round-down" title="Move down" ${
+                  ri >= set.rounds.length - 1 ? "disabled" : ""
+                }>↓</button>
+                <button type="button" data-act="round-dup" title="Clone round">⧉</button>
+                <button type="button" data-act="round-del" title="Delete round" ${
+                  set.rounds.length <= 1 ? "disabled" : ""
+                }>✕</button>
               </div>
             </div>`;
           })
           .join("");
         return `
-        <section class="set-block" data-set="${si}">
+        <section class="set-block${collapsed ? " is-collapsed" : ""}" data-set="${si}">
           <div class="set-head">
-            <span class="drag-handle" draggable="true" data-drag="set" title="Drag to reorder set" aria-label="Drag set">⋮⋮</span>
-            <h3>Set ${si + 1}</h3>
+            <button type="button" class="set-toggle" data-act="set-toggle" aria-expanded="${
+              collapsed ? "false" : "true"
+            }" title="${collapsed ? "Expand set" : "Collapse set"}" aria-label="${
+              collapsed ? "Expand set" : "Collapse set"
+            }">
+              <span class="material-symbols-outlined" aria-hidden="true">${
+                collapsed ? "expand_more" : "expand_less"
+              }</span>
+            </button>
+            <span class="drag-handle" draggable="true" data-drag="set" title="Drag set" aria-label="Drag set">⋮⋮</span>
+            <div class="set-title-wrap">
+              <h3>Set ${si + 1}</h3>
+              <p class="set-summary">${escape(setSummary(set))}</p>
+            </div>
             <div class="set-actions">
-              <button type="button" data-act="set-up" ${si === 0 ? "disabled" : ""}>Up</button>
-              <button type="button" data-act="set-down" ${
+              <button type="button" data-act="set-up" title="Move set up" ${si === 0 ? "disabled" : ""}>↑</button>
+              <button type="button" data-act="set-down" title="Move set down" ${
                 si >= plan.sets.length - 1 ? "disabled" : ""
-              }>Down</button>
-              <button type="button" data-act="set-dup">Clone set</button>
-              <button type="button" data-act="set-del" ${
+              }>↓</button>
+              <button type="button" data-act="set-dup" title="Clone set">⧉</button>
+              <button type="button" data-act="set-del" title="Delete set" ${
                 plan.sets.length <= 1 ? "disabled" : ""
-              }>Delete set</button>
-              <button type="button" data-act="round-add">Add round</button>
+              }>✕</button>
+              <button type="button" data-act="round-add" title="Add round">+ Round</button>
             </div>
           </div>
-          <div class="set-body">
+          <div class="set-body"${collapsed ? " hidden" : ""}>
             ${roundsHtml}
             <div class="set-rest-row">
               <span>Rest after set</span>
@@ -394,6 +419,7 @@
       const to = Number(block?.getAttribute("data-set"));
       if (Number.isFinite(to)) {
         plan = { sets: moveItem(sets, dragFromSet, to) };
+        setCollapsed = moveItem(setCollapsed, dragFromSet, to);
       }
     } else if (dragKind === "round") {
       const block = e.target.closest(".round-block");
@@ -414,6 +440,7 @@
         const insertAt = Number.isFinite(toRound) ? toRound : sets[toSet].rounds.length;
         sets[toSet].rounds.splice(insertAt, 0, item);
         plan = { sets };
+        setCollapsed[toSet] = false;
       }
     }
     dragKind = null;
@@ -439,18 +466,29 @@
     const roundBlock = btn.closest("[data-round]");
     const ri = roundBlock ? Number(roundBlock.getAttribute("data-round")) : -1;
     const sets = clonePlan(plan).sets;
+    ensureCollapseState();
+
+    if (act === "set-toggle") {
+      setCollapsed[si] = !setCollapsed[si];
+      renderPlanEditor();
+      return;
+    }
 
     if (act === "set-up" && si > 0) {
       plan = { sets: swap(sets, si, si - 1) };
+      setCollapsed = swap(setCollapsed, si, si - 1);
     } else if (act === "set-down" && si < sets.length - 1) {
       plan = { sets: swap(sets, si, si + 1) };
+      setCollapsed = swap(setCollapsed, si, si + 1);
     } else if (act === "set-dup") {
       if (sets.length >= MAX_SETS) return toast("Max sets reached");
       sets.splice(si + 1, 0, clonePlan(sets[si]));
+      setCollapsed.splice(si + 1, 0, false);
       plan = { sets };
     } else if (act === "set-del") {
       if (sets.length <= 1) return;
       sets.splice(si, 1);
+      setCollapsed.splice(si, 1);
       plan = { sets };
     } else if (act === "round-add") {
       const rounds = sets[si].rounds;
@@ -458,6 +496,7 @@
       const prev = rounds[rounds.length - 1];
       rounds.push(clonePlan(prev));
       plan = { sets };
+      setCollapsed[si] = false;
     } else if (act === "round-up" && ri > 0) {
       sets[si].rounds = swap(sets[si].rounds, ri, ri - 1);
       plan = { sets };
@@ -555,6 +594,7 @@
     if (editDescription) editDescription.value = entry?.description || "";
     if (editCover) editCover.value = entry?.coverImage || "";
     plan = normalizePlan(template?.structuredPlan || classicStarterPlan());
+    resetCollapseState({ expandFirst: true });
     fillCategorySuggestions();
     setEditorError("");
     renderPlanEditor();
@@ -1024,16 +1064,25 @@
       if (!btn) return;
       const action = btn.getAttribute("data-action");
       const sets = clonePlan(plan).sets;
+      ensureCollapseState();
       if (action === "add-set") {
         if (sets.length >= MAX_SETS) return toast("Max sets reached");
         const last = sets[sets.length - 1];
         sets.push(clonePlan(last));
         plan = { sets };
+        setCollapsed.push(false);
         renderPlanEditor();
       } else if (action === "dup-last-set") {
         if (sets.length >= MAX_SETS) return toast("Max sets reached");
         sets.push(clonePlan(sets[sets.length - 1]));
         plan = { sets };
+        setCollapsed.push(false);
+        renderPlanEditor();
+      } else if (action === "collapse-all") {
+        setCollapsed = plan.sets.map(() => true);
+        renderPlanEditor();
+      } else if (action === "expand-all") {
+        setCollapsed = plan.sets.map(() => false);
         renderPlanEditor();
       }
     });
