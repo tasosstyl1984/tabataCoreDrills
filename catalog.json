@@ -1,6 +1,6 @@
 {
-  "version": 17,
-  "updatedAtMs": 1790933601743,
+  "version": 18,
+  "updatedAtMs": 1790933736046,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -366,6 +366,27 @@
       "description": "Classic · 1×8 · 20s work / 10s rest",
       "coverImage": "exercise_guides/burpees.webp",
       "activityIds": []
+    },
+    {
+      "id": "remote_tyson",
+      "name": "Tyson",
+      "file": "drills/remote_tyson.json",
+      "updatedAtMs": 1790933733489,
+      "category": "combos",
+      "description": "",
+      "coverImage": "plan_covers/remote_tyson.webp",
+      "activityIds": [
+        "jumpingJacks",
+        "burpees",
+        "hangingKneeRaises",
+        "pullUps",
+        "shadowBoxing",
+        "abs",
+        "plateRotations",
+        "plank",
+        "russianTwists",
+        "hollowHold"
+      ]
     },
     {
       "id": "remote_combo_full_stack_50",
