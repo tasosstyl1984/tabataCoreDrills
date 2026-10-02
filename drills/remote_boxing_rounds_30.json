@@ -17,33 +17,33 @@
         "rounds": [
           {
             "workSeconds": 45,
-            "activityId": "shadowBoxing",
-            "restAfterSeconds": 45
+            "restAfterSeconds": 45,
+            "activityId": "shadowBoxing"
           },
           {
             "workSeconds": 45,
-            "activityId": "shadowBoxing",
-            "restAfterSeconds": 45
+            "restAfterSeconds": 45,
+            "activityId": "shadowBoxing"
           },
           {
             "workSeconds": 45,
-            "activityId": "shadowBoxing",
-            "restAfterSeconds": 45
+            "restAfterSeconds": 45,
+            "activityId": "shadowBoxing"
           },
           {
             "workSeconds": 45,
-            "activityId": "shadowBoxing",
-            "restAfterSeconds": 45
+            "restAfterSeconds": 45,
+            "activityId": "shadowBoxing"
           },
           {
             "workSeconds": 45,
-            "activityId": "shadowBoxing",
-            "restAfterSeconds": 45
+            "restAfterSeconds": 45,
+            "activityId": "shadowBoxing"
           },
           {
             "workSeconds": 45,
-            "activityId": "shadowBoxing",
-            "restAfterSeconds": 45
+            "restAfterSeconds": 45,
+            "activityId": "shadowBoxing"
           }
         ],
         "restAfterSetSeconds": 120
@@ -52,33 +52,33 @@
         "rounds": [
           {
             "workSeconds": 45,
-            "activityId": "shadowBoxing",
-            "restAfterSeconds": 45
+            "restAfterSeconds": 45,
+            "activityId": "shadowBoxing"
           },
           {
             "workSeconds": 45,
-            "activityId": "shadowBoxing",
-            "restAfterSeconds": 45
+            "restAfterSeconds": 45,
+            "activityId": "shadowBoxing"
           },
           {
             "workSeconds": 45,
-            "activityId": "shadowBoxing",
-            "restAfterSeconds": 45
+            "restAfterSeconds": 45,
+            "activityId": "shadowBoxing"
           },
           {
             "workSeconds": 45,
-            "activityId": "shadowBoxing",
-            "restAfterSeconds": 45
+            "restAfterSeconds": 45,
+            "activityId": "shadowBoxing"
           },
           {
             "workSeconds": 45,
-            "activityId": "shadowBoxing",
-            "restAfterSeconds": 45
+            "restAfterSeconds": 45,
+            "activityId": "shadowBoxing"
           },
           {
             "workSeconds": 45,
-            "activityId": "shadowBoxing",
-            "restAfterSeconds": 45
+            "restAfterSeconds": 45,
+            "activityId": "shadowBoxing"
           }
         ],
         "restAfterSetSeconds": 120
@@ -87,33 +87,33 @@
         "rounds": [
           {
             "workSeconds": 45,
-            "activityId": "shadowBoxing",
-            "restAfterSeconds": 45
+            "restAfterSeconds": 45,
+            "activityId": "shadowBoxing"
           },
           {
             "workSeconds": 45,
-            "activityId": "shadowBoxing",
-            "restAfterSeconds": 45
+            "restAfterSeconds": 45,
+            "activityId": "shadowBoxing"
           },
           {
             "workSeconds": 45,
-            "activityId": "shadowBoxing",
-            "restAfterSeconds": 45
+            "restAfterSeconds": 45,
+            "activityId": "shadowBoxing"
           },
           {
             "workSeconds": 45,
-            "activityId": "shadowBoxing",
-            "restAfterSeconds": 45
+            "restAfterSeconds": 45,
+            "activityId": "shadowBoxing"
           },
           {
             "workSeconds": 45,
-            "activityId": "shadowBoxing",
-            "restAfterSeconds": 45
+            "restAfterSeconds": 45,
+            "activityId": "shadowBoxing"
           },
           {
             "workSeconds": 45,
-            "activityId": "shadowBoxing",
-            "restAfterSeconds": 45
+            "restAfterSeconds": 45,
+            "activityId": "shadowBoxing"
           }
         ],
         "restAfterSetSeconds": 120
