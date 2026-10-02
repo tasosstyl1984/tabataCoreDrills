@@ -1,6 +1,6 @@
 {
-  "version": 16,
-  "updatedAtMs": 1790931531810,
+  "version": 17,
+  "updatedAtMs": 1790933601743,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -79,16 +79,6 @@
         "hangingKneeRaises",
         "pushups"
       ]
-    },
-    {
-      "id": "remote_cvbv",
-      "name": "cvbv",
-      "file": "drills/remote_cvbv.json",
-      "updatedAtMs": 1790930466815,
-      "category": "classic",
-      "description": "vbncgb",
-      "coverImage": "exercise_guides/burpees.webp",
-      "activityIds": []
     },
     {
       "id": "remote_dumbbell_arms_40",
