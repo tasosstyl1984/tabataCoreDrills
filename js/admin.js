@@ -854,12 +854,21 @@
   }
 
   function encodeContent(text) {
-    // utf-8 safe base64
-    return btoa(unescape(encodeURIComponent(text)));
+    const bytes = new TextEncoder().encode(text);
+    let binary = "";
+    const chunk = 0x8000;
+    for (let i = 0; i < bytes.length; i += chunk) {
+      binary += String.fromCharCode(...bytes.subarray(i, i + chunk));
+    }
+    return btoa(binary);
   }
 
   function decodeContent(b64) {
-    return decodeURIComponent(escape(atob(b64)));
+    const cleaned = String(b64 || "").replace(/\s/g, "");
+    const binary = atob(cleaned);
+    const bytes = new Uint8Array(binary.length);
+    for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+    return new TextDecoder().decode(bytes);
   }
 
   async function ghPutContent(path, text, message, sha) {
@@ -893,11 +902,35 @@
     }
   }
 
+  async function readGhFileText(file, pathLabel) {
+    if (file?.encoding === "base64" && file.content) {
+      try {
+        return decodeContent(file.content);
+      } catch (err) {
+        if (!file.download_url) {
+          throw new Error(`Could not decode ${pathLabel}: ${err.message}`);
+        }
+      }
+    }
+    if (file?.download_url) {
+      const res = await fetch(file.download_url, { cache: "no-store" });
+      if (!res.ok) {
+        throw new Error(`Could not download ${pathLabel} (${res.status})`);
+      }
+      return res.text();
+    }
+    throw new Error(`${pathLabel} has no readable content from GitHub`);
+  }
+
   async function loadRemoteCatalogJson() {
     const file = await ghGetContent("catalog.json");
     if (!file) throw new Error("catalog.json not found on GitHub");
-    const json = JSON.parse(decodeContent(file.content));
-    return { file, json };
+    const text = await readGhFileText(file, "catalog.json");
+    try {
+      return { file, json: JSON.parse(text) };
+    } catch (err) {
+      throw new Error(`catalog.json is not valid JSON: ${err.message}`);
+    }
   }
 
   async function saveDrill() {
@@ -951,11 +984,15 @@
         catalogFile.sha,
       );
 
-      site()?.invalidateTemplate?.(id);
-      await site()?.reloadCatalog?.();
       hideModal(editorDialog);
       toast(`Saved ${id} — Pages may take a minute to update`);
-      site()?.openPreview?.(catalogEntry);
+      try {
+        site()?.invalidateTemplate?.(id);
+        await site()?.reloadCatalog?.();
+        site()?.openPreview?.(catalogEntry);
+      } catch (refreshErr) {
+        toast(`Saved ${id}, but refresh failed: ${refreshErr.message || refreshErr}`);
+      }
     } catch (err) {
       setEditorError(err.message || "Save failed");
     } finally {
