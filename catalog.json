@@ -1,6 +1,6 @@
 {
-  "version": 27,
-  "updatedAtMs": 1790965989220,
+  "version": 28,
+  "updatedAtMs": 1790966133004,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -395,14 +395,13 @@
       "id": "remote_tyson",
       "name": "Tyson",
       "file": "drills/remote_tyson.json",
-      "updatedAtMs": 1790965986499,
+      "updatedAtMs": 1790966130357,
       "category": "combos",
       "description": "",
       "coverImage": "plan_covers/remote_tyson.webp",
       "activityIds": [
         "jumpRope",
         "shadowBoxing",
-        "burpees",
         "hangingKneeRaises",
         "pullUps",
         "abs",
