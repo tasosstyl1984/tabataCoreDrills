@@ -1,6 +1,6 @@
 {
-  "version": 20,
-  "updatedAtMs": 1790943066522,
+  "version": 21,
+  "updatedAtMs": 1790944098029,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -371,7 +371,7 @@
       "id": "remote_tasos_workout",
       "name": "Tasos Workout",
       "file": "drills/remote_tasos_workout.json",
-      "updatedAtMs": 1790943064151,
+      "updatedAtMs": 1790944095261,
       "category": "combos",
       "description": "",
       "coverImage": "plan_covers/remote_tasos_workout.webp",
