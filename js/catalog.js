@@ -570,12 +570,13 @@
     const remoteBase =
       catalog?.baseUrl ||
       "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/";
+    const bust = `_=${Date.now()}`;
     if (fromRemote) {
-      candidates.push(new URL("catalog.json", remoteBase).toString());
+      candidates.push(new URL(`catalog.json?${bust}`, remoteBase).toString());
     }
-    candidates.push(new URL("catalog.json", window.location.href).toString());
+    candidates.push(new URL(`catalog.json?${bust}`, window.location.href).toString());
     if (!fromRemote) {
-      candidates.push(new URL("catalog.json", remoteBase).toString());
+      candidates.push(new URL(`catalog.json?${bust}`, remoteBase).toString());
     }
 
     let lastErr = null;
