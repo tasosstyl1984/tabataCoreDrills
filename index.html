@@ -6,9 +6,25 @@
   <title>Tabata Core Plans</title>
   <meta name="description" content="Browse and download Tabata Core workout plans. Import them into the Tabata Core Android app." />
   <link rel="icon" href="img/logo-mark.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="css/site.css?v=10" />
+  <link rel="stylesheet" href="css/site.css?v=12" />
 </head>
 <body>
+  <script>
+    (function () {
+      try {
+        var key = "tabataDrillsTheme";
+        var saved = localStorage.getItem(key) || "system";
+        var dark =
+          saved === "dark" ||
+          (saved === "system" &&
+            window.matchMedia &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches);
+        document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+      } catch (_) {
+        document.documentElement.setAttribute("data-theme", "light");
+      }
+    })();
+  </script>
   <header class="hero">
     <div class="hero-brand">
       <img
@@ -34,6 +50,9 @@
         <span class="play-cta-icon" aria-hidden="true">▶</span>
         Get Tabata Core on Google Play
       </a>
+      <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">
+        Theme
+      </button>
       <button type="button" id="admin-login-btn" class="btn-admin">Admin</button>
       <button type="button" id="admin-logout-btn" class="btn-admin" hidden>Log out</button>
     </div>
@@ -53,6 +72,8 @@
     <div id="admin-bar" class="admin-bar" aria-label="Admin tools">
       <strong>Admin</strong>
       <button type="button" id="admin-new-drill" class="primary">New plan</button>
+      <button type="button" id="admin-import-json">Import JSON</button>
+      <input id="admin-import-file" type="file" accept="application/json,.json" hidden />
       <span class="muted" id="admin-session-hint">Signed in</span>
     </div>
 
@@ -149,8 +170,9 @@
         </div>
         <div class="form-row">
           <label for="edit-category">Category</label>
-          <input id="edit-category" list="category-suggestions" placeholder="classic, football, kettlebell…" />
+          <input id="edit-category" list="category-suggestions" placeholder="Auto from exercises" />
           <datalist id="category-suggestions"></datalist>
+          <p class="category-hint" id="category-hint">Filled from exercises (edit to override).</p>
         </div>
         <div class="form-row">
           <label for="edit-description">Description</label>
@@ -202,7 +224,7 @@
     </div>
   </footer>
 
-  <script src="js/catalog.js?v=10"></script>
-  <script src="js/admin.js?v=10"></script>
+  <script src="js/catalog.js?v=12"></script>
+  <script src="js/admin.js?v=12"></script>
 </body>
 </html>

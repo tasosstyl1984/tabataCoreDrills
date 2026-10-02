@@ -33,6 +33,25 @@
 
   let editingEntry = null;
   let plan = classicStarterPlan();
+  let categoryManual = false;
+  let dragKind = null; // 'set' | 'round'
+  let dragFromSet = -1;
+  let dragFromRound = -1;
+
+  const GROUP_TO_CATEGORY = {
+    General: "conditioning",
+    Conditioning: "conditioning",
+    Combat: "boxing",
+    Core: "core",
+    Strength: "strength",
+    Dumbbell: "dumbbell",
+    Chest: "chest",
+    Kettlebell: "kettlebell",
+    Plyometrics: "plyometrics",
+    Football: "football",
+  };
+
+  const categoryHint = document.getElementById("category-hint");
 
   function site() {
     return window.TabataDrillsSite;
@@ -174,22 +193,50 @@
     return site()?.escapeHtml?.(s) ?? String(s);
   }
 
+  function suggestCategoryFromPlan() {
+    const activities = site()?.activityCatalog?.() || [];
+    const byId = new Map(activities.map((a) => [a.id, a]));
+    const cats = new Set();
+    for (const set of plan.sets || []) {
+      for (const r of set.rounds || []) {
+        const id = r.activityId;
+        if (!id) continue;
+        const group = byId.get(id)?.group;
+        const cat = GROUP_TO_CATEGORY[group] || null;
+        if (cat) cats.add(cat);
+      }
+    }
+    if (cats.size === 0) return "classic";
+    if (cats.size > 1) return "combos";
+    return [...cats][0];
+  }
+
+  function applySuggestedCategory({ force = false } = {}) {
+    if (!editCategory) return;
+    if (categoryManual && !force) return;
+    const suggested = suggestCategoryFromPlan();
+    editCategory.value = suggested;
+    if (categoryHint) {
+      categoryHint.textContent = categoryManual
+        ? "Manual category (change exercises + clear field to re-auto)."
+        : `From exercises → ${suggested}`;
+    }
+  }
+
   function renderPlanEditor() {
     if (!planEditor) return;
     plan = normalizePlan(plan);
+    applySuggestedCategory();
     planEditor.innerHTML = plan.sets
       .map((set, si) => {
         const roundsHtml = set.rounds
           .map((round, ri) => {
             return `
-            <div class="round-block" data-set="${si}" data-round="${ri}">
+            <div class="round-block" data-set="${si}" data-round="${ri}" draggable="true">
               <div class="round-top">
+                <span class="drag-handle" data-drag="round" title="Drag to reorder round" aria-label="Drag round" role="img">⋮⋮</span>
                 <strong>Round ${ri + 1}</strong>
                 <div class="round-actions">
-                  <button type="button" data-act="round-up" ${ri === 0 ? "disabled" : ""}>Up</button>
-                  <button type="button" data-act="round-down" ${
-                    ri >= set.rounds.length - 1 ? "disabled" : ""
-                  }>Down</button>
                   <button type="button" data-act="round-dup">Clone</button>
                   <button type="button" data-act="round-del" ${
                     set.rounds.length <= 1 ? "disabled" : ""
@@ -222,14 +269,11 @@
           })
           .join("");
         return `
-        <section class="set-block" data-set="${si}">
+        <section class="set-block" data-set="${si}" draggable="true">
           <div class="set-head">
+            <span class="drag-handle" data-drag="set" title="Drag to reorder set" aria-label="Drag set" role="img">⋮⋮</span>
             <h3>Set ${si + 1}</h3>
             <div class="set-actions">
-              <button type="button" data-act="set-up" ${si === 0 ? "disabled" : ""}>Up</button>
-              <button type="button" data-act="set-down" ${
-                si >= plan.sets.length - 1 ? "disabled" : ""
-              }>Down</button>
               <button type="button" data-act="set-dup">Clone set</button>
               <button type="button" data-act="set-del" ${
                 plan.sets.length <= 1 ? "disabled" : ""
@@ -261,6 +305,110 @@
     return copy;
   }
 
+  function moveItem(arr, from, to) {
+    if (from === to || from < 0 || to < 0 || from >= arr.length || to >= arr.length) {
+      return arr;
+    }
+    const copy = [...arr];
+    const [item] = copy.splice(from, 1);
+    copy.splice(to, 0, item);
+    return copy;
+  }
+
+  function clearDragUi() {
+    planEditor?.querySelectorAll(".is-dragging, .drag-over").forEach((el) => {
+      el.classList.remove("is-dragging", "drag-over");
+    });
+  }
+
+  function onPlanDragStart(e) {
+    const handle = e.target.closest(".drag-handle");
+    if (!handle || !planEditor.contains(handle)) {
+      e.preventDefault();
+      return;
+    }
+    const kind = handle.getAttribute("data-drag");
+    if (kind === "set") {
+      const block = handle.closest(".set-block");
+      dragKind = "set";
+      dragFromSet = Number(block?.getAttribute("data-set"));
+      dragFromRound = -1;
+      block?.classList.add("is-dragging");
+      e.dataTransfer.effectAllowed = "move";
+      e.dataTransfer.setData("text/plain", `set:${dragFromSet}`);
+    } else if (kind === "round") {
+      const block = handle.closest(".round-block");
+      dragKind = "round";
+      dragFromSet = Number(block?.getAttribute("data-set"));
+      dragFromRound = Number(block?.getAttribute("data-round"));
+      block?.classList.add("is-dragging");
+      e.dataTransfer.effectAllowed = "move";
+      e.dataTransfer.setData("text/plain", `round:${dragFromSet}:${dragFromRound}`);
+    } else {
+      e.preventDefault();
+    }
+  }
+
+  function onPlanDragOver(e) {
+    if (!dragKind) return;
+    e.preventDefault();
+    e.dataTransfer.dropEffect = "move";
+    clearDragUi();
+    if (dragKind === "set") {
+      const block = e.target.closest(".set-block");
+      if (block && planEditor.contains(block)) block.classList.add("drag-over");
+    } else if (dragKind === "round") {
+      const block = e.target.closest(".round-block");
+      if (block && planEditor.contains(block)) block.classList.add("drag-over");
+    }
+  }
+
+  function onPlanDrop(e) {
+    if (!dragKind) return;
+    e.preventDefault();
+    const sets = clonePlan(plan).sets;
+    if (dragKind === "set") {
+      const block = e.target.closest(".set-block");
+      const to = Number(block?.getAttribute("data-set"));
+      if (Number.isFinite(to)) {
+        plan = { sets: moveItem(sets, dragFromSet, to) };
+      }
+    } else if (dragKind === "round") {
+      const block = e.target.closest(".round-block");
+      const toSet = Number(block?.getAttribute("data-set"));
+      const toRound = Number(block?.getAttribute("data-round"));
+      if (Number.isFinite(toSet) && Number.isFinite(toRound) && toSet === dragFromSet) {
+        sets[toSet].rounds = moveItem(sets[toSet].rounds, dragFromRound, toRound);
+        plan = { sets };
+      } else if (Number.isFinite(toSet) && toSet !== dragFromSet) {
+        // Move round across sets.
+        const [item] = sets[dragFromSet].rounds.splice(dragFromRound, 1);
+        if (sets[dragFromSet].rounds.length === 0) {
+          sets[dragFromSet].rounds.push({
+            workSeconds: item.workSeconds,
+            restAfterSeconds: item.restAfterSeconds,
+            activityId: null,
+          });
+        }
+        const insertAt = Number.isFinite(toRound) ? toRound : sets[toSet].rounds.length;
+        sets[toSet].rounds.splice(insertAt, 0, item);
+        plan = { sets };
+      }
+    }
+    dragKind = null;
+    dragFromSet = -1;
+    dragFromRound = -1;
+    clearDragUi();
+    renderPlanEditor();
+  }
+
+  function onPlanDragEnd() {
+    dragKind = null;
+    dragFromSet = -1;
+    dragFromRound = -1;
+    clearDragUi();
+  }
+
   function onPlanClick(e) {
     const btn = e.target.closest("button[data-act]");
     if (!btn || !planEditor.contains(btn)) return;
@@ -271,11 +419,7 @@
     const ri = roundBlock ? Number(roundBlock.getAttribute("data-round")) : -1;
     const sets = clonePlan(plan).sets;
 
-    if (act === "set-up" && si > 0) {
-      plan = { sets: swap(sets, si, si - 1) };
-    } else if (act === "set-down" && si < sets.length - 1) {
-      plan = { sets: swap(sets, si, si + 1) };
-    } else if (act === "set-dup") {
+    if (act === "set-dup") {
       if (sets.length >= MAX_SETS) return toast("Max sets reached");
       sets.splice(si + 1, 0, clonePlan(sets[si]));
       plan = { sets };
@@ -288,12 +432,6 @@
       if (rounds.length >= MAX_ROUNDS) return toast("Max rounds reached");
       const prev = rounds[rounds.length - 1];
       rounds.push(clonePlan(prev));
-      plan = { sets };
-    } else if (act === "round-up" && ri > 0) {
-      sets[si].rounds = swap(sets[si].rounds, ri, ri - 1);
-      plan = { sets };
-    } else if (act === "round-down" && ri < sets[si].rounds.length - 1) {
-      sets[si].rounds = swap(sets[si].rounds, ri, ri + 1);
       plan = { sets };
     } else if (act === "round-dup") {
       const rounds = sets[si].rounds;
@@ -343,6 +481,7 @@
     const sets = clonePlan(plan).sets;
     sets[si].rounds[ri].activityId = sel.value || null;
     plan = { sets };
+    applySuggestedCategory();
   }
 
   function toast(msg) {
@@ -378,8 +517,9 @@
       return;
     }
     editingEntry = entry;
+    categoryManual = Boolean(entry?.category);
     if (editorTitle) editorTitle.textContent = entry ? `Edit ${entry.name}` : "New plan";
-    if (editName) editName.value = entry?.name || "";
+    if (editName) editName.value = entry?.name || template?.name || "";
     if (editCategory) editCategory.value = entry?.category || "";
     if (editDescription) editDescription.value = entry?.description || "";
     if (editCover) editCover.value = entry?.coverImage || "";
@@ -387,7 +527,147 @@
     fillCategorySuggestions();
     setEditorError("");
     renderPlanEditor();
+    if (!categoryManual) applySuggestedCategory({ force: true });
     showModal(editorDialog);
+  }
+
+  function importPlanFromJsonText(raw, { fileName = "" } = {}) {
+    const { template, catalogMeta } = parseImportedPlanJson(raw);
+    const name = (
+      template.name ||
+      catalogMeta?.name ||
+      fileName.replace(/\.json$/i, "") ||
+      "Imported plan"
+    ).trim();
+
+    let preferredId = String(template.id || "");
+    if (preferredId.startsWith("default_")) {
+      preferredId = `remote_${preferredId.slice("default_".length)}`;
+    }
+    const isRemote = preferredId.startsWith("remote_");
+
+    const activityIds = [];
+    for (const set of template.structuredPlan?.sets || []) {
+      for (const r of set.rounds || []) {
+        if (r.activityId && !activityIds.includes(r.activityId)) {
+          activityIds.push(r.activityId);
+        }
+      }
+    }
+
+    const entry = isRemote
+      ? {
+          id: preferredId,
+          name,
+          category: catalogMeta?.category || "",
+          description: catalogMeta?.description || "",
+          coverImage:
+            catalogMeta?.coverImage ||
+            (activityIds[0] ? `exercise_guides/${activityIds[0]}.webp` : ""),
+          file: `drills/${preferredId}.json`,
+          activityIds,
+        }
+      : null;
+
+    openEditor({
+      entry,
+      template: {
+        ...template,
+        id: isRemote ? preferredId : template.id,
+        name,
+      },
+    });
+
+    if (editName) editName.value = name;
+    if (editDescription) {
+      editDescription.value = catalogMeta?.description || editDescription.value || "";
+    }
+    if (editCover && (catalogMeta?.coverImage || activityIds[0])) {
+      editCover.value =
+        catalogMeta?.coverImage ||
+        `exercise_guides/${activityIds[0]}.webp`;
+    }
+    if (catalogMeta?.category) {
+      categoryManual = true;
+      if (editCategory) editCategory.value = catalogMeta.category;
+      if (categoryHint) {
+        categoryHint.textContent = "Category from imported file (clear to re-auto).";
+      }
+    } else {
+      categoryManual = false;
+      applySuggestedCategory({ force: true });
+    }
+    if (editorTitle) {
+      editorTitle.textContent = isRemote ? `Import / update ${name}` : `Import ${name}`;
+    }
+    toast(`Loaded ${name} — review and Save to GitHub`);
+  }
+
+  function parseImportedPlanJson(raw) {
+    let data;
+    try {
+      data = JSON.parse(raw);
+    } catch (_) {
+      throw new Error("File is not valid JSON");
+    }
+    if (!data || typeof data !== "object") {
+      throw new Error("JSON must be an object");
+    }
+    let template = data;
+    let catalogMeta = null;
+    if (data.format === "tabata_core_template" && data.template) {
+      template = data.template;
+      catalogMeta = {
+        name: data.template.name,
+        description: data.description || "",
+        category: data.category || "",
+        coverImage: data.coverImage || "",
+      };
+    } else if (data.template && typeof data.template === "object") {
+      template = data.template;
+    }
+    if (!template.structuredPlan && !(template.sets && template.workSeconds)) {
+      throw new Error("JSON is not a Tabata Core plan (missing structuredPlan)");
+    }
+    // Build a synthetic structured plan from classic scalar fields if needed.
+    if (!template.structuredPlan) {
+      const rounds = [];
+      const reps = Math.max(1, Number(template.repsPerSet) || 1);
+      for (let i = 0; i < reps; i++) {
+        rounds.push({
+          workSeconds: Number(template.workSeconds) || 20,
+          restAfterSeconds: Number(template.restBetweenRepsSeconds) || 10,
+          activityId: null,
+        });
+      }
+      const setCount = Math.max(1, Number(template.sets) || 1);
+      template = {
+        ...template,
+        structuredPlan: {
+          sets: Array.from({ length: setCount }, () => ({
+            rounds: rounds.map((r) => ({ ...r })),
+            restAfterSetSeconds: Number(template.restBetweenSetsSeconds) || 60,
+          })),
+        },
+      };
+    }
+    return { template, catalogMeta };
+  }
+
+  async function onImportFileSelected(e) {
+    const file = e.target?.files?.[0];
+    e.target.value = "";
+    if (!file) return;
+    if (!isAuthed()) {
+      showModal(loginDialog);
+      return;
+    }
+    try {
+      const text = await file.text();
+      importPlanFromJsonText(text, { fileName: file.name });
+    } catch (err) {
+      toast(err.message || "Import failed");
+    }
   }
 
   function buildTemplateFromForm(id) {
@@ -678,6 +958,27 @@
   if (newDrillBtn) {
     newDrillBtn.addEventListener("click", () => openEditor({ entry: null, template: null }));
   }
+  const importJsonBtn = document.getElementById("admin-import-json");
+  const importFileInput = document.getElementById("admin-import-file");
+  if (importJsonBtn && importFileInput) {
+    importJsonBtn.addEventListener("click", () => {
+      if (!isAuthed()) {
+        showModal(loginDialog);
+        return;
+      }
+      importFileInput.click();
+    });
+    importFileInput.addEventListener("change", onImportFileSelected);
+  }
+  if (editCategory) {
+    editCategory.addEventListener("input", () => {
+      categoryManual = editCategory.value.trim().length > 0;
+      if (!categoryManual) applySuggestedCategory({ force: true });
+      else if (categoryHint) {
+        categoryHint.textContent = "Manual category (clear field to re-auto from exercises).";
+      }
+    });
+  }
   if (editorClose) editorClose.addEventListener("click", () => hideModal(editorDialog));
   if (editorCancel) editorCancel.addEventListener("click", () => hideModal(editorDialog));
   if (editorSave) editorSave.addEventListener("click", () => saveDrill());
@@ -709,6 +1010,10 @@
   if (planEditor) {
     planEditor.addEventListener("click", onPlanClick);
     planEditor.addEventListener("change", onPlanChange);
+    planEditor.addEventListener("dragstart", onPlanDragStart);
+    planEditor.addEventListener("dragover", onPlanDragOver);
+    planEditor.addEventListener("drop", onPlanDrop);
+    planEditor.addEventListener("dragend", onPlanDragEnd);
   }
 
   window.addEventListener("tabata-admin-edit", (e) => editDrill(e.detail?.entry));

@@ -1,8 +1,10 @@
 (() => {
+  const THEME_KEY = "tabataDrillsTheme";
   const statusEl = document.getElementById("status");
   const gridEl = document.getElementById("grid");
   const searchEl = document.getElementById("search");
   const categoriesEl = document.getElementById("categories");
+  const themeToggleBtn = document.getElementById("theme-toggle");
   const dialog = document.getElementById("preview-dialog");
   const previewBody = document.getElementById("preview-body");
   const previewTitle = document.getElementById("preview-title");
@@ -20,6 +22,45 @@
   const imageIds = new Set();
   let guidesCopy = {};
   let activityCatalog = [];
+
+  function themePreference() {
+    try {
+      return localStorage.getItem(THEME_KEY) || "system";
+    } catch (_) {
+      return "system";
+    }
+  }
+
+  function resolvedTheme(pref) {
+    if (pref === "light" || pref === "dark") return pref;
+    if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return "dark";
+    }
+    return "light";
+  }
+
+  function applyTheme(pref = themePreference()) {
+    const mode = resolvedTheme(pref);
+    document.documentElement.setAttribute("data-theme", mode);
+    if (themeToggleBtn) {
+      const label =
+        pref === "system" ? `Theme · Auto (${mode})` : `Theme · ${mode === "dark" ? "Dark" : "Light"}`;
+      themeToggleBtn.textContent = label;
+      themeToggleBtn.setAttribute("aria-label", `Color theme: ${pref}. Click to change.`);
+    }
+  }
+
+  function cycleTheme() {
+    const order = ["system", "light", "dark"];
+    const cur = themePreference();
+    const next = order[(order.indexOf(cur) + 1) % order.length];
+    try {
+      localStorage.setItem(THEME_KEY, next);
+    } catch (_) {
+      /* ignore */
+    }
+    applyTheme(next);
+  }
 
   function setStatus(msg) {
     if (statusEl) statusEl.textContent = msg || "";
@@ -484,6 +525,13 @@
   }
 
   async function init() {
+    applyTheme();
+    if (themeToggleBtn) themeToggleBtn.addEventListener("click", cycleTheme);
+    if (window.matchMedia) {
+      window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
+        if (themePreference() === "system") applyTheme("system");
+      });
+    }
     setStatus("Loading catalog…");
     try {
       await Promise.all([loadImageIndex(), loadGuidesCopy(), loadActivityCatalog()]);
