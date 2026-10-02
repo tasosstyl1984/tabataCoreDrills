@@ -960,8 +960,9 @@ code {
 
 .editor-meta {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 0.65rem 0.85rem;
+  align-items: start;
 }
 
 .editor-meta-wide {
@@ -1003,8 +1004,8 @@ code {
 }
 
 .plan-toolbar button,
-.set-actions button,
-.round-actions button,
+.set-actions > button:not(.icon-act),
+.round-actions > button:not(.icon-act),
 .stepper button,
 .set-toggle {
   border: 1px solid var(--border);
@@ -1032,6 +1033,7 @@ code {
 .set-toggle .material-symbols-outlined {
   font-size: 1.15rem;
   line-height: 1;
+  font-variation-settings: "FILL" 1, "wght" 600, "GRAD" 0, "opsz" 24;
 }
 
 .set-block {
@@ -1056,11 +1058,12 @@ code {
 }
 
 .set-head {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: auto auto minmax(0, 1fr) auto;
   align-items: center;
-  gap: 0.35rem;
-  padding: 0.45rem 0.55rem;
+  column-gap: 0.4rem;
+  row-gap: 0.35rem;
+  padding: 0.5rem 0.6rem;
   border-bottom: 1px solid var(--border);
   background: var(--chip);
 }
@@ -1090,8 +1093,7 @@ code {
 }
 
 .set-title-wrap {
-  flex: 1;
-  min-width: 8rem;
+  min-width: 0;
 }
 
 .set-head h3 {
@@ -1114,9 +1116,99 @@ code {
 .set-actions,
 .round-actions {
   display: inline-flex;
-  flex-wrap: wrap;
-  gap: 0.25rem;
+  flex-wrap: nowrap;
+  gap: 0.1rem;
   align-items: center;
+  justify-self: end;
+}
+
+.icon-act {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.icon-act:hover:not(:disabled) {
+  background: var(--surface);
+  color: var(--primary);
+}
+
+.icon-act:disabled {
+  opacity: 0.32;
+  cursor: default;
+}
+
+.icon-act .material-symbols-outlined {
+  font-size: 1.25rem;
+  line-height: 1;
+  font-variation-settings: "FILL" 1, "wght" 700, "GRAD" 0, "opsz" 24;
+}
+
+.icon-act[data-act$="-up"] .material-symbols-outlined,
+.icon-act[data-act$="-down"] .material-symbols-outlined {
+  font-size: 1.4rem;
+  font-variation-settings: "FILL" 1, "wght" 700, "GRAD" 0, "opsz" 24;
+}
+
+.set-actions > button[data-act="round-add"] {
+  margin-left: 0.25rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 720px) {
+  .set-head {
+    grid-template-columns: auto auto minmax(0, 1fr);
+  }
+
+  .set-actions {
+    grid-column: 1 / -1;
+    justify-self: stretch;
+    justify-content: flex-end;
+  }
+}
+
+.label-note {
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--muted);
+  font-size: 0.72rem;
+}
+
+.category-field {
+  position: relative;
+  display: grid;
+}
+
+.category-field input {
+  padding-right: 3.4rem;
+  width: 100%;
+}
+
+.category-auto-badge {
+  position: absolute;
+  right: 0.45rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--on-primary);
+  background: var(--primary);
+  border-radius: 999px;
+  padding: 0.15rem 0.45rem;
+  pointer-events: none;
 }
 
 .round-block {
