@@ -593,6 +593,24 @@
     site()?.setStatus?.(msg);
   }
 
+  const busyOverlay = document.getElementById("busy-overlay");
+  const busyMessage = document.getElementById("busy-message");
+
+  function showBusy(message) {
+    if (busyMessage) busyMessage.textContent = message || "Working…";
+    if (busyOverlay) {
+      busyOverlay.hidden = false;
+      busyOverlay.setAttribute("aria-busy", "true");
+    }
+  }
+
+  function hideBusy() {
+    if (busyOverlay) {
+      busyOverlay.hidden = true;
+      busyOverlay.setAttribute("aria-busy", "false");
+    }
+  }
+
   function setEditorError(msg) {
     if (!editorError) return;
     if (!msg) {
@@ -1166,6 +1184,8 @@
       return;
     }
     editorSave.disabled = true;
+    if (editorCancel) editorCancel.disabled = true;
+    showBusy(editingEntry ? "Saving plan…" : "Publishing plan…");
     try {
       const id = editingEntry?.id || uniqueId(slugify(editName.value));
       if (pendingCoverBlob) {
@@ -1233,7 +1253,9 @@
     } catch (err) {
       setEditorError(networkError(err, "Save").message || "Save failed");
     } finally {
+      hideBusy();
       editorSave.disabled = false;
+      if (editorCancel) editorCancel.disabled = false;
     }
   }
 
@@ -1251,6 +1273,7 @@
       return;
     }
     deleteInFlight = true;
+    showBusy(`Deleting ${entry.name || entry.id}…`);
     toast(`Deleting ${entry.id}…`);
     try {
       // Catalog first so a later file-delete failure cannot leave a ghost card.
@@ -1301,6 +1324,7 @@
         /* ignore */
       }
     } finally {
+      hideBusy();
       deleteInFlight = false;
     }
   }
