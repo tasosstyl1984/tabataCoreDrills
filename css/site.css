@@ -1,14 +1,58 @@
-:root {
-  --bg: #0f1419;
-  --surface: #1a222c;
-  --text: #f2f5f8;
-  --muted: #9aa7b5;
-  --accent: #3dd6c6;
-  --accent-dim: #2a9d8f;
-  --border: #2c3846;
-  --chip: #243040;
-  --radius: 14px;
-  --font: "Segoe UI", system-ui, -apple-system, sans-serif;
+/* Tabata Core Plans — Material 3 tokens aligned with the Android app */
+:root,
+[data-theme="light"] {
+  --bg: #f8f9ff;
+  --bg-glow-a: #d3e4ff;
+  --bg-glow-b: #e8eef8;
+  --surface: #ffffff;
+  --surface-high: #e1e2e8;
+  --surface-mid: #ecedf4;
+  --text: #191c20;
+  --muted: #43474e;
+  --primary: #39608f;
+  --on-primary: #ffffff;
+  --primary-container: #d3e4ff;
+  --on-primary-container: #1d4875;
+  --accent: #39608f;
+  --accent-dim: #1d4875;
+  --border: #c3c6cf;
+  --chip: #e7e8ee;
+  --chip-active: #39608f;
+  --chip-active-text: #ffffff;
+  --radius: 12px;
+  --radius-lg: 18px;
+  --font: "Roboto", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --shadow: 0 8px 28px rgba(25, 28, 32, 0.08);
+  --cta-text: #ffffff;
+  --play-gradient: linear-gradient(135deg, #39608f, #1565c0);
+  --set-bg: #f2f3fa;
+  --handle: #73777f;
+}
+
+[data-theme="dark"] {
+  --bg: #111418;
+  --bg-glow-a: #1d4875;
+  --bg-glow-b: #272a2f;
+  --surface: #1d2024;
+  --surface-high: #32353a;
+  --surface-mid: #272a2f;
+  --text: #e1e2e8;
+  --muted: #c3c6cf;
+  --primary: #a3c9fe;
+  --on-primary: #00315b;
+  --primary-container: #1d4875;
+  --on-primary-container: #d3e4ff;
+  --accent: #a3c9fe;
+  --accent-dim: #d3e4ff;
+  --border: #43474e;
+  --chip: #272a2f;
+  --chip-active: #a3c9fe;
+  --chip-active-text: #00315b;
+  --shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+  --cta-text: #00315b;
+  --play-gradient: linear-gradient(135deg, #a3c9fe, #39608f);
+  --set-bg: #1d2024;
+  --handle: #8d9199;
 }
 
 * { box-sizing: border-box; }
@@ -19,10 +63,41 @@ body {
   font-family: var(--font);
   color: var(--text);
   background:
-    radial-gradient(1200px 600px at 10% -10%, #1e3a3a 0%, transparent 55%),
-    radial-gradient(900px 500px at 100% 0%, #243352 0%, transparent 50%),
+    radial-gradient(1200px 600px at 10% -10%, var(--bg-glow-a) 0%, transparent 55%),
+    radial-gradient(900px 500px at 100% 0%, var(--bg-glow-b) 0%, transparent 50%),
     var(--bg);
   line-height: 1.45;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 1.25rem;
+  margin-right: 0.5rem;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+}
+
+.theme-toggle:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .hero {
@@ -80,11 +155,11 @@ body {
   margin-top: 1.25rem;
   padding: 0.75rem 1.15rem;
   border-radius: 999px;
-  background: linear-gradient(135deg, #3dd6c6, #2a9d8f);
-  color: #041210;
+  background: var(--play-gradient);
+  color: var(--cta-text);
   font-weight: 800;
   text-decoration: none;
-  box-shadow: 0 10px 28px rgba(61, 214, 198, 0.22);
+  box-shadow: var(--shadow);
 }
 
 .play-cta:hover {
@@ -97,7 +172,7 @@ body {
   width: 1.4rem;
   height: 1.4rem;
   border-radius: 999px;
-  background: rgba(4, 18, 16, 0.12);
+  background: rgba(255, 255, 255, 0.18);
   font-size: 0.7rem;
 }
 
@@ -160,9 +235,9 @@ main {
 }
 
 .chip[aria-pressed="true"] {
-  background: var(--accent-dim);
-  border-color: var(--accent);
-  color: #041210;
+  background: var(--chip-active);
+  border-color: transparent;
+  color: var(--chip-active-text);
   font-weight: 700;
 }
 
@@ -866,9 +941,19 @@ code {
 
 .set-block {
   border: 1px solid var(--border);
-  border-radius: 12px;
-  background: #141b24;
+  border-radius: var(--radius);
+  background: var(--set-bg);
   overflow: hidden;
+  transition: box-shadow 0.15s ease, outline 0.15s ease;
+}
+
+.set-block.is-dragging {
+  opacity: 0.55;
+}
+
+.set-block.drag-over {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
 
 .set-head {
@@ -881,38 +966,76 @@ code {
   background: var(--chip);
 }
 
+.drag-handle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--handle);
+  cursor: grab;
+  font-size: 0.85rem;
+  line-height: 1;
+  user-select: none;
+  touch-action: none;
+}
+
+.drag-handle:active {
+  cursor: grabbing;
+}
+
 .set-head h3 {
   margin: 0;
   flex: 1;
   font-size: 1rem;
   min-width: 5rem;
+  font-weight: 800;
+}
+
+.round-block {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  padding: 0.65rem 0.75rem;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.round-block.is-dragging {
+  opacity: 0.55;
+}
+
+.round-block.drag-over {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+}
+
+.round-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.45rem;
+}
+
+.round-top strong {
+  flex: 1;
+  font-weight: 800;
+}
+
+.category-hint {
+  margin: 0.25rem 0 0;
+  font-size: 0.8rem;
+  color: var(--muted);
 }
 
 .set-body {
   padding: 0.75rem;
   display: grid;
   gap: 0.65rem;
-}
-
-.round-block {
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 0.65rem;
-  background: var(--surface);
-  display: grid;
-  gap: 0.55rem;
-}
-
-.round-top {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-  align-items: center;
-}
-
-.round-top strong {
-  flex: 1;
-  min-width: 4rem;
 }
 
 .round-fields {
