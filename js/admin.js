@@ -232,11 +232,15 @@
         const roundsHtml = set.rounds
           .map((round, ri) => {
             return `
-            <div class="round-block" data-set="${si}" data-round="${ri}" draggable="true">
+            <div class="round-block" data-set="${si}" data-round="${ri}">
               <div class="round-top">
-                <span class="drag-handle" data-drag="round" title="Drag to reorder round" aria-label="Drag round" role="img">⋮⋮</span>
+                <span class="drag-handle" draggable="true" data-drag="round" title="Drag to reorder round" aria-label="Drag round">⋮⋮</span>
                 <strong>Round ${ri + 1}</strong>
                 <div class="round-actions">
+                  <button type="button" data-act="round-up" ${ri === 0 ? "disabled" : ""}>Up</button>
+                  <button type="button" data-act="round-down" ${
+                    ri >= set.rounds.length - 1 ? "disabled" : ""
+                  }>Down</button>
                   <button type="button" data-act="round-dup">Clone</button>
                   <button type="button" data-act="round-del" ${
                     set.rounds.length <= 1 ? "disabled" : ""
@@ -269,11 +273,15 @@
           })
           .join("");
         return `
-        <section class="set-block" data-set="${si}" draggable="true">
+        <section class="set-block" data-set="${si}">
           <div class="set-head">
-            <span class="drag-handle" data-drag="set" title="Drag to reorder set" aria-label="Drag set" role="img">⋮⋮</span>
+            <span class="drag-handle" draggable="true" data-drag="set" title="Drag to reorder set" aria-label="Drag set">⋮⋮</span>
             <h3>Set ${si + 1}</h3>
             <div class="set-actions">
+              <button type="button" data-act="set-up" ${si === 0 ? "disabled" : ""}>Up</button>
+              <button type="button" data-act="set-down" ${
+                si >= plan.sets.length - 1 ? "disabled" : ""
+              }>Down</button>
               <button type="button" data-act="set-dup">Clone set</button>
               <button type="button" data-act="set-del" ${
                 plan.sets.length <= 1 ? "disabled" : ""
@@ -315,9 +323,16 @@
     return copy;
   }
 
+  function clearDragOverUi() {
+    planEditor?.querySelectorAll(".drag-over").forEach((el) => {
+      el.classList.remove("drag-over");
+    });
+  }
+
   function clearDragUi() {
-    planEditor?.querySelectorAll(".is-dragging, .drag-over").forEach((el) => {
-      el.classList.remove("is-dragging", "drag-over");
+    clearDragOverUi();
+    planEditor?.querySelectorAll(".is-dragging").forEach((el) => {
+      el.classList.remove("is-dragging");
     });
   }
 
@@ -336,6 +351,9 @@
       block?.classList.add("is-dragging");
       e.dataTransfer.effectAllowed = "move";
       e.dataTransfer.setData("text/plain", `set:${dragFromSet}`);
+      if (block && e.dataTransfer.setDragImage) {
+        e.dataTransfer.setDragImage(block, 24, 16);
+      }
     } else if (kind === "round") {
       const block = handle.closest(".round-block");
       dragKind = "round";
@@ -344,6 +362,9 @@
       block?.classList.add("is-dragging");
       e.dataTransfer.effectAllowed = "move";
       e.dataTransfer.setData("text/plain", `round:${dragFromSet}:${dragFromRound}`);
+      if (block && e.dataTransfer.setDragImage) {
+        e.dataTransfer.setDragImage(block, 24, 16);
+      }
     } else {
       e.preventDefault();
     }
@@ -353,7 +374,7 @@
     if (!dragKind) return;
     e.preventDefault();
     e.dataTransfer.dropEffect = "move";
-    clearDragUi();
+    clearDragOverUi();
     if (dragKind === "set") {
       const block = e.target.closest(".set-block");
       if (block && planEditor.contains(block)) block.classList.add("drag-over");
@@ -366,6 +387,7 @@
   function onPlanDrop(e) {
     if (!dragKind) return;
     e.preventDefault();
+    e.stopPropagation();
     const sets = clonePlan(plan).sets;
     if (dragKind === "set") {
       const block = e.target.closest(".set-block");
@@ -381,7 +403,6 @@
         sets[toSet].rounds = moveItem(sets[toSet].rounds, dragFromRound, toRound);
         plan = { sets };
       } else if (Number.isFinite(toSet) && toSet !== dragFromSet) {
-        // Move round across sets.
         const [item] = sets[dragFromSet].rounds.splice(dragFromRound, 1);
         if (sets[dragFromSet].rounds.length === 0) {
           sets[dragFromSet].rounds.push({
@@ -419,7 +440,11 @@
     const ri = roundBlock ? Number(roundBlock.getAttribute("data-round")) : -1;
     const sets = clonePlan(plan).sets;
 
-    if (act === "set-dup") {
+    if (act === "set-up" && si > 0) {
+      plan = { sets: swap(sets, si, si - 1) };
+    } else if (act === "set-down" && si < sets.length - 1) {
+      plan = { sets: swap(sets, si, si + 1) };
+    } else if (act === "set-dup") {
       if (sets.length >= MAX_SETS) return toast("Max sets reached");
       sets.splice(si + 1, 0, clonePlan(sets[si]));
       plan = { sets };
@@ -432,6 +457,12 @@
       if (rounds.length >= MAX_ROUNDS) return toast("Max rounds reached");
       const prev = rounds[rounds.length - 1];
       rounds.push(clonePlan(prev));
+      plan = { sets };
+    } else if (act === "round-up" && ri > 0) {
+      sets[si].rounds = swap(sets[si].rounds, ri, ri - 1);
+      plan = { sets };
+    } else if (act === "round-down" && ri < sets[si].rounds.length - 1) {
+      sets[si].rounds = swap(sets[si].rounds, ri, ri + 1);
       plan = { sets };
     } else if (act === "round-dup") {
       const rounds = sets[si].rounds;

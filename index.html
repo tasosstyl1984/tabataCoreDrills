@@ -6,7 +6,7 @@
   <title>Tabata Core Plans</title>
   <meta name="description" content="Browse and download Tabata Core workout plans. Import them into the Tabata Core Android app." />
   <link rel="icon" href="img/logo-mark.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="css/site.css?v=12" />
+  <link rel="stylesheet" href="css/site.css?v=14" />
 </head>
 <body>
   <script>
@@ -25,6 +25,20 @@
       }
     })();
   </script>
+  <div class="top-chrome" aria-label="Site controls">
+    <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">
+      <svg class="theme-icon theme-icon-auto" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+        <path fill="currentColor" d="M12 2a1 1 0 0 1 1 1v1.06A8 8 0 0 1 19.94 11H21a1 1 0 1 1 0 2h-1.06A8 8 0 0 1 13 19.94V21a1 1 0 1 1-2 0v-1.06A8 8 0 0 1 4.06 13H3a1 1 0 1 1 0-2h1.06A8 8 0 0 1 11 4.06V3a1 1 0 0 1 1-1Zm0 4a6 6 0 1 0 0 12A6 6 0 0 0 12 6Z"/>
+      </svg>
+      <svg class="theme-icon theme-icon-light" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" hidden>
+        <path fill="currentColor" d="M12 4a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0V5a1 1 0 0 1 1-1Zm0 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm7-3a1 1 0 1 1 0-2h1a1 1 0 1 1 0 2h-1ZM4 13a1 1 0 1 1 0-2H3a1 1 0 1 1 0 2h1Zm12.95 5.536a1 1 0 0 1 0-1.414l.707-.707a1 1 0 1 1 1.414 1.414l-.707.707a1 1 0 0 1-1.414 0ZM5.636 6.05A1 1 0 0 1 7.05 4.636l.707.707A1 1 0 1 1 6.343 6.757L5.636 6.05Zm12.021-.707a1 1 0 0 1 1.414 1.414L18.364 7.464A1 1 0 1 1 16.95 6.05l.707-.707ZM6.343 17.243a1 1 0 0 1-1.414 0l-.707-.707A1 1 0 1 1 5.636 14.95l.707.707a1 1 0 0 1 0 1.586ZM12 18a1 1 0 0 1 1 1v1a1 1 0 1 1-2 0v-1a1 1 0 0 1 1-1Z"/>
+      </svg>
+      <svg class="theme-icon theme-icon-dark" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" hidden>
+        <path fill="currentColor" d="M12.2 3.05a1 1 0 0 1 1.07 1.32A7.5 7.5 0 1 0 19.63 14.7a1 1 0 0 1 1.32 1.07A9.5 9.5 0 1 1 12.2 3.05Z"/>
+      </svg>
+    </button>
+    <button type="button" id="admin-logout-btn" class="btn-chrome-logout" hidden>Log out</button>
+  </div>
   <header class="hero">
     <div class="hero-brand">
       <img
@@ -50,11 +64,7 @@
         <span class="play-cta-icon" aria-hidden="true">▶</span>
         Get Tabata Core on Google Play
       </a>
-      <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">
-        Theme
-      </button>
       <button type="button" id="admin-login-btn" class="btn-admin">Admin</button>
-      <button type="button" id="admin-logout-btn" class="btn-admin" hidden>Log out</button>
     </div>
   </header>
 
@@ -224,7 +234,7 @@
     </div>
   </footer>
 
-  <script src="js/catalog.js?v=12"></script>
-  <script src="js/admin.js?v=12"></script>
+  <script src="js/catalog.js?v=14"></script>
+  <script src="js/admin.js?v=14"></script>
 </body>
 </html>

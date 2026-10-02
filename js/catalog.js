@@ -43,10 +43,22 @@
     const mode = resolvedTheme(pref);
     document.documentElement.setAttribute("data-theme", mode);
     if (themeToggleBtn) {
+      const icons = {
+        system: themeToggleBtn.querySelector(".theme-icon-auto"),
+        light: themeToggleBtn.querySelector(".theme-icon-light"),
+        dark: themeToggleBtn.querySelector(".theme-icon-dark"),
+      };
+      Object.values(icons).forEach((el) => {
+        if (el) el.hidden = true;
+      });
+      const show = icons[pref] || icons.system;
+      if (show) show.hidden = false;
       const label =
-        pref === "system" ? `Theme · Auto (${mode})` : `Theme · ${mode === "dark" ? "Dark" : "Light"}`;
-      themeToggleBtn.textContent = label;
-      themeToggleBtn.setAttribute("aria-label", `Color theme: ${pref}. Click to change.`);
+        pref === "system"
+          ? `Theme: Auto (${mode}). Click to change.`
+          : `Theme: ${mode === "dark" ? "Dark" : "Light"}. Click to change.`;
+      themeToggleBtn.setAttribute("aria-label", label);
+      themeToggleBtn.setAttribute("title", label);
     }
   }
 

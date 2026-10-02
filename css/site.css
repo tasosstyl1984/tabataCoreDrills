@@ -73,14 +73,44 @@ body {
 .theme-toggle {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  margin-top: 1.25rem;
-  margin-right: 0.5rem;
-  padding: 0.55rem 0.9rem;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
   border-radius: 999px;
   border: 1px solid var(--border);
   background: var(--surface);
   color: var(--text);
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.theme-toggle .theme-icon[hidden] {
+  display: none;
+}
+
+.top-chrome {
+  position: fixed;
+  top: 0.85rem;
+  right: 0.85rem;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.btn-chrome-logout {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 0.55rem 0.95rem;
   font: inherit;
   font-weight: 700;
   font-size: 0.85rem;
@@ -88,7 +118,7 @@ body {
   box-shadow: var(--shadow);
 }
 
-.theme-toggle:hover {
+.btn-chrome-logout:hover {
   border-color: var(--primary);
   color: var(--primary);
 }
@@ -319,8 +349,8 @@ main {
   border: 0;
   border-radius: 10px;
   padding: 0.65rem 0.9rem;
-  background: var(--accent);
-  color: #041210;
+  background: var(--primary);
+  color: var(--on-primary);
   font-weight: 700;
   font: inherit;
   cursor: pointer;
@@ -519,8 +549,8 @@ main {
   border: 0;
   border-radius: 10px;
   padding: 0.75rem 0.9rem;
-  background: var(--accent);
-  color: #041210;
+  background: var(--primary);
+  color: var(--on-primary);
   font-weight: 700;
   font: inherit;
   cursor: pointer;
@@ -780,8 +810,8 @@ code {
 }
 
 .admin-bar button.primary {
-  background: var(--accent);
-  color: #041210;
+  background: var(--primary);
+  color: var(--on-primary);
   border-color: transparent;
 }
 
@@ -890,8 +920,8 @@ code {
   font: inherit;
   font-weight: 700;
   cursor: pointer;
-  background: var(--accent);
-  color: #041210;
+  background: var(--primary);
+  color: var(--on-primary);
 }
 
 .form-actions button.secondary {
@@ -977,10 +1007,13 @@ code {
   background: var(--surface);
   color: var(--handle);
   cursor: grab;
-  font-size: 0.85rem;
+  font-size: 0.95rem;
+  letter-spacing: -0.05em;
   line-height: 1;
   user-select: none;
+  -webkit-user-drag: element;
   touch-action: none;
+  flex-shrink: 0;
 }
 
 .drag-handle:active {
