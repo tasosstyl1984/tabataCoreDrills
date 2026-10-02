@@ -1,0 +1,28 @@
+{
+  "id": "remote_nbmnb",
+  "name": "nbmnb",
+  "createdAtMs": 1790930345439,
+  "sets": 1,
+  "repsPerSet": 1,
+  "workSeconds": 20,
+  "restBetweenRepsSeconds": 10,
+  "restBetweenSetsSeconds": 60,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "birdDog"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      }
+    ]
+  }
+}
