@@ -844,25 +844,41 @@
     return { template, catalogEntry };
   }
 
-  async function ghHeaders() {
+  async function ghHeaders({ jsonBody = false } = {}) {
     const s = session();
     if (!s?.pat) throw new Error("Missing GitHub PAT — sign in again");
-    return {
+    const headers = {
       Accept: "application/vnd.github+json",
       Authorization: `Bearer ${s.pat}`,
       "X-GitHub-Api-Version": "2022-11-28",
-      "Content-Type": "application/json",
     };
+    // Do not send Cache-Control/Pragma — GitHub CORS allow-list omits them
+    // and the browser then fails with a generic "Failed to fetch".
+    if (jsonBody) headers["Content-Type"] = "application/json";
+    return headers;
+  }
+
+  function networkError(err, action) {
+    const msg = String(err?.message || err || "");
+    if (/failed to fetch|networkerror|load failed/i.test(msg)) {
+      return new Error(
+        `${action} failed (network/CORS). Hard-refresh the page, confirm your PAT still has Contents write access, then retry.`,
+      );
+    }
+    return err instanceof Error ? err : new Error(msg || action);
   }
 
   async function ghGetContent(path) {
     const headers = await ghHeaders();
-    headers["Cache-Control"] = "no-cache";
-    headers.Pragma = "no-cache";
     const url = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${encodeURI(
       path,
     )}?ref=${GH_BRANCH}&_=${Date.now()}`;
-    const res = await fetch(url, { headers, cache: "no-store" });
+    let res;
+    try {
+      res = await fetch(url, { headers, cache: "no-store" });
+    } catch (err) {
+      throw networkError(err, `GitHub GET ${path}`);
+    }
     if (res.status === 404) return null;
     if (!res.ok) {
       const text = await res.text();
@@ -898,7 +914,7 @@
   }
 
   async function ghPutContent(path, textOrBase64, message, sha, { rawBase64 = false } = {}) {
-    const headers = await ghHeaders();
+    const headers = await ghHeaders({ jsonBody: true });
     const url = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${encodeURI(path)}`;
     const body = {
       message,
@@ -906,12 +922,17 @@
       branch: GH_BRANCH,
     };
     if (sha) body.sha = sha;
-    const res = await fetch(url, {
-      method: "PUT",
-      headers,
-      body: JSON.stringify(body),
-      cache: "no-store",
-    });
+    let res;
+    try {
+      res = await fetch(url, {
+        method: "PUT",
+        headers,
+        body: JSON.stringify(body),
+        cache: "no-store",
+      });
+    } catch (err) {
+      throw networkError(err, `GitHub PUT ${path}`);
+    }
     if (!res.ok) {
       const t = await res.text();
       const err = new Error(`GitHub PUT ${path} failed (${res.status}): ${t.slice(0, 240)}`);
@@ -922,16 +943,24 @@
   }
 
   async function ghDeleteContent(path, sha, message) {
-    const headers = await ghHeaders();
-    const url = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${path}`;
-    const res = await fetch(url, {
-      method: "DELETE",
-      headers,
-      body: JSON.stringify({ message, sha, branch: GH_BRANCH }),
-    });
+    const headers = await ghHeaders({ jsonBody: true });
+    const url = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${encodeURI(path)}`;
+    let res;
+    try {
+      res = await fetch(url, {
+        method: "DELETE",
+        headers,
+        body: JSON.stringify({ message, sha, branch: GH_BRANCH }),
+        cache: "no-store",
+      });
+    } catch (err) {
+      throw networkError(err, `GitHub DELETE ${path}`);
+    }
     if (!res.ok) {
       const t = await res.text();
-      throw new Error(`GitHub DELETE ${path} failed (${res.status}): ${t.slice(0, 240)}`);
+      const err = new Error(`GitHub DELETE ${path} failed (${res.status}): ${t.slice(0, 240)}`);
+      err.status = res.status;
+      throw err;
     }
   }
 
@@ -1202,35 +1231,66 @@
         toast(`Saved ${id}, but refresh failed: ${refreshErr.message || refreshErr}`);
       }
     } catch (err) {
-      setEditorError(err.message || "Save failed");
+      setEditorError(networkError(err, "Save").message || "Save failed");
     } finally {
       editorSave.disabled = false;
     }
   }
+
+  let deleteInFlight = false;
 
   async function deleteDrill(entry) {
     if (!isAuthed()) {
       showModal(loginDialog);
       return;
     }
-    if (!entry?.id) return;
+    if (!entry?.id || deleteInFlight) return;
     if (!window.confirm(`Delete ${entry.name || entry.id}? This commits to GitHub.`)) return;
+    deleteInFlight = true;
     try {
-      const drillPath = entry.file || `drills/${entry.id}.json`;
-      const existing = await ghGetContent(drillPath);
-      if (existing?.sha) {
-        await ghDeleteContent(drillPath, existing.sha, `Delete drill ${entry.id}`);
-      }
+      // Catalog first so a later file-delete failure cannot leave a ghost card.
       await putCatalogJson((catalogJson) => {
         catalogJson.drills = (catalogJson.drills || []).filter((d) => d.id !== entry.id);
         return catalogJson;
       }, `Catalog: remove ${entry.id}`);
+
+      const drillPath = entry.file || `drills/${entry.id}.json`;
+      const existing = await ghGetContent(drillPath);
+      if (existing?.sha) {
+        try {
+          await ghDeleteContent(drillPath, existing.sha, `Delete drill ${entry.id}`);
+        } catch (err) {
+          if (err.status === 409 || /\(409\)/.test(String(err.message))) {
+            const latest = await ghGetContent(drillPath);
+            if (latest?.sha) {
+              await ghDeleteContent(drillPath, latest.sha, `Delete drill ${entry.id}`);
+            }
+          } else {
+            throw err;
+          }
+        }
+      }
+
+      const coverPath = String(entry.coverImage || "");
+      if (coverPath.startsWith("plan_covers/")) {
+        try {
+          const cover = await ghGetContent(coverPath);
+          if (cover?.sha) {
+            await ghDeleteContent(coverPath, cover.sha, `Delete cover ${entry.id}`);
+          }
+        } catch (_) {
+          /* cover cleanup is best-effort */
+        }
+      }
+
       site()?.invalidateTemplate?.(entry.id);
       site()?.closePreview?.();
       await site()?.reloadCatalog?.({ fromRemote: true });
       toast(`Deleted ${entry.id}`);
     } catch (err) {
-      toast(err.message || "Delete failed");
+      toast(networkError(err, "Delete").message || "Delete failed");
+    } finally {
+      deleteInFlight = false;
     }
   }
 
