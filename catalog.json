@@ -1,6 +1,6 @@
 {
-  "version": 42,
-  "updatedAtMs": 1791041376689,
+  "version": 43,
+  "updatedAtMs": 1791041407685,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -395,7 +395,7 @@
       "id": "remote_tyson",
       "name": "Tyson1",
       "file": "drills/remote_tyson.json",
-      "updatedAtMs": 1791040542564,
+      "updatedAtMs": 1791041404705,
       "category": "combos",
       "description": "Test",
       "coverImage": "plan_covers/remote_tyson.webp",
