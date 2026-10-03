@@ -1,6 +1,6 @@
 {
-  "version": 50,
-  "updatedAtMs": 1791043365171,
+  "version": 51,
+  "updatedAtMs": 1791043435726,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -395,10 +395,10 @@
       "id": "remote_tyson",
       "name": "Tyson1",
       "file": "drills/remote_tyson.json",
-      "updatedAtMs": 1791043362858,
+      "updatedAtMs": 1791043433307,
       "category": "combos",
       "description": "Test",
-      "coverImage": "plan_covers/remote_tyson_1791043360767.webp",
+      "coverImage": "plan_covers/remote_tyson_1791043431215.webp",
       "activityIds": [
         "russianTwists",
         "jumpRope",
