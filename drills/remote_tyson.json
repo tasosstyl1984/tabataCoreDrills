@@ -18,22 +18,22 @@
           {
             "workSeconds": 60,
             "restAfterSeconds": 45,
-            "activityId": "sumoSquats"
+            "activityId": "stepUps"
           },
           {
             "workSeconds": 60,
             "restAfterSeconds": 45,
-            "activityId": "jumpRope"
+            "activityId": "plateRotations"
           },
           {
             "workSeconds": 60,
             "restAfterSeconds": 45,
-            "activityId": "jumpRope"
+            "activityId": "hangingKneeRaises"
           },
           {
             "workSeconds": 60,
             "restAfterSeconds": 45,
-            "activityId": "sidePlank"
+            "activityId": "lunges"
           }
         ],
         "restAfterSetSeconds": 60
