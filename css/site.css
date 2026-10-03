@@ -1357,7 +1357,7 @@ body.admin-authed .preview-footer-actions .btn-delete-admin {
   border: 1px solid var(--border);
   border-radius: 12px;
   overflow: hidden;
-  background: #ffffff;
+  background: var(--chip);
   position: relative;
 }
 
@@ -1365,7 +1365,7 @@ body.admin-authed .preview-footer-actions .btn-delete-admin {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .cover-placeholder {

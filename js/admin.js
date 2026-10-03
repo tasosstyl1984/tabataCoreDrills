@@ -1210,8 +1210,14 @@
       if (pendingCoverBlob) {
         const coverPath = await uploadPendingCover(id);
         if (editCover) editCover.value = coverPath;
+        // Keep a blob URL so grid/preview show the new cover immediately;
+        // raw.githubusercontent.com / Pages can serve the old file for a while.
+        const localUrl = URL.createObjectURL(pendingCoverBlob);
+        site()?.setLocalCover?.(id, localUrl);
         clearPendingCover();
-        setCoverPreview(new URL(coverPath, window.location.href).toString());
+        setCoverPreview(localUrl);
+      } else if (!(editCover?.value || "").trim().startsWith("plan_covers/")) {
+        site()?.clearLocalCover?.(id);
       }
       const { template, catalogEntry } = buildTemplateFromForm(id);
 
@@ -1303,6 +1309,7 @@
 
       // Update UI from the PUT response — raw.githubusercontent.com can stay stale.
       site()?.invalidateTemplate?.(entry.id);
+      site()?.clearLocalCover?.(entry.id);
       site()?.applyCatalog?.(nextCatalog);
 
       const drillPath = entry.file || `drills/${entry.id}.json`;

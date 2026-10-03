@@ -132,16 +132,50 @@
     return new URL(file, window.location.href).toString();
   }
 
+  /** Fresh blob URLs after admin cover upload — bypasses CDN until reload. */
+  const localCoverUrls = new Map();
+
+  function setLocalCover(id, objectUrl) {
+    if (!id || !objectUrl) return;
+    const prev = localCoverUrls.get(id);
+    if (prev && prev !== objectUrl) {
+      try {
+        URL.revokeObjectURL(prev);
+      } catch (_) {
+        /* ignore */
+      }
+    }
+    localCoverUrls.set(id, objectUrl);
+  }
+
+  function clearLocalCover(id) {
+    if (!id || !localCoverUrls.has(id)) return;
+    const prev = localCoverUrls.get(id);
+    localCoverUrls.delete(id);
+    if (prev) {
+      try {
+        URL.revokeObjectURL(prev);
+      } catch (_) {
+        /* ignore */
+      }
+    }
+  }
+
   function coverUrl(entry) {
-    if (!entry.coverImage) return "";
+    if (!entry?.coverImage) return "";
+    const local = entry.id ? localCoverUrls.get(entry.id) : "";
+    if (local) return local;
     const remoteBase =
       catalog?.baseUrl ||
       "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/";
     try {
-      if (String(entry.coverImage).startsWith("plan_covers/")) {
-        return new URL(entry.coverImage, remoteBase).toString();
-      }
-      return new URL(entry.coverImage, window.location.href).toString();
+      const url = String(entry.coverImage).startsWith("plan_covers/")
+        ? new URL(entry.coverImage, remoteBase)
+        : new URL(entry.coverImage, window.location.href);
+      // Same path is reused when replacing a cover; bust browser/CDN cache.
+      const bust = entry.updatedAtMs || catalog?.updatedAtMs || catalog?.version;
+      if (bust) url.searchParams.set("v", String(bust));
+      return url.toString();
     } catch (_) {
       return "";
     }
@@ -260,18 +294,9 @@
   function buildPreviewHtml(entry, template) {
     const sets = template.structuredPlan?.sets || [];
     const cover = coverUrl(entry);
-    const coverActivity =
-      (entry.activityIds && entry.activityIds[0]) ||
-      sets[0]?.rounds?.[0]?.activityId ||
-      "";
+    // Cover is decorative plan art only — exercise details open from round thumbs.
     const coverHtml = cover
-      ? coverActivity
-        ? `<button type="button" class="preview-cover-btn" data-open-exercise="${escapeAttr(
-            coverActivity,
-          )}" aria-label="Open exercise details"><img class="preview-cover" src="${escapeAttr(
-            cover,
-          )}" alt="" loading="lazy" /></button>`
-        : `<img class="preview-cover" src="${escapeAttr(cover)}" alt="" loading="lazy" />`
+      ? `<img class="preview-cover" src="${escapeAttr(cover)}" alt="" loading="lazy" />`
       : "";
     const stats = [
       ["Sets", String(template.sets ?? sets.length ?? "—")],
@@ -700,6 +725,8 @@
     cacheTemplate: (id, template) => {
       if (id && template) templateCache.set(id, template);
     },
+    setLocalCover,
+    clearLocalCover,
     escapeHtml,
     escapeAttr,
   };
