@@ -593,21 +593,40 @@
     site()?.setStatus?.(msg);
   }
 
-  const busyOverlay = document.getElementById("busy-overlay");
+  const busyDialog = document.getElementById("busy-dialog");
   const busyMessage = document.getElementById("busy-message");
+  if (busyDialog) {
+    busyDialog.addEventListener("cancel", (event) => {
+      event.preventDefault();
+    });
+  }
 
   function showBusy(message) {
     if (busyMessage) busyMessage.textContent = message || "Working…";
-    if (busyOverlay) {
-      busyOverlay.hidden = false;
-      busyOverlay.setAttribute("aria-busy", "true");
+    if (!busyDialog) return;
+    busyDialog.setAttribute("aria-busy", "true");
+    try {
+      if (typeof busyDialog.showModal === "function") {
+        if (!busyDialog.open) busyDialog.showModal();
+      } else {
+        busyDialog.setAttribute("open", "");
+      }
+    } catch (_) {
+      busyDialog.setAttribute("open", "");
     }
   }
 
   function hideBusy() {
-    if (busyOverlay) {
-      busyOverlay.hidden = true;
-      busyOverlay.setAttribute("aria-busy", "false");
+    if (!busyDialog) return;
+    busyDialog.setAttribute("aria-busy", "false");
+    try {
+      if (typeof busyDialog.close === "function" && busyDialog.open) {
+        busyDialog.close();
+      } else {
+        busyDialog.removeAttribute("open");
+      }
+    } catch (_) {
+      busyDialog.removeAttribute("open");
     }
   }
 
