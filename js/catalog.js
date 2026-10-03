@@ -598,18 +598,17 @@
   async function reloadCatalog({ fromRemote = false } = {}) {
     const kept = new Map(templateCache);
     templateCache.clear();
-    const candidates = [];
     const remoteBase =
       catalog?.baseUrl ||
       "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/";
     const bust = `_=${Date.now()}`;
-    if (fromRemote) {
-      candidates.push(new URL(`catalog.json?${bust}`, remoteBase).toString());
-    }
-    candidates.push(new URL(`catalog.json?${bust}`, window.location.href).toString());
-    if (!fromRemote) {
-      candidates.push(new URL(`catalog.json?${bust}`, remoteBase).toString());
-    }
+    // Prefer raw.githubusercontent.com — Contents API writes are visible there
+    // immediately. GitHub Pages often lags 1–2 minutes, so loading Pages first
+    // made refreshed covers look "stuck" after save.
+    const candidates = [
+      new URL(`catalog.json?${bust}`, remoteBase).toString(),
+      new URL(`catalog.json?${bust}`, window.location.href).toString(),
+    ];
 
     let lastErr = null;
     for (const url of candidates) {
@@ -620,7 +619,6 @@
           continue;
         }
         catalog = await res.json();
-        // Keep any templates seeded during this session (e.g. just-saved).
         for (const [id, tpl] of kept) {
           if (!templateCache.has(id)) templateCache.set(id, tpl);
         }
