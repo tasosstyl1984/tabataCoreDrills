@@ -1,6 +1,6 @@
 {
-  "version": 60,
-  "updatedAtMs": 1791044556448,
+  "version": 61,
+  "updatedAtMs": 1791047065941,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -389,6 +389,20 @@
         "plank",
         "sidePlank",
         "renegadeRow"
+      ]
+    },
+    {
+      "id": "remote_tetarti_cardio",
+      "name": "Tetarti Cardio",
+      "file": "drills/remote_tetarti_cardio.json",
+      "updatedAtMs": 1791047063418,
+      "category": "combos",
+      "description": "",
+      "coverImage": "plan_covers/remote_tetarti_cardio_1791047061443.webp",
+      "activityIds": [
+        "jumpRope",
+        "abs",
+        "plank"
       ]
     },
     {
