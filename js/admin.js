@@ -1192,28 +1192,30 @@
     );
   }
 
-  async function uploadPendingCover(id) {
-    if (!pendingCoverBlob) return editCover?.value?.trim() || "";
-    const path = `plan_covers/${id}.webp`;
-    const existing = await ghGetContent(path);
-    const content = await encodeBlob(pendingCoverBlob);
+  async function deleteCoverPathBestEffort(path) {
+    const coverPath = String(path || "");
+    if (!coverPath.startsWith("plan_covers/")) return;
     try {
-      await ghPutContent(
-        path,
-        content,
-        `Cover: ${id}`,
-        existing?.sha,
-        { rawBase64: true },
-      );
-    } catch (err) {
-      if (err.status === 409 || /\(409\)/.test(String(err.message))) {
-        const latest = await ghGetContent(path);
-        await ghPutContent(path, content, `Cover: ${id}`, latest?.sha, {
-          rawBase64: true,
-        });
-      } else {
-        throw err;
+      const cover = await ghGetContent(coverPath);
+      if (cover?.sha) {
+        await ghDeleteContent(coverPath, cover.sha, `Delete old cover ${coverPath}`);
       }
+    } catch (_) {
+      /* best-effort */
+    }
+  }
+
+  async function uploadPendingCover(id, previousPath = "") {
+    if (!pendingCoverBlob) return editCover?.value?.trim() || "";
+    // New filename every upload — raw.githubusercontent.com / Pages ignore ?v= on
+    // the same path and keep serving the previous cover bytes for a long time.
+    const path = `plan_covers/${id}_${Date.now()}.webp`;
+    const content = await encodeBlob(pendingCoverBlob);
+    await ghPutContent(path, content, `Cover: ${id}`, undefined, {
+      rawBase64: true,
+    });
+    if (previousPath && previousPath !== path) {
+      await deleteCoverPathBestEffort(previousPath);
     }
     return path;
   }
@@ -1230,11 +1232,17 @@
     try {
       const id = editingEntry?.id || uniqueId(slugify(editName.value));
       if (pendingCoverBlob) {
-        const coverPath = await uploadPendingCover(id);
+        const previousPath = (
+          editCover?.value ||
+          editingEntry?.coverImage ||
+          ""
+        ).trim();
+        // Capture blob before upload helpers clear pending state.
+        const coverBlob = pendingCoverBlob;
+        const coverPath = await uploadPendingCover(id, previousPath);
         if (editCover) editCover.value = coverPath;
-        // Keep a blob URL so grid/preview show the new cover immediately;
-        // raw.githubusercontent.com / Pages can serve the old file for a while.
-        const localUrl = URL.createObjectURL(pendingCoverBlob);
+        // Session blob so grid/preview update before CDN/Pages catch up.
+        const localUrl = URL.createObjectURL(coverBlob);
         site()?.setLocalCover?.(id, localUrl);
         clearPendingCover();
         setCoverPreview(localUrl);
@@ -1293,7 +1301,9 @@
       try {
         site()?.cacheTemplate?.(id, template);
         site()?.applyCatalog?.(nextCatalog);
-        site()?.openPreview?.(catalogEntry);
+        const savedEntry =
+          (nextCatalog.drills || []).find((d) => d.id === id) || catalogEntry;
+        site()?.openPreview?.(savedEntry);
       } catch (refreshErr) {
         toast(`Saved ${id}, but refresh failed: ${refreshErr.message || refreshErr}`);
       }

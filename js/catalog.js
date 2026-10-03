@@ -426,15 +426,18 @@
   }
 
   async function openPreview(entry) {
-    previewEntry = entry;
-    if (previewTitle) previewTitle.textContent = entry.name || entry.id;
+    // Prefer live catalog row (new coverImage path after save).
+    const live =
+      (catalog?.drills || []).find((d) => d.id === entry?.id) || entry;
+    previewEntry = live;
+    if (previewTitle) previewTitle.textContent = live.name || live.id;
     if (previewBody) previewBody.innerHTML = `<p class="muted">Loading preview…</p>`;
     if (previewDownloadBtn) previewDownloadBtn.disabled = true;
     showModal(dialog);
     try {
-      const template = await fetchTemplate(entry);
+      const template = await fetchTemplate(live);
       if (previewBody) {
-        previewBody.innerHTML = buildPreviewHtml(entry, template);
+        previewBody.innerHTML = buildPreviewHtml(live, template);
         wireExerciseClicks(previewBody);
       }
       if (previewDownloadBtn) previewDownloadBtn.disabled = false;
