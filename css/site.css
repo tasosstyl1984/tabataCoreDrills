@@ -304,8 +304,9 @@ main {
   display: block;
   width: 100%;
   aspect-ratio: 16 / 10;
-  object-fit: contain;
-  background: #ffffff;
+  object-fit: cover;
+  object-position: center;
+  background: var(--chip);
   border-bottom: 1px solid var(--border);
 }
 
@@ -458,9 +459,11 @@ main {
 .preview-cover {
   display: block;
   width: 100%;
+  aspect-ratio: 16 / 10;
   max-height: 220px;
-  object-fit: contain;
-  background: #ffffff;
+  object-fit: cover;
+  object-position: center;
+  background: var(--chip);
   border: 1px solid var(--border);
   border-radius: 12px;
   margin-bottom: 1rem;
@@ -520,8 +523,9 @@ main {
   width: 52px;
   height: 52px;
   border-radius: 10px;
-  object-fit: contain;
-  background: #ffffff;
+  object-fit: cover;
+  object-position: center;
+  background: var(--chip);
   border: 1px solid var(--border);
   flex: 0 0 auto;
 }
@@ -731,7 +735,8 @@ code {
   width: 100%;
   max-height: min(50vh, 420px);
   object-fit: contain;
-  background: #ffffff;
+  object-position: center;
+  background: var(--chip);
   border: 1px solid var(--border);
   border-radius: 12px;
   margin-bottom: 1rem;

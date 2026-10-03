@@ -148,6 +148,10 @@
     localCoverUrls.set(id, objectUrl);
   }
 
+  function getLocalCover(id) {
+    return id ? localCoverUrls.get(id) || "" : "";
+  }
+
   function clearLocalCover(id) {
     if (!id || !localCoverUrls.has(id)) return;
     const prev = localCoverUrls.get(id);
@@ -726,6 +730,7 @@
       if (id && template) templateCache.set(id, template);
     },
     setLocalCover,
+    getLocalCover,
     clearLocalCover,
     escapeHtml,
     escapeAttr,
