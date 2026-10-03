@@ -1,6 +1,6 @@
 {
-  "version": 54,
-  "updatedAtMs": 1791043621544,
+  "version": 55,
+  "updatedAtMs": 1791043686469,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -395,12 +395,12 @@
       "id": "remote_tyson",
       "name": "Tyson1",
       "file": "drills/remote_tyson.json",
-      "updatedAtMs": 1791043619269,
+      "updatedAtMs": 1791043684004,
       "category": "combos",
       "description": "Test",
-      "coverImage": "plan_covers/remote_tyson_1791043617165.webp",
+      "coverImage": "plan_covers/remote_tyson_1791043535300.webp",
       "activityIds": [
-        "russianTwists",
+        "lunges",
         "jumpRope",
         "sidePlank",
         "shadowBoxing",
@@ -410,6 +410,7 @@
         "abs",
         "plateRotations",
         "plank",
+        "russianTwists",
         "hollowHold"
       ]
     },
