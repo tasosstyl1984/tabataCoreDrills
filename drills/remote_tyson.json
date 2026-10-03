@@ -18,22 +18,22 @@
           {
             "workSeconds": 60,
             "restAfterSeconds": 45,
-            "activityId": "stepUps"
+            "activityId": "jumpRope"
           },
           {
             "workSeconds": 60,
             "restAfterSeconds": 45,
-            "activityId": "plateRotations"
+            "activityId": "jumpRope"
           },
           {
             "workSeconds": 60,
             "restAfterSeconds": 45,
-            "activityId": "hangingKneeRaises"
+            "activityId": "jumpRope"
           },
           {
             "workSeconds": 60,
             "restAfterSeconds": 45,
-            "activityId": "lunges"
+            "activityId": "jumpRope"
           }
         ],
         "restAfterSetSeconds": 60
