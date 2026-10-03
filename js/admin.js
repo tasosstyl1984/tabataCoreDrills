@@ -1074,6 +1074,8 @@
 
   function setCoverPreview(src) {
     if (editCoverPreview && src) {
+      // Drop prior src first so the browser does not keep a previous plan's bitmap.
+      editCoverPreview.removeAttribute("src");
       editCoverPreview.src = src;
       editCoverPreview.hidden = false;
       if (editCoverPlaceholder) editCoverPlaceholder.hidden = true;
@@ -1094,13 +1096,29 @@
   function resetCoverUi(path = "") {
     clearPendingCover();
     if (editCover) editCover.value = path || "";
-    if (path) {
-      try {
-        setCoverPreview(new URL(path, window.location.href).toString());
-      } catch (_) {
-        setCoverPreview("");
-      }
-    } else {
+    if (!path) {
+      setCoverPreview("");
+      return;
+    }
+    const local = editingEntry?.id ? site()?.getLocalCover?.(editingEntry.id) : "";
+    if (local) {
+      setCoverPreview(local);
+      return;
+    }
+    try {
+      const url = String(path).startsWith("plan_covers/")
+        ? new URL(
+            path,
+            site()?.getCatalog?.()?.baseUrl ||
+              "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
+          )
+        : new URL(path, window.location.href);
+      url.searchParams.set(
+        "v",
+        String(editingEntry?.updatedAtMs || Date.now()),
+      );
+      setCoverPreview(url.toString());
+    } catch (_) {
       setCoverPreview("");
     }
   }
@@ -1132,18 +1150,22 @@
       cropper = new Cropper(cropImage, {
         aspectRatio: 16 / 10,
         viewMode: 1,
+        dragMode: "move",
         autoCropArea: 1,
         background: false,
         responsive: true,
+        restore: false,
       });
     };
   }
 
   function applyCrop() {
     if (!cropper) return;
+    // Exact 16:10 export — fill any gap with theme dark, never white letterbox.
     const canvas = cropper.getCroppedCanvas({
-      maxWidth: 1200,
-      maxHeight: 750,
+      width: 1200,
+      height: 750,
+      fillColor: "#111418",
       imageSmoothingEnabled: true,
       imageSmoothingQuality: "high",
     });
@@ -1361,6 +1383,8 @@
       return;
     }
     try {
+      // Avoid reusing a previous plan's cached JSON (stale exercises / covers).
+      site()?.invalidateTemplate?.(entry.id);
       const template = await site().fetchTemplate(entry);
       openEditor({ entry, template });
     } catch (err) {
