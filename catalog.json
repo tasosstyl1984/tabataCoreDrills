@@ -1,26 +1,8 @@
 {
-  "version": 98,
-  "updatedAtMs": 1791228698811,
+  "version": 99,
+  "updatedAtMs": 1791228709972,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
-    {
-      "id": "remote_kb_boxing_complex",
-      "name": "KB - Boxing Complex 70",
-      "file": "drills/remote_kb_boxing_complex.json",
-      "updatedAtMs": 1790926704096,
-      "category": "kettlebell",
-      "description": "Kettlebell · 4×6 · 70s work / 60s rest · Shadow boxing, KB swings, KB halo, Clean & press, KB row, KB snatch, KB gorilla row",
-      "coverImage": "exercise_guides/shadowBoxing.webp",
-      "activityIds": [
-        "shadowBoxing",
-        "kettlebellSwings",
-        "kettlebellHalo",
-        "kettlebellCleanPress",
-        "kettlebellRow",
-        "kettlebellSnatch",
-        "kettlebellGorillaRow"
-      ]
-    },
     {
       "id": "remote_kb_complex_40",
       "name": "KB complex 40",
