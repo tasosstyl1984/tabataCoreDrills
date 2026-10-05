@@ -39,10 +39,20 @@
   const cropCancel = document.getElementById("crop-cancel");
   const cropClose = document.getElementById("crop-close");
   const categorySuggestions = document.getElementById("category-suggestions");
+  const activityPickerDialog = document.getElementById("activity-picker-dialog");
+  const activityPickerClose = document.getElementById("activity-picker-close");
+  const activityPickerSearch = document.getElementById("activity-picker-search");
+  const activityPickerClear = document.getElementById("activity-picker-clear");
+  const activityPickerChips = document.getElementById("activity-picker-chips");
+  const activityPickerList = document.getElementById("activity-picker-list");
 
   let editingEntry = null;
   let plan = classicStarterPlan();
   let categoryManual = false;
+  /** Activity group chip for the exercise picker. Shared across rounds in one edit. */
+  let activityGroupFilter = null;
+  let pickerSet = -1;
+  let pickerRound = -1;
   let setCollapsed = [false];
   let dragKind = null; // 'set' | 'round'
   let dragFromSet = -1;
@@ -184,7 +194,7 @@
     return `${id}_${i}`;
   }
 
-  function activityOptionsHtml(selected) {
+  function groupedActivities() {
     const activities = site()?.activityCatalog?.() || [];
     const groups = new Map();
     for (const a of activities) {
@@ -192,16 +202,101 @@
       if (!groups.has(g)) groups.set(g, []);
       groups.get(g).push(a);
     }
-    let html = `<option value="">No label</option>`;
-    for (const [group, list] of groups) {
-      html += `<optgroup label="${escape(group)}">`;
-      for (const a of list) {
-        const sel = a.id === selected ? " selected" : "";
-        html += `<option value="${escape(a.id)}"${sel}>${escape(a.label)}</option>`;
-      }
-      html += `</optgroup>`;
+    return groups;
+  }
+
+  function activityMatchesQuery(activity, query) {
+    if (!query) return true;
+    if ((activity.label || "").toLowerCase().includes(query)) return true;
+    if ((activity.group || "").toLowerCase().includes(query)) return true;
+    return false;
+  }
+
+  function exerciseButtonLabel(id) {
+    if (!id) return "No label";
+    return activityLabel(id);
+  }
+
+  function renderActivityChips() {
+    if (!activityPickerChips) return;
+    const names = ["All", ...groupedActivities().keys()];
+    activityPickerChips.innerHTML = names
+      .map((name) => {
+        const group = name === "All" ? "" : name;
+        const pressed = group ? activityGroupFilter === group : activityGroupFilter == null;
+        return `<button type="button" class="chip" data-group="${escape(group)}" aria-pressed="${
+          pressed ? "true" : "false"
+        }">${escape(name)}</button>`;
+      })
+      .join("");
+  }
+
+  function renderActivityList() {
+    if (!activityPickerList) return;
+    const query = (activityPickerSearch?.value || "").trim().toLowerCase();
+    if (activityPickerClear) activityPickerClear.hidden = !query;
+    const selectedId = plan.sets[pickerSet]?.rounds[pickerRound]?.activityId || "";
+    const showNoLabel = !query || "no label".includes(query) || "none".includes(query);
+    const sections = [];
+    for (const [group, list] of groupedActivities()) {
+      if (activityGroupFilter && group !== activityGroupFilter) continue;
+      const filtered = list.filter((a) => activityMatchesQuery(a, query));
+      if (filtered.length) sections.push({ group, list: filtered });
     }
-    return html;
+    if (!sections.length && !showNoLabel) {
+      const typed = activityPickerSearch?.value || "";
+      const empty = activityGroupFilter
+        ? `No ${activityGroupFilter} activities match "${typed}"`
+        : `No activities match "${typed}"`;
+      activityPickerList.innerHTML = `<p class="activity-picker-empty">${escape(empty)}</p>`;
+      return;
+    }
+    let html = "";
+    if (showNoLabel) {
+      const selected = !selectedId;
+      html += `<button type="button" class="activity-option" role="option" data-activity="" aria-selected="${
+        selected ? "true" : "false"
+      }">No label</button>`;
+    }
+    for (const section of sections) {
+      html += `<div class="activity-group-label">${escape(section.group)}</div>`;
+      for (const activity of section.list) {
+        const selected = activity.id === selectedId;
+        html += `<button type="button" class="activity-option" role="option" data-activity="${escape(
+          activity.id,
+        )}" aria-selected="${selected ? "true" : "false"}">${escape(activity.label)}</button>`;
+      }
+    }
+    activityPickerList.innerHTML = html;
+  }
+
+  function openActivityPicker(setIndex, roundIndex) {
+    pickerSet = setIndex;
+    pickerRound = roundIndex;
+    if (activityPickerSearch) activityPickerSearch.value = "";
+    renderActivityChips();
+    renderActivityList();
+    showModal(activityPickerDialog);
+    activityPickerSearch?.focus();
+    requestAnimationFrame(() => {
+      activityPickerChips
+        ?.querySelector('.chip[aria-pressed="true"]')
+        ?.scrollIntoView({ inline: "center", block: "nearest" });
+    });
+  }
+
+  function closeActivityPicker() {
+    hideModal(activityPickerDialog);
+  }
+
+  function chooseActivity(activityId) {
+    const sets = clonePlan(plan).sets;
+    const round = sets[pickerSet]?.rounds[pickerRound];
+    if (!round) return;
+    round.activityId = activityId || null;
+    plan = { sets };
+    closeActivityPicker();
+    renderPlanEditor();
   }
 
   function escape(s) {
@@ -293,7 +388,10 @@
             <div class="round-block" data-set="${si}" data-round="${ri}">
               <span class="drag-handle" draggable="true" data-drag="round" title="Drag round" aria-label="Drag round">⋮⋮</span>
               <span class="round-index">R${ri + 1}</span>
-              <select class="round-exercise" data-field="activityId" aria-label="Exercise">${activityOptionsHtml(round.activityId)}</select>
+              <button type="button" class="round-exercise" data-act="pick-activity" aria-label="Exercise, ${escape(exerciseButtonLabel(round.activityId))}">
+                <span class="round-exercise-label">${escape(exerciseButtonLabel(round.activityId))}</span>
+                <span class="material-symbols-outlined" aria-hidden="true">arrow_drop_down</span>
+              </button>
               <div class="stepper" title="Work">
                 <button type="button" data-act="work-dec" aria-label="Decrease work">−</button>
                 <span data-field="workLabel">${round.workSeconds}s</span>
@@ -508,6 +606,11 @@
       return;
     }
 
+    if (act === "pick-activity" && ri >= 0) {
+      openActivityPicker(si, ri);
+      return;
+    }
+
     if (act === "set-up" && si > 0) {
       plan = { sets: swap(sets, si, si - 1) };
       setCollapsed = swap(setCollapsed, si, si - 1);
@@ -574,18 +677,6 @@
       return;
     }
     renderPlanEditor();
-  }
-
-  function onPlanChange(e) {
-    const sel = e.target.closest("select[data-field='activityId']");
-    if (!sel || !planEditor.contains(sel)) return;
-    const block = sel.closest("[data-round]");
-    const si = Number(block.getAttribute("data-set"));
-    const ri = Number(block.getAttribute("data-round"));
-    const sets = clonePlan(plan).sets;
-    sets[si].rounds[ri].activityId = sel.value || null;
-    plan = { sets };
-    applySuggestedCategory();
   }
 
   function toast(msg) {
@@ -659,6 +750,7 @@
     }
     editingEntry = entry;
     categoryManual = Boolean(entry?.category);
+    activityGroupFilter = null;
     if (editorTitle) editorTitle.textContent = entry ? `Edit ${entry.name}` : "New plan";
     if (editName) editName.value = entry?.name || template?.name || "";
     if (editCategory) editCategory.value = entry?.category || "";
@@ -1741,9 +1833,47 @@
       }
     });
   }
+  if (activityPickerClose) {
+    activityPickerClose.addEventListener("click", closeActivityPicker);
+  }
+  if (activityPickerSearch) {
+    activityPickerSearch.addEventListener("input", renderActivityList);
+  }
+  if (activityPickerClear) {
+    activityPickerClear.addEventListener("click", () => {
+      if (activityPickerSearch) activityPickerSearch.value = "";
+      renderActivityList();
+      activityPickerSearch?.focus();
+    });
+  }
+  if (activityPickerChips) {
+    activityPickerChips.addEventListener("click", (e) => {
+      const chip = e.target.closest("button[data-group]");
+      if (!chip || !activityPickerChips.contains(chip)) return;
+      const group = chip.getAttribute("data-group") || "";
+      activityGroupFilter = group || null;
+      renderActivityChips();
+      renderActivityList();
+    });
+  }
+  if (activityPickerList) {
+    activityPickerList.addEventListener("click", (e) => {
+      const option = e.target.closest("button[data-activity]");
+      if (!option || !activityPickerList.contains(option)) return;
+      chooseActivity(option.getAttribute("data-activity") || null);
+    });
+  }
+  if (activityPickerDialog) {
+    activityPickerDialog.addEventListener("click", (e) => {
+      if (e.target === activityPickerDialog) closeActivityPicker();
+    });
+    activityPickerDialog.addEventListener("cancel", (e) => {
+      e.preventDefault();
+      closeActivityPicker();
+    });
+  }
   if (planEditor) {
     planEditor.addEventListener("click", onPlanClick);
-    planEditor.addEventListener("change", onPlanChange);
     planEditor.addEventListener("dragstart", onPlanDragStart);
     planEditor.addEventListener("dragover", onPlanDragOver);
     planEditor.addEventListener("drop", onPlanDrop);

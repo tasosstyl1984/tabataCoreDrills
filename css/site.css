@@ -1305,9 +1305,237 @@ code {
   background: var(--chip);
   color: var(--text);
   border-radius: 8px;
-  padding: 0.35rem 0.45rem;
+  padding: 0.35rem 0.35rem 0.35rem 0.45rem;
   font: inherit;
   font-size: 0.82rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.round-exercise-label {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.round-exercise .material-symbols-outlined {
+  font-size: 1.25rem;
+  color: var(--muted);
+  flex: 0 0 auto;
+}
+
+.activity-picker-dialog {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  max-width: min(560px, calc(100vw - 1.25rem));
+  width: 100%;
+  color: var(--text);
+}
+
+.activity-picker-dialog[open],
+.activity-picker-dialog:modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.activity-picker-dialog::backdrop {
+  background: rgba(4, 8, 12, 0.78);
+}
+
+.activity-picker-panel {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  max-height: min(92vh, 760px);
+  display: flex;
+  flex-direction: column;
+}
+
+.activity-picker-panel header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.15rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.activity-picker-panel header h2 {
+  margin: 0.15rem 0 0;
+  font-size: 1.25rem;
+}
+
+.activity-picker-body {
+  padding: 0.85rem 0 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  min-height: 0;
+}
+
+.activity-search {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0 1rem;
+  border: 1px solid var(--border);
+  background: var(--chip);
+  border-radius: 12px;
+  padding: 0.2rem 0.45rem 0.2rem 0.65rem;
+}
+
+.activity-search .material-symbols-outlined {
+  color: var(--muted);
+  font-size: 1.25rem;
+}
+
+.activity-search input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  padding: 0.45rem 0;
+}
+
+.activity-search input:focus {
+  outline: none;
+}
+
+.activity-search-clear {
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  border-radius: 8px;
+  padding: 0.15rem;
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.activity-search-clear .material-symbols-outlined {
+  font-size: 1.15rem;
+}
+
+.activity-picker-chips {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 2.5rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.15rem 1rem 0.35rem;
+  scroll-padding-inline: 1rem;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.activity-picker-chips .chip {
+  flex: 0 0 auto;
+  height: 2rem;
+  padding: 0 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.activity-picker-chips .chip[aria-pressed="true"] {
+  font-weight: 700;
+}
+
+.activity-picker-list {
+  overflow: auto;
+  min-height: 12rem;
+  max-height: min(52vh, 460px);
+  margin: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+}
+
+.activity-picker-chips::-webkit-scrollbar,
+.activity-picker-list::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.activity-picker-chips::-webkit-scrollbar-track,
+.activity-picker-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.activity-picker-chips::-webkit-scrollbar-thumb,
+.activity-picker-list::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 999px;
+}
+
+.activity-picker-chips::-webkit-scrollbar-thumb:hover,
+.activity-picker-list::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
+
+.activity-group-label {
+  position: sticky;
+  top: 0;
+  padding: 0.5rem 0.75rem 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--primary);
+  background: var(--surface);
+}
+
+.activity-option {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: 0;
+  border-top: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-weight: 600;
+  padding: 0.65rem 0.75rem;
+  cursor: pointer;
+}
+
+.activity-option:hover {
+  background: var(--surface-mid);
+}
+
+.activity-option[aria-selected="true"] {
+  background: var(--primary-container);
+  color: var(--on-primary-container);
+}
+
+.activity-picker-empty {
+  margin: auto;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  color: var(--muted);
+  font-weight: 700;
 }
 
 .category-hint {

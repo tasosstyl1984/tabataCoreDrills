@@ -8,7 +8,7 @@
   <link rel="icon" href="img/logo-mark.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400..700,0..1,0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="css/site.css?v=26" />
+  <link rel="stylesheet" href="css/site.css?v=29" />
 </head>
 <body>
   <dialog id="busy-dialog" class="busy-dialog" aria-live="assertive" aria-busy="false">
@@ -243,6 +243,35 @@
     </div>
   </dialog>
 
+  <dialog id="activity-picker-dialog" class="activity-picker-dialog" aria-labelledby="activity-picker-title">
+    <div class="activity-picker-panel">
+      <header>
+        <div>
+          <p class="brand">Exercise</p>
+          <h2 id="activity-picker-title">Select activity</h2>
+        </div>
+        <button type="button" id="activity-picker-close" class="btn-ghost">Close</button>
+      </header>
+      <div class="activity-picker-body">
+        <div class="activity-search">
+          <span class="material-symbols-outlined" aria-hidden="true">search</span>
+          <input
+            id="activity-picker-search"
+            type="text"
+            placeholder="Search activities"
+            autocomplete="off"
+            aria-label="Search activities"
+          />
+          <button type="button" id="activity-picker-clear" class="activity-search-clear" hidden aria-label="Clear search">
+            <span class="material-symbols-outlined" aria-hidden="true">close</span>
+          </button>
+        </div>
+        <div id="activity-picker-chips" class="activity-picker-chips" role="group" aria-label="Activity category"></div>
+        <div id="activity-picker-list" class="activity-picker-list" role="listbox" aria-label="Activities"></div>
+      </div>
+    </div>
+  </dialog>
+
   <dialog id="crop-dialog" class="crop-dialog" aria-labelledby="crop-title">
     <div class="crop-panel">
       <header>
@@ -290,6 +319,6 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="js/catalog.js?v=31"></script>
-  <script src="js/admin.js?v=31"></script>
+  <script src="js/admin.js?v=32"></script>
 </body>
 </html>
