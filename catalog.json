@@ -1,6 +1,6 @@
 {
-  "version": 96,
-  "updatedAtMs": 1791228684678,
+  "version": 97,
+  "updatedAtMs": 1791228691953,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -97,23 +97,6 @@
       "coverImage": "exercise_guides/plateRotations.webp",
       "activityIds": [
         "plateRotations"
-      ]
-    },
-    {
-      "id": "remote_plyo_lateral_30",
-      "name": "Plyo laterals 40",
-      "file": "drills/remote_plyo_lateral_30.json",
-      "updatedAtMs": 1790926704096,
-      "category": "plyometrics",
-      "description": "Plyometrics · 4×6 · 40s work / 50s rest · Squat jumps, Jump lunges, Skater hops, High knees, Tuck jumps, Box jumps",
-      "coverImage": "exercise_guides/squatJumps.webp",
-      "activityIds": [
-        "squatJumps",
-        "jumpingLunges",
-        "skaterHops",
-        "highKnees",
-        "tuckJumps",
-        "boxJumps"
       ]
     },
     {
