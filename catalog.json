@@ -1,24 +1,8 @@
 {
-  "version": 82,
-  "updatedAtMs": 1791228580847,
+  "version": 83,
+  "updatedAtMs": 1791228587496,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
-    {
-      "id": "remote_chest_press_40",
-      "name": "Chest press 40",
-      "file": "drills/remote_chest_press_40.json",
-      "updatedAtMs": 1790926704096,
-      "category": "chest",
-      "description": "Chest · 4×6 · 40s work / 55s rest · Bench press, Incline bench, DB chest press, Pushups, Pullover",
-      "coverImage": "exercise_guides/benchPress.webp",
-      "activityIds": [
-        "benchPress",
-        "inclineBench",
-        "dumbbellChestPress",
-        "pushups",
-        "pullover"
-      ]
-    },
     {
       "id": "remote_core_holds_40",
       "name": "Core holds 40",
