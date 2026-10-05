@@ -1,25 +1,8 @@
 {
-  "version": 88,
-  "updatedAtMs": 1791228625902,
+  "version": 89,
+  "updatedAtMs": 1791228633546,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
-    {
-      "id": "remote_engine_conditioning_45",
-      "name": "Engine conditioning 45",
-      "file": "drills/remote_engine_conditioning_45.json",
-      "updatedAtMs": 1790926704096,
-      "category": "conditioning",
-      "description": "Conditioning · 4×6 · 45s work / 50s rest · Battle ropes, Med ball slams, Farmer carry, Sled push, Rowing, Mt. climbers",
-      "coverImage": "exercise_guides/battleRopes.webp",
-      "activityIds": [
-        "battleRopes",
-        "medBallSlams",
-        "farmerCarry",
-        "sledPush",
-        "rowing",
-        "mountainClimbers"
-      ]
-    },
     {
       "id": "remote_hiit_strength_30",
       "name": "HIIT strength 30 45",
