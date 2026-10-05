@@ -1,6 +1,6 @@
 {
-  "version": 93,
-  "updatedAtMs": 1791228662515,
+  "version": 94,
+  "updatedAtMs": 1791228669460,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -146,26 +146,6 @@
         "dips",
         "plank",
         "hangingKneeRaises"
-      ]
-    },
-    {
-      "id": "remote_combo_rope_kettle_core_40",
-      "name": "Rope · kettle · core 45",
-      "file": "drills/remote_combo_rope_kettle_core_40.json",
-      "updatedAtMs": 1790926704096,
-      "category": "combos",
-      "description": "Combos · 3×8 · 45s work / 50s rest · Jump rope, KB swings, Goblet squat, Clean & press, KB row, KB snatch, Tur. Get-Up, Pushups, Abs",
-      "coverImage": "exercise_guides/jumpRope.webp",
-      "activityIds": [
-        "jumpRope",
-        "kettlebellSwings",
-        "kettlebellGobletSquat",
-        "kettlebellCleanPress",
-        "kettlebellRow",
-        "kettlebellSnatch",
-        "kettlebellTurkishGetUp",
-        "pushups",
-        "abs"
       ]
     },
     {
