@@ -1,24 +1,8 @@
 {
-  "version": 85,
-  "updatedAtMs": 1791228600574,
+  "version": 86,
+  "updatedAtMs": 1791228606443,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
-    {
-      "id": "remote_dumbbell_arms_40",
-      "name": "DB arms 40",
-      "file": "drills/remote_dumbbell_arms_40.json",
-      "updatedAtMs": 1790926704096,
-      "category": "dumbbell",
-      "description": "Dumbbell · 4×6 · 40s work / 50s rest · Bicep curls, Hammer curls, Conc. curls, Kickbacks, OH tricep extension",
-      "coverImage": "exercise_guides/bicepCurls.webp",
-      "activityIds": [
-        "bicepCurls",
-        "hammerCurls",
-        "concentrationCurls",
-        "tricepKickbacks",
-        "overheadTricepExtension"
-      ]
-    },
     {
       "id": "remote_dumbbell_shoulders_40",
       "name": "DB shoulders · back 40",
