@@ -1,6 +1,6 @@
 {
-  "version": 95,
-  "updatedAtMs": 1791228678029,
+  "version": 96,
+  "updatedAtMs": 1791228684678,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -114,22 +114,6 @@
         "highKnees",
         "tuckJumps",
         "boxJumps"
-      ]
-    },
-    {
-      "id": "remote_plyo_power_30",
-      "name": "Plyo power 40",
-      "file": "drills/remote_plyo_power_30.json",
-      "updatedAtMs": 1790926704096,
-      "category": "plyometrics",
-      "description": "Plyometrics · 4×6 · 40s work / 50s rest · Box jumps, Broad jumps, Tuck jumps, High knees, Mt. climbers",
-      "coverImage": "exercise_guides/boxJumps.webp",
-      "activityIds": [
-        "boxJumps",
-        "broadJumps",
-        "tuckJumps",
-        "highKnees",
-        "mountainClimbers"
       ]
     },
     {
