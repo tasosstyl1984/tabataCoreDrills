@@ -1,6 +1,6 @@
 {
-  "version": 92,
-  "updatedAtMs": 1791228656419,
+  "version": 93,
+  "updatedAtMs": 1791228662515,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -166,23 +166,6 @@
         "kettlebellTurkishGetUp",
         "pushups",
         "abs"
-      ]
-    },
-    {
-      "id": "remote_functional_mixed_45",
-      "name": "Rope · swings · push · plyo 45",
-      "file": "drills/remote_functional_mixed_45.json",
-      "updatedAtMs": 1790926704096,
-      "category": "conditioning",
-      "description": "Conditioning · 4×6 · 45s work / 50s rest · Jump rope, KB swings, Pushups, Mt. climbers, Box jumps, Plank",
-      "coverImage": "exercise_guides/jumpRope.webp",
-      "activityIds": [
-        "jumpRope",
-        "kettlebellSwings",
-        "pushups",
-        "mountainClimbers",
-        "boxJumps",
-        "plank"
       ]
     },
     {
