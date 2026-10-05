@@ -1,24 +1,8 @@
 {
-  "version": 87,
-  "updatedAtMs": 1791228615147,
+  "version": 88,
+  "updatedAtMs": 1791228625902,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
-    {
-      "id": "remote_dumbbell_shoulders_40",
-      "name": "DB shoulders · back 40",
-      "file": "drills/remote_dumbbell_shoulders_40.json",
-      "updatedAtMs": 1790926704096,
-      "category": "dumbbell",
-      "description": "Dumbbell · 4×6 · 40s work / 50s rest · DB shoulder press, Lateral raises, Front raises, DB row, Reverse fly",
-      "coverImage": "exercise_guides/dumbbellShoulderPress.webp",
-      "activityIds": [
-        "dumbbellShoulderPress",
-        "lateralRaises",
-        "frontRaises",
-        "dumbbellRow",
-        "reverseFly"
-      ]
-    },
     {
       "id": "remote_engine_conditioning_45",
       "name": "Engine conditioning 45",
