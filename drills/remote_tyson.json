@@ -1,0 +1,183 @@
+{
+  "id": "remote_tyson",
+  "name": "Tyson",
+  "createdAtMs": 1791230314237,
+  "sets": 5,
+  "repsPerSet": 8,
+  "workSeconds": 70,
+  "restBetweenRepsSeconds": 60,
+  "restBetweenSetsSeconds": 60,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "jumpRope"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "shadowBoxing"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "shadowBoxing"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "shadowBoxing"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "shadowBoxing"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "shadowBoxing"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "shadowBoxing"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "shadowBoxing"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "shadowBoxing"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellSwings"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellHalo"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellCleanPress"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellSnatch"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "pushups"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "abs"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "hollowHold"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "russianTwists"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "pushups"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "abs"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "hollowHold"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "russianTwists"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      }
+    ]
+  }
+}
