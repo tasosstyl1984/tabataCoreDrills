@@ -1,20 +1,8 @@
 {
-  "version": 90,
-  "updatedAtMs": 1791228640752,
+  "version": 91,
+  "updatedAtMs": 1791228647305,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
-    {
-      "id": "remote_jump_rope_drills_50",
-      "name": "Jump rope drills 45",
-      "file": "drills/remote_jump_rope_drills_50.json",
-      "updatedAtMs": 1790926704096,
-      "category": "conditioning",
-      "description": "Conditioning · 4×8 · 45s work / 45s rest · Jump rope",
-      "coverImage": "exercise_guides/jumpRope.webp",
-      "activityIds": [
-        "jumpRope"
-      ]
-    },
     {
       "id": "remote_kb_boxing_complex",
       "name": "KB - Boxing Complex 70",
