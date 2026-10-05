@@ -8,7 +8,7 @@
   <link rel="icon" href="img/logo-mark.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400..700,0..1,0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="css/site.css?v=25" />
+  <link rel="stylesheet" href="css/site.css?v=26" />
 </head>
 <body>
   <dialog id="busy-dialog" class="busy-dialog" aria-live="assertive" aria-busy="false">
@@ -90,14 +90,20 @@
     </div>
 
     <section class="toolbar" aria-label="Filters">
-      <label class="search">
-        <span class="sr-only">Search plans</span>
-        <input id="search" type="search" placeholder="Search by name or description" autocomplete="off" />
-      </label>
+      <div class="toolbar-row">
+        <label class="search">
+          <span class="sr-only">Search plans</span>
+          <input id="search" type="search" placeholder="Search by name or description" autocomplete="off" />
+        </label>
+        <button type="button" id="refresh-catalog" class="btn-refresh" title="Reload catalog from GitHub">
+          Refresh
+        </button>
+      </div>
       <div id="categories" class="chips" role="group" aria-label="Categories"></div>
     </section>
 
     <p id="status" class="status" role="status"></p>
+    <p id="catalog-meta" class="catalog-meta" aria-live="polite"></p>
     <div id="grid" class="grid"></div>
   </main>
 
@@ -144,23 +150,26 @@
         <button type="button" id="login-close" class="btn-ghost">Close</button>
       </header>
       <form id="login-form" class="form-body">
-        <p class="form-hint">Password unlocks the editor. A GitHub PAT with Contents write access is required to save changes to the repo.</p>
+        <p class="form-hint">
+          Sign in with a GitHub personal access token that can write Contents on
+          <strong>tasosstyl1984/tabataCoreDrills</strong>. The token is kept in
+          this browser tab only (sessionStorage) and never committed to the repo.
+        </p>
         <div class="form-row">
-          <label for="login-user">Username</label>
-          <input id="login-user" name="username" autocomplete="username" required />
-        </div>
-        <div class="form-row">
-          <label for="login-pass">Password</label>
-          <input id="login-pass" name="password" type="password" autocomplete="current-password" required />
-        </div>
-        <div class="form-row">
-          <label for="login-pat">GitHub PAT (Contents:write)</label>
-          <input id="login-pat" name="pat" type="password" autocomplete="off" required placeholder="ghp_… or github_pat_…" />
+          <label for="login-pat">GitHub PAT</label>
+          <input
+            id="login-pat"
+            name="pat"
+            type="password"
+            autocomplete="off"
+            required
+            placeholder="ghp_… or github_pat_…"
+          />
         </div>
         <p id="login-error" class="form-error" hidden></p>
       </form>
       <div class="form-actions">
-        <button type="submit" form="login-form">Sign in</button>
+        <button type="submit" id="login-submit" form="login-form">Sign in</button>
         <button type="button" id="login-cancel" class="secondary">Cancel</button>
       </div>
     </div>
@@ -280,7 +289,7 @@
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="js/catalog.js?v=30"></script>
-  <script src="js/admin.js?v=30"></script>
+  <script src="js/catalog.js?v=31"></script>
+  <script src="js/admin.js?v=31"></script>
 </body>
 </html>

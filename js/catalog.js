@@ -1,10 +1,14 @@
 (() => {
   const THEME_KEY = "tabataDrillsTheme";
+  const RAW_BASE =
+    "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/";
   const statusEl = document.getElementById("status");
   const gridEl = document.getElementById("grid");
   const searchEl = document.getElementById("search");
   const categoriesEl = document.getElementById("categories");
   const themeToggleBtn = document.getElementById("theme-toggle");
+  const catalogMetaEl = document.getElementById("catalog-meta");
+  const refreshCatalogBtn = document.getElementById("refresh-catalog");
   const dialog = document.getElementById("preview-dialog");
   const previewBody = document.getElementById("preview-body");
   const previewTitle = document.getElementById("preview-title");
@@ -22,6 +26,7 @@
   const imageIds = new Set();
   let guidesCopy = {};
   let activityCatalog = [];
+  let guidesAssetVersion = "";
 
   function themePreference() {
     try {
@@ -115,21 +120,14 @@
     });
   }
 
-  function drillFileUrl(entry) {
-    const file = entry.file || `drills/${entry.id}.json`;
-    const remoteBase =
-      catalog?.baseUrl ||
-      "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/";
-    try {
-      return new URL(file, remoteBase).toString();
-    } catch (_) {
-      return new URL(file, window.location.href).toString();
-    }
+  function remoteBaseUrl() {
+    const base = (catalog?.baseUrl || RAW_BASE).trim();
+    return base.endsWith("/") ? base : `${base}/`;
   }
 
-  function pagesDrillFileUrl(entry) {
+  function drillFileUrl(entry) {
     const file = entry.file || `drills/${entry.id}.json`;
-    return new URL(file, window.location.href).toString();
+    return new URL(file, remoteBaseUrl()).toString();
   }
 
   /** Fresh blob URLs after admin cover upload — bypasses CDN until reload. */
@@ -169,14 +167,10 @@
     if (!entry?.coverImage) return "";
     const local = entry.id ? localCoverUrls.get(entry.id) : "";
     if (local) return local;
-    const remoteBase =
-      catalog?.baseUrl ||
-      "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/";
     try {
-      const url = String(entry.coverImage).startsWith("plan_covers/")
-        ? new URL(entry.coverImage, remoteBase)
-        : new URL(entry.coverImage, window.location.href);
-      // Same path is reused when replacing a cover; bust browser/CDN cache.
+      // Mutable covers always from raw (same as Android). Static exercise_guides
+      // paths also resolve under catalog.baseUrl so Pages CDN cannot serve stale art.
+      const url = new URL(String(entry.coverImage), remoteBaseUrl());
       const bust = entry.updatedAtMs || catalog?.updatedAtMs || catalog?.version;
       if (bust) url.searchParams.set("v", String(bust));
       return url.toString();
@@ -187,7 +181,12 @@
 
   function activityImageUrl(activityId) {
     if (!activityId || !imageIds.has(activityId)) return "";
-    return new URL(`exercise_guides/${activityId}.webp`, window.location.href).toString();
+    const url = new URL(
+      `exercise_guides/${activityId}.webp`,
+      window.location.href,
+    );
+    if (guidesAssetVersion) url.searchParams.set("v", guidesAssetVersion);
+    return url.toString();
   }
 
   function activityLabel(id) {
@@ -202,27 +201,18 @@
       .trim();
   }
 
-  async function fetchTemplate(entry) {
-    if (templateCache.has(entry.id)) return templateCache.get(entry.id);
-    const urls = [drillFileUrl(entry)];
-    const pagesUrl = pagesDrillFileUrl(entry);
-    if (pagesUrl !== urls[0]) urls.push(pagesUrl);
-    let lastErr = null;
-    for (const url of urls) {
-      try {
-        const res = await fetch(url, { cache: "no-store" });
-        if (!res.ok) {
-          lastErr = new Error(`Could not fetch ${entry.file} (${res.status})`);
-          continue;
-        }
-        const template = await res.json();
-        templateCache.set(entry.id, template);
-        return template;
-      } catch (err) {
-        lastErr = err;
-      }
+  async function fetchTemplate(entry, { bypassCache = false } = {}) {
+    if (!bypassCache && templateCache.has(entry.id)) {
+      return templateCache.get(entry.id);
     }
-    throw lastErr || new Error(`Could not fetch ${entry.file}`);
+    const url = drillFileUrl(entry);
+    const res = await fetch(url, { cache: "no-store" });
+    if (!res.ok) {
+      throw new Error(`Could not fetch ${entry.file} (${res.status})`);
+    }
+    const template = await res.json();
+    templateCache.set(entry.id, template);
+    return template;
   }
 
   async function downloadDrill(entry) {
@@ -560,11 +550,21 @@
     return escapeHtml(s).replace(/'/g, "&#39;");
   }
 
+  function guidesAssetQuery() {
+    return guidesAssetVersion ? `?v=${encodeURIComponent(guidesAssetVersion)}` : "";
+  }
+
   async function loadImageIndex() {
     try {
-      const res = await fetch("exercise_guides_manifest.json", { cache: "no-store" });
+      // Bust once so we learn the current version, then version-pin guide assets.
+      const res = await fetch(
+        `exercise_guides_manifest.json?_=${Date.now()}`,
+        { cache: "no-store" },
+      );
       if (!res.ok) return;
       const manifest = await res.json();
+      guidesAssetVersion = String(manifest.version || "");
+      imageIds.clear();
       for (const img of manifest.images || []) {
         if (img && img.id) imageIds.add(img.id);
       }
@@ -575,7 +575,9 @@
 
   async function loadGuidesCopy() {
     try {
-      const res = await fetch("exercise_guides_copy.json", { cache: "no-store" });
+      const res = await fetch(`exercise_guides_copy.json${guidesAssetQuery()}`, {
+        cache: guidesAssetVersion ? "default" : "no-store",
+      });
       if (!res.ok) return;
       const data = await res.json();
       guidesCopy = data.guides || {};
@@ -586,7 +588,9 @@
 
   async function loadActivityCatalog() {
     try {
-      const res = await fetch("exercise_catalog.json", { cache: "no-store" });
+      const res = await fetch(`exercise_catalog.json${guidesAssetQuery()}`, {
+        cache: guidesAssetVersion ? "default" : "no-store",
+      });
       if (!res.ok) return;
       const data = await res.json();
       activityCatalog = data.activities || [];
@@ -595,41 +599,46 @@
     }
   }
 
-  async function reloadCatalog({ fromRemote = false } = {}) {
-    const kept = new Map(templateCache);
-    templateCache.clear();
-    const remoteBase =
-      catalog?.baseUrl ||
-      "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/";
-    const bust = `_=${Date.now()}`;
-    // Prefer raw.githubusercontent.com — Contents API writes are visible there
-    // immediately. GitHub Pages often lags 1–2 minutes, so loading Pages first
-    // made refreshed covers look "stuck" after save.
-    const candidates = [
-      new URL(`catalog.json?${bust}`, remoteBase).toString(),
-      new URL(`catalog.json?${bust}`, window.location.href).toString(),
-    ];
-
-    let lastErr = null;
-    for (const url of candidates) {
+  function updateCatalogMeta() {
+    if (!catalogMetaEl) return;
+    if (!catalog) {
+      catalogMetaEl.textContent = "";
+      return;
+    }
+    const version = catalog.version != null ? String(catalog.version) : "—";
+    let updated = "";
+    const ms = Number(catalog.updatedAtMs);
+    if (Number.isFinite(ms) && ms > 0) {
       try {
-        const res = await fetch(url, { cache: "no-store" });
-        if (!res.ok) {
-          lastErr = new Error(`catalog.json failed (${res.status})`);
-          continue;
-        }
-        catalog = await res.json();
-        for (const [id, tpl] of kept) {
-          if (!templateCache.has(id)) templateCache.set(id, tpl);
-        }
-        renderChips(categoriesFrom(catalog.drills || []));
-        renderGrid();
-        return catalog;
-      } catch (err) {
-        lastErr = err;
+        updated = new Date(ms).toLocaleString();
+      } catch (_) {
+        updated = "";
       }
     }
-    throw lastErr || new Error("catalog.json failed");
+    catalogMetaEl.textContent = updated
+      ? `Catalog v${version} · updated ${updated}`
+      : `Catalog v${version}`;
+  }
+
+  async function reloadCatalog({ fromRemote = false } = {}) {
+    // fromRemote: drop in-memory templates so preview/edit re-fetch from raw.
+    const kept = fromRemote ? new Map() : new Map(templateCache);
+    templateCache.clear();
+    const bust = `_=${Date.now()}`;
+    // Mutable catalog lives on raw only — never fall back to Pages CDN.
+    const url = new URL(`catalog.json?${bust}`, remoteBaseUrl()).toString();
+    const res = await fetch(url, { cache: "no-store" });
+    if (!res.ok) {
+      throw new Error(`catalog.json failed (${res.status})`);
+    }
+    catalog = await res.json();
+    for (const [id, tpl] of kept) {
+      if (!templateCache.has(id)) templateCache.set(id, tpl);
+    }
+    renderChips(categoriesFrom(catalog.drills || []));
+    renderGrid();
+    updateCatalogMeta();
+    return catalog;
   }
 
   /** Apply an already-fetched catalog object (e.g. after admin Save/Delete). */
@@ -638,12 +647,29 @@
     catalog = next;
     renderChips(categoriesFrom(catalog.drills || []));
     renderGrid();
+    updateCatalogMeta();
     return catalog;
+  }
+
+  async function refreshCatalogClick() {
+    if (refreshCatalogBtn) refreshCatalogBtn.disabled = true;
+    setStatus("Refreshing catalog…");
+    try {
+      await reloadCatalog({ fromRemote: true });
+      setStatus("Catalog refreshed from GitHub");
+    } catch (err) {
+      setStatus(err.message || "Refresh failed");
+    } finally {
+      if (refreshCatalogBtn) refreshCatalogBtn.disabled = false;
+    }
   }
 
   async function init() {
     applyTheme();
     if (themeToggleBtn) themeToggleBtn.addEventListener("click", cycleTheme);
+    if (refreshCatalogBtn) {
+      refreshCatalogBtn.addEventListener("click", () => refreshCatalogClick());
+    }
     if (window.matchMedia) {
       window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", () => {
         if (themePreference() === "system") applyTheme("system");
@@ -651,7 +677,8 @@
     }
     setStatus("Loading catalog…");
     try {
-      await Promise.all([loadImageIndex(), loadGuidesCopy(), loadActivityCatalog()]);
+      await loadImageIndex();
+      await Promise.all([loadGuidesCopy(), loadActivityCatalog()]);
       await reloadCatalog();
     } catch (err) {
       setStatus(err.message || "Failed to load catalog");

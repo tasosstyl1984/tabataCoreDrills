@@ -1,9 +1,8 @@
 (() => {
-  const ADMIN_USER = "admin";
-  const ADMIN_PASS = "tabataCore1";
   const GH_OWNER = "tasosstyl1984";
   const GH_REPO = "tabataCoreDrills";
   const GH_BRANCH = "main";
+  const RAW_BASE = `https://raw.githubusercontent.com/${GH_OWNER}/${GH_REPO}/main/`;
   const MAX_SETS = 50;
   const MAX_ROUNDS = 100;
   const SESSION_KEY = "tabataDrillsAdmin";
@@ -905,6 +904,98 @@
     return err instanceof Error ? err : new Error(msg || action);
   }
 
+  async function ghApi(method, apiPath, body) {
+    const headers = await ghHeaders({ jsonBody: body != null });
+    const url = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}${apiPath}`;
+    let res;
+    try {
+      res = await fetch(url, {
+        method,
+        headers,
+        body: body != null ? JSON.stringify(body) : undefined,
+        cache: "no-store",
+      });
+    } catch (err) {
+      throw networkError(err, `GitHub ${method} ${apiPath}`);
+    }
+    if (!res.ok) {
+      const t = await res.text();
+      const err = new Error(
+        `GitHub ${method} ${apiPath} failed (${res.status}): ${t.slice(0, 240)}`,
+      );
+      err.status = res.status;
+      throw err;
+    }
+    if (res.status === 204) return null;
+    return res.json();
+  }
+
+  /**
+   * Single commit for multiple file creates/updates/deletes via Git Trees API.
+   * changes: [{ path, content, encoding: 'utf-8'|'base64' }] or [{ path, delete: true }]
+   */
+  async function commitFilesAtomic(message, changes) {
+    const maxAttempts = 5;
+    let lastErr = null;
+    for (let attempt = 0; attempt < maxAttempts; attempt++) {
+      if (attempt > 0) {
+        await new Promise((r) => setTimeout(r, 250 * attempt));
+      }
+      try {
+        const ref = await ghApi("GET", `/git/ref/heads/${GH_BRANCH}`);
+        const latestCommitSha = ref.object.sha;
+        const latestCommit = await ghApi("GET", `/git/commits/${latestCommitSha}`);
+        const baseTreeSha = latestCommit.tree.sha;
+
+        const tree = [];
+        for (const change of changes) {
+          if (change.delete) {
+            tree.push({
+              path: change.path,
+              mode: "100644",
+              type: "blob",
+              sha: null,
+            });
+            continue;
+          }
+          const encoding = change.encoding || "utf-8";
+          const blob = await ghApi("POST", "/git/blobs", {
+            content: change.content,
+            encoding,
+          });
+          tree.push({
+            path: change.path,
+            mode: "100644",
+            type: "blob",
+            sha: blob.sha,
+          });
+        }
+
+        const newTree = await ghApi("POST", "/git/trees", {
+          base_tree: baseTreeSha,
+          tree,
+        });
+        const newCommit = await ghApi("POST", "/git/commits", {
+          message,
+          tree: newTree.sha,
+          parents: [latestCommitSha],
+        });
+        await ghApi("PATCH", `/git/refs/heads/${GH_BRANCH}`, {
+          sha: newCommit.sha,
+        });
+        return newCommit;
+      } catch (err) {
+        lastErr = err;
+        // Ref moved / conflict — retry from tip.
+        if (err.status === 409 || err.status === 422 || /\(409\)|\(422\)/.test(String(err.message))) {
+          continue;
+        }
+        throw err;
+      }
+    }
+    throw lastErr || new Error("Atomic commit failed after retries");
+  }
+
   async function ghGetContent(path) {
     const headers = await ghHeaders();
     const url = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/${encodeURI(
@@ -1039,24 +1130,25 @@
       if (attempt > 0) {
         await new Promise((r) => setTimeout(r, 250 * attempt));
       }
-      const { file, json } = await loadRemoteCatalogJson();
-      const next = mutator(clonePlan(json));
-      if (!next.baseUrl) {
-        next.baseUrl = `https://raw.githubusercontent.com/${GH_OWNER}/${GH_REPO}/main/`;
-      }
-      next.version = Number(next.version || 0) + 1;
-      next.updatedAtMs = Date.now();
       try {
-        await ghPutContent(
-          "catalog.json",
-          `${JSON.stringify(next, null, 2)}\n`,
-          message,
-          file.sha,
-        );
+        const { json } = await loadRemoteCatalogJson();
+        const next = mutator(clonePlan(json));
+        if (!next.baseUrl) {
+          next.baseUrl = RAW_BASE;
+        }
+        next.version = Number(next.version || 0) + 1;
+        next.updatedAtMs = Date.now();
+        await commitFilesAtomic(message, [
+          {
+            path: "catalog.json",
+            content: `${JSON.stringify(next, null, 2)}\n`,
+            encoding: "utf-8",
+          },
+        ]);
         return next;
       } catch (err) {
         lastErr = err;
-        if (err.status === 409 || /\(409\)/.test(String(err.message))) {
+        if (err.status === 409 || err.status === 422 || /\(409\)|\(422\)/.test(String(err.message))) {
           continue;
         }
         throw err;
@@ -1106,13 +1198,7 @@
       return;
     }
     try {
-      const url = String(path).startsWith("plan_covers/")
-        ? new URL(
-            path,
-            site()?.getCatalog?.()?.baseUrl ||
-              "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-          )
-        : new URL(path, window.location.href);
+      const url = new URL(String(path), RAW_BASE);
       url.searchParams.set(
         "v",
         String(editingEntry?.updatedAtMs || Date.now()),
@@ -1196,28 +1282,12 @@
     const coverPath = String(path || "");
     if (!coverPath.startsWith("plan_covers/")) return;
     try {
-      const cover = await ghGetContent(coverPath);
-      if (cover?.sha) {
-        await ghDeleteContent(coverPath, cover.sha, `Delete old cover ${coverPath}`);
-      }
+      await commitFilesAtomic(`Delete old cover ${coverPath}`, [
+        { path: coverPath, delete: true },
+      ]);
     } catch (_) {
       /* best-effort */
     }
-  }
-
-  async function uploadPendingCover(id, previousPath = "") {
-    if (!pendingCoverBlob) return editCover?.value?.trim() || "";
-    // New filename every upload — raw.githubusercontent.com / Pages ignore ?v= on
-    // the same path and keep serving the previous cover bytes for a long time.
-    const path = `plan_covers/${id}_${Date.now()}.webp`;
-    const content = await encodeBlob(pendingCoverBlob);
-    await ghPutContent(path, content, `Cover: ${id}`, undefined, {
-      rawBase64: true,
-    });
-    if (previousPath && previousPath !== path) {
-      await deleteCoverPathBestEffort(previousPath);
-    }
-    return path;
   }
 
   async function saveDrill() {
@@ -1231,31 +1301,34 @@
     showBusy(editingEntry ? "Saving plan…" : "Publishing plan…");
     try {
       const id = editingEntry?.id || uniqueId(slugify(editName.value));
+      const previousCoverPath = (
+        editCover?.value ||
+        editingEntry?.coverImage ||
+        ""
+      ).trim();
+      let coverBlobForLocal = null;
+      let newCoverPath = null;
+      let newCoverBase64 = null;
+
       if (pendingCoverBlob) {
-        const previousPath = (
-          editCover?.value ||
-          editingEntry?.coverImage ||
-          ""
-        ).trim();
-        // Capture blob before upload helpers clear pending state.
-        const coverBlob = pendingCoverBlob;
-        const coverPath = await uploadPendingCover(id, previousPath);
-        if (editCover) editCover.value = coverPath;
-        // Session blob so grid/preview update before CDN/Pages catch up.
-        const localUrl = URL.createObjectURL(coverBlob);
-        site()?.setLocalCover?.(id, localUrl);
+        coverBlobForLocal = pendingCoverBlob;
+        newCoverPath = `plan_covers/${id}_${Date.now()}.webp`;
+        newCoverBase64 = await encodeBlob(pendingCoverBlob);
+        if (editCover) editCover.value = newCoverPath;
         clearPendingCover();
-        setCoverPreview(localUrl);
-      } else if (!(editCover?.value || "").trim().startsWith("plan_covers/")) {
-        site()?.clearLocalCover?.(id);
       }
+
       const { template, catalogEntry } = buildTemplateFromForm(id);
 
-      // Preserve createdAtMs when editing
+      // Preserve createdAtMs when editing — read via Contents API (no CDN).
       if (editingEntry) {
         try {
-          const existing = await site().fetchTemplate(editingEntry);
-          if (existing?.createdAtMs) template.createdAtMs = existing.createdAtMs;
+          const existingFile = await ghGetContent(`drills/${id}.json`);
+          if (existingFile) {
+            const text = await readGhFileText(existingFile, `drills/${id}.json`);
+            const existing = JSON.parse(text);
+            if (existing?.createdAtMs) template.createdAtMs = existing.createdAtMs;
+          }
         } catch (_) {
           template.createdAtMs = Date.now();
         }
@@ -1264,40 +1337,85 @@
       }
 
       const drillPath = `drills/${id}.json`;
-      const existingDrill = await ghGetContent(drillPath);
-      try {
-        await ghPutContent(
-          drillPath,
-          `${JSON.stringify(template, null, 2)}\n`,
-          editingEntry ? `Update drill ${id}` : `Add drill ${id}`,
-          existingDrill?.sha,
-        );
-      } catch (err) {
-        if (err.status === 409 || /\(409\)/.test(String(err.message))) {
-          const latest = await ghGetContent(drillPath);
-          await ghPutContent(
-            drillPath,
-            `${JSON.stringify(template, null, 2)}\n`,
-            editingEntry ? `Update drill ${id}` : `Add drill ${id}`,
-            latest?.sha,
+      const maxAttempts = 5;
+      let nextCatalog = null;
+      let lastErr = null;
+      for (let attempt = 0; attempt < maxAttempts; attempt++) {
+        if (attempt > 0) {
+          await new Promise((r) => setTimeout(r, 250 * attempt));
+        }
+        try {
+          const { json } = await loadRemoteCatalogJson();
+          nextCatalog = clonePlan(json);
+          if (!nextCatalog.baseUrl) nextCatalog.baseUrl = RAW_BASE;
+          const drills = Array.isArray(nextCatalog.drills)
+            ? [...nextCatalog.drills]
+            : [];
+          const idx = drills.findIndex((d) => d.id === id);
+          if (idx >= 0) drills[idx] = catalogEntry;
+          else drills.push(catalogEntry);
+          drills.sort((a, b) => String(a.name).localeCompare(String(b.name)));
+          nextCatalog.drills = drills;
+          nextCatalog.version = Number(nextCatalog.version || 0) + 1;
+          nextCatalog.updatedAtMs = Date.now();
+
+          const changes = [
+            {
+              path: drillPath,
+              content: `${JSON.stringify(template, null, 2)}\n`,
+              encoding: "utf-8",
+            },
+            {
+              path: "catalog.json",
+              content: `${JSON.stringify(nextCatalog, null, 2)}\n`,
+              encoding: "utf-8",
+            },
+          ];
+          if (newCoverPath && newCoverBase64) {
+            changes.unshift({
+              path: newCoverPath,
+              content: newCoverBase64,
+              encoding: "base64",
+            });
+            if (
+              previousCoverPath.startsWith("plan_covers/") &&
+              previousCoverPath !== newCoverPath
+            ) {
+              changes.push({ path: previousCoverPath, delete: true });
+            }
+          }
+
+          await commitFilesAtomic(
+            editingEntry ? `Update plan ${id}` : `Add plan ${id}`,
+            changes,
           );
-        } else {
+          lastErr = null;
+          break;
+        } catch (err) {
+          lastErr = err;
+          if (
+            err.status === 409 ||
+            err.status === 422 ||
+            /\(409\)|\(422\)/.test(String(err.message))
+          ) {
+            continue;
+          }
           throw err;
         }
       }
+      if (lastErr) throw lastErr;
+      if (!nextCatalog) throw new Error("Save produced no catalog");
 
-      const nextCatalog = await putCatalogJson((catalogJson) => {
-        const drills = Array.isArray(catalogJson.drills) ? [...catalogJson.drills] : [];
-        const idx = drills.findIndex((d) => d.id === id);
-        if (idx >= 0) drills[idx] = catalogEntry;
-        else drills.push(catalogEntry);
-        drills.sort((a, b) => String(a.name).localeCompare(String(b.name)));
-        catalogJson.drills = drills;
-        return catalogJson;
-      }, `Catalog: ${editingEntry ? "update" : "add"} ${id}`);
+      if (coverBlobForLocal && newCoverPath) {
+        const localUrl = URL.createObjectURL(coverBlobForLocal);
+        site()?.setLocalCover?.(id, localUrl);
+        setCoverPreview(localUrl);
+      } else if (!(editCover?.value || "").trim().startsWith("plan_covers/")) {
+        site()?.clearLocalCover?.(id);
+      }
 
       hideModal(editorDialog);
-      toast(`Saved ${id}`);
+      toast(`Saved ${id} — live on site via GitHub raw`);
       try {
         site()?.cacheTemplate?.(id, template);
         site()?.applyCatalog?.(nextCatalog);
@@ -1333,45 +1451,77 @@
     showBusy(`Deleting ${entry.name || entry.id}…`);
     toast(`Deleting ${entry.id}…`);
     try {
-      // Catalog first so a later file-delete failure cannot leave a ghost card.
-      const nextCatalog = await putCatalogJson((catalogJson) => {
-        catalogJson.drills = (catalogJson.drills || []).filter((d) => d.id !== entry.id);
-        return catalogJson;
-      }, `Catalog: remove ${entry.id}`);
+      const drillPath = entry.file || `drills/${entry.id}.json`;
+      const coverPath = String(entry.coverImage || "");
+      const maxAttempts = 5;
+      let nextCatalog = null;
+      let lastErr = null;
+      for (let attempt = 0; attempt < maxAttempts; attempt++) {
+        if (attempt > 0) {
+          await new Promise((r) => setTimeout(r, 250 * attempt));
+        }
+        try {
+          const { json } = await loadRemoteCatalogJson();
+          nextCatalog = clonePlan(json);
+          if (!nextCatalog.baseUrl) nextCatalog.baseUrl = RAW_BASE;
+          nextCatalog.drills = (nextCatalog.drills || []).filter(
+            (d) => d.id !== entry.id,
+          );
+          nextCatalog.version = Number(nextCatalog.version || 0) + 1;
+          nextCatalog.updatedAtMs = Date.now();
 
-      // Update UI from the PUT response — raw.githubusercontent.com can stay stale.
+          const changes = [
+            {
+              path: "catalog.json",
+              content: `${JSON.stringify(nextCatalog, null, 2)}\n`,
+              encoding: "utf-8",
+            },
+            { path: drillPath, delete: true },
+          ];
+          if (coverPath.startsWith("plan_covers/")) {
+            changes.push({ path: coverPath, delete: true });
+          }
+
+          await commitFilesAtomic(`Delete plan ${entry.id}`, changes);
+          lastErr = null;
+          break;
+        } catch (err) {
+          lastErr = err;
+          // Deleting a missing blob can 422 — retry without deletes that already gone.
+          if (
+            err.status === 409 ||
+            err.status === 422 ||
+            /\(409\)|\(422\)/.test(String(err.message))
+          ) {
+            continue;
+          }
+          throw err;
+        }
+      }
+      if (lastErr) {
+        // Fallback: catalog-first then best-effort file deletes (legacy path).
+        nextCatalog = await putCatalogJson((catalogJson) => {
+          catalogJson.drills = (catalogJson.drills || []).filter(
+            (d) => d.id !== entry.id,
+          );
+          return catalogJson;
+        }, `Catalog: remove ${entry.id}`);
+        try {
+          const existing = await ghGetContent(drillPath);
+          if (existing?.sha) {
+            await ghDeleteContent(drillPath, existing.sha, `Delete drill ${entry.id}`);
+          }
+        } catch (_) {
+          /* ignore */
+        }
+        if (coverPath.startsWith("plan_covers/")) {
+          await deleteCoverPathBestEffort(coverPath);
+        }
+      }
+
       site()?.invalidateTemplate?.(entry.id);
       site()?.clearLocalCover?.(entry.id);
       site()?.applyCatalog?.(nextCatalog);
-
-      const drillPath = entry.file || `drills/${entry.id}.json`;
-      const existing = await ghGetContent(drillPath);
-      if (existing?.sha) {
-        try {
-          await ghDeleteContent(drillPath, existing.sha, `Delete drill ${entry.id}`);
-        } catch (err) {
-          if (err.status === 409 || /\(409\)/.test(String(err.message))) {
-            const latest = await ghGetContent(drillPath);
-            if (latest?.sha) {
-              await ghDeleteContent(drillPath, latest.sha, `Delete drill ${entry.id}`);
-            }
-          } else {
-            throw err;
-          }
-        }
-      }
-
-      const coverPath = String(entry.coverImage || "");
-      if (coverPath.startsWith("plan_covers/")) {
-        try {
-          const cover = await ghGetContent(coverPath);
-          if (cover?.sha) {
-            await ghDeleteContent(coverPath, cover.sha, `Delete cover ${entry.id}`);
-          }
-        } catch (_) {
-          /* cover cleanup is best-effort */
-        }
-      }
 
       toast(`Deleted ${entry.id}`);
     } catch (err) {
@@ -1393,9 +1543,22 @@
       return;
     }
     try {
-      // Avoid reusing a previous plan's cached JSON (stale exercises / covers).
       site()?.invalidateTemplate?.(entry.id);
-      const template = await site().fetchTemplate(entry);
+      const drillPath = entry.file || `drills/${entry.id}.json`;
+      let template = null;
+      try {
+        const file = await ghGetContent(drillPath);
+        if (file) {
+          const text = await readGhFileText(file, drillPath);
+          template = JSON.parse(text);
+          site()?.cacheTemplate?.(entry.id, template);
+        }
+      } catch (_) {
+        /* fall through to raw fetch */
+      }
+      if (!template) {
+        template = await site().fetchTemplate(entry, { bypassCache: true });
+      }
       openEditor({ entry, template });
     } catch (err) {
       toast(err.message || "Could not load plan");
@@ -1419,33 +1582,53 @@
     });
   }
   if (loginForm) {
-    loginForm.addEventListener("submit", (e) => {
+    loginForm.addEventListener("submit", async (e) => {
       e.preventDefault();
-      const user = document.getElementById("login-user")?.value.trim();
-      const pass = document.getElementById("login-pass")?.value;
       const pat = document.getElementById("login-pat")?.value.trim();
       if (loginError) {
         loginError.hidden = true;
         loginError.textContent = "";
       }
-      if (user !== ADMIN_USER || pass !== ADMIN_PASS) {
-        if (loginError) {
-          loginError.hidden = false;
-          loginError.textContent = "Invalid username or password";
-        }
-        return;
-      }
       if (!pat) {
         if (loginError) {
           loginError.hidden = false;
-          loginError.textContent = "GitHub PAT is required to save plans";
+          loginError.textContent = "GitHub PAT is required";
         }
         return;
       }
-      saveSession({ ok: true, pat, at: Date.now() });
-      updateAuthUi();
-      hideModal(loginDialog);
-      toast("Admin signed in");
+      const submitBtn = document.getElementById("login-submit");
+      if (submitBtn) submitBtn.disabled = true;
+      try {
+        // Validate PAT can read this repo before storing session.
+        const headers = {
+          Accept: "application/vnd.github+json",
+          Authorization: `Bearer ${pat}`,
+          "X-GitHub-Api-Version": "2022-11-28",
+        };
+        const res = await fetch(
+          `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}`,
+          { headers, cache: "no-store" },
+        );
+        if (!res.ok) {
+          throw new Error(
+            res.status === 401 || res.status === 403
+              ? "PAT rejected — check token and Contents access for this repo"
+              : `GitHub check failed (${res.status})`,
+          );
+        }
+        saveSession({ ok: true, pat, at: Date.now() });
+        updateAuthUi();
+        hideModal(loginDialog);
+        toast("Admin signed in");
+      } catch (err) {
+        if (loginError) {
+          loginError.hidden = false;
+          loginError.textContent =
+            err.message || "Could not validate GitHub PAT";
+        }
+      } finally {
+        if (submitBtn) submitBtn.disabled = false;
+      }
     });
   }
 
