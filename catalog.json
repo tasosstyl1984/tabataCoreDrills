@@ -1,24 +1,8 @@
 {
-  "version": 100,
-  "updatedAtMs": 1791228718749,
+  "version": 101,
+  "updatedAtMs": 1791228734650,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
-    {
-      "id": "remote_kettlebell_drills_40",
-      "name": "Kettlebell drills 40",
-      "file": "drills/remote_kettlebell_drills_40.json",
-      "updatedAtMs": 1790926704096,
-      "category": "kettlebell",
-      "description": "Kettlebell · 4×6 · 40s work / 55s rest · KB swings, Goblet squat, Clean & press, KB row, Tur. Get-Up",
-      "coverImage": "exercise_guides/kettlebellSwings.webp",
-      "activityIds": [
-        "kettlebellSwings",
-        "kettlebellGobletSquat",
-        "kettlebellCleanPress",
-        "kettlebellRow",
-        "kettlebellTurkishGetUp"
-      ]
-    },
     {
       "id": "remote_locomotion_40",
       "name": "Locomotion 40",
