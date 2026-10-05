@@ -1,6 +1,6 @@
 {
-  "version": 66,
-  "updatedAtMs": 1791211361302,
+  "version": 67,
+  "updatedAtMs": 1791211407825,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -430,10 +430,10 @@
       "id": "remote_combo_full_stack_50",
       "name": "Wall · rope · kettle · core 45",
       "file": "drills/remote_combo_full_stack_50.json",
-      "updatedAtMs": 1790926704096,
+      "updatedAtMs": 1791211406395,
       "category": "combos",
       "description": "Combos · 4×7 · 45s work / 50s rest · Wall passing, Jump rope, KB swings, Goblet squat, Clean & press, KB row, KB snatch, Tur. Get-Up, Pushups, Abs",
-      "coverImage": "exercise_guides/jumpRope.webp",
+      "coverImage": "plan_covers/remote_combo_full_stack_50_1791211406385.webp",
       "activityIds": [
         "footballWallPassing",
         "jumpRope",

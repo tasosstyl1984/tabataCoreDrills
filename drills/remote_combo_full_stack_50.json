@@ -17,38 +17,38 @@
         "rounds": [
           {
             "workSeconds": 45,
-            "activityId": "footballWallPassing",
-            "restAfterSeconds": 50
+            "restAfterSeconds": 50,
+            "activityId": "footballWallPassing"
           },
           {
             "workSeconds": 45,
-            "activityId": "footballWallPassing",
-            "restAfterSeconds": 50
+            "restAfterSeconds": 50,
+            "activityId": "footballWallPassing"
           },
           {
             "workSeconds": 45,
-            "activityId": "footballWallPassing",
-            "restAfterSeconds": 50
+            "restAfterSeconds": 50,
+            "activityId": "footballWallPassing"
           },
           {
             "workSeconds": 45,
-            "activityId": "footballWallPassing",
-            "restAfterSeconds": 50
+            "restAfterSeconds": 50,
+            "activityId": "footballWallPassing"
           },
           {
             "workSeconds": 45,
-            "activityId": "footballWallPassing",
-            "restAfterSeconds": 50
+            "restAfterSeconds": 50,
+            "activityId": "footballWallPassing"
           },
           {
             "workSeconds": 45,
-            "activityId": "footballWallPassing",
-            "restAfterSeconds": 50
+            "restAfterSeconds": 50,
+            "activityId": "footballWallPassing"
           },
           {
             "workSeconds": 45,
-            "activityId": "footballWallPassing",
-            "restAfterSeconds": 50
+            "restAfterSeconds": 50,
+            "activityId": "footballWallPassing"
           }
         ],
         "restAfterSetSeconds": 100
@@ -57,38 +57,38 @@
         "rounds": [
           {
             "workSeconds": 45,
-            "activityId": "jumpRope",
-            "restAfterSeconds": 50
+            "restAfterSeconds": 50,
+            "activityId": "jumpRope"
           },
           {
             "workSeconds": 45,
-            "activityId": "jumpRope",
-            "restAfterSeconds": 50
+            "restAfterSeconds": 50,
+            "activityId": "jumpRope"
           },
           {
             "workSeconds": 45,
-            "activityId": "jumpRope",
-            "restAfterSeconds": 50
+            "restAfterSeconds": 50,
+            "activityId": "jumpRope"
           },
           {
             "workSeconds": 45,
-            "activityId": "jumpRope",
-            "restAfterSeconds": 50
+            "restAfterSeconds": 50,
+            "activityId": "jumpRope"
           },
           {
             "workSeconds": 45,
-            "activityId": "jumpRope",
-            "restAfterSeconds": 50
+            "restAfterSeconds": 50,
+            "activityId": "jumpRope"
           },
           {
             "workSeconds": 45,
-            "activityId": "jumpRope",
-            "restAfterSeconds": 50
+            "restAfterSeconds": 50,
+            "activityId": "jumpRope"
           },
           {
             "workSeconds": 45,
-            "activityId": "jumpRope",
-            "restAfterSeconds": 50
+            "restAfterSeconds": 50,
+            "activityId": "jumpRope"
           }
         ],
         "restAfterSetSeconds": 100
@@ -97,38 +97,38 @@
         "rounds": [
           {
             "workSeconds": 45,
-            "activityId": "kettlebellSwings",
-            "restAfterSeconds": 50
+            "restAfterSeconds": 50,
+            "activityId": "kettlebellSwings"
           },
           {
             "workSeconds": 45,
-            "activityId": "kettlebellGobletSquat",
-            "restAfterSeconds": 50
+            "restAfterSeconds": 50,
+            "activityId": "kettlebellGobletSquat"
           },
           {
             "workSeconds": 45,
-            "activityId": "kettlebellCleanPress",
-            "restAfterSeconds": 50
+            "restAfterSeconds": 50,
+            "activityId": "kettlebellCleanPress"
           },
           {
             "workSeconds": 45,
-            "activityId": "kettlebellRow",
-            "restAfterSeconds": 50
+            "restAfterSeconds": 50,
+            "activityId": "kettlebellRow"
           },
           {
             "workSeconds": 45,
-            "activityId": "kettlebellSnatch",
-            "restAfterSeconds": 50
+            "restAfterSeconds": 50,
+            "activityId": "kettlebellSnatch"
           },
           {
             "workSeconds": 45,
-            "activityId": "kettlebellTurkishGetUp",
-            "restAfterSeconds": 50
+            "restAfterSeconds": 50,
+            "activityId": "kettlebellTurkishGetUp"
           },
           {
             "workSeconds": 45,
-            "activityId": "kettlebellSwings",
-            "restAfterSeconds": 50
+            "restAfterSeconds": 50,
+            "activityId": "kettlebellSwings"
           }
         ],
         "restAfterSetSeconds": 100
@@ -137,38 +137,38 @@
         "rounds": [
           {
             "workSeconds": 45,
-            "activityId": "pushups",
-            "restAfterSeconds": 50
+            "restAfterSeconds": 50,
+            "activityId": "pushups"
           },
           {
             "workSeconds": 45,
-            "activityId": "abs",
-            "restAfterSeconds": 50
+            "restAfterSeconds": 50,
+            "activityId": "abs"
           },
           {
             "workSeconds": 45,
-            "activityId": "pushups",
-            "restAfterSeconds": 50
+            "restAfterSeconds": 50,
+            "activityId": "pushups"
           },
           {
             "workSeconds": 45,
-            "activityId": "abs",
-            "restAfterSeconds": 50
+            "restAfterSeconds": 50,
+            "activityId": "abs"
           },
           {
             "workSeconds": 45,
-            "activityId": "pushups",
-            "restAfterSeconds": 50
+            "restAfterSeconds": 50,
+            "activityId": "pushups"
           },
           {
             "workSeconds": 45,
-            "activityId": "abs",
-            "restAfterSeconds": 50
+            "restAfterSeconds": 50,
+            "activityId": "abs"
           },
           {
             "workSeconds": 45,
-            "activityId": "pushups",
-            "restAfterSeconds": 50
+            "restAfterSeconds": 50,
+            "activityId": "pushups"
           }
         ],
         "restAfterSetSeconds": 100
