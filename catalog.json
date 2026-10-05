@@ -1,24 +1,8 @@
 {
-  "version": 99,
-  "updatedAtMs": 1791228709972,
+  "version": 100,
+  "updatedAtMs": 1791228718749,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
-    {
-      "id": "remote_kb_complex_40",
-      "name": "KB complex 40",
-      "file": "drills/remote_kb_complex_40.json",
-      "updatedAtMs": 1790926704096,
-      "category": "kettlebell",
-      "description": "Kettlebell · 4×6 · 40s work / 55s rest · KB swings, Goblet squat, Clean & press, KB row, KB snatch",
-      "coverImage": "exercise_guides/kettlebellSwings.webp",
-      "activityIds": [
-        "kettlebellSwings",
-        "kettlebellGobletSquat",
-        "kettlebellCleanPress",
-        "kettlebellRow",
-        "kettlebellSnatch"
-      ]
-    },
     {
       "id": "remote_kettlebell_drills_40",
       "name": "Kettlebell drills 40",
