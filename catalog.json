@@ -1,6 +1,6 @@
 {
-  "version": 86,
-  "updatedAtMs": 1791228606443,
+  "version": 87,
+  "updatedAtMs": 1791228615147,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -263,16 +263,6 @@
         "squats",
         "kettlebellGobletSquat"
       ]
-    },
-    {
-      "id": "remote_tabata_classic",
-      "name": "Tabata Classic 20",
-      "file": "drills/remote_tabata_classic.json",
-      "updatedAtMs": 1790926704096,
-      "category": "classic",
-      "description": "Classic · 1×8 · 20s work / 10s rest",
-      "coverImage": "exercise_guides/burpees.webp",
-      "activityIds": []
     },
     {
       "id": "remote_tasos_workout",
