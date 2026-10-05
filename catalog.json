@@ -1,24 +1,8 @@
 {
-  "version": 84,
-  "updatedAtMs": 1791228594364,
+  "version": 85,
+  "updatedAtMs": 1791228600574,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
-    {
-      "id": "remote_core_rotation_circuit_40",
-      "name": "Core rotation circuit 30",
-      "file": "drills/remote_core_rotation_circuit_40.json",
-      "updatedAtMs": 1790926704096,
-      "category": "core",
-      "description": "Core · 4×8 · 40s work / 50s rest · Plate rotations, Abs, Plank, Knee raises, Pushups",
-      "coverImage": "exercise_guides/plateRotations.webp",
-      "activityIds": [
-        "plateRotations",
-        "abs",
-        "plank",
-        "hangingKneeRaises",
-        "pushups"
-      ]
-    },
     {
       "id": "remote_dumbbell_arms_40",
       "name": "DB arms 40",
