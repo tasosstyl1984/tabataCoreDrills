@@ -1,6 +1,6 @@
 {
-  "version": 94,
-  "updatedAtMs": 1791228669460,
+  "version": 95,
+  "updatedAtMs": 1791228678029,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -130,22 +130,6 @@
         "tuckJumps",
         "highKnees",
         "mountainClimbers"
-      ]
-    },
-    {
-      "id": "remote_push_pull_core_40",
-      "name": "Push · pull · core 40",
-      "file": "drills/remote_push_pull_core_40.json",
-      "updatedAtMs": 1790926704096,
-      "category": "strength",
-      "description": "Strength · 4×6 · 40s work / 50s rest · Pushups, Pull ups, Dips, Plank, Knee raises",
-      "coverImage": "exercise_guides/pushups.webp",
-      "activityIds": [
-        "pushups",
-        "pullUps",
-        "dips",
-        "plank",
-        "hangingKneeRaises"
       ]
     },
     {
