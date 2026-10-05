@@ -1,6 +1,6 @@
 {
-  "version": 97,
-  "updatedAtMs": 1791228691953,
+  "version": 98,
+  "updatedAtMs": 1791228698811,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -85,18 +85,6 @@
         "thrusters",
         "wallBalls",
         "kettlebellGobletSquat"
-      ]
-    },
-    {
-      "id": "remote_plate_rotations_40",
-      "name": "Plate rotations 40",
-      "file": "drills/remote_plate_rotations_40.json",
-      "updatedAtMs": 1790926704096,
-      "category": "core",
-      "description": "Core · 4×8 · 40s work / 50s rest · Plate rotations",
-      "coverImage": "exercise_guides/plateRotations.webp",
-      "activityIds": [
-        "plateRotations"
       ]
     },
     {
