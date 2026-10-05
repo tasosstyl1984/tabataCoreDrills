@@ -1,20 +1,8 @@
 {
-  "version": 80,
-  "updatedAtMs": 1791228226335,
+  "version": 81,
+  "updatedAtMs": 1791228573879,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
-    {
-      "id": "remote_boxing_rounds_30",
-      "name": "Boxing rounds 45",
-      "file": "drills/remote_boxing_rounds_30.json",
-      "updatedAtMs": 1790965851947,
-      "category": "boxing",
-      "description": "Boxing · 3×6 · 45s work / 45s rest · Shadow boxing",
-      "coverImage": "exercise_guides/shadowBoxing.webp",
-      "activityIds": [
-        "shadowBoxing"
-      ]
-    },
     {
       "id": "remote_chest_fly_circuit_40",
       "name": "Chest fly circuit 40",
