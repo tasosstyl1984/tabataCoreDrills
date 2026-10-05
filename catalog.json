@@ -1,24 +1,8 @@
 {
-  "version": 81,
-  "updatedAtMs": 1791228573879,
+  "version": 82,
+  "updatedAtMs": 1791228580847,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
-    {
-      "id": "remote_chest_fly_circuit_40",
-      "name": "Chest fly circuit 40",
-      "file": "drills/remote_chest_fly_circuit_40.json",
-      "updatedAtMs": 1790926704096,
-      "category": "chest",
-      "description": "Chest · 4×6 · 40s work / 50s rest · Chest flies, Incline flies, DB chest press, Pushups, Pullover",
-      "coverImage": "exercise_guides/chestFlies.webp",
-      "activityIds": [
-        "chestFlies",
-        "inclineFlies",
-        "dumbbellChestPress",
-        "pushups",
-        "pullover"
-      ]
-    },
     {
       "id": "remote_chest_press_40",
       "name": "Chest press 40",
