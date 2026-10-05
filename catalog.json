@@ -1,25 +1,8 @@
 {
-  "version": 102,
-  "updatedAtMs": 1791228741921,
+  "version": 103,
+  "updatedAtMs": 1791228755000,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
-    {
-      "id": "remote_lower_body_functional_40",
-      "name": "Lower body functional 40",
-      "file": "drills/remote_lower_body_functional_40.json",
-      "updatedAtMs": 1790926704096,
-      "category": "strength",
-      "description": "Strength · 4×6 · 40s work / 55s rest · Squats, Lunges, Step-ups, Thrusters, Wall balls, Goblet squat",
-      "coverImage": "exercise_guides/squats.webp",
-      "activityIds": [
-        "squats",
-        "lunges",
-        "stepUps",
-        "thrusters",
-        "wallBalls",
-        "kettlebellGobletSquat"
-      ]
-    },
     {
       "id": "remote_tasos_workout",
       "name": "Tasos Workout",
