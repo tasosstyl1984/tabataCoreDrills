@@ -1,6 +1,6 @@
 {
-  "version": 76,
-  "updatedAtMs": 1791228028883,
+  "version": 77,
+  "updatedAtMs": 1791228096263,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -409,10 +409,10 @@
       "id": "remote_tyson",
       "name": "Tyson1",
       "file": "drills/remote_tyson.json",
-      "updatedAtMs": 1791217651222,
+      "updatedAtMs": 1791228095113,
       "category": "combos",
       "description": "Test",
-      "coverImage": "plan_covers/remote_tyson_1791217651214.webp",
+      "coverImage": "plan_covers/remote_tyson_1791228095105.webp",
       "activityIds": [
         "jumpRope",
         "shadowBoxing",
