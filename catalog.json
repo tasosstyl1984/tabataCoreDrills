@@ -1,25 +1,8 @@
 {
-  "version": 83,
-  "updatedAtMs": 1791228587496,
+  "version": 84,
+  "updatedAtMs": 1791228594364,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
-    {
-      "id": "remote_core_holds_40",
-      "name": "Core holds 40",
-      "file": "drills/remote_core_holds_40.json",
-      "updatedAtMs": 1790926704096,
-      "category": "core",
-      "description": "Core · 4×6 · 40s work / 50s rest · Plank, Side plank, Hollow hold, Dead bug, Bird dog, Rus. twists",
-      "coverImage": "exercise_guides/plank.webp",
-      "activityIds": [
-        "plank",
-        "sidePlank",
-        "hollowHold",
-        "deadBug",
-        "birdDog",
-        "russianTwists"
-      ]
-    },
     {
       "id": "remote_core_rotation_circuit_40",
       "name": "Core rotation circuit 30",
