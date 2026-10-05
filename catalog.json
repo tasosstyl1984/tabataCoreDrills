@@ -1,6 +1,6 @@
 {
-  "version": 91,
-  "updatedAtMs": 1791228647305,
+  "version": 92,
+  "updatedAtMs": 1791228656419,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -183,23 +183,6 @@
         "mountainClimbers",
         "boxJumps",
         "plank"
-      ]
-    },
-    {
-      "id": "remote_split_squat_lower_40",
-      "name": "Split squat lower 40",
-      "file": "drills/remote_split_squat_lower_40.json",
-      "updatedAtMs": 1790926704096,
-      "category": "strength",
-      "description": "Strength · 4×6 · 40s work / 55s rest · Lunges, Split squat, Glute bridge, Calf raises, Squats, Goblet squat",
-      "coverImage": "exercise_guides/bulgarianSplitSquat.webp",
-      "activityIds": [
-        "lunges",
-        "bulgarianSplitSquat",
-        "gluteBridge",
-        "calfRaises",
-        "squats",
-        "kettlebellGobletSquat"
       ]
     },
     {
