@@ -1,25 +1,8 @@
 {
-  "version": 89,
-  "updatedAtMs": 1791228633546,
+  "version": 90,
+  "updatedAtMs": 1791228640752,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
-    {
-      "id": "remote_hiit_strength_30",
-      "name": "HIIT strength 30 45",
-      "file": "drills/remote_hiit_strength_30.json",
-      "updatedAtMs": 1790926704096,
-      "category": "conditioning",
-      "description": "Conditioning · 3×6 · 45s work / 45s rest · Burpees, Thrusters, Box jumps, Med ball slams, Farmer carry, Mt. climbers",
-      "coverImage": "exercise_guides/burpees.webp",
-      "activityIds": [
-        "burpees",
-        "thrusters",
-        "boxJumps",
-        "medBallSlams",
-        "farmerCarry",
-        "mountainClimbers"
-      ]
-    },
     {
       "id": "remote_jump_rope_drills_50",
       "name": "Jump rope drills 45",
