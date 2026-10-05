@@ -1,25 +1,8 @@
 {
-  "version": 101,
-  "updatedAtMs": 1791228734650,
+  "version": 102,
+  "updatedAtMs": 1791228741921,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
-    {
-      "id": "remote_locomotion_40",
-      "name": "Locomotion 40",
-      "file": "drills/remote_locomotion_40.json",
-      "updatedAtMs": 1790926704096,
-      "category": "conditioning",
-      "description": "Conditioning · 4×6 · 40s work / 50s rest · Bear crawl, Inchworm, Mt. climbers, Farmer carry, Plank, Jumping jacks",
-      "coverImage": "exercise_guides/bearCrawl.webp",
-      "activityIds": [
-        "bearCrawl",
-        "inchworm",
-        "mountainClimbers",
-        "farmerCarry",
-        "plank",
-        "jumpingJacks"
-      ]
-    },
     {
       "id": "remote_lower_body_functional_40",
       "name": "Lower body functional 40",
