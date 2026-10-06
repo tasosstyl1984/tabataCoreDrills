@@ -1,0 +1,108 @@
+{
+  "id": "remote_core_basics",
+  "name": "Core Basics",
+  "createdAtMs": 1791309135502,
+  "sets": 3,
+  "repsPerSet": 5,
+  "workSeconds": 45,
+  "restBetweenRepsSeconds": 60,
+  "restBetweenSetsSeconds": 60,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "abs"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "plank"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "sidePlank"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "sidePlank"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "russianTwists"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "abs"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "plank"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "sidePlank"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "sidePlank"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "russianTwists"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "abs"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "plank"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "sidePlank"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "sidePlank"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "russianTwists"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      }
+    ]
+  }
+}

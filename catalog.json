@@ -1,8 +1,23 @@
 {
-  "version": 109,
-  "updatedAtMs": 1791308940317,
+  "version": 110,
+  "updatedAtMs": 1791309136304,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
+    {
+      "id": "remote_core_basics",
+      "name": "Core Basics",
+      "file": "drills/remote_core_basics.json",
+      "updatedAtMs": 1791309135502,
+      "category": "core",
+      "description": "",
+      "coverImage": "plan_covers/remote_core_basics_1791309135496.webp",
+      "activityIds": [
+        "abs",
+        "plank",
+        "sidePlank",
+        "russianTwists"
+      ]
+    },
     {
       "id": "remote_tasos_workout",
       "name": "Tasos Workout",
