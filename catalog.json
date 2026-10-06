@@ -1,6 +1,6 @@
 {
-  "version": 108,
-  "updatedAtMs": 1791275057487,
+  "version": 109,
+  "updatedAtMs": 1791308940317,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -46,6 +46,21 @@
         "abs",
         "hollowHold",
         "russianTwists"
+      ]
+    },
+    {
+      "id": "remote_upper_body",
+      "name": "Upper Body",
+      "file": "drills/remote_upper_body.json",
+      "updatedAtMs": 1791308938311,
+      "category": "chest",
+      "description": "",
+      "coverImage": "plan_covers/remote_upper_body_1791308938303.webp",
+      "activityIds": [
+        "benchPress",
+        "chestFlies",
+        "inclineBench",
+        "pullover"
       ]
     }
   ]

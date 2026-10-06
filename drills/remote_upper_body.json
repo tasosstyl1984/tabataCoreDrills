@@ -1,0 +1,93 @@
+{
+  "id": "remote_upper_body",
+  "name": "Upper Body",
+  "createdAtMs": 1791308938311,
+  "sets": 3,
+  "repsPerSet": 4,
+  "workSeconds": 40,
+  "restBetweenRepsSeconds": 60,
+  "restBetweenSetsSeconds": 60,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 60,
+            "activityId": "benchPress"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 60,
+            "activityId": "chestFlies"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 60,
+            "activityId": "inclineBench"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 60,
+            "activityId": "pullover"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 60,
+            "activityId": "benchPress"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 60,
+            "activityId": "chestFlies"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 60,
+            "activityId": "inclineBench"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 60,
+            "activityId": "pullover"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 60,
+            "activityId": "benchPress"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 60,
+            "activityId": "chestFlies"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 60,
+            "activityId": "inclineBench"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 60,
+            "activityId": "pullover"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      }
+    ]
+  }
+}
