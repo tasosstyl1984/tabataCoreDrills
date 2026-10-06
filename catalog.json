@@ -1,6 +1,6 @@
 {
-  "version": 110,
-  "updatedAtMs": 1791309136304,
+  "version": 111,
+  "updatedAtMs": 1791316782878,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -15,6 +15,30 @@
         "abs",
         "plank",
         "sidePlank",
+        "russianTwists"
+      ]
+    },
+    {
+      "id": "remote_lion_roar",
+      "name": "Lion Roar",
+      "file": "drills/remote_lion_roar.json",
+      "updatedAtMs": 1791316782217,
+      "category": "combos",
+      "description": "",
+      "coverImage": "plan_covers/remote_lion_roar_1791316782203.webp",
+      "activityIds": [
+        "jumpRope",
+        "pushups",
+        "pullUps",
+        "thrusters",
+        "wallBalls",
+        "lunges",
+        "sumoSquats",
+        "gluteKickbacks",
+        "abs",
+        "plank",
+        "sidePlank",
+        "plateRotations",
         "russianTwists"
       ]
     },
