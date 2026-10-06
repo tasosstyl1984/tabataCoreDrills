@@ -1,0 +1,108 @@
+{
+  "id": "remote_back_to_basics",
+  "name": "Back to Basics",
+  "createdAtMs": 1791318751077,
+  "sets": 3,
+  "repsPerSet": 5,
+  "workSeconds": 30,
+  "restBetweenRepsSeconds": 50,
+  "restBetweenSetsSeconds": 60,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
+            "activityId": "jumpingJacks"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
+            "activityId": "abs"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
+            "activityId": "plank"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
+            "activityId": "deadBug"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
+            "activityId": "pushups"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
+            "activityId": "jumpingJacks"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
+            "activityId": "abs"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
+            "activityId": "plank"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
+            "activityId": "deadBug"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
+            "activityId": "pushups"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
+            "activityId": "jumpingJacks"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
+            "activityId": "abs"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
+            "activityId": "plank"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
+            "activityId": "deadBug"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
+            "activityId": "pushups"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      }
+    ]
+  }
+}

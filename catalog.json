@@ -1,8 +1,24 @@
 {
-  "version": 111,
-  "updatedAtMs": 1791316782878,
+  "version": 112,
+  "updatedAtMs": 1791318751707,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
+    {
+      "id": "remote_back_to_basics",
+      "name": "Back to Basics",
+      "file": "drills/remote_back_to_basics.json",
+      "updatedAtMs": 1791318751077,
+      "category": "combos",
+      "description": "",
+      "coverImage": "plan_covers/remote_back_to_basics_1791318751063.webp",
+      "activityIds": [
+        "jumpingJacks",
+        "abs",
+        "plank",
+        "deadBug",
+        "pushups"
+      ]
+    },
     {
       "id": "remote_core_basics",
       "name": "Core Basics",
