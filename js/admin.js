@@ -41,8 +41,6 @@
   const categorySuggestions = document.getElementById("category-suggestions");
   const activityPickerDialog = document.getElementById("activity-picker-dialog");
   const activityPickerClose = document.getElementById("activity-picker-close");
-  const activityPickerSearch = document.getElementById("activity-picker-search");
-  const activityPickerClear = document.getElementById("activity-picker-clear");
   const activityPickerChips = document.getElementById("activity-picker-chips");
   const activityPickerList = document.getElementById("activity-picker-list");
 
@@ -205,13 +203,6 @@
     return groups;
   }
 
-  function activityMatchesQuery(activity, query) {
-    if (!query) return true;
-    if ((activity.label || "").toLowerCase().includes(query)) return true;
-    if ((activity.group || "").toLowerCase().includes(query)) return true;
-    return false;
-  }
-
   function exerciseButtonLabel(id) {
     if (!id) return "No label";
     return activityLabel(id);
@@ -233,31 +224,23 @@
 
   function renderActivityList() {
     if (!activityPickerList) return;
-    const query = (activityPickerSearch?.value || "").trim().toLowerCase();
-    if (activityPickerClear) activityPickerClear.hidden = !query;
     const selectedId = plan.sets[pickerSet]?.rounds[pickerRound]?.activityId || "";
-    const showNoLabel = !query || "no label".includes(query) || "none".includes(query);
     const sections = [];
     for (const [group, list] of groupedActivities()) {
       if (activityGroupFilter && group !== activityGroupFilter) continue;
-      const filtered = list.filter((a) => activityMatchesQuery(a, query));
-      if (filtered.length) sections.push({ group, list: filtered });
+      if (list.length) sections.push({ group, list });
     }
-    if (!sections.length && !showNoLabel) {
-      const typed = activityPickerSearch?.value || "";
+    if (!sections.length) {
       const empty = activityGroupFilter
-        ? `No ${activityGroupFilter} activities match "${typed}"`
-        : `No activities match "${typed}"`;
+        ? `No ${activityGroupFilter} activities`
+        : "No activities";
       activityPickerList.innerHTML = `<p class="activity-picker-empty">${escape(empty)}</p>`;
       return;
     }
     let html = "";
-    if (showNoLabel) {
-      const selected = !selectedId;
-      html += `<button type="button" class="activity-option" role="option" data-activity="" aria-selected="${
-        selected ? "true" : "false"
-      }">No label</button>`;
-    }
+    html += `<button type="button" class="activity-option" role="option" data-activity="" aria-selected="${
+      !selectedId ? "true" : "false"
+    }">No label</button>`;
     for (const section of sections) {
       html += `<div class="activity-group-label">${escape(section.group)}</div>`;
       for (const activity of section.list) {
@@ -273,11 +256,9 @@
   function openActivityPicker(setIndex, roundIndex) {
     pickerSet = setIndex;
     pickerRound = roundIndex;
-    if (activityPickerSearch) activityPickerSearch.value = "";
     renderActivityChips();
     renderActivityList();
     showModal(activityPickerDialog);
-    activityPickerSearch?.focus();
     requestAnimationFrame(() => {
       activityPickerChips
         ?.querySelector('.chip[aria-pressed="true"]')
@@ -1835,16 +1816,6 @@
   }
   if (activityPickerClose) {
     activityPickerClose.addEventListener("click", closeActivityPicker);
-  }
-  if (activityPickerSearch) {
-    activityPickerSearch.addEventListener("input", renderActivityList);
-  }
-  if (activityPickerClear) {
-    activityPickerClear.addEventListener("click", () => {
-      if (activityPickerSearch) activityPickerSearch.value = "";
-      renderActivityList();
-      activityPickerSearch?.focus();
-    });
   }
   if (activityPickerChips) {
     activityPickerChips.addEventListener("click", (e) => {
