@@ -2,7 +2,7 @@
   "id": "remote_tyson",
   "name": "Tyson",
   "createdAtMs": 1791230314237,
-  "sets": 5,
+  "sets": 6,
   "repsPerSet": 8,
   "workSeconds": 70,
   "restBetweenRepsSeconds": 60,
@@ -174,6 +174,31 @@
             "workSeconds": 45,
             "restAfterSeconds": 60,
             "activityId": "russianTwists"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "shadowBoxing"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "shadowBoxing"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "shadowBoxing"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "shadowBoxing"
           }
         ],
         "restAfterSetSeconds": 60
