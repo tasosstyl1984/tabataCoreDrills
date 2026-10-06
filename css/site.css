@@ -1383,50 +1383,6 @@ code {
   min-height: 0;
 }
 
-.activity-search {
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-  margin: 0 1rem;
-  border: 1px solid var(--border);
-  background: var(--chip);
-  border-radius: 12px;
-  padding: 0.2rem 0.45rem 0.2rem 0.65rem;
-}
-
-.activity-search .material-symbols-outlined {
-  color: var(--muted);
-  font-size: 1.25rem;
-}
-
-.activity-search input {
-  flex: 1;
-  min-width: 0;
-  border: 0;
-  background: transparent;
-  color: var(--text);
-  font: inherit;
-  padding: 0.45rem 0;
-}
-
-.activity-search input:focus {
-  outline: none;
-}
-
-.activity-search-clear {
-  border: 0;
-  background: transparent;
-  color: var(--muted);
-  border-radius: 8px;
-  padding: 0.15rem;
-  display: inline-flex;
-  cursor: pointer;
-}
-
-.activity-search-clear .material-symbols-outlined {
-  font-size: 1.15rem;
-}
-
 .activity-picker-chips {
   display: flex;
   align-items: center;
