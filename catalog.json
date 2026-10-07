@@ -1,6 +1,6 @@
 {
-  "version": 115,
-  "updatedAtMs": 1791403935426,
+  "version": 116,
+  "updatedAtMs": 1791404093437,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -62,7 +62,7 @@
       "id": "remote_tasos_workout",
       "name": "Tasos Workout",
       "file": "drills/remote_tasos_workout.json",
-      "updatedAtMs": 1791403934398,
+      "updatedAtMs": 1791404092385,
       "category": "combos",
       "description": "",
       "coverImage": "plan_covers/remote_tasos_workout.webp",
@@ -74,12 +74,7 @@
         "kettlebellRow",
         "kettlebellCleanPress",
         "kettlebellSnatch",
-        "bicepCurls",
-        "abs",
-        "russianTwists",
-        "plank",
-        "sidePlank",
-        "renegadeRow"
+        "bicepCurls"
       ]
     },
     {
