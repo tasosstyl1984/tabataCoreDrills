@@ -1,6 +1,6 @@
 {
-  "version": 112,
-  "updatedAtMs": 1791318751707,
+  "version": 113,
+  "updatedAtMs": 1791367586380,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -107,7 +107,7 @@
       "id": "remote_upper_body",
       "name": "Upper Body",
       "file": "drills/remote_upper_body.json",
-      "updatedAtMs": 1791308938311,
+      "updatedAtMs": 1791367585099,
       "category": "chest",
       "description": "",
       "coverImage": "plan_covers/remote_upper_body_1791308938303.webp",
