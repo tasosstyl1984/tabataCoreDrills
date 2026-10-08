@@ -1,0 +1,158 @@
+{
+  "id": "remote_lower_body",
+  "name": "Lower body",
+  "createdAtMs": 1791494688965,
+  "sets": 5,
+  "repsPerSet": 6,
+  "workSeconds": 45,
+  "restBetweenRepsSeconds": 60,
+  "restBetweenSetsSeconds": 60,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "gluteKickbacks"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "gluteKickbacks"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "lunges"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "lunges"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "calfRaises"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "calfRaises"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellGobletSquat"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellGobletSquat"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellSwings"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellSwings"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellCleanPress"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellSwings"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellHalo"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellSwings"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellGorillaRow"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "jumpingLunges"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "jumpingLunges"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "squatJumps"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "squatJumps"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "jumpingLunges"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "jumpingLunges"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "squatJumps"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "squatJumps"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      }
+    ]
+  }
+}

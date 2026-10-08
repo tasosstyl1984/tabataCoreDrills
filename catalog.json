@@ -1,6 +1,6 @@
 {
-  "version": 116,
-  "updatedAtMs": 1791404093437,
+  "version": 117,
+  "updatedAtMs": 1791494689742,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -56,6 +56,27 @@
         "sidePlank",
         "plateRotations",
         "russianTwists"
+      ]
+    },
+    {
+      "id": "remote_lower_body",
+      "name": "Lower body",
+      "file": "drills/remote_lower_body.json",
+      "updatedAtMs": 1791494688965,
+      "category": "combos",
+      "description": "",
+      "coverImage": "plan_covers/remote_lower_body_1791494688946.webp",
+      "activityIds": [
+        "gluteKickbacks",
+        "lunges",
+        "calfRaises",
+        "kettlebellGobletSquat",
+        "kettlebellSwings",
+        "kettlebellCleanPress",
+        "kettlebellHalo",
+        "kettlebellGorillaRow",
+        "jumpingLunges",
+        "squatJumps"
       ]
     },
     {
