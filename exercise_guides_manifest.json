@@ -1,5 +1,5 @@
 {
-  "version": 11,
+  "version": 12,
   "updatedAtMs": 1791573114678,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "totalBytes": 7116168,
@@ -489,206 +489,206 @@
     {
       "id": "default_boxing_rounds_30",
       "file": "plan_covers/default_boxing_rounds_30.webp",
-      "bytes": 152906,
-      "sha256": "c425df86f852868f"
+      "bytes": 120538,
+      "sha256": "b7acaa0a18c3f9de"
     },
     {
       "id": "default_chest_fly_circuit_40",
       "file": "plan_covers/default_chest_fly_circuit_40.webp",
-      "bytes": 136002,
-      "sha256": "a7c2fcdbc9e0b966"
+      "bytes": 115680,
+      "sha256": "6904d69b7e2a244c"
     },
     {
       "id": "default_chest_press_40",
       "file": "plan_covers/default_chest_press_40.webp",
-      "bytes": 156134,
-      "sha256": "e28c9309dbcd70f1"
+      "bytes": 116372,
+      "sha256": "c53d15fc5237d963"
     },
     {
       "id": "default_combo_full_stack_50",
       "file": "plan_covers/default_combo_full_stack_50.webp",
-      "bytes": 137650,
-      "sha256": "e9cfe8b6b86a4ac8"
+      "bytes": 123342,
+      "sha256": "29113752946b897d"
     },
     {
       "id": "default_combo_rope_kettle_core_40",
       "file": "plan_covers/default_combo_rope_kettle_core_40.webp",
-      "bytes": 123940,
-      "sha256": "6e870510c1db40e1"
+      "bytes": 123280,
+      "sha256": "05b6ef067ccfb907"
     },
     {
       "id": "default_core_holds_40",
       "file": "plan_covers/default_core_holds_40.webp",
-      "bytes": 136478,
-      "sha256": "4ff4053019b9a233"
+      "bytes": 112746,
+      "sha256": "8f2685082e8b2ae6"
     },
     {
       "id": "default_core_rotation_circuit_40",
       "file": "plan_covers/default_core_rotation_circuit_40.webp",
-      "bytes": 105048,
-      "sha256": "6393323177b230b4"
+      "bytes": 97560,
+      "sha256": "20216d0edf0d04eb"
     },
     {
       "id": "default_dumbbell_arms_40",
       "file": "plan_covers/default_dumbbell_arms_40.webp",
-      "bytes": 112714,
-      "sha256": "452817a43f7c68fc"
+      "bytes": 119634,
+      "sha256": "1e724e582d95bcdd"
     },
     {
       "id": "default_dumbbell_shoulders_40",
       "file": "plan_covers/default_dumbbell_shoulders_40.webp",
-      "bytes": 154614,
-      "sha256": "317543c476ccfccc"
+      "bytes": 119926,
+      "sha256": "cfe7a53bebefea6e"
     },
     {
       "id": "default_engine_conditioning_45",
       "file": "plan_covers/default_engine_conditioning_45.webp",
-      "bytes": 185096,
-      "sha256": "687d14071e4b25c1"
+      "bytes": 136822,
+      "sha256": "5106f6721fa24326"
     },
     {
       "id": "default_functional_mixed_45",
       "file": "plan_covers/default_functional_mixed_45.webp",
-      "bytes": 163864,
-      "sha256": "4a64bdc26ddd0317"
+      "bytes": 120696,
+      "sha256": "8cbccf9b227c3b12"
     },
     {
       "id": "default_hiit_strength_30",
       "file": "plan_covers/default_hiit_strength_30.webp",
-      "bytes": 202994,
-      "sha256": "e125bd826f5c705e"
+      "bytes": 131194,
+      "sha256": "6d78a092727bd43c"
     },
     {
       "id": "default_jump_rope_drills_50",
       "file": "plan_covers/default_jump_rope_drills_50.webp",
-      "bytes": 149458,
-      "sha256": "c04fbabbb13d8981"
+      "bytes": 118092,
+      "sha256": "cc8aef4d5ab97911"
     },
     {
       "id": "default_kb_boxing_complex",
       "file": "plan_covers/default_kb_boxing_complex.webp",
-      "bytes": 189118,
-      "sha256": "3f97e2ea06d6d4c2"
+      "bytes": 113302,
+      "sha256": "614e8e83c082a187"
     },
     {
       "id": "default_kb_complex_40",
       "file": "plan_covers/default_kb_complex_40.webp",
-      "bytes": 165178,
-      "sha256": "b51de0647b1daa6c"
+      "bytes": 118878,
+      "sha256": "ba220e94db4cef27"
     },
     {
       "id": "default_kettlebell_drills_40",
       "file": "plan_covers/default_kettlebell_drills_40.webp",
-      "bytes": 177240,
-      "sha256": "3fd78fe526023856"
+      "bytes": 127814,
+      "sha256": "00cbbc646c8d02ee"
     },
     {
       "id": "default_locomotion_40",
       "file": "plan_covers/default_locomotion_40.webp",
-      "bytes": 130896,
-      "sha256": "52a47f325df036ea"
+      "bytes": 122618,
+      "sha256": "0445f70720590fd7"
     },
     {
       "id": "default_lower_body_functional_40",
       "file": "plan_covers/default_lower_body_functional_40.webp",
-      "bytes": 126134,
-      "sha256": "572b6382ce70f9ec"
+      "bytes": 126924,
+      "sha256": "7f67dd00c2982440"
     },
     {
       "id": "default_plate_rotations_40",
       "file": "plan_covers/default_plate_rotations_40.webp",
-      "bytes": 137986,
-      "sha256": "63d62c3d86d41dde"
+      "bytes": 172236,
+      "sha256": "2348bf711aea30ee"
     },
     {
       "id": "default_plyo_lateral_30",
       "file": "plan_covers/default_plyo_lateral_30.webp",
-      "bytes": 144476,
-      "sha256": "60c0a1693ba22f42"
+      "bytes": 128720,
+      "sha256": "3a655db8189ff0ef"
     },
     {
       "id": "default_plyo_power_30",
       "file": "plan_covers/default_plyo_power_30.webp",
-      "bytes": 139676,
-      "sha256": "7b303a2c08b25bd7"
+      "bytes": 114910,
+      "sha256": "c7e14855cdd28884"
     },
     {
       "id": "default_push_pull_core_40",
       "file": "plan_covers/default_push_pull_core_40.webp",
-      "bytes": 170938,
-      "sha256": "fffdf3853bc3e202"
+      "bytes": 129006,
+      "sha256": "88b919068076236e"
     },
     {
       "id": "default_split_squat_lower_40",
       "file": "plan_covers/default_split_squat_lower_40.webp",
-      "bytes": 154844,
-      "sha256": "12e9a44baf761490"
+      "bytes": 110586,
+      "sha256": "969c698ed8027b28"
     },
     {
       "id": "default_tabata_classic",
       "file": "plan_covers/default_tabata_classic.webp",
-      "bytes": 115752,
-      "sha256": "cbce19701f6b798b"
+      "bytes": 164320,
+      "sha256": "f25282c8585fda4d"
     },
     {
       "id": "remote_back_to_basics",
       "file": "plan_covers/remote_back_to_basics.webp",
-      "bytes": 142756,
-      "sha256": "2e4bc9979623866f"
+      "bytes": 118492,
+      "sha256": "7fbe0bf25441def0"
     },
     {
       "id": "remote_core_basics",
       "file": "plan_covers/remote_core_basics.webp",
-      "bytes": 91406,
-      "sha256": "0286a296d4a1adf7"
+      "bytes": 111428,
+      "sha256": "d8534de4466b76fc"
     },
     {
       "id": "remote_hyrox_20",
       "file": "plan_covers/remote_hyrox_20.webp",
-      "bytes": 177478,
-      "sha256": "61e966ee13cd30db"
+      "bytes": 136822,
+      "sha256": "5106f6721fa24326"
     },
     {
       "id": "remote_hyrox_30",
       "file": "plan_covers/remote_hyrox_30.webp",
-      "bytes": 181914,
-      "sha256": "5cb099bc68ba92e2"
+      "bytes": 136822,
+      "sha256": "5106f6721fa24326"
     },
     {
       "id": "remote_hyrox_40",
       "file": "plan_covers/remote_hyrox_40.webp",
-      "bytes": 178970,
-      "sha256": "c18a32a7a88ddfa4"
+      "bytes": 136822,
+      "sha256": "5106f6721fa24326"
     },
     {
       "id": "remote_lion_roar",
       "file": "plan_covers/remote_lion_roar.webp",
-      "bytes": 156264,
-      "sha256": "8a7d0c06122494de"
+      "bytes": 104896,
+      "sha256": "2db9508ab2dabb9d"
     },
     {
       "id": "remote_lower_body",
       "file": "plan_covers/remote_lower_body.webp",
-      "bytes": 162782,
-      "sha256": "45e6ff92d07fc839"
+      "bytes": 102558,
+      "sha256": "05956d31b32e22ba"
     },
     {
       "id": "remote_tasos_workout",
       "file": "plan_covers/remote_tasos_workout.webp",
-      "bytes": 177656,
-      "sha256": "387b4bed806691fd"
+      "bytes": 134070,
+      "sha256": "379c3448d68c6223"
     },
     {
       "id": "remote_tyson",
       "file": "plan_covers/remote_tyson.webp",
-      "bytes": 156886,
-      "sha256": "16e99e9803d89938"
+      "bytes": 111682,
+      "sha256": "51b1565c2ef468ba"
     },
     {
       "id": "remote_upper_body",
       "file": "plan_covers/remote_upper_body.webp",
-      "bytes": 160052,
-      "sha256": "a3bfb853bf9bce37"
+      "bytes": 106454,
+      "sha256": "97a3ea7aaee63a0f"
     }
   ]
 }
