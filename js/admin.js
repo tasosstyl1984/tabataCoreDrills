@@ -466,7 +466,7 @@
     }
     sets.push(clonePlan(sets[sets.length - 1]));
     plan = { sets };
-    setCollapsed.push(false);
+    setCollapsed.push(true);
     return true;
   }
 
