@@ -437,10 +437,37 @@
                 <button type="button" data-act="set-rest-inc">+</button>
               </div>
             </div>
+            <div class="set-foot">
+              <button type="button" data-act="round-add" title="Add round">+ Round</button>
+            </div>
           </div>
         </section>`;
       })
-      .join("");
+      .join("") +
+      `<div class="plan-foot">
+        <button type="button" data-act="add-set">Add set</button>
+      </div>`;
+  }
+
+  function scrollFormChildIntoView(el) {
+    const scroller = el?.closest(".form-body");
+    if (!el || !scroller) return;
+    const elRect = el.getBoundingClientRect();
+    const scRect = scroller.getBoundingClientRect();
+    if (elRect.bottom > scRect.bottom) {
+      scroller.scrollTop += elRect.bottom - scRect.bottom + 8;
+    }
+  }
+
+  function appendClonedLastSet(sets) {
+    if (sets.length >= MAX_SETS) {
+      toast("Max sets reached");
+      return false;
+    }
+    sets.push(clonePlan(sets[sets.length - 1]));
+    plan = { sets };
+    setCollapsed.push(false);
+    return true;
   }
 
   function swap(arr, i, j) {
@@ -574,6 +601,7 @@
     const btn = e.target.closest("button[data-act]");
     if (!btn || !planEditor.contains(btn)) return;
     const act = btn.getAttribute("data-act");
+    const fromFoot = Boolean(btn.closest(".set-foot, .plan-foot"));
     const block = btn.closest("[data-set]");
     const si = Number(block?.getAttribute("data-set"));
     const roundBlock = btn.closest("[data-round]");
@@ -615,6 +643,8 @@
       rounds.push(clonePlan(prev));
       plan = { sets };
       setCollapsed[si] = false;
+    } else if (act === "add-set") {
+      if (!appendClonedLastSet(sets)) return;
     } else if (act === "round-up" && ri > 0) {
       sets[si].rounds = swap(sets[si].rounds, ri, ri - 1);
       plan = { sets };
@@ -658,6 +688,11 @@
       return;
     }
     renderPlanEditor();
+    if (fromFoot && (act === "round-add" || act === "add-set")) {
+      const selector =
+        act === "round-add" ? `.set-block[data-set="${si}"] .set-foot` : ".plan-foot";
+      scrollFormChildIntoView(planEditor.querySelector(selector));
+    }
   }
 
   function toast(msg) {
@@ -1793,11 +1828,7 @@
       const sets = clonePlan(plan).sets;
       ensureCollapseState();
       if (action === "add-set") {
-        if (sets.length >= MAX_SETS) return toast("Max sets reached");
-        const last = sets[sets.length - 1];
-        sets.push(clonePlan(last));
-        plan = { sets };
-        setCollapsed.push(false);
+        if (!appendClonedLastSet(sets)) return;
         renderPlanEditor();
       } else if (action === "dup-last-set") {
         if (sets.length >= MAX_SETS) return toast("Max sets reached");

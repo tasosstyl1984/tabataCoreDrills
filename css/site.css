@@ -1534,6 +1534,27 @@ code {
   padding: 0.15rem 0.2rem;
 }
 
+.set-foot,
+.plan-foot {
+  display: grid;
+}
+
+.set-foot > button,
+.plan-foot > button {
+  width: 100%;
+  min-height: 2.75rem;
+  border: 1px solid var(--border);
+  background: var(--chip);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 0.65rem 0.75rem;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  line-height: 1.2;
+}
+
 .card-actions .btn-edit-admin,
 .card-actions .btn-delete-admin {
   display: none;
