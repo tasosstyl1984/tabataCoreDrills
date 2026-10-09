@@ -1,7 +1,7 @@
 {
   "id": "remote_lower_body",
-  "name": "Lower body",
-  "createdAtMs": 1791494688965,
+  "name": "Manticore",
+  "createdAtMs": 1791564300000,
   "sets": 5,
   "repsPerSet": 6,
   "workSeconds": 45,

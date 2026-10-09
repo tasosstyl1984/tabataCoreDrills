@@ -1,0 +1,198 @@
+{
+  "id": "remote_hyrox_40",
+  "name": "Typhon",
+  "createdAtMs": 1791564300000,
+  "sets": 4,
+  "repsPerSet": 8,
+  "workSeconds": 50,
+  "restBetweenRepsSeconds": 24,
+  "restBetweenSetsSeconds": 40,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 24,
+            "activityId": "battleRopes"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 24,
+            "activityId": "sledPush"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 24,
+            "activityId": "dumbbellRow"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 24,
+            "activityId": "burpees"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 24,
+            "activityId": "rowing"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 24,
+            "activityId": "farmerCarry"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 24,
+            "activityId": "lunges"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 24,
+            "activityId": "wallBalls"
+          }
+        ],
+        "restAfterSetSeconds": 40
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 24,
+            "activityId": "battleRopes"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 24,
+            "activityId": "sledPush"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 24,
+            "activityId": "dumbbellRow"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 24,
+            "activityId": "burpees"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 24,
+            "activityId": "rowing"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 24,
+            "activityId": "farmerCarry"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 24,
+            "activityId": "lunges"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 24,
+            "activityId": "wallBalls"
+          }
+        ],
+        "restAfterSetSeconds": 40
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 24,
+            "activityId": "battleRopes"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 24,
+            "activityId": "sledPush"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 24,
+            "activityId": "dumbbellRow"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 24,
+            "activityId": "burpees"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 24,
+            "activityId": "rowing"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 24,
+            "activityId": "farmerCarry"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 24,
+            "activityId": "lunges"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 24,
+            "activityId": "wallBalls"
+          }
+        ],
+        "restAfterSetSeconds": 40
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 24,
+            "activityId": "battleRopes"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 24,
+            "activityId": "sledPush"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 24,
+            "activityId": "dumbbellRow"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 24,
+            "activityId": "burpees"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 24,
+            "activityId": "rowing"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 24,
+            "activityId": "farmerCarry"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 24,
+            "activityId": "lunges"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 24,
+            "activityId": "wallBalls"
+          }
+        ],
+        "restAfterSetSeconds": 40
+      }
+    ]
+  }
+}

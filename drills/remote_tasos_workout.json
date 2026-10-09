@@ -1,7 +1,7 @@
 {
   "id": "remote_tasos_workout",
-  "name": "Tasos Workout",
-  "createdAtMs": 1790943064151,
+  "name": "Cerberus",
+  "createdAtMs": 1791564300000,
   "sets": 5,
   "repsPerSet": 8,
   "workSeconds": 70,

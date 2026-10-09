@@ -1,13 +1,13 @@
 {
   "version": 120,
-  "updatedAtMs": 1791536341508,
+  "updatedAtMs": 1791564300000,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
       "id": "remote_back_to_basics",
-      "name": "Back to Basics",
+      "name": "Sprite",
       "file": "drills/remote_back_to_basics.json",
-      "updatedAtMs": 1791318751077,
+      "updatedAtMs": 1791564300000,
       "category": "combos",
       "description": "",
       "coverImage": "plan_covers/remote_back_to_basics_1791318751063.webp",
@@ -21,9 +21,9 @@
     },
     {
       "id": "remote_core_basics",
-      "name": "Core Basics",
+      "name": "Pixie",
       "file": "drills/remote_core_basics.json",
-      "updatedAtMs": 1791309135502,
+      "updatedAtMs": 1791564300000,
       "category": "core",
       "description": "",
       "coverImage": "plan_covers/remote_core_basics_1791309135496.webp",
@@ -36,9 +36,9 @@
     },
     {
       "id": "remote_lion_roar",
-      "name": "Lion Roar",
+      "name": "Kelpie",
       "file": "drills/remote_lion_roar.json",
-      "updatedAtMs": 1791316782217,
+      "updatedAtMs": 1791564300000,
       "category": "combos",
       "description": "",
       "coverImage": "plan_covers/remote_lion_roar_1791316782203.webp",
@@ -60,9 +60,9 @@
     },
     {
       "id": "remote_lower_body",
-      "name": "Lower body",
+      "name": "Manticore",
       "file": "drills/remote_lower_body.json",
-      "updatedAtMs": 1791494688965,
+      "updatedAtMs": 1791564300000,
       "category": "combos",
       "description": "",
       "coverImage": "plan_covers/remote_lower_body_1791494688946.webp",
@@ -81,9 +81,9 @@
     },
     {
       "id": "remote_tasos_workout",
-      "name": "Tasos Workout",
+      "name": "Cerberus",
       "file": "drills/remote_tasos_workout.json",
-      "updatedAtMs": 1791404092385,
+      "updatedAtMs": 1791564300000,
       "category": "combos",
       "description": "",
       "coverImage": "plan_covers/remote_tasos_workout.webp",
@@ -100,9 +100,9 @@
     },
     {
       "id": "remote_tyson",
-      "name": "Tyson",
+      "name": "Basilisk",
       "file": "drills/remote_tyson.json",
-      "updatedAtMs": 1791536340318,
+      "updatedAtMs": 1791564300000,
       "category": "combos",
       "description": "",
       "coverImage": "plan_covers/remote_tyson_1791536340308.webp",
@@ -121,9 +121,9 @@
     },
     {
       "id": "remote_upper_body",
-      "name": "Upper Body",
+      "name": "Valkyrie",
       "file": "drills/remote_upper_body.json",
-      "updatedAtMs": 1791494786931,
+      "updatedAtMs": 1791564300000,
       "category": "chest",
       "description": "",
       "coverImage": "plan_covers/remote_upper_body_1791308938303.webp",
@@ -132,6 +132,63 @@
         "chestFlies",
         "inclineBench",
         "pullover"
+      ]
+    },
+    {
+      "id": "remote_hyrox_20",
+      "name": "Garuda",
+      "file": "drills/remote_hyrox_20.json",
+      "updatedAtMs": 1791564300000,
+      "category": "conditioning",
+      "description": "Conditioning · 2×8 · 50s work / 25s rest · 20:00. Gym Hyrox stations, no running. SkiErg is battle ropes, sled pull is DB row, burpee broad jumps are burpees, sandbag lunges are lunges. Battle ropes, Sled push, DB row, Burpees, Rowing, Farmer carry, Lunges, Wall balls.",
+      "coverImage": "exercise_guides/battleRopes.webp",
+      "activityIds": [
+        "battleRopes",
+        "sledPush",
+        "dumbbellRow",
+        "burpees",
+        "rowing",
+        "farmerCarry",
+        "lunges",
+        "wallBalls"
+      ]
+    },
+    {
+      "id": "remote_hyrox_30",
+      "name": "Quetzalcoatl",
+      "file": "drills/remote_hyrox_30.json",
+      "updatedAtMs": 1791564300000,
+      "category": "conditioning",
+      "description": "Conditioning · 3×8 · 50s work / 24s rest · 29:54. Gym Hyrox stations, no running. SkiErg is battle ropes, sled pull is DB row, burpee broad jumps are burpees, sandbag lunges are lunges. Battle ropes, Sled push, DB row, Burpees, Rowing, Farmer carry, Lunges, Wall balls.",
+      "coverImage": "exercise_guides/battleRopes.webp",
+      "activityIds": [
+        "battleRopes",
+        "sledPush",
+        "dumbbellRow",
+        "burpees",
+        "rowing",
+        "farmerCarry",
+        "lunges",
+        "wallBalls"
+      ]
+    },
+    {
+      "id": "remote_hyrox_40",
+      "name": "Typhon",
+      "file": "drills/remote_hyrox_40.json",
+      "updatedAtMs": 1791564300000,
+      "category": "conditioning",
+      "description": "Conditioning · 4×8 · 50s work / 24s rest · 39:52. Gym Hyrox stations, no running. SkiErg is battle ropes, sled pull is DB row, burpee broad jumps are burpees, sandbag lunges are lunges. Battle ropes, Sled push, DB row, Burpees, Rowing, Farmer carry, Lunges, Wall balls.",
+      "coverImage": "exercise_guides/battleRopes.webp",
+      "activityIds": [
+        "battleRopes",
+        "sledPush",
+        "dumbbellRow",
+        "burpees",
+        "rowing",
+        "farmerCarry",
+        "lunges",
+        "wallBalls"
       ]
     }
   ]
