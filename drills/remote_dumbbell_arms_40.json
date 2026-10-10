@@ -1,0 +1,159 @@
+{
+  "id": "remote_dumbbell_arms_40",
+  "name": "Dumbbell Arms",
+  "description": "Focused dumbbell arm work for biceps and triceps \u2014 pump, control, and upper-arm strength.",
+  "createdAtMs": 1791622139758,
+  "sets": 4,
+  "repsPerSet": 6,
+  "workSeconds": 40,
+  "restBetweenRepsSeconds": 50,
+  "restBetweenSetsSeconds": 100,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "bicepCurls"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "hammerCurls"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "concentrationCurls"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "tricepKickbacks"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "overheadTricepExtension"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "bicepCurls"
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "bicepCurls"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "hammerCurls"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "concentrationCurls"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "tricepKickbacks"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "overheadTricepExtension"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "bicepCurls"
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "bicepCurls"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "hammerCurls"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "concentrationCurls"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "tricepKickbacks"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "overheadTricepExtension"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "bicepCurls"
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "bicepCurls"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "hammerCurls"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "concentrationCurls"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "tricepKickbacks"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "overheadTricepExtension"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "bicepCurls"
+          }
+        ],
+        "restAfterSetSeconds": 100
+      }
+    ]
+  }
+}

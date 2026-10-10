@@ -1,0 +1,159 @@
+{
+  "id": "remote_kb_boxing_complex",
+  "name": "KB Boxing Complex",
+  "description": "Shadowboxing mixed with kettlebell work for fight fitness, punch endurance, and functional strength.",
+  "createdAtMs": 1791622139758,
+  "sets": 4,
+  "repsPerSet": 6,
+  "workSeconds": 70,
+  "restBetweenRepsSeconds": 60,
+  "restBetweenSetsSeconds": 60,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "shadowBoxing"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "shadowBoxing"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "shadowBoxing"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "shadowBoxing"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "shadowBoxing"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "shadowBoxing"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellSwings"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellHalo"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellCleanPress"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellRow"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellSnatch"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellGorillaRow"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellSwings"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellHalo"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellCleanPress"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellRow"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellSnatch"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellGorillaRow"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellSwings"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellHalo"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellCleanPress"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellRow"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellSnatch"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellGorillaRow"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      }
+    ]
+  }
+}

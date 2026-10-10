@@ -1,0 +1,159 @@
+{
+  "id": "remote_lower_body_functional_40",
+  "name": "Lower Functional",
+  "description": "Squats, lunges, and thrusters for strong, usable legs that transfer to sport and daily movement.",
+  "createdAtMs": 1791622139758,
+  "sets": 4,
+  "repsPerSet": 6,
+  "workSeconds": 40,
+  "restBetweenRepsSeconds": 55,
+  "restBetweenSetsSeconds": 100,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "squats"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "lunges"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "stepUps"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "thrusters"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "wallBalls"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "kettlebellGobletSquat"
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "squats"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "lunges"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "stepUps"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "thrusters"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "wallBalls"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "kettlebellGobletSquat"
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "squats"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "lunges"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "stepUps"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "thrusters"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "wallBalls"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "kettlebellGobletSquat"
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "squats"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "lunges"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "stepUps"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "thrusters"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "wallBalls"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "kettlebellGobletSquat"
+          }
+        ],
+        "restAfterSetSeconds": 100
+      }
+    ]
+  }
+}

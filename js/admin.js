@@ -171,6 +171,9 @@
     if (adminBar) adminBar.classList.toggle("is-visible", ok);
     if (loginBtn) loginBtn.hidden = ok;
     if (logoutBtn) logoutBtn.hidden = !ok;
+    window.dispatchEvent(
+      new CustomEvent("tabata-admin-auth", { detail: { ok } }),
+    );
   }
 
   function slugify(name) {
@@ -1231,6 +1234,17 @@
     }
   }
 
+  async function loadRemotePresetsJson() {
+    const file = await ghGetContent("presets.json");
+    if (!file) throw new Error("presets.json not found on GitHub");
+    const text = await readGhFileText(file, "presets.json");
+    try {
+      return { file, json: JSON.parse(text) };
+    } catch (err) {
+      throw new Error(`presets.json is not valid JSON: ${err.message}`);
+    }
+  }
+
   async function putCatalogJson(mutator, message) {
     const maxAttempts = 5;
     let lastErr = null;
@@ -1445,40 +1459,81 @@
       }
 
       const drillPath = `drills/${id}.json`;
+      const savingPreset = Boolean(
+        editingEntry?.preset || editingEntry?.shipsWithApp,
+      );
+      // Presets stay out of public catalog.json (app download list).
+      const catalogEntryToSave = savingPreset
+        ? {
+            ...catalogEntry,
+            preset: true,
+            shipsWithApp: true,
+            defaultId:
+              editingEntry?.defaultId ||
+              (id.startsWith("remote_")
+                ? `default_${id.slice("remote_".length)}`
+                : undefined),
+            description:
+              catalogEntry.description || "Shipped Android preset",
+          }
+        : catalogEntry;
       const maxAttempts = 5;
       let nextCatalog = null;
+      let nextPresets = null;
       let lastErr = null;
       for (let attempt = 0; attempt < maxAttempts; attempt++) {
         if (attempt > 0) {
           await new Promise((r) => setTimeout(r, 250 * attempt));
         }
         try {
-          const { json } = await loadRemoteCatalogJson();
-          nextCatalog = clonePlan(json);
-          if (!nextCatalog.baseUrl) nextCatalog.baseUrl = RAW_BASE;
-          const drills = Array.isArray(nextCatalog.drills)
-            ? [...nextCatalog.drills]
-            : [];
-          const idx = drills.findIndex((d) => d.id === id);
-          if (idx >= 0) drills[idx] = catalogEntry;
-          else drills.push(catalogEntry);
-          drills.sort((a, b) => String(a.name).localeCompare(String(b.name)));
-          nextCatalog.drills = drills;
-          nextCatalog.version = Number(nextCatalog.version || 0) + 1;
-          nextCatalog.updatedAtMs = Date.now();
-
           const changes = [
             {
               path: drillPath,
               content: `${JSON.stringify(template, null, 2)}\n`,
               encoding: "utf-8",
             },
-            {
+          ];
+
+          if (savingPreset) {
+            const { json } = await loadRemotePresetsJson();
+            nextPresets = clonePlan(json);
+            if (!nextPresets.baseUrl) nextPresets.baseUrl = RAW_BASE;
+            const drills = Array.isArray(nextPresets.drills)
+              ? [...nextPresets.drills]
+              : [];
+            const idx = drills.findIndex((d) => d.id === id);
+            if (idx >= 0) drills[idx] = catalogEntryToSave;
+            else drills.push(catalogEntryToSave);
+            drills.sort((a, b) => String(a.name).localeCompare(String(b.name)));
+            nextPresets.drills = drills;
+            nextPresets.version = Number(nextPresets.version || 0) + 1;
+            nextPresets.updatedAtMs = Date.now();
+            changes.push({
+              path: "presets.json",
+              content: `${JSON.stringify(nextPresets, null, 2)}\n`,
+              encoding: "utf-8",
+            });
+          } else {
+            const { json } = await loadRemoteCatalogJson();
+            nextCatalog = clonePlan(json);
+            if (!nextCatalog.baseUrl) nextCatalog.baseUrl = RAW_BASE;
+            const drills = Array.isArray(nextCatalog.drills)
+              ? [...nextCatalog.drills]
+              : [];
+            const idx = drills.findIndex((d) => d.id === id);
+            if (idx >= 0) drills[idx] = catalogEntryToSave;
+            else drills.push(catalogEntryToSave);
+            drills.sort((a, b) => String(a.name).localeCompare(String(b.name)));
+            nextCatalog.drills = drills;
+            nextCatalog.version = Number(nextCatalog.version || 0) + 1;
+            nextCatalog.updatedAtMs = Date.now();
+            changes.push({
               path: "catalog.json",
               content: `${JSON.stringify(nextCatalog, null, 2)}\n`,
               encoding: "utf-8",
-            },
-          ];
+            });
+          }
+
           if (newCoverPath && newCoverBase64) {
             changes.unshift({
               path: newCoverPath,
@@ -1494,7 +1549,11 @@
           }
 
           await commitFilesAtomic(
-            editingEntry ? `Update plan ${id}` : `Add plan ${id}`,
+            editingEntry
+              ? savingPreset
+                ? `Update preset ${id}`
+                : `Update plan ${id}`
+              : `Add plan ${id}`,
             changes,
           );
           lastErr = null;
@@ -1512,7 +1571,11 @@
         }
       }
       if (lastErr) throw lastErr;
-      if (!nextCatalog) throw new Error("Save produced no catalog");
+      if (savingPreset) {
+        if (!nextPresets) throw new Error("Save produced no presets catalog");
+      } else if (!nextCatalog) {
+        throw new Error("Save produced no catalog");
+      }
 
       if (coverBlobForLocal && newCoverPath) {
         const localUrl = URL.createObjectURL(coverBlobForLocal);
@@ -1523,12 +1586,22 @@
       }
 
       hideModal(editorDialog);
-      toast(`Saved ${id} — live on site via GitHub raw`);
+      toast(
+        savingPreset
+          ? `Saved preset ${id} (admin view only — not in app catalog)`
+          : `Saved ${id} — live on site via GitHub raw`,
+      );
       try {
         site()?.cacheTemplate?.(id, template);
-        site()?.applyCatalog?.(nextCatalog);
+        if (savingPreset) {
+          site()?.applyPresets?.(nextPresets);
+        } else {
+          site()?.applyCatalog?.(nextCatalog);
+        }
         const savedEntry =
-          (nextCatalog.drills || []).find((d) => d.id === id) || catalogEntry;
+          (
+            (savingPreset ? nextPresets?.drills : nextCatalog?.drills) || []
+          ).find((d) => d.id === id) || catalogEntryToSave;
         site()?.openPreview?.(savedEntry);
       } catch (refreshErr) {
         toast(`Saved ${id}, but refresh failed: ${refreshErr.message || refreshErr}`);
@@ -1550,6 +1623,12 @@
       return;
     }
     if (!entry?.id || deleteInFlight) return;
+    if (entry.preset || entry.shipsWithApp) {
+      toast(
+        "Shipped presets can’t be deleted here — change them in the Android seed, then re-export presets.json.",
+      );
+      return;
+    }
     // Close modal preview first — confirm() while a <dialog> is open often fails.
     site()?.closePreview?.();
     if (!window.confirm(`Delete ${entry.name || entry.id}? This commits to GitHub.`)) {

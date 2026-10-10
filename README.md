@@ -5,8 +5,10 @@ Public catalog of Tabata Core workout plans.
 Live site: https://tasosstyl1984.github.io/tabataCoreDrills/  
 Repo: https://github.com/tasosstyl1984/tabataCoreDrills
 
-This catalog mirrors the **24 shipped Android presets** (`default_*` ↔ `remote_*`).
-Online-only extras (football packs, wall-pass-only combos, etc.) were removed.
+**Public `catalog.json`** = online-only plans the Android app can download.
+**Admin `presets.json`** = the 24 shipped Android presets (`default_*` ↔ `remote_*`),
+shown only after Admin sign-in (not mixed into the app download catalog).
+Football-only packs stay out of shipped gym presets.
 
 ## How the site loads data
 
@@ -26,15 +28,22 @@ Online-only extras (football packs, wall-pass-only combos, etc.) were removed.
 4. Save / Delete create a **single git commit** (cover + drill + catalog when needed).
 5. After Save, the grid/preview update immediately from the API response; visitors use raw.
 
-## Regenerate from the app’s shipped presets
+## Regenerate shipped presets (admin view)
 
 From the TabataCore app repo root (sibling of this repo):
 
 ```bash
-flutter test tool/export_remote_drills_test.dart
+python tool/export_presets_catalog.py
 ```
 
-That writes shipped `default_*` templates into this repo’s `drills/` + `catalog.json`.
+That writes `drills/remote_*.json` for each shipped preset and `presets.json`
+(does **not** replace public `catalog.json`).
+
+To refresh plan cover WebPs from locked mockups:
+
+```bash
+python tool/export_locked_plan_covers.py
+```
 
 ## Add a plan manually
 

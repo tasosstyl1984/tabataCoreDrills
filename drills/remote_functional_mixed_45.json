@@ -1,0 +1,159 @@
+{
+  "id": "remote_functional_mixed_45",
+  "name": "Rope Swing Mix",
+  "description": "Rope, swings, and bodyweight mixed into one conditioning session \u2014 general fitness without a full gym.",
+  "createdAtMs": 1791622139758,
+  "sets": 4,
+  "repsPerSet": 6,
+  "workSeconds": 45,
+  "restBetweenRepsSeconds": 50,
+  "restBetweenSetsSeconds": 100,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "kettlebellSwings"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "pushups"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "mountainClimbers"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "boxJumps"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "plank"
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "kettlebellSwings"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "pushups"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "mountainClimbers"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "boxJumps"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "plank"
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "kettlebellSwings"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "pushups"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "mountainClimbers"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "boxJumps"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "plank"
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "kettlebellSwings"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "pushups"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "mountainClimbers"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "boxJumps"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "plank"
+          }
+        ],
+        "restAfterSetSeconds": 100
+      }
+    ]
+  }
+}

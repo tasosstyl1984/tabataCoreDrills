@@ -1,0 +1,159 @@
+{
+  "id": "remote_split_squat_lower_40",
+  "name": "Split Squat Lower",
+  "description": "Unilateral lower-body work for balance, glutes, and single-leg strength that shows in running and lifting.",
+  "createdAtMs": 1791622139758,
+  "sets": 4,
+  "repsPerSet": 6,
+  "workSeconds": 40,
+  "restBetweenRepsSeconds": 55,
+  "restBetweenSetsSeconds": 100,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "lunges"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "bulgarianSplitSquat"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "gluteBridge"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "calfRaises"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "squats"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "kettlebellGobletSquat"
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "lunges"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "bulgarianSplitSquat"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "gluteBridge"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "calfRaises"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "squats"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "kettlebellGobletSquat"
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "lunges"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "bulgarianSplitSquat"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "gluteBridge"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "calfRaises"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "squats"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "kettlebellGobletSquat"
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "lunges"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "bulgarianSplitSquat"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "gluteBridge"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "calfRaises"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "squats"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "kettlebellGobletSquat"
+          }
+        ],
+        "restAfterSetSeconds": 100
+      }
+    ]
+  }
+}

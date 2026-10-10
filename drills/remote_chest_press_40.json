@@ -1,0 +1,159 @@
+{
+  "id": "remote_chest_press_40",
+  "name": "Chest Press",
+  "description": "Horizontal pressing for chest strength and push power, from bench to bodyweight finishers.",
+  "createdAtMs": 1791622139758,
+  "sets": 4,
+  "repsPerSet": 6,
+  "workSeconds": 40,
+  "restBetweenRepsSeconds": 55,
+  "restBetweenSetsSeconds": 100,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "benchPress"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "inclineBench"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "dumbbellChestPress"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "pushups"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "pullover"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "benchPress"
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "benchPress"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "inclineBench"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "dumbbellChestPress"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "pushups"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "pullover"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "benchPress"
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "benchPress"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "inclineBench"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "dumbbellChestPress"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "pushups"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "pullover"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "benchPress"
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "benchPress"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "inclineBench"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "dumbbellChestPress"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "pushups"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "pullover"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "benchPress"
+          }
+        ],
+        "restAfterSetSeconds": 100
+      }
+    ]
+  }
+}
