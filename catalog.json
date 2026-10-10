@@ -1,6 +1,6 @@
 {
-  "version": 123,
-  "updatedAtMs": 1791585352100,
+  "version": 125,
+  "updatedAtMs": 1791621940448,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -138,9 +138,9 @@
       "id": "remote_hyrox_20",
       "name": "Hyrox Stations 20",
       "file": "drills/remote_hyrox_20.json",
-      "updatedAtMs": 1791585352100,
+      "updatedAtMs": 1791621940448,
       "category": "conditioning",
-      "description": "Conditioning · 2×8 · 50s work / 25s rest · 20:00. Gym Hyrox stations, no running. SkiErg is battle ropes, sled pull is DB row, burpee broad jumps are burpees, sandbag lunges are lunges. Battle ropes, Sled push, DB row, Burpees, Rowing, Farmer carry, Lunges, Wall balls.",
+      "description": "Hyrox-style stations \u00b7 3 sets \u00b7 50s work / 25s rest",
       "coverImage": "plan_covers/remote_hyrox_20.webp",
       "activityIds": [
         "battleRopes",
@@ -157,18 +157,18 @@
       "id": "remote_hyrox_30",
       "name": "Hyrox Stations 30",
       "file": "drills/remote_hyrox_30.json",
-      "updatedAtMs": 1791585352100,
+      "updatedAtMs": 1791621940448,
       "category": "conditioning",
-      "description": "Conditioning · 3×8 · 50s work / 24s rest · 29:54. Gym Hyrox stations, no running. SkiErg is battle ropes, sled pull is DB row, burpee broad jumps are burpees, sandbag lunges are lunges. Battle ropes, Sled push, DB row, Burpees, Rowing, Farmer carry, Lunges, Wall balls.",
+      "description": "Hyrox-style stations \u00b7 4 sets \u00b7 55s work / 25s rest",
       "coverImage": "plan_covers/remote_hyrox_30.webp",
       "activityIds": [
         "battleRopes",
         "sledPush",
-        "dumbbellRow",
+        "kettlebellDeadlift",
         "burpees",
         "rowing",
         "farmerCarry",
-        "lunges",
+        "jumpingLunges",
         "wallBalls"
       ]
     },
@@ -176,18 +176,18 @@
       "id": "remote_hyrox_40",
       "name": "Hyrox Stations 40",
       "file": "drills/remote_hyrox_40.json",
-      "updatedAtMs": 1791585352100,
+      "updatedAtMs": 1791621940448,
       "category": "conditioning",
-      "description": "Conditioning · 4×8 · 50s work / 24s rest · 39:52. Gym Hyrox stations, no running. SkiErg is battle ropes, sled pull is DB row, burpee broad jumps are burpees, sandbag lunges are lunges. Battle ropes, Sled push, DB row, Burpees, Rowing, Farmer carry, Lunges, Wall balls.",
+      "description": "Hyrox-style stations \u00b7 4 sets \u00b7 65s work / 25s rest",
       "coverImage": "plan_covers/remote_hyrox_40.webp",
       "activityIds": [
         "battleRopes",
         "sledPush",
-        "dumbbellRow",
+        "kettlebellDeadlift",
         "burpees",
         "rowing",
         "farmerCarry",
-        "lunges",
+        "jumpingLunges",
         "wallBalls"
       ]
     }

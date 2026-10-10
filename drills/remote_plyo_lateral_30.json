@@ -1,0 +1,159 @@
+{
+  "id": "remote_plyo_lateral_30",
+  "name": "Plyo Laterals",
+  "description": "Lateral hops and jumps for agility, change-of-direction power, and athletic footwork.",
+  "createdAtMs": 1791622139758,
+  "sets": 4,
+  "repsPerSet": 6,
+  "workSeconds": 40,
+  "restBetweenRepsSeconds": 50,
+  "restBetweenSetsSeconds": 90,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "squatJumps"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "jumpingLunges"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "skaterHops"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "highKnees"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "tuckJumps"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "boxJumps"
+          }
+        ],
+        "restAfterSetSeconds": 90
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "squatJumps"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "jumpingLunges"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "skaterHops"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "highKnees"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "tuckJumps"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "boxJumps"
+          }
+        ],
+        "restAfterSetSeconds": 90
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "squatJumps"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "jumpingLunges"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "skaterHops"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "highKnees"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "tuckJumps"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "boxJumps"
+          }
+        ],
+        "restAfterSetSeconds": 90
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "squatJumps"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "jumpingLunges"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "skaterHops"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "highKnees"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "tuckJumps"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "boxJumps"
+          }
+        ],
+        "restAfterSetSeconds": 90
+      }
+    ]
+  }
+}

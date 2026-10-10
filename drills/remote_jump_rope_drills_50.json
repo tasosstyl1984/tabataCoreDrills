@@ -1,0 +1,199 @@
+{
+  "id": "remote_jump_rope_drills_50",
+  "name": "Jump Rope Drills",
+  "description": "Steady jump-rope rounds for foot speed, coordination, and light cardio endurance you can do almost anywhere.",
+  "createdAtMs": 1791622139758,
+  "sets": 4,
+  "repsPerSet": 8,
+  "workSeconds": 45,
+  "restBetweenRepsSeconds": 45,
+  "restBetweenSetsSeconds": 90,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "jumpRope"
+          }
+        ],
+        "restAfterSetSeconds": 90
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "jumpRope"
+          }
+        ],
+        "restAfterSetSeconds": 90
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "jumpRope"
+          }
+        ],
+        "restAfterSetSeconds": 90
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "jumpRope"
+          }
+        ],
+        "restAfterSetSeconds": 90
+      }
+    ]
+  }
+}

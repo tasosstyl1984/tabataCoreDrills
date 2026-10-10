@@ -1,0 +1,154 @@
+{
+  "id": "remote_combo_rope_kettle_core_40",
+  "name": "Rope Kettle Core",
+  "description": "Jump rope, kettlebells, and core in one stack \u2014 a complete conditioning day with strength baked in.",
+  "createdAtMs": 1791622139758,
+  "sets": 3,
+  "repsPerSet": 8,
+  "workSeconds": 45,
+  "restBetweenRepsSeconds": 50,
+  "restBetweenSetsSeconds": 100,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "jumpRope"
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "kettlebellSwings"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "kettlebellGobletSquat"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "kettlebellCleanPress"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "kettlebellRow"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "kettlebellSnatch"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "kettlebellTurkishGetUp"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "kettlebellSwings"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "kettlebellGobletSquat"
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "pushups"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "abs"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "pushups"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "abs"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "pushups"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "abs"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "pushups"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 50,
+            "activityId": "abs"
+          }
+        ],
+        "restAfterSetSeconds": 100
+      }
+    ]
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "id": "remote_core_holds_40",
+  "name": "Core Holds",
+  "description": "Isometric and controlled core holds for posture, stability, and injury-resilient trunk strength.",
+  "createdAtMs": 1791622139758,
+  "sets": 4,
+  "repsPerSet": 6,
+  "workSeconds": 40,
+  "restBetweenRepsSeconds": 50,
+  "restBetweenSetsSeconds": 90,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plank"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "sidePlank"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "hollowHold"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "deadBug"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "birdDog"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "russianTwists"
+          }
+        ],
+        "restAfterSetSeconds": 90
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plank"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "sidePlank"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "hollowHold"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "deadBug"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "birdDog"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "russianTwists"
+          }
+        ],
+        "restAfterSetSeconds": 90
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plank"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "sidePlank"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "hollowHold"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "deadBug"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "birdDog"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "russianTwists"
+          }
+        ],
+        "restAfterSetSeconds": 90
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plank"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "sidePlank"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "hollowHold"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "deadBug"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "birdDog"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "russianTwists"
+          }
+        ],
+        "restAfterSetSeconds": 90
+      }
+    ]
+  }
+}

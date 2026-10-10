@@ -1,0 +1,464 @@
+{
+  "version": 1,
+  "updatedAtMs": 1791622139758,
+  "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
+  "drills": [
+    {
+      "id": "remote_boxing_rounds_30",
+      "name": "Boxing Rounds",
+      "file": "drills/remote_boxing_rounds_30.json",
+      "updatedAtMs": 1791622139758,
+      "category": "boxing",
+      "description": "Shadowboxing rounds for fight-style cardio, footwork, rhythm, and upper-body endurance.",
+      "coverImage": "plan_covers/default_boxing_rounds_30.webp",
+      "activityIds": [
+        "shadowBoxing"
+      ],
+      "preset": true,
+      "shipsWithApp": true,
+      "defaultId": "default_boxing_rounds_30"
+    },
+    {
+      "id": "remote_chest_fly_circuit_40",
+      "name": "Chest Fly Circuit",
+      "file": "drills/remote_chest_fly_circuit_40.json",
+      "updatedAtMs": 1791622139758,
+      "category": "chest",
+      "description": "Fly and press circuit for chest shape, controlled range, and pressing endurance.",
+      "coverImage": "plan_covers/default_chest_fly_circuit_40.webp",
+      "activityIds": [
+        "chestFlies",
+        "inclineFlies",
+        "dumbbellChestPress",
+        "pushups",
+        "pullover"
+      ],
+      "preset": true,
+      "shipsWithApp": true,
+      "defaultId": "default_chest_fly_circuit_40"
+    },
+    {
+      "id": "remote_chest_press_40",
+      "name": "Chest Press",
+      "file": "drills/remote_chest_press_40.json",
+      "updatedAtMs": 1791622139758,
+      "category": "chest",
+      "description": "Horizontal pressing for chest strength and push power, from bench to bodyweight finishers.",
+      "coverImage": "plan_covers/default_chest_press_40.webp",
+      "activityIds": [
+        "benchPress",
+        "inclineBench",
+        "dumbbellChestPress",
+        "pushups",
+        "pullover"
+      ],
+      "preset": true,
+      "shipsWithApp": true,
+      "defaultId": "default_chest_press_40"
+    },
+    {
+      "id": "remote_core_holds_40",
+      "name": "Core Holds",
+      "file": "drills/remote_core_holds_40.json",
+      "updatedAtMs": 1791622139758,
+      "category": "core",
+      "description": "Isometric and controlled core holds for posture, stability, and injury-resilient trunk strength.",
+      "coverImage": "plan_covers/default_core_holds_40.webp",
+      "activityIds": [
+        "plank",
+        "sidePlank",
+        "hollowHold",
+        "deadBug",
+        "birdDog",
+        "russianTwists"
+      ],
+      "preset": true,
+      "shipsWithApp": true,
+      "defaultId": "default_core_holds_40"
+    },
+    {
+      "id": "remote_core_rotation_circuit_40",
+      "name": "Core Rotation",
+      "file": "drills/remote_core_rotation_circuit_40.json",
+      "updatedAtMs": 1791622139758,
+      "category": "core",
+      "description": "Core circuit mixing rotation, abs, and holds for a stronger, more stable midsection.",
+      "coverImage": "plan_covers/default_core_rotation_circuit_40.webp",
+      "activityIds": [
+        "plateRotations",
+        "abs",
+        "plank",
+        "hangingKneeRaises",
+        "pushups"
+      ],
+      "preset": true,
+      "shipsWithApp": true,
+      "defaultId": "default_core_rotation_circuit_40"
+    },
+    {
+      "id": "remote_dumbbell_arms_40",
+      "name": "Dumbbell Arms",
+      "file": "drills/remote_dumbbell_arms_40.json",
+      "updatedAtMs": 1791622139758,
+      "category": "dumbbell",
+      "description": "Focused dumbbell arm work for biceps and triceps \u2014 pump, control, and upper-arm strength.",
+      "coverImage": "plan_covers/default_dumbbell_arms_40.webp",
+      "activityIds": [
+        "bicepCurls",
+        "hammerCurls",
+        "concentrationCurls",
+        "tricepKickbacks",
+        "overheadTricepExtension"
+      ],
+      "preset": true,
+      "shipsWithApp": true,
+      "defaultId": "default_dumbbell_arms_40"
+    },
+    {
+      "id": "remote_engine_conditioning_45",
+      "name": "Engine Conditioning",
+      "file": "drills/remote_engine_conditioning_45.json",
+      "updatedAtMs": 1791622139758,
+      "category": "conditioning",
+      "description": "Hard conditioning with ropes, carries, and slam-style work to raise work capacity and engine fitness.",
+      "coverImage": "plan_covers/default_engine_conditioning_45.webp",
+      "activityIds": [
+        "battleRopes",
+        "medBallSlams",
+        "farmerCarry",
+        "sledPush",
+        "rowing",
+        "mountainClimbers"
+      ],
+      "preset": true,
+      "shipsWithApp": true,
+      "defaultId": "default_engine_conditioning_45"
+    },
+    {
+      "id": "remote_hiit_strength_30",
+      "name": "HIIT Strength",
+      "file": "drills/remote_hiit_strength_30.json",
+      "updatedAtMs": 1791622139758,
+      "category": "strength",
+      "description": "High-intensity strength circuits \u2014 power and conditioning in a compact, hard-hitting session.",
+      "coverImage": "plan_covers/default_hiit_strength_30.webp",
+      "activityIds": [
+        "burpees",
+        "thrusters",
+        "boxJumps",
+        "medBallSlams",
+        "farmerCarry",
+        "mountainClimbers"
+      ],
+      "preset": true,
+      "shipsWithApp": true,
+      "defaultId": "default_hiit_strength_30"
+    },
+    {
+      "id": "remote_jump_rope_drills_50",
+      "name": "Jump Rope Drills",
+      "file": "drills/remote_jump_rope_drills_50.json",
+      "updatedAtMs": 1791622139758,
+      "category": "conditioning",
+      "description": "Steady jump-rope rounds for foot speed, coordination, and light cardio endurance you can do almost anywhere.",
+      "coverImage": "plan_covers/default_jump_rope_drills_50.webp",
+      "activityIds": [
+        "jumpRope"
+      ],
+      "preset": true,
+      "shipsWithApp": true,
+      "defaultId": "default_jump_rope_drills_50"
+    },
+    {
+      "id": "remote_kb_boxing_complex",
+      "name": "KB Boxing Complex",
+      "file": "drills/remote_kb_boxing_complex.json",
+      "updatedAtMs": 1791622139758,
+      "category": "combos",
+      "description": "Shadowboxing mixed with kettlebell work for fight fitness, punch endurance, and functional strength.",
+      "coverImage": "plan_covers/default_kb_boxing_complex.webp",
+      "activityIds": [
+        "shadowBoxing",
+        "kettlebellSwings",
+        "kettlebellHalo",
+        "kettlebellCleanPress",
+        "kettlebellRow",
+        "kettlebellSnatch",
+        "kettlebellGorillaRow"
+      ],
+      "preset": true,
+      "shipsWithApp": true,
+      "defaultId": "default_kb_boxing_complex"
+    },
+    {
+      "id": "remote_kb_complex_40",
+      "name": "KB Complex",
+      "file": "drills/remote_kb_complex_40.json",
+      "updatedAtMs": 1791622139758,
+      "category": "kettlebell",
+      "description": "Linked kettlebell complexes that keep the heart rate high while building strength, grip, and work capacity.",
+      "coverImage": "plan_covers/default_kb_complex_40.webp",
+      "activityIds": [
+        "kettlebellSwings",
+        "kettlebellGobletSquat",
+        "kettlebellCleanPress",
+        "kettlebellRow",
+        "kettlebellSnatch"
+      ],
+      "preset": true,
+      "shipsWithApp": true,
+      "defaultId": "default_kb_complex_40"
+    },
+    {
+      "id": "remote_kettlebell_drills_40",
+      "name": "Kettlebell Drills",
+      "file": "drills/remote_kettlebell_drills_40.json",
+      "updatedAtMs": 1791622139758,
+      "category": "kettlebell",
+      "description": "Foundational kettlebell moves to build hip power, full-body strength, and confident bell handling.",
+      "coverImage": "plan_covers/default_kettlebell_drills_40.webp",
+      "activityIds": [
+        "kettlebellSwings",
+        "kettlebellGobletSquat",
+        "kettlebellCleanPress",
+        "kettlebellRow",
+        "kettlebellTurkishGetUp"
+      ],
+      "preset": true,
+      "shipsWithApp": true,
+      "defaultId": "default_kettlebell_drills_40"
+    },
+    {
+      "id": "remote_locomotion_40",
+      "name": "Locomotion",
+      "file": "drills/remote_locomotion_40.json",
+      "updatedAtMs": 1791622139758,
+      "category": "conditioning",
+      "description": "Crawls and carries to train movement quality, shoulder stability, and total-body control.",
+      "coverImage": "plan_covers/default_locomotion_40.webp",
+      "activityIds": [
+        "bearCrawl",
+        "inchworm",
+        "mountainClimbers",
+        "farmerCarry",
+        "plank",
+        "jumpingJacks"
+      ],
+      "preset": true,
+      "shipsWithApp": true,
+      "defaultId": "default_locomotion_40"
+    },
+    {
+      "id": "remote_lower_body_functional_40",
+      "name": "Lower Functional",
+      "file": "drills/remote_lower_body_functional_40.json",
+      "updatedAtMs": 1791622139758,
+      "category": "strength",
+      "description": "Squats, lunges, and thrusters for strong, usable legs that transfer to sport and daily movement.",
+      "coverImage": "plan_covers/default_lower_body_functional_40.webp",
+      "activityIds": [
+        "squats",
+        "lunges",
+        "stepUps",
+        "thrusters",
+        "wallBalls",
+        "kettlebellGobletSquat"
+      ],
+      "preset": true,
+      "shipsWithApp": true,
+      "defaultId": "default_lower_body_functional_40"
+    },
+    {
+      "id": "remote_plate_rotations_40",
+      "name": "Plate Rotations",
+      "file": "drills/remote_plate_rotations_40.json",
+      "updatedAtMs": 1791622139758,
+      "category": "core",
+      "description": "Rotational plate work to train core control, anti-rotation strength, and trunk mobility under load.",
+      "coverImage": "plan_covers/default_plate_rotations_40.webp",
+      "activityIds": [
+        "plateRotations"
+      ],
+      "preset": true,
+      "shipsWithApp": true,
+      "defaultId": "default_plate_rotations_40"
+    },
+    {
+      "id": "remote_plyo_lateral_30",
+      "name": "Plyo Laterals",
+      "file": "drills/remote_plyo_lateral_30.json",
+      "updatedAtMs": 1791622139758,
+      "category": "plyometrics",
+      "description": "Lateral hops and jumps for agility, change-of-direction power, and athletic footwork.",
+      "coverImage": "plan_covers/default_plyo_lateral_30.webp",
+      "activityIds": [
+        "squatJumps",
+        "jumpingLunges",
+        "skaterHops",
+        "highKnees",
+        "tuckJumps",
+        "boxJumps"
+      ],
+      "preset": true,
+      "shipsWithApp": true,
+      "defaultId": "default_plyo_lateral_30"
+    },
+    {
+      "id": "remote_plyo_power_30",
+      "name": "Plyo Power",
+      "file": "drills/remote_plyo_power_30.json",
+      "updatedAtMs": 1791622139758,
+      "category": "plyometrics",
+      "description": "Explosive jumps and spring drills to develop athletic power, reactivity, and takeoff strength.",
+      "coverImage": "plan_covers/default_plyo_power_30.webp",
+      "activityIds": [
+        "boxJumps",
+        "broadJumps",
+        "tuckJumps",
+        "highKnees",
+        "mountainClimbers"
+      ],
+      "preset": true,
+      "shipsWithApp": true,
+      "defaultId": "default_plyo_power_30"
+    },
+    {
+      "id": "remote_push_pull_core_40",
+      "name": "Push Pull Core",
+      "file": "drills/remote_push_pull_core_40.json",
+      "updatedAtMs": 1791622139758,
+      "category": "core",
+      "description": "Upper-body push and pull paired with core finishers for balanced strength and midsection control.",
+      "coverImage": "plan_covers/default_push_pull_core_40.webp",
+      "activityIds": [
+        "pushups",
+        "pullUps",
+        "dips",
+        "plank",
+        "hangingKneeRaises"
+      ],
+      "preset": true,
+      "shipsWithApp": true,
+      "defaultId": "default_push_pull_core_40"
+    },
+    {
+      "id": "remote_combo_rope_kettle_core_40",
+      "name": "Rope Kettle Core",
+      "file": "drills/remote_combo_rope_kettle_core_40.json",
+      "updatedAtMs": 1791622139758,
+      "category": "combos",
+      "description": "Jump rope, kettlebells, and core in one stack \u2014 a complete conditioning day with strength baked in.",
+      "coverImage": "plan_covers/default_combo_rope_kettle_core_40.webp",
+      "activityIds": [
+        "jumpRope",
+        "kettlebellSwings",
+        "kettlebellGobletSquat",
+        "kettlebellCleanPress",
+        "kettlebellRow",
+        "kettlebellSnatch",
+        "kettlebellTurkishGetUp",
+        "pushups",
+        "abs"
+      ],
+      "preset": true,
+      "shipsWithApp": true,
+      "defaultId": "default_combo_rope_kettle_core_40"
+    },
+    {
+      "id": "remote_functional_mixed_45",
+      "name": "Rope Swing Mix",
+      "file": "drills/remote_functional_mixed_45.json",
+      "updatedAtMs": 1791622139758,
+      "category": "conditioning",
+      "description": "Rope, swings, and bodyweight mixed into one conditioning session \u2014 general fitness without a full gym.",
+      "coverImage": "plan_covers/default_functional_mixed_45.webp",
+      "activityIds": [
+        "jumpRope",
+        "kettlebellSwings",
+        "pushups",
+        "mountainClimbers",
+        "boxJumps",
+        "plank"
+      ],
+      "preset": true,
+      "shipsWithApp": true,
+      "defaultId": "default_functional_mixed_45"
+    },
+    {
+      "id": "remote_dumbbell_shoulders_40",
+      "name": "Shoulders and Back",
+      "file": "drills/remote_dumbbell_shoulders_40.json",
+      "updatedAtMs": 1791622139758,
+      "category": "dumbbell",
+      "description": "Press and pull with dumbbells to build shoulder strength, upper-back posture, and balanced pulling power.",
+      "coverImage": "plan_covers/default_dumbbell_shoulders_40.webp",
+      "activityIds": [
+        "dumbbellShoulderPress",
+        "lateralRaises",
+        "frontRaises",
+        "dumbbellRow",
+        "reverseFly"
+      ],
+      "preset": true,
+      "shipsWithApp": true,
+      "defaultId": "default_dumbbell_shoulders_40"
+    },
+    {
+      "id": "remote_split_squat_lower_40",
+      "name": "Split Squat Lower",
+      "file": "drills/remote_split_squat_lower_40.json",
+      "updatedAtMs": 1791622139758,
+      "category": "strength",
+      "description": "Unilateral lower-body work for balance, glutes, and single-leg strength that shows in running and lifting.",
+      "coverImage": "plan_covers/default_split_squat_lower_40.webp",
+      "activityIds": [
+        "lunges",
+        "bulgarianSplitSquat",
+        "gluteBridge",
+        "calfRaises",
+        "squats",
+        "kettlebellGobletSquat"
+      ],
+      "preset": true,
+      "shipsWithApp": true,
+      "defaultId": "default_split_squat_lower_40"
+    },
+    {
+      "id": "remote_tabata_classic",
+      "name": "Tabata Classic",
+      "file": "drills/remote_tabata_classic.json",
+      "updatedAtMs": 1791622139758,
+      "category": "classic",
+      "description": "The original 20-on / 10-off protocol \u2014 a short all-out cardio blast to build anaerobic capacity and mental grit.",
+      "coverImage": "plan_covers/default_tabata_classic.webp",
+      "activityIds": [],
+      "preset": true,
+      "shipsWithApp": true,
+      "defaultId": "default_tabata_classic"
+    },
+    {
+      "id": "remote_combo_full_stack_50",
+      "name": "Wall Rope Stack",
+      "file": "drills/remote_combo_full_stack_50.json",
+      "updatedAtMs": 1791622139758,
+      "category": "combos",
+      "description": "Extended battle-rope and kettlebell stack for a long mixed session when you want volume and variety.",
+      "coverImage": "plan_covers/default_combo_full_stack_50.webp",
+      "activityIds": [
+        "battleRopes",
+        "jumpRope",
+        "kettlebellSwings",
+        "kettlebellGobletSquat",
+        "kettlebellCleanPress",
+        "kettlebellRow",
+        "kettlebellSnatch",
+        "kettlebellTurkishGetUp",
+        "pushups",
+        "abs"
+      ],
+      "preset": true,
+      "shipsWithApp": true,
+      "defaultId": "default_combo_full_stack_50"
+    }
+  ]
+}

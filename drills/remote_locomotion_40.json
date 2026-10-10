@@ -1,0 +1,159 @@
+{
+  "id": "remote_locomotion_40",
+  "name": "Locomotion",
+  "description": "Crawls and carries to train movement quality, shoulder stability, and total-body control.",
+  "createdAtMs": 1791622139758,
+  "sets": 4,
+  "repsPerSet": 6,
+  "workSeconds": 40,
+  "restBetweenRepsSeconds": 50,
+  "restBetweenSetsSeconds": 100,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "bearCrawl"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "inchworm"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "mountainClimbers"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "farmerCarry"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plank"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "jumpingJacks"
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "bearCrawl"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "inchworm"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "mountainClimbers"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "farmerCarry"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plank"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "jumpingJacks"
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "bearCrawl"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "inchworm"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "mountainClimbers"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "farmerCarry"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plank"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "jumpingJacks"
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "bearCrawl"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "inchworm"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "mountainClimbers"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "farmerCarry"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plank"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "jumpingJacks"
+          }
+        ],
+        "restAfterSetSeconds": 100
+      }
+    ]
+  }
+}

@@ -1,0 +1,159 @@
+{
+  "id": "remote_kettlebell_drills_40",
+  "name": "Kettlebell Drills",
+  "description": "Foundational kettlebell moves to build hip power, full-body strength, and confident bell handling.",
+  "createdAtMs": 1791622139758,
+  "sets": 4,
+  "repsPerSet": 6,
+  "workSeconds": 40,
+  "restBetweenRepsSeconds": 55,
+  "restBetweenSetsSeconds": 100,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "kettlebellSwings"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "kettlebellGobletSquat"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "kettlebellCleanPress"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "kettlebellRow"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "kettlebellSwings"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "kettlebellTurkishGetUp"
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "kettlebellSwings"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "kettlebellGobletSquat"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "kettlebellCleanPress"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "kettlebellRow"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "kettlebellSwings"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "kettlebellTurkishGetUp"
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "kettlebellSwings"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "kettlebellGobletSquat"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "kettlebellCleanPress"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "kettlebellRow"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "kettlebellSwings"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "kettlebellTurkishGetUp"
+          }
+        ],
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "kettlebellSwings"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "kettlebellGobletSquat"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "kettlebellCleanPress"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "kettlebellRow"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "kettlebellSwings"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 55,
+            "activityId": "kettlebellTurkishGetUp"
+          }
+        ],
+        "restAfterSetSeconds": 100
+      }
+    ]
+  }
+}

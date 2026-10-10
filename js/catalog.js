@@ -20,6 +20,8 @@
   const exerciseCloseBtn = document.getElementById("exercise-close");
 
   let catalog = null;
+  /** Shipped Android presets (admin-only overlay; not in public catalog.json). */
+  let presetsCatalog = null;
   let activeCategory = "all";
   let previewEntry = null;
   const templateCache = new Map();
@@ -27,6 +29,22 @@
   let guidesCopy = {};
   let activityCatalog = [];
   let guidesAssetVersion = "";
+
+  function isAdminAuthed() {
+    return document.body.classList.contains("admin-authed");
+  }
+
+  function visibleDrills() {
+    const online = catalog?.drills || [];
+    if (!isAdminAuthed()) return online;
+    const presets = presetsCatalog?.drills || [];
+    if (!presets.length) return online;
+    const onlineIds = new Set(online.map((d) => d.id));
+    const extra = presets
+      .filter((d) => d && d.id && !onlineIds.has(d.id))
+      .map((d) => ({ ...d, preset: true, shipsWithApp: true }));
+    return [...extra, ...online];
+  }
 
   function themePreference() {
     try {
@@ -111,7 +129,7 @@
 
   function filteredDrills() {
     const q = (searchEl?.value || "").trim().toLowerCase();
-    return (catalog?.drills || []).filter((d) => {
+    return visibleDrills().filter((d) => {
       if (activeCategory !== "all" && d.category !== activeCategory) return false;
       if (!q) return true;
       const acts = (d.activityIds || []).join(" ");
@@ -467,9 +485,13 @@
       const coverHtml = cover
         ? `<img class="card-cover" src="${escapeAttr(cover)}" alt="" loading="lazy" />`
         : "";
+      const isPreset = Boolean(d.preset || d.shipsWithApp);
+      const badge = isPreset
+        ? `${d.category || "plan"} · preset`
+        : d.category || "plan";
       card.innerHTML = `
         ${coverHtml}
-        <span class="badge">${escapeHtml(d.category || "plan")}</span>
+        <span class="badge">${escapeHtml(badge)}</span>
         <h3>${escapeHtml(d.name || d.id)}</h3>
         <p>${escapeHtml(d.description || "")}</p>
       `;
@@ -490,6 +512,10 @@
       deleteBtn.type = "button";
       deleteBtn.className = "btn-delete-admin";
       deleteBtn.textContent = "Delete";
+      if (isPreset) {
+        deleteBtn.disabled = true;
+        deleteBtn.title = "Shipped presets stay in the app seed — not deleted here";
+      }
 
       const open = (e) => {
         if (e) {
@@ -620,6 +646,30 @@
       : `Catalog v${version}`;
   }
 
+  async function reloadPresets() {
+    const bust = `_=${Date.now()}`;
+    const url = new URL(`presets.json?${bust}`, remoteBaseUrl()).toString();
+    try {
+      const res = await fetch(url, { cache: "no-store" });
+      if (!res.ok) {
+        presetsCatalog = null;
+        return null;
+      }
+      presetsCatalog = await res.json();
+      return presetsCatalog;
+    } catch (_) {
+      presetsCatalog = null;
+      return null;
+    }
+  }
+
+  function refreshVisibleCatalog() {
+    const drills = visibleDrills();
+    renderChips(categoriesFrom(drills));
+    renderGrid();
+    updateCatalogMeta();
+  }
+
   async function reloadCatalog({ fromRemote = false } = {}) {
     // fromRemote: drop in-memory templates so preview/edit re-fetch from raw.
     const kept = fromRemote ? new Map() : new Map(templateCache);
@@ -635,9 +685,8 @@
     for (const [id, tpl] of kept) {
       if (!templateCache.has(id)) templateCache.set(id, tpl);
     }
-    renderChips(categoriesFrom(catalog.drills || []));
-    renderGrid();
-    updateCatalogMeta();
+    await reloadPresets();
+    refreshVisibleCatalog();
     return catalog;
   }
 
@@ -645,10 +694,15 @@
   function applyCatalog(next) {
     if (!next || typeof next !== "object") return;
     catalog = next;
-    renderChips(categoriesFrom(catalog.drills || []));
-    renderGrid();
-    updateCatalogMeta();
+    refreshVisibleCatalog();
     return catalog;
+  }
+
+  function applyPresets(next) {
+    if (!next || typeof next !== "object") return;
+    presetsCatalog = next;
+    refreshVisibleCatalog();
+    return presetsCatalog;
   }
 
   async function refreshCatalogClick() {
@@ -740,11 +794,17 @@
 
   if (searchEl) searchEl.addEventListener("input", () => renderGrid());
 
+  window.addEventListener("tabata-admin-auth", () => {
+    refreshVisibleCatalog();
+  });
+
   window.TabataDrillsSite = {
     setStatus,
     reloadCatalog,
     applyCatalog,
+    applyPresets,
     getCatalog: () => catalog,
+    getPresets: () => presetsCatalog,
     getPreviewEntry: () => previewEntry,
     closePreview,
     openPreview,

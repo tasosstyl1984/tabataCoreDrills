@@ -1,0 +1,199 @@
+{
+  "id": "remote_plate_rotations_40",
+  "name": "Plate Rotations",
+  "description": "Rotational plate work to train core control, anti-rotation strength, and trunk mobility under load.",
+  "createdAtMs": 1791622139758,
+  "sets": 4,
+  "repsPerSet": 8,
+  "workSeconds": 40,
+  "restBetweenRepsSeconds": 50,
+  "restBetweenSetsSeconds": 90,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plateRotations"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plateRotations"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plateRotations"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plateRotations"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plateRotations"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plateRotations"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plateRotations"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plateRotations"
+          }
+        ],
+        "restAfterSetSeconds": 90
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plateRotations"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plateRotations"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plateRotations"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plateRotations"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plateRotations"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plateRotations"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plateRotations"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plateRotations"
+          }
+        ],
+        "restAfterSetSeconds": 90
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plateRotations"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plateRotations"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plateRotations"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plateRotations"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plateRotations"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plateRotations"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plateRotations"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plateRotations"
+          }
+        ],
+        "restAfterSetSeconds": 90
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plateRotations"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plateRotations"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plateRotations"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plateRotations"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plateRotations"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plateRotations"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plateRotations"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 50,
+            "activityId": "plateRotations"
+          }
+        ],
+        "restAfterSetSeconds": 90
+      }
+    ]
+  }
+}
