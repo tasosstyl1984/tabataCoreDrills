@@ -1,6 +1,7 @@
 {
   "id": "remote_hyrox_30",
   "name": "Hyrox Stations 30",
+  "description": "Mid-length Hyrox station circuit with more volume — builds engine fitness and station familiarity for Peak effort.",
   "createdAtMs": 1791621940448,
   "sets": 4,
   "repsPerSet": 8,

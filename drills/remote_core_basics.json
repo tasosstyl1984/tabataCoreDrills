@@ -1,6 +1,7 @@
 {
   "id": "remote_core_basics",
   "name": "Core Basics",
+  "description": "Starter core circuit with abs, planks, side plank, and twists for midsection strength and posture.",
   "createdAtMs": 1791564300000,
   "sets": 3,
   "repsPerSet": 5,

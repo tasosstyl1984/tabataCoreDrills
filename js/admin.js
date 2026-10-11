@@ -187,7 +187,11 @@
 
   function uniqueId(preferred) {
     const catalog = site()?.getCatalog();
-    const ids = new Set((catalog?.drills || []).map((d) => d.id));
+    const presets = site()?.getPresets?.();
+    const ids = new Set([
+      ...(catalog?.drills || []).map((d) => d.id),
+      ...(presets?.drills || []).map((d) => d.id),
+    ]);
     let id = preferred.startsWith("remote_") ? preferred : `remote_${preferred}`;
     if (!ids.has(id)) return id;
     let i = 2;
@@ -770,10 +774,20 @@
     editingEntry = entry;
     categoryManual = Boolean(entry?.category);
     activityGroupFilter = null;
-    if (editorTitle) editorTitle.textContent = entry ? `Edit ${entry.name}` : "New plan";
+    const isPreset = Boolean(entry?.preset || entry?.shipsWithApp);
+    if (editorTitle) {
+      editorTitle.textContent = entry
+        ? isPreset
+          ? `Edit preset · ${entry.name}`
+          : `Edit ${entry.name}`
+        : "New plan";
+    }
     if (editName) editName.value = entry?.name || template?.name || "";
     if (editCategory) editCategory.value = entry?.category || "";
-    if (editDescription) editDescription.value = entry?.description || "";
+    if (editDescription) {
+      editDescription.value =
+        entry?.description || template?.description || "";
+    }
     resetCoverUi(entry?.coverImage || "");
     plan = normalizePlan(template?.structuredPlan || classicStarterPlan());
     resetCollapseState({ expandFirst: true });
@@ -948,6 +962,7 @@
       (activityIds[0] ? `exercise_guides/${activityIds[0]}.webp` : "exercise_guides/burpees.webp");
     const name = (editName?.value || "").trim() || "Untitled plan";
     const now = Date.now();
+    const description = (editDescription?.value || "").trim();
     const template = {
       id,
       name,
@@ -975,6 +990,7 @@
         })),
       },
     };
+    if (description) template.description = description;
     if (editingEntry && template.createdAtMs === undefined) {
       // keep createdAtMs from existing file when available via fetch later
     }
@@ -984,7 +1000,7 @@
       file: `drills/${id}.json`,
       updatedAtMs: now,
       category: (editCategory?.value || "").trim() || "custom",
-      description: (editDescription?.value || "").trim(),
+      description,
       coverImage: cover,
       activityIds,
     };
@@ -1432,9 +1448,23 @@
       let newCoverPath = null;
       let newCoverBase64 = null;
 
+      const savingPreset = Boolean(
+        editingEntry?.preset || editingEntry?.shipsWithApp,
+      );
+      const defaultId =
+        editingEntry?.defaultId ||
+        (id.startsWith("remote_")
+          ? `default_${id.slice("remote_".length)}`
+          : null);
+
       if (pendingCoverBlob) {
         coverBlobForLocal = pendingCoverBlob;
-        newCoverPath = `plan_covers/${id}_${Date.now()}.webp`;
+        // Presets keep a stable default_* cover path so the Android seed
+        // does not need a path change on every cover refresh.
+        newCoverPath =
+          savingPreset && defaultId
+            ? `plan_covers/${defaultId}.webp`
+            : `plan_covers/${id}_${Date.now()}.webp`;
         newCoverBase64 = await encodeBlob(pendingCoverBlob);
         if (editCover) editCover.value = newCoverPath;
         clearPendingCover();
@@ -1459,20 +1489,13 @@
       }
 
       const drillPath = `drills/${id}.json`;
-      const savingPreset = Boolean(
-        editingEntry?.preset || editingEntry?.shipsWithApp,
-      );
       // Presets stay out of public catalog.json (app download list).
       const catalogEntryToSave = savingPreset
         ? {
             ...catalogEntry,
             preset: true,
             shipsWithApp: true,
-            defaultId:
-              editingEntry?.defaultId ||
-              (id.startsWith("remote_")
-                ? `default_${id.slice("remote_".length)}`
-                : undefined),
+            defaultId: defaultId || undefined,
             description:
               catalogEntry.description || "Shipped Android preset",
           }
@@ -1588,7 +1611,7 @@
       hideModal(editorDialog);
       toast(
         savingPreset
-          ? `Saved preset ${id} (admin view only — not in app catalog)`
+          ? `Saved preset ${id} — sync into TabataCore for the next Android release`
           : `Saved ${id} — live on site via GitHub raw`,
       );
       try {
@@ -1625,7 +1648,7 @@
     if (!entry?.id || deleteInFlight) return;
     if (entry.preset || entry.shipsWithApp) {
       toast(
-        "Shipped presets can’t be deleted here — change them in the Android seed, then re-export presets.json.",
+        "Presets can’t be deleted here — Edit to change them, then sync into TabataCore for the next release.",
       );
       return;
     }

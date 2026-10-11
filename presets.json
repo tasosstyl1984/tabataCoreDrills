@@ -438,7 +438,7 @@
     },
     {
       "id": "remote_combo_full_stack_50",
-      "name": "Wall Rope Stack",
+      "name": "Rope Stack",
       "file": "drills/remote_combo_full_stack_50.json",
       "updatedAtMs": 1791622139758,
       "category": "combos",

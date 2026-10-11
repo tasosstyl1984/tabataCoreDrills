@@ -1,6 +1,7 @@
 {
   "id": "remote_hyrox_40",
   "name": "Hyrox Stations 40",
+  "description": "Longer Hyrox station session with Peak-level volume — sustained work capacity across the full station mix.",
   "createdAtMs": 1791621940448,
   "sets": 4,
   "repsPerSet": 8,

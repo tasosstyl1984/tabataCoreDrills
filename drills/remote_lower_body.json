@@ -1,6 +1,7 @@
 {
   "id": "remote_lower_body",
   "name": "Lower Body",
+  "description": "Legs and hips focus with lunges, squats, kettlebell work, and plyo finishers for stronger, more athletic lower body.",
   "createdAtMs": 1791564300000,
   "sets": 5,
   "repsPerSet": 6,
