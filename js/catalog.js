@@ -514,7 +514,8 @@
       deleteBtn.textContent = "Delete";
       if (isPreset) {
         deleteBtn.disabled = true;
-        deleteBtn.title = "Shipped presets stay in the app seed — not deleted here";
+        deleteBtn.title =
+          "Presets can’t be deleted here — use Edit, then sync into TabataCore";
       }
 
       const open = (e) => {

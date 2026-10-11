@@ -6,9 +6,27 @@ Live site: https://tasosstyl1984.github.io/tabataCoreDrills/
 Repo: https://github.com/tasosstyl1984/tabataCoreDrills
 
 **Public `catalog.json`** = online-only plans the Android app can download.
-**Admin `presets.json`** = the 24 shipped Android presets (`default_*` ↔ `remote_*`),
+**Admin `presets.json`** = the shipped Android presets (`default_*` ↔ `remote_*`),
 shown only after Admin sign-in (not mixed into the app download catalog).
 Football-only packs stay out of shipped gym presets.
+
+### Edit presets in Admin → devices pick up updates
+
+1. Sign in as Admin on this site.
+2. Open a card marked **preset** → **Edit** (name, description, cover, rounds).
+3. **Save** writes `drills/remote_*.json` + `presets.json` (not `catalog.json`).
+4. The Android app fetches `presets.json` on catalog refresh and silently updates
+   matching shipped `default_*` plans when `updatedAtMs` is newer. User-built
+   custom plans are never touched.
+5. Optionally sync into the APK seed for new installs / offline:
+
+```bash
+# from TabataCore repo root (sibling of this repo)
+python tool/import_presets_from_drills.py
+```
+
+Presets cannot be deleted from the site (they ship in the APK). Online-only plans
+still use **New plan** / Delete against `catalog.json`.
 
 ## How the site loads data
 
@@ -28,16 +46,15 @@ Football-only packs stay out of shipped gym presets.
 4. Save / Delete create a **single git commit** (cover + drill + catalog when needed).
 5. After Save, the grid/preview update immediately from the API response; visitors use raw.
 
-## Regenerate shipped presets (admin view)
+## Sync direction
 
-From the TabataCore app repo root (sibling of this repo):
+| Direction | When | Command (from TabataCore root) |
+|-----------|------|--------------------------------|
+| **App → site** | After changing the Dart seed locally | `python tool/export_presets_catalog.py` |
+| **Site → app** | After Admin edits presets on this site | `python tool/import_presets_from_drills.py` |
 
-```bash
-python tool/export_presets_catalog.py
-```
-
-That writes `drills/remote_*.json` for each shipped preset and `presets.json`
-(does **not** replace public `catalog.json`).
+Export writes `drills/remote_*.json` + `presets.json` (does **not** replace public `catalog.json`).
+Import is the reverse for the next Android release.
 
 To refresh plan cover WebPs from locked mockups:
 
