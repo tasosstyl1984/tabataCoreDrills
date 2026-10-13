@@ -1,8 +1,8 @@
 {
-  "version": 18,
-  "updatedAtMs": 1791885164488,
+  "version": 19,
+  "updatedAtMs": 1791894253641,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 1961034,
+  "totalBytes": 1958800,
   "images": [
     {
       "id": "abs",
@@ -187,8 +187,8 @@
     {
       "id": "footballWallPassing",
       "file": "exercise_guides/footballWallPassing.webp",
-      "bytes": 24958,
-      "sha256": "bb9b4a88509cbc1e"
+      "bytes": 23918,
+      "sha256": "92f1798636f63dcd"
     },
     {
       "id": "frontRaises",
@@ -325,8 +325,8 @@
     {
       "id": "kettlebellTurkishGetUp",
       "file": "exercise_guides/kettlebellTurkishGetUp.webp",
-      "bytes": 22108,
-      "sha256": "51375a5ef79ae70a"
+      "bytes": 22906,
+      "sha256": "92d548c090a7488b"
     },
     {
       "id": "lateralRaises",
@@ -463,14 +463,14 @@
     {
       "id": "sumoSquats",
       "file": "exercise_guides/sumoSquats.webp",
-      "bytes": 25696,
-      "sha256": "0a1b6b35da05bc3e"
+      "bytes": 25594,
+      "sha256": "04f5b83b657ca3f3"
     },
     {
       "id": "thrusters",
       "file": "exercise_guides/thrusters.webp",
-      "bytes": 25446,
-      "sha256": "b318aa39879221da"
+      "bytes": 26046,
+      "sha256": "8f2080032dab5f9d"
     },
     {
       "id": "tricepKickbacks",
@@ -481,14 +481,14 @@
     {
       "id": "tuckJumps",
       "file": "exercise_guides/tuckJumps.webp",
-      "bytes": 27322,
-      "sha256": "bee8eace9c0ac4df"
+      "bytes": 25848,
+      "sha256": "80de6ce267bd7258"
     },
     {
       "id": "wallBalls",
       "file": "exercise_guides/wallBalls.webp",
-      "bytes": 30214,
-      "sha256": "bc1675261ff6e0f6"
+      "bytes": 29198,
+      "sha256": "bbd1ab0044dc301e"
     }
   ],
   "covers": [
