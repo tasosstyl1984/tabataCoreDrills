@@ -1,8 +1,8 @@
 {
-  "version": 19,
-  "updatedAtMs": 1791894253641,
+  "version": 21,
+  "updatedAtMs": 1791897538691,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 1958800,
+  "totalBytes": 1981232,
   "images": [
     {
       "id": "abs",
@@ -427,8 +427,8 @@
     {
       "id": "sidePlank",
       "file": "exercise_guides/sidePlank.webp",
-      "bytes": 20002,
-      "sha256": "23b37d370f24e02e"
+      "bytes": 23746,
+      "sha256": "26c68f6d770f0d18"
     },
     {
       "id": "skaterHops",
@@ -457,8 +457,8 @@
     {
       "id": "stepUps",
       "file": "exercise_guides/stepUps.webp",
-      "bytes": 24268,
-      "sha256": "acd4f5e4428d7ebe"
+      "bytes": 32152,
+      "sha256": "0078da2e7ae41f34"
     },
     {
       "id": "sumoSquats",
@@ -487,8 +487,8 @@
     {
       "id": "wallBalls",
       "file": "exercise_guides/wallBalls.webp",
-      "bytes": 29198,
-      "sha256": "bbd1ab0044dc301e"
+      "bytes": 40002,
+      "sha256": "cc0d228d5668be9c"
     }
   ],
   "covers": [
