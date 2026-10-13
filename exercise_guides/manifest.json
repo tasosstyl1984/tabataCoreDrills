@@ -1,8 +1,8 @@
 {
-  "version": 17,
-  "updatedAtMs": 1791884170295,
+  "version": 18,
+  "updatedAtMs": 1791885164488,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 1848950,
+  "totalBytes": 1961034,
   "images": [
     {
       "id": "abs",
@@ -67,8 +67,8 @@
     {
       "id": "bulgarianSplitSquat",
       "file": "exercise_guides/bulgarianSplitSquat.webp",
-      "bytes": 22312,
-      "sha256": "a99c61eaec518128"
+      "bytes": 21380,
+      "sha256": "3fc9b9ee006b306f"
     },
     {
       "id": "burpees",
@@ -397,68 +397,68 @@
     {
       "id": "reverseFly",
       "file": "exercise_guides/reverseFly.webp",
-      "bytes": 10686,
-      "sha256": "8273cdecc224599b"
+      "bytes": 21424,
+      "sha256": "cae2b2aae28d27b4"
     },
     {
       "id": "rowing",
       "file": "exercise_guides/rowing.webp",
-      "bytes": 14944,
-      "sha256": "eae8f392d46b66cb"
+      "bytes": 29110,
+      "sha256": "2d4f160d4075ed6e"
     },
     {
       "id": "running",
       "file": "exercise_guides/running.webp",
-      "bytes": 11606,
-      "sha256": "38bb4886898301d3"
+      "bytes": 22408,
+      "sha256": "2961c8a7a87f7ca2"
     },
     {
       "id": "russianTwists",
       "file": "exercise_guides/russianTwists.webp",
-      "bytes": 24070,
-      "sha256": "c72a06bc586f044e"
+      "bytes": 20464,
+      "sha256": "2dc7c64f0b7310a2"
     },
     {
       "id": "shadowBoxing",
       "file": "exercise_guides/shadowBoxing.webp",
-      "bytes": 9936,
-      "sha256": "893b7acab0c0bea8"
+      "bytes": 22496,
+      "sha256": "e3f0629e68ecbc0c"
     },
     {
       "id": "sidePlank",
       "file": "exercise_guides/sidePlank.webp",
-      "bytes": 10710,
-      "sha256": "a1a962e605bfe8bf"
+      "bytes": 20002,
+      "sha256": "23b37d370f24e02e"
     },
     {
       "id": "skaterHops",
       "file": "exercise_guides/skaterHops.webp",
-      "bytes": 12614,
-      "sha256": "5a04534c3d96a379"
+      "bytes": 24152,
+      "sha256": "8d5d05c490a755be"
     },
     {
       "id": "sledPush",
       "file": "exercise_guides/sledPush.webp",
-      "bytes": 12282,
-      "sha256": "1fabdd8920837a07"
+      "bytes": 24360,
+      "sha256": "be9855556801064d"
     },
     {
       "id": "squatJumps",
       "file": "exercise_guides/squatJumps.webp",
-      "bytes": 11232,
-      "sha256": "a5df32369e10c578"
+      "bytes": 23584,
+      "sha256": "b09805ec266f6961"
     },
     {
       "id": "squats",
       "file": "exercise_guides/squats.webp",
-      "bytes": 13622,
-      "sha256": "b5af2b68cdd6bb79"
+      "bytes": 24780,
+      "sha256": "21d86fb70d2536a6"
     },
     {
       "id": "stepUps",
       "file": "exercise_guides/stepUps.webp",
-      "bytes": 12330,
-      "sha256": "700a6824a0735b90"
+      "bytes": 24268,
+      "sha256": "acd4f5e4428d7ebe"
     },
     {
       "id": "sumoSquats",
