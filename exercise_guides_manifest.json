@@ -1,8 +1,8 @@
 {
-  "version": 16,
-  "updatedAtMs": 1791830589672,
+  "version": 17,
+  "updatedAtMs": 1791884170295,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 5876528,
+  "totalBytes": 1848950,
   "images": [
     {
       "id": "abs",
@@ -47,16 +47,16 @@
       "sha256": "bad76cce3026adaf"
     },
     {
-      "id": "boxJumps",
-      "file": "exercise_guides/boxJumps.webp",
-      "bytes": 23738,
-      "sha256": "00e97bc1cc53fcd2"
-    },
-    {
       "id": "boxing",
       "file": "exercise_guides/boxing.webp",
       "bytes": 27274,
       "sha256": "f27d443ab0156f7c"
+    },
+    {
+      "id": "boxJumps",
+      "file": "exercise_guides/boxJumps.webp",
+      "bytes": 23738,
+      "sha256": "00e97bc1cc53fcd2"
     },
     {
       "id": "broadJumps",
@@ -251,12 +251,6 @@
       "sha256": "8d316557832f8462"
     },
     {
-      "id": "jumpRope",
-      "file": "exercise_guides/jumpRope.webp",
-      "bytes": 27478,
-      "sha256": "cba2edff956ede22"
-    },
-    {
       "id": "jumpingJacks",
       "file": "exercise_guides/jumpingJacks.webp",
       "bytes": 22016,
@@ -267,6 +261,12 @@
       "file": "exercise_guides/jumpingLunges.webp",
       "bytes": 21668,
       "sha256": "e7bdae7e4757af10"
+    },
+    {
+      "id": "jumpRope",
+      "file": "exercise_guides/jumpRope.webp",
+      "bytes": 27478,
+      "sha256": "cba2edff956ede22"
     },
     {
       "id": "kettlebellCleanPress",
@@ -371,16 +371,16 @@
       "sha256": "acd0efcd2d2ef408"
     },
     {
-      "id": "pullUps",
-      "file": "exercise_guides/pullUps.webp",
-      "bytes": 22942,
-      "sha256": "338d521ac09a94e6"
-    },
-    {
       "id": "pullover",
       "file": "exercise_guides/pullover.webp",
       "bytes": 19426,
       "sha256": "ce604801c448c36b"
+    },
+    {
+      "id": "pullUps",
+      "file": "exercise_guides/pullUps.webp",
+      "bytes": 22942,
+      "sha256": "338d521ac09a94e6"
     },
     {
       "id": "pushups",
@@ -397,20 +397,20 @@
     {
       "id": "reverseFly",
       "file": "exercise_guides/reverseFly.webp",
-      "bytes": 20580,
-      "sha256": "5e075ad4319aadb0"
+      "bytes": 10686,
+      "sha256": "8273cdecc224599b"
     },
     {
       "id": "rowing",
       "file": "exercise_guides/rowing.webp",
-      "bytes": 28680,
-      "sha256": "9c6726994a7d7efa"
+      "bytes": 14944,
+      "sha256": "eae8f392d46b66cb"
     },
     {
       "id": "running",
       "file": "exercise_guides/running.webp",
-      "bytes": 22094,
-      "sha256": "1ff6a1c68b994d1f"
+      "bytes": 11606,
+      "sha256": "38bb4886898301d3"
     },
     {
       "id": "russianTwists",
@@ -421,44 +421,44 @@
     {
       "id": "shadowBoxing",
       "file": "exercise_guides/shadowBoxing.webp",
-      "bytes": 24714,
-      "sha256": "4c4ff20823d4fecc"
+      "bytes": 9936,
+      "sha256": "893b7acab0c0bea8"
     },
     {
       "id": "sidePlank",
       "file": "exercise_guides/sidePlank.webp",
-      "bytes": 19788,
-      "sha256": "1cd18c84fa423980"
+      "bytes": 10710,
+      "sha256": "a1a962e605bfe8bf"
     },
     {
       "id": "skaterHops",
       "file": "exercise_guides/skaterHops.webp",
-      "bytes": 23048,
-      "sha256": "4fc1adcb4a62f333"
+      "bytes": 12614,
+      "sha256": "5a04534c3d96a379"
     },
     {
       "id": "sledPush",
       "file": "exercise_guides/sledPush.webp",
-      "bytes": 23844,
-      "sha256": "8268fea87d636c67"
+      "bytes": 12282,
+      "sha256": "1fabdd8920837a07"
     },
     {
       "id": "squatJumps",
       "file": "exercise_guides/squatJumps.webp",
-      "bytes": 24912,
-      "sha256": "8dab0f51cb60fb4a"
+      "bytes": 11232,
+      "sha256": "a5df32369e10c578"
     },
     {
       "id": "squats",
       "file": "exercise_guides/squats.webp",
-      "bytes": 31402,
-      "sha256": "24d6ca6b0a82d327"
+      "bytes": 13622,
+      "sha256": "b5af2b68cdd6bb79"
     },
     {
       "id": "stepUps",
       "file": "exercise_guides/stepUps.webp",
-      "bytes": 24774,
-      "sha256": "06959172f8e8f687"
+      "bytes": 12330,
+      "sha256": "700a6824a0735b90"
     },
     {
       "id": "sumoSquats",
