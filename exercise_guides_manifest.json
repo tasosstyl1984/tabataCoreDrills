@@ -1,8 +1,8 @@
 {
-  "version": 35,
-  "updatedAtMs": 1791924851643,
+  "version": 39,
+  "updatedAtMs": 1791927623678,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 2090320,
+  "totalBytes": 2118214,
   "images": [
     {
       "id": "abs",
@@ -103,8 +103,8 @@
     {
       "id": "dips",
       "file": "exercise_guides/dips.webp",
-      "bytes": 28976,
-      "sha256": "f01a9696e59a1da2"
+      "bytes": 31674,
+      "sha256": "83f0b844fcaf612d"
     },
     {
       "id": "dumbbellChestPress",
@@ -163,8 +163,8 @@
     {
       "id": "footballElastico",
       "file": "exercise_guides/footballElastico.webp",
-      "bytes": 31590,
-      "sha256": "7688d0dcf002434c"
+      "bytes": 32918,
+      "sha256": "2aae4f90a9b3085d"
     },
     {
       "id": "footballFootwork",
@@ -331,8 +331,8 @@
     {
       "id": "lateralRaises",
       "file": "exercise_guides/lateralRaises.webp",
-      "bytes": 23122,
-      "sha256": "cb757688ff7549d3"
+      "bytes": 23102,
+      "sha256": "81dbea1fdc9a0b66"
     },
     {
       "id": "lunges",
@@ -343,62 +343,62 @@
     {
       "id": "medBallSlams",
       "file": "exercise_guides/medBallSlams.webp",
-      "bytes": 18920,
-      "sha256": "1ead61dc4e10fc55"
+      "bytes": 18980,
+      "sha256": "eb3c240ed68abe05"
     },
     {
       "id": "mountainClimbers",
       "file": "exercise_guides/mountainClimbers.webp",
-      "bytes": 25336,
-      "sha256": "c3bf57f05d7f32b2"
+      "bytes": 25654,
+      "sha256": "c1bf2cf78230b141"
     },
     {
       "id": "overheadTricepExtension",
       "file": "exercise_guides/overheadTricepExtension.webp",
-      "bytes": 18994,
-      "sha256": "e925a98d5ae4494a"
+      "bytes": 19686,
+      "sha256": "b55423bb3bbf12f9"
     },
     {
       "id": "plank",
       "file": "exercise_guides/plank.webp",
-      "bytes": 16366,
-      "sha256": "50a84b49754ea900"
+      "bytes": 16298,
+      "sha256": "e4ae0528dd6b9c98"
     },
     {
       "id": "plateRotations",
       "file": "exercise_guides/plateRotations.webp",
-      "bytes": 17498,
-      "sha256": "acd0efcd2d2ef408"
+      "bytes": 19764,
+      "sha256": "dd09d08576c03cea"
     },
     {
       "id": "pullover",
       "file": "exercise_guides/pullover.webp",
-      "bytes": 19426,
-      "sha256": "ce604801c448c36b"
+      "bytes": 19370,
+      "sha256": "458d0b4e74a0285e"
     },
     {
       "id": "pullUps",
       "file": "exercise_guides/pullUps.webp",
-      "bytes": 22942,
-      "sha256": "338d521ac09a94e6"
+      "bytes": 24178,
+      "sha256": "8677df645719dfb9"
     },
     {
       "id": "pushups",
       "file": "exercise_guides/pushups.webp",
-      "bytes": 18306,
-      "sha256": "178d407514238d4d"
+      "bytes": 19182,
+      "sha256": "da652bfc92d8edc3"
     },
     {
       "id": "renegadeRow",
       "file": "exercise_guides/renegadeRow.webp",
-      "bytes": 23246,
-      "sha256": "340d8a5b9a2d9c52"
+      "bytes": 27642,
+      "sha256": "9ed2611b4c7e37c7"
     },
     {
       "id": "reverseFly",
       "file": "exercise_guides/reverseFly.webp",
-      "bytes": 21424,
-      "sha256": "cae2b2aae28d27b4"
+      "bytes": 24424,
+      "sha256": "8c991efe9cb2a3b3"
     },
     {
       "id": "rowing",
@@ -415,8 +415,8 @@
     {
       "id": "russianTwists",
       "file": "exercise_guides/russianTwists.webp",
-      "bytes": 20464,
-      "sha256": "2dc7c64f0b7310a2"
+      "bytes": 20598,
+      "sha256": "8acb062e6cc673f6"
     },
     {
       "id": "shadowBoxing",
@@ -433,14 +433,14 @@
     {
       "id": "skaterHops",
       "file": "exercise_guides/skaterHops.webp",
-      "bytes": 24152,
-      "sha256": "8d5d05c490a755be"
+      "bytes": 29984,
+      "sha256": "47d697e96757d690"
     },
     {
       "id": "sledPush",
       "file": "exercise_guides/sledPush.webp",
-      "bytes": 24360,
-      "sha256": "be9855556801064d"
+      "bytes": 25736,
+      "sha256": "bcc3fc5a89ba623b"
     },
     {
       "id": "squatJumps",
@@ -451,8 +451,8 @@
     {
       "id": "squats",
       "file": "exercise_guides/squats.webp",
-      "bytes": 24780,
-      "sha256": "21d86fb70d2536a6"
+      "bytes": 27882,
+      "sha256": "6d4224d9b622e508"
     },
     {
       "id": "stepUps",
@@ -475,8 +475,8 @@
     {
       "id": "tricepKickbacks",
       "file": "exercise_guides/tricepKickbacks.webp",
-      "bytes": 26698,
-      "sha256": "8162b8cd390fe6e2"
+      "bytes": 27422,
+      "sha256": "323a0b19211b729d"
     },
     {
       "id": "tuckJumps",
