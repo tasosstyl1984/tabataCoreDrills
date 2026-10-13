@@ -1,8 +1,8 @@
 {
-  "version": 21,
-  "updatedAtMs": 1791897538691,
+  "version": 33,
+  "updatedAtMs": 1791923179273,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 1981232,
+  "totalBytes": 1953024,
   "images": [
     {
       "id": "abs",
@@ -19,128 +19,128 @@
     {
       "id": "bearCrawl",
       "file": "exercise_guides/bearCrawl.webp",
-      "bytes": 25222,
-      "sha256": "5a8c84db56011385"
+      "bytes": 26912,
+      "sha256": "09033535f30523b8"
     },
     {
       "id": "benchPress",
       "file": "exercise_guides/benchPress.webp",
-      "bytes": 27012,
-      "sha256": "9bfd3649c316edd7"
+      "bytes": 12494,
+      "sha256": "5081a04ea01f9c70"
     },
     {
       "id": "bicepCurls",
       "file": "exercise_guides/bicepCurls.webp",
-      "bytes": 22250,
-      "sha256": "3c580d3b28614264"
+      "bytes": 9294,
+      "sha256": "f83c075ce20a577d"
     },
     {
       "id": "bike",
       "file": "exercise_guides/bike.webp",
-      "bytes": 34446,
-      "sha256": "75e89a5105d5edda"
+      "bytes": 35794,
+      "sha256": "99cced2c830e940d"
     },
     {
       "id": "birdDog",
       "file": "exercise_guides/birdDog.webp",
-      "bytes": 18340,
-      "sha256": "bad76cce3026adaf"
+      "bytes": 21040,
+      "sha256": "203b30e287868e60"
     },
     {
       "id": "boxing",
       "file": "exercise_guides/boxing.webp",
-      "bytes": 27274,
-      "sha256": "f27d443ab0156f7c"
+      "bytes": 16756,
+      "sha256": "8f049e5ae7806838"
     },
     {
       "id": "boxJumps",
       "file": "exercise_guides/boxJumps.webp",
-      "bytes": 23738,
-      "sha256": "00e97bc1cc53fcd2"
+      "bytes": 27520,
+      "sha256": "a937ebb3a11680c0"
     },
     {
       "id": "broadJumps",
       "file": "exercise_guides/broadJumps.webp",
-      "bytes": 19322,
-      "sha256": "9ebcb429a9db43e8"
+      "bytes": 23972,
+      "sha256": "878eacc6ebe4a397"
     },
     {
       "id": "bulgarianSplitSquat",
       "file": "exercise_guides/bulgarianSplitSquat.webp",
-      "bytes": 21380,
-      "sha256": "3fc9b9ee006b306f"
+      "bytes": 23046,
+      "sha256": "fe9a9c9545fd82dc"
     },
     {
       "id": "burpees",
       "file": "exercise_guides/burpees.webp",
-      "bytes": 18002,
-      "sha256": "42b061312e53805b"
+      "bytes": 17820,
+      "sha256": "e5617ef51189405f"
     },
     {
       "id": "calfRaises",
       "file": "exercise_guides/calfRaises.webp",
-      "bytes": 17838,
-      "sha256": "264893b6fd048cb7"
+      "bytes": 18526,
+      "sha256": "8031b6ed3528b55d"
     },
     {
       "id": "chestFlies",
       "file": "exercise_guides/chestFlies.webp",
-      "bytes": 25774,
-      "sha256": "fb4fdc33db53dd5c"
+      "bytes": 27104,
+      "sha256": "8c2c67eae6fc4650"
     },
     {
       "id": "concentrationCurls",
       "file": "exercise_guides/concentrationCurls.webp",
-      "bytes": 32272,
-      "sha256": "914ca05db0eb99f9"
+      "bytes": 34488,
+      "sha256": "5f0c98d8ceb0abd7"
     },
     {
       "id": "deadBug",
       "file": "exercise_guides/deadBug.webp",
-      "bytes": 16632,
-      "sha256": "b0a4ddd4094cdd4e"
+      "bytes": 20540,
+      "sha256": "d6033681dbfaf280"
     },
     {
       "id": "dips",
       "file": "exercise_guides/dips.webp",
-      "bytes": 28670,
-      "sha256": "7a9035317a54a92a"
+      "bytes": 28976,
+      "sha256": "f01a9696e59a1da2"
     },
     {
       "id": "dumbbellChestPress",
       "file": "exercise_guides/dumbbellChestPress.webp",
-      "bytes": 34026,
-      "sha256": "6777b07e774b2cdc"
+      "bytes": 35144,
+      "sha256": "556a108931b3c783"
     },
     {
       "id": "dumbbellLunges",
       "file": "exercise_guides/dumbbellLunges.webp",
-      "bytes": 25462,
-      "sha256": "b4c578208c07210b"
+      "bytes": 34652,
+      "sha256": "e7d0a0ad8ef13073"
     },
     {
       "id": "dumbbellRow",
       "file": "exercise_guides/dumbbellRow.webp",
-      "bytes": 33656,
-      "sha256": "af0557199b27c9ee"
+      "bytes": 36976,
+      "sha256": "4db24c38c6f44a07"
     },
     {
       "id": "dumbbellShoulderPress",
       "file": "exercise_guides/dumbbellShoulderPress.webp",
-      "bytes": 29412,
-      "sha256": "ef551a7893bfeeb6"
+      "bytes": 29610,
+      "sha256": "11b328358722add8"
     },
     {
       "id": "farmerCarry",
       "file": "exercise_guides/farmerCarry.webp",
-      "bytes": 23140,
-      "sha256": "a4205118360a40bb"
+      "bytes": 23254,
+      "sha256": "fc020e233ad84d75"
     },
     {
       "id": "footballBallMastery",
       "file": "exercise_guides/footballBallMastery.webp",
-      "bytes": 23628,
-      "sha256": "1e2614edddeb47a0"
+      "bytes": 26742,
+      "sha256": "64f013209ecd6810"
     },
     {
       "id": "footballConeSlalom",
@@ -169,20 +169,20 @@
     {
       "id": "footballFootwork",
       "file": "exercise_guides/footballFootwork.webp",
-      "bytes": 35624,
-      "sha256": "f36d8b27c811e112"
+      "bytes": 36830,
+      "sha256": "58fa8268c4e0e0d4"
     },
     {
       "id": "footballHeadStall",
       "file": "exercise_guides/footballHeadStall.webp",
-      "bytes": 23060,
-      "sha256": "9377f018970ca4a8"
+      "bytes": 24076,
+      "sha256": "d3e1cd48bf1ccf97"
     },
     {
       "id": "footballReactionDrills",
       "file": "exercise_guides/footballReactionDrills.webp",
-      "bytes": 24078,
-      "sha256": "f6a94a4576dc2f04"
+      "bytes": 26212,
+      "sha256": "3a2687ba013dda21"
     },
     {
       "id": "footballWallPassing",
@@ -193,8 +193,8 @@
     {
       "id": "frontRaises",
       "file": "exercise_guides/frontRaises.webp",
-      "bytes": 20982,
-      "sha256": "c2f3cc28e501435a"
+      "bytes": 24350,
+      "sha256": "cada61400c9e557a"
     },
     {
       "id": "gluteBridge",
@@ -205,122 +205,122 @@
     {
       "id": "gluteKickbacks",
       "file": "exercise_guides/gluteKickbacks.webp",
-      "bytes": 24148,
-      "sha256": "eab88a56bc318392"
+      "bytes": 29756,
+      "sha256": "8d0b6f6ac737715c"
     },
     {
       "id": "hammerCurls",
       "file": "exercise_guides/hammerCurls.webp",
-      "bytes": 21718,
-      "sha256": "c5c02ec1d910ba0f"
+      "bytes": 23632,
+      "sha256": "5e4fbcf2f47e734e"
     },
     {
       "id": "hangingKneeRaises",
       "file": "exercise_guides/hangingKneeRaises.webp",
-      "bytes": 23402,
-      "sha256": "7f6bae404030a7a6"
+      "bytes": 24656,
+      "sha256": "b80e14d0e563e6c1"
     },
     {
       "id": "highKnees",
       "file": "exercise_guides/highKnees.webp",
-      "bytes": 25266,
-      "sha256": "1e97186f90b97166"
+      "bytes": 32520,
+      "sha256": "f09823694c180ecb"
     },
     {
       "id": "hollowHold",
       "file": "exercise_guides/hollowHold.webp",
-      "bytes": 13846,
-      "sha256": "392177c9e454a136"
+      "bytes": 14424,
+      "sha256": "ec2a32ab526953b5"
     },
     {
       "id": "inchworm",
       "file": "exercise_guides/inchworm.webp",
-      "bytes": 17402,
-      "sha256": "083eaab4635f2381"
+      "bytes": 18280,
+      "sha256": "4fc3dfdc42a535e8"
     },
     {
       "id": "inclineBench",
       "file": "exercise_guides/inclineBench.webp",
-      "bytes": 31818,
-      "sha256": "96cd7ff46fa49f41"
+      "bytes": 32520,
+      "sha256": "f09823694c180ecb"
     },
     {
       "id": "inclineFlies",
       "file": "exercise_guides/inclineFlies.webp",
-      "bytes": 25738,
-      "sha256": "8d316557832f8462"
+      "bytes": 28466,
+      "sha256": "98cd1d2c110cfed0"
     },
     {
       "id": "jumpingJacks",
       "file": "exercise_guides/jumpingJacks.webp",
-      "bytes": 22016,
-      "sha256": "30f2fd97418116eb"
+      "bytes": 23242,
+      "sha256": "28acf48233d81461"
     },
     {
       "id": "jumpingLunges",
       "file": "exercise_guides/jumpingLunges.webp",
-      "bytes": 21668,
-      "sha256": "e7bdae7e4757af10"
+      "bytes": 10176,
+      "sha256": "9c8e1b930c012e8f"
     },
     {
       "id": "jumpRope",
       "file": "exercise_guides/jumpRope.webp",
-      "bytes": 27478,
-      "sha256": "cba2edff956ede22"
+      "bytes": 10874,
+      "sha256": "4b1f10c825522660"
     },
     {
       "id": "kettlebellCleanPress",
       "file": "exercise_guides/kettlebellCleanPress.webp",
-      "bytes": 19508,
-      "sha256": "c861f7e4338dba72"
+      "bytes": 9532,
+      "sha256": "899c534bf9448abe"
     },
     {
       "id": "kettlebellDeadlift",
       "file": "exercise_guides/kettlebellDeadlift.webp",
-      "bytes": 25412,
-      "sha256": "1c128c4094f5be3b"
+      "bytes": 27166,
+      "sha256": "f1b80dbac316804f"
     },
     {
       "id": "kettlebellFlies",
       "file": "exercise_guides/kettlebellFlies.webp",
-      "bytes": 28356,
-      "sha256": "4ddfa308b1fab83a"
+      "bytes": 32156,
+      "sha256": "fc7c6565431796b7"
     },
     {
       "id": "kettlebellGobletSquat",
       "file": "exercise_guides/kettlebellGobletSquat.webp",
-      "bytes": 26314,
-      "sha256": "e81ea70cfc8d91fa"
+      "bytes": 30138,
+      "sha256": "c5b20b97e30ba7ec"
     },
     {
       "id": "kettlebellGorillaRow",
       "file": "exercise_guides/kettlebellGorillaRow.webp",
-      "bytes": 30620,
-      "sha256": "dcbd7435d7689584"
+      "bytes": 37778,
+      "sha256": "50dd7638146cc4e5"
     },
     {
       "id": "kettlebellHalo",
       "file": "exercise_guides/kettlebellHalo.webp",
-      "bytes": 22254,
-      "sha256": "0862ffff688f5d02"
+      "bytes": 23744,
+      "sha256": "edbe84e2eed74661"
     },
     {
       "id": "kettlebellRow",
       "file": "exercise_guides/kettlebellRow.webp",
-      "bytes": 26450,
-      "sha256": "6b48b918131ee394"
+      "bytes": 14440,
+      "sha256": "4ede191257653b5e"
     },
     {
       "id": "kettlebellSnatch",
       "file": "exercise_guides/kettlebellSnatch.webp",
-      "bytes": 17662,
-      "sha256": "69b3cd13c3a5e4cd"
+      "bytes": 8838,
+      "sha256": "eb10166432964f99"
     },
     {
       "id": "kettlebellSwings",
       "file": "exercise_guides/kettlebellSwings.webp",
-      "bytes": 19658,
-      "sha256": "a285e8d242a79945"
+      "bytes": 9252,
+      "sha256": "e0440da575149b6b"
     },
     {
       "id": "kettlebellTurkishGetUp",
@@ -337,8 +337,8 @@
     {
       "id": "lunges",
       "file": "exercise_guides/lunges.webp",
-      "bytes": 22930,
-      "sha256": "2eea866b1cb495fd"
+      "bytes": 11698,
+      "sha256": "77cade242cc22917"
     },
     {
       "id": "medBallSlams",
@@ -457,8 +457,8 @@
     {
       "id": "stepUps",
       "file": "exercise_guides/stepUps.webp",
-      "bytes": 32152,
-      "sha256": "0078da2e7ae41f34"
+      "bytes": 33432,
+      "sha256": "c7aa08168373b4dc"
     },
     {
       "id": "sumoSquats",
