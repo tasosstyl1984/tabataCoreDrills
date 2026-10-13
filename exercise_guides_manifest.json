@@ -1,8 +1,8 @@
 {
-  "version": 33,
-  "updatedAtMs": 1791923179273,
+  "version": 35,
+  "updatedAtMs": 1791924851643,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 1953024,
+  "totalBytes": 2090320,
   "images": [
     {
       "id": "abs",
@@ -25,14 +25,14 @@
     {
       "id": "benchPress",
       "file": "exercise_guides/benchPress.webp",
-      "bytes": 12494,
-      "sha256": "5081a04ea01f9c70"
+      "bytes": 28542,
+      "sha256": "8c1ed730c69ebd0f"
     },
     {
       "id": "bicepCurls",
       "file": "exercise_guides/bicepCurls.webp",
-      "bytes": 9294,
-      "sha256": "f83c075ce20a577d"
+      "bytes": 24176,
+      "sha256": "fb2a2bd4ab825282"
     },
     {
       "id": "bike",
@@ -49,8 +49,8 @@
     {
       "id": "boxing",
       "file": "exercise_guides/boxing.webp",
-      "bytes": 16756,
-      "sha256": "8f049e5ae7806838"
+      "bytes": 30028,
+      "sha256": "185f02d6144fefc1"
     },
     {
       "id": "boxJumps",
@@ -145,8 +145,8 @@
     {
       "id": "footballConeSlalom",
       "file": "exercise_guides/footballConeSlalom.webp",
-      "bytes": 33346,
-      "sha256": "cce006b93db7089b"
+      "bytes": 35440,
+      "sha256": "cec6b97fe01df374"
     },
     {
       "id": "footballControl",
@@ -199,14 +199,14 @@
     {
       "id": "gluteBridge",
       "file": "exercise_guides/gluteBridge.webp",
-      "bytes": 21658,
-      "sha256": "878e59261070076f"
+      "bytes": 23228,
+      "sha256": "58ca4002fe291f53"
     },
     {
       "id": "gluteKickbacks",
       "file": "exercise_guides/gluteKickbacks.webp",
-      "bytes": 29756,
-      "sha256": "8d0b6f6ac737715c"
+      "bytes": 29508,
+      "sha256": "387c106f4f506932"
     },
     {
       "id": "hammerCurls",
@@ -259,20 +259,20 @@
     {
       "id": "jumpingLunges",
       "file": "exercise_guides/jumpingLunges.webp",
-      "bytes": 10176,
-      "sha256": "9c8e1b930c012e8f"
+      "bytes": 21756,
+      "sha256": "191fed1eb23925b3"
     },
     {
       "id": "jumpRope",
       "file": "exercise_guides/jumpRope.webp",
-      "bytes": 10874,
-      "sha256": "4b1f10c825522660"
+      "bytes": 26924,
+      "sha256": "3a4c729848f12e4d"
     },
     {
       "id": "kettlebellCleanPress",
       "file": "exercise_guides/kettlebellCleanPress.webp",
-      "bytes": 9532,
-      "sha256": "899c534bf9448abe"
+      "bytes": 20892,
+      "sha256": "8c60f6033429d87d"
     },
     {
       "id": "kettlebellDeadlift",
@@ -307,20 +307,20 @@
     {
       "id": "kettlebellRow",
       "file": "exercise_guides/kettlebellRow.webp",
-      "bytes": 14440,
-      "sha256": "4ede191257653b5e"
+      "bytes": 28438,
+      "sha256": "dc13e78ff28fbd44"
     },
     {
       "id": "kettlebellSnatch",
       "file": "exercise_guides/kettlebellSnatch.webp",
-      "bytes": 8838,
-      "sha256": "eb10166432964f99"
+      "bytes": 19344,
+      "sha256": "c6d994284a5e5b63"
     },
     {
       "id": "kettlebellSwings",
       "file": "exercise_guides/kettlebellSwings.webp",
-      "bytes": 9252,
-      "sha256": "e0440da575149b6b"
+      "bytes": 21738,
+      "sha256": "3343a2d9793db5f6"
     },
     {
       "id": "kettlebellTurkishGetUp",
@@ -337,8 +337,8 @@
     {
       "id": "lunges",
       "file": "exercise_guides/lunges.webp",
-      "bytes": 11698,
-      "sha256": "77cade242cc22917"
+      "bytes": 25396,
+      "sha256": "dbb405a678243dcd"
     },
     {
       "id": "medBallSlams",
