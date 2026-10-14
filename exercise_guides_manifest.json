@@ -1,8 +1,8 @@
 {
-  "version": 39,
-  "updatedAtMs": 1791927623678,
+  "version": 40,
+  "updatedAtMs": 1792005150366,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 2118214,
+  "totalBytes": 2179144,
   "images": [
     {
       "id": "abs",
@@ -43,8 +43,8 @@
     {
       "id": "birdDog",
       "file": "exercise_guides/birdDog.webp",
-      "bytes": 21040,
-      "sha256": "203b30e287868e60"
+      "bytes": 22668,
+      "sha256": "836e5eb46d53e333"
     },
     {
       "id": "boxing",
@@ -139,8 +139,8 @@
     {
       "id": "footballBallMastery",
       "file": "exercise_guides/footballBallMastery.webp",
-      "bytes": 26742,
-      "sha256": "64f013209ecd6810"
+      "bytes": 36854,
+      "sha256": "dea482cb3b1385ce"
     },
     {
       "id": "footballConeSlalom",
@@ -151,14 +151,14 @@
     {
       "id": "footballControl",
       "file": "exercise_guides/footballControl.webp",
-      "bytes": 26186,
-      "sha256": "cc5f7e14693da692"
+      "bytes": 36262,
+      "sha256": "bacea182abbe7758"
     },
     {
       "id": "footballDribbling",
       "file": "exercise_guides/footballDribbling.webp",
-      "bytes": 28622,
-      "sha256": "dfc762bc87fbdbad"
+      "bytes": 44042,
+      "sha256": "72e30d65074f9344"
     },
     {
       "id": "footballElastico",
@@ -409,8 +409,8 @@
     {
       "id": "running",
       "file": "exercise_guides/running.webp",
-      "bytes": 22408,
-      "sha256": "2961c8a7a87f7ca2"
+      "bytes": 32286,
+      "sha256": "43ae507b7b438fac"
     },
     {
       "id": "russianTwists",
@@ -439,14 +439,14 @@
     {
       "id": "sledPush",
       "file": "exercise_guides/sledPush.webp",
-      "bytes": 25736,
-      "sha256": "bcc3fc5a89ba623b"
+      "bytes": 34858,
+      "sha256": "5f1192c924243618"
     },
     {
       "id": "squatJumps",
       "file": "exercise_guides/squatJumps.webp",
-      "bytes": 23584,
-      "sha256": "b09805ec266f6961"
+      "bytes": 28278,
+      "sha256": "ce7394274f387c73"
     },
     {
       "id": "squats",
