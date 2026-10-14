@@ -1,6 +1,6 @@
 {
-  "version": 126,
-  "updatedAtMs": 1791624433060,
+  "version": 127,
+  "updatedAtMs": 1792013497331,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -32,106 +32,6 @@
         "plank",
         "sidePlank",
         "russianTwists"
-      ]
-    },
-    {
-      "id": "remote_lion_roar",
-      "name": "Lion Roar",
-      "file": "drills/remote_lion_roar.json",
-      "updatedAtMs": 1791624433060,
-      "category": "combos",
-      "description": "High-energy full-body mix — rope, push-ups, pulls, thrusters, legs, and core when you want a long, varied conditioning day.",
-      "coverImage": "plan_covers/remote_lion_roar.webp",
-      "activityIds": [
-        "jumpRope",
-        "pushups",
-        "pullUps",
-        "thrusters",
-        "wallBalls",
-        "lunges",
-        "sumoSquats",
-        "gluteKickbacks",
-        "abs",
-        "plank",
-        "sidePlank",
-        "plateRotations",
-        "russianTwists"
-      ]
-    },
-    {
-      "id": "remote_lower_body",
-      "name": "Lower Body",
-      "file": "drills/remote_lower_body.json",
-      "updatedAtMs": 1791624433060,
-      "category": "combos",
-      "description": "Legs and hips focus with lunges, squats, kettlebell work, and plyo finishers for stronger, more athletic lower body.",
-      "coverImage": "plan_covers/remote_lower_body.webp",
-      "activityIds": [
-        "gluteKickbacks",
-        "lunges",
-        "calfRaises",
-        "kettlebellGobletSquat",
-        "kettlebellSwings",
-        "kettlebellCleanPress",
-        "kettlebellHalo",
-        "kettlebellGorillaRow",
-        "jumpingLunges",
-        "squatJumps"
-      ]
-    },
-    {
-      "id": "remote_tasos_workout",
-      "name": "Shadow KB Circuit",
-      "file": "drills/remote_tasos_workout.json",
-      "updatedAtMs": 1791624433060,
-      "category": "combos",
-      "description": "Shadowboxing paired with kettlebell strength for fight-style cardio and functional power in one circuit.",
-      "coverImage": "plan_covers/remote_tasos_workout.webp",
-      "activityIds": [
-        "shadowBoxing",
-        "kettlebellSwings",
-        "kettlebellHalo",
-        "kettlebellGorillaRow",
-        "kettlebellRow",
-        "kettlebellCleanPress",
-        "kettlebellSnatch",
-        "bicepCurls"
-      ]
-    },
-    {
-      "id": "remote_tyson",
-      "name": "Rope Boxing Mix",
-      "file": "drills/remote_tyson.json",
-      "updatedAtMs": 1791624433060,
-      "category": "combos",
-      "description": "Jump rope and boxing mixed with kettlebells and core — footwork, rhythm, and conditioning in one pack.",
-      "coverImage": "plan_covers/remote_tyson.webp",
-      "activityIds": [
-        "jumpRope",
-        "shadowBoxing",
-        "kettlebellSwings",
-        "kettlebellHalo",
-        "kettlebellCleanPress",
-        "kettlebellSnatch",
-        "pushups",
-        "abs",
-        "hollowHold",
-        "russianTwists"
-      ]
-    },
-    {
-      "id": "remote_upper_body",
-      "name": "Upper Body",
-      "file": "drills/remote_upper_body.json",
-      "updatedAtMs": 1791624433060,
-      "category": "chest",
-      "description": "Chest-focused pressing and fly work — bench, incline, flies, and pullover for upper-body push strength.",
-      "coverImage": "plan_covers/remote_upper_body.webp",
-      "activityIds": [
-        "benchPress",
-        "chestFlies",
-        "inclineBench",
-        "pullover"
       ]
     },
     {
@@ -189,6 +89,126 @@
         "farmerCarry",
         "jumpingLunges",
         "wallBalls"
+      ]
+    },
+    {
+      "id": "remote_ladies_first",
+      "name": "Ladies First",
+      "file": "drills/remote_ladies_first.json",
+      "updatedAtMs": 1792013496430,
+      "category": "combos",
+      "description": "",
+      "coverImage": "exercise_guides/birdDog.webp",
+      "activityIds": [
+        "birdDog",
+        "lunges",
+        "gluteBridge",
+        "squats",
+        "stepUps",
+        "lateralRaises",
+        "abs",
+        "sidePlank",
+        "deadBug"
+      ]
+    },
+    {
+      "id": "remote_lion_roar",
+      "name": "Lion Roar",
+      "file": "drills/remote_lion_roar.json",
+      "updatedAtMs": 1791624433060,
+      "category": "combos",
+      "description": "High-energy full-body mix — rope, push-ups, pulls, thrusters, legs, and core when you want a long, varied conditioning day.",
+      "coverImage": "plan_covers/remote_lion_roar.webp",
+      "activityIds": [
+        "jumpRope",
+        "pushups",
+        "pullUps",
+        "thrusters",
+        "wallBalls",
+        "lunges",
+        "sumoSquats",
+        "gluteKickbacks",
+        "abs",
+        "plank",
+        "sidePlank",
+        "plateRotations",
+        "russianTwists"
+      ]
+    },
+    {
+      "id": "remote_lower_body",
+      "name": "Lower Body",
+      "file": "drills/remote_lower_body.json",
+      "updatedAtMs": 1791624433060,
+      "category": "combos",
+      "description": "Legs and hips focus with lunges, squats, kettlebell work, and plyo finishers for stronger, more athletic lower body.",
+      "coverImage": "plan_covers/remote_lower_body.webp",
+      "activityIds": [
+        "gluteKickbacks",
+        "lunges",
+        "calfRaises",
+        "kettlebellGobletSquat",
+        "kettlebellSwings",
+        "kettlebellCleanPress",
+        "kettlebellHalo",
+        "kettlebellGorillaRow",
+        "jumpingLunges",
+        "squatJumps"
+      ]
+    },
+    {
+      "id": "remote_tyson",
+      "name": "Rope Boxing Mix",
+      "file": "drills/remote_tyson.json",
+      "updatedAtMs": 1791624433060,
+      "category": "combos",
+      "description": "Jump rope and boxing mixed with kettlebells and core — footwork, rhythm, and conditioning in one pack.",
+      "coverImage": "plan_covers/remote_tyson.webp",
+      "activityIds": [
+        "jumpRope",
+        "shadowBoxing",
+        "kettlebellSwings",
+        "kettlebellHalo",
+        "kettlebellCleanPress",
+        "kettlebellSnatch",
+        "pushups",
+        "abs",
+        "hollowHold",
+        "russianTwists"
+      ]
+    },
+    {
+      "id": "remote_tasos_workout",
+      "name": "Shadow KB Circuit",
+      "file": "drills/remote_tasos_workout.json",
+      "updatedAtMs": 1791624433060,
+      "category": "combos",
+      "description": "Shadowboxing paired with kettlebell strength for fight-style cardio and functional power in one circuit.",
+      "coverImage": "plan_covers/remote_tasos_workout.webp",
+      "activityIds": [
+        "shadowBoxing",
+        "kettlebellSwings",
+        "kettlebellHalo",
+        "kettlebellGorillaRow",
+        "kettlebellRow",
+        "kettlebellCleanPress",
+        "kettlebellSnatch",
+        "bicepCurls"
+      ]
+    },
+    {
+      "id": "remote_upper_body",
+      "name": "Upper Body",
+      "file": "drills/remote_upper_body.json",
+      "updatedAtMs": 1791624433060,
+      "category": "chest",
+      "description": "Chest-focused pressing and fly work — bench, incline, flies, and pullover for upper-body push strength.",
+      "coverImage": "plan_covers/remote_upper_body.webp",
+      "activityIds": [
+        "benchPress",
+        "chestFlies",
+        "inclineBench",
+        "pullover"
       ]
     }
   ]

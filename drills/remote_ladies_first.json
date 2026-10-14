@@ -1,0 +1,158 @@
+{
+  "id": "remote_ladies_first",
+  "name": "Ladies First",
+  "createdAtMs": 1792013496430,
+  "sets": 4,
+  "repsPerSet": 6,
+  "workSeconds": 45,
+  "restBetweenRepsSeconds": 45,
+  "restBetweenSetsSeconds": 60,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "birdDog"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "lunges"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "gluteBridge"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "squats"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "stepUps"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "lateralRaises"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "birdDog"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "lunges"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "gluteBridge"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "squats"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "stepUps"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "lateralRaises"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "birdDog"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "lunges"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "gluteBridge"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "squats"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "stepUps"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "lateralRaises"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "abs"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "sidePlank"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "sidePlank"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "deadBug"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "birdDog"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 45,
+            "activityId": "abs"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      }
+    ]
+  }
+}
