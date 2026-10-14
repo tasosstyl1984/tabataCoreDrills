@@ -1,6 +1,6 @@
 {
-  "version": 127,
-  "updatedAtMs": 1792013497331,
+  "version": 128,
+  "updatedAtMs": 1792013882044,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -95,10 +95,10 @@
       "id": "remote_ladies_first",
       "name": "Ladies First",
       "file": "drills/remote_ladies_first.json",
-      "updatedAtMs": 1792013496430,
+      "updatedAtMs": 1792013880881,
       "category": "combos",
       "description": "",
-      "coverImage": "exercise_guides/birdDog.webp",
+      "coverImage": "plan_covers/remote_ladies_first_1792013880859.webp",
       "activityIds": [
         "birdDog",
         "lunges",
