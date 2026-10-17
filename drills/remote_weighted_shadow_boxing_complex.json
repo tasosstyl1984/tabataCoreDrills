@@ -1,0 +1,158 @@
+{
+  "id": "remote_weighted_shadow_boxing_complex",
+  "name": "Weighted Shadow Boxing Complex",
+  "createdAtMs": 1792264583671,
+  "sets": 4,
+  "repsPerSet": 6,
+  "workSeconds": 70,
+  "restBetweenRepsSeconds": 60,
+  "restBetweenSetsSeconds": 60,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "shadowBoxing"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "shadowBoxing"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "shadowBoxing"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "shadowBoxing"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "shadowBoxing"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "shadowBoxing"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "shadowBoxing"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "shadowBoxing"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "shadowBoxing"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "shadowBoxing"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "shadowBoxing"
+          },
+          {
+            "workSeconds": 70,
+            "restAfterSeconds": 60,
+            "activityId": "shadowBoxing"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellSwings"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellHalo"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellRow"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellCleanPress"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellDeadlift"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellSwings"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellSwings"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellHalo"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellRow"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellCleanPress"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellDeadlift"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellSwings"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      }
+    ]
+  }
+}
