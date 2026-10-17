@@ -6,7 +6,7 @@
   "repsPerSet": 6,
   "workSeconds": 70,
   "restBetweenRepsSeconds": 60,
-  "restBetweenSetsSeconds": 60,
+  "restBetweenSetsSeconds": 100,
   "warmupEnabled": false,
   "warmupSeconds": 60,
   "cooldownEnabled": false,
@@ -46,7 +46,7 @@
             "activityId": "shadowBoxing"
           }
         ],
-        "restAfterSetSeconds": 60
+        "restAfterSetSeconds": 100
       },
       {
         "rounds": [
@@ -81,42 +81,7 @@
             "activityId": "shadowBoxing"
           }
         ],
-        "restAfterSetSeconds": 60
-      },
-      {
-        "rounds": [
-          {
-            "workSeconds": 50,
-            "restAfterSeconds": 60,
-            "activityId": "kettlebellSwings"
-          },
-          {
-            "workSeconds": 50,
-            "restAfterSeconds": 60,
-            "activityId": "kettlebellHalo"
-          },
-          {
-            "workSeconds": 50,
-            "restAfterSeconds": 60,
-            "activityId": "kettlebellRow"
-          },
-          {
-            "workSeconds": 50,
-            "restAfterSeconds": 60,
-            "activityId": "kettlebellCleanPress"
-          },
-          {
-            "workSeconds": 50,
-            "restAfterSeconds": 60,
-            "activityId": "kettlebellDeadlift"
-          },
-          {
-            "workSeconds": 50,
-            "restAfterSeconds": 60,
-            "activityId": "kettlebellSwings"
-          }
-        ],
-        "restAfterSetSeconds": 60
+        "restAfterSetSeconds": 100
       },
       {
         "rounds": [
@@ -151,7 +116,42 @@
             "activityId": "kettlebellSwings"
           }
         ],
-        "restAfterSetSeconds": 60
+        "restAfterSetSeconds": 100
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellSwings"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellHalo"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellRow"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellCleanPress"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellDeadlift"
+          },
+          {
+            "workSeconds": 50,
+            "restAfterSeconds": 60,
+            "activityId": "kettlebellSwings"
+          }
+        ],
+        "restAfterSetSeconds": 100
       }
     ]
   }

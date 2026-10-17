@@ -1,6 +1,6 @@
 {
-  "version": 129,
-  "updatedAtMs": 1792264584595,
+  "version": 130,
+  "updatedAtMs": 1792264646765,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -215,7 +215,7 @@
       "id": "remote_weighted_shadow_boxing_complex",
       "name": "Weighted Shadow Boxing Complex",
       "file": "drills/remote_weighted_shadow_boxing_complex.json",
-      "updatedAtMs": 1792264583671,
+      "updatedAtMs": 1792264645744,
       "category": "combos",
       "description": "",
       "coverImage": "plan_covers/remote_weighted_shadow_boxing_complex_1792264583658.webp",
