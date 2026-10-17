@@ -1,6 +1,6 @@
 {
-  "version": 130,
-  "updatedAtMs": 1792264646765,
+  "version": 131,
+  "updatedAtMs": 1792267775204,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -109,6 +109,22 @@
         "abs",
         "sidePlank",
         "deadBug"
+      ]
+    },
+    {
+      "id": "remote_ladies_lower",
+      "name": "Ladies Lower",
+      "file": "drills/remote_ladies_lower.json",
+      "updatedAtMs": 1792267774557,
+      "category": "strength",
+      "description": "",
+      "coverImage": "plan_covers/remote_ladies_lower_1792267774545.webp",
+      "activityIds": [
+        "lunges",
+        "squats",
+        "stepUps",
+        "gluteBridge",
+        "gluteKickbacks"
       ]
     },
     {
