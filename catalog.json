@@ -1,6 +1,6 @@
 {
-  "version": 131,
-  "updatedAtMs": 1792267775204,
+  "version": 132,
+  "updatedAtMs": 1792268248346,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -89,6 +89,30 @@
         "farmerCarry",
         "jumpingLunges",
         "wallBalls"
+      ]
+    },
+    {
+      "id": "remote_ladies_complex",
+      "name": "Ladies Complex",
+      "file": "drills/remote_ladies_complex.json",
+      "updatedAtMs": 1792268247713,
+      "category": "combos",
+      "description": "",
+      "coverImage": "plan_covers/remote_ladies_complex_1792268247699.webp",
+      "activityIds": [
+        "jumpingJacks",
+        "mountainClimbers",
+        "highKnees",
+        "boxJumps",
+        "kettlebellSwings",
+        "kettlebellGorillaRow",
+        "pushups",
+        "calfRaises",
+        "gluteBridge",
+        "gluteKickbacks",
+        "abs",
+        "plank",
+        "birdDog"
       ]
     },
     {

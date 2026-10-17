@@ -1,0 +1,258 @@
+{
+  "id": "remote_ladies_complex",
+  "name": "Ladies Complex",
+  "createdAtMs": 1792268247713,
+  "sets": 12,
+  "repsPerSet": 3,
+  "workSeconds": 45,
+  "restBetweenRepsSeconds": 40,
+  "restBetweenSetsSeconds": 80,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 40,
+            "activityId": "jumpingJacks"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 40,
+            "activityId": "jumpingJacks"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 40,
+            "activityId": "jumpingJacks"
+          }
+        ],
+        "restAfterSetSeconds": 80
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 40,
+            "activityId": "mountainClimbers"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 40,
+            "activityId": "mountainClimbers"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 40,
+            "activityId": "mountainClimbers"
+          }
+        ],
+        "restAfterSetSeconds": 80
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 40,
+            "activityId": "highKnees"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 40,
+            "activityId": "highKnees"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 40,
+            "activityId": "highKnees"
+          }
+        ],
+        "restAfterSetSeconds": 80
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 40,
+            "activityId": "boxJumps"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 40,
+            "activityId": "boxJumps"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 40,
+            "activityId": "boxJumps"
+          }
+        ],
+        "restAfterSetSeconds": 80
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 40,
+            "activityId": "kettlebellSwings"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 40,
+            "activityId": "kettlebellSwings"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 40,
+            "activityId": "kettlebellSwings"
+          }
+        ],
+        "restAfterSetSeconds": 80
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 40,
+            "activityId": "kettlebellGorillaRow"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 40,
+            "activityId": "kettlebellGorillaRow"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 40,
+            "activityId": "kettlebellGorillaRow"
+          }
+        ],
+        "restAfterSetSeconds": 80
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 40,
+            "activityId": "pushups"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 40,
+            "activityId": "pushups"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 40,
+            "activityId": "pushups"
+          }
+        ],
+        "restAfterSetSeconds": 80
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 40,
+            "activityId": "calfRaises"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 40,
+            "activityId": "calfRaises"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 40,
+            "activityId": "calfRaises"
+          }
+        ],
+        "restAfterSetSeconds": 80
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 40,
+            "activityId": "gluteBridge"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 40,
+            "activityId": "gluteKickbacks"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 40,
+            "activityId": "gluteBridge"
+          }
+        ],
+        "restAfterSetSeconds": 80
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 40,
+            "activityId": "abs"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 40,
+            "activityId": "plank"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 40,
+            "activityId": "birdDog"
+          }
+        ],
+        "restAfterSetSeconds": 80
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 40,
+            "activityId": "abs"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 40,
+            "activityId": "plank"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 40,
+            "activityId": "birdDog"
+          }
+        ],
+        "restAfterSetSeconds": 80
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 40,
+            "activityId": "abs"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 40,
+            "activityId": "plank"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 40,
+            "activityId": "birdDog"
+          }
+        ],
+        "restAfterSetSeconds": 80
+      }
+    ]
+  }
+}
