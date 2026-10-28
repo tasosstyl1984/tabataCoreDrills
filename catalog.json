@@ -1,6 +1,6 @@
 {
-  "version": 132,
-  "updatedAtMs": 1792268248346,
+  "version": 133,
+  "updatedAtMs": 1793215854850,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -234,6 +234,20 @@
         "kettlebellCleanPress",
         "kettlebellSnatch",
         "bicepCurls"
+      ]
+    },
+    {
+      "id": "remote_test",
+      "name": "Test",
+      "file": "drills/remote_test.json",
+      "updatedAtMs": 1793215853987,
+      "category": "combos",
+      "description": "",
+      "coverImage": "exercise_guides/burpees.webp",
+      "activityIds": [
+        "burpees",
+        "shadowBoxing",
+        "deadBug"
       ]
     },
     {

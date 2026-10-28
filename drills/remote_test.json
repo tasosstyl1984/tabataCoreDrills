@@ -1,11 +1,11 @@
 {
   "id": "remote_test",
-  "name": "test",
-  "createdAtMs": 1790929750249,
-  "sets": 4,
-  "repsPerSet": 4,
-  "workSeconds": 60,
-  "restBetweenRepsSeconds": 60,
+  "name": "Test",
+  "createdAtMs": 1793215853987,
+  "sets": 3,
+  "repsPerSet": 3,
+  "workSeconds": 20,
+  "restBetweenRepsSeconds": 10,
   "restBetweenSetsSeconds": 60,
   "warmupEnabled": false,
   "warmupSeconds": 60,
@@ -16,24 +16,19 @@
       {
         "rounds": [
           {
-            "workSeconds": 60,
-            "restAfterSeconds": 60,
-            "activityId": "hollowHold"
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "burpees"
           },
           {
-            "workSeconds": 60,
-            "restAfterSeconds": 60,
-            "activityId": "russianTwists"
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "shadowBoxing"
           },
           {
-            "workSeconds": 60,
-            "restAfterSeconds": 60,
-            "activityId": "birdDog"
-          },
-          {
-            "workSeconds": 60,
-            "restAfterSeconds": 60,
-            "activityId": "hangingKneeRaises"
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "deadBug"
           }
         ],
         "restAfterSetSeconds": 60
@@ -41,24 +36,19 @@
       {
         "rounds": [
           {
-            "workSeconds": 60,
-            "restAfterSeconds": 60,
-            "activityId": "hollowHold"
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "burpees"
           },
           {
-            "workSeconds": 60,
-            "restAfterSeconds": 60,
-            "activityId": "russianTwists"
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "shadowBoxing"
           },
           {
-            "workSeconds": 60,
-            "restAfterSeconds": 60,
-            "activityId": "birdDog"
-          },
-          {
-            "workSeconds": 60,
-            "restAfterSeconds": 60,
-            "activityId": "hangingKneeRaises"
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "deadBug"
           }
         ],
         "restAfterSetSeconds": 60
@@ -66,49 +56,19 @@
       {
         "rounds": [
           {
-            "workSeconds": 60,
-            "restAfterSeconds": 60,
-            "activityId": "hollowHold"
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "burpees"
           },
           {
-            "workSeconds": 60,
-            "restAfterSeconds": 60,
-            "activityId": "russianTwists"
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "shadowBoxing"
           },
           {
-            "workSeconds": 60,
-            "restAfterSeconds": 60,
-            "activityId": "birdDog"
-          },
-          {
-            "workSeconds": 60,
-            "restAfterSeconds": 60,
-            "activityId": "hangingKneeRaises"
-          }
-        ],
-        "restAfterSetSeconds": 60
-      },
-      {
-        "rounds": [
-          {
-            "workSeconds": 60,
-            "restAfterSeconds": 60,
-            "activityId": "dumbbellRow"
-          },
-          {
-            "workSeconds": 60,
-            "restAfterSeconds": 60,
-            "activityId": "reverseFly"
-          },
-          {
-            "workSeconds": 60,
-            "restAfterSeconds": 60,
-            "activityId": "frontRaises"
-          },
-          {
-            "workSeconds": 60,
-            "restAfterSeconds": 60,
-            "activityId": "plateRotations"
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "deadBug"
           }
         ],
         "restAfterSetSeconds": 60
