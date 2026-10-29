@@ -1,6 +1,6 @@
 {
-  "version": 139,
-  "updatedAtMs": 1793269823553,
+  "version": 140,
+  "updatedAtMs": 1793304624286,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -251,6 +251,20 @@
         "kettlebellCleanPress",
         "kettlebellSnatch",
         "bicepCurls"
+      ]
+    },
+    {
+      "id": "remote_test1",
+      "name": "Test1",
+      "file": "drills/remote_test1.json",
+      "updatedAtMs": 1793304623350,
+      "category": "classic",
+      "description": "",
+      "coverImage": "exercise_guides/legPress.webp",
+      "activityIds": [
+        "legPress",
+        "chestPressMachine",
+        "pecDeck"
       ]
     },
     {

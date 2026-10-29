@@ -1,0 +1,78 @@
+{
+  "id": "remote_test1",
+  "name": "Test1",
+  "createdAtMs": 1793304623350,
+  "sets": 3,
+  "repsPerSet": 3,
+  "workSeconds": 20,
+  "restBetweenRepsSeconds": 10,
+  "restBetweenSetsSeconds": 60,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "legPress"
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "legPress"
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "legPress"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "chestPressMachine"
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "chestPressMachine"
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "chestPressMachine"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "pecDeck"
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "pecDeck"
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "pecDeck"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      }
+    ]
+  }
+}
