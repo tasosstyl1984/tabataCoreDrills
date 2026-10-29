@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAtMs": 1789917817620,
+  "updatedAtMs": 1793303022121,
   "guides": {
     "abs": {
       "title": "Abdominal Crunch",
@@ -567,6 +567,195 @@
       "setup": "Stand facing target wall. Hold medicine ball at chest height by sides, feet shoulder-width apart.",
       "actionPhase": "Drop into deep squat, then explosively drive up through legs to launch the ball high against wall target, catching it on rebound.",
       "formCheck": "This is one fluid kinetic movement. Do not pause between squat and throw; use leg power to drive ball upward smoothly.",
+      "hasRemoteImage": true
+    },
+    "arnoldPress": {
+      "title": "Arnold Press",
+      "setup": "Sit or stand tall holding dumbbells at shoulder height with palms facing you, elbows tucked slightly forward.",
+      "actionPhase": "Press the weights overhead while rotating the palms outward so they face forward at the top, then reverse the rotation on the way down.",
+      "formCheck": "Keep ribs down and avoid leaning back. Rotate smoothly through the press; do not shrug the traps to finish the lockout.",
+      "hasRemoteImage": true
+    },
+    "declineBench": {
+      "title": "Decline Bench Press",
+      "setup": "Lie on a decline bench with feet secured, eyes under the bar, shoulder blades packed into the pad.",
+      "actionPhase": "Unrack and lower the bar to the lower chest with a controlled elbow tuck, then press back to full lockout.",
+      "formCheck": "Keep wrists stacked over elbows. Do not bounce the bar off the chest or let the hips lift off the pad.",
+      "hasRemoteImage": true
+    },
+    "legPress": {
+      "title": "Leg Press",
+      "setup": "Sit in the leg press with low back and hips flush to the pad, feet shoulder-width on the platform.",
+      "actionPhase": "Unlock the sled and bend the knees to lower until thighs are near parallel, then drive through mid-foot to extend without locking hard.",
+      "formCheck": "Do not let the low back round off the pad at the bottom. Keep knees tracking over toes.",
+      "hasRemoteImage": true
+    },
+    "legExtension": {
+      "title": "Leg Extension",
+      "setup": "Sit upright with the pad on the lower shins and back supported against the seat.",
+      "actionPhase": "Extend both knees until the legs are straight, pause briefly, then lower under control.",
+      "formCheck": "Avoid swinging or lifting the hips. Keep the movement isolated to the quads.",
+      "hasRemoteImage": true
+    },
+    "legCurl": {
+      "title": "Leg Curl",
+      "setup": "Lie or sit in the curl machine with the pad just above the heels and hips anchored.",
+      "actionPhase": "Curl the heels toward the glutes through a full range, then lower slowly without dropping the weight.",
+      "formCheck": "Keep hips down. Do not yank with the low back to finish the curl.",
+      "hasRemoteImage": true
+    },
+    "hackSquat": {
+      "title": "Hack Squat",
+      "setup": "Stand on the platform with back and shoulders against the pads, feet shoulder-width and slightly forward.",
+      "actionPhase": "Unlock and descend until thighs are near parallel, then drive up through the mid-foot to standing.",
+      "formCheck": "Keep heels down and knees tracking out. Avoid bouncing out of the bottom.",
+      "hasRemoteImage": true
+    },
+    "smithMachineSquat": {
+      "title": "Smith Machine Squat",
+      "setup": "Set the bar on the upper traps, feet slightly forward of the bar path, core braced.",
+      "actionPhase": "Unrack and squat down until hip crease is near knee height, then stand by driving through the mid-foot.",
+      "formCheck": "Keep torso braced against the fixed bar path. Do not let knees cave inward.",
+      "hasRemoteImage": true
+    },
+    "calfRaiseMachine": {
+      "title": "Calf Raise Machine",
+      "setup": "Place the balls of the feet on the platform with heels hanging free and pads on the shoulders or thighs.",
+      "actionPhase": "Drop the heels for a stretch, then rise onto the toes to a hard calf squeeze at the top.",
+      "formCheck": "Use a full stretch and full squeeze. Avoid bouncing or turning the knees inward.",
+      "hasRemoteImage": true
+    },
+    "hipAbductor": {
+      "title": "Hip Abductor",
+      "setup": "Sit with the pads on the outside of the knees or thighs and torso upright against the backrest.",
+      "actionPhase": "Drive the legs outward against the pads, pause, then return slowly to the start.",
+      "formCheck": "Keep the low back glued to the pad. Move from the hips, not by leaning the torso.",
+      "hasRemoteImage": true
+    },
+    "hipAdductor": {
+      "title": "Hip Adductor",
+      "setup": "Sit with the pads on the inside of the knees or thighs and upright posture.",
+      "actionPhase": "Squeeze the legs together against the pads, pause, then open slowly under control.",
+      "formCheck": "Avoid yanking with the torso. Keep the range smooth and the hips planted.",
+      "hasRemoteImage": true
+    },
+    "hipThrustMachine": {
+      "title": "Hip Thrust Machine",
+      "setup": "Sit with upper back against the pad, feet flat, and the belt or pad across the hips.",
+      "actionPhase": "Drive through the heels to extend the hips until the torso and thighs form a straight line, then lower with control.",
+      "formCheck": "Finish by squeezing the glutes, not by arching the low back. Keep the chin slightly tucked.",
+      "hasRemoteImage": true
+    },
+    "latPulldown": {
+      "title": "Lat Pulldown",
+      "setup": "Sit with thighs locked under the pads, grip the bar slightly wider than shoulders, chest tall.",
+      "actionPhase": "Pull the bar to the upper chest by driving the elbows down and back, then extend the arms under control.",
+      "formCheck": "Do not lean excessively or yank with momentum. Keep shoulders packed away from the ears.",
+      "hasRemoteImage": true
+    },
+    "seatedCableRow": {
+      "title": "Seated Cable Row",
+      "setup": "Sit tall with feet on the platform, slight knee bend, and arms extended holding the handle.",
+      "actionPhase": "Pull the handle to the lower ribs by driving the elbows back, squeeze the shoulder blades, then return slowly.",
+      "formCheck": "Avoid rounding the low back on the stretch or leaning back to cheat the pull.",
+      "hasRemoteImage": true
+    },
+    "tBarRow": {
+      "title": "T-Bar Row",
+      "setup": "Hinge at the hips over the T-bar or chest-supported pad with a neutral spine and arms long.",
+      "actionPhase": "Row the weight toward the lower chest or belly, elbows close, then lower without dumping the shoulders forward.",
+      "formCheck": "Keep the torso angle fixed. Do not yank with the low back to finish reps.",
+      "hasRemoteImage": true
+    },
+    "assistedPullUp": {
+      "title": "Assisted Pull-Up",
+      "setup": "Kneel or stand on the assist pad, grip the handles overhead, and set enough counterweight to move with control.",
+      "actionPhase": "Pull the chest toward the bar until the chin clears, then lower to a near-full hang without dumping the shoulders.",
+      "formCheck": "Lead with the chest and elbows. Avoid kipping or excessive swing.",
+      "hasRemoteImage": true
+    },
+    "chestPressMachine": {
+      "title": "Chest Press Machine",
+      "setup": "Sit with back flat on the pad, handles at mid-chest height, feet planted.",
+      "actionPhase": "Press the handles forward to near lockout, then return until the elbows are just behind the torso line.",
+      "formCheck": "Keep shoulder blades on the pad. Do not shrug or bounce out of the stretch.",
+      "hasRemoteImage": true
+    },
+    "pecDeck": {
+      "title": "Pec Deck",
+      "setup": "Sit upright with forearms on the pads or hands on the handles, elbows slightly bent.",
+      "actionPhase": "Bring the arms together in front of the chest, squeeze, then open slowly to a controlled stretch.",
+      "formCheck": "Keep a soft elbow bend throughout. Do not let the shoulders roll forward at the finish.",
+      "hasRemoteImage": true
+    },
+    "cableFly": {
+      "title": "Cable Fly",
+      "setup": "Stand centered between high or mid pulleys with a soft elbow bend and staggered stance for balance.",
+      "actionPhase": "Sweep the handles together in a wide arc to meet in front of the chest, then reverse under control.",
+      "formCheck": "Keep the torso still. Move from the shoulder joint, not by pressing like a bench press.",
+      "hasRemoteImage": true
+    },
+    "shoulderPressMachine": {
+      "title": "Shoulder Press Machine",
+      "setup": "Sit with back against the pad, handles near ear height, feet flat on the floor.",
+      "actionPhase": "Press the handles overhead to near lockout, then lower until the upper arms are about parallel to the floor.",
+      "formCheck": "Keep ribs down and avoid leaning back. Do not shrug the traps at the top.",
+      "hasRemoteImage": true
+    },
+    "cableLateralRaise": {
+      "title": "Cable Lateral Raise",
+      "setup": "Stand beside a low cable with the handle in the far hand, soft elbow bend, torso tall.",
+      "actionPhase": "Raise the arm out to the side until the hand is near shoulder height, then lower slowly.",
+      "formCheck": "Lead with the elbow, not the wrist. Avoid swinging or leaning away from the stack.",
+      "hasRemoteImage": true
+    },
+    "facePull": {
+      "title": "Face Pull",
+      "setup": "Set a rope at upper-chest height, step back with arms extended, and brace the core.",
+      "actionPhase": "Pull the rope toward the face while externally rotating so the hands finish beside the ears.",
+      "formCheck": "Lead with the rear delts and upper back. Do not shrug or yank with the low back.",
+      "hasRemoteImage": true
+    },
+    "tricepPushdown": {
+      "title": "Tricep Pushdown",
+      "setup": "Stand tall at a high cable with elbows pinned to the ribs and a neutral grip on the bar or rope.",
+      "actionPhase": "Extend the elbows until the arms are straight, squeeze the triceps, then return without letting the elbows flare forward.",
+      "formCheck": "Keep upper arms still. Avoid leaning into the stack or using shoulder drive.",
+      "hasRemoteImage": true
+    },
+    "cableCurl": {
+      "title": "Cable Curl",
+      "setup": "Stand facing a low cable with elbows pinned to the sides and palms facing up.",
+      "actionPhase": "Curl the handle toward the shoulders, squeeze the biceps, then lower under control.",
+      "formCheck": "Do not swing the torso. Keep elbows fixed beside the ribs throughout.",
+      "hasRemoteImage": true
+    },
+    "preacherCurl": {
+      "title": "Preacher Curl",
+      "setup": "Sit or stand with upper arms flat on the preacher pad and a full stretch at the bottom.",
+      "actionPhase": "Curl the weight toward the shoulders without lifting the elbows off the pad, then lower slowly.",
+      "formCheck": "Avoid bouncing out of the bottom stretch. Keep wrists neutral and shoulders relaxed.",
+      "hasRemoteImage": true
+    },
+    "cableCrunch": {
+      "title": "Cable Crunch",
+      "setup": "Kneel under a high cable with the rope behind the head or at the shoulders, hips stacked over knees.",
+      "actionPhase": "Crunch the ribs toward the hips by flexing the spine, pause, then return without yanking the arms.",
+      "formCheck": "Move from the abs, not by pulling the rope with the arms or hinging only at the hips.",
+      "hasRemoteImage": true
+    },
+    "backExtension": {
+      "title": "Back Extension",
+      "setup": "Anchor the ankles on a back-extension bench with hips on the pad and arms crossed at the chest.",
+      "actionPhase": "Hinge down with a flat back, then extend the hips and spine until the body forms a straight line.",
+      "formCheck": "Do not hyperextend hard past neutral. Squeeze glutes and keep the neck long.",
+      "hasRemoteImage": true
+    },
+    "cableKickback": {
+      "title": "Cable Kickback",
+      "setup": "Attach an ankle cuff to a low cable, face the stack, and hinge slightly with a soft standing knee.",
+      "actionPhase": "Drive the working heel back and up until the glute is fully squeezed, then return without touching down hard.",
+      "formCheck": "Keep the hips square. Avoid arching the low back to finish the kick.",
       "hasRemoteImage": true
     }
   }
