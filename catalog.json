@@ -1,6 +1,6 @@
 {
-  "version": 134,
-  "updatedAtMs": 1793267340301,
+  "version": 135,
+  "updatedAtMs": 1793267597830,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -89,6 +89,23 @@
         "farmerCarry",
         "jumpingLunges",
         "wallBalls"
+      ]
+    },
+    {
+      "id": "remote_kill_my_legs",
+      "name": "Kill my Legs",
+      "file": "drills/remote_kill_my_legs.json",
+      "updatedAtMs": 1793267596931,
+      "category": "combos",
+      "description": "",
+      "coverImage": "exercise_guides/lunges.webp",
+      "activityIds": [
+        "lunges",
+        "squats",
+        "bulgarianSplitSquat",
+        "squatJumps",
+        "jumpingLunges",
+        "sumoSquats"
       ]
     },
     {

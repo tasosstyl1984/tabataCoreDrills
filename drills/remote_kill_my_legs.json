@@ -1,0 +1,153 @@
+{
+  "id": "remote_kill_my_legs",
+  "name": "Kill my Legs",
+  "createdAtMs": 1793267596931,
+  "sets": 4,
+  "repsPerSet": 6,
+  "workSeconds": 40,
+  "restBetweenRepsSeconds": 30,
+  "restBetweenSetsSeconds": 60,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 30,
+            "activityId": "lunges"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 30,
+            "activityId": "squats"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 30,
+            "activityId": "bulgarianSplitSquat"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 30,
+            "activityId": "squatJumps"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 30,
+            "activityId": "jumpingLunges"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 30,
+            "activityId": "sumoSquats"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 30,
+            "activityId": "lunges"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 30,
+            "activityId": "squats"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 30,
+            "activityId": "bulgarianSplitSquat"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 30,
+            "activityId": "squatJumps"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 30,
+            "activityId": "jumpingLunges"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 30,
+            "activityId": "sumoSquats"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 30,
+            "activityId": "lunges"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 30,
+            "activityId": "squats"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 30,
+            "activityId": "bulgarianSplitSquat"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 30,
+            "activityId": "squatJumps"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 30,
+            "activityId": "jumpingLunges"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 30,
+            "activityId": "sumoSquats"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 30,
+            "activityId": "lunges"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 30,
+            "activityId": "squats"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 30,
+            "activityId": "bulgarianSplitSquat"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 30,
+            "activityId": "squatJumps"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 30,
+            "activityId": "sumoSquats"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      }
+    ]
+  }
+}
