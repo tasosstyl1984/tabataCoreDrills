@@ -1,6 +1,6 @@
 {
-  "version": 135,
-  "updatedAtMs": 1793267597830,
+  "version": 136,
+  "updatedAtMs": 1793268066703,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -95,10 +95,10 @@
       "id": "remote_kill_my_legs",
       "name": "Kill my Legs",
       "file": "drills/remote_kill_my_legs.json",
-      "updatedAtMs": 1793267596931,
+      "updatedAtMs": 1793268065659,
       "category": "combos",
       "description": "",
-      "coverImage": "exercise_guides/lunges.webp",
+      "coverImage": "plan_covers/remote_kill_my_legs_1793268065645.webp",
       "activityIds": [
         "lunges",
         "squats",
