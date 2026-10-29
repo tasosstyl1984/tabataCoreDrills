@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAtMs": 1789917817631,
+  "updatedAtMs": 1793303022127,
   "activities": [
     {
       "id": "jumpRope",
@@ -203,6 +203,11 @@
       "group": "Dumbbell"
     },
     {
+      "id": "arnoldPress",
+      "label": "Arnold press",
+      "group": "Dumbbell"
+    },
+    {
       "id": "benchPress",
       "label": "Bench press",
       "group": "Chest"
@@ -210,6 +215,11 @@
     {
       "id": "inclineBench",
       "label": "Incline bench",
+      "group": "Chest"
+    },
+    {
+      "id": "declineBench",
+      "label": "Decline bench",
       "group": "Chest"
     },
     {
@@ -231,6 +241,131 @@
       "id": "pullover",
       "label": "Pullover",
       "group": "Chest"
+    },
+    {
+      "id": "legPress",
+      "label": "Leg press",
+      "group": "Machines"
+    },
+    {
+      "id": "legExtension",
+      "label": "Leg extension",
+      "group": "Machines"
+    },
+    {
+      "id": "legCurl",
+      "label": "Leg curl",
+      "group": "Machines"
+    },
+    {
+      "id": "hackSquat",
+      "label": "Hack squat",
+      "group": "Machines"
+    },
+    {
+      "id": "smithMachineSquat",
+      "label": "Smith squat",
+      "group": "Machines"
+    },
+    {
+      "id": "calfRaiseMachine",
+      "label": "Machine calves",
+      "group": "Machines"
+    },
+    {
+      "id": "hipAbductor",
+      "label": "Hip abductor",
+      "group": "Machines"
+    },
+    {
+      "id": "hipAdductor",
+      "label": "Hip adductor",
+      "group": "Machines"
+    },
+    {
+      "id": "hipThrustMachine",
+      "label": "Hip thrust",
+      "group": "Machines"
+    },
+    {
+      "id": "latPulldown",
+      "label": "Lat pulldown",
+      "group": "Machines"
+    },
+    {
+      "id": "seatedCableRow",
+      "label": "Seated cable row",
+      "group": "Machines"
+    },
+    {
+      "id": "tBarRow",
+      "label": "T-bar row",
+      "group": "Machines"
+    },
+    {
+      "id": "assistedPullUp",
+      "label": "Assisted pull-up",
+      "group": "Machines"
+    },
+    {
+      "id": "chestPressMachine",
+      "label": "Chest press",
+      "group": "Machines"
+    },
+    {
+      "id": "pecDeck",
+      "label": "Pec deck",
+      "group": "Machines"
+    },
+    {
+      "id": "cableFly",
+      "label": "Cable fly",
+      "group": "Machines"
+    },
+    {
+      "id": "shoulderPressMachine",
+      "label": "Shoulder press",
+      "group": "Machines"
+    },
+    {
+      "id": "cableLateralRaise",
+      "label": "Cable lateral raise",
+      "group": "Machines"
+    },
+    {
+      "id": "facePull",
+      "label": "Face pull",
+      "group": "Machines"
+    },
+    {
+      "id": "tricepPushdown",
+      "label": "Tricep pushdown",
+      "group": "Machines"
+    },
+    {
+      "id": "cableCurl",
+      "label": "Cable curl",
+      "group": "Machines"
+    },
+    {
+      "id": "preacherCurl",
+      "label": "Preacher curl",
+      "group": "Machines"
+    },
+    {
+      "id": "cableCrunch",
+      "label": "Cable crunch",
+      "group": "Machines"
+    },
+    {
+      "id": "backExtension",
+      "label": "Back extension",
+      "group": "Machines"
+    },
+    {
+      "id": "cableKickback",
+      "label": "Cable kickback",
+      "group": "Machines"
     },
     {
       "id": "kettlebellSwings",
