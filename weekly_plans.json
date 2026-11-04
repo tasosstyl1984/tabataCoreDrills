@@ -1,22 +1,6 @@
 {
-  "version": 4,
-  "updatedAtMs": 1793826908546,
+  "version": 5,
+  "updatedAtMs": 1793826915800,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "weeks": [
-    {
-      "id": "remote_week_legs",
-      "name": "legs",
-      "description": "",
-      "updatedAtMs": 1793822737501,
-      "slots": {
-        "mon": null,
-        "tue": "remote_kill_my_legs",
-        "wed": null,
-        "thu": "remote_kill_my_legs",
-        "fri": null,
-        "sat": "remote_kill_my_legs",
-        "sun": null
-      }
-    }
-  ]
+  "weeks": []
 }
