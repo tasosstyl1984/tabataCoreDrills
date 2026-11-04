@@ -1763,3 +1763,114 @@ body.admin-authed .preview-footer-actions .btn-delete-admin {
   }
 }
 
+.weekly-section {
+  margin-bottom: 1.25rem;
+  padding: 1rem 1.1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.weekly-section h2 {
+  margin: 0 0 0.35rem;
+  font-size: 1.15rem;
+}
+
+.weekly-intro {
+  margin: 0 0 0.75rem;
+  max-width: 52rem;
+}
+
+.weekly-grid {
+  margin-top: 0.5rem;
+}
+
+.weekly-empty {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+.weekly-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.weekly-card-title {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.weekly-card-desc {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.weekly-card-summary {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--text);
+  opacity: 0.92;
+}
+
+.weekly-card-reorder {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  display: flex;
+  gap: 0.15rem;
+}
+
+.weekly-card-reorder button {
+  min-width: 2rem;
+  padding: 0.2rem 0.35rem;
+}
+
+.weekly-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.35rem;
+}
+
+.weekly-day-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  margin-top: 0.5rem;
+}
+
+.weekly-day-row {
+  display: grid;
+  grid-template-columns: 3.25rem 1fr;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.weekly-day-label {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.weekly-day-select {
+  width: 100%;
+  font: inherit;
+  padding: 0.45rem 0.55rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+}
+
+.weekly-editor-dialog .editor-panel {
+  max-height: min(92vh, 720px);
+}
+
+.weekly-editor-dialog .form-body {
+  overflow-y: auto;
+  max-height: min(58vh, 520px);
+}
+

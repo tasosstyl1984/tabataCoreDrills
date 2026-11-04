@@ -46,6 +46,10 @@
     return [...extra, ...online];
   }
 
+  function getVisibleDrills() {
+    return visibleDrills();
+  }
+
   function themePreference() {
     try {
       return localStorage.getItem(THEME_KEY) || "system";
@@ -688,6 +692,9 @@
     }
     await reloadPresets();
     refreshVisibleCatalog();
+    if (window.TabataDrillsWeekly?.reload) {
+      await window.TabataDrillsWeekly.reload({ fromRemote });
+    }
     return catalog;
   }
 
@@ -806,6 +813,7 @@
     applyPresets,
     getCatalog: () => catalog,
     getPresets: () => presetsCatalog,
+    getVisibleDrills,
     getPreviewEntry: () => previewEntry,
     closePreview,
     openPreview,
