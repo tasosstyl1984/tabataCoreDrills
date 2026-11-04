@@ -44,7 +44,18 @@
   const activityPickerChips = document.getElementById("activity-picker-chips");
   const activityPickerList = document.getElementById("activity-picker-list");
 
-  let editingEntry = null;
+  const newWeeklyBtn = document.getElementById("admin-new-weekly");
+  const weeklyEditorDialog = document.getElementById("weekly-editor-dialog");
+  const weeklyEditorTitle = document.getElementById("weekly-editor-title");
+  const weeklyEditorClose = document.getElementById("weekly-editor-close");
+  const weeklyEditorCancel = document.getElementById("weekly-editor-cancel");
+  const weeklyEditorSave = document.getElementById("weekly-editor-save");
+  const weeklyEditorError = document.getElementById("weekly-editor-error");
+  const weeklyEditName = document.getElementById("weekly-edit-name");
+  const weeklyEditDescription = document.getElementById("weekly-edit-description");
+  const weeklyDayRows = document.getElementById("weekly-day-rows");
+
+  let editingWeeklyWeek = null;
   let plan = classicStarterPlan();
   let categoryManual = false;
   /** Activity group chip for the exercise picker. Shared across rounds in one edit. */
@@ -1295,6 +1306,284 @@
     throw lastErr || new Error("catalog.json update failed after retries");
   }
 
+  async function loadRemoteWeeklyPlansJson() {
+    const file = await ghGetContent("weekly_plans.json");
+    if (!file) {
+      return {
+        file: null,
+        json: {
+          version: 0,
+          updatedAtMs: 0,
+          baseUrl: RAW_BASE,
+          weeks: [],
+        },
+      };
+    }
+    const text = await readGhFileText(file, "weekly_plans.json");
+    try {
+      return { file, json: JSON.parse(text) };
+    } catch (err) {
+      throw new Error(`weekly_plans.json is not valid JSON: ${err.message}`);
+    }
+  }
+
+  async function putWeeklyPlansJson(mutator, message) {
+    const maxAttempts = 5;
+    let lastErr = null;
+    for (let attempt = 0; attempt < maxAttempts; attempt++) {
+      if (attempt > 0) {
+        await new Promise((r) => setTimeout(r, 250 * attempt));
+      }
+      try {
+        const { json } = await loadRemoteWeeklyPlansJson();
+        const next = mutator(clonePlan(json));
+        if (!next.baseUrl) {
+          next.baseUrl = RAW_BASE;
+        }
+        if (!Array.isArray(next.weeks)) {
+          next.weeks = [];
+        }
+        next.version = Number(next.version || 0) + 1;
+        next.updatedAtMs = Date.now();
+        await commitFilesAtomic(message, [
+          {
+            path: "weekly_plans.json",
+            content: `${JSON.stringify(next, null, 2)}\n`,
+            encoding: "utf-8",
+          },
+        ]);
+        return next;
+      } catch (err) {
+        lastErr = err;
+        if (err.status === 409 || err.status === 422 || /\(409\)|\(422\)/.test(String(err.message))) {
+          continue;
+        }
+        throw err;
+      }
+    }
+    throw lastErr || new Error("weekly_plans.json update failed after retries");
+  }
+
+  function slugifyWeekName(name) {
+    const base = String(name || "week")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "_")
+      .replace(/^_+|_+$/g, "")
+      .slice(0, 48);
+    return `remote_week_${base || "plan"}`;
+  }
+
+  function uniqueWeekId(preferred) {
+    const weeks = window.TabataDrillsWeekly?.getWeeklyPlans?.()?.weeks || [];
+    const ids = new Set(weeks.map((w) => w.id));
+    let id = preferred.startsWith("remote_week_") ? preferred : slugifyWeekName(preferred);
+    if (!ids.has(id)) return id;
+    let i = 2;
+    while (ids.has(`${id}_${i}`)) i += 1;
+    return `${id}_${i}`;
+  }
+
+  function weeklyDayKeys() {
+    return window.TabataDrillsWeekly?.DAY_KEYS || ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
+  }
+
+  function weeklyDayLabel(key) {
+    const labels = window.TabataDrillsWeekly?.DAY_LABELS || {};
+    return labels[key] || key;
+  }
+
+  function drillOptionsHtml(selectedId) {
+    const drills = (site()?.getVisibleDrills?.() || [])
+      .filter((d) => d && d.id)
+      .slice()
+      .sort((a, b) => String(a.name || a.id).localeCompare(String(b.name || b.id)));
+    const sel = selectedId || "";
+    let html = `<option value=""${sel ? "" : " selected"}>Rest</option>`;
+    for (const d of drills) {
+      const id = d.id;
+      const label = d.preset ? `${d.name || id} (preset)` : d.name || id;
+      html += `<option value="${site()?.escapeAttr?.(id) || id}"${
+        id === sel ? " selected" : ""
+      }>${site()?.escapeHtml?.(label) || label}</option>`;
+    }
+    return html;
+  }
+
+  function renderWeeklyDayRows(slots = {}) {
+    if (!weeklyDayRows) return;
+    weeklyDayRows.innerHTML = weeklyDayKeys()
+      .map(
+        (key) => `<div class="weekly-day-row">
+          <label class="weekly-day-label" for="weekly-slot-${key}">${weeklyDayLabel(key)}</label>
+          <select id="weekly-slot-${key}" class="weekly-day-select" data-day="${key}">
+            ${drillOptionsHtml(slots[key] || null)}
+          </select>
+        </div>`,
+      )
+      .join("");
+  }
+
+  function setWeeklyEditorError(msg) {
+    if (!weeklyEditorError) return;
+    if (!msg) {
+      weeklyEditorError.hidden = true;
+      weeklyEditorError.textContent = "";
+      return;
+    }
+    weeklyEditorError.hidden = false;
+    weeklyEditorError.textContent = msg;
+  }
+
+  function readWeeklyForm() {
+    const slots = {};
+    for (const key of weeklyDayKeys()) {
+      const el = document.getElementById(`weekly-slot-${key}`);
+      const v = el?.value?.trim() || "";
+      slots[key] = v || null;
+    }
+    return {
+      id: editingWeeklyWeek?.id || uniqueWeekId(slugifyWeekName(weeklyEditName?.value)),
+      name: weeklyEditName?.value?.trim() || "",
+      description: weeklyEditDescription?.value?.trim() || "",
+      updatedAtMs: Date.now(),
+      slots,
+    };
+  }
+
+  function validateWeeklyWeek(week) {
+    if (!week.name) return "Name is required.";
+    const drillIds = new Set((site()?.getVisibleDrills?.() || []).map((d) => d.id));
+    for (const key of weeklyDayKeys()) {
+      const id = week.slots?.[key];
+      if (id && !drillIds.has(id)) {
+        return `${weeklyDayLabel(key)}: plan "${id}" is not in the catalog.`;
+      }
+    }
+    const hasWorkout = weeklyDayKeys().some((k) => week.slots?.[k]);
+    if (!hasWorkout) return "Pick at least one workout day (or delete this weekly plan).";
+    return null;
+  }
+
+  function openWeeklyEditor(week) {
+    if (!isAuthed()) {
+      showModal(loginDialog);
+      return;
+    }
+    editingWeeklyWeek = week ? clonePlan(week) : null;
+    setWeeklyEditorError("");
+    if (weeklyEditorTitle) {
+      weeklyEditorTitle.textContent = week ? "Edit weekly plan" : "New weekly plan";
+    }
+    if (weeklyEditName) weeklyEditName.value = week?.name || "";
+    if (weeklyEditDescription) weeklyEditDescription.value = week?.description || "";
+    renderWeeklyDayRows(week?.slots || {});
+    showModal(weeklyEditorDialog);
+  }
+
+  function hideWeeklyEditor() {
+    editingWeeklyWeek = null;
+    setWeeklyEditorError("");
+    hideModal(weeklyEditorDialog);
+  }
+
+  async function saveWeeklyEditor() {
+    if (!isAuthed()) {
+      showModal(loginDialog);
+      return;
+    }
+    const week = readWeeklyForm();
+    const err = validateWeeklyWeek(week);
+    if (err) {
+      setWeeklyEditorError(err);
+      return;
+    }
+    setWeeklyEditorError("");
+    showBusy("Saving weekly plan…");
+    try {
+      const isNew = !editingWeeklyWeek?.id;
+      const weekId = editingWeeklyWeek?.id || week.id;
+      const payload = { ...week, id: weekId };
+      const next = await putWeeklyPlansJson((json) => {
+        const weeks = json.weeks || [];
+        const idx = weeks.findIndex((w) => w.id === weekId);
+        if (idx >= 0) {
+          weeks[idx] = payload;
+        } else {
+          weeks.push(payload);
+        }
+        json.weeks = weeks;
+        return json;
+      }, isNew ? `Weekly: add ${weekId}` : `Weekly: update ${weekId}`);
+      window.TabataDrillsWeekly?.apply?.(next);
+      window.dispatchEvent(
+        new CustomEvent("tabata-weekly-changed", { detail: { weekly: next } }),
+      );
+      hideWeeklyEditor();
+      toast(`Saved ${weekId}`);
+    } catch (e) {
+      setWeeklyEditorError(networkError(e, "Save").message || "Save failed");
+    } finally {
+      hideBusy();
+    }
+  }
+
+  async function deleteWeeklyWeek(week) {
+    if (!isAuthed() || !week?.id) return;
+    const ok = window.confirm(`Delete weekly plan "${week.name || week.id}"?`);
+    if (!ok) return;
+    showBusy("Deleting weekly plan…");
+    try {
+      const next = await putWeeklyPlansJson((json) => {
+        json.weeks = (json.weeks || []).filter((w) => w.id !== week.id);
+        return json;
+      }, `Weekly: delete ${week.id}`);
+      window.TabataDrillsWeekly?.apply?.(next);
+      window.dispatchEvent(
+        new CustomEvent("tabata-weekly-changed", { detail: { weekly: next } }),
+      );
+      toast(`Deleted ${week.id}`);
+    } catch (e) {
+      toast(networkError(e, "Delete").message || "Delete failed");
+    } finally {
+      hideBusy();
+    }
+  }
+
+  async function moveWeeklyWeek(index, direction) {
+    if (!isAuthed()) return;
+    const delta = direction === "up" ? -1 : direction === "down" ? 1 : 0;
+    if (!delta) return;
+    const current = window.TabataDrillsWeekly?.getWeeklyPlans?.();
+    const weeks = current?.weeks || [];
+    const j = index + delta;
+    if (index < 0 || index >= weeks.length || j < 0 || j >= weeks.length) return;
+    showBusy("Reordering…");
+    try {
+      const next = await putWeeklyPlansJson((json) => {
+        const list = [...(json.weeks || [])];
+        const a = list[index];
+        list[index] = list[j];
+        list[j] = a;
+        json.weeks = list;
+        return json;
+      }, "Weekly: reorder");
+      window.TabataDrillsWeekly?.apply?.(next);
+      window.dispatchEvent(
+        new CustomEvent("tabata-weekly-changed", { detail: { weekly: next } }),
+      );
+    } catch (e) {
+      toast(networkError(e, "Reorder").message || "Reorder failed");
+    } finally {
+      hideBusy();
+    }
+  }
+
+  window.TabataDrillsWeeklyAdmin = {
+    openEditor: openWeeklyEditor,
+    deleteWeek: deleteWeeklyWeek,
+    moveWeek: moveWeeklyWeek,
+  };
+
   function revokePendingCoverUrl() {
     if (pendingCoverUrl) {
       URL.revokeObjectURL(pendingCoverUrl);
@@ -1844,6 +2133,25 @@
 
   if (newDrillBtn) {
     newDrillBtn.addEventListener("click", () => openEditor({ entry: null, template: null }));
+  }
+  if (newWeeklyBtn) {
+    newWeeklyBtn.addEventListener("click", () => openWeeklyEditor(null));
+  }
+  if (weeklyEditorClose) weeklyEditorClose.addEventListener("click", hideWeeklyEditor);
+  if (weeklyEditorCancel) weeklyEditorCancel.addEventListener("click", hideWeeklyEditor);
+  if (weeklyEditorSave) {
+    weeklyEditorSave.addEventListener("click", () => {
+      saveWeeklyEditor();
+    });
+  }
+  if (weeklyEditorDialog) {
+    weeklyEditorDialog.addEventListener("click", (e) => {
+      if (e.target === weeklyEditorDialog) hideWeeklyEditor();
+    });
+    weeklyEditorDialog.addEventListener("cancel", (e) => {
+      e.preventDefault();
+      hideWeeklyEditor();
+    });
   }
   const importJsonBtn = document.getElementById("admin-import-json");
   const importFileInput = document.getElementById("admin-import-file");

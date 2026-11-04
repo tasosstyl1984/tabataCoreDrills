@@ -28,10 +28,43 @@ python tool/import_presets_from_drills.py
 Presets cannot be deleted from the site (they ship in the APK). Online-only plans
 still use **New plan** / Delete against `catalog.json`.
 
+### Weekly plans (`weekly_plans.json`)
+
+Curated **Mon–Sun** schedules: each day points at a `remote_*` plan id from
+`catalog.json` (or **rest** = `null`). Tabata Core PR2 will download this file and
+let users **Choose a weekly plan**; until then the public site lists weeks for preview.
+
+**Admin**
+
+1. Sign in → **New weekly plan** (admin bar).
+2. Set name, description, and seven day dropdowns (catalog + preset overlay while signed in).
+3. **Save** commits `weekly_plans.json` in one atomic git commit (bumps `version` / `updatedAtMs`).
+4. **Edit** / **Delete** / **↑↓ reorder** on weekly cards when signed in.
+
+Example entry:
+
+```json
+{
+  "id": "remote_week_mon_thu_strength",
+  "name": "Mon / Thu strength",
+  "description": "Weighted Shadow Monday, Ladies First Thursday.",
+  "updatedAtMs": 0,
+  "slots": {
+    "mon": "remote_weighted_shadow",
+    "tue": null,
+    "wed": null,
+    "thu": "remote_ladies_first",
+    "fri": null,
+    "sat": null,
+    "sun": null
+  }
+}
+```
+
 ## How the site loads data
 
 - **GitHub Pages** hosts the HTML/CSS/JS shell and static exercise guide assets.
-- **Mutable plans** (`catalog.json`, `drills/*.json`, `plan_covers/*`) are always read from
+- **Mutable plans** (`catalog.json`, `drills/*.json`, `plan_covers/*`, `weekly_plans.json`) are always read from
   **raw.githubusercontent.com** (same source the Android app uses). That avoids the
   Pages CDN lag after Save.
 
