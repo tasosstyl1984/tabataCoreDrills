@@ -1,6 +1,6 @@
 {
-  "version": 53,
-  "updatedAtMs": 1793903890579,
+  "version": 54,
+  "updatedAtMs": 1793904593267,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "totalBytes": 1212040,
   "images": [
@@ -457,14 +457,14 @@
     {
       "id": "legCurl",
       "file": "exercise_guides/legCurl.webp",
-      "bytes": 15270,
-      "sha256": "6e2ad3a6a403b401"
+      "bytes": 12812,
+      "sha256": "335df0f3b1bca8b0"
     },
     {
       "id": "legExtension",
       "file": "exercise_guides/legExtension.webp",
-      "bytes": 12812,
-      "sha256": "335df0f3b1bca8b0"
+      "bytes": 15270,
+      "sha256": "6e2ad3a6a403b401"
     },
     {
       "id": "legPress",
