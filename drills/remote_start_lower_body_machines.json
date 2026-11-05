@@ -1,0 +1,169 @@
+{
+  "id": "remote_start_lower_body_machines",
+  "name": "Start Lower Body Machines",
+  "description": "Beginner lower-body circuit on machines. Five moves, five rounds, 45 seconds of work and 60 seconds of rest, about 43 minutes.",
+  "createdAtMs": 1793901151826,
+  "sets": 5,
+  "repsPerSet": 5,
+  "workSeconds": 45,
+  "restBetweenRepsSeconds": 60,
+  "restBetweenSetsSeconds": 60,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "legPress"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "legCurl"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "legExtension"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "hipAbductor"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "calfRaiseMachine"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "legPress"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "legCurl"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "legExtension"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "hipAbductor"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "calfRaiseMachine"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "legPress"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "legCurl"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "legExtension"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "hipAbductor"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "calfRaiseMachine"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "legPress"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "legCurl"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "legExtension"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "hipAbductor"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "calfRaiseMachine"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "legPress"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "legCurl"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "legExtension"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "hipAbductor"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "calfRaiseMachine"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      }
+    ]
+  }
+}

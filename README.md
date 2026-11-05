@@ -89,6 +89,14 @@ Example entry:
 Export writes `drills/remote_*.json` + `presets.json` (does **not** replace public `catalog.json`).
 Import is the reverse for the next Android release.
 
+### Exercise guide images + equipment
+
+- Illustrations: `exercise_guides/{activityId}.webp`, versioned in `exercise_guides_manifest.json`.
+- Optional equipment tags: `equipment` string array on each activity in `exercise_catalog.json` (empty = none/bodyweight). App UI for equipment is not shipped yet.
+- Same movement with different equipment shares a `movement` id (for a later “use the equipment I have” swap). The picker still lists each exercise on its own.
+- Refresh from approved PNGs + `drills+equipment.xlsx` (TabataCore):  
+  `python tool/import_drills_from_excel.py --dry-run` then `--apply` (see `tool/drills_import_config.py` for EX-code mapping).
+
 To refresh plan cover WebPs from locked mockups:
 
 ```bash

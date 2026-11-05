@@ -1,0 +1,169 @@
+{
+  "id": "remote_start_upper_body_machines",
+  "name": "Start Upper Body Machines",
+  "description": "Beginner upper-body circuit on machines. Five moves, five rounds, 45 seconds of work and 60 seconds of rest, about 43 minutes.",
+  "createdAtMs": 1793901151826,
+  "sets": 5,
+  "repsPerSet": 5,
+  "workSeconds": 45,
+  "restBetweenRepsSeconds": 60,
+  "restBetweenSetsSeconds": 60,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "chestPressMachine"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "latPulldown"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "shoulderPressMachine"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "cableCurl"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "tricepPushdown"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "chestPressMachine"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "latPulldown"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "shoulderPressMachine"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "cableCurl"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "tricepPushdown"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "chestPressMachine"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "latPulldown"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "shoulderPressMachine"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "cableCurl"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "tricepPushdown"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "chestPressMachine"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "latPulldown"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "shoulderPressMachine"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "cableCurl"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "tricepPushdown"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "chestPressMachine"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "latPulldown"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "shoulderPressMachine"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "cableCurl"
+          },
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 60,
+            "activityId": "tricepPushdown"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      }
+    ]
+  }
+}

@@ -1,551 +1,1019 @@
 {
-  "version": 1,
-  "updatedAtMs": 1793303022127,
+  "version": 7,
+  "updatedAtMs": 1793900987861,
   "activities": [
     {
       "id": "jumpRope",
       "label": "Jump rope",
-      "group": "General"
+      "group": "General",
+      "movement": "jumpRope",
+      "equipment": [
+        "Jump rope"
+      ]
     },
     {
       "id": "jumpingJacks",
       "label": "Jumping jacks",
-      "group": "General"
+      "group": "General",
+      "movement": "jumpingJacks",
+      "equipment": []
     },
     {
       "id": "burpees",
       "label": "Burpees",
-      "group": "General"
+      "group": "General",
+      "movement": "burpees",
+      "equipment": []
     },
     {
       "id": "shadowBoxing",
       "label": "Shadow boxing",
-      "group": "Combat"
-    },
-    {
-      "id": "boxing",
-      "label": "Boxing bell",
-      "group": "Combat"
+      "group": "Combat",
+      "movement": "shadowBoxing",
+      "equipment": [
+        "Boxing gloves optional"
+      ]
     },
     {
       "id": "abs",
       "label": "Abs",
-      "group": "Core"
+      "group": "Core",
+      "movement": "abs",
+      "equipment": [
+        "Exercise mat"
+      ]
     },
     {
       "id": "pushups",
       "label": "Pushups",
-      "group": "Strength"
+      "group": "Strength",
+      "movement": "pushups",
+      "equipment": []
     },
     {
       "id": "pullUps",
       "label": "Pull ups",
-      "group": "Strength"
+      "group": "Strength",
+      "movement": "pullUp",
+      "equipment": [
+        "Pull-up bar"
+      ]
     },
     {
       "id": "squats",
       "label": "Squats",
-      "group": "Strength"
+      "group": "Strength",
+      "movement": "squat",
+      "equipment": [
+        "Barbell",
+        "weight plates",
+        "squat rack"
+      ]
+    },
+    {
+      "id": "bodyweightSumoSquats",
+      "label": "Sumo squats",
+      "group": "Strength",
+      "movement": "sumoSquat",
+      "equipment": []
     },
     {
       "id": "sumoSquats",
       "label": "Sumo squats",
-      "group": "Strength"
+      "group": "Kettlebell",
+      "movement": "sumoSquat",
+      "equipment": [
+        "Kettlebell"
+      ]
     },
     {
       "id": "lunges",
       "label": "Lunges",
-      "group": "Strength"
+      "group": "Strength",
+      "movement": "lunge",
+      "equipment": []
     },
     {
       "id": "plateRotations",
       "label": "Plate rotations",
-      "group": "Core"
+      "group": "Core",
+      "movement": "plateRotations",
+      "equipment": [
+        "Weight plate"
+      ]
+    },
+    {
+      "id": "barbellCleanPress",
+      "label": "Clean and press",
+      "group": "Strength",
+      "movement": "cleanAndPress",
+      "equipment": [
+        "Barbell",
+        "weight plates"
+      ]
+    },
+    {
+      "id": "aroundTheWorld",
+      "label": "Around the world",
+      "group": "Strength",
+      "movement": "aroundTheWorld",
+      "equipment": [
+        "Weight plate"
+      ]
     },
     {
       "id": "stepUps",
       "label": "Step-ups",
-      "group": "Strength"
+      "group": "Strength",
+      "movement": "stepUps",
+      "equipment": [
+        "Dumbbells",
+        "sturdy step",
+        "platform"
+      ]
     },
     {
       "id": "thrusters",
       "label": "Thrusters",
-      "group": "Strength"
+      "group": "Strength",
+      "movement": "thrusters",
+      "equipment": [
+        "Barbell",
+        "weight plates"
+      ]
     },
     {
       "id": "wallBalls",
       "label": "Wall balls",
-      "group": "Strength"
+      "group": "Strength",
+      "movement": "wallBalls",
+      "equipment": [
+        "Medicine ball"
+      ]
     },
     {
       "id": "dips",
       "label": "Dips",
-      "group": "Strength"
+      "group": "Strength",
+      "movement": "dips",
+      "equipment": [
+        "Assisted dip",
+        "pull-up machine"
+      ]
     },
     {
       "id": "gluteBridge",
       "label": "Glute bridge",
-      "group": "Strength"
+      "group": "Strength",
+      "movement": "gluteBridge",
+      "equipment": [
+        "Exercise mat"
+      ]
     },
     {
       "id": "gluteKickbacks",
       "label": "Glute kickbacks",
-      "group": "Strength"
+      "group": "Strength",
+      "movement": "gluteKickback",
+      "equipment": []
     },
     {
       "id": "bulgarianSplitSquat",
       "label": "Split squat",
-      "group": "Strength"
+      "group": "Strength",
+      "movement": "bulgarianSplitSquat",
+      "equipment": [
+        "Dumbbells or barbell (variant-dependent)"
+      ]
     },
     {
       "id": "calfRaises",
       "label": "Calf raises",
-      "group": "Strength"
+      "group": "Strength",
+      "movement": "calfRaise",
+      "equipment": [
+        "Dumbbells"
+      ]
+    },
+    {
+      "id": "bodyweightCalfRaises",
+      "label": "Calf raises",
+      "group": "Strength",
+      "movement": "calfRaise",
+      "equipment": []
     },
     {
       "id": "plank",
       "label": "Plank",
-      "group": "Core"
+      "group": "Core",
+      "movement": "plank",
+      "equipment": [
+        "Exercise mat"
+      ]
     },
     {
       "id": "hangingKneeRaises",
       "label": "Knee raises",
-      "group": "Core"
+      "group": "Core",
+      "movement": "hangingKneeRaises",
+      "equipment": [
+        "Pull-up bar"
+      ]
     },
     {
       "id": "sidePlank",
       "label": "Side plank",
-      "group": "Core"
+      "group": "Core",
+      "movement": "sidePlank",
+      "equipment": [
+        "Exercise mat"
+      ]
     },
     {
       "id": "deadBug",
       "label": "Dead bug",
-      "group": "Core"
+      "group": "Core",
+      "movement": "deadBug",
+      "equipment": [
+        "Exercise mat"
+      ]
     },
     {
       "id": "birdDog",
       "label": "Bird dog",
-      "group": "Core"
+      "group": "Core",
+      "movement": "birdDog",
+      "equipment": [
+        "Exercise mat"
+      ]
     },
     {
       "id": "russianTwists",
       "label": "Rus. twists",
-      "group": "Core"
+      "group": "Core",
+      "movement": "russianTwists",
+      "equipment": [
+        "Exercise mat",
+        "weight plate optional"
+      ]
     },
     {
       "id": "hollowHold",
       "label": "Hollow hold",
-      "group": "Core"
+      "group": "Core",
+      "movement": "hollowHold",
+      "equipment": [
+        "Exercise mat"
+      ]
     },
     {
       "id": "dumbbell",
       "label": "Dumbbell",
-      "group": "Dumbbell"
+      "group": "Dumbbell",
+      "movement": "dumbbell",
+      "equipment": []
     },
     {
       "id": "bicepCurls",
-      "label": "Bicep curls",
-      "group": "Dumbbell"
+      "label": "Biceps curl",
+      "group": "Dumbbell",
+      "movement": "bicepsCurl",
+      "equipment": [
+        "Dumbbells"
+      ]
     },
     {
       "id": "hammerCurls",
       "label": "Hammer curls",
-      "group": "Dumbbell"
+      "group": "Dumbbell",
+      "movement": "hammerCurls",
+      "equipment": [
+        "Dumbbells"
+      ]
     },
     {
       "id": "concentrationCurls",
       "label": "Conc. curls",
-      "group": "Dumbbell"
+      "group": "Dumbbell",
+      "movement": "concentrationCurls",
+      "equipment": [
+        "Dumbbell",
+        "bench"
+      ]
     },
     {
       "id": "lateralRaises",
       "label": "Lateral raises",
-      "group": "Dumbbell"
+      "group": "Dumbbell",
+      "movement": "lateralRaise",
+      "equipment": [
+        "Dumbbells"
+      ]
     },
     {
       "id": "frontRaises",
-      "label": "Front raises",
-      "group": "Dumbbell"
+      "label": "Front raise",
+      "group": "Dumbbell",
+      "movement": "frontRaises",
+      "equipment": [
+        "Dumbbells"
+      ]
     },
     {
       "id": "dumbbellShoulderPress",
-      "label": "DB shoulder press",
-      "group": "Dumbbell"
+      "label": "Shoulder press",
+      "group": "Dumbbell",
+      "movement": "shoulderPress",
+      "equipment": [
+        "Dumbbells",
+        "adjustable bench"
+      ]
     },
     {
       "id": "dumbbellRow",
       "label": "DB row",
-      "group": "Dumbbell"
+      "group": "Dumbbell",
+      "movement": "row",
+      "equipment": [
+        "Dumbbell",
+        "bench"
+      ]
     },
     {
       "id": "reverseFly",
       "label": "Reverse fly",
-      "group": "Dumbbell"
+      "group": "Dumbbell",
+      "movement": "reverseFly",
+      "equipment": [
+        "Dumbbells"
+      ]
     },
     {
       "id": "tricepKickbacks",
-      "label": "Kickbacks",
-      "group": "Dumbbell"
+      "label": "Triceps kickback",
+      "group": "Dumbbell",
+      "movement": "tricepKickbacks",
+      "equipment": [
+        "Dumbbell",
+        "flat bench"
+      ]
     },
     {
       "id": "overheadTricepExtension",
-      "label": "OH tricep extension",
-      "group": "Dumbbell"
+      "label": "Triceps extension",
+      "group": "Dumbbell",
+      "movement": "overheadTricepExtension",
+      "equipment": [
+        "Dumbbell"
+      ]
     },
     {
       "id": "renegadeRow",
       "label": "Renegade row",
-      "group": "Dumbbell"
+      "group": "Dumbbell",
+      "movement": "renegadeRow",
+      "equipment": [
+        "Dumbbells"
+      ]
     },
     {
       "id": "dumbbellLunges",
       "label": "DB lunges",
-      "group": "Dumbbell"
+      "group": "Dumbbell",
+      "movement": "lunge",
+      "equipment": [
+        "Dumbbells"
+      ]
     },
     {
       "id": "arnoldPress",
       "label": "Arnold press",
-      "group": "Dumbbell"
+      "group": "Dumbbell",
+      "movement": "arnoldPress",
+      "equipment": [
+        "Dumbbells",
+        "incline bench"
+      ]
+    },
+    {
+      "id": "standingArnoldPress",
+      "label": "Arnold press",
+      "group": "Dumbbell",
+      "movement": "arnoldPress",
+      "equipment": [
+        "Dumbbells"
+      ]
     },
     {
       "id": "benchPress",
       "label": "Bench press",
-      "group": "Chest"
+      "group": "Chest",
+      "movement": "chestPress",
+      "equipment": [
+        "Barbell",
+        "weight plates",
+        "flat bench",
+        "rack"
+      ]
     },
     {
       "id": "inclineBench",
-      "label": "Incline bench",
-      "group": "Chest"
+      "label": "Incline chest press",
+      "group": "Chest",
+      "movement": "inclineBench",
+      "equipment": [
+        "Dumbbells",
+        "incline bench"
+      ]
     },
     {
       "id": "declineBench",
-      "label": "Decline bench",
-      "group": "Chest"
+      "label": "Decline bench press",
+      "group": "Chest",
+      "movement": "declineBench",
+      "equipment": [
+        "Barbell",
+        "weight plates",
+        "decline bench",
+        "rack"
+      ]
     },
     {
       "id": "dumbbellChestPress",
       "label": "DB chest press",
-      "group": "Chest"
+      "group": "Chest",
+      "movement": "chestPress",
+      "equipment": [
+        "Dumbbells",
+        "flat bench"
+      ]
     },
     {
       "id": "chestFlies",
       "label": "Chest flies",
-      "group": "Chest"
+      "group": "Chest",
+      "movement": "chestFly",
+      "equipment": [
+        "Dumbbells"
+      ]
     },
     {
       "id": "inclineFlies",
-      "label": "Incline flies",
-      "group": "Chest"
+      "label": "Incline fly",
+      "group": "Chest",
+      "movement": "inclineFlies",
+      "equipment": [
+        "Dumbbells",
+        "incline bench"
+      ]
     },
     {
       "id": "pullover",
       "label": "Pullover",
-      "group": "Chest"
+      "group": "Chest",
+      "movement": "pullover",
+      "equipment": [
+        "Dumbbell",
+        "flat bench"
+      ]
     },
     {
       "id": "legPress",
       "label": "Leg press",
-      "group": "Machines"
+      "group": "Machines",
+      "movement": "legPress",
+      "equipment": [
+        "Leg press machine"
+      ]
     },
     {
       "id": "legExtension",
       "label": "Leg extension",
-      "group": "Machines"
+      "group": "Machines",
+      "movement": "legExtension",
+      "equipment": [
+        "Leg extension machine"
+      ]
     },
     {
       "id": "legCurl",
       "label": "Leg curl",
-      "group": "Machines"
+      "group": "Machines",
+      "movement": "legCurl",
+      "equipment": [
+        "Lying leg curl machine"
+      ]
     },
     {
       "id": "hackSquat",
-      "label": "Hack squat",
-      "group": "Machines"
+      "label": "Squats",
+      "group": "Machines",
+      "movement": "squat",
+      "equipment": [
+        "Hack squat machine"
+      ]
     },
     {
       "id": "smithMachineSquat",
       "label": "Smith squat",
-      "group": "Machines"
+      "group": "Machines",
+      "movement": "squat",
+      "equipment": [
+        "Smith machine"
+      ]
     },
     {
       "id": "calfRaiseMachine",
       "label": "Machine calves",
-      "group": "Machines"
+      "group": "Machines",
+      "movement": "calfRaise",
+      "equipment": [
+        "Standing calf raise machine"
+      ]
     },
     {
       "id": "hipAbductor",
       "label": "Hip abductor",
-      "group": "Machines"
+      "group": "Machines",
+      "movement": "hipAbductor",
+      "equipment": [
+        "Seated hip abductor machine"
+      ]
     },
     {
       "id": "hipAdductor",
       "label": "Hip adductor",
-      "group": "Machines"
+      "group": "Machines",
+      "movement": "hipAdductor",
+      "equipment": [
+        "Seated hip adductor machine"
+      ]
     },
     {
       "id": "hipThrustMachine",
       "label": "Hip thrust",
-      "group": "Machines"
+      "group": "Machines",
+      "movement": "gluteBridge",
+      "equipment": [
+        "Hip thrust machine"
+      ]
     },
     {
       "id": "latPulldown",
       "label": "Lat pulldown",
-      "group": "Machines"
+      "group": "Machines",
+      "movement": "pullUp",
+      "equipment": [
+        "Lat pulldown machine"
+      ]
     },
     {
       "id": "seatedCableRow",
-      "label": "Seated cable row",
-      "group": "Machines"
+      "label": "Cable row",
+      "group": "Machines",
+      "movement": "row",
+      "equipment": [
+        "Seated cable row machine",
+        "row handle"
+      ]
     },
     {
       "id": "tBarRow",
       "label": "T-bar row",
-      "group": "Machines"
+      "group": "Machines",
+      "movement": "row",
+      "equipment": [
+        "T-bar row machine or landmine barbell"
+      ]
     },
     {
       "id": "assistedPullUp",
       "label": "Assisted pull-up",
-      "group": "Machines"
+      "group": "Machines",
+      "movement": "pullUp",
+      "equipment": [
+        "Assisted pull-up machine"
+      ]
     },
     {
       "id": "chestPressMachine",
       "label": "Chest press",
-      "group": "Machines"
+      "group": "Machines",
+      "movement": "chestPress",
+      "equipment": [
+        "Chest press machine"
+      ]
+    },
+    {
+      "id": "cableChestPress",
+      "label": "Chest press",
+      "group": "Machines",
+      "movement": "chestPress",
+      "equipment": [
+        "Cable machine"
+      ]
     },
     {
       "id": "pecDeck",
       "label": "Pec deck",
-      "group": "Machines"
+      "group": "Machines",
+      "movement": "chestFly",
+      "equipment": [
+        "Pec deck machine"
+      ]
     },
     {
       "id": "cableFly",
       "label": "Cable fly",
-      "group": "Machines"
+      "group": "Machines",
+      "movement": "chestFly",
+      "equipment": [
+        "Dual adjustable cable machine",
+        "two handles"
+      ]
     },
     {
       "id": "shoulderPressMachine",
       "label": "Shoulder press",
-      "group": "Machines"
+      "group": "Machines",
+      "movement": "shoulderPress",
+      "equipment": [
+        "Shoulder press machine"
+      ]
     },
     {
       "id": "cableLateralRaise",
       "label": "Cable lateral raise",
-      "group": "Machines"
+      "group": "Machines",
+      "movement": "lateralRaise",
+      "equipment": [
+        "Cable machine",
+        "single handle"
+      ]
     },
     {
       "id": "facePull",
       "label": "Face pull",
-      "group": "Machines"
+      "group": "Machines",
+      "movement": "facePull",
+      "equipment": [
+        "Cable machine",
+        "rope attachment"
+      ]
     },
     {
       "id": "tricepPushdown",
       "label": "Tricep pushdown",
-      "group": "Machines"
+      "group": "Machines",
+      "movement": "tricepPushdown",
+      "equipment": [
+        "Cable machine",
+        "rope or straight-bar attachment"
+      ]
     },
     {
       "id": "cableCurl",
-      "label": "Cable curl",
-      "group": "Machines"
+      "label": "Biceps curl",
+      "group": "Machines",
+      "movement": "bicepsCurl",
+      "equipment": [
+        "Cable machine",
+        "straight",
+        "EZ bar attachment"
+      ]
     },
     {
       "id": "preacherCurl",
       "label": "Preacher curl",
-      "group": "Machines"
+      "group": "Machines",
+      "movement": "preacherCurl",
+      "equipment": [
+        "Preacher bench",
+        "EZ bar or machine"
+      ]
     },
     {
       "id": "cableCrunch",
       "label": "Cable crunch",
-      "group": "Machines"
+      "group": "Machines",
+      "movement": "cableCrunch",
+      "equipment": [
+        "Cable machine",
+        "rope attachment"
+      ]
     },
     {
       "id": "backExtension",
       "label": "Back extension",
-      "group": "Machines"
+      "group": "Machines",
+      "movement": "backExtension",
+      "equipment": [
+        "Back extension bench"
+      ]
     },
     {
       "id": "cableKickback",
-      "label": "Cable kickback",
-      "group": "Machines"
+      "label": "Glute kickback",
+      "group": "Machines",
+      "movement": "gluteKickback",
+      "equipment": [
+        "Cable machine",
+        "ankle strap"
+      ]
     },
     {
       "id": "kettlebellSwings",
       "label": "KB swings",
-      "group": "Kettlebell"
+      "group": "Kettlebell",
+      "movement": "kettlebellSwings",
+      "equipment": [
+        "Kettlebell"
+      ]
     },
     {
       "id": "kettlebellGobletSquat",
       "label": "Goblet squat",
-      "group": "Kettlebell"
+      "group": "Kettlebell",
+      "movement": "squat",
+      "equipment": [
+        "Kettlebell or dumbbell"
+      ]
     },
     {
       "id": "kettlebellCleanPress",
-      "label": "Clean & press",
-      "group": "Kettlebell"
+      "label": "Clean and press",
+      "group": "Kettlebell",
+      "movement": "cleanAndPress",
+      "equipment": [
+        "Kettlebell"
+      ]
     },
     {
       "id": "kettlebellSnatch",
       "label": "KB snatch",
-      "group": "Kettlebell"
+      "group": "Kettlebell",
+      "movement": "kettlebellSnatch",
+      "equipment": [
+        "Kettlebell"
+      ]
     },
     {
       "id": "kettlebellTurkishGetUp",
       "label": "Tur. Get-Up",
-      "group": "Kettlebell"
+      "group": "Kettlebell",
+      "movement": "kettlebellTurkishGetUp",
+      "equipment": [
+        "Kettlebell"
+      ]
     },
     {
       "id": "kettlebellRow",
       "label": "KB row",
-      "group": "Kettlebell"
+      "group": "Kettlebell",
+      "movement": "row",
+      "equipment": [
+        "Kettlebell"
+      ]
     },
     {
       "id": "kettlebellDeadlift",
       "label": "KB deadlift",
-      "group": "Kettlebell"
+      "group": "Kettlebell",
+      "movement": "kettlebellDeadlift",
+      "equipment": [
+        "Kettlebell"
+      ]
     },
     {
       "id": "kettlebellHalo",
       "label": "KB halo",
-      "group": "Kettlebell"
+      "group": "Kettlebell",
+      "movement": "kettlebellHalo",
+      "equipment": [
+        "Kettlebell"
+      ]
     },
     {
       "id": "kettlebellGorillaRow",
-      "label": "KB gorilla row",
-      "group": "Kettlebell"
-    },
-    {
-      "id": "kettlebellFlies",
-      "label": "KB flies",
-      "group": "Kettlebell"
+      "label": "Gorilla row",
+      "group": "Kettlebell",
+      "movement": "kettlebellGorillaRow",
+      "equipment": [
+        "Two kettlebells"
+      ]
     },
     {
       "id": "boxJumps",
       "label": "Box jumps",
-      "group": "Plyometrics"
+      "group": "Plyometrics",
+      "movement": "boxJumps",
+      "equipment": [
+        "Plyometric box"
+      ]
     },
     {
       "id": "broadJumps",
       "label": "Broad jumps",
-      "group": "Plyometrics"
+      "group": "Plyometrics",
+      "movement": "broadJumps",
+      "equipment": []
     },
     {
       "id": "tuckJumps",
       "label": "Tuck jumps",
-      "group": "Plyometrics"
+      "group": "Plyometrics",
+      "movement": "tuckJumps",
+      "equipment": []
     },
     {
       "id": "highKnees",
       "label": "High knees",
-      "group": "Plyometrics"
+      "group": "Plyometrics",
+      "movement": "highKnees",
+      "equipment": []
     },
     {
       "id": "squatJumps",
       "label": "Squat jumps",
-      "group": "Plyometrics"
+      "group": "Plyometrics",
+      "movement": "squatJumps",
+      "equipment": []
     },
     {
       "id": "jumpingLunges",
       "label": "Jump lunges",
-      "group": "Plyometrics"
+      "group": "Plyometrics",
+      "movement": "jumpingLunges",
+      "equipment": []
     },
     {
       "id": "skaterHops",
       "label": "Skater hops",
-      "group": "Plyometrics"
+      "group": "Plyometrics",
+      "movement": "skaterHops",
+      "equipment": []
     },
     {
       "id": "mountainClimbers",
       "label": "Mt. climbers",
-      "group": "Conditioning"
+      "group": "Conditioning",
+      "movement": "mountainClimbers",
+      "equipment": []
     },
     {
       "id": "bearCrawl",
       "label": "Bear crawl",
-      "group": "Conditioning"
+      "group": "Conditioning",
+      "movement": "bearCrawl",
+      "equipment": []
     },
     {
       "id": "inchworm",
       "label": "Inchworm",
-      "group": "Conditioning"
+      "group": "Conditioning",
+      "movement": "inchworm",
+      "equipment": []
     },
     {
       "id": "battleRopes",
       "label": "Battle ropes",
-      "group": "Conditioning"
+      "group": "Conditioning",
+      "movement": "battleRopes",
+      "equipment": [
+        "Battle ropes",
+        "secure anchor"
+      ]
     },
     {
       "id": "medBallSlams",
-      "label": "Med ball slams",
-      "group": "Conditioning"
+      "label": "Ball slams",
+      "group": "Conditioning",
+      "movement": "medBallSlams",
+      "equipment": [
+        "Medicine ball (slam ball)"
+      ]
     },
     {
       "id": "farmerCarry",
       "label": "Farmer carry",
-      "group": "Conditioning"
+      "group": "Conditioning",
+      "movement": "farmerCarry",
+      "equipment": [
+        "Two dumbbells or kettlebells"
+      ]
     },
     {
       "id": "sledPush",
       "label": "Sled push",
-      "group": "Conditioning"
+      "group": "Conditioning",
+      "movement": "sledPush",
+      "equipment": [
+        "Weighted sled",
+        "plates",
+        "turf",
+        "track"
+      ]
     },
     {
       "id": "rowing",
       "label": "Rowing",
-      "group": "Conditioning"
+      "group": "Conditioning",
+      "movement": "rowing",
+      "equipment": [
+        "Rowing machine"
+      ]
     },
     {
       "id": "bike",
       "label": "Bike",
-      "group": "Conditioning"
-    },
-    {
-      "id": "running",
-      "label": "Running",
-      "group": "Conditioning"
+      "group": "Conditioning",
+      "movement": "bike",
+      "equipment": [
+        "Stationary exercise bike"
+      ]
     },
     {
       "id": "footballWallPassing",
       "label": "Wall passing",
-      "group": "Football"
+      "group": "Football",
+      "movement": "footballWallPassing",
+      "equipment": [
+        "Soccer ball",
+        "rebounder or wall"
+      ]
     },
     {
       "id": "footballDribbling",
-      "label": "Dribbling",
-      "group": "Football"
+      "label": "Outside laces",
+      "group": "Football",
+      "movement": "footballDribbling",
+      "equipment": [
+        "Soccer ball"
+      ]
     },
     {
       "id": "footballBallMastery",
       "label": "Ball mastery",
-      "group": "Football"
+      "group": "Football",
+      "movement": "footballBallMastery",
+      "equipment": [
+        "Soccer ball"
+      ]
     },
     {
       "id": "footballControl",
-      "label": "Control",
-      "group": "Football"
+      "label": "Ball control",
+      "group": "Football",
+      "movement": "footballControl",
+      "equipment": [
+        "Soccer ball"
+      ]
     },
     {
       "id": "footballFootwork",
       "label": "Footwork",
-      "group": "Football"
+      "group": "Football",
+      "movement": "footballFootwork",
+      "equipment": []
     },
     {
       "id": "footballReactionDrills",
       "label": "Reaction drills",
-      "group": "Football"
+      "group": "Football",
+      "movement": "footballReactionDrills",
+      "equipment": [
+        "Soccer ball",
+        "reaction cues",
+        "markers"
+      ]
     },
     {
       "id": "footballConeSlalom",
       "label": "Cone slalom",
-      "group": "Football"
+      "group": "Football",
+      "movement": "footballConeSlalom",
+      "equipment": [
+        "Soccer ball",
+        "cones"
+      ]
     },
     {
       "id": "footballHeadStall",
-      "label": "Head-stall",
-      "group": "Football"
+      "label": "Head stall",
+      "group": "Football",
+      "movement": "footballHeadStall",
+      "equipment": [
+        "Soccer ball"
+      ]
     },
     {
       "id": "footballElastico",
       "label": "Elastico",
-      "group": "Football"
+      "group": "Football",
+      "movement": "footballElastico",
+      "equipment": [
+        "Soccer ball"
+      ]
     }
   ]
 }
