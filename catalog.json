@@ -1,6 +1,6 @@
 {
-  "version": 145,
-  "updatedAtMs": 1793916259372,
+  "version": 146,
+  "updatedAtMs": 1793916299086,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -415,10 +415,10 @@
       "id": "remote_test1",
       "name": "Test1",
       "file": "drills/remote_test1.json",
-      "updatedAtMs": 1793916034078,
+      "updatedAtMs": 1793916298070,
       "category": "classic",
       "description": "",
-      "coverImage": "plan_covers/remote_test1_1793916034055.webp",
+      "coverImage": "plan_covers/remote_test1_1793916298056.webp",
       "activityIds": [
         "legPress",
         "chestPressMachine",
