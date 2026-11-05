@@ -1,6 +1,6 @@
 {
-  "version": 150,
-  "updatedAtMs": 1793916614599,
+  "version": 151,
+  "updatedAtMs": 1793916661270,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -399,10 +399,10 @@
       "id": "remote_start_upper_body_machines",
       "name": "Start Upper Body Machines",
       "file": "drills/remote_start_upper_body_machines.json",
-      "updatedAtMs": 1793901151826,
+      "updatedAtMs": 1793916660207,
       "category": "upper",
       "description": "Beginner upper-body circuit on machines. Five moves, five rounds, 45 seconds of work and 60 seconds of rest, about 43 minutes.",
-      "coverImage": "exercise_guides/chestPressMachine.webp",
+      "coverImage": "plan_covers/remote_start_upper_body_machines_1793916660194.webp",
       "activityIds": [
         "chestPressMachine",
         "latPulldown",
