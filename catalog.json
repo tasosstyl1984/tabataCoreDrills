@@ -1,6 +1,6 @@
 {
-  "version": 148,
-  "updatedAtMs": 1793916399044,
+  "version": 149,
+  "updatedAtMs": 1793916430211,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -337,10 +337,10 @@
       "id": "remote_start_core_machines",
       "name": "Start Core Machines",
       "file": "drills/remote_start_core_machines.json",
-      "updatedAtMs": 1793901151826,
+      "updatedAtMs": 1793916429235,
       "category": "core",
       "description": "Beginner core circuit using the cable crunch, back extension, and knee raises. Five stations, five rounds, 45 seconds of work and 60 seconds of rest, about 43 minutes.",
-      "coverImage": "exercise_guides/cableCrunch.webp",
+      "coverImage": "plan_covers/remote_start_core_machines_1793916429219.webp",
       "activityIds": [
         "cableCrunch",
         "backExtension",
