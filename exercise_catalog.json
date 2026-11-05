@@ -423,7 +423,7 @@
     },
     {
       "id": "inclineBench",
-      "label": "Incline chest press",
+      "label": "Dumbbell incline chest press",
       "group": "Chest",
       "movement": "inclineBench",
       "equipment": [
