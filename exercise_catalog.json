@@ -1,5 +1,5 @@
 {
-  "version": 7,
+  "version": 8,
   "updatedAtMs": 1793900987861,
   "activities": [
     {
@@ -36,12 +36,17 @@
     },
     {
       "id": "abs",
-      "label": "Abs",
+      "label": "Crunches",
       "group": "Core",
       "movement": "abs",
-      "equipment": [
-        "Exercise mat"
-      ]
+      "equipment": []
+    },
+    {
+      "id": "bicycleCrunch",
+      "label": "Bicycle crunch",
+      "group": "Core",
+      "movement": "bicycleCrunch",
+      "equipment": []
     },
     {
       "id": "pushups",

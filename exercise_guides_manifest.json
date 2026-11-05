@@ -1,14 +1,14 @@
 {
-  "version": 54,
-  "updatedAtMs": 1793904593267,
+  "version": 55,
+  "updatedAtMs": 1793905074313,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 1212040,
+  "totalBytes": 1215124,
   "images": [
     {
       "id": "abs",
       "file": "exercise_guides/abs.webp",
-      "bytes": 13962,
-      "sha256": "e4c6c81fd6155583"
+      "bytes": 8974,
+      "sha256": "20f0b5e733f0fba0"
     },
     {
       "id": "arnoldPress",
@@ -63,6 +63,12 @@
       "file": "exercise_guides/bicepCurls.webp",
       "bytes": 6268,
       "sha256": "9b4f18a93909253b"
+    },
+    {
+      "id": "bicycleCrunch",
+      "file": "exercise_guides/bicycleCrunch.webp",
+      "bytes": 8072,
+      "sha256": "91f570d84965a814"
     },
     {
       "id": "bike",
