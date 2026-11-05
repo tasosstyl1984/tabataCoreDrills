@@ -1,6 +1,6 @@
 {
-  "version": 141,
-  "updatedAtMs": 1793901151826,
+  "version": 142,
+  "updatedAtMs": 1793916035124,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -9,7 +9,7 @@
       "file": "drills/remote_back_to_basics.json",
       "updatedAtMs": 1791624433060,
       "category": "combos",
-      "description": "Simple bodyweight foundations \u2014 jumping jacks, abs, plank, dead bug, and push-ups to rebuild a reliable base without equipment.",
+      "description": "Simple bodyweight foundations — jumping jacks, abs, plank, dead bug, and push-ups to rebuild a reliable base without equipment.",
       "coverImage": "plan_covers/remote_back_to_basics.webp",
       "activityIds": [
         "jumpingJacks",
@@ -40,7 +40,7 @@
       "file": "drills/remote_hyrox_20.json",
       "updatedAtMs": 1791624433060,
       "category": "conditioning",
-      "description": "Shorter Hyrox-style station ladder \u2014 ropes, sled, carries, and bodyweight moves for race-day work capacity.",
+      "description": "Shorter Hyrox-style station ladder — ropes, sled, carries, and bodyweight moves for race-day work capacity.",
       "coverImage": "plan_covers/remote_hyrox_20.webp",
       "activityIds": [
         "battleRopes",
@@ -59,7 +59,7 @@
       "file": "drills/remote_hyrox_30.json",
       "updatedAtMs": 1791624433060,
       "category": "conditioning",
-      "description": "Mid-length Hyrox station circuit with more volume \u2014 builds engine fitness and station familiarity for Peak effort.",
+      "description": "Mid-length Hyrox station circuit with more volume — builds engine fitness and station familiarity for Peak effort.",
       "coverImage": "plan_covers/remote_hyrox_30.webp",
       "activityIds": [
         "battleRopes",
@@ -78,7 +78,7 @@
       "file": "drills/remote_hyrox_40.json",
       "updatedAtMs": 1791624433060,
       "category": "conditioning",
-      "description": "Longer Hyrox station session with Peak-level volume \u2014 sustained work capacity across the full station mix.",
+      "description": "Longer Hyrox station session with Peak-level volume — sustained work capacity across the full station mix.",
       "coverImage": "plan_covers/remote_hyrox_40.webp",
       "activityIds": [
         "battleRopes",
@@ -174,7 +174,7 @@
       "file": "drills/remote_lion_roar.json",
       "updatedAtMs": 1791624433060,
       "category": "combos",
-      "description": "High-energy full-body mix \u2014 rope, push-ups, pulls, thrusters, legs, and core when you want a long, varied conditioning day.",
+      "description": "High-energy full-body mix — rope, push-ups, pulls, thrusters, legs, and core when you want a long, varied conditioning day.",
       "coverImage": "plan_covers/remote_lion_roar.webp",
       "activityIds": [
         "jumpRope",
@@ -219,7 +219,7 @@
       "file": "drills/remote_tyson.json",
       "updatedAtMs": 1791624433060,
       "category": "combos",
-      "description": "Jump rope and boxing mixed with kettlebells and core \u2014 footwork, rhythm, and conditioning in one pack.",
+      "description": "Jump rope and boxing mixed with kettlebells and core — footwork, rhythm, and conditioning in one pack.",
       "coverImage": "plan_covers/remote_tyson.webp",
       "activityIds": [
         "jumpRope",
@@ -254,143 +254,35 @@
       ]
     },
     {
-      "id": "remote_test1",
-      "name": "Test1",
-      "file": "drills/remote_test1.json",
-      "updatedAtMs": 1793304623350,
-      "category": "classic",
-      "description": "",
-      "coverImage": "exercise_guides/legPress.webp",
-      "activityIds": [
-        "legPress",
-        "chestPressMachine",
-        "pecDeck"
-      ]
-    },
-    {
-      "id": "remote_upper_body",
-      "name": "Upper Body",
-      "file": "drills/remote_upper_body.json",
-      "updatedAtMs": 1791624433060,
-      "category": "chest",
-      "description": "Chest-focused pressing and fly work \u2014 bench, incline, flies, and pullover for upper-body push strength.",
-      "coverImage": "plan_covers/remote_upper_body.webp",
-      "activityIds": [
-        "benchPress",
-        "chestFlies",
-        "inclineBench",
-        "pullover"
-      ]
-    },
-    {
-      "id": "remote_weighted_shadow_boxing_complex",
-      "name": "Weighted Shadow Boxing Complex",
-      "file": "drills/remote_weighted_shadow_boxing_complex.json",
-      "updatedAtMs": 1792264645744,
-      "category": "combos",
-      "description": "",
-      "coverImage": "plan_covers/remote_weighted_shadow_boxing_complex_1792264583658.webp",
-      "activityIds": [
-        "shadowBoxing",
-        "kettlebellSwings",
-        "kettlebellHalo",
-        "kettlebellRow",
-        "kettlebellCleanPress",
-        "kettlebellDeadlift"
-      ]
-    },
-    {
-      "id": "remote_start_upper_body",
-      "name": "Start Upper Body",
-      "file": "drills/remote_start_upper_body.json",
+      "id": "remote_start_back",
+      "name": "Start Back",
+      "file": "drills/remote_start_back.json",
       "updatedAtMs": 1793901151826,
-      "category": "upper",
-      "description": "Beginner upper-body circuit with no machines. Five moves, five rounds, 45 seconds of work and 60 seconds of rest, about 43 minutes.",
-      "coverImage": "exercise_guides/pushups.webp",
+      "category": "back",
+      "description": "Beginner back circuit with dumbbells, a kettlebell, and floor work. Five moves, five rounds, 45 seconds of work and 60 seconds of rest, about 43 minutes.",
+      "coverImage": "exercise_guides/dumbbellRow.webp",
       "activityIds": [
-        "pushups",
-        "dumbbellShoulderPress",
         "dumbbellRow",
-        "bicepCurls",
-        "tricepKickbacks"
-      ]
-    },
-    {
-      "id": "remote_start_upper_body_machines",
-      "name": "Start Upper Body Machines",
-      "file": "drills/remote_start_upper_body_machines.json",
-      "updatedAtMs": 1793901151826,
-      "category": "upper",
-      "description": "Beginner upper-body circuit on machines. Five moves, five rounds, 45 seconds of work and 60 seconds of rest, about 43 minutes.",
-      "coverImage": "exercise_guides/chestPressMachine.webp",
-      "activityIds": [
-        "chestPressMachine",
-        "latPulldown",
-        "shoulderPressMachine",
-        "cableCurl",
-        "tricepPushdown"
-      ]
-    },
-    {
-      "id": "remote_start_lower_body",
-      "name": "Start Lower Body",
-      "file": "drills/remote_start_lower_body.json",
-      "updatedAtMs": 1793901151826,
-      "category": "lower",
-      "description": "Beginner lower-body circuit with no machines. Five moves, five rounds, 45 seconds of work and 60 seconds of rest, about 43 minutes.",
-      "coverImage": "exercise_guides/lunges.webp",
-      "activityIds": [
-        "lunges",
-        "gluteBridge",
-        "bodyweightSumoSquats",
-        "bodyweightCalfRaises",
-        "stepUps"
-      ]
-    },
-    {
-      "id": "remote_start_lower_body_machines",
-      "name": "Start Lower Body Machines",
-      "file": "drills/remote_start_lower_body_machines.json",
-      "updatedAtMs": 1793901151826,
-      "category": "lower",
-      "description": "Beginner lower-body circuit on machines. Five moves, five rounds, 45 seconds of work and 60 seconds of rest, about 43 minutes.",
-      "coverImage": "exercise_guides/legPress.webp",
-      "activityIds": [
-        "legPress",
-        "legCurl",
-        "legExtension",
-        "hipAbductor",
-        "calfRaiseMachine"
-      ]
-    },
-    {
-      "id": "remote_start_core",
-      "name": "Start Core",
-      "file": "drills/remote_start_core.json",
-      "updatedAtMs": 1793901151826,
-      "category": "core",
-      "description": "Beginner core circuit on the floor. Five moves, five rounds, 45 seconds of work and 60 seconds of rest, about 43 minutes.",
-      "coverImage": "exercise_guides/plank.webp",
-      "activityIds": [
-        "plank",
-        "deadBug",
+        "reverseFly",
+        "kettlebellRow",
         "birdDog",
-        "sidePlank",
-        "abs"
+        "pullUps"
       ]
     },
     {
-      "id": "remote_start_core_machines",
-      "name": "Start Core Machines",
-      "file": "drills/remote_start_core_machines.json",
+      "id": "remote_start_back_machines",
+      "name": "Start Back Machines",
+      "file": "drills/remote_start_back_machines.json",
       "updatedAtMs": 1793901151826,
-      "category": "core",
-      "description": "Beginner core circuit using the cable crunch, back extension, and knee raises. Five stations, five rounds, 45 seconds of work and 60 seconds of rest, about 43 minutes.",
-      "coverImage": "exercise_guides/cableCrunch.webp",
+      "category": "back",
+      "description": "Beginner back circuit on machines and cables. Five moves, five rounds, 45 seconds of work and 60 seconds of rest, about 43 minutes.",
+      "coverImage": "exercise_guides/latPulldown.webp",
       "activityIds": [
-        "cableCrunch",
-        "backExtension",
-        "hangingKneeRaises"
+        "latPulldown",
+        "seatedCableRow",
+        "assistedPullUp",
+        "facePull",
+        "backExtension"
       ]
     },
     {
@@ -426,35 +318,143 @@
       ]
     },
     {
-      "id": "remote_start_back",
-      "name": "Start Back",
-      "file": "drills/remote_start_back.json",
+      "id": "remote_start_core",
+      "name": "Start Core",
+      "file": "drills/remote_start_core.json",
       "updatedAtMs": 1793901151826,
-      "category": "back",
-      "description": "Beginner back circuit with dumbbells, a kettlebell, and floor work. Five moves, five rounds, 45 seconds of work and 60 seconds of rest, about 43 minutes.",
-      "coverImage": "exercise_guides/dumbbellRow.webp",
+      "category": "core",
+      "description": "Beginner core circuit on the floor. Five moves, five rounds, 45 seconds of work and 60 seconds of rest, about 43 minutes.",
+      "coverImage": "exercise_guides/plank.webp",
       "activityIds": [
-        "dumbbellRow",
-        "reverseFly",
-        "kettlebellRow",
+        "plank",
+        "deadBug",
         "birdDog",
-        "pullUps"
+        "sidePlank",
+        "abs"
       ]
     },
     {
-      "id": "remote_start_back_machines",
-      "name": "Start Back Machines",
-      "file": "drills/remote_start_back_machines.json",
+      "id": "remote_start_core_machines",
+      "name": "Start Core Machines",
+      "file": "drills/remote_start_core_machines.json",
       "updatedAtMs": 1793901151826,
-      "category": "back",
-      "description": "Beginner back circuit on machines and cables. Five moves, five rounds, 45 seconds of work and 60 seconds of rest, about 43 minutes.",
-      "coverImage": "exercise_guides/latPulldown.webp",
+      "category": "core",
+      "description": "Beginner core circuit using the cable crunch, back extension, and knee raises. Five stations, five rounds, 45 seconds of work and 60 seconds of rest, about 43 minutes.",
+      "coverImage": "exercise_guides/cableCrunch.webp",
       "activityIds": [
+        "cableCrunch",
+        "backExtension",
+        "hangingKneeRaises"
+      ]
+    },
+    {
+      "id": "remote_start_lower_body",
+      "name": "Start Lower Body",
+      "file": "drills/remote_start_lower_body.json",
+      "updatedAtMs": 1793901151826,
+      "category": "lower",
+      "description": "Beginner lower-body circuit with no machines. Five moves, five rounds, 45 seconds of work and 60 seconds of rest, about 43 minutes.",
+      "coverImage": "exercise_guides/lunges.webp",
+      "activityIds": [
+        "lunges",
+        "gluteBridge",
+        "bodyweightSumoSquats",
+        "bodyweightCalfRaises",
+        "stepUps"
+      ]
+    },
+    {
+      "id": "remote_start_lower_body_machines",
+      "name": "Start Lower Body Machines",
+      "file": "drills/remote_start_lower_body_machines.json",
+      "updatedAtMs": 1793901151826,
+      "category": "lower",
+      "description": "Beginner lower-body circuit on machines. Five moves, five rounds, 45 seconds of work and 60 seconds of rest, about 43 minutes.",
+      "coverImage": "exercise_guides/legPress.webp",
+      "activityIds": [
+        "legPress",
+        "legCurl",
+        "legExtension",
+        "hipAbductor",
+        "calfRaiseMachine"
+      ]
+    },
+    {
+      "id": "remote_start_upper_body",
+      "name": "Start Upper Body",
+      "file": "drills/remote_start_upper_body.json",
+      "updatedAtMs": 1793901151826,
+      "category": "upper",
+      "description": "Beginner upper-body circuit with no machines. Five moves, five rounds, 45 seconds of work and 60 seconds of rest, about 43 minutes.",
+      "coverImage": "exercise_guides/pushups.webp",
+      "activityIds": [
+        "pushups",
+        "dumbbellShoulderPress",
+        "dumbbellRow",
+        "bicepCurls",
+        "tricepKickbacks"
+      ]
+    },
+    {
+      "id": "remote_start_upper_body_machines",
+      "name": "Start Upper Body Machines",
+      "file": "drills/remote_start_upper_body_machines.json",
+      "updatedAtMs": 1793901151826,
+      "category": "upper",
+      "description": "Beginner upper-body circuit on machines. Five moves, five rounds, 45 seconds of work and 60 seconds of rest, about 43 minutes.",
+      "coverImage": "exercise_guides/chestPressMachine.webp",
+      "activityIds": [
+        "chestPressMachine",
         "latPulldown",
-        "seatedCableRow",
-        "assistedPullUp",
-        "facePull",
-        "backExtension"
+        "shoulderPressMachine",
+        "cableCurl",
+        "tricepPushdown"
+      ]
+    },
+    {
+      "id": "remote_test1",
+      "name": "Test1",
+      "file": "drills/remote_test1.json",
+      "updatedAtMs": 1793916034078,
+      "category": "classic",
+      "description": "",
+      "coverImage": "plan_covers/remote_test1_1793916034055.webp",
+      "activityIds": [
+        "legPress",
+        "chestPressMachine",
+        "pecDeck"
+      ]
+    },
+    {
+      "id": "remote_upper_body",
+      "name": "Upper Body",
+      "file": "drills/remote_upper_body.json",
+      "updatedAtMs": 1791624433060,
+      "category": "chest",
+      "description": "Chest-focused pressing and fly work — bench, incline, flies, and pullover for upper-body push strength.",
+      "coverImage": "plan_covers/remote_upper_body.webp",
+      "activityIds": [
+        "benchPress",
+        "chestFlies",
+        "inclineBench",
+        "pullover"
+      ]
+    },
+    {
+      "id": "remote_weighted_shadow_boxing_complex",
+      "name": "Weighted Shadow Boxing Complex",
+      "file": "drills/remote_weighted_shadow_boxing_complex.json",
+      "updatedAtMs": 1792264645744,
+      "category": "combos",
+      "description": "",
+      "coverImage": "plan_covers/remote_weighted_shadow_boxing_complex_1792264583658.webp",
+      "activityIds": [
+        "shadowBoxing",
+        "kettlebellSwings",
+        "kettlebellHalo",
+        "kettlebellRow",
+        "kettlebellCleanPress",
+        "kettlebellDeadlift"
       ]
     }
   ]
