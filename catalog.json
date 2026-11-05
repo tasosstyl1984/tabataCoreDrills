@@ -1,6 +1,6 @@
 {
-  "version": 153,
-  "updatedAtMs": 1793916776492,
+  "version": 154,
+  "updatedAtMs": 1793917325476,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -257,10 +257,10 @@
       "id": "remote_start_back",
       "name": "Start Back",
       "file": "drills/remote_start_back.json",
-      "updatedAtMs": 1793901151826,
+      "updatedAtMs": 1793917324341,
       "category": "back",
       "description": "Beginner back circuit with dumbbells, a kettlebell, and floor work. Five moves, five rounds, 45 seconds of work and 60 seconds of rest, about 43 minutes.",
-      "coverImage": "exercise_guides/dumbbellRow.webp",
+      "coverImage": "plan_covers/remote_start_back_1793917324323.webp",
       "activityIds": [
         "dumbbellRow",
         "reverseFly",
