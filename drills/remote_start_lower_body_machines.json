@@ -1,7 +1,6 @@
 {
   "id": "remote_start_lower_body_machines",
   "name": "Start Lower Body Machines",
-  "description": "Beginner lower-body circuit on machines. Five moves, five rounds, 45 seconds of work and 60 seconds of rest, about 43 minutes.",
   "createdAtMs": 1793901151826,
   "sets": 5,
   "repsPerSet": 5,
@@ -165,5 +164,6 @@
         "restAfterSetSeconds": 60
       }
     ]
-  }
+  },
+  "description": "Beginner lower-body circuit on machines. Five moves, five rounds, 45 seconds of work and 60 seconds of rest, about 43 minutes."
 }
