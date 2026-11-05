@@ -1,8 +1,8 @@
 {
-  "version": 50,
-  "updatedAtMs": 1793900987831,
+  "version": 53,
+  "updatedAtMs": 1793903890579,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 1531218,
+  "totalBytes": 1212040,
   "images": [
     {
       "id": "abs",
@@ -157,14 +157,14 @@
     {
       "id": "calfRaises",
       "file": "exercise_guides/calfRaises.webp",
-      "bytes": 12080,
-      "sha256": "3cbe2a0854569540"
+      "bytes": 6230,
+      "sha256": "f936ca9ac0614d4e"
     },
     {
       "id": "chestFlies",
       "file": "exercise_guides/chestFlies.webp",
-      "bytes": 10358,
-      "sha256": "8d247145ef417fa6"
+      "bytes": 10620,
+      "sha256": "e637a86e7427e9c8"
     },
     {
       "id": "chestPressMachine",
@@ -199,8 +199,8 @@
     {
       "id": "dumbbellChestPress",
       "file": "exercise_guides/dumbbellChestPress.webp",
-      "bytes": 15664,
-      "sha256": "992856f449b854af"
+      "bytes": 11452,
+      "sha256": "2055a2e7c5196ae8"
     },
     {
       "id": "dumbbellLunges",
@@ -217,8 +217,8 @@
     {
       "id": "dumbbellShoulderPress",
       "file": "exercise_guides/dumbbellShoulderPress.webp",
-      "bytes": 10634,
-      "sha256": "0f887a76494d8b08"
+      "bytes": 11382,
+      "sha256": "7041335e4af3ed95"
     },
     {
       "id": "facePull",
@@ -235,8 +235,8 @@
     {
       "id": "footballBallMastery",
       "file": "exercise_guides/footballBallMastery.webp",
-      "bytes": 8494,
-      "sha256": "fdb715d33464d90b"
+      "bytes": 9202,
+      "sha256": "124f833bfe66e2da"
     },
     {
       "id": "footballConeSlalom",
@@ -247,8 +247,8 @@
     {
       "id": "footballControl",
       "file": "exercise_guides/footballControl.webp",
-      "bytes": 8394,
-      "sha256": "44ad521e6b6a516d"
+      "bytes": 9156,
+      "sha256": "4fd6888efb87d779"
     },
     {
       "id": "footballDribbling",
@@ -259,14 +259,14 @@
     {
       "id": "footballElastico",
       "file": "exercise_guides/footballElastico.webp",
-      "bytes": 32918,
-      "sha256": "2aae4f90a9b3085d"
+      "bytes": 8586,
+      "sha256": "147d6f0f9c634bb6"
     },
     {
       "id": "footballFootwork",
       "file": "exercise_guides/footballFootwork.webp",
-      "bytes": 36830,
-      "sha256": "58fa8268c4e0e0d4"
+      "bytes": 9754,
+      "sha256": "31564967845ef628"
     },
     {
       "id": "footballHeadStall",
@@ -301,8 +301,8 @@
     {
       "id": "gluteKickbacks",
       "file": "exercise_guides/gluteKickbacks.webp",
-      "bytes": 11464,
-      "sha256": "127b36a20baa6f5f"
+      "bytes": 9280,
+      "sha256": "d91e359856988834"
     },
     {
       "id": "hackSquat",
@@ -331,8 +331,8 @@
     {
       "id": "hipAbductor",
       "file": "exercise_guides/hipAbductor.webp",
-      "bytes": 14376,
-      "sha256": "ae401ac091aeddd6"
+      "bytes": 14644,
+      "sha256": "c5f8e6bef7ca4e08"
     },
     {
       "id": "hipAdductor",
@@ -343,8 +343,8 @@
     {
       "id": "hipThrustMachine",
       "file": "exercise_guides/hipThrustMachine.webp",
-      "bytes": 27910,
-      "sha256": "197079d5b201abda"
+      "bytes": 13038,
+      "sha256": "8224f78effbe5657"
     },
     {
       "id": "hollowHold",
@@ -415,8 +415,8 @@
     {
       "id": "kettlebellHalo",
       "file": "exercise_guides/kettlebellHalo.webp",
-      "bytes": 23744,
-      "sha256": "edbe84e2eed74661"
+      "bytes": 6420,
+      "sha256": "de5dd4fc615ac495"
     },
     {
       "id": "kettlebellRow",
@@ -427,8 +427,8 @@
     {
       "id": "kettlebellSnatch",
       "file": "exercise_guides/kettlebellSnatch.webp",
-      "bytes": 19344,
-      "sha256": "c6d994284a5e5b63"
+      "bytes": 6400,
+      "sha256": "3d2f67635f50e954"
     },
     {
       "id": "kettlebellSwings",
@@ -457,14 +457,14 @@
     {
       "id": "legCurl",
       "file": "exercise_guides/legCurl.webp",
-      "bytes": 34132,
-      "sha256": "c4aa66e67a5616aa"
+      "bytes": 15270,
+      "sha256": "6e2ad3a6a403b401"
     },
     {
       "id": "legExtension",
       "file": "exercise_guides/legExtension.webp",
-      "bytes": 33966,
-      "sha256": "ee4d564cf1cbaa3a"
+      "bytes": 12812,
+      "sha256": "335df0f3b1bca8b0"
     },
     {
       "id": "legPress",
@@ -475,8 +475,8 @@
     {
       "id": "lunges",
       "file": "exercise_guides/lunges.webp",
-      "bytes": 25396,
-      "sha256": "dbb405a678243dcd"
+      "bytes": 6894,
+      "sha256": "802989c50f78dd36"
     },
     {
       "id": "medBallSlams",
@@ -487,8 +487,8 @@
     {
       "id": "mountainClimbers",
       "file": "exercise_guides/mountainClimbers.webp",
-      "bytes": 25654,
-      "sha256": "c1bf2cf78230b141"
+      "bytes": 9732,
+      "sha256": "c48a08a6b97a4e3b"
     },
     {
       "id": "overheadTricepExtension",
@@ -577,8 +577,8 @@
     {
       "id": "shoulderPressMachine",
       "file": "exercise_guides/shoulderPressMachine.webp",
-      "bytes": 47932,
-      "sha256": "29ddf0e8f9d9a565"
+      "bytes": 14976,
+      "sha256": "84bc605d48e183c6"
     },
     {
       "id": "sidePlank",
@@ -595,14 +595,14 @@
     {
       "id": "sledPush",
       "file": "exercise_guides/sledPush.webp",
-      "bytes": 34858,
-      "sha256": "5f1192c924243618"
+      "bytes": 11070,
+      "sha256": "8aba508549ed3f1a"
     },
     {
       "id": "smithMachineSquat",
       "file": "exercise_guides/smithMachineSquat.webp",
-      "bytes": 41944,
-      "sha256": "509aade8562a90e8"
+      "bytes": 13550,
+      "sha256": "af122d8a035e2cde"
     },
     {
       "id": "squatJumps",
@@ -661,14 +661,14 @@
     {
       "id": "tuckJumps",
       "file": "exercise_guides/tuckJumps.webp",
-      "bytes": 25848,
-      "sha256": "80de6ce267bd7258"
+      "bytes": 6162,
+      "sha256": "4134ce8a5393e137"
     },
     {
       "id": "wallBalls",
       "file": "exercise_guides/wallBalls.webp",
-      "bytes": 40002,
-      "sha256": "cc0d228d5668be9c"
+      "bytes": 6134,
+      "sha256": "ff663551a066a9ed"
     }
   ]
 }
