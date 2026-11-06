@@ -1075,92 +1075,53 @@ code {
 }
 
 .exercise-images-layout {
-  display: grid;
-  grid-template-columns: minmax(220px, 320px) 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
-  align-items: start;
+  align-items: stretch;
 }
 
-/* Full-width filter above list + detail so the pill search does not sit beside "Select an exercise" */
-.exercise-images-filter-row {
+/* Same pattern as main catalog: toolbar (search + chips) then grid */
+.exercise-images-toolbar {
+  margin: 0;
+}
+
+.exercise-images-toolbar .toolbar-row {
+  margin-bottom: 0.5rem;
+}
+
+.exercise-images-grid {
+  min-height: 4rem;
+}
+
+.exercise-images-grid-empty {
   grid-column: 1 / -1;
-  display: block;
   margin: 0;
+  padding: 1rem;
 }
 
-.exercise-images-list-column {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  min-width: 0;
-  min-height: 0;
-  align-self: stretch;
+.exercise-images-card.is-selected {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--primary-container);
 }
 
-/* Scrollbar on outer shell so list border is not clipped by overflow */
-.exercise-images-list-scroll {
-  flex: 1 1 auto;
-  min-height: 0;
-  max-height: min(60vh, 520px);
-  overflow: auto;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--surface);
+.exercise-images-card-cover {
+  /* Tabata Core how-to slot is 3:2 */
+  aspect-ratio: 3 / 2;
 }
 
-@media (max-width: 900px) {
-  .exercise-images-layout {
-    grid-template-columns: 1fr;
-  }
-}
-
-.exercise-images-list {
-  padding: 0.35rem;
-  margin: 0;
-  background: transparent;
-  border: 0;
-  border-radius: 0;
-}
-
-.exercise-images-list-item {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.15rem;
-  width: 100%;
-  text-align: left;
-  padding: 0.55rem 0.65rem;
-  margin-bottom: 0.25rem;
-  border: 1px solid transparent;
-  border-radius: 10px;
-  background: transparent;
-  color: var(--text);
-  font: inherit;
-  cursor: pointer;
-}
-
-.exercise-images-list-item:hover {
-  border-color: var(--border);
+.exercise-images-card-cover--empty {
   background: var(--chip);
 }
 
-.exercise-images-list-item.is-selected {
-  border-color: var(--accent);
-  background: var(--primary-container);
+.exercise-images-card-id {
+  margin: 0 1.15rem 0.5rem;
+  font-size: 0.78rem;
+  color: var(--muted);
 }
 
-.exercise-images-list-id {
-  font-size: 0.75rem;
-  opacity: 0.85;
-}
-
-.exercise-images-list-empty {
-  padding: 0.75rem;
-  margin: 0;
-}
-
-.exercise-images-search {
-  flex-shrink: 0;
+.exercise-images-card-id code {
+  font-size: 0.78rem;
 }
 
 .exercise-images-zoom-stack {

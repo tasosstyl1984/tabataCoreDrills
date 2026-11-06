@@ -8,7 +8,7 @@
   <link rel="icon" href="img/logo-mark.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400..700,0..1,0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="css/site.css?v=44" />
+  <link rel="stylesheet" href="css/site.css?v=45" />
 </head>
 <body>
   <dialog id="busy-dialog" class="busy-dialog" aria-live="assertive" aria-busy="false">
@@ -131,19 +131,20 @@
     <div id="admin-panel-exercise-images" class="admin-panel-region admin-panel-exercise-images" data-panel="exercise-images" role="tabpanel" aria-labelledby="admin-tab-exercise-images" hidden>
       <section class="import-help exercise-images-intro" aria-labelledby="exercise-images-title">
         <h2 id="exercise-images-title">Exercise how-to images</h2>
-        <p class="muted">Replace a WebP illustration used in Tabata Core <strong>How to do exercises</strong>. Choose PNG or JPEG — <strong>crop</strong> to a 3:2 frame, then use <strong>wheel / slider / drag</strong> on the preview to zoom and pan; <strong>Save</strong> uploads exactly what you see there as 1536×1024 WebP (<code>exercise_guides/{id}.webp</code>) and updates both manifests. Users may need to refresh the exercise guides download in the app.</p>
+        <p class="muted">Same flow as <strong>Plans</strong>: search and pick a card, then replace art. Choose PNG or JPEG → <strong>crop</strong> 3:2 → zoom/pan the preview → <strong>Save</strong> uploads what you see as 1536×1024 WebP (<code>exercise_guides/{id}.webp</code>) and updates manifests.</p>
       </section>
       <p id="exercise-images-status" class="status" role="status"></p>
       <div class="exercise-images-layout">
-        <label class="search exercise-images-search exercise-images-filter-row">
-          <span class="sr-only">Filter exercises</span>
-          <input id="exercise-images-search" type="search" placeholder="Filter by name or id" autocomplete="off" />
-        </label>
-        <div class="exercise-images-list-column">
-          <div class="exercise-images-list-scroll">
-            <div id="exercise-images-list" class="exercise-images-list" role="listbox" aria-label="Exercises"></div>
+        <section class="toolbar exercise-images-toolbar" aria-label="Exercise filters">
+          <div class="toolbar-row">
+            <label class="search">
+              <span class="sr-only">Search exercises</span>
+              <input id="exercise-images-search" type="search" placeholder="Search by name or id" autocomplete="off" />
+            </label>
           </div>
-        </div>
+          <div id="exercise-images-categories" class="chips" role="group" aria-label="Exercise groups"></div>
+        </section>
+        <div id="exercise-images-grid" class="grid exercise-images-grid" role="list" aria-label="Exercises"></div>
         <div class="exercise-images-detail">
           <p id="exercise-images-empty" class="muted exercise-images-empty">Select an exercise</p>
           <div id="exercise-images-editor" class="exercise-images-editor" hidden>
@@ -439,8 +440,8 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="js/zoom-pan.js?v=5"></script>
-  <script src="js/catalog.js?v=37"></script>
+  <script src="js/catalog.js?v=38"></script>
   <script src="js/weekly-plans.js?v=1"></script>
-  <script src="js/admin.js?v=45"></script>
+  <script src="js/admin.js?v=46"></script>
 </body>
 </html>
