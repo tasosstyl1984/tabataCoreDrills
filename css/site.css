@@ -1081,6 +1081,13 @@ code {
   align-items: start;
 }
 
+/* Full-width filter above list + detail so the pill search does not sit beside "Select an exercise" */
+.exercise-images-filter-row {
+  grid-column: 1 / -1;
+  display: block;
+  margin: 0;
+}
+
 .exercise-images-list-column {
   display: flex;
   flex-direction: column;

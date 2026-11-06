@@ -8,7 +8,7 @@
   <link rel="icon" href="img/logo-mark.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400..700,0..1,0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="css/site.css?v=41" />
+  <link rel="stylesheet" href="css/site.css?v=42" />
 </head>
 <body>
   <dialog id="busy-dialog" class="busy-dialog" aria-live="assertive" aria-busy="false">
@@ -135,11 +135,11 @@
       </section>
       <p id="exercise-images-status" class="status" role="status"></p>
       <div class="exercise-images-layout">
+        <label class="search exercise-images-search exercise-images-filter-row">
+          <span class="sr-only">Filter exercises</span>
+          <input id="exercise-images-search" type="search" placeholder="Filter by name or id" autocomplete="off" />
+        </label>
         <div class="exercise-images-list-column">
-          <label class="search exercise-images-search">
-            <span class="sr-only">Filter exercises</span>
-            <input id="exercise-images-search" type="search" placeholder="Filter by name or id" autocomplete="off" />
-          </label>
           <div class="exercise-images-list-scroll">
             <div id="exercise-images-list" class="exercise-images-list" role="listbox" aria-label="Exercises"></div>
           </div>
