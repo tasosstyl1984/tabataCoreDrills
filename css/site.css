@@ -1178,6 +1178,8 @@ code {
   gap: 0.5rem;
   align-items: center;
   margin-top: 0.5rem;
+  position: relative;
+  z-index: 4;
 }
 
 .exercise-images-preview-wrap .exercise-images-preview-placeholder {
