@@ -2322,6 +2322,28 @@
     }
   }
 
+  /**
+   * Same fallback as buildTemplateFromForm: hidden field may be empty while hero uses
+   * first-exercise art (`exercise_guides/<id>.webp`).
+   */
+  function firstActivityIdFromPlan() {
+    for (const set of plan.sets || []) {
+      for (const r of set.rounds || []) {
+        if (r.activityId) return r.activityId;
+      }
+    }
+    return "";
+  }
+
+  /** Resolved hero path for “Match hero” — not only editCover.value. */
+  function effectiveHeroCoverPath() {
+    const trimmed = (editCover?.value || "").trim();
+    if (trimmed) return trimmed;
+    const aid = firstActivityIdFromPlan();
+    if (aid) return `exercise_guides/${aid}.webp`;
+    return "";
+  }
+
   function destroyCropper() {
     if (cropper) {
       cropper.destroy();
@@ -3046,14 +3068,29 @@
   }
   if (editCoverPillSync) {
     editCoverPillSync.addEventListener("click", () => {
-      const hero = (editCover?.value || "").trim();
-      if (!hero) {
-        toast("Set a hero cover first");
+      const heroPath = effectiveHeroCoverPath();
+      if (heroPath) {
+        clearPendingPillCover();
+        if (editCoverPill) editCoverPill.value = heroPath;
+        resetPillCoverUi(heroPath);
         return;
       }
-      clearPendingPillCover();
-      if (editCoverPill) editCoverPill.value = hero;
-      resetPillCoverUi(hero);
+      if (pendingCoverBlob && pendingCoverBlob.size > 0) {
+        clearPendingPillCover();
+        pendingPillCoverBlob = pendingCoverBlob.slice(
+          0,
+          pendingCoverBlob.size,
+          pendingCoverBlob.type || "image/webp",
+        );
+        pendingPillCoverUrl = URL.createObjectURL(pendingPillCoverBlob);
+        if (editCoverPill) editCoverPill.value = "";
+        setCoverPillPreview(pendingPillCoverUrl);
+        toast("Ready pill will match the cropped hero when you save.");
+        return;
+      }
+      toast(
+        "Set a hero cover first (upload/crop or add an exercise so the guide art applies).",
+      );
     });
   }
   if (cropApply) cropApply.addEventListener("click", () => applyCrop());
