@@ -3,6 +3,11 @@
  * Expects: .zoom-viewport > .zoom-viewport-inner > img.zoom-viewport-img
  */
 (() => {
+  /** Button +/− step (smaller = finer control). */
+  const BUTTON_ZOOM_STEP = 1.08;
+  /** Wheel sensitivity (lower = smaller steps per scroll notch). */
+  const WHEEL_ZOOM_SENS = 0.001;
+
   function clamp(n, a, b) {
     return Math.min(b, Math.max(a, n));
   }
@@ -65,7 +70,7 @@
 
     function onWheel(e) {
       e.preventDefault();
-      const factor = Math.exp(-e.deltaY * 0.002);
+      const factor = Math.exp(-e.deltaY * WHEEL_ZOOM_SENS);
       scale = clamp(scale * factor, 1, 5);
       clampPan();
       apply();
@@ -115,7 +120,7 @@
       zoomIn.addEventListener(
         "click",
         () => {
-          scale = clamp(scale * 1.2, 1, 5);
+          scale = clamp(scale * BUTTON_ZOOM_STEP, 1, 5);
           clampPan();
           apply();
         },
@@ -126,7 +131,7 @@
       zoomOut.addEventListener(
         "click",
         () => {
-          scale = clamp(scale / 1.2, 1, 5);
+          scale = clamp(scale / BUTTON_ZOOM_STEP, 1, 5);
           clampPan();
           apply();
         },

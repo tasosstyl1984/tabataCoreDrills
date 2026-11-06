@@ -1064,6 +1064,11 @@ code {
   padding: 1rem;
 }
 
+/* `hidden` must win — display:flex above would keep the node visible otherwise */
+.exercise-images-preview-placeholder[hidden] {
+  display: none !important;
+}
+
 .admin-bar button {
   border: 1px solid var(--border);
   background: var(--surface);
