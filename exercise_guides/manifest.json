@@ -1,8 +1,8 @@
 {
-    "version": 68,
-    "updatedAtMs": 1794006299510,
+    "version": 69,
+    "updatedAtMs": 1794006420174,
     "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-    "totalBytes": 27985706,
+    "totalBytes": 27824452,
     "images": [
         {
             "id": "abs",
@@ -415,8 +415,8 @@
         {
             "id": "kettlebellGorillaRow",
             "file": "exercise_guides/kettlebellGorillaRow.webp",
-            "bytes": 314756,
-            "sha256": "9858c6da427c1360"
+            "bytes": 153502,
+            "sha256": "5bfcc4c990adeaac"
         },
         {
             "id": "kettlebellHalo",
