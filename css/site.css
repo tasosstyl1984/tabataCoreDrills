@@ -910,14 +910,37 @@ code {
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
+  left: 0.5rem;
   z-index: 2;
   display: flex;
-  gap: 0.25rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.35rem;
   background: var(--surface-high);
   opacity: 0.96;
   border: 1px solid var(--border);
   border-radius: 10px;
-  padding: 0.2rem;
+  padding: 0.25rem 0.35rem;
+}
+
+.zoom-slider-label {
+  flex: 1 1 8rem;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.zoom-viewport-slider {
+  width: 100%;
+  min-width: 8rem;
+  max-width: 20rem;
+  height: 1.35rem;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  accent-color: var(--primary);
 }
 
 .zoom-tool {
