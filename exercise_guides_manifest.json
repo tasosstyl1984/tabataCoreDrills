@@ -1,8 +1,8 @@
 {
-  "version": 60,
-  "updatedAtMs": 1794004696839,
+  "version": 61,
+  "updatedAtMs": 1794004972343,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 1292126,
+  "totalBytes": 1341818,
   "images": [
     {
       "id": "abs",
@@ -19,8 +19,8 @@
     {
       "id": "aroundTheWorld",
       "file": "exercise_guides/aroundTheWorld.webp",
-      "bytes": 85324,
-      "sha256": "0addf83c27385190"
+      "bytes": 135016,
+      "sha256": "0d1d73858d432006"
     },
     {
       "id": "assistedPullUp",
