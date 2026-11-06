@@ -68,6 +68,8 @@
   const editCoverPillClear = document.getElementById("edit-cover-pill-clear");
   const editCoverPillSync = document.getElementById("edit-cover-pill-sync");
   const editCoverPillFile = document.getElementById("edit-cover-pill-file");
+  const editCoverPillAlign = document.getElementById("edit-cover-pill-align");
+  const coverPreviewWrapPill = document.querySelector(".cover-preview-wrap--pill");
   const exerciseImagesStatus = document.getElementById("exercise-images-status");
   const exerciseImagesSearch = document.getElementById("exercise-images-search");
   const exerciseImagesCategories = document.getElementById("exercise-images-categories");
@@ -1430,6 +1432,13 @@
     }
     resetCoverUi(entry?.coverImage || "");
     resetPillCoverUi(entry?.coverImagePill || "");
+    const pillAlignInit =
+      entry?.coverImagePillAlign ??
+      template?.coverImagePillAlign ??
+      0;
+    setPillAlignSliderFromAlign(
+      Number.isFinite(Number(pillAlignInit)) ? Number(pillAlignInit) : 0,
+    );
     plan = normalizePlan(template?.structuredPlan || classicStarterPlan());
     resetCollapseState({ expandFirst: true });
     fillCategorySuggestions();
@@ -1482,6 +1491,10 @@
             (activityIds[0] ? `exercise_guides/${activityIds[0]}.webp` : ""),
           file: `drills/${preferredId}.json`,
           activityIds,
+          coverImagePillAlign:
+            catalogMeta?.coverImagePillAlign != null
+              ? Number(catalogMeta.coverImagePillAlign)
+              : undefined,
         }
       : null;
 
@@ -1506,6 +1519,12 @@
     if (editCoverPill && catalogMeta?.coverImagePill) {
       editCoverPill.value = catalogMeta.coverImagePill;
       resetPillCoverUi(catalogMeta.coverImagePill);
+    }
+    if (
+      catalogMeta?.coverImagePillAlign != null &&
+      Number.isFinite(Number(catalogMeta.coverImagePillAlign))
+    ) {
+      setPillAlignSliderFromAlign(Number(catalogMeta.coverImagePillAlign));
     }
     if (catalogMeta?.category) {
       categoryManual = true;
@@ -1543,7 +1562,17 @@
         category: data.category || "",
         coverImage: data.coverImage || "",
         coverImagePill: data.coverImagePill || "",
+        coverImagePillAlign:
+          data.coverImagePillAlign != null && data.coverImagePillAlign !== ""
+            ? Number(data.coverImagePillAlign)
+            : undefined,
       };
+      if (
+        catalogMeta.coverImagePillAlign != null &&
+        !Number.isFinite(catalogMeta.coverImagePillAlign)
+      ) {
+        catalogMeta.coverImagePillAlign = undefined;
+      }
     } else if (data.template && typeof data.template === "object") {
       template = data.template;
     }
@@ -1607,6 +1636,7 @@
       (editCover?.value || "").trim() ||
       (activityIds[0] ? `exercise_guides/${activityIds[0]}.webp` : "exercise_guides/burpees.webp");
     const pillCover = (editCoverPill?.value || "").trim();
+    const pillAlign = alignFromPillAlignSlider();
     const name = (editName?.value || "").trim() || "Untitled plan";
     const now = Date.now();
     const description = (editDescription?.value || "").trim();
@@ -1639,6 +1669,7 @@
     };
     if (description) template.description = description;
     if (pillCover) template.coverImagePill = pillCover;
+    template.coverImagePillAlign = pillAlign;
     if (editingEntry && template.createdAtMs === undefined) {
       // keep createdAtMs from existing file when available via fetch later
     }
@@ -1653,6 +1684,7 @@
       activityIds,
     };
     if (pillCover) catalogEntry.coverImagePill = pillCover;
+    catalogEntry.coverImagePillAlign = pillAlign;
     return { template, catalogEntry };
   }
 
@@ -2265,6 +2297,41 @@
       }
       if (editCoverPillPlaceholder) editCoverPillPlaceholder.hidden = false;
     }
+    applyPillAlignToPreview();
+  }
+
+  /** Slider 0–100 → horizontal object-position % for admin preview (matches BoxFit.cover). */
+  function pillAlignPercentFromAlign(align) {
+    const a = Number(align);
+    if (!Number.isFinite(a)) return 50;
+    return Math.round(((Math.min(1, Math.max(-1, a)) + 1) / 2) * 100);
+  }
+
+  function alignFromPillAlignSlider() {
+    const v = editCoverPillAlign ? Number(editCoverPillAlign.value) : 50;
+    if (!Number.isFinite(v)) return 0;
+    const pct = Math.min(100, Math.max(0, v));
+    return (pct / 50) - 1;
+  }
+
+  function applyPillAlignToPreview() {
+    if (!coverPreviewWrapPill) return;
+    const pct = editCoverPillAlign ? Number(editCoverPillAlign.value) : 50;
+    const safe = Number.isFinite(pct) ? Math.min(100, Math.max(0, pct)) : 50;
+    coverPreviewWrapPill.style.setProperty("--pill-preview-pos", `${safe}% 50%`);
+    if (editCoverPillAlign) {
+      try {
+        editCoverPillAlign.setAttribute("aria-valuenow", String(Math.round(safe)));
+      } catch (_) {
+        /* ignore */
+      }
+    }
+  }
+
+  function setPillAlignSliderFromAlign(align) {
+    const pct = pillAlignPercentFromAlign(align);
+    if (editCoverPillAlign) editCoverPillAlign.value = String(pct);
+    applyPillAlignToPreview();
   }
 
   function clearPendingCover() {
@@ -2308,6 +2375,7 @@
     clearPendingPillCover();
     if (editCoverPill) editCoverPill.value = path || "";
     if (!path) {
+      setPillAlignSliderFromAlign(0);
       setCoverPillPreview("");
       updateCoverCopyCurrentButtons();
       return;
@@ -3191,6 +3259,10 @@
       copyCurrentPlanCoverForEdit("pill"),
     );
   }
+  if (editCoverPillAlign) {
+    applyPillAlignToPreview();
+    editCoverPillAlign.addEventListener("input", () => applyPillAlignToPreview());
+  }
   if (editCoverPillSync) {
     editCoverPillSync.addEventListener("click", () => {
       const heroPath = effectiveHeroCoverPath();
@@ -3198,6 +3270,7 @@
         clearPendingPillCover();
         if (editCoverPill) editCoverPill.value = heroPath;
         resetPillCoverUi(heroPath);
+        setPillAlignSliderFromAlign(0);
         return;
       }
       if (pendingCoverBlob && pendingCoverBlob.size > 0) {
@@ -3211,6 +3284,7 @@
         if (editCoverPill) editCoverPill.value = "";
         setCoverPillPreview(pendingPillCoverUrl);
         toast("Ready pill will match the cropped hero when you save.");
+        setPillAlignSliderFromAlign(0);
         return;
       }
       toast(

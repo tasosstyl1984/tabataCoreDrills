@@ -277,12 +277,50 @@ body.site-tab-exercises #import-help {
   margin-top: 0.5rem;
 }
 
+.pill-align-label {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--muted);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0.15rem 0 0.35rem;
+}
+
+.pill-align-row {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  max-width: 280px;
+  margin-bottom: 0.25rem;
+}
+
+.pill-align-row input[type="range"] {
+  flex: 1 1 auto;
+  min-width: 0;
+  accent-color: var(--primary);
+}
+
+.pill-align-tick {
+  font-size: 0.72rem;
+  color: var(--muted);
+  font-weight: 700;
+  flex: 0 0 auto;
+}
+
+.pill-align-hint {
+  margin: 0 0 0.5rem;
+  max-width: 32rem;
+}
+
+/* Pill preview uses same 8:5 frame as hero so Match hero / copy match the app. */
 .cover-preview-wrap--pill {
-  max-width: 200px;
+  max-width: 280px;
 }
 
 .cover-preview--pill {
-  max-height: 125px;
+  object-fit: cover;
+  object-position: var(--pill-preview-pos, center center);
 }
 
 /* Admin catalog: compact list rows (still card tiles for public) */
