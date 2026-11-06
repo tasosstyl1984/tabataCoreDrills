@@ -849,6 +849,221 @@ code {
   margin-right: 0.35rem;
 }
 
+.admin-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  align-items: center;
+}
+
+.admin-tab {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--muted);
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.admin-tab:hover {
+  border-color: var(--accent);
+}
+
+.admin-tab.is-active {
+  background: var(--primary-container);
+  color: var(--on-primary-container);
+  border-color: var(--accent-dim);
+}
+
+.admin-bar-actions {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  align-items: center;
+}
+
+.admin-panel-region[hidden] {
+  display: none !important;
+}
+
+/* ---- Zoom + pan (3:2 viewport) ---- */
+.zoom-viewport {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  max-height: min(52vh, 420px);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--chip);
+  overflow: hidden;
+  touch-action: none;
+  cursor: grab;
+}
+
+.zoom-viewport:active {
+  cursor: grabbing;
+}
+
+.zoom-viewport-toolbar {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 2;
+  display: flex;
+  gap: 0.25rem;
+  background: var(--surface-high);
+  opacity: 0.96;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.2rem;
+}
+
+.zoom-tool {
+  min-width: 2rem;
+  padding: 0.2rem 0.35rem;
+  font: inherit;
+  font-weight: 800;
+  font-size: 0.95rem;
+  line-height: 1;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.zoom-tool:hover {
+  background: var(--primary-container);
+}
+
+.zoom-viewport-inner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+  transform-origin: center center;
+}
+
+.zoom-viewport-img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  user-select: none;
+  pointer-events: none;
+}
+
+.zoom-viewport .exercise-image {
+  margin-bottom: 0;
+  border: 0;
+  max-height: none;
+}
+
+.zoom-hint {
+  font-size: 0.8rem;
+  margin: 0.35rem 0 0;
+}
+
+.exercise-image-viewport {
+  margin-bottom: 0.35rem;
+}
+
+/* ---- Admin: exercise images tab ---- */
+.exercise-images-intro h2 {
+  margin-bottom: 0.35rem;
+}
+
+.exercise-images-layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 320px) 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .exercise-images-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.exercise-images-list {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  max-height: min(60vh, 520px);
+  overflow: auto;
+  padding: 0.35rem;
+}
+
+.exercise-images-list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.15rem;
+  width: 100%;
+  text-align: left;
+  padding: 0.55rem 0.65rem;
+  margin-bottom: 0.25rem;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+}
+
+.exercise-images-list-item:hover {
+  border-color: var(--border);
+  background: var(--chip);
+}
+
+.exercise-images-list-item.is-selected {
+  border-color: var(--accent);
+  background: var(--primary-container);
+}
+
+.exercise-images-list-id {
+  font-size: 0.75rem;
+  opacity: 0.85;
+}
+
+.exercise-images-list-empty {
+  padding: 0.75rem;
+  margin: 0;
+}
+
+.exercise-images-search {
+  margin-bottom: 0.5rem;
+}
+
+.exercise-images-zoom {
+  max-height: min(40vh, 360px);
+}
+
+.exercise-images-upload-actions,
+.exercise-images-save-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.exercise-images-preview-wrap .exercise-images-preview-placeholder {
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
 .admin-bar button {
   border: 1px solid var(--border);
   background: var(--surface);

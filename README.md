@@ -79,6 +79,14 @@ Example entry:
 4. Save / Delete create a **single git commit** (cover + drill + catalog when needed).
 5. After Save, the grid/preview update immediately from the API response; visitors use raw.
 
+### Exercise images (Admin tab)
+
+1. Sign in → in the **Admin** bar, open **Exercise images** (next to **Plans**).
+2. Pick an exercise, choose a replacement **PNG / JPEG / WebP** (the page encodes **WebP** in the browser).
+3. **Save to GitHub** commits `exercise_guides/{activityId}.webp` and bumps **`exercise_guides/manifest.json`** and **`exercise_guides_manifest.json`** in one atomic commit.
+4. Long-form how-to text (**Setup / Action / Form check**) lives in this repo as **`exercise_guides_copy.json`** (sync from TabataCore tooling — not edited in this tab). Equipment labels live in **`exercise_catalog.json`**.
+5. Plan preview exercise lightbox: **wheel zoom** and **drag pan** on the image (same interaction as the review HTML).
+
 ## Sync direction
 
 | Direction | When | Command (from TabataCore root) |

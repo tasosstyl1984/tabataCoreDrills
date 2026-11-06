@@ -8,7 +8,7 @@
   <link rel="icon" href="img/logo-mark.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400..700,0..1,0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="css/site.css?v=31" />
+  <link rel="stylesheet" href="css/site.css?v=33" />
 </head>
 <body>
   <dialog id="busy-dialog" class="busy-dialog" aria-live="assertive" aria-busy="false">
@@ -83,12 +83,20 @@
 
     <div id="admin-bar" class="admin-bar" aria-label="Admin tools">
       <strong>Admin</strong>
-      <button type="button" id="admin-new-drill" class="primary">New plan</button>
-      <button type="button" id="admin-new-weekly" class="primary">New weekly plan</button>
-      <button type="button" id="admin-import-json">Import JSON</button>
-      <input id="admin-import-file" type="file" accept="application/json,.json" hidden />
+      <div class="admin-tabs" role="tablist" aria-label="Admin section">
+        <button type="button" id="admin-tab-plans" class="admin-tab is-active" role="tab" aria-selected="true" aria-controls="admin-panel-plans" data-panel="plans">Plans</button>
+        <button type="button" id="admin-tab-exercise-images" class="admin-tab" role="tab" aria-selected="false" aria-controls="admin-panel-exercise-images" data-panel="exercise-images">Exercise images</button>
+      </div>
+      <span class="admin-bar-actions" id="admin-bar-plans">
+        <button type="button" id="admin-new-drill" class="primary">New plan</button>
+        <button type="button" id="admin-new-weekly" class="primary">New weekly plan</button>
+        <button type="button" id="admin-import-json">Import JSON</button>
+        <input id="admin-import-file" type="file" accept="application/json,.json" hidden />
+      </span>
       <span class="muted" id="admin-session-hint">Signed in — edit presets here; sync to Android on next release</span>
     </div>
+
+    <div id="admin-panel-plans" class="admin-panel-region" data-panel="plans" role="tabpanel" aria-labelledby="admin-tab-plans">
 
     <section id="weekly-section" class="weekly-section" aria-labelledby="weekly-title">
       <h2 id="weekly-title">Weekly plans</h2>
@@ -117,6 +125,80 @@
     <p id="status" class="status" role="status"></p>
     <p id="catalog-meta" class="catalog-meta" aria-live="polite"></p>
     <div id="grid" class="grid"></div>
+
+    </div>
+
+    <div id="admin-panel-exercise-images" class="admin-panel-region admin-panel-exercise-images" data-panel="exercise-images" role="tabpanel" aria-labelledby="admin-tab-exercise-images" hidden>
+      <section class="import-help exercise-images-intro" aria-labelledby="exercise-images-title">
+        <h2 id="exercise-images-title">Exercise how-to images</h2>
+        <p class="muted">Replace a WebP illustration used in Tabata Core <strong>How to do exercises</strong>. Upload PNG or JPEG; the site encodes WebP in the browser and commits <code>exercise_guides/{id}.webp</code> plus both manifests. Users may need to refresh the exercise guides download in the app.</p>
+      </section>
+      <p id="exercise-images-status" class="status" role="status"></p>
+      <div class="exercise-images-layout">
+        <div class="exercise-images-list-column">
+          <label class="search exercise-images-search">
+            <span class="sr-only">Filter exercises</span>
+            <input id="exercise-images-search" type="search" placeholder="Filter by name or id" autocomplete="off" />
+          </label>
+          <div id="exercise-images-list" class="exercise-images-list" role="listbox" aria-label="Exercises"></div>
+        </div>
+        <div class="exercise-images-detail">
+          <p id="exercise-images-empty" class="muted exercise-images-empty">Select an exercise</p>
+          <div id="exercise-images-editor" class="exercise-images-editor" hidden>
+            <div class="exercise-images-meta">
+              <p class="brand">Selected</p>
+              <h3 id="exercise-images-selected-title">—</h3>
+              <p class="muted"><code id="exercise-images-selected-id">—</code></p>
+              <p id="exercise-images-manifest-line" class="muted" hidden></p>
+            </div>
+            <div class="exercise-images-current">
+              <p class="brand">Current</p>
+              <div class="exercise-images-preview-wrap">
+                <div id="exercise-images-current-zoom" class="zoom-viewport exercise-images-zoom" aria-label="Current image" hidden tabindex="0">
+                  <div class="zoom-viewport-toolbar" role="toolbar" aria-label="Zoom">
+                    <button type="button" class="zoom-tool" data-zoom-out title="Zoom out" aria-label="Zoom out">−</button>
+                    <button type="button" class="zoom-tool" data-zoom-reset title="Reset" aria-label="Reset zoom">1:1</button>
+                    <button type="button" class="zoom-tool" data-zoom-in title="Zoom in" aria-label="Zoom in">+</button>
+                  </div>
+                  <div class="zoom-viewport-inner">
+                    <img id="exercise-images-current-preview" class="zoom-viewport-img exercise-images-preview" alt="" />
+                  </div>
+                </div>
+                <p class="zoom-hint muted">Wheel to zoom · drag to pan</p>
+                <div id="exercise-images-current-placeholder" class="exercise-images-preview-placeholder muted">No image on CDN yet</div>
+              </div>
+            </div>
+            <div class="exercise-images-upload">
+              <p class="brand">Replacement</p>
+              <div class="exercise-images-preview-wrap">
+                <div id="exercise-images-new-zoom" class="zoom-viewport exercise-images-zoom" aria-label="New image preview" hidden tabindex="0">
+                  <div class="zoom-viewport-toolbar" role="toolbar" aria-label="Zoom">
+                    <button type="button" class="zoom-tool" data-zoom-out title="Zoom out" aria-label="Zoom out">−</button>
+                    <button type="button" class="zoom-tool" data-zoom-reset title="Reset" aria-label="Reset zoom">1:1</button>
+                    <button type="button" class="zoom-tool" data-zoom-in title="Zoom in" aria-label="Zoom in">+</button>
+                  </div>
+                  <div class="zoom-viewport-inner">
+                    <img id="exercise-images-new-preview" class="zoom-viewport-img exercise-images-preview" alt="" />
+                  </div>
+                </div>
+                <p class="zoom-hint muted">Wheel to zoom · drag to pan</p>
+                <div id="exercise-images-new-placeholder" class="exercise-images-preview-placeholder muted">No file selected</div>
+              </div>
+              <div class="exercise-images-upload-actions">
+                <button type="button" id="exercise-images-pick">Choose image…</button>
+                <input id="exercise-images-file" type="file" accept="image/png,image/jpeg,image/webp" hidden />
+                <button type="button" id="exercise-images-clear" class="secondary">Clear</button>
+              </div>
+            </div>
+            <p id="exercise-images-error" class="form-error" hidden></p>
+            <div class="exercise-images-save-actions">
+              <button type="button" id="exercise-images-save" class="primary" disabled>Save to GitHub</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </main>
 
   <dialog id="preview-dialog" class="preview-dialog" aria-labelledby="preview-title">
@@ -346,8 +428,9 @@
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="js/catalog.js?v=33"></script>
+  <script src="js/zoom-pan.js?v=1"></script>
+  <script src="js/catalog.js?v=34"></script>
   <script src="js/weekly-plans.js?v=1"></script>
-  <script src="js/admin.js?v=36"></script>
+  <script src="js/admin.js?v=38"></script>
 </body>
 </html>
