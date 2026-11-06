@@ -668,8 +668,29 @@
   }
 
   /**
+   * @param {Blob} blob
+   * @returns {Promise<Uint8Array>}
+   */
+  async function uint8ArrayFromBlob(blob) {
+    return new Uint8Array(await blob.arrayBuffer());
+  }
+
+  /**
+   * Bytes to upload: use the 1536×1024 WebP from “Use crop” (exact crop). If there is no
+   * pending crop blob (e.g. re-save flow), fall back to compositing the zoom/pan preview.
+   * @returns {Promise<Uint8Array>}
+   */
+  async function getExerciseReplacementWebpBytesForSave() {
+    if (exerciseImagesPendingBlob != null && exerciseImagesPendingBlob.size > 0) {
+      return uint8ArrayFromBlob(exerciseImagesPendingBlob);
+    }
+    return exportExerciseReplacementViewportToWebpBytes();
+  }
+
+  /**
    * Renders the replacement preview exactly as shown (3:2 viewport, zoom/pan, letterbox)
-   * to 1536×1024 WebP bytes — matches Tabata Core exercise guide slot.
+   * to 1536×1024 WebP bytes — matches Tabata Core exercise guide slot. Prefer
+   * getExerciseReplacementWebpBytesForSave after a fresh crop so the file matches the cropper.
    * @returns {Promise<Uint8Array>}
    */
   async function exportExerciseReplacementViewportToWebpBytes() {
@@ -738,7 +759,7 @@
     setExerciseImagesError("");
     showBusy("Encoding and uploading image…");
     try {
-      const webpBytes = await exportExerciseReplacementViewportToWebpBytes();
+      const webpBytes = await getExerciseReplacementWebpBytesForSave();
       const b64 = encodeBytes(webpBytes);
       const sha16 = await sha256HexPrefix16(webpBytes);
       const path = `exercise_guides/${id}.webp`;
