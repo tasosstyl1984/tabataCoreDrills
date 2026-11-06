@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tabata Core Drills — Full app (embedded)</title>
+  <style>
+    :root {
+      --banner-bg: #1a2332;
+      --banner-fg: #e8eef5;
+      --banner-muted: #8b9cb0;
+      --border: #2d3a4d;
+      --err-bg: #3f1d1d;
+      --err-border: #991b1b;
+    }
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: system-ui, "Segoe UI", Roboto, sans-serif;
+    }
+    .top {
+      flex-shrink: 0;
+      padding: 8px 14px;
+      font-size: 13px;
+      color: var(--banner-muted);
+      background: var(--banner-bg);
+      border-bottom: 1px solid var(--border);
+      line-height: 1.45;
+    }
+    .top strong { color: var(--banner-fg); }
+    .top a { color: #60a5fa; }
+    .shell {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      min-height: 100vh;
+    }
+    iframe {
+      flex: 1;
+      width: 100%;
+      min-height: 200px;
+      border: 0;
+      background: #0f1419;
+    }
+    #embed-fail {
+      display: none;
+      margin: 12px 14px;
+      padding: 12px 14px;
+      font-size: 13px;
+      line-height: 1.5;
+      color: #fecaca;
+      background: var(--err-bg);
+      border: 1px solid var(--err-border);
+      border-radius: 8px;
+    }
+    #embed-fail.is-visible { display: block; }
+    #embed-fail code {
+      display: block;
+      margin-top: 8px;
+      padding: 8px 10px;
+      background: #111;
+      border-radius: 6px;
+      color: #e5e7eb;
+      font-size: 12px;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <div class="top" role="status">
+      <strong>Full application</strong> — the frame below loads the repo root
+      <a id="app-link" href="#"><code>index.html</code></a>
+      (admin, Cropper, Save to GitHub). Resolved from this page’s URL so it works when you open
+      <code>/tools/admin-hub-mockup/</code> from the server root.
+      <a id="app-open" href="#" target="_blank" rel="noopener">Open in new tab</a>.
+      · <strong>No server?</strong> Open <a href="./visual-mockup.html"><code>visual-mockup.html</code></a> (layout only, works with file://).
+    </div>
+    <p id="embed-fail" role="alert"></p>
+    <iframe
+      id="app-frame"
+      title="Tabata Core Plans — full site"
+      src="about:blank"
+    ></iframe>
+  </div>
+  <script>
+    (function () {
+      var here = window.location.href.replace(/[#?].*$/, "");
+      var resolved;
+      try {
+        resolved = new URL("../../index.html", window.location.href).href.replace(/[#?].*$/, "");
+      } catch (e) {
+        resolved = "";
+      }
+
+      var fail = document.getElementById("embed-fail");
+      var frame = document.getElementById("app-frame");
+      var link = document.getElementById("app-link");
+      var openTab = document.getElementById("app-open");
+
+      link.href = resolved || "#";
+      openTab.href = resolved || "#";
+
+      function showFail(html) {
+        fail.innerHTML = html;
+        fail.classList.add("is-visible");
+      }
+
+      if (!resolved) {
+        showFail("Could not resolve path to <code>index.html</code>. Open the repo root site instead.");
+        return;
+      }
+
+      if (resolved === here) {
+        showFail(
+          "The iframe would load <strong>this same page</strong> — your HTTP server is probably using " +
+            "<code>tools/admin-hub-mockup</code> as the document root, so <code>../../index.html</code> does not exist.\n\n" +
+            "<strong>Fix:</strong> start the server from the <strong>tabataCoreDrills</strong> repository root, then open this URL:\n" +
+            "<code>http://127.0.0.1:PORT/tools/admin-hub-mockup/</code>\n\n" +
+            "Example:\n" +
+            "<code>cd path/to/tabataCoreDrills\npy -m http.server 3456</code>\n\n" +
+            "Or skip the wrapper and open <code>/index.html</code> at that server root."
+        );
+        return;
+      }
+
+      fetch(resolved, { method: "HEAD", cache: "no-store" })
+        .then(function (r) {
+          if (!r.ok) throw new Error("HTTP " + r.status);
+          frame.src = resolved;
+        })
+        .catch(function () {
+          showFail(
+            "Could not load <code>" +
+              resolved +
+              "</code> (missing or wrong server root). " +
+              "Serve from <strong>tabataCoreDrills</strong> root — see instructions above — " +
+            "or open the root app: <a href=\"" +
+              resolved +
+              "\">" +
+              resolved +
+              "</a>"
+          );
+        });
+    })();
+  </script>
+</body>
+</html>
