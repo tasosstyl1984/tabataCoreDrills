@@ -1,8 +1,8 @@
 {
-  "version": 61,
-  "updatedAtMs": 1794004972343,
+  "version": 62,
+  "updatedAtMs": 1794005058991,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 1341818,
+  "totalBytes": 1413362,
   "images": [
     {
       "id": "abs",
@@ -253,8 +253,8 @@
     {
       "id": "footballControl",
       "file": "exercise_guides/footballControl.webp",
-      "bytes": 9156,
-      "sha256": "4fd6888efb87d779"
+      "bytes": 80700,
+      "sha256": "569831aa5c359800"
     },
     {
       "id": "footballDribbling",
