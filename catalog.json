@@ -1,6 +1,6 @@
 {
-  "version": 154,
-  "updatedAtMs": 1793917325476,
+  "version": 155,
+  "updatedAtMs": 1794005956985,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -444,10 +444,10 @@
       "id": "remote_weighted_shadow_boxing_complex",
       "name": "Weighted Shadow Boxing Complex",
       "file": "drills/remote_weighted_shadow_boxing_complex.json",
-      "updatedAtMs": 1792264645744,
+      "updatedAtMs": 1794005955891,
       "category": "combos",
       "description": "",
-      "coverImage": "plan_covers/remote_weighted_shadow_boxing_complex_1792264583658.webp",
+      "coverImage": "plan_covers/remote_weighted_shadow_boxing_complex_1794005955882.webp",
       "activityIds": [
         "shadowBoxing",
         "kettlebellSwings",
@@ -455,7 +455,8 @@
         "kettlebellRow",
         "kettlebellCleanPress",
         "kettlebellDeadlift"
-      ]
+      ],
+      "coverImagePill": "plan_covers/remote_weighted_shadow_boxing_complex_pill_1794005955887.webp"
     }
   ]
 }
