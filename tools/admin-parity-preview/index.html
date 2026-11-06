@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <title>Tabata Core — Exercise / Cover image lab</title>
+    <link rel="stylesheet" href="parity.css?v=4" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main</a>
+
+    <header class="top">
+      <div class="top-inner">
+        <div>
+          <h1>Image lab</h1>
+          <p class="lede">Two modes. Load → zoom (slider or wheel) → drag → App preview updates live → download.</p>
+        </div>
+        <button type="button" class="btn" id="btn-theme">Theme</button>
+      </div>
+    </header>
+
+    <div class="mode-tabs" role="tablist" aria-label="Image type">
+      <button
+        type="button"
+        class="mode-tab is-active"
+        role="tab"
+        id="tab-exercise"
+        aria-selected="true"
+        aria-controls="panel-exercise"
+      >
+        <span class="mode-tab-title">Exercises</span>
+        <span class="mode-tab-meta">3∶2 · 1536×1024 WebP</span>
+      </button>
+      <button
+        type="button"
+        class="mode-tab"
+        role="tab"
+        id="tab-cover"
+        aria-selected="false"
+        aria-controls="panel-cover"
+      >
+        <span class="mode-tab-title">Cover</span>
+        <span class="mode-tab-meta">8∶5 · 1200×750 WebP</span>
+      </button>
+    </div>
+
+    <main id="main" class="shell">
+      <!-- ========== EXERCISES ========== -->
+      <section
+        class="mode-panel is-active"
+        role="tabpanel"
+        id="panel-exercise"
+        aria-labelledby="tab-exercise"
+      >
+        <div class="work-grid">
+          <div class="work-main">
+            <div class="card">
+              <h2>Load image</h2>
+              <div class="load-row">
+                <input type="file" id="ex-file" accept="image/png,image/jpeg,image/webp" />
+                <button type="button" class="btn" id="ex-clear">Clear</button>
+              </div>
+              <label class="field-label" for="ex-url">Image URL (optional — update existing shipped art)</label>
+              <div class="load-row load-row-grow">
+                <input type="url" id="ex-url" class="input-url" placeholder="https://raw.githubusercontent.com/…/exercise_guides/burpees.webp" autocomplete="off" />
+                <button type="button" class="btn btn-primary" id="ex-url-load">Load URL</button>
+              </div>
+              <p class="hint tight">Paste GitHub raw or any CORS-open image URL. Default: <code>tasosstyl1984/tabataCoreDrills</code> main.</p>
+              <div class="load-row load-row-grow">
+                <label class="inline-field" for="ex-id">Exercise id</label>
+                <input type="text" id="ex-id" class="input-mono" placeholder="burpees" spellcheck="false" autocomplete="off" />
+                <button type="button" class="btn" id="ex-repo-load">Load from repo</button>
+              </div>
+              <div class="drop" id="ex-drop" tabindex="0">Drop image here</div>
+              <p class="err" id="ex-err" hidden role="alert"></p>
+            </div>
+
+            <div class="card">
+              <h2>Frame · drag · slider or wheel zoom</h2>
+              <p class="hint">App preview on the right updates automatically as you edit.</p>
+
+              <div class="stage" id="ex-stage" hidden>
+                <div class="viewport ar-3-2" id="ex-viewport">
+                  <div class="viewport-inner">
+                    <img id="ex-img" class="viewport-img" alt="" draggable="false" />
+                  </div>
+                </div>
+                <div class="zoom-bar">
+                  <label for="ex-zoom">Zoom</label>
+                  <input type="range" id="ex-zoom" min="100" max="500" step="1" value="100" />
+                  <span id="ex-zoom-pct" class="pct">100%</span>
+                  <button type="button" class="btn btn-sm" id="ex-zoom-reset">Reset</button>
+                </div>
+                <div class="actions">
+                  <button type="button" class="btn btn-primary" id="ex-export">Export WebP</button>
+                  <button type="button" class="btn" id="ex-download" disabled>Download</button>
+                </div>
+                <p class="status" id="ex-status"></p>
+              </div>
+              <p class="empty" id="ex-empty">Choose or drop an image to start.</p>
+            </div>
+          </div>
+
+          <aside class="work-side">
+            <div class="card sticky">
+              <h2>App preview</h2>
+              <p class="hint">How-to dialog — 3∶2 contain (letterbox OK).</p>
+              <div class="app-frame ar-3-2 bg-letterbox">
+                <img id="ex-preview" alt="" />
+              </div>
+              <pre class="inspector" id="ex-insp"></pre>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ========== COVER ========== -->
+      <section
+        class="mode-panel"
+        role="tabpanel"
+        id="panel-cover"
+        aria-labelledby="tab-cover"
+        hidden
+      >
+        <div class="work-grid">
+          <div class="work-main">
+            <div class="card">
+              <h2>Load image</h2>
+              <div class="load-row">
+                <input type="file" id="cov-file" accept="image/png,image/jpeg,image/webp" />
+                <button type="button" class="btn" id="cov-clear">Clear</button>
+              </div>
+              <label class="field-label" for="cov-url">Image URL or paste path below</label>
+              <div class="load-row load-row-grow">
+                <input type="url" id="cov-url" class="input-url" placeholder="https://raw.githubusercontent.com/…/plan_covers/…" autocomplete="off" />
+                <button type="button" class="btn btn-primary" id="cov-url-load">Load URL</button>
+              </div>
+              <div class="load-row load-row-grow">
+                <label class="inline-field" for="cov-path">Repo path</label>
+                <input type="text" id="cov-path" class="input-mono" placeholder="plan_covers/remote_plans_….webp" spellcheck="false" autocomplete="off" />
+                <button type="button" class="btn" id="cov-repo-load">Load from repo</button>
+              </div>
+              <div class="drop" id="cov-drop" tabindex="0">Drop image here</div>
+              <p class="err" id="cov-err" hidden role="alert"></p>
+            </div>
+
+            <div class="card">
+              <h2>Frame · drag · slider or wheel zoom</h2>
+              <p class="hint">App previews on the right update automatically as you edit.</p>
+
+              <div class="stage" id="cov-stage" hidden>
+                <div class="viewport ar-8-5" id="cov-viewport">
+                  <div class="viewport-inner">
+                    <img id="cov-img" class="viewport-img" alt="" draggable="false" />
+                  </div>
+                </div>
+                <div class="zoom-bar">
+                  <label for="cov-zoom">Zoom</label>
+                  <input type="range" id="cov-zoom" min="100" max="500" step="1" value="100" />
+                  <span id="cov-zoom-pct" class="pct">100%</span>
+                  <button type="button" class="btn btn-sm" id="cov-zoom-reset">Reset</button>
+                </div>
+                <div class="actions">
+                  <button type="button" class="btn btn-primary" id="cov-export">Export WebP</button>
+                  <button type="button" class="btn" id="cov-download" disabled>Download</button>
+                </div>
+                <p class="status" id="cov-status"></p>
+              </div>
+              <p class="empty" id="cov-empty">Choose or drop an image to start.</p>
+            </div>
+          </div>
+
+          <aside class="work-side">
+            <div class="card sticky">
+              <h2>App previews</h2>
+              <div class="device-row">
+                <button type="button" class="chip is-on" id="cov-preset-portrait" aria-pressed="true">Portrait</button>
+                <button type="button" class="chip" id="cov-preset-landscape" aria-pressed="false">Landscape (cap)</button>
+              </div>
+              <p class="hint">View plan — 8∶5 contain</p>
+              <div class="phone" id="cov-phone" data-frame="portrait">
+                <div class="plan-slot" id="cov-plan-slot">
+                  <img id="cov-preview-plan" alt="" />
+                </div>
+              </div>
+              <label class="check">
+                <input type="checkbox" id="cov-scrim" checked />
+                Ready pill scrim
+              </label>
+              <p class="hint">Ready pill — cover (edges may crop)</p>
+              <div class="ready-pill">
+                <img id="cov-preview-ready" alt="" />
+                <div class="scrim is-on" id="cov-scrim-el"></div>
+              </div>
+              <pre class="inspector" id="cov-insp"></pre>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <p>Local tool · refresh with Ctrl+F5 after updates · serve from repo root on port 5050</p>
+    </footer>
+
+    <script src="parity.js?v=4" defer></script>
+  </body>
+</html>
