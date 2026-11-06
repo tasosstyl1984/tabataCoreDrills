@@ -2183,3 +2183,21 @@ body.admin-authed .preview-footer-actions .btn-delete-admin {
   max-height: min(58vh, 520px);
 }
 
+/* Exercise image editor — same modal chrome as plan editor, full-width form */
+.exercise-images-editor-dialog {
+  max-width: min(900px, calc(100vw - 1.25rem));
+}
+
+.exercise-images-editor-dialog .editor-panel {
+  max-height: min(92vh, 900px);
+}
+
+.exercise-images-editor-body {
+  max-height: min(72vh, 680px);
+  overflow-y: auto;
+}
+
+.exercise-images-editor-body .exercise-images-meta {
+  margin-bottom: 0.25rem;
+}
+
