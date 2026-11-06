@@ -8,7 +8,7 @@
   <link rel="icon" href="img/logo-mark.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400..700,0..1,0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="css/site.css?v=36" />
+  <link rel="stylesheet" href="css/site.css?v=40" />
 </head>
 <body>
   <dialog id="busy-dialog" class="busy-dialog" aria-live="assertive" aria-busy="false">
@@ -140,7 +140,9 @@
             <span class="sr-only">Filter exercises</span>
             <input id="exercise-images-search" type="search" placeholder="Filter by name or id" autocomplete="off" />
           </label>
-          <div id="exercise-images-list" class="exercise-images-list" role="listbox" aria-label="Exercises"></div>
+          <div class="exercise-images-list-scroll">
+            <div id="exercise-images-list" class="exercise-images-list" role="listbox" aria-label="Exercises"></div>
+          </div>
         </div>
         <div class="exercise-images-detail">
           <p id="exercise-images-empty" class="muted exercise-images-empty">Select an exercise</p>
@@ -154,16 +156,18 @@
             <div class="exercise-images-current">
               <p class="brand">Current</p>
               <div class="exercise-images-preview-wrap">
-                <div id="exercise-images-current-zoom" class="zoom-viewport exercise-images-zoom" aria-label="Current image" hidden tabindex="0">
+                <div id="exercise-images-current-zoom-stack" class="zoom-stack exercise-images-zoom-stack" hidden>
+                  <div id="exercise-images-current-zoom" class="zoom-viewport exercise-images-zoom" aria-label="Current image" tabindex="0">
+                    <div class="zoom-viewport-inner">
+                      <img id="exercise-images-current-preview" class="zoom-viewport-img exercise-images-preview" alt="" />
+                    </div>
+                  </div>
                   <div class="zoom-viewport-toolbar" role="toolbar" aria-label="Zoom">
                     <label class="zoom-slider-label" for="exercise-images-current-slider">
                       <span class="sr-only">Zoom</span>
                       <input type="range" id="exercise-images-current-slider" class="zoom-viewport-slider" min="100" max="500" step="1" value="100" />
                     </label>
                     <button type="button" class="zoom-tool" data-zoom-reset title="Reset zoom and pan" aria-label="Reset zoom">Reset</button>
-                  </div>
-                  <div class="zoom-viewport-inner">
-                    <img id="exercise-images-current-preview" class="zoom-viewport-img exercise-images-preview" alt="" />
                   </div>
                 </div>
                 <p class="zoom-hint muted">Wheel to zoom · drag to pan</p>
@@ -173,16 +177,18 @@
             <div class="exercise-images-upload">
               <p class="brand">Replacement</p>
               <div class="exercise-images-preview-wrap">
-                <div id="exercise-images-new-zoom" class="zoom-viewport exercise-images-zoom" aria-label="New image preview" hidden tabindex="0">
+                <div id="exercise-images-new-zoom-stack" class="zoom-stack exercise-images-zoom-stack" hidden>
+                  <div id="exercise-images-new-zoom" class="zoom-viewport exercise-images-zoom" aria-label="New image preview" tabindex="0">
+                    <div class="zoom-viewport-inner">
+                      <img id="exercise-images-new-preview" class="zoom-viewport-img exercise-images-preview" alt="" />
+                    </div>
+                  </div>
                   <div class="zoom-viewport-toolbar" role="toolbar" aria-label="Zoom">
                     <label class="zoom-slider-label" for="exercise-images-new-slider">
                       <span class="sr-only">Zoom</span>
                       <input type="range" id="exercise-images-new-slider" class="zoom-viewport-slider" min="100" max="500" step="1" value="100" />
                     </label>
                     <button type="button" class="zoom-tool" data-zoom-reset title="Reset zoom and pan" aria-label="Reset zoom">Reset</button>
-                  </div>
-                  <div class="zoom-viewport-inner">
-                    <img id="exercise-images-new-preview" class="zoom-viewport-img exercise-images-preview" alt="" />
                   </div>
                 </div>
                 <p class="zoom-hint muted">Wheel to zoom · drag to pan</p>
@@ -432,9 +438,9 @@
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="js/zoom-pan.js?v=3"></script>
-  <script src="js/catalog.js?v=35"></script>
+  <script src="js/zoom-pan.js?v=5"></script>
+  <script src="js/catalog.js?v=37"></script>
   <script src="js/weekly-plans.js?v=1"></script>
-  <script src="js/admin.js?v=38"></script>
+  <script src="js/admin.js?v=40"></script>
 </body>
 </html>

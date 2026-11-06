@@ -19,6 +19,8 @@
   --chip: #e7e8ee;
   --chip-active: #39608f;
   --chip-active-text: #ffffff;
+  /* Matches Tabata Core Android ExerciseHowToContent image chrome (surfaceContainerHighest) */
+  --surface-container-highest: #e6e0e9;
   --radius: 12px;
   --radius-lg: 18px;
   --font: "Roboto", "Segoe UI", system-ui, -apple-system, sans-serif;
@@ -48,6 +50,7 @@
   --chip: #272a2f;
   --chip-active: #a3c9fe;
   --chip-active-text: #00315b;
+  --surface-container-highest: #2f3033;
   --shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
   --cta-text: #00315b;
   --play-gradient: linear-gradient(135deg, #a3c9fe, #39608f);
@@ -343,8 +346,9 @@ main {
 .card-cover {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
+  /* Matches Tabata Core View plan hero + majority plan_covers (1280×800, 8:5) */
+  aspect-ratio: 8 / 5;
+  object-fit: contain;
   object-position: center;
   background: var(--chip);
   border-bottom: 1px solid var(--border);
@@ -499,9 +503,9 @@ main {
 .preview-cover {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 8 / 5;
   max-height: 220px;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   background: var(--chip);
   border: 1px solid var(--border);
@@ -888,6 +892,29 @@ code {
   display: none !important;
 }
 
+/* Viewport + vertical zoom rail (slider/reset outside image border) */
+.zoom-stack {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 0.5rem;
+  width: 100%;
+  min-width: 0;
+}
+
+.zoom-stack > .zoom-viewport {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.exercise-images-zoom-stack {
+  width: 100%;
+}
+
+.exercise-image-viewport-stack {
+  width: 100%;
+}
+
 /* ---- Zoom + pan (3:2 viewport) ---- */
 .zoom-viewport {
   position: relative;
@@ -906,19 +933,18 @@ code {
   cursor: grabbing;
 }
 
-/* Right rail: do not cover the top of the exercise image */
+/* Vertical zoom rail to the right of the image (not inside overflow:hidden viewport) */
 .zoom-viewport-toolbar {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  bottom: 0.5rem;
-  left: auto;
+  flex: 0 0 auto;
+  align-self: stretch;
   z-index: 2;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
   gap: 0.5rem;
+  width: 3.25rem;
+  min-width: 3.25rem;
   max-width: 3.25rem;
   background: var(--surface-high);
   opacity: 0.96;
@@ -1013,6 +1039,36 @@ code {
   margin-bottom: 0.35rem;
 }
 
+/*
+ * Catalog exercise detail: match Tabata Core Android how-to image slot
+ * (3:2 frame — majority of shipped guides are 1536×1024; 10px rounded clip).
+ * Admin zoom previews keep the default 3:2 .zoom-viewport above.
+ */
+.exercise-image-viewport.zoom-viewport {
+  aspect-ratio: 3 / 2;
+  height: auto;
+  max-height: none;
+  border-radius: 10px;
+  border: 0;
+  background: var(--surface-container-highest);
+}
+
+.exercise-image-viewport .zoom-viewport-img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+  object-position: center center;
+}
+
+.exercise-image-viewport.zoom-viewport .exercise-image {
+  margin-bottom: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
 /* ---- Admin: exercise images tab ---- */
 .exercise-images-intro h2 {
   margin-bottom: 0.35rem;
@@ -1025,6 +1081,26 @@ code {
   align-items: start;
 }
 
+.exercise-images-list-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 0;
+  min-height: 0;
+  align-self: stretch;
+}
+
+/* Scrollbar on outer shell so list border is not clipped by overflow */
+.exercise-images-list-scroll {
+  flex: 1 1 auto;
+  min-height: 0;
+  max-height: min(60vh, 520px);
+  overflow: auto;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
 @media (max-width: 900px) {
   .exercise-images-layout {
     grid-template-columns: 1fr;
@@ -1032,12 +1108,11 @@ code {
 }
 
 .exercise-images-list {
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--surface);
-  max-height: min(60vh, 520px);
-  overflow: auto;
   padding: 0.35rem;
+  margin: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
 }
 
 .exercise-images-list-item {
@@ -1078,7 +1153,11 @@ code {
 }
 
 .exercise-images-search {
-  margin-bottom: 0.5rem;
+  flex-shrink: 0;
+}
+
+.exercise-images-zoom-stack {
+  max-height: min(40vh, 360px);
 }
 
 .exercise-images-zoom {
@@ -1863,7 +1942,7 @@ body.admin-authed .preview-footer-actions .btn-delete-admin {
 .cover-preview-wrap {
   width: 100%;
   max-width: 280px;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 8 / 5;
   border: 1px solid var(--border);
   border-radius: 12px;
   overflow: hidden;
@@ -1875,7 +1954,7 @@ body.admin-authed .preview-footer-actions .btn-delete-admin {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .cover-placeholder {
