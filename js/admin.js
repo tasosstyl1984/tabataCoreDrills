@@ -55,6 +55,38 @@
   const weeklyEditDescription = document.getElementById("weekly-edit-description");
   const weeklyDayRows = document.getElementById("weekly-day-rows");
 
+  const adminTabPlans = document.getElementById("admin-tab-plans");
+  const adminTabExerciseImages = document.getElementById("admin-tab-exercise-images");
+  const adminPanelPlans = document.getElementById("admin-panel-plans");
+  const adminPanelExerciseImages = document.getElementById("admin-panel-exercise-images");
+  const adminBarPlans = document.getElementById("admin-bar-plans");
+  const exerciseImagesStatus = document.getElementById("exercise-images-status");
+  const exerciseImagesSearch = document.getElementById("exercise-images-search");
+  const exerciseImagesList = document.getElementById("exercise-images-list");
+  const exerciseImagesEmpty = document.getElementById("exercise-images-empty");
+  const exerciseImagesEditor = document.getElementById("exercise-images-editor");
+  const exerciseImagesSelectedTitle = document.getElementById("exercise-images-selected-title");
+  const exerciseImagesIdCode = document.getElementById("exercise-images-selected-id");
+  const exerciseImagesManifestLine = document.getElementById("exercise-images-manifest-line");
+  const exerciseImagesCurrentPreview = document.getElementById("exercise-images-current-preview");
+  const exerciseImagesCurrentPlaceholder = document.getElementById("exercise-images-current-placeholder");
+  const exerciseImagesCurrentZoom = document.getElementById("exercise-images-current-zoom");
+  const exerciseImagesNewPreview = document.getElementById("exercise-images-new-preview");
+  const exerciseImagesNewPlaceholder = document.getElementById("exercise-images-new-placeholder");
+  const exerciseImagesNewZoom = document.getElementById("exercise-images-new-zoom");
+  const exerciseImagesPick = document.getElementById("exercise-images-pick");
+  const exerciseImagesFile = document.getElementById("exercise-images-file");
+  const exerciseImagesClear = document.getElementById("exercise-images-clear");
+  const exerciseImagesError = document.getElementById("exercise-images-error");
+  const exerciseImagesSave = document.getElementById("exercise-images-save");
+
+  const ADMIN_PANEL_KEY = "tabataDrillsAdminPanel";
+  let exerciseImagesManifestCache = null;
+  let exerciseImagesSelectedId = "";
+  let exerciseImagesPendingBlob = null;
+  let detachCurrentZoom = null;
+  let detachNewZoom = null;
+
   let editingWeeklyWeek = null;
   let plan = classicStarterPlan();
   let categoryManual = false;
@@ -182,9 +214,365 @@
     if (adminBar) adminBar.classList.toggle("is-visible", ok);
     if (loginBtn) loginBtn.hidden = ok;
     if (logoutBtn) logoutBtn.hidden = !ok;
+    applyAdminPanelVisibility();
     window.dispatchEvent(
       new CustomEvent("tabata-admin-auth", { detail: { ok } }),
     );
+  }
+
+  function adminPanelFromStorage() {
+    try {
+      const v = sessionStorage.getItem(ADMIN_PANEL_KEY);
+      return v === "exercise-images" ? "exercise-images" : "plans";
+    } catch (_) {
+      return "plans";
+    }
+  }
+
+  function saveAdminPanel(panel) {
+    try {
+      sessionStorage.setItem(ADMIN_PANEL_KEY, panel);
+    } catch (_) {
+      /* ignore */
+    }
+  }
+
+  function applyAdminPanelVisibility() {
+    const ok = isAuthed();
+    const panel = adminPanelFromStorage();
+    const useExercise = ok && panel === "exercise-images";
+    if (adminPanelPlans) {
+      adminPanelPlans.hidden = useExercise;
+    }
+    if (adminPanelExerciseImages) {
+      adminPanelExerciseImages.hidden = !useExercise;
+    }
+    if (adminBarPlans) {
+      adminBarPlans.hidden = useExercise;
+    }
+    if (adminTabPlans) {
+      adminTabPlans.classList.toggle("is-active", !useExercise);
+      adminTabPlans.setAttribute("aria-selected", useExercise ? "false" : "true");
+    }
+    if (adminTabExerciseImages) {
+      adminTabExerciseImages.classList.toggle("is-active", useExercise);
+      adminTabExerciseImages.setAttribute("aria-selected", useExercise ? "true" : "false");
+    }
+    if (useExercise) {
+      ensureExerciseImagesManifest().catch(() => {});
+      renderExerciseImagesList();
+    }
+  }
+
+  function setExerciseImagesError(msg) {
+    if (!exerciseImagesError) return;
+    if (!msg) {
+      exerciseImagesError.hidden = true;
+      exerciseImagesError.textContent = "";
+      return;
+    }
+    exerciseImagesError.hidden = false;
+    exerciseImagesError.textContent = msg;
+  }
+
+  function detachZoomHandlers() {
+    if (typeof detachCurrentZoom === "function") {
+      try {
+        detachCurrentZoom();
+      } catch (_) {
+        /* ignore */
+      }
+    }
+    detachCurrentZoom = null;
+    if (typeof detachNewZoom === "function") {
+      try {
+        detachNewZoom();
+      } catch (_) {
+        /* ignore */
+      }
+    }
+    detachNewZoom = null;
+  }
+
+  async function ensureExerciseImagesManifest() {
+    if (exerciseImagesManifestCache) return exerciseImagesManifestCache;
+    const res = await fetch(`exercise_guides_manifest.json?_=${Date.now()}`, {
+      cache: "no-store",
+    });
+    if (!res.ok) throw new Error("Could not load exercise_guides_manifest.json");
+    exerciseImagesManifestCache = await res.json();
+    return exerciseImagesManifestCache;
+  }
+
+  function manifestEntryForId(manifest, id) {
+    const imgs = manifest?.images || [];
+    return imgs.find((e) => e && e.id === id) || null;
+  }
+
+  function renderExerciseImagesList() {
+    if (!exerciseImagesList || !isAuthed()) return;
+    const q = (exerciseImagesSearch?.value || "").trim().toLowerCase();
+    const activities = site()?.activityCatalog() || [];
+    const imageIds = site()?.imageIds;
+    const filtered = activities
+      .filter((a) => a && a.id)
+      .filter((a) => !imageIds || imageIds.has(a.id))
+      .filter((a) => {
+        if (!q) return true;
+        const label = String(a.label || "").toLowerCase();
+        return label.includes(q) || String(a.id).toLowerCase().includes(q);
+      })
+      .sort((a, b) => String(a.label || a.id).localeCompare(String(b.label || b.id)));
+    exerciseImagesList.innerHTML = "";
+    for (const a of filtered) {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "exercise-images-list-item";
+      btn.setAttribute("role", "option");
+      btn.dataset.activityId = a.id;
+      btn.innerHTML = `<span class="exercise-images-list-label">${site().escapeHtml(
+        a.label || a.id,
+      )}</span><code class="exercise-images-list-id">${site().escapeHtml(a.id)}</code>`;
+      if (a.id === exerciseImagesSelectedId) {
+        btn.classList.add("is-selected");
+        btn.setAttribute("aria-selected", "true");
+      } else {
+        btn.setAttribute("aria-selected", "false");
+      }
+      btn.addEventListener("click", () => {
+        selectExerciseForImages(a.id);
+      });
+      exerciseImagesList.appendChild(btn);
+    }
+    if (!filtered.length) {
+      exerciseImagesList.innerHTML = `<p class="muted exercise-images-list-empty">No exercises match.</p>`;
+    }
+  }
+
+  async function selectExerciseForImages(id) {
+    exerciseImagesSelectedId = id;
+    setExerciseImagesError("");
+    exerciseImagesPendingBlob = null;
+    if (exerciseImagesSave) exerciseImagesSave.disabled = true;
+    detachZoomHandlers();
+    if (exerciseImagesEmpty) exerciseImagesEmpty.hidden = true;
+    if (exerciseImagesEditor) exerciseImagesEditor.hidden = false;
+    const title = site()?.activityLabel?.(id) || id;
+    if (exerciseImagesSelectedTitle) exerciseImagesSelectedTitle.textContent = title;
+    if (exerciseImagesIdCode) exerciseImagesIdCode.textContent = id;
+
+    try {
+      const manifest = await ensureExerciseImagesManifest();
+      const ent = manifestEntryForId(manifest, id);
+      if (exerciseImagesManifestLine) {
+        if (ent) {
+          exerciseImagesManifestLine.hidden = false;
+          exerciseImagesManifestLine.textContent = `Manifest: v${manifest.version || "—"} · ${ent.bytes != null ? `${ent.bytes} bytes` : ""} · ${ent.sha256 || ""}`;
+        } else {
+          exerciseImagesManifestLine.hidden = true;
+          exerciseImagesManifestLine.textContent = "";
+        }
+      }
+    } catch (_) {
+      if (exerciseImagesManifestLine) {
+        exerciseImagesManifestLine.hidden = false;
+        exerciseImagesManifestLine.textContent = "Manifest: (could not load)";
+      }
+    }
+
+    const url = site()?.activityImageUrl?.(id);
+    if (exerciseImagesCurrentPreview && url) {
+      const runAttach = () => {
+        if (typeof window.attachExerciseImageZoomPan === "function" && exerciseImagesCurrentZoom) {
+          detachCurrentZoom = window.attachExerciseImageZoomPan(exerciseImagesCurrentZoom);
+        }
+      };
+      exerciseImagesCurrentPreview.onload = () => runAttach();
+      exerciseImagesCurrentPreview.src = `${url}${url.includes("?") ? "&" : "?"}_=${Date.now()}`;
+      exerciseImagesCurrentPreview.hidden = false;
+      if (exerciseImagesCurrentZoom) exerciseImagesCurrentZoom.hidden = false;
+      if (exerciseImagesCurrentPlaceholder) exerciseImagesCurrentPlaceholder.hidden = true;
+      if (exerciseImagesCurrentPreview.complete) {
+        runAttach();
+      }
+    } else if (exerciseImagesCurrentPreview) {
+      exerciseImagesCurrentPreview.removeAttribute("src");
+      exerciseImagesCurrentPreview.hidden = true;
+      if (exerciseImagesCurrentZoom) exerciseImagesCurrentZoom.hidden = true;
+      if (exerciseImagesCurrentPlaceholder) {
+        exerciseImagesCurrentPlaceholder.hidden = false;
+      }
+    }
+
+    if (exerciseImagesNewPreview) {
+      exerciseImagesNewPreview.removeAttribute("src");
+      exerciseImagesNewPreview.hidden = true;
+    }
+    if (exerciseImagesNewZoom) exerciseImagesNewZoom.hidden = true;
+    if (exerciseImagesNewPlaceholder) exerciseImagesNewPlaceholder.hidden = false;
+
+    renderExerciseImagesList();
+    if (exerciseImagesStatus) exerciseImagesStatus.textContent = "";
+  }
+
+  function onExerciseImageFile(file) {
+    setExerciseImagesError("");
+    exerciseImagesPendingBlob = null;
+    if (exerciseImagesSave) exerciseImagesSave.disabled = true;
+    detachZoomHandlers();
+    if (!file) {
+      if (exerciseImagesNewPreview) {
+        exerciseImagesNewPreview.removeAttribute("src");
+        exerciseImagesNewPreview.hidden = true;
+      }
+      if (exerciseImagesNewZoom) exerciseImagesNewZoom.hidden = true;
+      if (exerciseImagesNewPlaceholder) exerciseImagesNewPlaceholder.hidden = false;
+      return;
+    }
+    const okType =
+      file.type === "image/png" || file.type === "image/jpeg" || file.type === "image/webp";
+    if (!okType) {
+      setExerciseImagesError("Choose a PNG, JPEG, or WebP image.");
+      return;
+    }
+    const objUrl = URL.createObjectURL(file);
+    if (exerciseImagesNewPreview) {
+      exerciseImagesNewPreview.onload = () => {
+        try {
+          URL.revokeObjectURL(objUrl);
+        } catch (_) {
+          /* ignore */
+        }
+        if (typeof window.attachExerciseImageZoomPan === "function") {
+          detachNewZoom = window.attachExerciseImageZoomPan(exerciseImagesNewZoom);
+        }
+      };
+      exerciseImagesNewPreview.src = objUrl;
+      exerciseImagesNewPreview.hidden = false;
+    }
+    if (exerciseImagesNewZoom) exerciseImagesNewZoom.hidden = false;
+    if (exerciseImagesNewPlaceholder) exerciseImagesNewPlaceholder.hidden = true;
+    exerciseImagesPendingBlob = file;
+    if (exerciseImagesSave) exerciseImagesSave.disabled = false;
+  }
+
+  async function sha256HexPrefix16(bytes) {
+    const buf = await crypto.subtle.digest("SHA-256", bytes);
+    const hex = Array.from(new Uint8Array(buf))
+      .map((b) => b.toString(16).padStart(2, "0"))
+      .join("");
+    return hex.slice(0, 16);
+  }
+
+  /**
+   * Encode image file to WebP via canvas (quality ~0.95). Returns Uint8Array.
+   */
+  async function fileToWebpBytes(file) {
+    const bitmap = await createImageBitmap(file);
+    const canvas = document.createElement("canvas");
+    canvas.width = bitmap.width;
+    canvas.height = bitmap.height;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) throw new Error("Canvas not supported");
+    ctx.drawImage(bitmap, 0, 0);
+    const blob = await new Promise((resolve) =>
+      canvas.toBlob((b) => resolve(b), "image/webp", 0.95),
+    );
+    if (!blob) {
+      throw new Error("WebP encode failed — try another browser or use PNG/JPEG");
+    }
+    return new Uint8Array(await blob.arrayBuffer());
+  }
+
+  function updateManifestImages(manifest, id, relFile, byteLen, sha16) {
+    const imgs = Array.isArray(manifest.images) ? [...manifest.images] : [];
+    const idx = imgs.findIndex((e) => e && e.id === id);
+    const nextEntry = {
+      id,
+      file: relFile,
+      bytes: byteLen,
+      sha256: sha16,
+    };
+    if (idx >= 0) imgs[idx] = nextEntry;
+    else imgs.push(nextEntry);
+    manifest.images = imgs;
+    let total = 0;
+    for (const im of imgs) {
+      if (im && typeof im.bytes === "number") total += im.bytes;
+    }
+    manifest.totalBytes = total;
+    manifest.version = Number(manifest.version || 0) + 1;
+    manifest.updatedAtMs = Date.now();
+    if (!manifest.baseUrl) manifest.baseUrl = RAW_BASE;
+    return manifest;
+  }
+
+  async function saveExerciseImageToGithub() {
+    if (!isAuthed()) {
+      showModal(loginDialog);
+      return;
+    }
+    const id = exerciseImagesSelectedId;
+    if (!id || !exerciseImagesPendingBlob) {
+      setExerciseImagesError("Choose a replacement image first.");
+      return;
+    }
+    setExerciseImagesError("");
+    showBusy("Encoding and uploading image…");
+    try {
+      const webpBytes = await fileToWebpBytes(exerciseImagesPendingBlob);
+      const b64 = encodeBytes(webpBytes);
+      const sha16 = await sha256HexPrefix16(webpBytes);
+      const path = `exercise_guides/${id}.webp`;
+      const relFile = path;
+
+      const man1File = await ghGetContent("exercise_guides/manifest.json");
+      const man2File = await ghGetContent("exercise_guides_manifest.json");
+      if (!man1File?.sha || !man2File?.sha) {
+        throw new Error("Could not load manifest SHAs from GitHub");
+      }
+      const man1Text = await readGhFileText(man1File, "exercise_guides/manifest.json");
+      const man2Text = await readGhFileText(man2File, "exercise_guides_manifest.json");
+      const manifest1 = JSON.parse(man1Text);
+      const manifest2 = JSON.parse(man2Text);
+
+      updateManifestImages(manifest1, id, relFile, webpBytes.length, sha16);
+      updateManifestImages(manifest2, id, `exercise_guides/${id}.webp`, webpBytes.length, sha16);
+
+      await commitFilesAtomic(`Exercise guide image: ${id}`, [
+        {
+          path,
+          content: b64,
+          encoding: "base64",
+        },
+        {
+          path: "exercise_guides/manifest.json",
+          content: `${JSON.stringify(manifest1, null, 4)}\n`,
+          encoding: "utf-8",
+        },
+        {
+          path: "exercise_guides_manifest.json",
+          content: `${JSON.stringify(manifest2, null, 2)}\n`,
+          encoding: "utf-8",
+        },
+      ]);
+
+      exerciseImagesManifestCache = manifest2;
+      if (exerciseImagesStatus) {
+        exerciseImagesStatus.textContent = `Saved ${id}.webp — manifests v${manifest2.version}`;
+      }
+      toast(`Saved ${id}.webp`);
+      exerciseImagesPendingBlob = null;
+      if (exerciseImagesFile) exerciseImagesFile.value = "";
+      if (exerciseImagesSave) exerciseImagesSave.disabled = true;
+      await selectExerciseForImages(id);
+    } catch (err) {
+      const msg = err?.message || String(err);
+      setExerciseImagesError(msg);
+      toast(msg);
+    } finally {
+      hideBusy();
+    }
   }
 
   function slugify(name) {
@@ -2294,6 +2682,43 @@
 
   window.addEventListener("tabata-admin-edit", (e) => editDrill(e.detail?.entry));
   window.addEventListener("tabata-admin-delete", (e) => deleteDrill(e.detail?.entry));
+
+  if (adminTabPlans) {
+    adminTabPlans.addEventListener("click", () => {
+      saveAdminPanel("plans");
+      applyAdminPanelVisibility();
+    });
+  }
+  if (adminTabExerciseImages) {
+    adminTabExerciseImages.addEventListener("click", () => {
+      saveAdminPanel("exercise-images");
+      applyAdminPanelVisibility();
+    });
+  }
+  if (exerciseImagesSearch) {
+    exerciseImagesSearch.addEventListener("input", () => {
+      renderExerciseImagesList();
+    });
+  }
+  if (exerciseImagesPick && exerciseImagesFile) {
+    exerciseImagesPick.addEventListener("click", () => exerciseImagesFile.click());
+    exerciseImagesFile.addEventListener("change", () => {
+      const file = exerciseImagesFile.files?.[0];
+      onExerciseImageFile(file || null);
+    });
+  }
+  if (exerciseImagesClear) {
+    exerciseImagesClear.addEventListener("click", () => {
+      if (exerciseImagesFile) exerciseImagesFile.value = "";
+      onExerciseImageFile(null);
+      if (exerciseImagesSave) exerciseImagesSave.disabled = true;
+    });
+  }
+  if (exerciseImagesSave) {
+    exerciseImagesSave.addEventListener("click", () => {
+      saveExerciseImageToGithub();
+    });
+  }
 
   updateAuthUi();
 })();

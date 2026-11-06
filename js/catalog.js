@@ -29,6 +29,7 @@
   let guidesCopy = {};
   let activityCatalog = [];
   let guidesAssetVersion = "";
+  let exerciseImageZoomDetach = null;
 
   function isAdminAuthed() {
     return document.body.classList.contains("admin-authed");
@@ -393,9 +394,25 @@
 
   function openExerciseDetail(activityId) {
     if (!activityId) return;
+    if (typeof exerciseImageZoomDetach === "function") {
+      try {
+        exerciseImageZoomDetach();
+      } catch (_) {
+        /* ignore */
+      }
+    }
+    exerciseImageZoomDetach = null;
     const guide = guidesCopy[activityId] || {};
     const title = guide.title || activityLabel(activityId);
     const img = activityImageUrl(activityId);
+    const actRow = activityCatalog.find((a) => a && a.id === activityId);
+    const equipment = actRow?.equipment;
+    let equipmentBlock = "";
+    if (Array.isArray(equipment) && equipment.length) {
+      equipmentBlock = `<section class="exercise-section exercise-equipment"><h3>Equipment</h3><p>${escapeHtml(
+        equipment.join(", "),
+      )}</p></section>`;
+    }
     if (exerciseTitle) exerciseTitle.textContent = title;
     const sections = [
       ["Setup", guide.setup],
@@ -411,17 +428,31 @@
       )
       .join("");
     if (exerciseBody) {
+      const zoomBlock = img
+        ? `<div class="exercise-image-viewport zoom-viewport" id="exercise-detail-zoom" aria-label="Exercise image" tabindex="0">
+            <div class="zoom-viewport-toolbar" role="toolbar" aria-label="Zoom">
+              <button type="button" class="zoom-tool" data-zoom-out title="Zoom out" aria-label="Zoom out">−</button>
+              <button type="button" class="zoom-tool" data-zoom-reset title="Reset" aria-label="Reset zoom">1:1</button>
+              <button type="button" class="zoom-tool" data-zoom-in title="Zoom in" aria-label="Zoom in">+</button>
+            </div>
+            <div class="zoom-viewport-inner">
+              <img class="exercise-image zoom-viewport-img" src="${escapeAttr(img)}" alt="${escapeAttr(title)}" />
+            </div>
+          </div>
+          <p class="zoom-hint muted">Wheel to zoom · drag to pan</p>`
+        : "";
       exerciseBody.innerHTML = `
-        ${
-          img
-            ? `<img class="exercise-image" src="${escapeAttr(img)}" alt="${escapeAttr(title)}" />`
-            : ""
-        }
+        ${zoomBlock}
+        ${equipmentBlock}
         ${
           sections ||
           `<p class="muted">No how-to copy for this exercise yet. Image${img ? "" : " also missing"}.</p>`
         }
       `;
+      if (img && typeof window.attachExerciseImageZoomPan === "function") {
+        const vp = document.getElementById("exercise-detail-zoom");
+        exerciseImageZoomDetach = window.attachExerciseImageZoomPan(vp);
+      }
     }
     showModal(exerciseDialog);
   }
@@ -467,6 +498,14 @@
   }
 
   function closeExercise() {
+    if (typeof exerciseImageZoomDetach === "function") {
+      try {
+        exerciseImageZoomDetach();
+      } catch (_) {
+        /* ignore */
+      }
+    }
+    exerciseImageZoomDetach = null;
     hideModal(exerciseDialog);
   }
 
