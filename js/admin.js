@@ -31,6 +31,7 @@
   const editCoverPreview = document.getElementById("edit-cover-preview");
   const editCoverPlaceholder = document.getElementById("edit-cover-placeholder");
   const editCoverUpload = document.getElementById("edit-cover-upload");
+  const editCoverCopyCurrent = document.getElementById("edit-cover-copy-current");
   const editCoverClear = document.getElementById("edit-cover-clear");
   const editCoverFile = document.getElementById("edit-cover-file");
   const cropDialog = document.getElementById("crop-dialog");
@@ -63,9 +64,12 @@
   const editCoverPillPreview = document.getElementById("edit-cover-pill-preview");
   const editCoverPillPlaceholder = document.getElementById("edit-cover-pill-placeholder");
   const editCoverPillUpload = document.getElementById("edit-cover-pill-upload");
+  const editCoverPillCopyCurrent = document.getElementById("edit-cover-pill-copy-current");
   const editCoverPillClear = document.getElementById("edit-cover-pill-clear");
   const editCoverPillSync = document.getElementById("edit-cover-pill-sync");
   const editCoverPillFile = document.getElementById("edit-cover-pill-file");
+  const editCoverPillAlign = document.getElementById("edit-cover-pill-align");
+  const coverPreviewWrapPill = document.querySelector(".cover-preview-wrap--pill");
   const exerciseImagesStatus = document.getElementById("exercise-images-status");
   const exerciseImagesSearch = document.getElementById("exercise-images-search");
   const exerciseImagesCategories = document.getElementById("exercise-images-categories");
@@ -1091,6 +1095,7 @@
       `<div class="plan-foot">
         <button type="button" data-act="add-set">Add set</button>
       </div>`;
+    updateCoverCopyCurrentButtons();
   }
 
   function scrollFormChildIntoView(el) {
@@ -1427,6 +1432,13 @@
     }
     resetCoverUi(entry?.coverImage || "");
     resetPillCoverUi(entry?.coverImagePill || "");
+    const pillAlignInit =
+      entry?.coverImagePillAlign ??
+      template?.coverImagePillAlign ??
+      0;
+    setPillAlignSliderFromAlign(
+      Number.isFinite(Number(pillAlignInit)) ? Number(pillAlignInit) : 0,
+    );
     plan = normalizePlan(template?.structuredPlan || classicStarterPlan());
     resetCollapseState({ expandFirst: true });
     fillCategorySuggestions();
@@ -1479,6 +1491,10 @@
             (activityIds[0] ? `exercise_guides/${activityIds[0]}.webp` : ""),
           file: `drills/${preferredId}.json`,
           activityIds,
+          coverImagePillAlign:
+            catalogMeta?.coverImagePillAlign != null
+              ? Number(catalogMeta.coverImagePillAlign)
+              : undefined,
         }
       : null;
 
@@ -1503,6 +1519,12 @@
     if (editCoverPill && catalogMeta?.coverImagePill) {
       editCoverPill.value = catalogMeta.coverImagePill;
       resetPillCoverUi(catalogMeta.coverImagePill);
+    }
+    if (
+      catalogMeta?.coverImagePillAlign != null &&
+      Number.isFinite(Number(catalogMeta.coverImagePillAlign))
+    ) {
+      setPillAlignSliderFromAlign(Number(catalogMeta.coverImagePillAlign));
     }
     if (catalogMeta?.category) {
       categoryManual = true;
@@ -1540,7 +1562,17 @@
         category: data.category || "",
         coverImage: data.coverImage || "",
         coverImagePill: data.coverImagePill || "",
+        coverImagePillAlign:
+          data.coverImagePillAlign != null && data.coverImagePillAlign !== ""
+            ? Number(data.coverImagePillAlign)
+            : undefined,
       };
+      if (
+        catalogMeta.coverImagePillAlign != null &&
+        !Number.isFinite(catalogMeta.coverImagePillAlign)
+      ) {
+        catalogMeta.coverImagePillAlign = undefined;
+      }
     } else if (data.template && typeof data.template === "object") {
       template = data.template;
     }
@@ -1604,6 +1636,7 @@
       (editCover?.value || "").trim() ||
       (activityIds[0] ? `exercise_guides/${activityIds[0]}.webp` : "exercise_guides/burpees.webp");
     const pillCover = (editCoverPill?.value || "").trim();
+    const pillAlign = alignFromPillAlignSlider();
     const name = (editName?.value || "").trim() || "Untitled plan";
     const now = Date.now();
     const description = (editDescription?.value || "").trim();
@@ -1636,6 +1669,7 @@
     };
     if (description) template.description = description;
     if (pillCover) template.coverImagePill = pillCover;
+    template.coverImagePillAlign = pillAlign;
     if (editingEntry && template.createdAtMs === undefined) {
       // keep createdAtMs from existing file when available via fetch later
     }
@@ -1650,6 +1684,7 @@
       activityIds,
     };
     if (pillCover) catalogEntry.coverImagePill = pillCover;
+    catalogEntry.coverImagePillAlign = pillAlign;
     return { template, catalogEntry };
   }
 
@@ -2262,6 +2297,41 @@
       }
       if (editCoverPillPlaceholder) editCoverPillPlaceholder.hidden = false;
     }
+    applyPillAlignToPreview();
+  }
+
+  /** Slider 0–100 → horizontal object-position % for admin preview (matches BoxFit.cover). */
+  function pillAlignPercentFromAlign(align) {
+    const a = Number(align);
+    if (!Number.isFinite(a)) return 50;
+    return Math.round(((Math.min(1, Math.max(-1, a)) + 1) / 2) * 100);
+  }
+
+  function alignFromPillAlignSlider() {
+    const v = editCoverPillAlign ? Number(editCoverPillAlign.value) : 50;
+    if (!Number.isFinite(v)) return 0;
+    const pct = Math.min(100, Math.max(0, v));
+    return (pct / 50) - 1;
+  }
+
+  function applyPillAlignToPreview() {
+    if (!coverPreviewWrapPill) return;
+    const pct = editCoverPillAlign ? Number(editCoverPillAlign.value) : 50;
+    const safe = Number.isFinite(pct) ? Math.min(100, Math.max(0, pct)) : 50;
+    coverPreviewWrapPill.style.setProperty("--pill-preview-pos", `${safe}% 50%`);
+    if (editCoverPillAlign) {
+      try {
+        editCoverPillAlign.setAttribute("aria-valuenow", String(Math.round(safe)));
+      } catch (_) {
+        /* ignore */
+      }
+    }
+  }
+
+  function setPillAlignSliderFromAlign(align) {
+    const pct = pillAlignPercentFromAlign(align);
+    if (editCoverPillAlign) editCoverPillAlign.value = String(pct);
+    applyPillAlignToPreview();
   }
 
   function clearPendingCover() {
@@ -2279,11 +2349,13 @@
     if (editCover) editCover.value = path || "";
     if (!path) {
       setCoverPreview("");
+      updateCoverCopyCurrentButtons();
       return;
     }
     const local = editingEntry?.id ? site()?.getLocalCover?.(editingEntry.id) : "";
     if (local) {
       setCoverPreview(local);
+      updateCoverCopyCurrentButtons();
       return;
     }
     try {
@@ -2296,18 +2368,22 @@
     } catch (_) {
       setCoverPreview("");
     }
+    updateCoverCopyCurrentButtons();
   }
 
   function resetPillCoverUi(path = "") {
     clearPendingPillCover();
     if (editCoverPill) editCoverPill.value = path || "";
     if (!path) {
+      setPillAlignSliderFromAlign(0);
       setCoverPillPreview("");
+      updateCoverCopyCurrentButtons();
       return;
     }
     const local = editingEntry?.id ? site()?.getLocalPillCover?.(editingEntry.id) : "";
     if (local) {
       setCoverPillPreview(local);
+      updateCoverCopyCurrentButtons();
       return;
     }
     try {
@@ -2320,6 +2396,7 @@
     } catch (_) {
       setCoverPillPreview("");
     }
+    updateCoverCopyCurrentButtons();
   }
 
   /**
@@ -2342,6 +2419,111 @@
     const aid = firstActivityIdFromPlan();
     if (aid) return `exercise_guides/${aid}.webp`;
     return "";
+  }
+
+  /** Pill path when set; otherwise the same image the app uses (hero / implicit guide). */
+  function effectivePillCoverPath() {
+    const trimmed = (editCoverPill?.value || "").trim();
+    if (trimmed) return trimmed;
+    return effectiveHeroCoverPath();
+  }
+
+  function rawAssetUrlFromPath(path) {
+    const p = String(path || "").trim();
+    if (!p) return "";
+    try {
+      return new URL(p, RAW_BASE).toString();
+    } catch (_) {
+      return "";
+    }
+  }
+
+  function updateCoverCopyCurrentButtons() {
+    const heroPath = effectiveHeroCoverPath();
+    const heroHasPending = Boolean(pendingCoverBlob && pendingCoverBlob.size > 0);
+    if (editCoverCopyCurrent) {
+      editCoverCopyCurrent.disabled = !(heroPath || heroHasPending);
+    }
+    const pillPath = effectivePillCoverPath();
+    const pillHasPending = Boolean(pendingPillCoverBlob && pendingPillCoverBlob.size > 0);
+    if (editCoverPillCopyCurrent) {
+      editCoverPillCopyCurrent.disabled = !(pillPath || pillHasPending);
+    }
+  }
+
+  async function copyCurrentPlanCoverForEdit(which) {
+    const isPill = which === "pill";
+    if (isPill) {
+      if (pendingPillCoverBlob && pendingPillCoverBlob.size > 0) {
+        const f = new File([pendingPillCoverBlob], "current_pill.webp", {
+          type: pendingPillCoverBlob.type || "image/webp",
+        });
+        planCoverCropTarget = "pill";
+        openCropDialog(f, "planCover");
+        return;
+      }
+    } else if (pendingCoverBlob && pendingCoverBlob.size > 0) {
+      const f = new File([pendingCoverBlob], "current_hero.webp", {
+        type: pendingCoverBlob.type || "image/webp",
+      });
+      planCoverCropTarget = "hero";
+      openCropDialog(f, "planCover");
+      return;
+    }
+
+    const path = isPill ? effectivePillCoverPath() : effectiveHeroCoverPath();
+    if (!path) {
+      toast(
+        isPill
+          ? "No Ready pill or hero image to copy yet."
+          : "No hero cover yet — add an exercise or upload a cover.",
+      );
+      return;
+    }
+    const id = editingEntry?.id?.trim();
+    let url = "";
+    if (id) {
+      if (isPill) {
+        const pillExplicit = (editCoverPill?.value || "").trim();
+        if (pillExplicit) {
+          url = site()?.getLocalPillCover?.(id) || "";
+        } else {
+          url = site()?.getLocalCover?.(id) || "";
+        }
+      } else {
+        url = site()?.getLocalCover?.(id) || "";
+      }
+    }
+    if (!url) {
+      url = rawAssetUrlFromPath(path);
+    }
+    if (!url) {
+      toast("Could not resolve image URL");
+      return;
+    }
+
+    setEditorError("");
+    showBusy("Loading current cover…");
+    try {
+      const res = await fetch(url, { cache: "no-store" });
+      if (!res.ok) throw new Error(`Could not load image (${res.status})`);
+      const blob = await res.blob();
+      if (!blob || blob.size === 0) throw new Error("Image is empty.");
+      const type = blob.type || "image/webp";
+      const safeBase = String(path)
+        .replace(/^.*\//, "")
+        .replace(/\.[^.]+$/, "")
+        .slice(0, 40) || "cover";
+      const file = new File([blob], `current_${safeBase}.webp`, { type });
+      planCoverCropTarget = isPill ? "pill" : "hero";
+      openCropDialog(file, "planCover");
+    } catch (e) {
+      const msg = e?.message || String(e);
+      setEditorError(msg);
+      toast(msg);
+    } finally {
+      hideBusy();
+    }
   }
 
   function destroyCropper() {
@@ -2496,6 +2678,7 @@
       if (editCover) editCover.value = "";
       setCoverPreview(pendingCoverUrl);
     }
+    updateCoverCopyCurrentButtons();
   }
 
   async function deleteCoverPathBestEffort(path) {
@@ -3049,6 +3232,11 @@
   if (editCoverClear) {
     editCoverClear.addEventListener("click", () => resetCoverUi(""));
   }
+  if (editCoverCopyCurrent) {
+    editCoverCopyCurrent.addEventListener("click", () =>
+      copyCurrentPlanCoverForEdit("hero"),
+    );
+  }
   if (editCoverPillUpload && editCoverPillFile) {
     editCoverPillUpload.addEventListener("click", () => editCoverPillFile.click());
     editCoverPillFile.addEventListener("change", () => {
@@ -3066,6 +3254,15 @@
   if (editCoverPillClear) {
     editCoverPillClear.addEventListener("click", () => resetPillCoverUi(""));
   }
+  if (editCoverPillCopyCurrent) {
+    editCoverPillCopyCurrent.addEventListener("click", () =>
+      copyCurrentPlanCoverForEdit("pill"),
+    );
+  }
+  if (editCoverPillAlign) {
+    applyPillAlignToPreview();
+    editCoverPillAlign.addEventListener("input", () => applyPillAlignToPreview());
+  }
   if (editCoverPillSync) {
     editCoverPillSync.addEventListener("click", () => {
       const heroPath = effectiveHeroCoverPath();
@@ -3073,6 +3270,7 @@
         clearPendingPillCover();
         if (editCoverPill) editCoverPill.value = heroPath;
         resetPillCoverUi(heroPath);
+        setPillAlignSliderFromAlign(0);
         return;
       }
       if (pendingCoverBlob && pendingCoverBlob.size > 0) {
@@ -3086,6 +3284,7 @@
         if (editCoverPill) editCoverPill.value = "";
         setCoverPillPreview(pendingPillCoverUrl);
         toast("Ready pill will match the cropped hero when you save.");
+        setPillAlignSliderFromAlign(0);
         return;
       }
       toast(
