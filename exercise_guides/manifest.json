@@ -1,8 +1,8 @@
 {
-    "version": 65,
-    "updatedAtMs": 1794005288093,
+    "version": 66,
+    "updatedAtMs": 1794005554730,
     "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-    "totalBytes": 28132900,
+    "totalBytes": 28252086,
     "images": [
         {
             "id": "abs",
@@ -307,8 +307,8 @@
         {
             "id": "gluteKickbacks",
             "file": "exercise_guides/gluteKickbacks.webp",
-            "bytes": 9280,
-            "sha256": "d91e359856988834"
+            "bytes": 128466,
+            "sha256": "3b3318c04caec4b6"
         },
         {
             "id": "hackSquat",
