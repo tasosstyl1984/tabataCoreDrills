@@ -701,14 +701,13 @@ body.site-tab-exercises #import-help {
   color: var(--muted);
 }
 
+/* Intrinsic aspect — same as catalog card covers. Avoids grey letterboxing when
+   the hero is 3:2 exercise art (fallback) or any non-8:5 asset inside an 8:5 box. */
 .preview-cover {
   display: block;
   width: 100%;
-  aspect-ratio: 8 / 5;
-  max-height: 220px;
-  object-fit: contain;
-  object-position: center;
-  background: var(--chip);
+  height: auto;
+  background: transparent;
   border: 1px solid var(--border);
   border-radius: 12px;
   margin-bottom: 1rem;
