@@ -67,9 +67,10 @@
   const exerciseImagesSearch = document.getElementById("exercise-images-search");
   const exerciseImagesCategories = document.getElementById("exercise-images-categories");
   const exerciseImagesGrid = document.getElementById("exercise-images-grid");
-  const exerciseImagesEmpty = document.getElementById("exercise-images-empty");
-  const exerciseImagesEditor = document.getElementById("exercise-images-editor");
-  const exerciseImagesSelectedTitle = document.getElementById("exercise-images-selected-title");
+  const exerciseImagesEditorDialog = document.getElementById("exercise-images-editor-dialog");
+  const exerciseImagesEditorTitle = document.getElementById("exercise-images-editor-title");
+  const exerciseImagesEditorClose = document.getElementById("exercise-images-editor-close");
+  const exerciseImagesEditorCancel = document.getElementById("exercise-images-editor-cancel");
   const exerciseImagesIdCode = document.getElementById("exercise-images-selected-id");
   const exerciseImagesManifestLine = document.getElementById("exercise-images-manifest-line");
   const exerciseImagesCurrentPreview = document.getElementById("exercise-images-current-preview");
@@ -389,7 +390,7 @@
       return;
     }
     if (exerciseImagesStatus) {
-      exerciseImagesStatus.textContent = `${filtered.length} guide${filtered.length === 1 ? "" : "s"} — click a card to edit`;
+      exerciseImagesStatus.textContent = `${filtered.length} guide${filtered.length === 1 ? "" : "s"} — click a card to open the editor`;
     }
     const esc = (s) => site()?.escapeHtml?.(String(s)) ?? String(s);
     const escAttr = (s) => site()?.escapeAttr?.(String(s)) ?? String(s);
@@ -435,6 +436,10 @@
     renderExerciseImagesGrid();
   }
 
+  function closeExerciseImagesEditor() {
+    hideModal(exerciseImagesEditorDialog);
+  }
+
   async function selectExerciseForImages(id) {
     exerciseImagesSelectedId = id;
     setExerciseImagesError("");
@@ -449,10 +454,8 @@
     }
     refreshExerciseSaveButton();
     detachZoomHandlers();
-    if (exerciseImagesEmpty) exerciseImagesEmpty.hidden = true;
-    if (exerciseImagesEditor) exerciseImagesEditor.hidden = false;
     const title = site()?.activityLabel?.(id) || id;
-    if (exerciseImagesSelectedTitle) exerciseImagesSelectedTitle.textContent = title;
+    if (exerciseImagesEditorTitle) exerciseImagesEditorTitle.textContent = title;
     if (exerciseImagesIdCode) exerciseImagesIdCode.textContent = id;
 
     try {
@@ -507,6 +510,7 @@
 
     renderExerciseImagesGrid();
     if (exerciseImagesStatus) exerciseImagesStatus.textContent = "";
+    showModal(exerciseImagesEditorDialog);
   }
 
   function onExerciseImageFile(file) {
@@ -2965,6 +2969,21 @@
   if (exerciseImagesSave) {
     exerciseImagesSave.addEventListener("click", () => {
       saveExerciseImageToGithub();
+    });
+  }
+  if (exerciseImagesEditorClose) {
+    exerciseImagesEditorClose.addEventListener("click", () => closeExerciseImagesEditor());
+  }
+  if (exerciseImagesEditorCancel) {
+    exerciseImagesEditorCancel.addEventListener("click", () => closeExerciseImagesEditor());
+  }
+  if (exerciseImagesEditorDialog) {
+    exerciseImagesEditorDialog.addEventListener("click", (e) => {
+      if (e.target === exerciseImagesEditorDialog) closeExerciseImagesEditor();
+    });
+    exerciseImagesEditorDialog.addEventListener("cancel", (e) => {
+      e.preventDefault();
+      closeExerciseImagesEditor();
     });
   }
 
