@@ -65,7 +65,8 @@
   const adminBarPlans = document.getElementById("admin-bar-plans");
   const exerciseImagesStatus = document.getElementById("exercise-images-status");
   const exerciseImagesSearch = document.getElementById("exercise-images-search");
-  const exerciseImagesList = document.getElementById("exercise-images-list");
+  const exerciseImagesCategories = document.getElementById("exercise-images-categories");
+  const exerciseImagesGrid = document.getElementById("exercise-images-grid");
   const exerciseImagesEmpty = document.getElementById("exercise-images-empty");
   const exerciseImagesEditor = document.getElementById("exercise-images-editor");
   const exerciseImagesSelectedTitle = document.getElementById("exercise-images-selected-title");
@@ -89,6 +90,8 @@
 
   const ADMIN_PANEL_KEY = "tabataDrillsAdminPanel";
   let exerciseImagesManifestCache = null;
+  /** @type {string} Exercise group chip: "all" or catalog group name */
+  let exerciseImagesActiveCategory = "all";
   let exerciseImagesSelectedId = "";
   let exerciseImagesPendingBlob = null;
   let exerciseImagesPendingPreviewUrl = null;
@@ -270,7 +273,7 @@
     }
     if (useExercise) {
       ensureExerciseImagesManifest().catch(() => {});
-      renderExerciseImagesList();
+      renderExerciseImagesBrowser();
     }
   }
 
@@ -319,44 +322,117 @@
     return imgs.find((e) => e && e.id === id) || null;
   }
 
-  function renderExerciseImagesList() {
-    if (!exerciseImagesList || !isAuthed()) return;
-    const q = (exerciseImagesSearch?.value || "").trim().toLowerCase();
+  function exerciseImagesActivitiesWithGuides() {
     const activities = site()?.activityCatalog() || [];
     const imageIds = site()?.imageIds;
-    const filtered = activities
+    return activities
       .filter((a) => a && a.id)
-      .filter((a) => !imageIds || imageIds.has(a.id))
-      .filter((a) => {
-        if (!q) return true;
-        const label = String(a.label || "").toLowerCase();
-        return label.includes(q) || String(a.id).toLowerCase().includes(q);
-      })
-      .sort((a, b) => String(a.label || a.id).localeCompare(String(b.label || b.id)));
-    exerciseImagesList.innerHTML = "";
-    for (const a of filtered) {
+      .filter((a) => !imageIds || imageIds.has(a.id));
+  }
+
+  function renderExerciseImagesCategoryChips() {
+    if (!exerciseImagesCategories || !isAuthed()) return;
+    const acts = exerciseImagesActivitiesWithGuides();
+    const groups = new Set();
+    for (const a of acts) {
+      groups.add((a.group && String(a.group).trim()) || "Other");
+    }
+    const cats = ["all", ...Array.from(groups).sort((x, y) => x.localeCompare(y))];
+    if (!cats.includes(exerciseImagesActiveCategory)) {
+      exerciseImagesActiveCategory = "all";
+    }
+    exerciseImagesCategories.innerHTML = "";
+    for (const cat of cats) {
       const btn = document.createElement("button");
       btn.type = "button";
-      btn.className = "exercise-images-list-item";
-      btn.setAttribute("role", "option");
-      btn.dataset.activityId = a.id;
-      btn.innerHTML = `<span class="exercise-images-list-label">${site().escapeHtml(
-        a.label || a.id,
-      )}</span><code class="exercise-images-list-id">${site().escapeHtml(a.id)}</code>`;
-      if (a.id === exerciseImagesSelectedId) {
-        btn.classList.add("is-selected");
-        btn.setAttribute("aria-selected", "true");
-      } else {
-        btn.setAttribute("aria-selected", "false");
-      }
+      btn.className = "chip";
+      btn.textContent = cat === "all" ? "All" : cat;
+      btn.setAttribute("aria-pressed", cat === exerciseImagesActiveCategory ? "true" : "false");
       btn.addEventListener("click", () => {
-        selectExerciseForImages(a.id);
+        exerciseImagesActiveCategory = cat;
+        renderExerciseImagesCategoryChips();
+        renderExerciseImagesGrid();
       });
-      exerciseImagesList.appendChild(btn);
+      exerciseImagesCategories.appendChild(btn);
     }
+  }
+
+  function renderExerciseImagesGrid() {
+    if (!exerciseImagesGrid || !isAuthed()) return;
+    const q = (exerciseImagesSearch?.value || "").trim().toLowerCase();
+    const catalog = site()?.activityCatalog();
+    if (!catalog || catalog.length === 0) {
+      exerciseImagesGrid.innerHTML = `<p class="muted exercise-images-grid-empty">Loading exercise catalog…</p>`;
+      return;
+    }
+    const acts = exerciseImagesActivitiesWithGuides();
+    const filtered = acts
+      .filter((a) => {
+        if (exerciseImagesActiveCategory !== "all") {
+          const g = (a.group && String(a.group).trim()) || "Other";
+          if (g !== exerciseImagesActiveCategory) return false;
+        }
+        if (!q) return true;
+        const label = String(a.label || "").toLowerCase();
+        const id = String(a.id).toLowerCase();
+        return label.includes(q) || id.includes(q);
+      })
+      .sort((a, b) => String(a.label || a.id).localeCompare(String(b.label || b.id)));
+    exerciseImagesGrid.innerHTML = "";
     if (!filtered.length) {
-      exerciseImagesList.innerHTML = `<p class="muted exercise-images-list-empty">No exercises match.</p>`;
+      exerciseImagesGrid.innerHTML = `<p class="muted exercise-images-grid-empty">No exercises match.</p>`;
+      if (exerciseImagesStatus) {
+        exerciseImagesStatus.textContent = acts.length
+          ? "No exercises match your filters."
+          : "No exercises with guide images in the manifest yet.";
+      }
+      return;
     }
+    if (exerciseImagesStatus) {
+      exerciseImagesStatus.textContent = `${filtered.length} guide${filtered.length === 1 ? "" : "s"} — click a card to edit`;
+    }
+    const esc = (s) => site()?.escapeHtml?.(String(s)) ?? String(s);
+    const escAttr = (s) => site()?.escapeAttr?.(String(s)) ?? String(s);
+    for (const a of filtered) {
+      const card = document.createElement("article");
+      card.className = "card card-clickable exercise-images-card";
+      if (a.id === exerciseImagesSelectedId) card.classList.add("is-selected");
+      card.tabIndex = 0;
+      card.setAttribute("role", "listitem");
+      card.dataset.activityId = a.id;
+      card.setAttribute("aria-label", `${a.label || a.id}`);
+      const thumb = site()?.activityImageUrl?.(a.id) || "";
+      const coverHtml = thumb
+        ? `<img class="card-cover exercise-images-card-cover" src="${escAttr(thumb)}" alt="" loading="lazy" />`
+        : `<div class="card-cover exercise-images-card-cover exercise-images-card-cover--empty" aria-hidden="true"></div>`;
+      const group = (a.group && String(a.group).trim()) || "Exercise";
+      card.innerHTML = `
+        ${coverHtml}
+        <span class="badge">${esc(group)}</span>
+        <h3>${esc(a.label || a.id)}</h3>
+        <p class="exercise-images-card-id"><code>${esc(a.id)}</code></p>
+      `;
+      const open = (e) => {
+        if (e) {
+          e.preventDefault();
+          e.stopPropagation();
+        }
+        selectExerciseForImages(a.id);
+      };
+      card.addEventListener("click", open);
+      card.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          open(e);
+        }
+      });
+      exerciseImagesGrid.appendChild(card);
+    }
+  }
+
+  function renderExerciseImagesBrowser() {
+    renderExerciseImagesCategoryChips();
+    renderExerciseImagesGrid();
   }
 
   async function selectExerciseForImages(id) {
@@ -429,7 +505,7 @@
     if (exerciseImagesNewZoomStack) exerciseImagesNewZoomStack.hidden = true;
     if (exerciseImagesNewPlaceholder) exerciseImagesNewPlaceholder.hidden = false;
 
-    renderExerciseImagesList();
+    renderExerciseImagesGrid();
     if (exerciseImagesStatus) exerciseImagesStatus.textContent = "";
   }
 
@@ -2860,9 +2936,19 @@
   }
   if (exerciseImagesSearch) {
     exerciseImagesSearch.addEventListener("input", () => {
-      renderExerciseImagesList();
+      renderExerciseImagesGrid();
     });
   }
+  window.addEventListener("tabata-activity-catalog-ready", () => {
+    if (isAuthed() && adminPanelFromStorage() === "exercise-images") {
+      renderExerciseImagesBrowser();
+    }
+  });
+  window.addEventListener("tabata-admin-auth", () => {
+    if (isAuthed() && adminPanelFromStorage() === "exercise-images") {
+      renderExerciseImagesBrowser();
+    }
+  });
   if (exerciseImagesPick && exerciseImagesFile) {
     exerciseImagesPick.addEventListener("click", () => exerciseImagesFile.click());
     exerciseImagesFile.addEventListener("change", () => {

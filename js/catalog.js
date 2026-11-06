@@ -784,6 +784,15 @@
     try {
       await loadImageIndex();
       await Promise.all([loadGuidesCopy(), loadActivityCatalog()]);
+      try {
+        window.dispatchEvent(
+          new CustomEvent("tabata-activity-catalog-ready", {
+            detail: { activities: activityCatalog.length },
+          }),
+        );
+      } catch (_) {
+        /* ignore */
+      }
       await reloadCatalog();
     } catch (err) {
       setStatus(err.message || "Failed to load catalog");
