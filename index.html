@@ -8,7 +8,7 @@
   <link rel="icon" href="img/logo-mark.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400..700,0..1,0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="css/site.css?v=42" />
+  <link rel="stylesheet" href="css/site.css?v=43" />
 </head>
 <body>
   <dialog id="busy-dialog" class="busy-dialog" aria-live="assertive" aria-busy="false">
@@ -131,7 +131,7 @@
     <div id="admin-panel-exercise-images" class="admin-panel-region admin-panel-exercise-images" data-panel="exercise-images" role="tabpanel" aria-labelledby="admin-tab-exercise-images" hidden>
       <section class="import-help exercise-images-intro" aria-labelledby="exercise-images-title">
         <h2 id="exercise-images-title">Exercise how-to images</h2>
-        <p class="muted">Replace a WebP illustration used in Tabata Core <strong>How to do exercises</strong>. Upload PNG or JPEG; the site encodes WebP in the browser and commits <code>exercise_guides/{id}.webp</code> plus both manifests. Users may need to refresh the exercise guides download in the app.</p>
+        <p class="muted">Replace a WebP illustration used in Tabata Core <strong>How to do exercises</strong>. Choose PNG or JPEG — you’ll <strong>crop to 3:2</strong> (1536×1024 WebP, same slot as the app) — then Save commits <code>exercise_guides/{id}.webp</code> and both manifests. Users may need to refresh the exercise guides download in the app.</p>
       </section>
       <p id="exercise-images-status" class="status" role="status"></p>
       <div class="exercise-images-layout">
@@ -321,7 +321,7 @@
               </div>
               <input id="edit-cover" type="hidden" />
               <p class="category-hint" id="cover-hint">
-                Shown on this website. The Android app downloads the cover when you Get / Download the online plan.
+                Cropped to <strong>8:5</strong> at <strong>1200×750</strong> WebP — same max size as Tabata Core Android when you pick a plan cover. Shown on this site; the app downloads it with the plan.
               </p>
             </div>
           </div>
@@ -396,7 +396,7 @@
     <div class="crop-panel">
       <header>
         <div>
-          <p class="brand">Cover</p>
+          <p id="crop-brand" class="brand">Plan cover</p>
           <h2 id="crop-title">Crop image</h2>
         </div>
         <button type="button" id="crop-close" class="btn-ghost">Close</button>
@@ -404,7 +404,7 @@
       <div class="crop-stage">
         <img id="crop-image" alt="Image to crop" />
       </div>
-      <p class="form-hint crop-hint">Drag to reposition. Pinch/scroll to zoom. Aspect matches plan cards.</p>
+      <p id="crop-hint" class="form-hint crop-hint">Same as Tabata Core Android plan cover picker: 8:5, max 1200×750. Drag to reposition; pinch/scroll to zoom.</p>
       <div class="form-actions">
         <button type="button" id="crop-apply">Use crop</button>
         <button type="button" id="crop-cancel" class="secondary">Cancel</button>
@@ -441,6 +441,6 @@
   <script src="js/zoom-pan.js?v=5"></script>
   <script src="js/catalog.js?v=37"></script>
   <script src="js/weekly-plans.js?v=1"></script>
-  <script src="js/admin.js?v=40"></script>
+  <script src="js/admin.js?v=42"></script>
 </body>
 </html>

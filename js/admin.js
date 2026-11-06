@@ -34,6 +34,9 @@
   const editCoverClear = document.getElementById("edit-cover-clear");
   const editCoverFile = document.getElementById("edit-cover-file");
   const cropDialog = document.getElementById("crop-dialog");
+  const cropBrand = document.getElementById("crop-brand");
+  const cropTitle = document.getElementById("crop-title");
+  const cropHint = document.getElementById("crop-hint");
   const cropImage = document.getElementById("crop-image");
   const cropApply = document.getElementById("crop-apply");
   const cropCancel = document.getElementById("crop-cancel");
@@ -88,6 +91,7 @@
   let exerciseImagesManifestCache = null;
   let exerciseImagesSelectedId = "";
   let exerciseImagesPendingBlob = null;
+  let exerciseImagesPendingPreviewUrl = null;
   let detachCurrentZoom = null;
   let detachNewZoom = null;
 
@@ -106,6 +110,8 @@
   let pendingCoverUrl = null;
   let cropper = null;
   let cropObjectUrl = null;
+  /** @type {'planCover' | 'exerciseGuide'} */
+  let cropMode = "planCover";
 
   const GROUP_TO_CATEGORY = {
     General: "conditioning",
@@ -357,6 +363,14 @@
     exerciseImagesSelectedId = id;
     setExerciseImagesError("");
     exerciseImagesPendingBlob = null;
+    if (exerciseImagesPendingPreviewUrl) {
+      try {
+        URL.revokeObjectURL(exerciseImagesPendingPreviewUrl);
+      } catch (_) {
+        /* ignore */
+      }
+      exerciseImagesPendingPreviewUrl = null;
+    }
     if (exerciseImagesSave) exerciseImagesSave.disabled = true;
     detachZoomHandlers();
     if (exerciseImagesEmpty) exerciseImagesEmpty.hidden = true;
@@ -422,6 +436,14 @@
   function onExerciseImageFile(file) {
     setExerciseImagesError("");
     exerciseImagesPendingBlob = null;
+    if (exerciseImagesPendingPreviewUrl) {
+      try {
+        URL.revokeObjectURL(exerciseImagesPendingPreviewUrl);
+      } catch (_) {
+        /* ignore */
+      }
+      exerciseImagesPendingPreviewUrl = null;
+    }
     if (exerciseImagesSave) exerciseImagesSave.disabled = true;
     detachZoomHandlers();
     if (!file) {
@@ -439,25 +461,7 @@
       setExerciseImagesError("Choose a PNG, JPEG, or WebP image.");
       return;
     }
-    const objUrl = URL.createObjectURL(file);
-    if (exerciseImagesNewPreview) {
-      exerciseImagesNewPreview.onload = () => {
-        try {
-          URL.revokeObjectURL(objUrl);
-        } catch (_) {
-          /* ignore */
-        }
-        if (typeof window.attachExerciseImageZoomPan === "function") {
-          detachNewZoom = window.attachExerciseImageZoomPan(exerciseImagesNewZoom);
-        }
-      };
-      exerciseImagesNewPreview.src = objUrl;
-      exerciseImagesNewPreview.hidden = false;
-    }
-    if (exerciseImagesNewZoomStack) exerciseImagesNewZoomStack.hidden = false;
-    if (exerciseImagesNewPlaceholder) exerciseImagesNewPlaceholder.hidden = true;
-    exerciseImagesPendingBlob = file;
-    if (exerciseImagesSave) exerciseImagesSave.disabled = false;
+    openCropDialog(file, "exerciseGuide");
   }
 
   async function sha256HexPrefix16(bytes) {
@@ -469,10 +473,15 @@
   }
 
   /**
-   * Encode image file to WebP via canvas (quality ~0.95). Returns Uint8Array.
+   * @param {Blob | File} imageBlob Already WebP from the crop dialog, or raw image to encode.
+   * @returns {Promise<Uint8Array>}
    */
-  async function fileToWebpBytes(file) {
-    const bitmap = await createImageBitmap(file);
+  async function fileToWebpBytes(imageBlob) {
+    const type = String(imageBlob?.type || "");
+    if (type === "image/webp") {
+      return new Uint8Array(await imageBlob.arrayBuffer());
+    }
+    const bitmap = await createImageBitmap(imageBlob);
     const canvas = document.createElement("canvas");
     canvas.width = bitmap.width;
     canvas.height = bitmap.height;
@@ -2042,18 +2051,43 @@
     }
   }
 
-  function openCropDialog(file) {
+  function setCropDialogLabels() {
+    if (cropMode === "exerciseGuide") {
+      if (cropBrand) cropBrand.textContent = "Exercise guide";
+      if (cropTitle) cropTitle.textContent = "Crop image (3:2)";
+      if (cropHint) {
+        cropHint.textContent =
+          "Same frame as Tabata Core “How to”: 3:2 slot, 1536×1024 WebP export. Drag to reposition; pinch/scroll to zoom.";
+      }
+      return;
+    }
+    if (cropBrand) cropBrand.textContent = "Plan cover";
+    if (cropTitle) cropTitle.textContent = "Crop image (8:5)";
+    if (cropHint) {
+      cropHint.textContent =
+        "Same as the Android app when you pick a plan cover: 8:5, max 1200×750. Drag to reposition; pinch/scroll to zoom.";
+    }
+  }
+
+  /**
+   * @param {File} file
+   * @param {'planCover' | 'exerciseGuide'} [mode]
+   */
+  function openCropDialog(file, mode) {
     if (!cropDialog || !cropImage || typeof Cropper === "undefined") {
       toast("Cropper failed to load — refresh the page");
       return;
     }
+    cropMode = mode === "exerciseGuide" ? "exerciseGuide" : "planCover";
+    setCropDialogLabels();
     destroyCropper();
     cropObjectUrl = URL.createObjectURL(file);
     cropImage.src = cropObjectUrl;
     showModal(cropDialog);
+    const aspectRatio = cropMode === "exerciseGuide" ? 3 / 2 : 8 / 5;
     cropImage.onload = () => {
       cropper = new Cropper(cropImage, {
-        aspectRatio: 8 / 5,
+        aspectRatio,
         viewMode: 1,
         dragMode: "move",
         autoCropArea: 1,
@@ -2066,14 +2100,24 @@
 
   function applyCrop() {
     if (!cropper) return;
-    // Exact 8:5 export (1280×800-style) — fill any gap with theme dark, never white letterbox.
-    const canvas = cropper.getCroppedCanvas({
-      width: 1200,
-      height: 750,
-      fillColor: "#111418",
-      imageSmoothingEnabled: true,
-      imageSmoothingQuality: "high",
-    });
+    const isExercise = cropMode === "exerciseGuide";
+    // Plan cover: matches Tabata Core Android [pickAndCropPlanCover] — 8:5, max 1200×750.
+    // Exercise: 3:2 @ 1536×1024 — matches shipped guide art / ExerciseHowToDialog frame.
+    const canvas = isExercise
+      ? cropper.getCroppedCanvas({
+          width: 1536,
+          height: 1024,
+          fillColor: "#EDEEF0",
+          imageSmoothingEnabled: true,
+          imageSmoothingQuality: "high",
+        })
+      : cropper.getCroppedCanvas({
+          width: 1200,
+          height: 750,
+          fillColor: "#111418",
+          imageSmoothingEnabled: true,
+          imageSmoothingQuality: "high",
+        });
     if (!canvas) {
       toast("Could not crop image");
       return;
@@ -2081,7 +2125,35 @@
     canvas.toBlob(
       (blob) => {
         if (!blob) {
-          toast("Could not encode cover image");
+          toast(isExercise ? "Could not encode exercise image" : "Could not encode cover image");
+          return;
+        }
+        destroyCropper();
+        hideModal(cropDialog);
+        if (isExercise) {
+          if (exerciseImagesPendingPreviewUrl) {
+            try {
+              URL.revokeObjectURL(exerciseImagesPendingPreviewUrl);
+            } catch (_) {
+              /* ignore */
+            }
+            exerciseImagesPendingPreviewUrl = null;
+          }
+          exerciseImagesPendingBlob = blob;
+          exerciseImagesPendingPreviewUrl = URL.createObjectURL(blob);
+          if (exerciseImagesNewPreview) {
+            exerciseImagesNewPreview.onload = () => {
+              if (typeof window.attachExerciseImageZoomPan === "function" && exerciseImagesNewZoom) {
+                if (detachNewZoom) detachNewZoom();
+                detachNewZoom = window.attachExerciseImageZoomPan(exerciseImagesNewZoom);
+              }
+            };
+            exerciseImagesNewPreview.src = exerciseImagesPendingPreviewUrl;
+            exerciseImagesNewPreview.hidden = false;
+          }
+          if (exerciseImagesNewZoomStack) exerciseImagesNewZoomStack.hidden = false;
+          if (exerciseImagesNewPlaceholder) exerciseImagesNewPlaceholder.hidden = true;
+          if (exerciseImagesSave) exerciseImagesSave.disabled = false;
           return;
         }
         clearPendingCover();
@@ -2089,8 +2161,6 @@
         pendingCoverUrl = URL.createObjectURL(blob);
         if (editCover) editCover.value = "";
         setCoverPreview(pendingCoverUrl);
-        destroyCropper();
-        hideModal(cropDialog);
       },
       "image/webp",
       0.88,
@@ -2582,7 +2652,7 @@
         toast("Pick an image file");
         return;
       }
-      openCropDialog(file);
+      openCropDialog(file, "planCover");
     });
   }
   if (editCoverClear) {
