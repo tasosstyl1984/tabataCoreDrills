@@ -84,6 +84,7 @@
   const exerciseImagesNewZoomStack = document.getElementById("exercise-images-new-zoom-stack");
   const exerciseImagesNewZoom = document.getElementById("exercise-images-new-zoom");
   const exerciseImagesPick = document.getElementById("exercise-images-pick");
+  const exerciseImagesCopyCurrent = document.getElementById("exercise-images-copy-current");
   const exerciseImagesFile = document.getElementById("exercise-images-file");
   const exerciseImagesClear = document.getElementById("exercise-images-clear");
   const exerciseImagesError = document.getElementById("exercise-images-error");
@@ -440,6 +441,43 @@
     hideModal(exerciseImagesEditorDialog);
   }
 
+  function updateExerciseImagesCopyCurrentButton() {
+    if (!exerciseImagesCopyCurrent) return;
+    const id = exerciseImagesSelectedId?.trim();
+    const url = id ? site()?.activityImageUrl?.(id) : "";
+    exerciseImagesCopyCurrent.disabled = !(id && url);
+  }
+
+  async function copyCurrentExerciseGuideForEdit() {
+    const id = exerciseImagesSelectedId?.trim();
+    if (!id) {
+      setExerciseImagesError("No exercise selected.");
+      return;
+    }
+    const url = site()?.activityImageUrl?.(id);
+    if (!url) {
+      setExerciseImagesError("No current guide file for this exercise.");
+      return;
+    }
+    setExerciseImagesError("");
+    showBusy("Loading current image…");
+    try {
+      const res = await fetch(url, { cache: "no-store" });
+      if (!res.ok) throw new Error(`Could not load current image (${res.status})`);
+      const blob = await res.blob();
+      if (!blob || blob.size === 0) throw new Error("Current image is empty.");
+      const type = blob.type || "image/webp";
+      const file = new File([blob], `current_${id}.webp`, { type });
+      onExerciseImageFile(file);
+    } catch (e) {
+      const msg = e?.message || String(e);
+      setExerciseImagesError(msg);
+      toast(msg);
+    } finally {
+      hideBusy();
+    }
+  }
+
   async function selectExerciseForImages(id) {
     exerciseImagesSelectedId = id;
     setExerciseImagesError("");
@@ -478,6 +516,7 @@
     }
 
     const url = site()?.activityImageUrl?.(id);
+    updateExerciseImagesCopyCurrentButton();
     if (exerciseImagesCurrentPreview && url) {
       const runAttach = () => {
         if (typeof window.attachExerciseImageZoomPan === "function" && exerciseImagesCurrentZoom) {
@@ -499,6 +538,7 @@
       if (exerciseImagesCurrentPlaceholder) {
         exerciseImagesCurrentPlaceholder.hidden = false;
       }
+      updateExerciseImagesCopyCurrentButton();
     }
 
     if (exerciseImagesNewPreview) {
@@ -2958,6 +2998,11 @@
     exerciseImagesFile.addEventListener("change", () => {
       const file = exerciseImagesFile.files?.[0];
       onExerciseImageFile(file || null);
+    });
+  }
+  if (exerciseImagesCopyCurrent) {
+    exerciseImagesCopyCurrent.addEventListener("click", () => {
+      copyCurrentExerciseGuideForEdit();
     });
   }
   if (exerciseImagesClear) {

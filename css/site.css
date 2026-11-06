@@ -2201,3 +2201,21 @@ body.admin-authed .preview-footer-actions .btn-delete-admin {
   margin-bottom: 0.25rem;
 }
 
+.exercise-images-slot-spec {
+  margin: 0.35rem 0 0;
+  font-size: 0.88rem;
+  line-height: 1.35;
+}
+
+.exercise-images-steps {
+  margin: 0.35rem 0 0.65rem;
+  padding-left: 1.25rem;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  max-width: 52rem;
+}
+
+.exercise-images-steps li {
+  margin-bottom: 0.25rem;
+}
+
