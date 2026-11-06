@@ -221,6 +221,207 @@ main {
   padding: 0 1.25rem 3rem;
 }
 
+/* Site section tabs (admin signed in): Plans / Weekly / Exercises */
+.site-tablist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin: 0 0 1rem;
+  padding: 0;
+  border: 0;
+}
+
+.site-tablist[hidden] {
+  display: none !important;
+}
+
+.site-tab {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--muted);
+  border-radius: 999px;
+  padding: 0.45rem 1rem;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.site-tab:hover {
+  border-color: var(--accent);
+}
+
+.site-tab[aria-selected="true"] {
+  background: var(--primary-container);
+  color: var(--on-primary-container);
+  border-color: var(--accent-dim);
+}
+
+.site-panel-region[hidden] {
+  display: none !important;
+}
+
+body.site-tab-weekly .plans-catalog-block {
+  display: none;
+}
+
+body.site-tab-weekly #import-help {
+  display: none;
+}
+
+body.site-tab-exercises #import-help {
+  display: none;
+}
+
+.cover-editor-pill {
+  margin-top: 0.5rem;
+}
+
+.cover-preview-wrap--pill {
+  max-width: 200px;
+}
+
+.cover-preview--pill {
+  max-height: 125px;
+}
+
+/* Admin catalog: compact list rows (still card tiles for public) */
+.grid.catalog-grid.admin-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.catalog-row {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 0.85rem;
+  padding: 0.65rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.15s ease;
+}
+
+.catalog-row:hover,
+.catalog-row:focus-visible {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.catalog-row-thumb {
+  flex: 0 0 auto;
+  width: 112px;
+  align-self: center;
+}
+
+.catalog-row-thumb img {
+  display: block;
+  width: 112px;
+  height: 70px;
+  object-fit: contain;
+  object-position: center;
+  background: var(--chip);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.catalog-row-thumb .placeholder {
+  display: block;
+  width: 112px;
+  height: 70px;
+  background: var(--chip);
+  border-radius: 8px;
+  border: 1px dashed var(--border);
+}
+
+.catalog-row-body {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  justify-content: center;
+}
+
+.catalog-row-body .badge {
+  margin: 0;
+}
+
+.catalog-row-body h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.25;
+}
+
+.catalog-row-body > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.catalog-row-actions {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.catalog-row-actions button {
+  margin: 0;
+  border: 0;
+  border-radius: 10px;
+  padding: 0.45rem 0.65rem;
+  background: var(--primary);
+  color: var(--on-primary);
+  font-weight: 700;
+  font: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.catalog-row-actions button.btn-secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.catalog-row-actions button:hover {
+  filter: brightness(1.05);
+}
+
+.catalog-row-actions button:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+
+@media (max-width: 620px) {
+  .catalog-row {
+    flex-wrap: wrap;
+  }
+
+  .catalog-row-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
 .import-help {
   background: var(--surface);
   border: 1px solid var(--border);

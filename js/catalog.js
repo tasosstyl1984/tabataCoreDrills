@@ -1,5 +1,7 @@
 (() => {
   const THEME_KEY = "tabataDrillsTheme";
+  const SITE_TAB_KEY = "tabataDrillsSiteTab";
+  const SITE_TAB_QUERY = "tab";
   const RAW_BASE =
     "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/";
   const statusEl = document.getElementById("status");
@@ -33,6 +35,129 @@
 
   function isAdminAuthed() {
     return document.body.classList.contains("admin-authed");
+  }
+
+  function normalizeSiteTab(v) {
+    if (v === "weekly" || v === "exercises") return v;
+    return "plans";
+  }
+
+  function readSiteTabFromQuery() {
+    try {
+      const p = new URLSearchParams(window.location.search).get(SITE_TAB_QUERY);
+      return normalizeSiteTab(p);
+    } catch (_) {
+      return "plans";
+    }
+  }
+
+  function applySiteTabToUrl(tab) {
+    try {
+      const u = new URL(window.location.href);
+      if (tab === "plans") u.searchParams.delete(SITE_TAB_QUERY);
+      else u.searchParams.set(SITE_TAB_QUERY, tab);
+      window.history.replaceState({}, "", u.toString());
+    } catch (_) {
+      /* ignore */
+    }
+  }
+
+  function persistSiteTab(tab) {
+    try {
+      sessionStorage.setItem(SITE_TAB_KEY, tab);
+    } catch (_) {
+      /* ignore */
+    }
+  }
+
+  function siteTabFromStorage() {
+    try {
+      return normalizeSiteTab(sessionStorage.getItem(SITE_TAB_KEY));
+    } catch (_) {
+      return "plans";
+    }
+  }
+
+  function currentSiteTab() {
+    if (document.body.classList.contains("site-tab-exercises")) return "exercises";
+    if (document.body.classList.contains("site-tab-weekly")) return "weekly";
+    return "plans";
+  }
+
+  function updateSiteTabUi(tab) {
+    const t = normalizeSiteTab(tab);
+    document.body.classList.remove("site-tab-plans", "site-tab-weekly", "site-tab-exercises");
+    document.body.classList.add(`site-tab-${t}`);
+    const tablist = document.getElementById("site-tablist");
+    if (tablist) {
+      const show = isAdminAuthed();
+      tablist.hidden = !show;
+      if (show) {
+        tablist.querySelectorAll(".site-tab").forEach((btn) => {
+          const id = btn.getAttribute("data-site-tab");
+          const sel = id === t;
+          btn.setAttribute("aria-selected", sel ? "true" : "false");
+        });
+      }
+    }
+    const plansBundle = document.getElementById("site-panel-plans-bundle");
+    const exPanel = document.getElementById("admin-panel-exercise-images");
+    if (plansBundle) plansBundle.hidden = t === "exercises";
+    if (exPanel) exPanel.hidden = t !== "exercises";
+    applySiteTabToUrl(t);
+    persistSiteTab(t);
+    try {
+      sessionStorage.setItem(
+        "tabataDrillsAdminPanel",
+        t === "exercises" ? "exercise-images" : "plans",
+      );
+    } catch (_) {
+      /* ignore */
+    }
+    try {
+      window.dispatchEvent(
+        new CustomEvent("tabata-site-tab", { detail: { tab: t } }),
+      );
+    } catch (_) {
+      /* ignore */
+    }
+    if (t === "exercises") {
+      try {
+        window.dispatchEvent(new CustomEvent("tabata-site-tab-exercises"));
+      } catch (_) {
+        /* ignore */
+      }
+    }
+  }
+
+  function setSiteTab(tab) {
+    updateSiteTabUi(tab);
+    renderGrid();
+  }
+
+  function initSiteTabs() {
+    const tablist = document.getElementById("site-tablist");
+    if (!tablist) return;
+    let initial = "plans";
+    if (isAdminAuthed()) {
+      const q = readSiteTabFromQuery();
+      initial = q !== "plans" ? q : siteTabFromStorage();
+    } else {
+      initial = "plans";
+    }
+    updateSiteTabUi(initial);
+    if (tablist.dataset.wired === "1") return;
+    tablist.dataset.wired = "1";
+    tablist.querySelectorAll(".site-tab").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const id = normalizeSiteTab(btn.getAttribute("data-site-tab"));
+        setSiteTab(id);
+      });
+    });
+  }
+
+  function pillCoverKey(id) {
+    return id ? `${id}__pill` : "";
   }
 
   function visibleDrills() {
@@ -169,8 +294,16 @@
     localCoverUrls.set(id, objectUrl);
   }
 
+  function setLocalPillCover(id, objectUrl) {
+    setLocalCover(pillCoverKey(id), objectUrl);
+  }
+
   function getLocalCover(id) {
     return id ? localCoverUrls.get(id) || "" : "";
+  }
+
+  function getLocalPillCover(id) {
+    return id ? localCoverUrls.get(pillCoverKey(id)) || "" : "";
   }
 
   function clearLocalCover(id) {
@@ -186,6 +319,10 @@
     }
   }
 
+  function clearLocalPillCover(id) {
+    clearLocalCover(pillCoverKey(id));
+  }
+
   function coverUrl(entry) {
     if (!entry?.coverImage) return "";
     const local = entry.id ? localCoverUrls.get(entry.id) : "";
@@ -194,6 +331,21 @@
       // Mutable covers always from raw (same as Android). Static exercise_guides
       // paths also resolve under catalog.baseUrl so Pages CDN cannot serve stale art.
       const url = new URL(String(entry.coverImage), remoteBaseUrl());
+      const bust = entry.updatedAtMs || catalog?.updatedAtMs || catalog?.version;
+      if (bust) url.searchParams.set("v", String(bust));
+      return url.toString();
+    } catch (_) {
+      return "";
+    }
+  }
+
+  function coverPillUrl(entry) {
+    if (!entry?.coverImagePill) return "";
+    const pk = pillCoverKey(entry.id);
+    const local = pk ? localCoverUrls.get(pk) : "";
+    if (local) return local;
+    try {
+      const url = new URL(String(entry.coverImagePill), remoteBaseUrl());
       const bust = entry.updatedAtMs || catalog?.updatedAtMs || catalog?.version;
       if (bust) url.searchParams.set("v", String(bust));
       return url.toString();
@@ -517,33 +669,24 @@
     if (!gridEl || !catalog) return;
     const drills = filteredDrills();
     gridEl.innerHTML = "";
+    const adminList = isAdminAuthed() && currentSiteTab() === "plans";
+    if (adminList) gridEl.classList.add("admin-list");
+    else gridEl.classList.remove("admin-list");
     if (!drills.length) {
       setStatus("No plans match your filters.");
       return;
     }
-    setStatus(`${drills.length} plan${drills.length === 1 ? "" : "s"} — click a card to preview`);
+    const hint = adminList
+      ? `${drills.length} plan${drills.length === 1 ? "" : "s"} — click a row to edit`
+      : `${drills.length} plan${drills.length === 1 ? "" : "s"} — click a card to preview`;
+    setStatus(hint);
     for (const d of drills) {
-      const card = document.createElement("article");
-      card.className = "card card-clickable";
-      card.tabIndex = 0;
-      card.setAttribute("role", "button");
-      card.setAttribute("aria-label", `Preview ${d.name || d.id}`);
       const cover = coverUrl(d);
-      const coverHtml = cover
-        ? `<img class="card-cover" src="${escapeAttr(cover)}" alt="" loading="lazy" />`
-        : "";
       const isPreset = Boolean(d.preset || d.shipsWithApp);
       const badge = isPreset
         ? `${d.category || "plan"} · preset`
         : d.category || "plan";
-      card.innerHTML = `
-        ${coverHtml}
-        <span class="badge">${escapeHtml(badge)}</span>
-        <h3>${escapeHtml(d.name || d.id)}</h3>
-        <p>${escapeHtml(d.description || "")}</p>
-      `;
-      const actions = document.createElement("div");
-      actions.className = "card-actions";
+
       const previewBtn = document.createElement("button");
       previewBtn.type = "button";
       previewBtn.className = "btn-secondary";
@@ -572,16 +715,13 @@
         }
         openPreview(d);
       };
-      card.addEventListener("click", (e) => {
-        if (e.target.closest("button")) return;
-        open(e);
-      });
-      card.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          open(e);
-        }
-      });
+
+      const openEdit = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        window.dispatchEvent(new CustomEvent("tabata-admin-edit", { detail: { entry: d } }));
+      };
+
       previewBtn.addEventListener("click", open);
       downloadBtn.addEventListener("click", async (e) => {
         e.preventDefault();
@@ -596,19 +736,89 @@
           downloadBtn.disabled = false;
         }
       });
-      editBtn.addEventListener("click", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        window.dispatchEvent(new CustomEvent("tabata-admin-edit", { detail: { entry: d } }));
-      });
+      editBtn.addEventListener("click", openEdit);
       deleteBtn.addEventListener("click", (e) => {
         e.preventDefault();
         e.stopPropagation();
         window.dispatchEvent(new CustomEvent("tabata-admin-delete", { detail: { entry: d } }));
       });
-      actions.append(previewBtn, downloadBtn, editBtn, deleteBtn);
-      card.appendChild(actions);
-      gridEl.appendChild(card);
+
+      if (adminList) {
+        const row = document.createElement("div");
+        row.className = "catalog-row";
+        row.tabIndex = 0;
+        row.setAttribute("role", "button");
+        row.setAttribute("aria-label", `Edit ${d.name || d.id}`);
+        const thumb = document.createElement("div");
+        thumb.className = "catalog-row-thumb";
+        if (cover) {
+          const img = document.createElement("img");
+          img.src = cover;
+          img.alt = "";
+          img.loading = "lazy";
+          thumb.appendChild(img);
+        } else {
+          const ph = document.createElement("span");
+          ph.className = "placeholder";
+          ph.setAttribute("aria-hidden", "true");
+          thumb.appendChild(ph);
+        }
+        const body = document.createElement("div");
+        body.className = "catalog-row-body";
+        const badgeEl = document.createElement("span");
+        badgeEl.className = "badge";
+        badgeEl.textContent = badge;
+        const h3 = document.createElement("h3");
+        h3.textContent = d.name || d.id;
+        const desc = document.createElement("p");
+        desc.textContent = d.description || "";
+        body.append(badgeEl, h3, desc);
+        const actions = document.createElement("div");
+        actions.className = "catalog-row-actions";
+        actions.append(previewBtn, downloadBtn, editBtn, deleteBtn);
+        row.append(thumb, body, actions);
+        row.addEventListener("click", (e) => {
+          if (e.target.closest("button")) return;
+          openEdit(e);
+        });
+        row.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            openEdit(e);
+          }
+        });
+        gridEl.appendChild(row);
+      } else {
+        const card = document.createElement("article");
+        card.className = "card card-clickable";
+        card.tabIndex = 0;
+        card.setAttribute("role", "button");
+        card.setAttribute("aria-label", `Preview ${d.name || d.id}`);
+        const coverHtml = cover
+          ? `<img class="card-cover" src="${escapeAttr(cover)}" alt="" loading="lazy" />`
+          : "";
+        card.innerHTML = `
+        ${coverHtml}
+        <span class="badge">${escapeHtml(badge)}</span>
+        <h3>${escapeHtml(d.name || d.id)}</h3>
+        <p>${escapeHtml(d.description || "")}</p>
+      `;
+        const actions = document.createElement("div");
+        actions.className = "card-actions";
+        card.addEventListener("click", (e) => {
+          if (e.target.closest("button")) return;
+          open(e);
+        });
+        card.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            open(e);
+          }
+        });
+        actions.append(previewBtn, downloadBtn, editBtn, deleteBtn);
+        card.appendChild(actions);
+        gridEl.appendChild(card);
+      }
     }
   }
 
@@ -770,6 +980,7 @@
   }
 
   async function init() {
+    initSiteTabs();
     applyTheme();
     if (themeToggleBtn) themeToggleBtn.addEventListener("click", cycleTheme);
     if (refreshCatalogBtn) {
@@ -855,6 +1066,7 @@
   if (searchEl) searchEl.addEventListener("input", () => renderGrid());
 
   window.addEventListener("tabata-admin-auth", () => {
+    initSiteTabs();
     refreshVisibleCatalog();
   });
 
@@ -881,6 +1093,13 @@
     setLocalCover,
     getLocalCover,
     clearLocalCover,
+    setLocalPillCover,
+    getLocalPillCover,
+    clearLocalPillCover,
+    coverPillUrl,
+    initSiteTabs,
+    setSiteTab,
+    currentSiteTab,
     escapeHtml,
     escapeAttr,
   };

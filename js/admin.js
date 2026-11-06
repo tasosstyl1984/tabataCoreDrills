@@ -58,11 +58,14 @@
   const weeklyEditDescription = document.getElementById("weekly-edit-description");
   const weeklyDayRows = document.getElementById("weekly-day-rows");
 
-  const adminTabPlans = document.getElementById("admin-tab-plans");
-  const adminTabExerciseImages = document.getElementById("admin-tab-exercise-images");
-  const adminPanelPlans = document.getElementById("admin-panel-plans");
   const adminPanelExerciseImages = document.getElementById("admin-panel-exercise-images");
-  const adminBarPlans = document.getElementById("admin-bar-plans");
+  const editCoverPill = document.getElementById("edit-cover-pill");
+  const editCoverPillPreview = document.getElementById("edit-cover-pill-preview");
+  const editCoverPillPlaceholder = document.getElementById("edit-cover-pill-placeholder");
+  const editCoverPillUpload = document.getElementById("edit-cover-pill-upload");
+  const editCoverPillClear = document.getElementById("edit-cover-pill-clear");
+  const editCoverPillSync = document.getElementById("edit-cover-pill-sync");
+  const editCoverPillFile = document.getElementById("edit-cover-pill-file");
   const exerciseImagesStatus = document.getElementById("exercise-images-status");
   const exerciseImagesSearch = document.getElementById("exercise-images-search");
   const exerciseImagesCategories = document.getElementById("exercise-images-categories");
@@ -113,10 +116,14 @@
   let dragFromRound = -1;
   let pendingCoverBlob = null;
   let pendingCoverUrl = null;
+  let pendingPillCoverBlob = null;
+  let pendingPillCoverUrl = null;
   let cropper = null;
   let cropObjectUrl = null;
   /** @type {'planCover' | 'exerciseGuide'} */
   let cropMode = "planCover";
+  /** @type {'hero' | 'pill'} */
+  let planCoverCropTarget = "hero";
 
   const GROUP_TO_CATEGORY = {
     General: "conditioning",
@@ -226,7 +233,10 @@
   function updateAuthUi() {
     const ok = isAuthed();
     document.body.classList.toggle("admin-authed", ok);
-    if (adminBar) adminBar.classList.toggle("is-visible", ok);
+    if (adminBar) {
+      adminBar.hidden = !ok;
+      adminBar.classList.toggle("is-visible", ok);
+    }
     if (loginBtn) loginBtn.hidden = ok;
     if (logoutBtn) logoutBtn.hidden = !ok;
     applyAdminPanelVisibility();
@@ -256,22 +266,14 @@
     const ok = isAuthed();
     const panel = adminPanelFromStorage();
     const useExercise = ok && panel === "exercise-images";
-    if (adminPanelPlans) {
-      adminPanelPlans.hidden = useExercise;
-    }
-    if (adminPanelExerciseImages) {
-      adminPanelExerciseImages.hidden = !useExercise;
-    }
-    if (adminBarPlans) {
-      adminBarPlans.hidden = useExercise;
-    }
-    if (adminTabPlans) {
-      adminTabPlans.classList.toggle("is-active", !useExercise);
-      adminTabPlans.setAttribute("aria-selected", useExercise ? "false" : "true");
-    }
-    if (adminTabExerciseImages) {
-      adminTabExerciseImages.classList.toggle("is-active", useExercise);
-      adminTabExerciseImages.setAttribute("aria-selected", useExercise ? "true" : "false");
+    if (ok) {
+      const want = useExercise ? "exercises" : "plans";
+      if (typeof site()?.setSiteTab === "function") {
+        site().setSiteTab(want);
+      } else {
+        document.body.classList.toggle("site-tab-exercises", useExercise);
+        document.body.classList.toggle("site-tab-plans", !useExercise);
+      }
     }
     if (useExercise) {
       ensureExerciseImagesManifest().catch(() => {});
@@ -1403,6 +1405,7 @@
         entry?.description || template?.description || "";
     }
     resetCoverUi(entry?.coverImage || "");
+    resetPillCoverUi(entry?.coverImagePill || "");
     plan = normalizePlan(template?.structuredPlan || classicStarterPlan());
     resetCollapseState({ expandFirst: true });
     fillCategorySuggestions();
@@ -1476,6 +1479,10 @@
         catalogMeta?.coverImage ||
         `exercise_guides/${activityIds[0]}.webp`;
     }
+    if (editCoverPill && catalogMeta?.coverImagePill) {
+      editCoverPill.value = catalogMeta.coverImagePill;
+      resetPillCoverUi(catalogMeta.coverImagePill);
+    }
     if (catalogMeta?.category) {
       categoryManual = true;
       if (editCategory) editCategory.value = catalogMeta.category;
@@ -1511,6 +1518,7 @@
         description: data.description || "",
         category: data.category || "",
         coverImage: data.coverImage || "",
+        coverImagePill: data.coverImagePill || "",
       };
     } else if (data.template && typeof data.template === "object") {
       template = data.template;
@@ -1574,6 +1582,7 @@
     const cover =
       (editCover?.value || "").trim() ||
       (activityIds[0] ? `exercise_guides/${activityIds[0]}.webp` : "exercise_guides/burpees.webp");
+    const pillCover = (editCoverPill?.value || "").trim();
     const name = (editName?.value || "").trim() || "Untitled plan";
     const now = Date.now();
     const description = (editDescription?.value || "").trim();
@@ -1605,6 +1614,7 @@
       },
     };
     if (description) template.description = description;
+    if (pillCover) template.coverImagePill = pillCover;
     if (editingEntry && template.createdAtMs === undefined) {
       // keep createdAtMs from existing file when available via fetch later
     }
@@ -1618,6 +1628,7 @@
       coverImage: cover,
       activityIds,
     };
+    if (pillCover) catalogEntry.coverImagePill = pillCover;
     return { template, catalogEntry };
   }
 
@@ -2194,6 +2205,13 @@
     }
   }
 
+  function revokePendingPillCoverUrl() {
+    if (pendingPillCoverUrl) {
+      URL.revokeObjectURL(pendingPillCoverUrl);
+      pendingPillCoverUrl = null;
+    }
+  }
+
   function setCoverPreview(src) {
     if (editCoverPreview && src) {
       // Drop prior src first so the browser does not keep a previous plan's bitmap.
@@ -2210,9 +2228,29 @@
     }
   }
 
+  function setCoverPillPreview(src) {
+    if (editCoverPillPreview && src) {
+      editCoverPillPreview.removeAttribute("src");
+      editCoverPillPreview.src = src;
+      editCoverPillPreview.hidden = false;
+      if (editCoverPillPlaceholder) editCoverPillPlaceholder.hidden = true;
+    } else {
+      if (editCoverPillPreview) {
+        editCoverPillPreview.removeAttribute("src");
+        editCoverPillPreview.hidden = true;
+      }
+      if (editCoverPillPlaceholder) editCoverPillPlaceholder.hidden = false;
+    }
+  }
+
   function clearPendingCover() {
     revokePendingCoverUrl();
     pendingCoverBlob = null;
+  }
+
+  function clearPendingPillCover() {
+    revokePendingPillCoverUrl();
+    pendingPillCoverBlob = null;
   }
 
   function resetCoverUi(path = "") {
@@ -2236,6 +2274,30 @@
       setCoverPreview(url.toString());
     } catch (_) {
       setCoverPreview("");
+    }
+  }
+
+  function resetPillCoverUi(path = "") {
+    clearPendingPillCover();
+    if (editCoverPill) editCoverPill.value = path || "";
+    if (!path) {
+      setCoverPillPreview("");
+      return;
+    }
+    const local = editingEntry?.id ? site()?.getLocalPillCover?.(editingEntry.id) : "";
+    if (local) {
+      setCoverPillPreview(local);
+      return;
+    }
+    try {
+      const url = new URL(String(path), RAW_BASE);
+      url.searchParams.set(
+        "v",
+        String(editingEntry?.updatedAtMs || Date.now()),
+      );
+      setCoverPillPreview(url.toString());
+    } catch (_) {
+      setCoverPillPreview("");
     }
   }
 
@@ -2263,11 +2325,17 @@
       }
       return;
     }
-    if (cropBrand) cropBrand.textContent = "Plan cover";
+    if (planCoverCropTarget === "pill") {
+      if (cropBrand) cropBrand.textContent = "Ready pill";
+    } else if (cropBrand) {
+      cropBrand.textContent = "Plan cover";
+    }
     if (cropTitle) cropTitle.textContent = "Crop image (8:5)";
     if (cropHint) {
       cropHint.textContent =
-        "Same as the Android app when you pick a plan cover: 8:5, max 1200×750. Drag to reposition; pinch/scroll to zoom.";
+        planCoverCropTarget === "pill"
+          ? "Optional art behind the Ready plan pill in Tabata Core — same 8:5 frame as the hero (1200×750 WebP). Drag to reposition; pinch/scroll to zoom."
+          : "Same as the Android app when you pick a plan cover: 8:5, max 1200×750. Drag to reposition; pinch/scroll to zoom.";
     }
   }
 
@@ -2281,6 +2349,9 @@
       return;
     }
     cropMode = mode === "exerciseGuide" ? "exerciseGuide" : "planCover";
+    if (cropMode === "planCover" && planCoverCropTarget !== "pill") {
+      planCoverCropTarget = "hero";
+    }
     setCropDialogLabels();
     destroyCropper();
     cropObjectUrl = URL.createObjectURL(file);
@@ -2369,11 +2440,19 @@
       refreshExerciseSaveButton();
       return;
     }
-    clearPendingCover();
-    pendingCoverBlob = blob;
-    pendingCoverUrl = URL.createObjectURL(blob);
-    if (editCover) editCover.value = "";
-    setCoverPreview(pendingCoverUrl);
+    if (planCoverCropTarget === "pill") {
+      clearPendingPillCover();
+      pendingPillCoverBlob = blob;
+      pendingPillCoverUrl = URL.createObjectURL(blob);
+      if (editCoverPill) editCoverPill.value = "";
+      setCoverPillPreview(pendingPillCoverUrl);
+    } else {
+      clearPendingCover();
+      pendingCoverBlob = blob;
+      pendingCoverUrl = URL.createObjectURL(blob);
+      if (editCover) editCover.value = "";
+      setCoverPreview(pendingCoverUrl);
+    }
   }
 
   async function deleteCoverPathBestEffort(path) {
@@ -2404,9 +2483,17 @@
         editingEntry?.coverImage ||
         ""
       ).trim();
+      const previousPillCoverPath = (
+        editCoverPill?.value ||
+        editingEntry?.coverImagePill ||
+        ""
+      ).trim();
       let coverBlobForLocal = null;
       let newCoverPath = null;
       let newCoverBase64 = null;
+      let pillCoverBlobForLocal = null;
+      let newPillCoverPath = null;
+      let newPillCoverBase64 = null;
 
       const savingPreset = Boolean(
         editingEntry?.preset || editingEntry?.shipsWithApp,
@@ -2428,6 +2515,16 @@
         newCoverBase64 = await encodeBlob(pendingCoverBlob);
         if (editCover) editCover.value = newCoverPath;
         clearPendingCover();
+      }
+
+      if (pendingPillCoverBlob) {
+        pillCoverBlobForLocal = pendingPillCoverBlob;
+        newPillCoverPath = savingPreset && defaultId
+          ? `plan_covers/${defaultId}_pill.webp`
+          : `plan_covers/${id}_pill_${Date.now()}.webp`;
+        newPillCoverBase64 = await encodeBlob(pendingPillCoverBlob);
+        if (editCoverPill) editCoverPill.value = newPillCoverPath;
+        clearPendingPillCover();
       }
 
       const { template, catalogEntry } = buildTemplateFromForm(id);
@@ -2531,6 +2628,25 @@
             }
           }
 
+          if (newPillCoverPath && newPillCoverBase64) {
+            changes.unshift({
+              path: newPillCoverPath,
+              content: newPillCoverBase64,
+              encoding: "base64",
+            });
+            if (
+              previousPillCoverPath.startsWith("plan_covers/") &&
+              previousPillCoverPath !== newPillCoverPath
+            ) {
+              changes.push({ path: previousPillCoverPath, delete: true });
+            }
+          } else if (
+            !String(editCoverPill?.value || "").trim() &&
+            previousPillCoverPath.startsWith("plan_covers/")
+          ) {
+            changes.push({ path: previousPillCoverPath, delete: true });
+          }
+
           await commitFilesAtomic(
             editingEntry
               ? savingPreset
@@ -2566,6 +2682,14 @@
         setCoverPreview(localUrl);
       } else if (!(editCover?.value || "").trim().startsWith("plan_covers/")) {
         site()?.clearLocalCover?.(id);
+      }
+
+      if (pillCoverBlobForLocal && newPillCoverPath) {
+        const localPillUrl = URL.createObjectURL(pillCoverBlobForLocal);
+        site()?.setLocalPillCover?.(id, localPillUrl);
+        setCoverPillPreview(localPillUrl);
+      } else if (!(editCoverPill?.value || "").trim().startsWith("plan_covers/")) {
+        site()?.clearLocalPillCover?.(id);
       }
 
       hideModal(editorDialog);
@@ -2623,6 +2747,7 @@
     try {
       const drillPath = entry.file || `drills/${entry.id}.json`;
       const coverPath = String(entry.coverImage || "");
+      const pillCoverPath = String(entry.coverImagePill || "");
       const maxAttempts = 5;
       let nextCatalog = null;
       let lastErr = null;
@@ -2650,6 +2775,12 @@
           ];
           if (coverPath.startsWith("plan_covers/")) {
             changes.push({ path: coverPath, delete: true });
+          }
+          if (
+            pillCoverPath.startsWith("plan_covers/") &&
+            pillCoverPath !== coverPath
+          ) {
+            changes.push({ path: pillCoverPath, delete: true });
           }
 
           await commitFilesAtomic(`Delete plan ${entry.id}`, changes);
@@ -2687,10 +2818,17 @@
         if (coverPath.startsWith("plan_covers/")) {
           await deleteCoverPathBestEffort(coverPath);
         }
+        if (
+          pillCoverPath.startsWith("plan_covers/") &&
+          pillCoverPath !== coverPath
+        ) {
+          await deleteCoverPathBestEffort(pillCoverPath);
+        }
       }
 
       site()?.invalidateTemplate?.(entry.id);
       site()?.clearLocalCover?.(entry.id);
+      site()?.clearLocalPillCover?.(entry.id);
       site()?.applyCatalog?.(nextCatalog);
 
       toast(`Deleted ${entry.id}`);
@@ -2861,11 +2999,41 @@
         toast("Pick an image file");
         return;
       }
+      planCoverCropTarget = "hero";
       openCropDialog(file, "planCover");
     });
   }
   if (editCoverClear) {
     editCoverClear.addEventListener("click", () => resetCoverUi(""));
+  }
+  if (editCoverPillUpload && editCoverPillFile) {
+    editCoverPillUpload.addEventListener("click", () => editCoverPillFile.click());
+    editCoverPillFile.addEventListener("change", () => {
+      const file = editCoverPillFile.files?.[0];
+      editCoverPillFile.value = "";
+      if (!file) return;
+      if (!file.type.startsWith("image/")) {
+        toast("Pick an image file");
+        return;
+      }
+      planCoverCropTarget = "pill";
+      openCropDialog(file, "planCover");
+    });
+  }
+  if (editCoverPillClear) {
+    editCoverPillClear.addEventListener("click", () => resetPillCoverUi(""));
+  }
+  if (editCoverPillSync) {
+    editCoverPillSync.addEventListener("click", () => {
+      const hero = (editCover?.value || "").trim();
+      if (!hero) {
+        toast("Set a hero cover first");
+        return;
+      }
+      clearPendingPillCover();
+      if (editCoverPill) editCoverPill.value = hero;
+      resetPillCoverUi(hero);
+    });
   }
   if (cropApply) cropApply.addEventListener("click", () => applyCrop());
   if (cropCancel) {
@@ -2966,18 +3134,18 @@
   window.addEventListener("tabata-admin-edit", (e) => editDrill(e.detail?.entry));
   window.addEventListener("tabata-admin-delete", (e) => deleteDrill(e.detail?.entry));
 
-  if (adminTabPlans) {
-    adminTabPlans.addEventListener("click", () => {
-      saveAdminPanel("plans");
-      applyAdminPanelVisibility();
-    });
-  }
-  if (adminTabExerciseImages) {
-    adminTabExerciseImages.addEventListener("click", () => {
+  window.addEventListener("tabata-site-tab", (e) => {
+    const t = e.detail?.tab;
+    if (t === "exercises") {
       saveAdminPanel("exercise-images");
-      applyAdminPanelVisibility();
-    });
-  }
+      if (isAuthed()) {
+        ensureExerciseImagesManifest().catch(() => {});
+        renderExerciseImagesBrowser();
+      }
+    } else {
+      saveAdminPanel("plans");
+    }
+  });
   if (exerciseImagesSearch) {
     exerciseImagesSearch.addEventListener("input", () => {
       renderExerciseImagesGrid();
