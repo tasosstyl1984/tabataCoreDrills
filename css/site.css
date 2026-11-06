@@ -1325,12 +1325,23 @@ code {
   font-size: 0.78rem;
 }
 
-.exercise-images-zoom-stack {
-  max-height: min(40vh, 360px);
+/* Exercise editor modal: height is driven by .exercise-images-editor-dialog rules below */
+.exercise-images-editor-dialog .exercise-images-zoom-stack {
+  max-height: none;
+  min-height: 0;
+  flex: 1 1 auto;
 }
 
-.exercise-images-zoom {
-  max-height: min(40vh, 360px);
+.exercise-images-editor-dialog .exercise-images-zoom {
+  max-height: none;
+  flex: 1 1 auto;
+  min-height: 0;
+  height: 100%;
+  aspect-ratio: 3 / 2;
+}
+
+.exercise-images-editor-dialog .zoom-viewport.exercise-images-zoom {
+  max-height: none;
 }
 
 .exercise-images-upload-actions,
@@ -2384,129 +2395,224 @@ body.admin-authed .preview-footer-actions .btn-delete-admin {
   max-height: min(58vh, 520px);
 }
 
-/* Exercise image editor — same modal chrome as plan editor, full-width form */
+/* Exercise image editor — fill the viewport; inner preview row flexes (no body scroll) */
 .exercise-images-editor-dialog {
-  max-width: min(900px, calc(100vw - 1.25rem));
+  max-width: min(1600px, calc(100vw - 1rem));
+  max-height: 96dvh;
+  width: min(1600px, calc(100vw - 1rem));
 }
 
 .exercise-images-editor-dialog .editor-panel {
-  max-height: min(92vh, 900px);
+  max-height: min(96dvh, 900px);
+  min-height: 0;
 }
 
+.exercise-images-editor-dialog .editor-panel header {
+  padding: 0.65rem 0.85rem 0.5rem;
+  flex-shrink: 0;
+}
+
+.exercise-images-editor-dialog .editor-panel header .brand {
+  font-size: 0.65rem;
+  margin-bottom: 0.05rem;
+}
+
+.exercise-images-editor-dialog .editor-panel header h2 {
+  font-size: 1.08rem;
+  margin: 0.05rem 0 0;
+}
+
+.exercise-images-editor-dialog .editor-panel > .form-actions {
+  flex-shrink: 0;
+  padding: 0.55rem 0.85rem 0.75rem;
+}
+
+.exercise-images-editor-dialog .editor-panel .form-body.editor-form,
 .exercise-images-editor-body {
-  max-height: min(72vh, 680px);
-  overflow-y: auto;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
+  padding: 0.45rem 0.85rem 0.55rem;
+  gap: 0;
+  display: flex;
+  flex-direction: column;
 }
 
-.exercise-images-editor-body .exercise-images-meta {
-  margin-bottom: 0.25rem;
+.exercise-images-editor-layout {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+  gap: 0.35rem;
+}
+
+.exercise-images-editor-dialog .exercise-images-meta {
+  flex-shrink: 0;
+  margin-bottom: 0;
+}
+
+.exercise-images-editor-dialog .exercise-images-meta p {
+  margin: 0.12rem 0 0;
+  line-height: 1.28;
+}
+
+.exercise-images-editor-dialog .exercise-images-meta p:first-child {
+  margin-top: 0;
+}
+
+.exercise-images-editor-dialog .exercise-images-meta code {
+  font-size: 0.78rem;
 }
 
 .exercise-images-slot-spec {
-  margin: 0.35rem 0 0;
-  font-size: 0.88rem;
-  line-height: 1.35;
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.28;
 }
 
-.exercise-images-steps {
-  margin: 0.35rem 0 0.65rem;
-  padding-left: 1.25rem;
-  font-size: 0.88rem;
-  line-height: 1.45;
-  max-width: 52rem;
+.exercise-images-editor-dialog #exercise-images-manifest-line {
+  font-size: 0.72rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.exercise-images-steps li {
-  margin-bottom: 0.25rem;
+.exercise-images-editor-columns {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+  gap: 0.45rem;
 }
 
-/* Exercise editor: tablet / small laptop — side-by-side previews, shorter frames */
-@media (min-width: 768px) and (min-height: 520px) {
-  .exercise-images-editor-dialog .editor-panel {
-    max-height: min(94dvh, 880px);
-    min-height: 0;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .exercise-images-editor-dialog .editor-panel header {
-    padding: 0.7rem 1rem 0.55rem;
-    flex-shrink: 0;
-  }
-
-  .exercise-images-editor-dialog .editor-panel header h2 {
-    font-size: 1.12rem;
-  }
-
-  .exercise-images-editor-dialog .editor-panel > .form-actions {
-    flex-shrink: 0;
-  }
-
-  .exercise-images-editor-body {
-    flex: 1 1 auto;
-    min-height: 0;
-    max-height: none;
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
+@media (min-width: 768px) {
+  .exercise-images-editor-columns {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    column-gap: 1rem;
-    row-gap: 0.5rem;
-    align-content: start;
+    align-items: stretch;
+    column-gap: 0.65rem;
+    row-gap: 0;
   }
+}
 
-  .exercise-images-editor-body .exercise-images-meta {
-    grid-column: 1 / -1;
-    margin-bottom: 0;
-  }
+.exercise-images-editor-dialog .exercise-images-current,
+.exercise-images-editor-dialog .exercise-images-upload {
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 50%;
+}
 
-  .exercise-images-editor-body .exercise-images-meta p {
-    margin: 0.15rem 0 0;
-  }
+.exercise-images-editor-dialog .exercise-images-current .brand,
+.exercise-images-editor-dialog .exercise-images-upload .brand {
+  flex-shrink: 0;
+  margin: 0 0 0.25rem;
+  font-size: 0.72rem;
+}
 
-  .exercise-images-editor-body .exercise-images-current,
-  .exercise-images-editor-body .exercise-images-upload {
-    min-width: 0;
-  }
+.exercise-images-editor-dialog .exercise-images-preview-wrap {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
 
-  .exercise-images-editor-body .exercise-images-current .brand,
-  .exercise-images-editor-body .exercise-images-upload .brand {
-    margin-bottom: 0.35rem;
-    font-size: 0.78rem;
-  }
+.exercise-images-editor-dialog .exercise-images-preview-wrap .zoom-hint {
+  flex-shrink: 0;
+  margin: 0;
+  font-size: 0.68rem;
+  line-height: 1.2;
+}
 
-  .exercise-images-editor-body .zoom-viewport.exercise-images-zoom {
-    max-height: min(28vh, 240px);
-    aspect-ratio: 3 / 2;
-  }
+.exercise-images-editor-dialog .exercise-images-preview-wrap .exercise-images-preview-placeholder {
+  flex: 1 1 auto;
+  min-height: 4rem;
+  max-height: 100%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+}
 
-  .exercise-images-editor-body .zoom-viewport-toolbar {
-    width: 2.85rem;
-    min-width: 2.85rem;
-    max-width: 2.85rem;
-    padding: 0.25rem 0.2rem;
-  }
+.exercise-images-editor-dialog .zoom-stack.exercise-images-zoom-stack {
+  flex: 1 1 auto;
+  min-height: 0;
+  align-items: stretch;
+}
 
-  .exercise-images-editor-body .zoom-hint {
-    margin: 0.25rem 0 0;
-    font-size: 0.72rem;
-    line-height: 1.3;
-  }
+.exercise-images-editor-dialog .zoom-viewport-toolbar {
+  width: 2.65rem;
+  min-width: 2.65rem;
+  max-width: 2.65rem;
+  padding: 0.2rem 0.18rem;
+  gap: 0.35rem;
+}
 
-  .exercise-images-editor-body .exercise-images-steps {
-    margin: 0.25rem 0 0.45rem;
-    padding-left: 1.1rem;
-    font-size: 0.8rem;
-    line-height: 1.35;
-  }
+.exercise-images-editor-dialog .zoom-viewport-toolbar .zoom-tool {
+  padding: 0.25rem 0.15rem;
+  font-size: 0.65rem;
+}
 
-  .exercise-images-editor-body .exercise-images-steps li {
-    margin-bottom: 0.15rem;
-  }
+.exercise-images-howto {
+  margin: 0 0 0.25rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--chip);
+  padding: 0 0.45rem;
+}
 
-  .exercise-images-editor-body .exercise-images-upload-actions {
-    flex-wrap: wrap;
-    gap: 0.4rem;
+.exercise-images-howto-summary {
+  cursor: pointer;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.35rem 0;
+  list-style: none;
+}
+
+.exercise-images-howto-summary::-webkit-details-marker {
+  display: none;
+}
+
+.exercise-images-howto-inline {
+  font-weight: 400;
+  opacity: 0.85;
+}
+
+@media (max-width: 767px) {
+  .exercise-images-howto-inline {
+    display: none;
   }
+}
+
+.exercise-images-howto[open] .exercise-images-howto-inline {
+  display: none;
+}
+
+.exercise-images-editor-dialog .exercise-images-steps {
+  margin: 0 0 0.4rem;
+  padding: 0 0 0 1.05rem;
+  font-size: 0.76rem;
+  line-height: 1.32;
+  max-width: none;
+}
+
+.exercise-images-editor-dialog .exercise-images-steps li {
+  margin-bottom: 0.12rem;
+}
+
+.exercise-images-editor-dialog .exercise-images-upload-actions {
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+  gap: 0.35rem;
+}
+
+.exercise-images-editor-dialog .exercise-images-upload-actions button {
+  padding: 0.4rem 0.65rem;
+  font-size: 0.8rem;
+}
+
+.exercise-images-error {
+  flex-shrink: 0;
+  margin: 0.15rem 0 0;
 }
 

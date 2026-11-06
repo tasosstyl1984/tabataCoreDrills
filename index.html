@@ -8,7 +8,7 @@
   <link rel="icon" href="img/logo-mark.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400..700,0..1,0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="css/site.css?v=49" />
+  <link rel="stylesheet" href="css/site.css?v=50" />
 </head>
 <body>
   <dialog id="busy-dialog" class="busy-dialog" aria-live="assertive" aria-busy="false">
@@ -395,6 +395,7 @@
         <button type="button" id="exercise-images-editor-close" class="btn-ghost">Close</button>
       </header>
       <div class="form-body editor-form exercise-images-editor-body" id="exercise-images-editor">
+        <div class="exercise-images-editor-layout">
         <div class="exercise-images-meta">
           <p class="muted"><code id="exercise-images-selected-id">—</code></p>
           <p class="muted exercise-images-slot-spec">
@@ -402,6 +403,7 @@
           </p>
           <p id="exercise-images-manifest-line" class="muted" hidden></p>
         </div>
+        <div class="exercise-images-editor-columns">
         <div class="exercise-images-current">
           <p class="brand">Current</p>
           <div class="exercise-images-preview-wrap">
@@ -425,12 +427,17 @@
         </div>
         <div class="exercise-images-upload">
           <p class="brand">Replacement</p>
-          <ol class="exercise-images-steps muted" aria-label="How to replace">
-            <li><strong>Choose image…</strong> or <strong>Copy current</strong> (loads pixels for editing).</li>
-            <li>The <strong>Crop image</strong> dialog opens — pick the 3:2 frame, then <strong>Use crop</strong>.</li>
-            <li><strong>Wheel / slider / drag</strong> on the preview below to zoom and pan (what you see is what gets saved).</li>
-            <li><strong>Save to GitHub</strong>.</li>
-          </ol>
+          <details class="exercise-images-howto muted">
+            <summary class="exercise-images-howto-summary">
+              How to replace <span class="exercise-images-howto-inline">· Choose or copy · Crop 3:2 · Save</span>
+            </summary>
+            <ol class="exercise-images-steps" aria-label="How to replace">
+              <li><strong>Choose image…</strong> or <strong>Copy current</strong> (loads pixels for editing).</li>
+              <li>The <strong>Crop image</strong> dialog opens — pick the 3:2 frame, then <strong>Use crop</strong>.</li>
+              <li><strong>Wheel / slider / drag</strong> on the preview below to zoom and pan (optional fine-tune before save).</li>
+              <li><strong>Save to GitHub</strong>.</li>
+            </ol>
+          </details>
           <div class="exercise-images-preview-wrap">
             <div id="exercise-images-new-zoom-stack" class="zoom-stack exercise-images-zoom-stack" hidden>
               <div id="exercise-images-new-zoom" class="zoom-viewport exercise-images-zoom" aria-label="New image preview" tabindex="0">
@@ -456,7 +463,9 @@
             <button type="button" id="exercise-images-clear" class="secondary">Clear</button>
           </div>
         </div>
-        <p id="exercise-images-error" class="form-error" hidden></p>
+        </div>
+        <p id="exercise-images-error" class="form-error exercise-images-error" hidden></p>
+        </div>
       </div>
       <div class="form-actions">
         <button type="button" id="exercise-images-save" class="primary" disabled>Save to GitHub</button>
@@ -530,6 +539,6 @@
   <script src="js/zoom-pan.js?v=5"></script>
   <script src="js/catalog.js?v=39"></script>
   <script src="js/weekly-plans.js?v=1"></script>
-  <script src="js/admin.js?v=50"></script>
+  <script src="js/admin.js?v=51"></script>
 </body>
 </html>
