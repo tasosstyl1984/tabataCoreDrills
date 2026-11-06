@@ -1,6 +1,7 @@
 /**
  * Fixed 3:2 viewport: wheel zoom, pointer drag pan (same interaction as review HTML).
  * Expects: .zoom-viewport > .zoom-viewport-inner > img.zoom-viewport-img
+ * Optional: .zoom-stack wraps viewport + .zoom-viewport-toolbar (slider outside image frame).
  */
 (() => {
   const SCALE_MIN = 1;
@@ -13,6 +14,14 @@
   }
 
   /**
+   * Host for toolbar controls (slider/reset) — outside viewport when .zoom-stack is used.
+   * @param {HTMLElement} viewport
+   */
+  function toolbarHost(viewport) {
+    return viewport.closest(".zoom-stack") || viewport;
+  }
+
+  /**
    * @param {HTMLElement|null} viewport
    * @returns {() => void} detach
    */
@@ -21,6 +30,8 @@
     const inner = viewport.querySelector(".zoom-viewport-inner");
     const img = viewport.querySelector(".zoom-viewport-img");
     if (!inner || !img) return () => {};
+
+    const controls = toolbarHost(viewport);
 
     let scale = 1;
     let tx = 0;
@@ -43,7 +54,12 @@
       if (!nw || !nh || !vw || !vh) {
         return { vw, vh, cw: vw, ch: vh };
       }
-      const k = Math.min(vw / nw, vh / nh);
+      const cover =
+        getComputedStyle(img).objectFit === "cover" ||
+        viewport.classList.contains("exercise-image-viewport");
+      const k = cover
+        ? Math.max(vw / nw, vh / nh)
+        : Math.min(vw / nw, vh / nh);
       return { vw, vh, cw: nw * k, ch: nh * k };
     }
 
@@ -70,7 +86,7 @@
     }
 
     function syncSliderFromScale() {
-      const slider = viewport.querySelector(".zoom-viewport-slider");
+      const slider = controls.querySelector(".zoom-viewport-slider");
       if (!slider) return;
       const pct = Math.round(scale * 100);
       slider.value = String(clamp(pct, 100, 500));
@@ -122,7 +138,7 @@
     viewport.addEventListener("pointerup", onPointerUp, opt);
     viewport.addEventListener("pointercancel", onPointerUp, opt);
 
-    const zoomSlider = viewport.querySelector(".zoom-viewport-slider");
+    const zoomSlider = controls.querySelector(".zoom-viewport-slider");
     if (zoomSlider) {
       zoomSlider.addEventListener(
         "input",
@@ -136,7 +152,7 @@
         opt,
       );
     }
-    const zoomReset = viewport.querySelector("[data-zoom-reset]");
+    const zoomReset = controls.querySelector("[data-zoom-reset]");
     if (zoomReset) {
       zoomReset.addEventListener("click", reset, opt);
     }

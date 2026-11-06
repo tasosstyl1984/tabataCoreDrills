@@ -70,9 +70,13 @@
   const exerciseImagesManifestLine = document.getElementById("exercise-images-manifest-line");
   const exerciseImagesCurrentPreview = document.getElementById("exercise-images-current-preview");
   const exerciseImagesCurrentPlaceholder = document.getElementById("exercise-images-current-placeholder");
+  const exerciseImagesCurrentZoomStack = document.getElementById(
+    "exercise-images-current-zoom-stack",
+  );
   const exerciseImagesCurrentZoom = document.getElementById("exercise-images-current-zoom");
   const exerciseImagesNewPreview = document.getElementById("exercise-images-new-preview");
   const exerciseImagesNewPlaceholder = document.getElementById("exercise-images-new-placeholder");
+  const exerciseImagesNewZoomStack = document.getElementById("exercise-images-new-zoom-stack");
   const exerciseImagesNewZoom = document.getElementById("exercise-images-new-zoom");
   const exerciseImagesPick = document.getElementById("exercise-images-pick");
   const exerciseImagesFile = document.getElementById("exercise-images-file");
@@ -390,7 +394,7 @@
       exerciseImagesCurrentPreview.onload = () => runAttach();
       exerciseImagesCurrentPreview.src = `${url}${url.includes("?") ? "&" : "?"}_=${Date.now()}`;
       exerciseImagesCurrentPreview.hidden = false;
-      if (exerciseImagesCurrentZoom) exerciseImagesCurrentZoom.hidden = false;
+      if (exerciseImagesCurrentZoomStack) exerciseImagesCurrentZoomStack.hidden = false;
       if (exerciseImagesCurrentPlaceholder) exerciseImagesCurrentPlaceholder.hidden = true;
       if (exerciseImagesCurrentPreview.complete) {
         runAttach();
@@ -398,7 +402,7 @@
     } else if (exerciseImagesCurrentPreview) {
       exerciseImagesCurrentPreview.removeAttribute("src");
       exerciseImagesCurrentPreview.hidden = true;
-      if (exerciseImagesCurrentZoom) exerciseImagesCurrentZoom.hidden = true;
+      if (exerciseImagesCurrentZoomStack) exerciseImagesCurrentZoomStack.hidden = true;
       if (exerciseImagesCurrentPlaceholder) {
         exerciseImagesCurrentPlaceholder.hidden = false;
       }
@@ -408,7 +412,7 @@
       exerciseImagesNewPreview.removeAttribute("src");
       exerciseImagesNewPreview.hidden = true;
     }
-    if (exerciseImagesNewZoom) exerciseImagesNewZoom.hidden = true;
+    if (exerciseImagesNewZoomStack) exerciseImagesNewZoomStack.hidden = true;
     if (exerciseImagesNewPlaceholder) exerciseImagesNewPlaceholder.hidden = false;
 
     renderExerciseImagesList();
@@ -425,7 +429,7 @@
         exerciseImagesNewPreview.removeAttribute("src");
         exerciseImagesNewPreview.hidden = true;
       }
-      if (exerciseImagesNewZoom) exerciseImagesNewZoom.hidden = true;
+      if (exerciseImagesNewZoomStack) exerciseImagesNewZoomStack.hidden = true;
       if (exerciseImagesNewPlaceholder) exerciseImagesNewPlaceholder.hidden = false;
       return;
     }
@@ -450,7 +454,7 @@
       exerciseImagesNewPreview.src = objUrl;
       exerciseImagesNewPreview.hidden = false;
     }
-    if (exerciseImagesNewZoom) exerciseImagesNewZoom.hidden = false;
+    if (exerciseImagesNewZoomStack) exerciseImagesNewZoomStack.hidden = false;
     if (exerciseImagesNewPlaceholder) exerciseImagesNewPlaceholder.hidden = true;
     exerciseImagesPendingBlob = file;
     if (exerciseImagesSave) exerciseImagesSave.disabled = false;
@@ -2049,7 +2053,7 @@
     showModal(cropDialog);
     cropImage.onload = () => {
       cropper = new Cropper(cropImage, {
-        aspectRatio: 16 / 10,
+        aspectRatio: 8 / 5,
         viewMode: 1,
         dragMode: "move",
         autoCropArea: 1,
@@ -2062,7 +2066,7 @@
 
   function applyCrop() {
     if (!cropper) return;
-    // Exact 16:10 export — fill any gap with theme dark, never white letterbox.
+    // Exact 8:5 export (1280×800-style) — fill any gap with theme dark, never white letterbox.
     const canvas = cropper.getCroppedCanvas({
       width: 1200,
       height: 750,
