@@ -1,8 +1,8 @@
 {
-  "version": 62,
-  "updatedAtMs": 1794005058991,
+  "version": 63,
+  "updatedAtMs": 1794005110478,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 1413362,
+  "totalBytes": 1486646,
   "images": [
     {
       "id": "abs",
@@ -241,8 +241,8 @@
     {
       "id": "footballBallMastery",
       "file": "exercise_guides/footballBallMastery.webp",
-      "bytes": 9202,
-      "sha256": "124f833bfe66e2da"
+      "bytes": 82486,
+      "sha256": "f0a1f781ac182537"
     },
     {
       "id": "footballConeSlalom",
