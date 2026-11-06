@@ -2166,6 +2166,17 @@ body.admin-authed .preview-footer-actions .btn-delete-admin {
   cursor: pointer;
 }
 
+.cover-actions button.secondary {
+  background: transparent;
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.cover-actions button.secondary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .cover-actions #edit-cover-upload {
   background: var(--primary);
   color: var(--on-primary);

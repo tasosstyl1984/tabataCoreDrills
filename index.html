@@ -8,7 +8,7 @@
   <link rel="icon" href="img/logo-mark.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400..700,0..1,0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="css/site.css?v=51" />
+  <link rel="stylesheet" href="css/site.css?v=52" />
 </head>
 <body>
   <dialog id="busy-dialog" class="busy-dialog" aria-live="assertive" aria-busy="false">
@@ -306,6 +306,7 @@
               </div>
               <div class="cover-actions">
                 <button type="button" id="edit-cover-upload">Upload &amp; crop</button>
+                <button type="button" id="edit-cover-copy-current" class="secondary" disabled>Copy current</button>
                 <button type="button" id="edit-cover-clear" class="btn-cover-clear">Clear</button>
                 <input id="edit-cover-file" type="file" accept="image/*" hidden />
               </div>
@@ -323,6 +324,7 @@
                 </div>
                 <div class="cover-actions">
                   <button type="button" id="edit-cover-pill-upload">Upload &amp; crop</button>
+                  <button type="button" id="edit-cover-pill-copy-current" class="secondary" disabled>Copy current</button>
                   <button type="button" id="edit-cover-pill-clear" class="btn-cover-clear">Clear</button>
                   <button type="button" id="edit-cover-pill-sync" class="secondary" title="Copy hero cover path">Match hero</button>
                   <input id="edit-cover-pill-file" type="file" accept="image/*" hidden />
@@ -539,6 +541,6 @@
   <script src="js/zoom-pan.js?v=5"></script>
   <script src="js/catalog.js?v=39"></script>
   <script src="js/weekly-plans.js?v=1"></script>
-  <script src="js/admin.js?v=51"></script>
+  <script src="js/admin.js?v=52"></script>
 </body>
 </html>
