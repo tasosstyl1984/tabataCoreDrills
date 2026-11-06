@@ -3,8 +3,8 @@
  * Expects: .zoom-viewport > .zoom-viewport-inner > img.zoom-viewport-img
  */
 (() => {
-  /** Button +/− step (smaller = finer control). */
-  const BUTTON_ZOOM_STEP = 1.08;
+  const SCALE_MIN = 1;
+  const SCALE_MAX = 5;
   /** Wheel sensitivity (lower = smaller steps per scroll notch). */
   const WHEEL_ZOOM_SENS = 0.001;
 
@@ -66,14 +66,23 @@
       tx = 0;
       ty = 0;
       apply();
+      syncSliderFromScale();
+    }
+
+    function syncSliderFromScale() {
+      const slider = viewport.querySelector(".zoom-viewport-slider");
+      if (!slider) return;
+      const pct = Math.round(scale * 100);
+      slider.value = String(clamp(pct, 100, 500));
     }
 
     function onWheel(e) {
       e.preventDefault();
       const factor = Math.exp(-e.deltaY * WHEEL_ZOOM_SENS);
-      scale = clamp(scale * factor, 1, 5);
+      scale = clamp(scale * factor, SCALE_MIN, SCALE_MAX);
       clampPan();
       apply();
+      syncSliderFromScale();
     }
 
     function onPointerDown(e) {
@@ -113,31 +122,21 @@
     viewport.addEventListener("pointerup", onPointerUp, opt);
     viewport.addEventListener("pointercancel", onPointerUp, opt);
 
-    const zoomIn = viewport.querySelector("[data-zoom-in]");
-    const zoomOut = viewport.querySelector("[data-zoom-out]");
+    const zoomSlider = viewport.querySelector(".zoom-viewport-slider");
+    if (zoomSlider) {
+      zoomSlider.addEventListener(
+        "input",
+        () => {
+          const v = Number(zoomSlider.value);
+          if (!Number.isFinite(v)) return;
+          scale = clamp(v / 100, SCALE_MIN, SCALE_MAX);
+          clampPan();
+          apply();
+        },
+        opt,
+      );
+    }
     const zoomReset = viewport.querySelector("[data-zoom-reset]");
-    if (zoomIn) {
-      zoomIn.addEventListener(
-        "click",
-        () => {
-          scale = clamp(scale * BUTTON_ZOOM_STEP, 1, 5);
-          clampPan();
-          apply();
-        },
-        opt,
-      );
-    }
-    if (zoomOut) {
-      zoomOut.addEventListener(
-        "click",
-        () => {
-          scale = clamp(scale / BUTTON_ZOOM_STEP, 1, 5);
-          clampPan();
-          apply();
-        },
-        opt,
-      );
-    }
     if (zoomReset) {
       zoomReset.addEventListener("click", reset, opt);
     }
@@ -152,6 +151,8 @@
 
     if (img.complete && img.naturalWidth) {
       reset();
+    } else {
+      syncSliderFromScale();
     }
 
     return () => ac.abort();

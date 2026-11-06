@@ -431,9 +431,11 @@
       const zoomBlock = img
         ? `<div class="exercise-image-viewport zoom-viewport" id="exercise-detail-zoom" aria-label="Exercise image" tabindex="0">
             <div class="zoom-viewport-toolbar" role="toolbar" aria-label="Zoom">
-              <button type="button" class="zoom-tool" data-zoom-out title="Zoom out" aria-label="Zoom out">−</button>
-              <button type="button" class="zoom-tool" data-zoom-reset title="Reset" aria-label="Reset zoom">1:1</button>
-              <button type="button" class="zoom-tool" data-zoom-in title="Zoom in" aria-label="Zoom in">+</button>
+              <label class="zoom-slider-label">
+                <span class="sr-only">Zoom</span>
+                <input type="range" class="zoom-viewport-slider" min="100" max="500" step="1" value="100" aria-label="Zoom level" />
+              </label>
+              <button type="button" class="zoom-tool" data-zoom-reset title="Reset zoom and pan" aria-label="Reset zoom">Reset</button>
             </div>
             <div class="zoom-viewport-inner">
               <img class="exercise-image zoom-viewport-img" src="${escapeAttr(img)}" alt="${escapeAttr(title)}" />
