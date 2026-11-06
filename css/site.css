@@ -906,41 +906,47 @@ code {
   cursor: grabbing;
 }
 
+/* Right rail: do not cover the top of the exercise image */
 .zoom-viewport-toolbar {
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
-  left: 0.5rem;
+  bottom: 0.5rem;
+  left: auto;
   z-index: 2;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 0.35rem;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  max-width: 3.25rem;
   background: var(--surface-high);
   opacity: 0.96;
   border: 1px solid var(--border);
   border-radius: 10px;
-  padding: 0.25rem 0.35rem;
+  padding: 0.35rem 0.25rem;
 }
 
 .zoom-slider-label {
-  flex: 1 1 8rem;
-  min-width: 0;
+  flex: 1 1 auto;
   display: flex;
   align-items: center;
+  justify-content: center;
+  min-height: 0;
   margin: 0;
 }
 
+/* Vertical range: fills rail height without spanning image width */
 .zoom-viewport-slider {
-  width: 100%;
-  min-width: 8rem;
-  max-width: 20rem;
-  height: 1.35rem;
+  width: 1.5rem;
+  height: 100%;
+  min-height: 4rem;
   margin: 0;
   padding: 0;
   cursor: pointer;
   accent-color: var(--primary);
+  writing-mode: vertical-lr;
+  direction: rtl;
 }
 
 .zoom-tool {
@@ -959,6 +965,17 @@ code {
 
 .zoom-tool:hover {
   background: var(--primary-container);
+}
+
+.zoom-viewport-toolbar .zoom-tool {
+  flex-shrink: 0;
+  width: 100%;
+  min-width: 0;
+  padding: 0.3rem 0.2rem;
+  font-size: 0.72rem;
+  line-height: 1.15;
+  text-align: center;
+  word-break: break-word;
 }
 
 .zoom-viewport-inner {
