@@ -1,8 +1,8 @@
 {
-  "version": 66,
-  "updatedAtMs": 1794006212791,
+  "version": 67,
+  "updatedAtMs": 1794006299510,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 1749730,
+  "totalBytes": 1871962,
   "images": [
     {
       "id": "abs",
@@ -379,8 +379,8 @@
     {
       "id": "jumpingJacks",
       "file": "exercise_guides/jumpingJacks.webp",
-      "bytes": 7656,
-      "sha256": "0b2f59ba46b73e29"
+      "bytes": 129888,
+      "sha256": "4ea78ab76ca9ed43"
     },
     {
       "id": "jumpingLunges",
