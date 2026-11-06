@@ -472,31 +472,6 @@
     return hex.slice(0, 16);
   }
 
-  /**
-   * @param {Blob | File} imageBlob Already WebP from the crop dialog, or raw image to encode.
-   * @returns {Promise<Uint8Array>}
-   */
-  async function fileToWebpBytes(imageBlob) {
-    const type = String(imageBlob?.type || "");
-    if (type === "image/webp") {
-      return new Uint8Array(await imageBlob.arrayBuffer());
-    }
-    const bitmap = await createImageBitmap(imageBlob);
-    const canvas = document.createElement("canvas");
-    canvas.width = bitmap.width;
-    canvas.height = bitmap.height;
-    const ctx = canvas.getContext("2d");
-    if (!ctx) throw new Error("Canvas not supported");
-    ctx.drawImage(bitmap, 0, 0);
-    const blob = await new Promise((resolve) =>
-      canvas.toBlob((b) => resolve(b), "image/webp", 0.95),
-    );
-    if (!blob) {
-      throw new Error("WebP encode failed — try another browser or use PNG/JPEG");
-    }
-    return new Uint8Array(await blob.arrayBuffer());
-  }
-
   function updateManifestImages(manifest, id, relFile, byteLen, sha16) {
     const imgs = Array.isArray(manifest.images) ? [...manifest.images] : [];
     const idx = imgs.findIndex((e) => e && e.id === id);
@@ -520,6 +495,52 @@
     return manifest;
   }
 
+  /**
+   * Renders the replacement preview exactly as shown (3:2 viewport, zoom/pan, letterbox)
+   * to 1536×1024 WebP bytes — matches Tabata Core exercise guide slot.
+   * @returns {Promise<Uint8Array>}
+   */
+  async function exportExerciseReplacementViewportToWebpBytes() {
+    const img = exerciseImagesNewPreview;
+    const viewport = exerciseImagesNewZoom;
+    if (!img || !viewport || !img.naturalWidth) {
+      throw new Error("No preview image to export");
+    }
+    const bg = "#EDEEF0";
+    const outW = 1536;
+    const outH = 1024;
+    const vr = viewport.getBoundingClientRect();
+    const ir = img.getBoundingClientRect();
+    const nw = img.naturalWidth;
+    const nh = img.naturalHeight;
+    if (!vr.width || !vr.height || !nw || !nh) {
+      throw new Error("Could not measure preview for export");
+    }
+    const canvas = document.createElement("canvas");
+    canvas.width = outW;
+    canvas.height = outH;
+    const ctx = canvas.getContext("2d");
+    if (!ctx) throw new Error("Canvas not supported");
+    ctx.fillStyle = bg;
+    ctx.fillRect(0, 0, outW, outH);
+    // Map viewport CSS pixels → output; draw full natural image into its on-screen rect (after zoom/pan).
+    ctx.setTransform(
+      outW / vr.width,
+      0,
+      0,
+      outH / vr.height,
+      (-vr.left * outW) / vr.width,
+      (-vr.top * outH) / vr.height,
+    );
+    ctx.drawImage(img, 0, 0, nw, nh, ir.left, ir.top, ir.width, ir.height);
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    const blob = await new Promise((resolve) =>
+      canvas.toBlob((b) => resolve(b), "image/webp", 0.88),
+    );
+    if (!blob) throw new Error("Could not encode WebP from preview");
+    return new Uint8Array(await blob.arrayBuffer());
+  }
+
   async function saveExerciseImageToGithub() {
     if (!isAuthed()) {
       showModal(loginDialog);
@@ -533,7 +554,7 @@
     setExerciseImagesError("");
     showBusy("Encoding and uploading image…");
     try {
-      const webpBytes = await fileToWebpBytes(exerciseImagesPendingBlob);
+      const webpBytes = await exportExerciseReplacementViewportToWebpBytes();
       const b64 = encodeBytes(webpBytes);
       const sha16 = await sha256HexPrefix16(webpBytes);
       const path = `exercise_guides/${id}.webp`;
