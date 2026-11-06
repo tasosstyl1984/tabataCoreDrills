@@ -371,7 +371,7 @@
       }
       exerciseImagesPendingPreviewUrl = null;
     }
-    if (exerciseImagesSave) exerciseImagesSave.disabled = true;
+    refreshExerciseSaveButton();
     detachZoomHandlers();
     if (exerciseImagesEmpty) exerciseImagesEmpty.hidden = true;
     if (exerciseImagesEditor) exerciseImagesEditor.hidden = false;
@@ -444,7 +444,7 @@
       }
       exerciseImagesPendingPreviewUrl = null;
     }
-    if (exerciseImagesSave) exerciseImagesSave.disabled = true;
+    refreshExerciseSaveButton();
     detachZoomHandlers();
     if (!file) {
       if (exerciseImagesNewPreview) {
@@ -472,6 +472,19 @@
     return hex.slice(0, 16);
   }
 
+  function refreshExerciseSaveButton() {
+    if (!exerciseImagesSave) return;
+    const id = exerciseImagesSelectedId?.trim();
+    const img = exerciseImagesNewPreview;
+    const hasPreview =
+      img &&
+      !img.hidden &&
+      img.getAttribute("src") &&
+      img.complete &&
+      img.naturalWidth > 0;
+    exerciseImagesSave.disabled = !(id && (exerciseImagesPendingBlob != null || hasPreview));
+  }
+
   function updateManifestImages(manifest, id, relFile, byteLen, sha16) {
     const imgs = Array.isArray(manifest.images) ? [...manifest.images] : [];
     const idx = imgs.findIndex((e) => e && e.id === id);
@@ -493,6 +506,43 @@
     manifest.updatedAtMs = Date.now();
     if (!manifest.baseUrl) manifest.baseUrl = RAW_BASE;
     return manifest;
+  }
+
+  function uint8ArrayFromDataUrl(dataUrl) {
+    const comma = dataUrl.indexOf(",");
+    if (comma < 0) throw new Error("Invalid image data URL");
+    const base64 = dataUrl.slice(comma + 1);
+    const bin = atob(base64);
+    const len = bin.length;
+    const out = new Uint8Array(len);
+    for (let i = 0; i < len; i += 1) out[i] = bin.charCodeAt(i);
+    return out;
+  }
+
+  /**
+   * WebP from canvas — `toBlob('image/webp')` returns null on some Safari / Firefox builds.
+   * @param {HTMLCanvasElement} canvas
+   * @param {number} quality 0..1
+   * @returns {Promise<Uint8Array>}
+   */
+  async function canvasToWebpBytes(canvas, quality) {
+    const blob = await new Promise((resolve) =>
+      canvas.toBlob((b) => resolve(b), "image/webp", quality),
+    );
+    if (blob) return new Uint8Array(await blob.arrayBuffer());
+    let dataUrl = "";
+    try {
+      dataUrl = canvas.toDataURL("image/webp", quality);
+    } catch (e) {
+      const msg = e && e.message ? String(e.message) : String(e);
+      throw new Error(`Could not encode WebP (${msg}). Try Chrome or Edge, or reduce zoom.`);
+    }
+    if (dataUrl && dataUrl.startsWith("data:image/webp")) {
+      return uint8ArrayFromDataUrl(dataUrl);
+    }
+    throw new Error(
+      "This browser cannot encode WebP from the preview. Use Chrome or Edge, or update Safari.",
+    );
   }
 
   /**
@@ -524,21 +574,22 @@
     ctx.fillStyle = bg;
     ctx.fillRect(0, 0, outW, outH);
     // Map viewport CSS pixels → output; draw full natural image into its on-screen rect (after zoom/pan).
-    ctx.setTransform(
-      outW / vr.width,
-      0,
-      0,
-      outH / vr.height,
-      (-vr.left * outW) / vr.width,
-      (-vr.top * outH) / vr.height,
-    );
-    ctx.drawImage(img, 0, 0, nw, nh, ir.left, ir.top, ir.width, ir.height);
+    try {
+      ctx.setTransform(
+        outW / vr.width,
+        0,
+        0,
+        outH / vr.height,
+        (-vr.left * outW) / vr.width,
+        (-vr.top * outH) / vr.height,
+      );
+      ctx.drawImage(img, 0, 0, nw, nh, ir.left, ir.top, ir.width, ir.height);
+    } catch (e) {
+      const msg = e && e.message ? String(e.message) : String(e);
+      throw new Error(`Could not composite preview (${msg}). Try Reset zoom, then Save.`);
+    }
     ctx.setTransform(1, 0, 0, 1, 0, 0);
-    const blob = await new Promise((resolve) =>
-      canvas.toBlob((b) => resolve(b), "image/webp", 0.88),
-    );
-    if (!blob) throw new Error("Could not encode WebP from preview");
-    return new Uint8Array(await blob.arrayBuffer());
+    return canvasToWebpBytes(canvas, 0.88);
   }
 
   async function saveExerciseImageToGithub() {
@@ -547,8 +598,19 @@
       return;
     }
     const id = exerciseImagesSelectedId;
-    if (!id || !exerciseImagesPendingBlob) {
-      setExerciseImagesError("Choose a replacement image first.");
+    if (!id?.trim()) {
+      setExerciseImagesError("Select an exercise first.");
+      return;
+    }
+    const img = exerciseImagesNewPreview;
+    const hasPreview =
+      img &&
+      !img.hidden &&
+      img.getAttribute("src") &&
+      img.complete &&
+      img.naturalWidth > 0;
+    if (!hasPreview && !exerciseImagesPendingBlob) {
+      setExerciseImagesError("Choose a replacement image and finish crop first.");
       return;
     }
     setExerciseImagesError("");
@@ -598,7 +660,6 @@
       toast(`Saved ${id}.webp`);
       exerciseImagesPendingBlob = null;
       if (exerciseImagesFile) exerciseImagesFile.value = "";
-      if (exerciseImagesSave) exerciseImagesSave.disabled = true;
       await selectExerciseForImages(id);
     } catch (err) {
       const msg = err?.message || String(err);
@@ -2119,7 +2180,7 @@
     };
   }
 
-  function applyCrop() {
+  async function applyCrop() {
     if (!cropper) return;
     const isExercise = cropMode === "exerciseGuide";
     // Plan cover: matches Tabata Core Android [pickAndCropPlanCover] — 8:5, max 1200×750.
@@ -2143,49 +2204,56 @@
       toast("Could not crop image");
       return;
     }
-    canvas.toBlob(
-      (blob) => {
-        if (!blob) {
-          toast(isExercise ? "Could not encode exercise image" : "Could not encode cover image");
-          return;
+    let webpBytes;
+    try {
+      webpBytes = await canvasToWebpBytes(canvas, 0.88);
+    } catch (e) {
+      const msg = e && e.message ? String(e.message) : String(e);
+      toast(
+        isExercise
+          ? `Could not encode exercise image — ${msg}`
+          : `Could not encode cover image — ${msg}`,
+      );
+      return;
+    }
+    const blob = new Blob([webpBytes], { type: "image/webp" });
+    destroyCropper();
+    hideModal(cropDialog);
+    if (isExercise) {
+      if (exerciseImagesPendingPreviewUrl) {
+        try {
+          URL.revokeObjectURL(exerciseImagesPendingPreviewUrl);
+        } catch (_) {
+          /* ignore */
         }
-        destroyCropper();
-        hideModal(cropDialog);
-        if (isExercise) {
-          if (exerciseImagesPendingPreviewUrl) {
-            try {
-              URL.revokeObjectURL(exerciseImagesPendingPreviewUrl);
-            } catch (_) {
-              /* ignore */
-            }
-            exerciseImagesPendingPreviewUrl = null;
+        exerciseImagesPendingPreviewUrl = null;
+      }
+      exerciseImagesPendingBlob = blob;
+      exerciseImagesPendingPreviewUrl = URL.createObjectURL(blob);
+      if (exerciseImagesNewPreview) {
+        exerciseImagesNewPreview.onload = () => {
+          if (typeof window.attachExerciseImageZoomPan === "function" && exerciseImagesNewZoom) {
+            if (detachNewZoom) detachNewZoom();
+            detachNewZoom = window.attachExerciseImageZoomPan(exerciseImagesNewZoom);
           }
-          exerciseImagesPendingBlob = blob;
-          exerciseImagesPendingPreviewUrl = URL.createObjectURL(blob);
-          if (exerciseImagesNewPreview) {
-            exerciseImagesNewPreview.onload = () => {
-              if (typeof window.attachExerciseImageZoomPan === "function" && exerciseImagesNewZoom) {
-                if (detachNewZoom) detachNewZoom();
-                detachNewZoom = window.attachExerciseImageZoomPan(exerciseImagesNewZoom);
-              }
-            };
-            exerciseImagesNewPreview.src = exerciseImagesPendingPreviewUrl;
-            exerciseImagesNewPreview.hidden = false;
-          }
-          if (exerciseImagesNewZoomStack) exerciseImagesNewZoomStack.hidden = false;
-          if (exerciseImagesNewPlaceholder) exerciseImagesNewPlaceholder.hidden = true;
-          if (exerciseImagesSave) exerciseImagesSave.disabled = false;
-          return;
+          refreshExerciseSaveButton();
+        };
+        exerciseImagesNewPreview.src = exerciseImagesPendingPreviewUrl;
+        exerciseImagesNewPreview.hidden = false;
+        if (exerciseImagesNewPreview.complete) {
+          refreshExerciseSaveButton();
         }
-        clearPendingCover();
-        pendingCoverBlob = blob;
-        pendingCoverUrl = URL.createObjectURL(blob);
-        if (editCover) editCover.value = "";
-        setCoverPreview(pendingCoverUrl);
-      },
-      "image/webp",
-      0.88,
-    );
+      }
+      if (exerciseImagesNewZoomStack) exerciseImagesNewZoomStack.hidden = false;
+      if (exerciseImagesNewPlaceholder) exerciseImagesNewPlaceholder.hidden = true;
+      refreshExerciseSaveButton();
+      return;
+    }
+    clearPendingCover();
+    pendingCoverBlob = blob;
+    pendingCoverUrl = URL.createObjectURL(blob);
+    if (editCover) editCover.value = "";
+    setCoverPreview(pendingCoverUrl);
   }
 
   async function deleteCoverPathBestEffort(path) {
@@ -2806,7 +2874,6 @@
     exerciseImagesClear.addEventListener("click", () => {
       if (exerciseImagesFile) exerciseImagesFile.value = "";
       onExerciseImageFile(null);
-      if (exerciseImagesSave) exerciseImagesSave.disabled = true;
     });
   }
   if (exerciseImagesSave) {
