@@ -1,8 +1,8 @@
 {
-    "version": 69,
-    "updatedAtMs": 1794006420174,
+    "version": 70,
+    "updatedAtMs": 1794006533834,
     "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-    "totalBytes": 27824452,
+    "totalBytes": 27626452,
     "images": [
         {
             "id": "abs",
@@ -511,8 +511,8 @@
         {
             "id": "plank",
             "file": "exercise_guides/plank.webp",
-            "bytes": 351836,
-            "sha256": "5ec6cca40fc4b726"
+            "bytes": 153836,
+            "sha256": "1a689469deb769e3"
         },
         {
             "id": "plateRotations",
