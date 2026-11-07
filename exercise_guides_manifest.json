@@ -1,8 +1,8 @@
 {
-  "version": 84,
-  "updatedAtMs": 1794041019495,
+  "version": 85,
+  "updatedAtMs": 1794041101759,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 3628760,
+  "totalBytes": 3754166,
   "images": [
     {
       "id": "abs",
@@ -259,8 +259,8 @@
     {
       "id": "footballDribbling",
       "file": "exercise_guides/footballDribbling.webp",
-      "bytes": 8794,
-      "sha256": "015b887106dc994f"
+      "bytes": 134200,
+      "sha256": "09aaf392f6d93aa7"
     },
     {
       "id": "footballElastico",
