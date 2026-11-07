@@ -1,8 +1,8 @@
 {
-    "version": 100,
-    "updatedAtMs": 1794042207986,
+    "version": 101,
+    "updatedAtMs": 1794042418989,
     "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-    "totalBytes": 24985266,
+    "totalBytes": 24924076,
     "images": [
         {
             "id": "abs",
@@ -397,8 +397,8 @@
         {
             "id": "kettlebellCleanPress",
             "file": "exercise_guides/kettlebellCleanPress.webp",
-            "bytes": 245078,
-            "sha256": "83de1c2b73418b31"
+            "bytes": 183888,
+            "sha256": "5345751ba2ded785"
         },
         {
             "id": "kettlebellDeadlift",
