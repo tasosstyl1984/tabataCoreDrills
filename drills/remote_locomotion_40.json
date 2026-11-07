@@ -1,7 +1,6 @@
 {
   "id": "remote_locomotion_40",
   "name": "Locomotion",
-  "description": "Crawls and carries to train movement quality, shoulder stability, and total-body control.",
   "createdAtMs": 1791622139758,
   "sets": 4,
   "repsPerSet": 6,
@@ -155,5 +154,8 @@
         "restAfterSetSeconds": 100
       }
     ]
-  }
+  },
+  "description": "Crawls and carries to train movement quality, shoulder stability, and total-body control.",
+  "coverImagePill": "plan_covers/default_locomotion_40_pill.webp",
+  "coverImagePillAlign": -1
 }

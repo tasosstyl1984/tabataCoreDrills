@@ -1,6 +1,6 @@
 {
-  "version": 26,
-  "updatedAtMs": 1794069870320,
+  "version": 27,
+  "updatedAtMs": 1794069905354,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -256,7 +256,7 @@
       "id": "remote_locomotion_40",
       "name": "Locomotion",
       "file": "drills/remote_locomotion_40.json",
-      "updatedAtMs": 1791622139758,
+      "updatedAtMs": 1794069904461,
       "category": "conditioning",
       "description": "Crawls and carries to train movement quality, shoulder stability, and total-body control.",
       "coverImage": "plan_covers/default_locomotion_40.webp",
@@ -268,6 +268,8 @@
         "plank",
         "jumpingJacks"
       ],
+      "coverImagePill": "plan_covers/default_locomotion_40_pill.webp",
+      "coverImagePillAlign": -1,
       "preset": true,
       "shipsWithApp": true,
       "defaultId": "default_locomotion_40"
