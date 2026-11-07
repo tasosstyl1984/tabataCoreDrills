@@ -2374,6 +2374,7 @@ dialog.is-behind-crop {
   font-size: 1.25rem;
 }
 
+/* Shared by exercise, plan cover, and ready pill. Padding stays 0 so the photo centers in the checkerboard. */
 .crop-stage {
   flex: 0 0 min(42vh, 400px);
   height: min(42vh, 400px);
