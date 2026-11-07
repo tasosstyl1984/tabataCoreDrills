@@ -1,8 +1,8 @@
 {
-  "version": 71,
-  "updatedAtMs": 1794012380646,
+  "version": 72,
+  "updatedAtMs": 1794012654924,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 2275724,
+  "totalBytes": 2429542,
   "images": [
     {
       "id": "abs",
@@ -283,8 +283,8 @@
     {
       "id": "footballReactionDrills",
       "file": "exercise_guides/footballReactionDrills.webp",
-      "bytes": 9978,
-      "sha256": "77810cb5e9a50917"
+      "bytes": 163796,
+      "sha256": "8debcbb342936b66"
     },
     {
       "id": "footballWallPassing",
