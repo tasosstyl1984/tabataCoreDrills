@@ -1,6 +1,6 @@
 {
-  "version": 169,
-  "updatedAtMs": 1794070242285,
+  "version": 170,
+  "updatedAtMs": 1794070271270,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -452,16 +452,18 @@
       "id": "remote_upper_body",
       "name": "Upper Body",
       "file": "drills/remote_upper_body.json",
-      "updatedAtMs": 1791624433060,
+      "updatedAtMs": 1794070270213,
       "category": "chest",
       "description": "Chest-focused pressing and fly work — bench, incline, flies, and pullover for upper-body push strength.",
-      "coverImage": "plan_covers/remote_upper_body.webp",
+      "coverImage": "plan_covers/remote_upper_body_1794070270196.webp",
       "activityIds": [
         "benchPress",
         "chestFlies",
         "inclineBench",
         "pullover"
-      ]
+      ],
+      "coverImagePill": "plan_covers/remote_upper_body_pill_1794070270204.webp",
+      "coverImagePillAlign": -1
     },
     {
       "id": "remote_weighted_shadow_boxing_complex",

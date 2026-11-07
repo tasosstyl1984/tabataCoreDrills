@@ -1,7 +1,6 @@
 {
   "id": "remote_upper_body",
   "name": "Upper Body",
-  "description": "Chest-focused pressing and fly work — bench, incline, flies, and pullover for upper-body push strength.",
   "createdAtMs": 1791564300000,
   "sets": 5,
   "repsPerSet": 4,
@@ -140,5 +139,8 @@
         "restAfterSetSeconds": 60
       }
     ]
-  }
+  },
+  "description": "Chest-focused pressing and fly work — bench, incline, flies, and pullover for upper-body push strength.",
+  "coverImagePill": "plan_covers/remote_upper_body_pill_1794070270204.webp",
+  "coverImagePillAlign": -1
 }
