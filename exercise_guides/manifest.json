@@ -1,8 +1,8 @@
 {
-    "version": 82,
-    "updatedAtMs": 1794036244834,
+    "version": 83,
+    "updatedAtMs": 1794036680175,
     "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-    "totalBytes": 26680068,
+    "totalBytes": 26471450,
     "images": [
         {
             "id": "abs",
@@ -541,8 +541,8 @@
         {
             "id": "pushups",
             "file": "exercise_guides/pushups.webp",
-            "bytes": 336362,
-            "sha256": "e49c8368445f9951"
+            "bytes": 127744,
+            "sha256": "768c33dc636d805f"
         },
         {
             "id": "renegadeRow",
