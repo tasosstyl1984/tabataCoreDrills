@@ -1,7 +1,6 @@
 {
   "id": "remote_jump_rope_drills_50",
   "name": "Jump Rope Drills",
-  "description": "Steady jump-rope rounds for foot speed, coordination, and light cardio endurance you can do almost anywhere.",
   "createdAtMs": 1791622139758,
   "sets": 4,
   "repsPerSet": 8,
@@ -195,5 +194,8 @@
         "restAfterSetSeconds": 90
       }
     ]
-  }
+  },
+  "description": "Steady jump-rope rounds for foot speed, coordination, and light cardio endurance you can do almost anywhere.",
+  "coverImagePill": "plan_covers/default_jump_rope_drills_50_pill.webp",
+  "coverImagePillAlign": -1
 }
