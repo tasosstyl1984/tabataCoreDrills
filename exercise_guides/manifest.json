@@ -1,8 +1,8 @@
 {
-    "version": 87,
-    "updatedAtMs": 1794041142116,
+    "version": 88,
+    "updatedAtMs": 1794041242366,
     "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-    "totalBytes": 25922802,
+    "totalBytes": 25818916,
     "images": [
         {
             "id": "abs",
@@ -367,8 +367,8 @@
         {
             "id": "inclineBench",
             "file": "exercise_guides/inclineBench.webp",
-            "bytes": 231114,
-            "sha256": "ad23aeb3b754aadf"
+            "bytes": 127228,
+            "sha256": "bb0a73bdba7b85cf"
         },
         {
             "id": "inclineFlies",
