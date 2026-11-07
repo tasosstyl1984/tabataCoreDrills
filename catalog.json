@@ -1,23 +1,25 @@
 {
-  "version": 158,
-  "updatedAtMs": 1794061845414,
+  "version": 159,
+  "updatedAtMs": 1794061907825,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
       "id": "remote_back_to_basics",
       "name": "Back to Basics",
       "file": "drills/remote_back_to_basics.json",
-      "updatedAtMs": 1791624433060,
+      "updatedAtMs": 1794061906645,
       "category": "combos",
       "description": "Simple bodyweight foundations — jumping jacks, abs, plank, dead bug, and push-ups to rebuild a reliable base without equipment.",
-      "coverImage": "plan_covers/remote_back_to_basics.webp",
+      "coverImage": "plan_covers/remote_back_to_basics_1794061906621.webp",
       "activityIds": [
         "jumpingJacks",
         "abs",
         "plank",
         "deadBug",
         "pushups"
-      ]
+      ],
+      "coverImagePill": "plan_covers/remote_back_to_basics_pill_1794061906637.webp",
+      "coverImagePillAlign": -0.18000000000000005
     },
     {
       "id": "remote_core_basics",
