@@ -2683,7 +2683,7 @@
       Math.min(
         container.width / image.naturalWidth,
         container.height / image.naturalHeight,
-      ) * 0.98;
+      ) * 0.84;
     if (fitZoom > 0 && Number.isFinite(fitZoom)) {
       cropFitRatio = fitZoom;
       inst.zoomTo(fitZoom);
