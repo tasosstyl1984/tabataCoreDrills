@@ -1,8 +1,8 @@
 {
-  "version": 75,
-  "updatedAtMs": 1794013472917,
+  "version": 76,
+  "updatedAtMs": 1794013831750,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 2701584,
+  "totalBytes": 2846738,
   "images": [
     {
       "id": "abs",
@@ -571,8 +571,8 @@
     {
       "id": "seatedCableRow",
       "file": "exercise_guides/seatedCableRow.webp",
-      "bytes": 16098,
-      "sha256": "55f7845fe2a5934a"
+      "bytes": 161252,
+      "sha256": "601d8cef446f418a"
     },
     {
       "id": "shadowBoxing",
