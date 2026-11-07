@@ -1,8 +1,8 @@
 {
-    "version": 84,
-    "updatedAtMs": 1794036876247,
+    "version": 85,
+    "updatedAtMs": 1794041019495,
     "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-    "totalBytes": 26398778,
+    "totalBytes": 26192388,
     "images": [
         {
             "id": "abs",
@@ -457,8 +457,8 @@
         {
             "id": "latPulldown",
             "file": "exercise_guides/latPulldown.webp",
-            "bytes": 344616,
-            "sha256": "205b730d6503250f"
+            "bytes": 138226,
+            "sha256": "f2d7e4d1e1f9f136"
         },
         {
             "id": "legCurl",
