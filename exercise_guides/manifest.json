@@ -1,8 +1,8 @@
 {
-    "version": 122,
-    "updatedAtMs": 1794046448221,
+    "version": 123,
+    "updatedAtMs": 1794046503869,
     "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-    "totalBytes": 24163894,
+    "totalBytes": 24138560,
     "images": [
         {
             "id": "abs",
@@ -409,8 +409,8 @@
         {
             "id": "kettlebellGobletSquat",
             "file": "exercise_guides/kettlebellGobletSquat.webp",
-            "bytes": 188330,
-            "sha256": "57be79af2b0399ec"
+            "bytes": 162996,
+            "sha256": "19a55d001ffb1682"
         },
         {
             "id": "kettlebellGorillaRow",
