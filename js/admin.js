@@ -2668,29 +2668,33 @@
   /** Fit the whole source in the stage and center the aspect-locked box. */
   function layoutCropper(inst) {
     if (!inst) return;
+    const root = inst.container;
+    if (root) {
+      root.style.width = "100%";
+      root.style.height = "100%";
+    }
     inst.resize();
     const container = inst.getContainerData();
     const image = inst.getImageData();
+    const viewW = root && root.clientWidth ? root.clientWidth : container.width;
+    const viewH = root && root.clientHeight ? root.clientHeight : container.height;
     if (
-      !container.width ||
-      !container.height ||
+      !viewW ||
+      !viewH ||
       !image.naturalWidth ||
       !image.naturalHeight
     ) {
       return;
     }
-    // Display size only. The photo keeps its own aspect; 0.72 leaves equal checkerboard on every side.
+    // Display size only. The photo keeps its own aspect and is centered in the checkerboard.
     const fitZoom =
-      Math.min(
-        container.width / image.naturalWidth,
-        container.height / image.naturalHeight,
-      ) * 0.72;
+      Math.min(viewW / image.naturalWidth, viewH / image.naturalHeight) * 0.72;
     if (!(fitZoom > 0) || !Number.isFinite(fitZoom)) return;
     cropFitRatio = fitZoom;
     const canvasW = image.naturalWidth * fitZoom;
     const canvasH = image.naturalHeight * fitZoom;
-    const canvasLeft = (container.width - canvasW) / 2;
-    const canvasTop = (container.height - canvasH) / 2;
+    const canvasLeft = (viewW - canvasW) / 2;
+    const canvasTop = (viewH - canvasH) / 2;
     inst.zoomTo(fitZoom);
     inst.setCanvasData({
       left: canvasLeft,
@@ -2791,7 +2795,6 @@
           const ratio = event?.detail?.ratio;
           if (Number.isFinite(ratio) && ratio < cropFitRatio * 0.995) {
             event.preventDefault();
-            if (cropper) cropper.zoomTo(cropFitRatio);
             setCropZoomSlider(0);
             return;
           }
@@ -2804,6 +2807,7 @@
         },
       });
       window.setTimeout(() => layoutCropper(cropper), 50);
+      window.setTimeout(() => layoutCropper(cropper), 200);
     };
     cropImage.src = cropObjectUrl;
   }
