@@ -1,8 +1,8 @@
 {
-    "version": 80,
-    "updatedAtMs": 1794014140491,
+    "version": 81,
+    "updatedAtMs": 1794035933442,
     "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-    "totalBytes": 26957878,
+    "totalBytes": 26814126,
     "images": [
         {
             "id": "abs",
@@ -391,8 +391,8 @@
         {
             "id": "jumpRope",
             "file": "exercise_guides/jumpRope.webp",
-            "bytes": 280292,
-            "sha256": "7403e04089fa8edd"
+            "bytes": 136540,
+            "sha256": "f1581a27f1dbeaf9"
         },
         {
             "id": "kettlebellCleanPress",
