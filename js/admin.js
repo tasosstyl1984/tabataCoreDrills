@@ -1705,6 +1705,7 @@
       },
     };
     if (description) template.description = description;
+    if (cover) template.coverImagePath = cover;
     if (pillCover) template.coverImagePill = pillCover;
     template.coverImagePillAlign = pillAlign;
     if (editingEntry && template.createdAtMs === undefined) {
@@ -3109,40 +3110,55 @@
             });
           }
 
+          // Cover and Ready pill are independent. Either, or both, may be new in this save.
+          const imageWrites = [];
           if (newCoverPath && newCoverBase64) {
-            changes.unshift({
+            imageWrites.push({
               path: newCoverPath,
               content: newCoverBase64,
               encoding: "base64",
             });
-            if (
-              previousCoverPath.startsWith("plan_covers/") &&
-              previousCoverPath !== newCoverPath
-            ) {
-              changes.push({ path: previousCoverPath, delete: true });
-            }
           }
-
           if (newPillCoverPath && newPillCoverBase64) {
-            changes.unshift({
+            imageWrites.push({
               path: newPillCoverPath,
               content: newPillCoverBase64,
               encoding: "base64",
             });
-            if (
-              previousPillCoverPath.startsWith("plan_covers/") &&
-              previousPillCoverPath !== newPillCoverPath
-            ) {
-              changes.push({ path: previousPillCoverPath, delete: true });
-            }
-          } else if (
-            !String(editCoverPill?.value || "").trim() &&
-            previousPillCoverPath.startsWith("plan_covers/") &&
-            previousPillCoverPath !== (editCover?.value || "").trim() &&
-            previousPillCoverPath !== (editingEntry?.coverImage || "").trim() &&
-            previousPillCoverPath !== newCoverPath
+          }
+          const writtenPaths = new Set(imageWrites.map((w) => w.path));
+          const keptCoverPaths = new Set(writtenPaths);
+          const currentCover = (editCover?.value || "").trim();
+          if (currentCover) keptCoverPaths.add(currentCover);
+          if (!newCoverPath) {
+            const existingCover = (editingEntry?.coverImage || "").trim();
+            if (existingCover) keptCoverPaths.add(existingCover);
+          }
+          const queueCoverDelete = (path) => {
+            const p = String(path || "").trim();
+            if (!p.startsWith("plan_covers/") || keptCoverPaths.has(p)) return;
+            if (changes.some((c) => c.delete && c.path === p)) return;
+            changes.push({ path: p, delete: true });
+          };
+
+          for (const write of imageWrites) changes.unshift(write);
+          if (newCoverPath && newCoverBase64) queueCoverDelete(previousCoverPath);
+          if (newPillCoverPath && newPillCoverBase64) {
+            queueCoverDelete(previousPillCoverPath);
+          } else if (!String(editCoverPill?.value || "").trim()) {
+            queueCoverDelete(previousPillCoverPath);
+          }
+          if (
+            newCoverBase64 &&
+            !changes.some((c) => !c.delete && c.path === newCoverPath)
           ) {
-            changes.push({ path: previousPillCoverPath, delete: true });
+            throw new Error("Cover image was left out of the save");
+          }
+          if (
+            newPillCoverBase64 &&
+            !changes.some((c) => !c.delete && c.path === newPillCoverPath)
+          ) {
+            throw new Error("Ready pill image was left out of the save");
           }
 
           await commitFilesAtomic(
