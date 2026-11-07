@@ -1058,22 +1058,14 @@
     });
   }
   if (dialog) {
-    dialog.addEventListener("click", (e) => {
-      if (e.target === dialog) closePreview();
-    });
     dialog.addEventListener("cancel", (e) => {
       e.preventDefault();
-      closePreview();
     });
   }
   if (exerciseCloseBtn) exerciseCloseBtn.addEventListener("click", () => closeExercise());
   if (exerciseDialog) {
-    exerciseDialog.addEventListener("click", (e) => {
-      if (e.target === exerciseDialog) closeExercise();
-    });
     exerciseDialog.addEventListener("cancel", (e) => {
       e.preventDefault();
-      closeExercise();
     });
   }
 
