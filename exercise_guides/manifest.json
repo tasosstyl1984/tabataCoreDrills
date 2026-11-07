@@ -1,8 +1,8 @@
 {
-    "version": 110,
-    "updatedAtMs": 1794045104101,
+    "version": 111,
+    "updatedAtMs": 1794045134355,
     "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-    "totalBytes": 24932022,
+    "totalBytes": 24911012,
     "images": [
         {
             "id": "abs",
@@ -103,8 +103,8 @@
         {
             "id": "broadJumps",
             "file": "exercise_guides/broadJumps.webp",
-            "bytes": 190540,
-            "sha256": "2b1a736ba9388ebd"
+            "bytes": 169530,
+            "sha256": "f9ce591833806adc"
         },
         {
             "id": "bulgarianSplitSquat",
