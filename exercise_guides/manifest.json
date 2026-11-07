@@ -1,8 +1,8 @@
 {
-    "version": 116,
-    "updatedAtMs": 1794045561107,
+    "version": 117,
+    "updatedAtMs": 1794045615508,
     "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-    "totalBytes": 24467758,
+    "totalBytes": 24433124,
     "images": [
         {
             "id": "abs",
@@ -49,8 +49,8 @@
         {
             "id": "bearCrawl",
             "file": "exercise_guides/bearCrawl.webp",
-            "bytes": 193052,
-            "sha256": "0587729c62a4c585"
+            "bytes": 158418,
+            "sha256": "b3e6434de9c68c58"
         },
         {
             "id": "benchPress",
