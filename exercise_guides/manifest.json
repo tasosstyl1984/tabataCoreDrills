@@ -1,8 +1,8 @@
 {
-    "version": 138,
-    "updatedAtMs": 1794048657392,
+    "version": 139,
+    "updatedAtMs": 1794048687826,
     "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-    "totalBytes": 22939554,
+    "totalBytes": 22796332,
     "images": [
         {
             "id": "abs",
@@ -13,8 +13,8 @@
         {
             "id": "arnoldPress",
             "file": "exercise_guides/arnoldPress.webp",
-            "bytes": 270320,
-            "sha256": "c1740f0f1ea35335"
+            "bytes": 127098,
+            "sha256": "60f433bceb2fe04a"
         },
         {
             "id": "aroundTheWorld",
