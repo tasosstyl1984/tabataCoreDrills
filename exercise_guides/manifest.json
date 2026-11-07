@@ -1,8 +1,8 @@
 {
-    "version": 136,
-    "updatedAtMs": 1794048445316,
+    "version": 137,
+    "updatedAtMs": 1794048575276,
     "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-    "totalBytes": 23228410,
+    "totalBytes": 23086360,
     "images": [
         {
             "id": "abs",
@@ -55,8 +55,8 @@
         {
             "id": "benchPress",
             "file": "exercise_guides/benchPress.webp",
-            "bytes": 282452,
-            "sha256": "ec4d2f81f7504ea8"
+            "bytes": 140402,
+            "sha256": "8cc18cf5d9a7c05c"
         },
         {
             "id": "bicepCurls",
