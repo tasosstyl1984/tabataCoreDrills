@@ -2648,7 +2648,7 @@
   let cropFitRatio = 1;
 
   const CROP_HINT =
-    "Drag the frame to move it. Slide right to zoom in. Fit shows the whole photo. Double-click to pan the photo.";
+    "The bright frame is what gets saved. Drag it onto the part you want. Slide right to zoom in. Fit shows the whole photo.";
 
   function setCropDialogLabels() {
     if (cropHint) cropHint.textContent = CROP_HINT;
@@ -2763,6 +2763,7 @@
         dragMode: "crop",
         autoCropArea: 1,
         background: true,
+        modal: true,
         responsive: true,
         restore: false,
         zoomOnWheel: true,

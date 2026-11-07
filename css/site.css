@@ -2408,12 +2408,15 @@ dialog.is-behind-crop {
   max-width: 100%;
 }
 
-.crop-stage .cropper-container,
-.crop-stage .cropper-wrap-box,
-.crop-stage .cropper-canvas,
-.crop-stage .cropper-drag-box {
+.crop-stage .cropper-container {
   max-width: 100% !important;
   max-height: 100% !important;
+  overflow: hidden !important;
+}
+
+.crop-stage .cropper-modal {
+  background-color: #000;
+  opacity: 0.62;
 }
 
 .crop-panel .crop-hint,
