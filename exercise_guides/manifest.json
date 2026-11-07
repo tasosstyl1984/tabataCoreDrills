@@ -1,8 +1,8 @@
 {
-    "version": 94,
-    "updatedAtMs": 1794041571258,
+    "version": 95,
+    "updatedAtMs": 1794041623354,
     "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-    "totalBytes": 25136974,
+    "totalBytes": 24971498,
     "images": [
         {
             "id": "abs",
@@ -433,8 +433,8 @@
         {
             "id": "kettlebellSnatch",
             "file": "exercise_guides/kettlebellSnatch.webp",
-            "bytes": 270974,
-            "sha256": "72ed0a9234e3321e"
+            "bytes": 105498,
+            "sha256": "f1513344b0fe09d9"
         },
         {
             "id": "kettlebellSwings",
