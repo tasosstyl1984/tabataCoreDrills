@@ -1,7 +1,6 @@
 {
   "id": "remote_tabata_classic",
   "name": "Tabata Classic",
-  "description": "The original 20-on / 10-off protocol \u2014 a short all-out cardio blast to build anaerobic capacity and mental grit.",
   "createdAtMs": 1791622139758,
   "sets": 1,
   "repsPerSet": 8,
@@ -52,5 +51,8 @@
         "restAfterSetSeconds": 60
       }
     ]
-  }
+  },
+  "description": "The original 20-on / 10-off protocol — a short all-out cardio blast to build anaerobic capacity and mental grit.",
+  "coverImagePill": "plan_covers/default_tabata_classic_pill.webp",
+  "coverImagePillAlign": -1
 }
