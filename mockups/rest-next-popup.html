@@ -62,6 +62,7 @@
     height: 148px;
     margin: 8px 14px 0;
   }
+  .s-scale .stage { height: 208px; }
   .top {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -242,7 +243,14 @@
     animation-timing-function: ease;
     animation-iteration-count: infinite;
   }
-  .s-scale .card { left: 0; top: 0; width: 168px; transform-origin: 40px 0; animation-name: life-scale; }
+  .s-scale .card {
+    left: 0;
+    top: 0;
+    width: 100%;
+    transform-origin: top left;
+    animation-name: life-scale;
+  }
+  .s-scale .card img { height: 148px; }
   .s-drop .card { left: 0; top: 4px; width: 168px; transform-origin: 50% 0; animation-name: life-drop; }
   .s-bubble .card { left: 4px; top: 8px; width: 160px; transform-origin: 36px 0; animation-name: life-bubble; }
   .s-bubble .card::before {
@@ -269,12 +277,12 @@
 <body>
 <header>
   <h1>Next exercise during rest</h1>
-  <p>Fifteen ways the picture can leave the NEXT pill and come back. The card stays small. The REST countdown keeps running. Click a phone to replay that one.</p>
+  <p>Sample 1 is the current idea: the picture grows from the NEXT pill toward the bottom right until its right edge lines up with the end of the Work left pill, then shrinks back the same way. The REST countdown stays below it and keeps running. Click a phone to replay.</p>
 </header>
 <div class="grid" id="grid"></div>
 <script>
 const samples = [
-  ["Scale from pill", "Grows out of the pill, shrinks back", "s-scale", "cableFly.webp", "Cable chest fly"],
+  ["Scale from pill", "Width reaches the end of Work left", "s-scale", "cableFly.webp", "Cable chest fly"],
   ["Drop under pill", "Falls a short way, then lifts back", "s-drop", "benchPress.webp", "Barbell chest press"],
   ["Speech bubble", "Tail points at the pill, soft overshoot", "s-bubble", "cableFrontRaise.webp", "Cable front raise"],
   ["Fade and lift", "No pop, just a short rise", "s-fade", "squats.webp", "Squats"],
