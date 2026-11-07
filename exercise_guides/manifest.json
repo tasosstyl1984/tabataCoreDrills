@@ -1,8 +1,8 @@
 {
-    "version": 134,
-    "updatedAtMs": 1794048122767,
+    "version": 135,
+    "updatedAtMs": 1794048151015,
     "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-    "totalBytes": 23459174,
+    "totalBytes": 23320268,
     "images": [
         {
             "id": "abs",
@@ -25,8 +25,8 @@
         {
             "id": "assistedPullUp",
             "file": "exercise_guides/assistedPullUp.webp",
-            "bytes": 268236,
-            "sha256": "e97e472d47ff38bb"
+            "bytes": 129330,
+            "sha256": "599c0fd91bb5f497"
         },
         {
             "id": "backExtension",
