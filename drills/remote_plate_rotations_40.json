@@ -1,7 +1,6 @@
 {
   "id": "remote_plate_rotations_40",
   "name": "Plate Rotations",
-  "description": "Rotational plate work to train core control, anti-rotation strength, and trunk mobility under load.",
   "createdAtMs": 1791622139758,
   "sets": 4,
   "repsPerSet": 8,
@@ -195,5 +194,9 @@
         "restAfterSetSeconds": 90
       }
     ]
-  }
+  },
+  "description": "Rotational plate work to train core control, anti-rotation strength, and trunk mobility under load.",
+  "coverImagePath": "plan_covers/default_plate_rotations_40.webp",
+  "coverImagePill": "plan_covers/default_plate_rotations_40_pill.webp",
+  "coverImagePillAlign": -1
 }
