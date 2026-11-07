@@ -154,5 +154,7 @@
         "restAfterSetSeconds": 60
       }
     ]
-  }
+  },
+  "coverImagePill": "plan_covers/remote_ladies_first_pill_1794062138535.webp",
+  "coverImagePillAlign": -1
 }
