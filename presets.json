@@ -1,6 +1,6 @@
 {
-  "version": 22,
-  "updatedAtMs": 1794061675713,
+  "version": 23,
+  "updatedAtMs": 1794063965168,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -233,7 +233,7 @@
       "id": "remote_kettlebell_drills_40",
       "name": "Kettlebell Drills",
       "file": "drills/remote_kettlebell_drills_40.json",
-      "updatedAtMs": 1791622139758,
+      "updatedAtMs": 1794063964220,
       "category": "kettlebell",
       "description": "Foundational kettlebell moves to build hip power, full-body strength, and confident bell handling.",
       "coverImage": "plan_covers/default_kettlebell_drills_40.webp",
@@ -244,6 +244,7 @@
         "kettlebellRow",
         "kettlebellTurkishGetUp"
       ],
+      "coverImagePillAlign": 0,
       "preset": true,
       "shipsWithApp": true,
       "defaultId": "default_kettlebell_drills_40"
