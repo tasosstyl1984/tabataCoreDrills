@@ -1,8 +1,8 @@
 {
-    "version": 117,
-    "updatedAtMs": 1794045615508,
+    "version": 118,
+    "updatedAtMs": 1794045648696,
     "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-    "totalBytes": 24433124,
+    "totalBytes": 24385518,
     "images": [
         {
             "id": "abs",
@@ -43,8 +43,8 @@
         {
             "id": "battleRopes",
             "file": "exercise_guides/battleRopes.webp",
-            "bytes": 204592,
-            "sha256": "cf6e60a1b98d2f76"
+            "bytes": 156986,
+            "sha256": "7e8d579eed46f421"
         },
         {
             "id": "bearCrawl",
