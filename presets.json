@@ -1,6 +1,6 @@
 {
-  "version": 35,
-  "updatedAtMs": 1794070706003,
+  "version": 36,
+  "updatedAtMs": 1794070729002,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -426,7 +426,7 @@
       "id": "remote_functional_mixed_45",
       "name": "Rope Swing Mix",
       "file": "drills/remote_functional_mixed_45.json",
-      "updatedAtMs": 1794070704733,
+      "updatedAtMs": 1794070727887,
       "category": "conditioning",
       "description": "Rope, swings, and bodyweight mixed into one conditioning session — general fitness without a full gym.",
       "coverImage": "plan_covers/default_functional_mixed_45.webp",
@@ -438,7 +438,8 @@
         "boxJumps",
         "plank"
       ],
-      "coverImagePillAlign": 0,
+      "coverImagePill": "plan_covers/default_functional_mixed_45_pill.webp",
+      "coverImagePillAlign": -1,
       "preset": true,
       "shipsWithApp": true,
       "defaultId": "default_functional_mixed_45"

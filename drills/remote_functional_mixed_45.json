@@ -156,5 +156,6 @@
     ]
   },
   "description": "Rope, swings, and bodyweight mixed into one conditioning session — general fitness without a full gym.",
-  "coverImagePillAlign": 0
+  "coverImagePill": "plan_covers/default_functional_mixed_45_pill.webp",
+  "coverImagePillAlign": -1
 }
