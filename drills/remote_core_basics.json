@@ -1,7 +1,6 @@
 {
   "id": "remote_core_basics",
   "name": "Core Basics",
-  "description": "Starter core circuit with abs, planks, side plank, and twists for midsection strength and posture.",
   "createdAtMs": 1791564300000,
   "sets": 3,
   "repsPerSet": 5,
@@ -105,5 +104,8 @@
         "restAfterSetSeconds": 60
       }
     ]
-  }
+  },
+  "description": "Starter core circuit with abs, planks, side plank, and twists for midsection strength and posture.",
+  "coverImagePill": "plan_covers/remote_core_basics_pill_1794061788846.webp",
+  "coverImagePillAlign": -1
 }
