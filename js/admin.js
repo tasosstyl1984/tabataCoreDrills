@@ -111,14 +111,15 @@
   const EXERCISE_REPLACEMENT_HINT_FILL =
     "Fills the 3:2 frame like the app · slider = zoom · drag to pan";
   const EXERCISE_REPLACEMENT_HINT_CROPPED =
-    "Exact 3:2 export after crop (this is what Save uploads) · slider = zoom · drag to inspect";
+    "1536×1024 after crop — fills this 3:2 slot like the app · slider = zoom · drag to inspect";
 
   /** @param {'editing' | 'cropped'} mode */
   function setExerciseReplacementPreviewMode(mode) {
     if (!exerciseImagesNewZoom) return;
     const cropped = mode === "cropped";
-    exerciseImagesNewZoom.classList.toggle("exercise-images-zoom--fit", cropped);
-    exerciseImagesNewZoom.classList.toggle("exercise-images-zoom--fill", !cropped);
+    // Replacement always uses cover inside a strict 3:2 frame (not letterbox).
+    exerciseImagesNewZoom.classList.remove("exercise-images-zoom--fit");
+    exerciseImagesNewZoom.classList.add("exercise-images-zoom--fill");
     if (exerciseImagesNewZoomHint) {
       exerciseImagesNewZoomHint.textContent = cropped
         ? EXERCISE_REPLACEMENT_HINT_CROPPED
@@ -2652,6 +2653,36 @@
     }
   }
 
+  /** Fit wide/tall exercise sources in the crop stage and center the 3:2 box (after dialog layout). */
+  function layoutExerciseCropper(inst) {
+    if (!inst) return;
+    inst.resize();
+    const container = inst.getContainerData();
+    const image = inst.getImageData();
+    if (
+      !container.width ||
+      !container.height ||
+      !image.naturalWidth ||
+      !image.naturalHeight
+    ) {
+      return;
+    }
+    const fitZoom = Math.min(
+      container.width / image.naturalWidth,
+      container.height / image.naturalHeight,
+    );
+    if (fitZoom > 0 && Number.isFinite(fitZoom)) {
+      inst.zoomTo(fitZoom);
+    }
+    const canvas = inst.getCanvasData();
+    const box = inst.getCropBoxData();
+    if (!canvas.width || !box.width) return;
+    inst.setCropBoxData({
+      left: canvas.left + (canvas.width - box.width) / 2,
+      top: canvas.top + (canvas.height - box.height) / 2,
+    });
+  }
+
   /**
    * @param {File} file
    * @param {'planCover' | 'exerciseGuide'} [mode]
@@ -2668,7 +2699,6 @@
     setCropDialogLabels();
     destroyCropper();
     cropObjectUrl = URL.createObjectURL(file);
-    cropImage.src = cropObjectUrl;
     if (cropDialog) {
       cropDialog.classList.toggle("crop-dialog--exercise", cropMode === "exerciseGuide");
     }
@@ -2694,37 +2724,15 @@
         ready() {
           if (!isExercise) return;
           const inst = this.cropper;
-          if (!inst) return;
-          const container = inst.getContainerData();
-          const image = inst.getImageData();
-          if (
-            !container.width ||
-            !container.height ||
-            !image.naturalWidth ||
-            !image.naturalHeight
-          ) {
-            return;
-          }
-          const fitZoom = Math.min(
-            container.width / image.naturalWidth,
-            container.height / image.naturalHeight,
-          );
-          if (fitZoom > 0 && Number.isFinite(fitZoom)) {
-            inst.zoomTo(fitZoom);
-          }
-          window.setTimeout(() => {
-            if (!cropper) return;
-            const canvas = inst.getCanvasData();
-            const box = inst.getCropBoxData();
-            if (!canvas.width || !box.width) return;
-            inst.setCropBoxData({
-              left: canvas.left + (canvas.width - box.width) / 2,
-              top: canvas.top + (canvas.height - box.height) / 2,
-            });
-          }, 0);
+          layoutExerciseCropper(inst);
+          window.requestAnimationFrame(() => layoutExerciseCropper(inst));
         },
       });
+      if (isExercise) {
+        window.setTimeout(() => layoutExerciseCropper(cropper), 50);
+      }
     };
+    cropImage.src = cropObjectUrl;
   }
 
   async function applyCrop() {

@@ -328,7 +328,10 @@ body.site-tab-exercises #import-help {
   cursor: grabbing;
 }
 
-.cover-preview--pill {
+.cover-preview-wrap--pill .cover-preview--pill {
+  display: block;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   object-position: var(--pill-preview-pos, center center);
   pointer-events: none;
@@ -1377,14 +1380,17 @@ code {
 .exercise-images-editor-dialog .exercise-images-zoom-stack {
   max-height: none;
   min-height: 0;
-  flex: 1 1 auto;
+  flex: 0 0 auto;
+  width: 100%;
 }
 
+/* Strict 3:2 slot (Tabata Core how-to). Do not stretch with height:100% or flex grow. */
 .exercise-images-editor-dialog .exercise-images-zoom {
-  max-height: none;
-  flex: 1 1 auto;
+  width: 100%;
+  height: auto;
+  flex: 0 0 auto;
   min-height: 0;
-  height: 100%;
+  max-height: none;
   aspect-ratio: 3 / 2;
 }
 
@@ -2204,9 +2210,11 @@ body.admin-authed .preview-footer-actions .btn-delete-admin {
   gap: 0.55rem;
 }
 
+/* Plan hero/pill: fixed 8:5 frame (Tabata Core plan cover). Width caps; height follows ratio. */
 .cover-preview-wrap {
   width: 100%;
   max-width: 280px;
+  height: auto;
   aspect-ratio: 8 / 5;
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -2215,11 +2223,13 @@ body.admin-authed .preview-footer-actions .btn-delete-admin {
   position: relative;
 }
 
-.cover-preview {
+/* Hero preview: full file visible when aspect differs. */
+.cover-preview-wrap:not(.cover-preview-wrap--pill) .cover-preview {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: contain;
+  object-position: center;
 }
 
 .cover-placeholder {
@@ -2276,6 +2286,10 @@ body.admin-authed .preview-footer-actions .btn-delete-admin {
   color: var(--text);
 }
 
+.crop-dialog--exercise {
+  max-width: min(960px, calc(100vw - 1.25rem));
+}
+
 .crop-dialog[open],
 .crop-dialog:modal {
   display: flex;
@@ -2324,10 +2338,12 @@ body.admin-authed .preview-footer-actions .btn-delete-admin {
   z-index: 0;
 }
 
-/* Tall exercise PNGs: taller stage so Cropper can show the full source (not a clipped slice). */
+/* Tall/wide exercise PNGs: room to see crop handles (Cropper.js clips inside overflow:hidden). */
 .crop-dialog--exercise .crop-stage {
   min-height: min(52vh, 360px);
   max-height: min(70vh, 640px);
+  overflow: auto;
+  padding: 1rem 1.25rem;
 }
 
 .crop-stage img {
@@ -2335,8 +2351,13 @@ body.admin-authed .preview-footer-actions .btn-delete-admin {
   max-width: 100%;
 }
 
+/* Until Cropper inits, hide raw img overflow; after init the container owns layout. */
+.crop-stage:not(:has(.cropper-container)) img {
+  max-width: 100%;
+}
+
 .crop-stage .cropper-container {
-  max-height: 100%;
+  margin: 0 auto;
 }
 
 /* Hint sits on surface (not over the black stage); cropper overflow must not paint over this. */
@@ -2659,9 +2680,10 @@ body.admin-authed .preview-footer-actions .btn-delete-admin {
 }
 
 .exercise-images-editor-dialog .zoom-stack.exercise-images-zoom-stack {
-  flex: 1 1 auto;
+  flex: 0 0 auto;
   min-height: 0;
-  align-items: stretch;
+  align-items: flex-start;
+  width: 100%;
 }
 
 .exercise-images-editor-dialog .zoom-viewport-toolbar {
