@@ -1,6 +1,6 @@
 {
-  "version": 37,
-  "updatedAtMs": 1794089856842,
+  "version": 38,
+  "updatedAtMs": 1794090095973,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -261,7 +261,7 @@
       "id": "remote_lower_body_functional_40",
       "name": "Lower Functional",
       "file": "drills/remote_lower_body_functional_40.json",
-      "updatedAtMs": 1791622139758,
+      "updatedAtMs": 1794090094822,
       "category": "strength",
       "description": "Squats, lunges, and thrusters for strong, usable legs that transfer to sport and daily movement.",
       "coverImage": "plan_covers/default_lower_body_functional_40.webp",
@@ -273,6 +273,8 @@
         "wallBalls",
         "kettlebellGobletSquat"
       ],
+      "coverImagePill": "plan_covers/default_lower_body_functional_40_pill.webp",
+      "coverImagePillAlign": -1,
       "preset": true,
       "shipsWithApp": true,
       "defaultId": "default_lower_body_functional_40"
