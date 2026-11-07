@@ -1,7 +1,6 @@
 {
   "id": "remote_split_squat_lower_40",
   "name": "Split Squat Lower",
-  "description": "Unilateral lower-body work for balance, glutes, and single-leg strength that shows in running and lifting.",
   "createdAtMs": 1791622139758,
   "sets": 4,
   "repsPerSet": 6,
@@ -155,5 +154,8 @@
         "restAfterSetSeconds": 100
       }
     ]
-  }
+  },
+  "description": "Unilateral lower-body work for balance, glutes, and single-leg strength that shows in running and lifting.",
+  "coverImagePill": "plan_covers/default_split_squat_lower_40_pill.webp",
+  "coverImagePillAlign": -1
 }
