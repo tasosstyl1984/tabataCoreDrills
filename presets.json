@@ -1,19 +1,21 @@
 {
-  "version": 1,
-  "updatedAtMs": 1791622139758,
+  "version": 2,
+  "updatedAtMs": 1794049125857,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
       "id": "remote_boxing_rounds_30",
       "name": "Boxing Rounds",
       "file": "drills/remote_boxing_rounds_30.json",
-      "updatedAtMs": 1791622139758,
+      "updatedAtMs": 1794049124894,
       "category": "boxing",
       "description": "Shadowboxing rounds for fight-style cardio, footwork, rhythm, and upper-body endurance.",
       "coverImage": "plan_covers/default_boxing_rounds_30.webp",
       "activityIds": [
         "shadowBoxing"
       ],
+      "coverImagePill": "plan_covers/default_boxing_rounds_30_pill.webp",
+      "coverImagePillAlign": 0,
       "preset": true,
       "shipsWithApp": true,
       "defaultId": "default_boxing_rounds_30"
@@ -101,7 +103,7 @@
       "file": "drills/remote_dumbbell_arms_40.json",
       "updatedAtMs": 1791622139758,
       "category": "dumbbell",
-      "description": "Focused dumbbell arm work for biceps and triceps \u2014 pump, control, and upper-arm strength.",
+      "description": "Focused dumbbell arm work for biceps and triceps — pump, control, and upper-arm strength.",
       "coverImage": "plan_covers/default_dumbbell_arms_40.webp",
       "activityIds": [
         "bicepCurls",
@@ -140,7 +142,7 @@
       "file": "drills/remote_hiit_strength_30.json",
       "updatedAtMs": 1791622139758,
       "category": "strength",
-      "description": "High-intensity strength circuits \u2014 power and conditioning in a compact, hard-hitting session.",
+      "description": "High-intensity strength circuits — power and conditioning in a compact, hard-hitting session.",
       "coverImage": "plan_covers/default_hiit_strength_30.webp",
       "activityIds": [
         "burpees",
@@ -347,7 +349,7 @@
       "file": "drills/remote_combo_rope_kettle_core_40.json",
       "updatedAtMs": 1791622139758,
       "category": "combos",
-      "description": "Jump rope, kettlebells, and core in one stack \u2014 a complete conditioning day with strength baked in.",
+      "description": "Jump rope, kettlebells, and core in one stack — a complete conditioning day with strength baked in.",
       "coverImage": "plan_covers/default_combo_rope_kettle_core_40.webp",
       "activityIds": [
         "jumpRope",
@@ -365,12 +367,36 @@
       "defaultId": "default_combo_rope_kettle_core_40"
     },
     {
+      "id": "remote_combo_full_stack_50",
+      "name": "Rope Stack",
+      "file": "drills/remote_combo_full_stack_50.json",
+      "updatedAtMs": 1791622139758,
+      "category": "combos",
+      "description": "Extended battle-rope and kettlebell stack for a long mixed session when you want volume and variety.",
+      "coverImage": "plan_covers/default_combo_full_stack_50.webp",
+      "activityIds": [
+        "battleRopes",
+        "jumpRope",
+        "kettlebellSwings",
+        "kettlebellGobletSquat",
+        "kettlebellCleanPress",
+        "kettlebellRow",
+        "kettlebellSnatch",
+        "kettlebellTurkishGetUp",
+        "pushups",
+        "abs"
+      ],
+      "preset": true,
+      "shipsWithApp": true,
+      "defaultId": "default_combo_full_stack_50"
+    },
+    {
       "id": "remote_functional_mixed_45",
       "name": "Rope Swing Mix",
       "file": "drills/remote_functional_mixed_45.json",
       "updatedAtMs": 1791622139758,
       "category": "conditioning",
-      "description": "Rope, swings, and bodyweight mixed into one conditioning session \u2014 general fitness without a full gym.",
+      "description": "Rope, swings, and bodyweight mixed into one conditioning session — general fitness without a full gym.",
       "coverImage": "plan_covers/default_functional_mixed_45.webp",
       "activityIds": [
         "jumpRope",
@@ -429,36 +455,12 @@
       "file": "drills/remote_tabata_classic.json",
       "updatedAtMs": 1791622139758,
       "category": "classic",
-      "description": "The original 20-on / 10-off protocol \u2014 a short all-out cardio blast to build anaerobic capacity and mental grit.",
+      "description": "The original 20-on / 10-off protocol — a short all-out cardio blast to build anaerobic capacity and mental grit.",
       "coverImage": "plan_covers/default_tabata_classic.webp",
       "activityIds": [],
       "preset": true,
       "shipsWithApp": true,
       "defaultId": "default_tabata_classic"
-    },
-    {
-      "id": "remote_combo_full_stack_50",
-      "name": "Rope Stack",
-      "file": "drills/remote_combo_full_stack_50.json",
-      "updatedAtMs": 1791622139758,
-      "category": "combos",
-      "description": "Extended battle-rope and kettlebell stack for a long mixed session when you want volume and variety.",
-      "coverImage": "plan_covers/default_combo_full_stack_50.webp",
-      "activityIds": [
-        "battleRopes",
-        "jumpRope",
-        "kettlebellSwings",
-        "kettlebellGobletSquat",
-        "kettlebellCleanPress",
-        "kettlebellRow",
-        "kettlebellSnatch",
-        "kettlebellTurkishGetUp",
-        "pushups",
-        "abs"
-      ],
-      "preset": true,
-      "shipsWithApp": true,
-      "defaultId": "default_combo_full_stack_50"
     }
   ]
 }

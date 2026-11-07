@@ -1,7 +1,6 @@
 {
   "id": "remote_boxing_rounds_30",
   "name": "Boxing Rounds",
-  "description": "Shadowboxing rounds for fight-style cardio, footwork, rhythm, and upper-body endurance.",
   "createdAtMs": 1791622139758,
   "sets": 3,
   "repsPerSet": 6,
@@ -120,5 +119,8 @@
         "restAfterSetSeconds": 120
       }
     ]
-  }
+  },
+  "description": "Shadowboxing rounds for fight-style cardio, footwork, rhythm, and upper-body endurance.",
+  "coverImagePill": "plan_covers/default_boxing_rounds_30_pill.webp",
+  "coverImagePillAlign": 0
 }
