@@ -1,7 +1,6 @@
 {
   "id": "remote_functional_mixed_45",
   "name": "Rope Swing Mix",
-  "description": "Rope, swings, and bodyweight mixed into one conditioning session \u2014 general fitness without a full gym.",
   "createdAtMs": 1791622139758,
   "sets": 4,
   "repsPerSet": 6,
@@ -155,5 +154,7 @@
         "restAfterSetSeconds": 100
       }
     ]
-  }
+  },
+  "description": "Rope, swings, and bodyweight mixed into one conditioning session — general fitness without a full gym.",
+  "coverImagePillAlign": 0
 }
