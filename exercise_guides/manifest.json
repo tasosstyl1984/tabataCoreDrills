@@ -1,8 +1,8 @@
 {
-    "version": 78,
-    "updatedAtMs": 1794013910601,
+    "version": 79,
+    "updatedAtMs": 1794014058270,
     "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-    "totalBytes": 27109432,
+    "totalBytes": 26957878,
     "images": [
         {
             "id": "abs",
@@ -559,8 +559,8 @@
         {
             "id": "rowing",
             "file": "exercise_guides/rowing.webp",
-            "bytes": 301864,
-            "sha256": "f87c77f2a9e27006"
+            "bytes": 150310,
+            "sha256": "20b22dc5d9ba830c"
         },
         {
             "id": "russianTwists",
