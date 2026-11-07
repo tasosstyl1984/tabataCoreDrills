@@ -1,6 +1,6 @@
 {
-  "version": 162,
-  "updatedAtMs": 1794062164172,
+  "version": 163,
+  "updatedAtMs": 1794062222995,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -145,7 +145,7 @@
       "id": "remote_ladies_first",
       "name": "Ladies First",
       "file": "drills/remote_ladies_first.json",
-      "updatedAtMs": 1794062138542,
+      "updatedAtMs": 1794062187110,
       "category": "combos",
       "description": "",
       "coverImage": "plan_covers/remote_ladies_first_1794062138524.webp",
