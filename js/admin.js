@@ -2668,16 +2668,11 @@
   /** Fit the whole source in the stage and center the aspect-locked box. */
   function layoutCropper(inst) {
     if (!inst) return;
-    const root = inst.container;
-    if (root) {
-      root.style.width = "100%";
-      root.style.height = "100%";
-    }
     inst.resize();
     const container = inst.getContainerData();
     const image = inst.getImageData();
-    const viewW = root && root.clientWidth ? root.clientWidth : container.width;
-    const viewH = root && root.clientHeight ? root.clientHeight : container.height;
+    const viewW = container.width;
+    const viewH = container.height;
     if (
       !viewW ||
       !viewH ||
@@ -2686,7 +2681,7 @@
     ) {
       return;
     }
-    // Display size only. The photo keeps its own aspect and is centered in the checkerboard.
+    // Display size only. Center in Cropper's own box, which is the checkerboard.
     const fitZoom =
       Math.min(viewW / image.naturalWidth, viewH / image.naturalHeight) * 0.72;
     if (!(fitZoom > 0) || !Number.isFinite(fitZoom)) return;
