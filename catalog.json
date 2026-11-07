@@ -1,6 +1,6 @@
 {
-  "version": 157,
-  "updatedAtMs": 1794061789970,
+  "version": 158,
+  "updatedAtMs": 1794061845414,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -23,7 +23,7 @@
       "id": "remote_core_basics",
       "name": "Core Basics",
       "file": "drills/remote_core_basics.json",
-      "updatedAtMs": 1794061788853,
+      "updatedAtMs": 1794061844469,
       "category": "core",
       "description": "Starter core circuit with abs, planks, side plank, and twists for midsection strength and posture.",
       "coverImage": "plan_covers/remote_core_basics_1794061788831.webp",
@@ -33,8 +33,8 @@
         "sidePlank",
         "russianTwists"
       ],
-      "coverImagePill": "plan_covers/remote_core_basics_pill_1794061788846.webp",
-      "coverImagePillAlign": -1
+      "coverImagePill": "plan_covers/remote_core_basics_1794061788831.webp",
+      "coverImagePillAlign": 1
     },
     {
       "id": "remote_hyrox_20",
