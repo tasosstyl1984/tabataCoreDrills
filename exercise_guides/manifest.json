@@ -1,8 +1,8 @@
 {
-    "version": 83,
-    "updatedAtMs": 1794036680175,
+    "version": 84,
+    "updatedAtMs": 1794036876247,
     "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-    "totalBytes": 26471450,
+    "totalBytes": 26398778,
     "images": [
         {
             "id": "abs",
@@ -601,8 +601,8 @@
         {
             "id": "sledPush",
             "file": "exercise_guides/sledPush.webp",
-            "bytes": 211092,
-            "sha256": "6ffc03379fdfff91"
+            "bytes": 138420,
+            "sha256": "2025cea8046c7acc"
         },
         {
             "id": "smithMachineSquat",
