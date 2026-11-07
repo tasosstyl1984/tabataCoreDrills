@@ -1,8 +1,8 @@
 {
-  "version": 91,
-  "updatedAtMs": 1794041478397,
+  "version": 92,
+  "updatedAtMs": 1794041499216,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 4361586,
+  "totalBytes": 4461972,
   "images": [
     {
       "id": "abs",
@@ -649,8 +649,8 @@
     {
       "id": "thrusters",
       "file": "exercise_guides/thrusters.webp",
-      "bytes": 9234,
-      "sha256": "6d0322c9d8a21745"
+      "bytes": 109620,
+      "sha256": "426b5a4aaa7a8c7a"
     },
     {
       "id": "tricepKickbacks",
