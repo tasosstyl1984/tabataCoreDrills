@@ -411,7 +411,7 @@
     },
     {
       "id": "benchPress",
-      "label": "Bench press",
+      "label": "Barbell chest press",
       "group": "Chest",
       "movement": "chestPress",
       "equipment": [

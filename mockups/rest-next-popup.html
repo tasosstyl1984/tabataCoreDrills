@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rest next-exercise preview — 15 samples</title>
+<style>
+  :root {
+    --bg: #12161c;
+    --phone: #0c1014;
+    --pill: #1a222c;
+    --pill-line: #2c3a48;
+    --rest: #7eb6ff;
+    --ink: #e8eef4;
+    --muted: #8b98a6;
+    --card: #161d26;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Segoe UI", system-ui, sans-serif;
+  }
+  header {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 28px 20px 8px;
+  }
+  h1 { font-size: 22px; font-weight: 700; margin: 0 0 8px; }
+  p { margin: 0; color: var(--muted); max-width: 720px; line-height: 1.45; }
+  .grid {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 22px 18px;
+  }
+  .sample { display: flex; flex-direction: column; gap: 8px; }
+  .label {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .label span { color: var(--muted); font-weight: 500; font-size: 12px; }
+  .phone {
+    position: relative;
+    height: 500px;
+    border-radius: 28px;
+    background: var(--phone);
+    border: 1px solid #24303c;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 16px 40px rgba(0,0,0,.35);
+  }
+  .stage {
+    position: relative;
+    height: 148px;
+    margin: 8px 14px 0;
+  }
+  .top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 16px 14px 0;
+  }
+  .pill, .totals {
+    min-height: 52px;
+    border-radius: 14px;
+    background: var(--pill);
+    border: 1px solid var(--pill-line);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 6px 8px;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .2px;
+    line-height: 1.2;
+  }
+  .pill { color: var(--rest); }
+  .totals { color: var(--muted); font-weight: 700; }
+  .phase {
+    margin-top: 6px;
+    text-align: center;
+    color: var(--rest);
+    font-weight: 800;
+    letter-spacing: 3px;
+    font-size: 13px;
+  }
+  .timer {
+    margin-top: 8px;
+    text-align: center;
+    font-size: 72px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+  .meta {
+    margin-top: 10px;
+    text-align: center;
+    color: var(--muted);
+    font-weight: 700;
+    font-size: 16px;
+  }
+  .hint {
+    position: absolute;
+    left: 0; right: 0; bottom: 12px;
+    text-align: center;
+    color: #5d6b78;
+    font-size: 11px;
+  }
+  .card {
+    position: absolute;
+    z-index: 3;
+    background: var(--card);
+    border: 1px solid #314050;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 24px rgba(0,0,0,.45);
+    pointer-events: none;
+  }
+  .card img {
+    display: block;
+    width: 100%;
+    height: 96px;
+    object-fit: cover;
+    background: #10161c;
+  }
+  .card b {
+    display: block;
+    padding: 6px 8px 7px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+  .card.wide img { height: 108px; }
+  .s-stamp .card img, .s-dock .card img, .s-beside .card img { height: 64px; }
+
+  @keyframes life-scale {
+    0% { opacity: 0; transform: scale(.12); }
+    8% { opacity: 1; transform: scale(1); }
+    70% { opacity: 1; transform: scale(1); }
+    80% { opacity: 0; transform: scale(.12); }
+    100% { opacity: 0; transform: scale(.12); }
+  }
+  @keyframes life-drop {
+    0% { opacity: 0; transform: translateY(-28px) scale(.85); }
+    8% { opacity: 1; transform: translateY(0) scale(1); }
+    70% { opacity: 1; transform: translateY(0) scale(1); }
+    80% { opacity: 0; transform: translateY(-28px) scale(.85); }
+    100% { opacity: 0; transform: translateY(-28px) scale(.85); }
+  }
+  @keyframes life-bubble {
+    0% { opacity: 0; transform: translateY(-8px) scale(.4); }
+    9% { opacity: 1; transform: translateY(0) scale(1.04); }
+    14% { transform: translateY(0) scale(1); }
+    70% { opacity: 1; transform: scale(1); }
+    80% { opacity: 0; transform: translateY(-8px) scale(.4); }
+    100% { opacity: 0; transform: translateY(-8px) scale(.4); }
+  }
+  @keyframes life-fade {
+    0% { opacity: 0; transform: translateY(10px); }
+    10% { opacity: 1; transform: translateY(0); }
+    70% { opacity: 1; transform: translateY(0); }
+    82% { opacity: 0; transform: translateY(6px); }
+    100% { opacity: 0; transform: translateY(6px); }
+  }
+  @keyframes life-tilt {
+    0% { opacity: 0; transform: rotate(-8deg) scale(.2); }
+    9% { opacity: 1; transform: rotate(-2deg) scale(1); }
+    70% { opacity: 1; transform: rotate(-2deg) scale(1); }
+    80% { opacity: 0; transform: rotate(-8deg) scale(.2); }
+    100% { opacity: 0; transform: rotate(-8deg) scale(.2); }
+  }
+  @keyframes life-slide {
+    0% { opacity: 0; transform: translateX(-36px) scale(.9); }
+    9% { opacity: 1; transform: translateX(0) scale(1); }
+    70% { opacity: 1; transform: translateX(0); }
+    80% { opacity: 0; transform: translateX(-36px) scale(.9); }
+    100% { opacity: 0; transform: translateX(-36px) scale(.9); }
+  }
+  @keyframes life-morph {
+    0% { opacity: 0; transform: scaleX(.55) scaleY(.15); }
+    10% { opacity: 1; transform: scaleX(1) scaleY(1); }
+    70% { opacity: 1; transform: scale(1); }
+    80% { opacity: 0; transform: scaleX(.55) scaleY(.15); }
+    100% { opacity: 0; transform: scaleX(.55) scaleY(.15); }
+  }
+  @keyframes life-peek {
+    0% { opacity: 0; transform: translateY(-70%); }
+    10% { opacity: 1; transform: translateY(0); }
+    70% { opacity: 1; transform: translateY(0); }
+    80% { opacity: 0; transform: translateY(-70%); }
+    100% { opacity: 0; transform: translateY(-70%); }
+  }
+  @keyframes life-bounce {
+    0% { opacity: 0; transform: scale(.2); }
+    8% { opacity: 1; transform: scale(1.08); }
+    14% { transform: scale(1); }
+    70% { opacity: 1; transform: scale(1); }
+    80% { opacity: 0; transform: scale(.2); }
+    100% { opacity: 0; transform: scale(.2); }
+  }
+  @keyframes life-stamp {
+    0% { opacity: 0; transform: translate(-70px, -20px) scale(.3); }
+    10% { opacity: 1; transform: translate(0,0) scale(1); }
+    70% { opacity: 1; transform: none; }
+    80% { opacity: 0; transform: translate(-70px, -20px) scale(.3); }
+    100% { opacity: 0; transform: translate(-70px, -20px) scale(.3); }
+  }
+  @keyframes life-dock {
+    0% { opacity: 0; transform: translate(24px, -40px) scale(.4); }
+    10% { opacity: 1; transform: none; }
+    70% { opacity: 1; transform: none; }
+    80% { opacity: 0; transform: translate(24px, -40px) scale(.4); }
+    100% { opacity: 0; transform: translate(24px, -40px) scale(.4); }
+  }
+  @keyframes life-chip {
+    0%, 100% { opacity: 0; transform: scale(.3); }
+    6% { opacity: 1; transform: scale(.72); }
+    16% { transform: scale(1); }
+    68% { opacity: 1; transform: scale(1); }
+    78% { opacity: 0; transform: scale(.3); }
+  }
+  @keyframes life-namefirst {
+    0% { opacity: 0; clip-path: inset(0 0 72% 0); transform: scale(.85); }
+    8% { opacity: 1; clip-path: inset(0 0 72% 0); transform: scale(1); }
+    18% { clip-path: inset(0 0 0 0); }
+    70% { opacity: 1; clip-path: inset(0 0 0 0); }
+    80% { opacity: 0; clip-path: inset(0 0 72% 0); transform: scale(.85); }
+    100% { opacity: 0; clip-path: inset(0 0 72% 0); }
+  }
+
+  .play .card {
+    animation-duration: 3.6s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+  }
+  .s-scale .card { left: 0; top: 0; width: 168px; transform-origin: 40px 0; animation-name: life-scale; }
+  .s-drop .card { left: 0; top: 4px; width: 168px; transform-origin: 50% 0; animation-name: life-drop; }
+  .s-bubble .card { left: 4px; top: 8px; width: 160px; transform-origin: 36px 0; animation-name: life-bubble; }
+  .s-bubble .card::before {
+    content: "";
+    position: absolute;
+    top: -7px; left: 28px;
+    border: 7px solid transparent;
+    border-bottom-color: #314050;
+  }
+  .s-fade .card { left: 0; top: 6px; width: 168px; animation-name: life-fade; }
+  .s-tilt .card { left: 8px; top: 8px; width: 156px; transform-origin: 30px 0; animation-name: life-tilt; }
+  .s-slide .card { left: 0; top: 2px; width: 176px; transform-origin: 0 12px; animation-name: life-slide; }
+  .s-morph .card { left: 0; top: 0; width: 168px; transform-origin: 40px 0; animation-name: life-morph; }
+  .s-peek .card { left: 0; top: 0; width: 168px; transform-origin: 50% 0; animation-name: life-peek; }
+  .s-bounce .card { left: 18px; top: 10px; width: 176px; transform-origin: 20% 0; animation-name: life-bounce; }
+  .s-stamp .card { right: 0; top: 18px; width: 112px; transform-origin: 0 0; animation-name: life-stamp; }
+  .s-center .card { left: 50%; top: 8px; width: 170px; margin-left: -85px; transform-origin: 18% 0; animation-name: life-scale; }
+  .s-dock .card { right: 0; top: 12px; width: 118px; transform-origin: 70% 0; animation-name: life-dock; }
+  .s-chip .card { left: 0; top: 4px; width: 180px; transform-origin: 24px 0; animation-name: life-chip; }
+  .s-name .card { left: 0; top: 4px; width: 168px; transform-origin: 40px 0; animation-name: life-namefirst; }
+  .s-beside .card { left: 0; top: 0; width: 148px; transform-origin: 0 0; animation-name: life-slide; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Next exercise during rest</h1>
+  <p>Fifteen ways the picture can leave the NEXT pill and come back. The card stays small. The REST countdown keeps running. Click a phone to replay that one.</p>
+</header>
+<div class="grid" id="grid"></div>
+<script>
+const samples = [
+  ["Scale from pill", "Grows out of the pill, shrinks back", "s-scale", "cableFly.webp", "Cable chest fly"],
+  ["Drop under pill", "Falls a short way, then lifts back", "s-drop", "benchPress.webp", "Barbell chest press"],
+  ["Speech bubble", "Tail points at the pill, soft overshoot", "s-bubble", "cableFrontRaise.webp", "Cable front raise"],
+  ["Fade and lift", "No pop, just a short rise", "s-fade", "squats.webp", "Squats"],
+  ["Polaroid tilt", "Tips in from the pill, tips back", "s-tilt", "kettlebellDeadlift.webp", "KB deadlift"],
+  ["Slide out", "Slides right from the pill edge", "s-slide", "latPulldown.webp", "Lat pulldown"],
+  ["Pill morph", "The pill stretches down into the photo", "s-morph", "pushups.webp", "Push-ups"],
+  ["Peek behind", "Slides down from behind the pill", "s-peek", "plank.webp", "Plank"],
+  ["Bounce", "Pops past full size, then settles", "s-bounce", "burpees.webp", "Burpees"],
+  ["Corner stamp", "Small photo lands beside the timer", "s-stamp", "kettlebellSwings.webp", "KB swing"],
+  ["Upper center", "Same pop, sitting over the phase name", "s-center", "inclineBench.webp", "Incline bench"],
+  ["Right dock", "Narrow card on the right, digits stay clear", "s-dock", "rowing.webp", "Rowing"],
+  ["Two-beat pop", "Starts as a chip, opens, then closes", "s-chip", "dips.webp", "Dips"],
+  ["Name, then photo", "Caption appears, then the picture opens", "s-name", "facePull.webp", "Face pull"],
+  ["Compact slide", "Smaller card, slides out of the pill", "s-beside", "mountainClimbers.webp", "Mountain climbers"]
+];
+
+const grid = document.getElementById("grid");
+samples.forEach((s, i) => {
+  const el = document.createElement("article");
+  el.className = "sample";
+  el.innerHTML = `
+    <div class="label">${i + 1}. ${s[0]} <span>${s[1]}</span></div>
+    <div class="phone play ${s[2]}" data-replay>
+      <div class="top">
+        <div class="pill">NEXT:<br>${s[4].toUpperCase()}</div>
+        <div class="totals">Work left<br>12:40</div>
+      </div>
+      <div class="stage"><div class="card"><img alt="" src="../exercise_guides/${s[3]}"><b>${s[4]}</b></div></div>
+      <div class="phase">REST</div>
+      <div class="timer" data-sec="18">0:18</div>
+      <div class="meta">Set 2 · Round 1</div>
+      <div class="hint">click to replay</div>
+    </div>`;
+  grid.appendChild(el);
+});
+
+function replay(phone) {
+  phone.classList.remove("play");
+  void phone.offsetWidth;
+  phone.classList.add("play");
+}
+grid.addEventListener("click", (e) => {
+  const phone = e.target.closest("[data-replay]");
+  if (phone) replay(phone);
+});
+
+setInterval(() => {
+  document.querySelectorAll("[data-sec]").forEach((node) => {
+    let sec = Number(node.dataset.sec) - 1;
+    if (sec < 8) sec = 18;
+    node.dataset.sec = String(sec);
+    node.textContent = "0:" + String(sec).padStart(2, "0");
+  });
+}, 1000);
+</script>
+</body>
+</html>
