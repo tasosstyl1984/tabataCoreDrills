@@ -42,9 +42,8 @@
   const cropApply = document.getElementById("crop-apply");
   const cropCancel = document.getElementById("crop-cancel");
   const cropClose = document.getElementById("crop-close");
-  const cropZoomIn = document.getElementById("crop-zoom-in");
-  const cropZoomOut = document.getElementById("crop-zoom-out");
   const cropZoomFit = document.getElementById("crop-zoom-fit");
+  const cropZoomSlider = document.getElementById("crop-zoom-slider");
   const categorySuggestions = document.getElementById("category-suggestions");
   const activityPickerDialog = document.getElementById("activity-picker-dialog");
   const activityPickerClose = document.getElementById("activity-picker-close");
@@ -2636,7 +2635,7 @@
   let cropFitRatio = 1;
 
   const CROP_HINT =
-    "Drag the frame to move it. Zoom in or out to change how tight the crop is. Double-click to pan the photo.";
+    "Drag the frame to move it. Slide right to zoom in. Fit shows the whole photo. Double-click to pan the photo.";
 
   function setCropDialogLabels() {
     if (cropHint) cropHint.textContent = CROP_HINT;
@@ -2677,24 +2676,47 @@
       inst.zoomTo(fitZoom);
     }
     const canvas = inst.getCanvasData();
-    const box = inst.getCropBoxData();
-    if (!canvas.width || !box.width) return;
+    if (!canvas.width || !canvas.height) return;
+    const ratio = cropMode === "exerciseGuide" ? 3 / 2 : 8 / 5;
+    let boxW = canvas.width;
+    let boxH = boxW / ratio;
+    if (boxH > canvas.height) {
+      boxH = canvas.height;
+      boxW = boxH * ratio;
+    }
     inst.setCropBoxData({
-      left: canvas.left + (canvas.width - box.width) / 2,
-      top: canvas.top + (canvas.height - box.height) / 2,
+      width: boxW * 0.98,
+      height: boxH * 0.98,
+      left: canvas.left + (canvas.width - boxW * 0.98) / 2,
+      top: canvas.top + (canvas.height - boxH * 0.98) / 2,
     });
+    setCropZoomSlider(0);
   }
 
-  function zoomCropBy(delta) {
-    if (!cropper) return;
+  function cropZoomRatioForSlider(value) {
+    const t = Math.min(100, Math.max(0, Number(value))) / 100;
+    return cropFitRatio * (1 + t * 2);
+  }
+
+  function setCropZoomSlider(value) {
+    if (!cropZoomSlider) return;
+    const v = String(Math.round(Math.min(100, Math.max(0, Number(value)))));
+    cropZoomSlider.value = v;
+    cropZoomSlider.setAttribute("aria-valuenow", v);
+  }
+
+  function syncCropZoomSliderFromImage() {
+    if (!cropper || !cropZoomSlider) return;
     const image = cropper.getImageData();
-    const current =
-      image.naturalWidth > 0 ? image.width / image.naturalWidth : cropFitRatio;
-    if (delta < 0 && current <= cropFitRatio * 1.02) {
-      cropper.zoomTo(cropFitRatio);
-      return;
-    }
-    cropper.zoom(delta);
+    const ratio = image.naturalWidth > 0 ? image.width / image.naturalWidth : cropFitRatio;
+    const span = cropFitRatio * 2;
+    const t = span > 0 ? (ratio - cropFitRatio) / span : 0;
+    setCropZoomSlider(t * 100);
+  }
+
+  function zoomCropFromSlider() {
+    if (!cropper || !cropZoomSlider) return;
+    cropper.zoomTo(cropZoomRatioForSlider(cropZoomSlider.value));
   }
 
   /**
@@ -2737,10 +2759,13 @@
         toggleDragModeOnDblclick: true,
         zoom(event) {
           const ratio = event?.detail?.ratio;
-          if (Number.isFinite(ratio) && ratio < cropFitRatio) {
+          if (Number.isFinite(ratio) && ratio < cropFitRatio * 0.995) {
             event.preventDefault();
             if (cropper) cropper.zoomTo(cropFitRatio);
+            setCropZoomSlider(0);
+            return;
           }
+          syncCropZoomSliderFromImage();
         },
         ready() {
           const inst = this.cropper;
@@ -3453,9 +3478,15 @@
     });
   }
   if (cropApply) cropApply.addEventListener("click", () => applyCrop());
-  if (cropZoomIn) cropZoomIn.addEventListener("click", () => zoomCropBy(0.1));
-  if (cropZoomOut) cropZoomOut.addEventListener("click", () => zoomCropBy(-0.1));
-  if (cropZoomFit) cropZoomFit.addEventListener("click", () => layoutCropper(cropper));
+  if (cropZoomSlider) {
+    cropZoomSlider.addEventListener("input", () => zoomCropFromSlider());
+  }
+  if (cropZoomFit) {
+    cropZoomFit.addEventListener("click", () => {
+      setCropZoomSlider(0);
+      layoutCropper(cropper);
+    });
+  }
   if (cropCancel) {
     cropCancel.addEventListener("click", () => {
       destroyCropper();
