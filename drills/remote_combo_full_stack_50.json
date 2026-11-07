@@ -1,7 +1,6 @@
 {
   "id": "remote_combo_full_stack_50",
   "name": "Rope Stack",
-  "description": "Extended battle-rope and kettlebell stack for a long mixed session when you want volume and variety.",
   "createdAtMs": 1791622139758,
   "sets": 4,
   "repsPerSet": 7,
@@ -175,5 +174,8 @@
         "restAfterSetSeconds": 100
       }
     ]
-  }
+  },
+  "description": "Extended battle-rope and kettlebell stack for a long mixed session when you want volume and variety.",
+  "coverImagePill": "plan_covers/default_combo_full_stack_50_pill.webp",
+  "coverImagePillAlign": -1
 }
