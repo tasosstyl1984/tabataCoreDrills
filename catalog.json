@@ -1,6 +1,6 @@
 {
-  "version": 163,
-  "updatedAtMs": 1794062222995,
+  "version": 164,
+  "updatedAtMs": 1794070028769,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -42,10 +42,10 @@
       "id": "remote_hyrox_20",
       "name": "Hyrox Stations 20",
       "file": "drills/remote_hyrox_20.json",
-      "updatedAtMs": 1791624433060,
+      "updatedAtMs": 1794070027761,
       "category": "conditioning",
       "description": "Shorter Hyrox-style station ladder — ropes, sled, carries, and bodyweight moves for race-day work capacity.",
-      "coverImage": "plan_covers/remote_hyrox_20.webp",
+      "coverImage": "plan_covers/remote_hyrox_20_1794070027748.webp",
       "activityIds": [
         "battleRopes",
         "sledPush",
@@ -55,7 +55,9 @@
         "farmerCarry",
         "lunges",
         "wallBalls"
-      ]
+      ],
+      "coverImagePill": "plan_covers/remote_hyrox_20_pill_1794070027755.webp",
+      "coverImagePillAlign": -0.86
     },
     {
       "id": "remote_hyrox_30",

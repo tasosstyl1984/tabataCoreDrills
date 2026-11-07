@@ -1,7 +1,6 @@
 {
   "id": "remote_hyrox_20",
   "name": "Hyrox Stations 20",
-  "description": "Shorter Hyrox-style station ladder — ropes, sled, carries, and bodyweight moves for race-day work capacity.",
   "createdAtMs": 1791621940448,
   "sets": 3,
   "repsPerSet": 8,
@@ -150,5 +149,8 @@
         "restAfterSetSeconds": 70
       }
     ]
-  }
+  },
+  "description": "Shorter Hyrox-style station ladder — ropes, sled, carries, and bodyweight moves for race-day work capacity.",
+  "coverImagePill": "plan_covers/remote_hyrox_20_pill_1794070027755.webp",
+  "coverImagePillAlign": -0.86
 }
