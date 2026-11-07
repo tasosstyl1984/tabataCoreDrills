@@ -1,8 +1,8 @@
 {
-  "version": 125,
-  "updatedAtMs": 1794046771900,
+  "version": 126,
+  "updatedAtMs": 1794046822447,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 7874376,
+  "totalBytes": 7989454,
   "images": [
     {
       "id": "abs",
@@ -439,8 +439,8 @@
     {
       "id": "kettlebellSwings",
       "file": "exercise_guides/kettlebellSwings.webp",
-      "bytes": 8070,
-      "sha256": "d088a1c6d77faf80"
+      "bytes": 123148,
+      "sha256": "01f77e875999cdc9"
     },
     {
       "id": "kettlebellTurkishGetUp",
