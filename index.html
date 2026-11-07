@@ -8,7 +8,7 @@
   <link rel="icon" href="img/logo-mark.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400..700,0..1,0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="css/site.css?v=56" />
+  <link rel="stylesheet" href="css/site.css?v=57" />
 </head>
 <body>
   <dialog id="busy-dialog" class="busy-dialog" aria-live="assertive" aria-busy="false">
@@ -432,20 +432,30 @@
           <p class="brand">Current</p>
           <div class="exercise-images-preview-wrap">
             <div id="exercise-images-current-zoom-stack" class="zoom-stack exercise-images-zoom-stack" hidden>
-              <div id="exercise-images-current-zoom" class="zoom-viewport exercise-images-zoom" aria-label="Current image" tabindex="0">
+              <div id="exercise-images-current-zoom" class="zoom-viewport exercise-images-zoom exercise-images-zoom--fit" aria-label="Current image" tabindex="0">
                 <div class="zoom-viewport-inner">
                   <img id="exercise-images-current-preview" class="zoom-viewport-img exercise-images-preview" alt="" />
                 </div>
               </div>
               <div class="zoom-viewport-toolbar" role="toolbar" aria-label="Zoom">
+                <span class="zoom-toolbar-caption" aria-hidden="true">Zoom</span>
                 <label class="zoom-slider-label" for="exercise-images-current-slider">
-                  <span class="sr-only">Zoom</span>
-                  <input type="range" id="exercise-images-current-slider" class="zoom-viewport-slider" min="100" max="500" step="1" value="100" />
+                  <span class="sr-only">Zoom level for current image</span>
+                  <input
+                    type="range"
+                    id="exercise-images-current-slider"
+                    class="zoom-viewport-slider"
+                    min="100"
+                    max="500"
+                    step="1"
+                    value="100"
+                    title="Vertical slider: 100% = fit whole image in frame, up to 500% zoom in"
+                  />
                 </label>
                 <button type="button" class="zoom-tool" data-zoom-reset title="Reset zoom and pan" aria-label="Reset zoom">Reset</button>
               </div>
             </div>
-            <p class="zoom-hint muted">Fills the 3:2 frame like the app · wheel to zoom · drag to pan</p>
+            <p class="zoom-hint muted">Shows the whole file on GitHub (letterbox if not 3:2) · slider = zoom · drag to pan</p>
             <div id="exercise-images-current-placeholder" class="exercise-images-preview-placeholder muted">No image file yet</div>
           </div>
         </div>
@@ -464,20 +474,30 @@
           </details>
           <div class="exercise-images-preview-wrap">
             <div id="exercise-images-new-zoom-stack" class="zoom-stack exercise-images-zoom-stack" hidden>
-              <div id="exercise-images-new-zoom" class="zoom-viewport exercise-images-zoom" aria-label="New image preview" tabindex="0">
+              <div id="exercise-images-new-zoom" class="zoom-viewport exercise-images-zoom exercise-images-zoom--fill" aria-label="New image preview" tabindex="0">
                 <div class="zoom-viewport-inner">
                   <img id="exercise-images-new-preview" class="zoom-viewport-img exercise-images-preview" alt="" />
                 </div>
               </div>
               <div class="zoom-viewport-toolbar" role="toolbar" aria-label="Zoom">
+                <span class="zoom-toolbar-caption" aria-hidden="true">Zoom</span>
                 <label class="zoom-slider-label" for="exercise-images-new-slider">
-                  <span class="sr-only">Zoom</span>
-                  <input type="range" id="exercise-images-new-slider" class="zoom-viewport-slider" min="100" max="500" step="1" value="100" />
+                  <span class="sr-only">Zoom level for replacement preview</span>
+                  <input
+                    type="range"
+                    id="exercise-images-new-slider"
+                    class="zoom-viewport-slider"
+                    min="100"
+                    max="500"
+                    step="1"
+                    value="100"
+                    title="Vertical slider: 100% = fills 3:2 like the app, up to 500% zoom in"
+                  />
                 </label>
                 <button type="button" class="zoom-tool" data-zoom-reset title="Reset zoom and pan" aria-label="Reset zoom">Reset</button>
               </div>
             </div>
-            <p class="zoom-hint muted">Fills the 3:2 frame like the app · wheel to zoom · drag to pan</p>
+            <p class="zoom-hint muted">Fills the 3:2 frame like the app · slider = zoom · drag to pan</p>
             <div id="exercise-images-new-placeholder" class="exercise-images-preview-placeholder muted">No file selected</div>
           </div>
           <div class="exercise-images-upload-actions">
