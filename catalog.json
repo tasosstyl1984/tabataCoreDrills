@@ -1,6 +1,6 @@
 {
-  "version": 159,
-  "updatedAtMs": 1794061907825,
+  "version": 160,
+  "updatedAtMs": 1794062039204,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -99,18 +99,21 @@
       "id": "remote_kill_my_legs",
       "name": "Kill my Legs",
       "file": "drills/remote_kill_my_legs.json",
-      "updatedAtMs": 1793269822510,
+      "updatedAtMs": 1794062038108,
       "category": "combos",
       "description": "",
-      "coverImage": "plan_covers/remote_kill_my_legs_1793269822497.webp",
+      "coverImage": "plan_covers/remote_kill_my_legs_1794062038086.webp",
       "activityIds": [
         "lunges",
         "squats",
         "bulgarianSplitSquat",
         "squatJumps",
         "jumpingLunges",
-        "sumoSquats"
-      ]
+        "sumoSquats",
+        "legPress"
+      ],
+      "coverImagePill": "plan_covers/remote_kill_my_legs_pill_1794062038101.webp",
+      "coverImagePillAlign": -0.64
     },
     {
       "id": "remote_ladies_complex",

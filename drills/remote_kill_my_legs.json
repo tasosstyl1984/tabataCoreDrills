@@ -3,7 +3,7 @@
   "name": "Kill my Legs",
   "createdAtMs": 1793267596931,
   "sets": 4,
-  "repsPerSet": 6,
+  "repsPerSet": 7,
   "workSeconds": 40,
   "restBetweenRepsSeconds": 30,
   "restBetweenSetsSeconds": 60,
@@ -44,6 +44,11 @@
             "workSeconds": 40,
             "restAfterSeconds": 30,
             "activityId": "sumoSquats"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 30,
+            "activityId": "legPress"
           }
         ],
         "restAfterSetSeconds": 60
@@ -79,6 +84,11 @@
             "workSeconds": 40,
             "restAfterSeconds": 30,
             "activityId": "sumoSquats"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 30,
+            "activityId": "legPress"
           }
         ],
         "restAfterSetSeconds": 60
@@ -114,6 +124,11 @@
             "workSeconds": 40,
             "restAfterSeconds": 30,
             "activityId": "sumoSquats"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 30,
+            "activityId": "legPress"
           }
         ],
         "restAfterSetSeconds": 60
@@ -143,11 +158,23 @@
           {
             "workSeconds": 40,
             "restAfterSeconds": 30,
+            "activityId": "jumpingLunges"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 30,
             "activityId": "sumoSquats"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 30,
+            "activityId": "legPress"
           }
         ],
         "restAfterSetSeconds": 60
       }
     ]
-  }
+  },
+  "coverImagePill": "plan_covers/remote_kill_my_legs_pill_1794062038101.webp",
+  "coverImagePillAlign": -0.64
 }
