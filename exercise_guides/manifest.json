@@ -1,8 +1,8 @@
 {
-    "version": 75,
-    "updatedAtMs": 1794012916406,
+    "version": 76,
+    "updatedAtMs": 1794013472916,
     "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-    "totalBytes": 27359012,
+    "totalBytes": 27192478,
     "images": [
         {
             "id": "abs",
@@ -115,8 +115,8 @@
         {
             "id": "burpees",
             "file": "exercise_guides/burpees.webp",
-            "bytes": 287262,
-            "sha256": "e3e19c61a239fb45"
+            "bytes": 120728,
+            "sha256": "421d3b6e5a69dea0"
         },
         {
             "id": "cableChestPress",
