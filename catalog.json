@@ -1,6 +1,6 @@
 {
-  "version": 170,
-  "updatedAtMs": 1794070271270,
+  "version": 171,
+  "updatedAtMs": 1794070307653,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -63,7 +63,7 @@
       "id": "remote_hyrox_30",
       "name": "Hyrox Stations 30",
       "file": "drills/remote_hyrox_30.json",
-      "updatedAtMs": 1791624433060,
+      "updatedAtMs": 1794070306746,
       "category": "conditioning",
       "description": "Mid-length Hyrox station circuit with more volume — builds engine fitness and station familiarity for Peak effort.",
       "coverImage": "plan_covers/remote_hyrox_30.webp",
@@ -76,7 +76,9 @@
         "farmerCarry",
         "jumpingLunges",
         "wallBalls"
-      ]
+      ],
+      "coverImagePill": "plan_covers/remote_hyrox_30_pill_1794070306736.webp",
+      "coverImagePillAlign": -0.72
     },
     {
       "id": "remote_hyrox_40",
