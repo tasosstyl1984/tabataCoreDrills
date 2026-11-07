@@ -1,8 +1,8 @@
 {
-    "version": 88,
-    "updatedAtMs": 1794041242366,
+    "version": 89,
+    "updatedAtMs": 1794041338478,
     "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-    "totalBytes": 25818916,
+    "totalBytes": 25721854,
     "images": [
         {
             "id": "abs",
@@ -493,8 +493,8 @@
         {
             "id": "mountainClimbers",
             "file": "exercise_guides/mountainClimbers.webp",
-            "bytes": 205358,
-            "sha256": "c98eaee0c8f905a0"
+            "bytes": 108296,
+            "sha256": "17fe0ef1924eea49"
         },
         {
             "id": "overheadTricepExtension",
