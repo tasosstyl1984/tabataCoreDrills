@@ -647,6 +647,16 @@
       ]
     },
     {
+      "id": "cableFrontRaise",
+      "label": "Cable machine front raise",
+      "group": "Machines",
+      "movement": "frontRaises",
+      "equipment": [
+        "Cable machine",
+        "single handle"
+      ]
+    },
+    {
       "id": "cableLateralRaise",
       "label": "Cable lateral raise",
       "group": "Machines",

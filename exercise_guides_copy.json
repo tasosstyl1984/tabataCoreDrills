@@ -709,6 +709,13 @@
       "formCheck": "Keep your back on the pad and your shoulders down. Do not lean back or shrug at the top.",
       "hasRemoteImage": true
     },
+    "cableFrontRaise": {
+      "title": "Cable Machine Front Raise",
+      "setup": "Set the cable low and stand facing away from the stack, holding the handle in front of your thigh. Keep a small bend in your elbow and your ribs down.",
+      "actionPhase": "Raise the handle forward until your hand is about shoulder height, then lower it slowly back to your thigh.",
+      "formCheck": "Keep your body still and lift with your shoulder. Do not lean back or swing the cable to get the handle up.",
+      "hasRemoteImage": true
+    },
     "cableLateralRaise": {
       "title": "Cable Lateral Raise",
       "setup": "Stand beside a low cable and hold the handle in the hand farther from the stack. Keep a small bend in that elbow and stand tall.",
