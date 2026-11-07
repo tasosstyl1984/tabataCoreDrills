@@ -2311,10 +2311,10 @@ body.admin-authed .preview-footer-actions .btn-delete-admin {
   position: relative;
 }
 
-/* Ready pill is a short wide bar. Must follow the 8:5 rule or that ratio wins. */
+/* Ready pill is a short wide bar with 22px corners, not a stadium. Must follow the 8:5 rule. */
 .cover-preview-wrap.cover-preview-wrap--pill {
   aspect-ratio: 3 / 1;
-  border-radius: 999px;
+  border-radius: 22px;
 }
 
 /* Hero preview: full file visible when aspect differs. */
