@@ -2298,6 +2298,7 @@
       if (editCoverPillPlaceholder) editCoverPillPlaceholder.hidden = false;
     }
     applyPillAlignToPreview();
+    updatePillPreviewFramingUi();
   }
 
   /** Slider 0–100 → horizontal object-position % for admin preview (matches BoxFit.cover). */
@@ -2330,8 +2331,71 @@
 
   function setPillAlignSliderFromAlign(align) {
     const pct = pillAlignPercentFromAlign(align);
-    if (editCoverPillAlign) editCoverPillAlign.value = String(pct);
+    setPillAlignSliderPercent(pct);
+  }
+
+  function setPillAlignSliderPercent(pct) {
+    const safe = Math.min(100, Math.max(0, Number(pct)));
+    const v = Number.isFinite(safe) ? Math.round(safe) : 50;
+    if (editCoverPillAlign) editCoverPillAlign.value = String(v);
     applyPillAlignToPreview();
+  }
+
+  function pillPreviewFramingActive() {
+    return !!(
+      editCoverPillPreview &&
+      !editCoverPillPreview.hidden &&
+      editCoverPillPreview.getAttribute("src")
+    );
+  }
+
+  function updatePillPreviewFramingUi() {
+    if (!coverPreviewWrapPill) return;
+    coverPreviewWrapPill.classList.toggle(
+      "is-pill-framing",
+      pillPreviewFramingActive(),
+    );
+  }
+
+  let pillFramingDrag = false;
+  let pillFramingDragX = 0;
+  let pillFramingDragPct = 50;
+
+  function bindPillPreviewDrag() {
+    if (!coverPreviewWrapPill) return;
+
+    const endPillFramingDrag = (e) => {
+      if (!pillFramingDrag) return;
+      pillFramingDrag = false;
+      coverPreviewWrapPill.classList.remove("is-dragging");
+      try {
+        coverPreviewWrapPill.releasePointerCapture(e.pointerId);
+      } catch (_) {
+        /* ignore */
+      }
+    };
+
+    coverPreviewWrapPill.addEventListener("pointerdown", (e) => {
+      if (!pillPreviewFramingActive()) return;
+      if (e.button !== 0) return;
+      pillFramingDrag = true;
+      pillFramingDragX = e.clientX;
+      pillFramingDragPct = Number(editCoverPillAlign?.value);
+      if (!Number.isFinite(pillFramingDragPct)) pillFramingDragPct = 50;
+      coverPreviewWrapPill.classList.add("is-dragging");
+      coverPreviewWrapPill.setPointerCapture(e.pointerId);
+      e.preventDefault();
+    });
+
+    coverPreviewWrapPill.addEventListener("pointermove", (e) => {
+      if (!pillFramingDrag) return;
+      const w = coverPreviewWrapPill.getBoundingClientRect().width || 1;
+      const dx = e.clientX - pillFramingDragX;
+      setPillAlignSliderPercent(pillFramingDragPct - (dx / w) * 100);
+    });
+
+    coverPreviewWrapPill.addEventListener("pointerup", endPillFramingDrag);
+    coverPreviewWrapPill.addEventListener("pointercancel", endPillFramingDrag);
   }
 
   function clearPendingCover() {
@@ -3263,6 +3327,8 @@
     applyPillAlignToPreview();
     editCoverPillAlign.addEventListener("input", () => applyPillAlignToPreview());
   }
+  bindPillPreviewDrag();
+  updatePillPreviewFramingUi();
   if (editCoverPillSync) {
     editCoverPillSync.addEventListener("click", () => {
       const heroPath = effectiveHeroCoverPath();
