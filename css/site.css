@@ -318,9 +318,20 @@ body.site-tab-exercises #import-help {
   max-width: 280px;
 }
 
+.cover-preview-wrap--pill.is-pill-framing {
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+
+.cover-preview-wrap--pill.is-pill-framing.is-dragging {
+  cursor: grabbing;
+}
+
 .cover-preview--pill {
   object-fit: cover;
   object-position: var(--pill-preview-pos, center center);
+  pointer-events: none;
 }
 
 /* Admin catalog: compact list rows (still card tiles for public) */

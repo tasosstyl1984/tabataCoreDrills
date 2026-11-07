@@ -8,7 +8,7 @@
   <link rel="icon" href="img/logo-mark.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400..700,0..1,0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.6.2/cropper.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="css/site.css?v=53" />
+  <link rel="stylesheet" href="css/site.css?v=54" />
 </head>
 <body>
   <dialog id="busy-dialog" class="busy-dialog" aria-live="assertive" aria-busy="false">
@@ -332,7 +332,7 @@
                 <input id="edit-cover-pill" type="hidden" />
                 <label class="pill-align-label" for="edit-cover-pill-align">
                   Ready pill framing
-                  <span class="label-note">(horizontal)</span>
+                  <span class="label-note">(drag preview or slider)</span>
                 </label>
                 <div class="pill-align-row">
                   <span class="pill-align-tick" aria-hidden="true">Left</span>
@@ -350,7 +350,7 @@
                   <span class="pill-align-tick" aria-hidden="true">Right</span>
                 </div>
                 <p class="category-hint pill-align-hint" id="cover-pill-align-hint">
-                  0 = show the left side of the art in the Ready pill, 100 = right (Tabata Core <strong>1.0.285+</strong>). Matches <strong>BoxFit.cover</strong> on the phone.
+                  <strong>Drag</strong> the preview left or right to pan the photo (like moving it behind the Ready pill), or use the slider. Slider <strong>0</strong> = left, <strong>100</strong> = right — same as Tabata Core <strong>1.0.285+</strong> <strong>BoxFit.cover</strong> framing.
                 </p>
                 <p class="category-hint" id="cover-pill-hint">
                   Same <strong>8:5</strong> crop as the hero. When set, Tabata Core uses this behind the <strong>Ready</strong> plan pill only; detail screens keep the hero image.
@@ -563,6 +563,6 @@
   <script src="js/zoom-pan.js?v=5"></script>
   <script src="js/catalog.js?v=39"></script>
   <script src="js/weekly-plans.js?v=1"></script>
-  <script src="js/admin.js?v=53"></script>
+  <script src="js/admin.js?v=54"></script>
 </body>
 </html>
