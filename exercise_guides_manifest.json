@@ -1,8 +1,8 @@
 {
-  "version": 119,
-  "updatedAtMs": 1794046314486,
+  "version": 120,
+  "updatedAtMs": 1794046409728,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 7395710,
+  "totalBytes": 7546164,
   "images": [
     {
       "id": "abs",
@@ -151,8 +151,8 @@
     {
       "id": "cableLateralRaise",
       "file": "exercise_guides/cableLateralRaise.webp",
-      "bytes": 12746,
-      "sha256": "e9d0db9bd9d5577d"
+      "bytes": 163200,
+      "sha256": "76ebd0b1d027528d"
     },
     {
       "id": "calfRaiseMachine",
