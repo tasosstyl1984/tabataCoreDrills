@@ -2602,6 +2602,9 @@
     if (cropImage) {
       cropImage.removeAttribute("src");
     }
+    if (cropDialog) {
+      cropDialog.classList.remove("crop-dialog--exercise");
+    }
   }
 
   function setCropDialogLabels() {
@@ -2610,7 +2613,7 @@
       if (cropTitle) cropTitle.textContent = "Crop image (3:2)";
       if (cropHint) {
         cropHint.textContent =
-          "Same frame as Tabata Core “How to”: 3:2 slot, 1536×1024 WebP export. Drag to reposition; pinch/scroll to zoom.";
+          "The whole source image should be visible (tall photos shrink to fit). Drag the image to position it; wheel = zoom. The blue frame is exactly what exports at 1536×1024.";
       }
       return;
     }
@@ -2645,17 +2648,46 @@
     destroyCropper();
     cropObjectUrl = URL.createObjectURL(file);
     cropImage.src = cropObjectUrl;
+    if (cropDialog) {
+      cropDialog.classList.toggle("crop-dialog--exercise", cropMode === "exerciseGuide");
+    }
     showModal(cropDialog);
     const aspectRatio = cropMode === "exerciseGuide" ? 3 / 2 : 8 / 5;
+    const isExercise = cropMode === "exerciseGuide";
     cropImage.onload = () => {
       cropper = new Cropper(cropImage, {
         aspectRatio,
-        viewMode: 1,
+        // Exercise: fit full bitmap in the stage (tall PNGs). Plan cover keeps export bounds tight.
+        viewMode: isExercise ? 2 : 1,
         dragMode: "move",
         autoCropArea: 1,
-        background: false,
+        background: true,
         responsive: true,
         restore: false,
+        zoomOnWheel: true,
+        wheelZoomRatio: 0.08,
+        ready() {
+          if (!isExercise) return;
+          const inst = this.cropper;
+          if (!inst) return;
+          const container = inst.getContainerData();
+          const image = inst.getImageData();
+          if (
+            !container.width ||
+            !container.height ||
+            !image.naturalWidth ||
+            !image.naturalHeight
+          ) {
+            return;
+          }
+          const fitZoom = Math.min(
+            container.width / image.naturalWidth,
+            container.height / image.naturalHeight,
+          );
+          if (fitZoom > 0 && Number.isFinite(fitZoom)) {
+            inst.zoomTo(fitZoom);
+          }
+        },
       });
     };
   }
