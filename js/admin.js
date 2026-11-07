@@ -90,6 +90,7 @@
   const exerciseImagesNewPlaceholder = document.getElementById("exercise-images-new-placeholder");
   const exerciseImagesNewZoomStack = document.getElementById("exercise-images-new-zoom-stack");
   const exerciseImagesNewZoom = document.getElementById("exercise-images-new-zoom");
+  const exerciseImagesNewZoomHint = document.getElementById("exercise-images-new-zoom-hint");
   const exerciseImagesPick = document.getElementById("exercise-images-pick");
   const exerciseImagesCopyCurrent = document.getElementById("exercise-images-copy-current");
   const exerciseImagesFile = document.getElementById("exercise-images-file");
@@ -106,6 +107,24 @@
   let exerciseImagesPendingPreviewUrl = null;
   let detachCurrentZoom = null;
   let detachNewZoom = null;
+
+  const EXERCISE_REPLACEMENT_HINT_FILL =
+    "Fills the 3:2 frame like the app · slider = zoom · drag to pan";
+  const EXERCISE_REPLACEMENT_HINT_CROPPED =
+    "Exact 3:2 export after crop (this is what Save uploads) · slider = zoom · drag to inspect";
+
+  /** @param {'editing' | 'cropped'} mode */
+  function setExerciseReplacementPreviewMode(mode) {
+    if (!exerciseImagesNewZoom) return;
+    const cropped = mode === "cropped";
+    exerciseImagesNewZoom.classList.toggle("exercise-images-zoom--fit", cropped);
+    exerciseImagesNewZoom.classList.toggle("exercise-images-zoom--fill", !cropped);
+    if (exerciseImagesNewZoomHint) {
+      exerciseImagesNewZoomHint.textContent = cropped
+        ? EXERCISE_REPLACEMENT_HINT_CROPPED
+        : EXERCISE_REPLACEMENT_HINT_FILL;
+    }
+  }
 
   let editingWeeklyWeek = null;
   let plan = classicStarterPlan();
@@ -553,6 +572,7 @@
     }
     if (exerciseImagesNewZoomStack) exerciseImagesNewZoomStack.hidden = true;
     if (exerciseImagesNewPlaceholder) exerciseImagesNewPlaceholder.hidden = false;
+    setExerciseReplacementPreviewMode("editing");
 
     renderExerciseImagesGrid();
     if (exerciseImagesStatus) exerciseImagesStatus.textContent = "";
@@ -572,6 +592,7 @@
     }
     refreshExerciseSaveButton();
     detachZoomHandlers();
+    setExerciseReplacementPreviewMode("editing");
     if (!file) {
       if (exerciseImagesNewPreview) {
         exerciseImagesNewPreview.removeAttribute("src");
@@ -2613,7 +2634,7 @@
       if (cropTitle) cropTitle.textContent = "Crop image (3:2)";
       if (cropHint) {
         cropHint.textContent =
-          "The whole source image should be visible (tall photos shrink to fit). Drag the image to position it; wheel = zoom. The blue frame is exactly what exports at 1536×1024.";
+          "Drag the blue frame to pick your 3:2 slice (wide photos: slide left/right). Double-click the image to pan the photo under the frame instead. Wheel = zoom. Export is 1536×1024.";
       }
       return;
     }
@@ -2657,15 +2678,19 @@
     cropImage.onload = () => {
       cropper = new Cropper(cropImage, {
         aspectRatio,
-        // Exercise: fit full bitmap in the stage (tall PNGs). Plan cover keeps export bounds tight.
+        // Exercise: fit full bitmap in the stage; plan cover keeps export bounds tight.
         viewMode: isExercise ? 2 : 1,
-        dragMode: "move",
+        dragMode: isExercise ? "crop" : "move",
         autoCropArea: 1,
         background: true,
         responsive: true,
         restore: false,
         zoomOnWheel: true,
         wheelZoomRatio: 0.08,
+        center: isExercise,
+        cropBoxMovable: true,
+        cropBoxResizable: !isExercise,
+        toggleDragModeOnDblclick: isExercise,
         ready() {
           if (!isExercise) return;
           const inst = this.cropper;
@@ -2687,6 +2712,16 @@
           if (fitZoom > 0 && Number.isFinite(fitZoom)) {
             inst.zoomTo(fitZoom);
           }
+          window.setTimeout(() => {
+            if (!cropper) return;
+            const canvas = inst.getCanvasData();
+            const box = inst.getCropBoxData();
+            if (!canvas.width || !box.width) return;
+            inst.setCropBoxData({
+              left: canvas.left + (canvas.width - box.width) / 2,
+              top: canvas.top + (canvas.height - box.height) / 2,
+            });
+          }, 0);
         },
       });
     };
@@ -2742,6 +2777,7 @@
       }
       exerciseImagesPendingBlob = blob;
       exerciseImagesPendingPreviewUrl = URL.createObjectURL(blob);
+      setExerciseReplacementPreviewMode("cropped");
       if (exerciseImagesNewPreview) {
         exerciseImagesNewPreview.onload = () => {
           if (typeof window.attachExerciseImageZoomPan === "function" && exerciseImagesNewZoom) {
