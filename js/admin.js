@@ -1705,6 +1705,7 @@
       },
     };
     if (description) template.description = description;
+    if (cover) template.coverImagePath = cover;
     if (pillCover) template.coverImagePill = pillCover;
     template.coverImagePillAlign = pillAlign;
     if (editingEntry && template.createdAtMs === undefined) {
@@ -3109,18 +3110,28 @@
             });
           }
 
+          const keptCoverPaths = new Set(
+            [newCoverPath, (editCover?.value || "").trim()].filter(Boolean),
+          );
+          if (!newCoverPath) {
+            const existingCover = (editingEntry?.coverImage || "").trim();
+            if (existingCover) keptCoverPaths.add(existingCover);
+          }
+          const queueCoverDelete = (path) => {
+            const p = String(path || "").trim();
+            if (!p.startsWith("plan_covers/") || keptCoverPaths.has(p)) return;
+            if (p === newPillCoverPath) return;
+            if (changes.some((c) => c.delete && c.path === p)) return;
+            changes.push({ path: p, delete: true });
+          };
+
           if (newCoverPath && newCoverBase64) {
             changes.unshift({
               path: newCoverPath,
               content: newCoverBase64,
               encoding: "base64",
             });
-            if (
-              previousCoverPath.startsWith("plan_covers/") &&
-              previousCoverPath !== newCoverPath
-            ) {
-              changes.push({ path: previousCoverPath, delete: true });
-            }
+            queueCoverDelete(previousCoverPath);
           }
 
           if (newPillCoverPath && newPillCoverBase64) {
@@ -3129,20 +3140,9 @@
               content: newPillCoverBase64,
               encoding: "base64",
             });
-            if (
-              previousPillCoverPath.startsWith("plan_covers/") &&
-              previousPillCoverPath !== newPillCoverPath
-            ) {
-              changes.push({ path: previousPillCoverPath, delete: true });
-            }
-          } else if (
-            !String(editCoverPill?.value || "").trim() &&
-            previousPillCoverPath.startsWith("plan_covers/") &&
-            previousPillCoverPath !== (editCover?.value || "").trim() &&
-            previousPillCoverPath !== (editingEntry?.coverImage || "").trim() &&
-            previousPillCoverPath !== newCoverPath
-          ) {
-            changes.push({ path: previousPillCoverPath, delete: true });
+            queueCoverDelete(previousPillCoverPath);
+          } else if (!String(editCoverPill?.value || "").trim()) {
+            queueCoverDelete(previousPillCoverPath);
           }
 
           await commitFilesAtomic(
