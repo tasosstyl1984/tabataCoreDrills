@@ -2683,10 +2683,17 @@
       Math.min(
         container.width / image.naturalWidth,
         container.height / image.naturalHeight,
-      ) * 0.84;
+      ) * 0.78;
     if (fitZoom > 0 && Number.isFinite(fitZoom)) {
       cropFitRatio = fitZoom;
       inst.zoomTo(fitZoom);
+    }
+    const fitted = inst.getCanvasData();
+    if (fitted.width && fitted.height) {
+      inst.setCanvasData({
+        left: (container.width - fitted.width) / 2,
+        top: (container.height - fitted.height) / 2,
+      });
     }
     const canvas = inst.getCanvasData();
     if (!canvas.width || !canvas.height) return;
