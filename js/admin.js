@@ -2679,22 +2679,25 @@
     ) {
       return;
     }
+    // Display size only. The photo keeps its own aspect; 0.72 leaves equal checkerboard on every side.
     const fitZoom =
       Math.min(
         container.width / image.naturalWidth,
         container.height / image.naturalHeight,
-      ) * 0.78;
-    if (fitZoom > 0 && Number.isFinite(fitZoom)) {
-      cropFitRatio = fitZoom;
-      inst.zoomTo(fitZoom);
-    }
-    const fitted = inst.getCanvasData();
-    if (fitted.width && fitted.height) {
-      inst.setCanvasData({
-        left: (container.width - fitted.width) / 2,
-        top: (container.height - fitted.height) / 2,
-      });
-    }
+      ) * 0.72;
+    if (!(fitZoom > 0) || !Number.isFinite(fitZoom)) return;
+    cropFitRatio = fitZoom;
+    const canvasW = image.naturalWidth * fitZoom;
+    const canvasH = image.naturalHeight * fitZoom;
+    const canvasLeft = (container.width - canvasW) / 2;
+    const canvasTop = (container.height - canvasH) / 2;
+    inst.zoomTo(fitZoom);
+    inst.setCanvasData({
+      left: canvasLeft,
+      top: canvasTop,
+      width: canvasW,
+      height: canvasH,
+    });
     const canvas = inst.getCanvasData();
     if (!canvas.width || !canvas.height) return;
     const ratio = cropMode === "exerciseGuide" ? 3 / 2 : 8 / 5;
@@ -2709,6 +2712,12 @@
       height: boxH * 0.98,
       left: canvas.left + (canvas.width - boxW * 0.98) / 2,
       top: canvas.top + (canvas.height - boxH * 0.98) / 2,
+    });
+    inst.setCanvasData({
+      left: canvasLeft,
+      top: canvasTop,
+      width: canvasW,
+      height: canvasH,
     });
     setCropZoomSlider(0);
   }
@@ -2764,9 +2773,8 @@
     cropImage.onload = () => {
       cropper = new Cropper(cropImage, {
         aspectRatio,
-        // viewMode 1 keeps the box inside the photo and still allows zoom-in.
-        // The stage clips overflow. Fit is the zoom-out floor.
-        viewMode: 1,
+        // viewMode 0 lets us set the display size and center it. The 3:2 or 8:5 box is placed inside that photo.
+        viewMode: 0,
         dragMode: "crop",
         autoCropArea: 1,
         background: true,
