@@ -1406,10 +1406,10 @@ code {
 /* Exercise editor: one content-sized 3:2 slot. The picture sets the row; the rail cannot grow it. */
 .exercise-images-frame {
   aspect-ratio: 3 / 2;
-  width: min(100%, calc(min(32vh, 280px) * 1.5));
+  width: 100%;
   max-width: 100%;
   height: auto;
-  max-height: min(32vh, 280px);
+  max-height: none;
   flex: 0 0 auto;
   box-sizing: border-box;
 }
@@ -1418,13 +1418,13 @@ code {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 2.65rem;
   column-gap: 0.35rem;
-  justify-content: start;
+  justify-content: stretch;
   align-items: start;
   max-height: none;
   min-height: 0;
   flex: 0 0 auto;
   width: 100%;
-  max-width: calc(min(32vh, 280px) * 1.5 + 2.65rem + 0.35rem);
+  max-width: none;
 }
 
 .exercise-images-editor-dialog .zoom-stack > .zoom-viewport.exercise-images-zoom {
@@ -2421,10 +2421,30 @@ body.admin-authed .preview-footer-actions .btn-delete-admin {
 
 .crop-zoom-actions {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-  padding: 0.65rem 1.15rem 0;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.55rem 1.15rem 0;
   background: var(--surface);
+}
+
+.crop-zoom-slider-label {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-width: 0;
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.crop-zoom-slider-label input[type="range"] {
+  flex: 1 1 auto;
+  min-width: 0;
+  accent-color: var(--primary);
 }
 
 .crop-zoom-actions button {
@@ -2624,9 +2644,9 @@ body.admin-authed .preview-footer-actions .btn-delete-admin {
 /* Exercise image editor — fill the viewport; inner preview row flexes (no body scroll) */
 .exercise-images-editor-dialog {
   overflow: hidden;
-  max-width: min(1600px, calc(100vw - 1rem));
+  max-width: min(1080px, calc(100vw - 1.5rem));
   max-height: min(92dvh, 860px);
-  width: min(1600px, calc(100vw - 1rem));
+  width: min(1080px, calc(100vw - 1.5rem));
 }
 
 .exercise-images-editor-dialog .editor-panel {
@@ -2764,7 +2784,7 @@ body.admin-authed .preview-footer-actions .btn-delete-admin {
   min-height: 0;
   padding: 0.5rem;
   width: calc(100% - 2.65rem - 0.35rem);
-  max-width: calc(min(32vh, 280px) * 1.5);
+  max-width: none;
 }
 
 .exercise-images-editor-dialog .zoom-stack.exercise-images-zoom-stack {
