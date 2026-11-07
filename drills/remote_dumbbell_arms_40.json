@@ -1,7 +1,6 @@
 {
   "id": "remote_dumbbell_arms_40",
   "name": "Dumbbell Arms",
-  "description": "Focused dumbbell arm work for biceps and triceps \u2014 pump, control, and upper-arm strength.",
   "createdAtMs": 1791622139758,
   "sets": 4,
   "repsPerSet": 6,
@@ -155,5 +154,8 @@
         "restAfterSetSeconds": 100
       }
     ]
-  }
+  },
+  "description": "Focused dumbbell arm work for biceps and triceps — pump, control, and upper-arm strength.",
+  "coverImagePill": "plan_covers/default_dumbbell_arms_40_pill.webp",
+  "coverImagePillAlign": -1
 }
