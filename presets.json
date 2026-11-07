@@ -1,6 +1,6 @@
 {
-  "version": 19,
-  "updatedAtMs": 1794061312459,
+  "version": 20,
+  "updatedAtMs": 1794061421014,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -88,7 +88,7 @@
       "id": "remote_core_rotation_circuit_40",
       "name": "Core Rotation",
       "file": "drills/remote_core_rotation_circuit_40.json",
-      "updatedAtMs": 1791622139758,
+      "updatedAtMs": 1794061419853,
       "category": "core",
       "description": "Core circuit mixing rotation, abs, and holds for a stronger, more stable midsection.",
       "coverImage": "plan_covers/default_core_rotation_circuit_40.webp",
@@ -99,6 +99,8 @@
         "hangingKneeRaises",
         "pushups"
       ],
+      "coverImagePill": "plan_covers/default_core_rotation_circuit_40_pill.webp",
+      "coverImagePillAlign": -0.94,
       "preset": true,
       "shipsWithApp": true,
       "defaultId": "default_core_rotation_circuit_40"

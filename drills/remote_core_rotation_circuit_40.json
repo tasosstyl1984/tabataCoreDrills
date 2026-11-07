@@ -1,7 +1,6 @@
 {
   "id": "remote_core_rotation_circuit_40",
   "name": "Core Rotation",
-  "description": "Core circuit mixing rotation, abs, and holds for a stronger, more stable midsection.",
   "createdAtMs": 1791622139758,
   "sets": 4,
   "repsPerSet": 8,
@@ -195,5 +194,8 @@
         "restAfterSetSeconds": 90
       }
     ]
-  }
+  },
+  "description": "Core circuit mixing rotation, abs, and holds for a stronger, more stable midsection.",
+  "coverImagePill": "plan_covers/default_core_rotation_circuit_40_pill.webp",
+  "coverImagePillAlign": -0.94
 }
