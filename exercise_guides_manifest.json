@@ -1,8 +1,8 @@
 {
-  "version": 129,
-  "updatedAtMs": 1794047606838,
+  "version": 130,
+  "updatedAtMs": 1794047719550,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 8280276,
+  "totalBytes": 8403384,
   "images": [
     {
       "id": "abs",
@@ -583,8 +583,8 @@
     {
       "id": "shoulderPressMachine",
       "file": "exercise_guides/shoulderPressMachine.webp",
-      "bytes": 14976,
-      "sha256": "84bc605d48e183c6"
+      "bytes": 138084,
+      "sha256": "bdd91e922f4ae528"
     },
     {
       "id": "sidePlank",
