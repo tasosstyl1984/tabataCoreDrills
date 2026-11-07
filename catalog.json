@@ -1,6 +1,6 @@
 {
-  "version": 160,
-  "updatedAtMs": 1794062039204,
+  "version": 161,
+  "updatedAtMs": 1794062109248,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -119,10 +119,10 @@
       "id": "remote_ladies_complex",
       "name": "Ladies Complex",
       "file": "drills/remote_ladies_complex.json",
-      "updatedAtMs": 1792268247713,
+      "updatedAtMs": 1794062107893,
       "category": "combos",
       "description": "",
-      "coverImage": "plan_covers/remote_ladies_complex_1792268247699.webp",
+      "coverImage": "plan_covers/remote_ladies_complex_1794062107866.webp",
       "activityIds": [
         "jumpingJacks",
         "mountainClimbers",
@@ -137,7 +137,9 @@
         "abs",
         "plank",
         "birdDog"
-      ]
+      ],
+      "coverImagePill": "plan_covers/remote_ladies_complex_pill_1794062107884.webp",
+      "coverImagePillAlign": -1
     },
     {
       "id": "remote_ladies_first",
