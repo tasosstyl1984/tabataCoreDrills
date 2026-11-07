@@ -1,6 +1,6 @@
 {
-  "version": 165,
-  "updatedAtMs": 1794070056127,
+  "version": 166,
+  "updatedAtMs": 1794070110883,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -187,10 +187,10 @@
       "id": "remote_lion_roar",
       "name": "Lion Roar",
       "file": "drills/remote_lion_roar.json",
-      "updatedAtMs": 1791624433060,
+      "updatedAtMs": 1794070109750,
       "category": "combos",
       "description": "High-energy full-body mix — rope, push-ups, pulls, thrusters, legs, and core when you want a long, varied conditioning day.",
-      "coverImage": "plan_covers/remote_lion_roar.webp",
+      "coverImage": "plan_covers/remote_lion_roar_1794070109738.webp",
       "activityIds": [
         "jumpRope",
         "pushups",
@@ -205,7 +205,9 @@
         "sidePlank",
         "plateRotations",
         "russianTwists"
-      ]
+      ],
+      "coverImagePill": "plan_covers/remote_lion_roar_pill_1794070109745.webp",
+      "coverImagePillAlign": -1
     },
     {
       "id": "remote_lower_body",

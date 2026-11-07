@@ -1,7 +1,6 @@
 {
   "id": "remote_lion_roar",
   "name": "Lion Roar",
-  "description": "High-energy full-body mix — rope, push-ups, pulls, thrusters, legs, and core when you want a long, varied conditioning day.",
   "createdAtMs": 1791564300000,
   "sets": 4,
   "repsPerSet": 8,
@@ -195,5 +194,8 @@
         "restAfterSetSeconds": 60
       }
     ]
-  }
+  },
+  "description": "High-energy full-body mix — rope, push-ups, pulls, thrusters, legs, and core when you want a long, varied conditioning day.",
+  "coverImagePill": "plan_covers/remote_lion_roar_pill_1794070109745.webp",
+  "coverImagePillAlign": -1
 }
