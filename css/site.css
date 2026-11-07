@@ -336,9 +336,11 @@ body.site-tab-exercises #import-help {
   max-width: 32rem;
 }
 
-/* Pill preview uses same 8:5 frame as hero so Match hero / copy match the app. */
+/* Ready pill is a short wide bar, so the preview crops an 8:5 photo from top to bottom. */
 .cover-preview-wrap--pill {
   max-width: 360px;
+  aspect-ratio: 3 / 1;
+  border-radius: 999px;
 }
 
 .cover-preview-wrap--pill.is-pill-framing {
