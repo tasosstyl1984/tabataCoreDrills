@@ -1,8 +1,8 @@
 {
-    "version": 91,
-    "updatedAtMs": 1794041453632,
+    "version": 92,
+    "updatedAtMs": 1794041478397,
     "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-    "totalBytes": 25609256,
+    "totalBytes": 25483680,
     "images": [
         {
             "id": "abs",
@@ -445,8 +445,8 @@
         {
             "id": "kettlebellTurkishGetUp",
             "file": "exercise_guides/kettlebellTurkishGetUp.webp",
-            "bytes": 265454,
-            "sha256": "c764e2d5b2a3a436"
+            "bytes": 139878,
+            "sha256": "1195b89727f988e1"
         },
         {
             "id": "lateralRaises",
