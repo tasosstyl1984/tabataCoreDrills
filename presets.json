@@ -1,6 +1,6 @@
 {
-  "version": 17,
-  "updatedAtMs": 1794060958371,
+  "version": 18,
+  "updatedAtMs": 1794061222127,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -185,7 +185,7 @@
       "id": "remote_kb_boxing_complex",
       "name": "KB Boxing Complex",
       "file": "drills/remote_kb_boxing_complex.json",
-      "updatedAtMs": 1791622139758,
+      "updatedAtMs": 1794061220947,
       "category": "combos",
       "description": "Shadowboxing mixed with kettlebell work for fight fitness, punch endurance, and functional strength.",
       "coverImage": "plan_covers/default_kb_boxing_complex.webp",
@@ -198,6 +198,8 @@
         "kettlebellSnatch",
         "kettlebellGorillaRow"
       ],
+      "coverImagePill": "plan_covers/default_kb_boxing_complex_pill.webp",
+      "coverImagePillAlign": -1,
       "preset": true,
       "shipsWithApp": true,
       "defaultId": "default_kb_boxing_complex"
