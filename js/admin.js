@@ -692,7 +692,7 @@
   }
 
   /**
-   * Renders the replacement preview exactly as shown (3:2 viewport, zoom/pan, letterbox)
+   * Renders the replacement preview exactly as shown (3:2 viewport, cover + zoom/pan)
    * to 1536×1024 WebP bytes — matches Tabata Core exercise guide slot. Prefer
    * getExerciseReplacementWebpBytesForSave after a fresh crop so the file matches the cropper.
    * @returns {Promise<Uint8Array>}
