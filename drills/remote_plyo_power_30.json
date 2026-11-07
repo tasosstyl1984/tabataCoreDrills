@@ -1,7 +1,6 @@
 {
   "id": "remote_plyo_power_30",
   "name": "Plyo Power",
-  "description": "Explosive jumps and spring drills to develop athletic power, reactivity, and takeoff strength.",
   "createdAtMs": 1791622139758,
   "sets": 4,
   "repsPerSet": 6,
@@ -155,5 +154,8 @@
         "restAfterSetSeconds": 90
       }
     ]
-  }
+  },
+  "description": "Explosive jumps and spring drills to develop athletic power, reactivity, and takeoff strength.",
+  "coverImagePill": "plan_covers/default_plyo_power_30_pill.webp",
+  "coverImagePillAlign": -1
 }

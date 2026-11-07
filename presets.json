@@ -1,6 +1,6 @@
 {
-  "version": 29,
-  "updatedAtMs": 1794069996077,
+  "version": 30,
+  "updatedAtMs": 1794070514582,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -333,7 +333,7 @@
       "id": "remote_plyo_power_30",
       "name": "Plyo Power",
       "file": "drills/remote_plyo_power_30.json",
-      "updatedAtMs": 1791622139758,
+      "updatedAtMs": 1794070513230,
       "category": "plyometrics",
       "description": "Explosive jumps and spring drills to develop athletic power, reactivity, and takeoff strength.",
       "coverImage": "plan_covers/default_plyo_power_30.webp",
@@ -344,6 +344,8 @@
         "highKnees",
         "mountainClimbers"
       ],
+      "coverImagePill": "plan_covers/default_plyo_power_30_pill.webp",
+      "coverImagePillAlign": -1,
       "preset": true,
       "shipsWithApp": true,
       "defaultId": "default_plyo_power_30"
