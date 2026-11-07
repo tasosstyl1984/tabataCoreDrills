@@ -1,8 +1,8 @@
 {
-  "version": 127,
-  "updatedAtMs": 1794047066305,
+  "version": 128,
+  "updatedAtMs": 1794047087179,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 7990604,
+  "totalBytes": 8130244,
   "images": [
     {
       "id": "abs",
@@ -73,8 +73,8 @@
     {
       "id": "bike",
       "file": "exercise_guides/bike.webp",
-      "bytes": 22336,
-      "sha256": "faca67cc28404606"
+      "bytes": 161976,
+      "sha256": "ac08a755b75b4a3e"
     },
     {
       "id": "birdDog",
