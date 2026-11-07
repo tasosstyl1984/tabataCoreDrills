@@ -2356,7 +2356,7 @@
     if (!coverPreviewWrapPill) return;
     const pct = editCoverPillAlign ? Number(editCoverPillAlign.value) : 50;
     const safe = Number.isFinite(pct) ? Math.min(100, Math.max(0, pct)) : 50;
-    coverPreviewWrapPill.style.setProperty("--pill-preview-pos", `${safe}% 50%`);
+    coverPreviewWrapPill.style.setProperty("--pill-preview-pos", `center ${safe}%`);
     if (editCoverPillAlign) {
       try {
         editCoverPillAlign.setAttribute("aria-valuenow", String(Math.round(safe)));
@@ -2395,7 +2395,7 @@
   }
 
   let pillFramingDrag = false;
-  let pillFramingDragX = 0;
+  let pillFramingDragY = 0;
   let pillFramingDragPct = 50;
 
   function bindPillPreviewDrag() {
@@ -2416,7 +2416,7 @@
       if (!pillPreviewFramingActive()) return;
       if (e.button !== 0) return;
       pillFramingDrag = true;
-      pillFramingDragX = e.clientX;
+      pillFramingDragY = e.clientY;
       pillFramingDragPct = Number(editCoverPillAlign?.value);
       if (!Number.isFinite(pillFramingDragPct)) pillFramingDragPct = 50;
       coverPreviewWrapPill.classList.add("is-dragging");
@@ -2426,9 +2426,9 @@
 
     coverPreviewWrapPill.addEventListener("pointermove", (e) => {
       if (!pillFramingDrag) return;
-      const w = coverPreviewWrapPill.getBoundingClientRect().width || 1;
-      const dx = e.clientX - pillFramingDragX;
-      setPillAlignSliderPercent(pillFramingDragPct - (dx / w) * 100);
+      const h = coverPreviewWrapPill.getBoundingClientRect().height || 1;
+      const dy = e.clientY - pillFramingDragY;
+      setPillAlignSliderPercent(pillFramingDragPct - (dy / h) * 100);
     });
 
     coverPreviewWrapPill.addEventListener("pointerup", endPillFramingDrag);
