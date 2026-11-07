@@ -1,8 +1,8 @@
 {
-    "version": 107,
-    "updatedAtMs": 1794044452460,
+    "version": 108,
+    "updatedAtMs": 1794044526891,
     "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-    "totalBytes": 24857018,
+    "totalBytes": 24830344,
     "images": [
         {
             "id": "abs",
@@ -487,8 +487,8 @@
         {
             "id": "medBallSlams",
             "file": "exercise_guides/medBallSlams.webp",
-            "bytes": 184518,
-            "sha256": "56729842987ea3e3"
+            "bytes": 157844,
+            "sha256": "e313153761894ed7"
         },
         {
             "id": "mountainClimbers",
