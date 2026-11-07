@@ -1,8 +1,8 @@
 {
-    "version": 129,
-    "updatedAtMs": 1794047087179,
+    "version": 130,
+    "updatedAtMs": 1794047606838,
     "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-    "totalBytes": 23937294,
+    "totalBytes": 23735388,
     "images": [
         {
             "id": "abs",
@@ -475,8 +475,8 @@
         {
             "id": "legPress",
             "file": "exercise_guides/legPress.webp",
-            "bytes": 368842,
-            "sha256": "fa71610ae7be96ed"
+            "bytes": 166936,
+            "sha256": "cd5f4bf3e84ee555"
         },
         {
             "id": "lunges",
