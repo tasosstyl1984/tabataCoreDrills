@@ -1,7 +1,6 @@
 {
   "id": "remote_kb_complex_40",
   "name": "KB Complex",
-  "description": "Linked kettlebell complexes that keep the heart rate high while building strength, grip, and work capacity.",
   "createdAtMs": 1791622139758,
   "sets": 4,
   "repsPerSet": 6,
@@ -155,5 +154,8 @@
         "restAfterSetSeconds": 100
       }
     ]
-  }
+  },
+  "description": "Linked kettlebell complexes that keep the heart rate high while building strength, grip, and work capacity.",
+  "coverImagePill": "plan_covers/default_kb_complex_40_pill.webp",
+  "coverImagePillAlign": -1
 }
