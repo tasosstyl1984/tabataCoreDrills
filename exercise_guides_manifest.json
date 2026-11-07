@@ -1,8 +1,8 @@
 {
-  "version": 136,
-  "updatedAtMs": 1794048575276,
+  "version": 137,
+  "updatedAtMs": 1794048657392,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 8809022,
+  "totalBytes": 8908074,
   "images": [
     {
       "id": "abs",
@@ -625,8 +625,8 @@
     {
       "id": "standingArnoldPress",
       "file": "exercise_guides/standingArnoldPress.webp",
-      "bytes": 5482,
-      "sha256": "2572667b975db946"
+      "bytes": 104534,
+      "sha256": "cc0e20ec423aae5c"
     },
     {
       "id": "stepUps",
