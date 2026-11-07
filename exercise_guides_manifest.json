@@ -1,8 +1,8 @@
 {
-  "version": 107,
-  "updatedAtMs": 1794044526891,
+  "version": 108,
+  "updatedAtMs": 1794044965653,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 5888748,
+  "totalBytes": 5990426,
   "images": [
     {
       "id": "abs",
@@ -271,8 +271,8 @@
     {
       "id": "footballFootwork",
       "file": "exercise_guides/footballFootwork.webp",
-      "bytes": 77546,
-      "sha256": "a1ef552da505ea32"
+      "bytes": 179224,
+      "sha256": "f94eb23e858a22b5"
     },
     {
       "id": "footballHeadStall",
