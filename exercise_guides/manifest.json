@@ -1,8 +1,8 @@
 {
-    "version": 111,
-    "updatedAtMs": 1794045134355,
+    "version": 112,
+    "updatedAtMs": 1794045194177,
     "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-    "totalBytes": 24911012,
+    "totalBytes": 24799102,
     "images": [
         {
             "id": "abs",
@@ -175,8 +175,8 @@
         {
             "id": "chestPressMachine",
             "file": "exercise_guides/chestPressMachine.webp",
-            "bytes": 296524,
-            "sha256": "251988d175cd5bd2"
+            "bytes": 184614,
+            "sha256": "5fa0e20dad136004"
         },
         {
             "id": "concentrationCurls",
