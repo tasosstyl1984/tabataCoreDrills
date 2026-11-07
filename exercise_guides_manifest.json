@@ -1,8 +1,8 @@
 {
   "version": 123,
-  "updatedAtMs": 1794046558823,
+  "updatedAtMs": 1794046599364,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 8052570,
+  "totalBytes": 7743896,
   "images": [
     {
       "id": "abs",
@@ -141,12 +141,6 @@
       "file": "exercise_guides/cableFly.webp",
       "bytes": 193606,
       "sha256": "e048da068cd2f4c4"
-    },
-    {
-      "id": "cableFrontRaise",
-      "file": "exercise_guides/cableFrontRaise.webp",
-      "bytes": 307832,
-      "sha256": "efde11ffe10debd1"
     },
     {
       "id": "cableKickback",
@@ -325,8 +319,8 @@
     {
       "id": "hammerCurls",
       "file": "exercise_guides/hammerCurls.webp",
-      "bytes": 120036,
-      "sha256": "95410d23ae73dfb1"
+      "bytes": 119194,
+      "sha256": "a1b4072cae00b6de"
     },
     {
       "id": "hangingKneeRaises",
