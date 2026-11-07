@@ -1,8 +1,8 @@
 {
-    "version": 113,
-    "updatedAtMs": 1794045372762,
+    "version": 114,
+    "updatedAtMs": 1794045477932,
     "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-    "totalBytes": 24676742,
+    "totalBytes": 24653466,
     "images": [
         {
             "id": "abs",
@@ -97,8 +97,8 @@
         {
             "id": "boxJumps",
             "file": "exercise_guides/boxJumps.webp",
-            "bytes": 191232,
-            "sha256": "81b9d00cf22808d4"
+            "bytes": 167956,
+            "sha256": "7122b6b93930f039"
         },
         {
             "id": "broadJumps",
