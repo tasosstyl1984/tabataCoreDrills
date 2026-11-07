@@ -1,8 +1,8 @@
 {
-  "version": 89,
-  "updatedAtMs": 1794041418920,
+  "version": 90,
+  "updatedAtMs": 1794041453632,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 4034748,
+  "totalBytes": 4231944,
   "images": [
     {
       "id": "abs",
@@ -289,8 +289,8 @@
     {
       "id": "footballWallPassing",
       "file": "exercise_guides/footballWallPassing.webp",
-      "bytes": 15326,
-      "sha256": "78586a067d4d85eb"
+      "bytes": 212522,
+      "sha256": "acc34eadf9095236"
     },
     {
       "id": "frontRaises",
