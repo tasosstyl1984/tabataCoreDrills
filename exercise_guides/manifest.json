@@ -1,8 +1,8 @@
 {
-    "version": 112,
-    "updatedAtMs": 1794045194177,
+    "version": 113,
+    "updatedAtMs": 1794045372762,
     "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-    "totalBytes": 24799102,
+    "totalBytes": 24676742,
     "images": [
         {
             "id": "abs",
@@ -79,8 +79,8 @@
         {
             "id": "birdDog",
             "file": "exercise_guides/birdDog.webp",
-            "bytes": 287160,
-            "sha256": "1ce8a9c482348263"
+            "bytes": 164800,
+            "sha256": "bce6bd1093ee6e73"
         },
         {
             "id": "bodyweightCalfRaises",
