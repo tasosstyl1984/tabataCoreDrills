@@ -2379,7 +2379,9 @@ dialog.is-behind-crop {
   height: min(42vh, 400px);
   max-height: min(42vh, 400px);
   min-height: 0;
-  padding: 1.35rem 1rem;
+  box-sizing: border-box;
+  margin: 0.85rem 1rem;
+  padding: 0;
   overflow: hidden;
   background: #111;
   position: relative;
