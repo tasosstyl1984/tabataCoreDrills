@@ -1,8 +1,8 @@
 {
-    "version": 119,
-    "updatedAtMs": 1794045681617,
+    "version": 120,
+    "updatedAtMs": 1794046314486,
     "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-    "totalBytes": 24378760,
+    "totalBytes": 24188814,
     "images": [
         {
             "id": "abs",
@@ -229,8 +229,8 @@
         {
             "id": "facePull",
             "file": "exercise_guides/facePull.webp",
-            "bytes": 335560,
-            "sha256": "bbf13ad66675bb9e"
+            "bytes": 145614,
+            "sha256": "3fdc61e4d6ede020"
         },
         {
             "id": "farmerCarry",
