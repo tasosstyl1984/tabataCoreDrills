@@ -1,13 +1,13 @@
 {
-  "version": 4,
-  "updatedAtMs": 1794049181485,
+  "version": 5,
+  "updatedAtMs": 1794050195453,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
       "id": "remote_boxing_rounds_30",
       "name": "Boxing Rounds",
       "file": "drills/remote_boxing_rounds_30.json",
-      "updatedAtMs": 1794049124894,
+      "updatedAtMs": 1794050194521,
       "category": "boxing",
       "description": "Shadowboxing rounds for fight-style cardio, footwork, rhythm, and upper-body endurance.",
       "coverImage": "plan_covers/default_boxing_rounds_30.webp",
