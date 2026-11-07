@@ -2665,7 +2665,12 @@
     if (cropTitle) cropTitle.textContent = "Crop image (8:5)";
   }
 
-  /** Fit the whole source in the stage and center the aspect-locked box. */
+  /**
+   * Locked display for every crop: exercise (3:2), plan cover (8:5), and ready pill (8:5).
+   * On open, the photo keeps its own aspect, is drawn at 72% of fit, and is centered in
+   * Cropper's container. The stage has no padding — padding made that container taller
+   * than the checkerboard and the photo sat low. Do not change aspect or export size here.
+   */
   function layoutCropper(inst) {
     if (!inst) return;
     inst.resize();

@@ -1,0 +1,23 @@
+---
+description: Locked crop-dialog display for exercise, plan cover, and ready pill
+globs: "{js/admin.js,css/site.css,index.html}"
+alwaysApply: false
+---
+
+# Admin crop display (locked)
+
+Exercise images, plan cover, and the Ready pill share one crop dialog (`openCropDialog` → `layoutCropper`). Do not give cover or pill a separate crop layout.
+
+## On open
+
+- Photo keeps its own aspect. Display size only: 72% of the fit scale, centered in Cropper's container (`getContainerData`).
+- `viewMode` stays `0`. Mode `1` or `2` glues the photo to the top and bottom of the stage.
+- `.crop-stage` padding stays `0`. Margin sits outside the checkerboard. Padding inside the stage makes Cropper's box taller than the visible area, so the photo sits low.
+- Do not set width or height on `cropper.container`. That node is the stage, not the cropper box.
+- Do not cap `.cropper-canvas`, wrap, or drag-box with `max-height`.
+
+## What may differ
+
+- Exercise frame and export: 3:2, 1536×1024.
+- Cover and pill frame and export: 8:5, 1200×750.
+- Slider zooms in from the fit size. Fit recenters the whole photo. Drag moves the aspect-locked frame.
