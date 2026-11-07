@@ -2351,11 +2351,14 @@ body.admin-authed .preview-footer-actions .btn-delete-admin {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  overflow-x: hidden;
-  overflow-y: auto;
-  max-height: min(92vh, 900px);
+  overflow: hidden;
+  max-height: min(92dvh, 860px);
   display: flex;
   flex-direction: column;
+}
+
+dialog.is-behind-crop {
+  visibility: hidden;
 }
 
 .crop-panel header {
@@ -2372,10 +2375,10 @@ body.admin-authed .preview-footer-actions .btn-delete-admin {
 }
 
 .crop-stage {
-  flex: 0 1 auto;
-  min-height: 12rem;
-  height: min(52vh, 460px);
-  max-height: min(52vh, 460px);
+  flex: 0 0 min(42vh, 400px);
+  height: min(42vh, 400px);
+  max-height: min(42vh, 400px);
+  min-height: 0;
   padding: 0.65rem 0.85rem;
   overflow: hidden;
   background: #111;
@@ -2388,14 +2391,11 @@ body.admin-authed .preview-footer-actions .btn-delete-admin {
 
 /* Exercise crop: fixed stage height; Cropper scales the image to fit (no scrollbars). */
 .crop-dialog--exercise .crop-stage {
-  height: min(52vh, 460px);
-  max-height: min(52vh, 460px);
-  min-height: 12rem;
+  flex: 0 0 min(42vh, 400px);
+  height: min(42vh, 400px);
+  max-height: min(42vh, 400px);
+  min-height: 0;
   overflow: hidden;
-  padding: 0.65rem 0.85rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .crop-stage img {
@@ -2408,15 +2408,21 @@ body.admin-authed .preview-footer-actions .btn-delete-admin {
   max-width: 100%;
 }
 
-.crop-dialog--exercise .crop-stage .cropper-container {
-  max-width: 100%;
-  max-height: 100%;
+.crop-stage .cropper-container,
+.crop-stage .cropper-wrap-box,
+.crop-stage .cropper-canvas,
+.crop-stage .cropper-drag-box {
+  max-width: 100% !important;
+  max-height: 100% !important;
 }
 
-/* Hint sits on surface (not over the black stage); cropper overflow must not paint over this. */
-.crop-stage .cropper-container {
-  max-width: 100%;
-  max-height: 100%;
+.crop-panel .crop-hint,
+.crop-zoom-actions,
+.crop-panel > .form-actions {
+  position: relative;
+  z-index: 3;
+  flex-shrink: 0;
+  background: var(--surface);
 }
 
 .crop-zoom-actions {

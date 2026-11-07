@@ -190,6 +190,19 @@
     } catch (_) {
       el.removeAttribute("open");
     }
+    if (el === cropDialog) revealDialogsBehindCrop();
+  }
+
+  function coverDialogsBehindCrop() {
+    document.querySelectorAll("dialog[open]").forEach((el) => {
+      if (el !== cropDialog) el.classList.add("is-behind-crop");
+    });
+  }
+
+  function revealDialogsBehindCrop() {
+    document.querySelectorAll("dialog.is-behind-crop").forEach((el) => {
+      el.classList.remove("is-behind-crop");
+    });
   }
 
   function clamp(n, min, max) {
@@ -2739,6 +2752,7 @@
       cropDialog.classList.toggle("crop-dialog--exercise", cropMode === "exerciseGuide");
     }
     showModal(cropDialog);
+    coverDialogsBehindCrop();
     const aspectRatio = cropMode === "exerciseGuide" ? 3 / 2 : 8 / 5;
     cropImage.onload = () => {
       cropper = new Cropper(cropImage, {
