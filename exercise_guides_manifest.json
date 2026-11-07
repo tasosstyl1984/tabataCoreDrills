@@ -1,8 +1,8 @@
 {
-  "version": 92,
-  "updatedAtMs": 1794041499216,
+  "version": 93,
+  "updatedAtMs": 1794041571258,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 4461972,
+  "totalBytes": 4573960,
   "images": [
     {
       "id": "abs",
@@ -319,8 +319,8 @@
     {
       "id": "hammerCurls",
       "file": "exercise_guides/hammerCurls.webp",
-      "bytes": 8048,
-      "sha256": "e98241cab80293ab"
+      "bytes": 120036,
+      "sha256": "95410d23ae73dfb1"
     },
     {
       "id": "hangingKneeRaises",
