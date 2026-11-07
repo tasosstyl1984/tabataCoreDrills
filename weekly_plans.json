@@ -1,6 +1,6 @@
 {
-  "version": 6,
-  "updatedAtMs": 1794069710147,
+  "version": 7,
+  "updatedAtMs": 1794089498030,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "weeks": [
     {
@@ -14,6 +14,21 @@
         "wed": "remote_kb_boxing_complex",
         "thu": null,
         "fri": "remote_kb_boxing_complex",
+        "sat": null,
+        "sun": null
+      }
+    },
+    {
+      "id": "remote_week_core_basics",
+      "name": "Core Basics",
+      "description": "",
+      "updatedAtMs": 1794089497437,
+      "slots": {
+        "mon": "remote_core_basics",
+        "tue": null,
+        "wed": "remote_hiit_strength_30",
+        "thu": null,
+        "fri": "remote_core_basics",
         "sat": null,
         "sun": null
       }
