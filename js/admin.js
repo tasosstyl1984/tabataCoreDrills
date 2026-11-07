@@ -42,6 +42,9 @@
   const cropApply = document.getElementById("crop-apply");
   const cropCancel = document.getElementById("crop-cancel");
   const cropClose = document.getElementById("crop-close");
+  const cropZoomIn = document.getElementById("crop-zoom-in");
+  const cropZoomOut = document.getElementById("crop-zoom-out");
+  const cropZoomFit = document.getElementById("crop-zoom-fit");
   const categorySuggestions = document.getElementById("category-suggestions");
   const activityPickerDialog = document.getElementById("activity-picker-dialog");
   const activityPickerClose = document.getElementById("activity-picker-close");
@@ -109,9 +112,9 @@
   let detachNewZoom = null;
 
   const EXERCISE_REPLACEMENT_HINT_FILL =
-    "Fills the 3:2 frame like the app · slider = zoom · drag to pan";
+    "Inspect only — crop is what gets saved.";
   const EXERCISE_REPLACEMENT_HINT_CROPPED =
-    "1536×1024 after crop — fills this 3:2 slot like the app · slider = zoom · drag to inspect";
+    "Inspect only — this 1536×1024 crop is what gets saved.";
 
   /** @param {'editing' | 'cropped'} mode */
   function setExerciseReplacementPreviewMode(mode) {
@@ -2629,14 +2632,17 @@
     }
   }
 
+  /** Smallest zoom that still shows the whole photo. Zoom out cannot go below this. */
+  let cropFitRatio = 1;
+
+  const CROP_HINT =
+    "Drag the frame to move it. Zoom in or out to change how tight the crop is. Double-click to pan the photo.";
+
   function setCropDialogLabels() {
+    if (cropHint) cropHint.textContent = CROP_HINT;
     if (cropMode === "exerciseGuide") {
       if (cropBrand) cropBrand.textContent = "Exercise guide";
       if (cropTitle) cropTitle.textContent = "Crop image (3:2)";
-      if (cropHint) {
-        cropHint.textContent =
-          "Drag the blue frame to pick your 3:2 slice (wide photos: slide left/right). Double-click the image to pan the photo under the frame instead. Wheel = zoom. Export is 1536×1024.";
-      }
       return;
     }
     if (planCoverCropTarget === "pill") {
@@ -2645,16 +2651,10 @@
       cropBrand.textContent = "Plan cover";
     }
     if (cropTitle) cropTitle.textContent = "Crop image (8:5)";
-    if (cropHint) {
-      cropHint.textContent =
-        planCoverCropTarget === "pill"
-          ? "Optional art behind the Ready plan pill in Tabata Core — same 8:5 frame as the hero (1200×750 WebP). Drag to reposition; pinch/scroll to zoom."
-          : "Same as the Android app when you pick a plan cover: 8:5, max 1200×750. Drag to reposition; pinch/scroll to zoom.";
-    }
   }
 
-  /** Fit wide/tall exercise sources in the crop stage and center the 3:2 box (after dialog layout). */
-  function layoutExerciseCropper(inst) {
+  /** Fit the whole source in the stage and center the aspect-locked box. */
+  function layoutCropper(inst) {
     if (!inst) return;
     inst.resize();
     const container = inst.getContainerData();
@@ -2667,13 +2667,13 @@
     ) {
       return;
     }
-    // Scale down so tall/wide sources fit entirely inside the stage (no overflow scroll).
     const fitZoom =
       Math.min(
         container.width / image.naturalWidth,
         container.height / image.naturalHeight,
       ) * 0.98;
     if (fitZoom > 0 && Number.isFinite(fitZoom)) {
+      cropFitRatio = fitZoom;
       inst.zoomTo(fitZoom);
     }
     const canvas = inst.getCanvasData();
@@ -2683,6 +2683,18 @@
       left: canvas.left + (canvas.width - box.width) / 2,
       top: canvas.top + (canvas.height - box.height) / 2,
     });
+  }
+
+  function zoomCropBy(delta) {
+    if (!cropper) return;
+    const image = cropper.getImageData();
+    const current =
+      image.naturalWidth > 0 ? image.width / image.naturalWidth : cropFitRatio;
+    if (delta < 0 && current <= cropFitRatio * 1.02) {
+      cropper.zoomTo(cropFitRatio);
+      return;
+    }
+    cropper.zoom(delta);
   }
 
   /**
@@ -2706,33 +2718,37 @@
     }
     showModal(cropDialog);
     const aspectRatio = cropMode === "exerciseGuide" ? 3 / 2 : 8 / 5;
-    const isExercise = cropMode === "exerciseGuide";
     cropImage.onload = () => {
       cropper = new Cropper(cropImage, {
         aspectRatio,
-        // Exercise: fit full bitmap in the stage; plan cover keeps export bounds tight.
-        viewMode: isExercise ? 2 : 1,
-        dragMode: isExercise ? "crop" : "move",
+        // viewMode 1 keeps the box inside the photo and still allows zoom-in.
+        // The stage clips overflow. Fit is the zoom-out floor.
+        viewMode: 1,
+        dragMode: "crop",
         autoCropArea: 1,
         background: true,
         responsive: true,
         restore: false,
         zoomOnWheel: true,
         wheelZoomRatio: 0.08,
-        center: isExercise,
+        center: true,
         cropBoxMovable: true,
-        cropBoxResizable: !isExercise,
-        toggleDragModeOnDblclick: isExercise,
+        cropBoxResizable: true,
+        toggleDragModeOnDblclick: true,
+        zoom(event) {
+          const ratio = event?.detail?.ratio;
+          if (Number.isFinite(ratio) && ratio < cropFitRatio) {
+            event.preventDefault();
+            if (cropper) cropper.zoomTo(cropFitRatio);
+          }
+        },
         ready() {
-          if (!isExercise) return;
           const inst = this.cropper;
-          layoutExerciseCropper(inst);
-          window.requestAnimationFrame(() => layoutExerciseCropper(inst));
+          layoutCropper(inst);
+          window.requestAnimationFrame(() => layoutCropper(inst));
         },
       });
-      if (isExercise) {
-        window.setTimeout(() => layoutExerciseCropper(cropper), 50);
-      }
+      window.setTimeout(() => layoutCropper(cropper), 50);
     };
     cropImage.src = cropObjectUrl;
   }
@@ -3437,6 +3453,9 @@
     });
   }
   if (cropApply) cropApply.addEventListener("click", () => applyCrop());
+  if (cropZoomIn) cropZoomIn.addEventListener("click", () => zoomCropBy(0.1));
+  if (cropZoomOut) cropZoomOut.addEventListener("click", () => zoomCropBy(-0.1));
+  if (cropZoomFit) cropZoomFit.addEventListener("click", () => layoutCropper(cropper));
   if (cropCancel) {
     cropCancel.addEventListener("click", () => {
       destroyCropper();
