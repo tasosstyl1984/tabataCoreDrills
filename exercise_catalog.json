@@ -629,7 +629,7 @@
     },
     {
       "id": "cableFly",
-      "label": "Cable fly",
+      "label": "Cable chest fly",
       "group": "Machines",
       "movement": "chestFly",
       "equipment": [
@@ -644,6 +644,16 @@
       "movement": "shoulderPress",
       "equipment": [
         "Shoulder press machine"
+      ]
+    },
+    {
+      "id": "cableFrontRaise",
+      "label": "Cable machine front raise",
+      "group": "Machines",
+      "movement": "frontRaises",
+      "equipment": [
+        "Cable machine",
+        "single handle"
       ]
     },
     {

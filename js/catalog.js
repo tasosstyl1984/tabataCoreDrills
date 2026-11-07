@@ -572,12 +572,15 @@
       ["Form check", guide.formCheck],
     ]
       .filter(([, text]) => text)
-      .map(
-        ([h, text]) =>
-          `<section class="exercise-section"><h3>${escapeHtml(h)}</h3><p>${escapeHtml(
-            text,
-          )}</p></section>`,
-      )
+      .map(([h, text], index) => {
+        const cue = splitExerciseCue(text);
+        const more = cue.more
+          ? `<span class="exercise-cue-more">${escapeHtml(cue.more)}</span>`
+          : "";
+        return `<section class="exercise-section exercise-cue"><div class="exercise-cue-n" aria-hidden="true">${
+          index + 1
+        }</div><div><h3>${escapeHtml(h)}</h3><p>${escapeHtml(cue.lead)}${more}</p></div></section>`;
+      })
       .join("");
     if (exerciseBody) {
       const zoomBlock = img
@@ -828,6 +831,17 @@
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
       .replace(/"/g, "&quot;");
+  }
+
+  function splitExerciseCue(text) {
+    const trimmed = String(text).trim();
+    const splitAt = trimmed.indexOf(". ");
+    if (splitAt < 1 || splitAt > trimmed.length - 3) {
+      return { lead: trimmed, more: "" };
+    }
+    const more = trimmed.slice(splitAt + 2).trim();
+    if (!more) return { lead: trimmed, more: "" };
+    return { lead: trimmed.slice(0, splitAt + 1), more };
   }
 
   function escapeAttr(s) {

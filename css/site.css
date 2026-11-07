@@ -1066,7 +1066,7 @@ code {
 }
 
 .exercise-section {
-  margin-bottom: 1rem;
+  margin-bottom: 0.55rem;
 }
 
 .exercise-section h3 {
@@ -1081,6 +1081,50 @@ code {
   margin: 0;
   color: var(--text);
   line-height: 1.5;
+}
+
+.exercise-cue {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 10px;
+  align-items: start;
+  padding: 12px;
+  border-radius: 14px;
+  background: var(--surface-container-highest);
+}
+
+.exercise-cue-n {
+  width: 28px;
+  height: 28px;
+  border-radius: 9px;
+  display: grid;
+  place-items: center;
+  font-size: 13px;
+  font-weight: 800;
+  background: var(--primary);
+  color: var(--on-primary);
+}
+
+.exercise-cue h3 {
+  margin: 2px 0 4px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.exercise-cue p {
+  margin: 0;
+  font-size: 14.5px;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.exercise-cue-more {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-weight: 400;
 }
 
 /* ---- Admin chrome ---- */
