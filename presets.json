@@ -1,6 +1,6 @@
 {
-  "version": 7,
-  "updatedAtMs": 1794054397278,
+  "version": 8,
+  "updatedAtMs": 1794054547488,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -24,7 +24,7 @@
       "id": "remote_chest_fly_circuit_40",
       "name": "Chest Fly Circuit",
       "file": "drills/remote_chest_fly_circuit_40.json",
-      "updatedAtMs": 1794054395172,
+      "updatedAtMs": 1794054545887,
       "category": "chest",
       "description": "Fly and press circuit for chest shape, controlled range, and pressing endurance.",
       "coverImage": "plan_covers/default_chest_fly_circuit_40.webp",
@@ -36,7 +36,7 @@
         "pullover"
       ],
       "coverImagePill": "plan_covers/default_chest_fly_circuit_40_pill.webp",
-      "coverImagePillAlign": -0.45999999999999996,
+      "coverImagePillAlign": -0.18000000000000005,
       "preset": true,
       "shipsWithApp": true,
       "defaultId": "default_chest_fly_circuit_40"
