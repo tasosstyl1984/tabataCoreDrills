@@ -1,8 +1,8 @@
 {
-    "version": 115,
-    "updatedAtMs": 1794045533364,
+    "version": 116,
+    "updatedAtMs": 1794045561107,
     "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-    "totalBytes": 24569672,
+    "totalBytes": 24467758,
     "images": [
         {
             "id": "abs",
@@ -121,8 +121,8 @@
         {
             "id": "cableChestPress",
             "file": "exercise_guides/cableChestPress.webp",
-            "bytes": 287816,
-            "sha256": "77c4df6e6325aa5c"
+            "bytes": 185902,
+            "sha256": "9acfbe982f3195c6"
         },
         {
             "id": "cableCrunch",
