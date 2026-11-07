@@ -1,8 +1,8 @@
 {
-    "version": 102,
-    "updatedAtMs": 1794042670687,
+    "version": 103,
+    "updatedAtMs": 1794042789605,
     "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-    "totalBytes": 24876334,
+    "totalBytes": 24803416,
     "images": [
         {
             "id": "abs",
@@ -595,8 +595,8 @@
         {
             "id": "skaterHops",
             "file": "exercise_guides/skaterHops.webp",
-            "bytes": 197200,
-            "sha256": "dd29b803cc99f17d"
+            "bytes": 124282,
+            "sha256": "9169e900e0ba14dd"
         },
         {
             "id": "sledPush",
