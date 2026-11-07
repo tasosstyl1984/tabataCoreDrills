@@ -1,25 +1,8 @@
 {
-  "version": 36,
-  "updatedAtMs": 1794070729002,
+  "version": 37,
+  "updatedAtMs": 1794089856842,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
-    {
-      "id": "remote_boxing_rounds_30",
-      "name": "Boxing Rounds",
-      "file": "drills/remote_boxing_rounds_30.json",
-      "updatedAtMs": 1794050194521,
-      "category": "boxing",
-      "description": "Shadowboxing rounds for fight-style cardio, footwork, rhythm, and upper-body endurance.",
-      "coverImage": "plan_covers/default_boxing_rounds_30.webp",
-      "activityIds": [
-        "shadowBoxing"
-      ],
-      "coverImagePill": "plan_covers/default_boxing_rounds_30_pill.webp",
-      "coverImagePillAlign": 0,
-      "preset": true,
-      "shipsWithApp": true,
-      "defaultId": "default_boxing_rounds_30"
-    },
     {
       "id": "remote_chest_fly_circuit_40",
       "name": "Chest Fly Circuit",
@@ -443,6 +426,23 @@
       "preset": true,
       "shipsWithApp": true,
       "defaultId": "default_functional_mixed_45"
+    },
+    {
+      "id": "remote_boxing_rounds_30",
+      "name": "Shadow boxing",
+      "file": "drills/remote_boxing_rounds_30.json",
+      "updatedAtMs": 1794089855880,
+      "category": "Shadow boxing training",
+      "description": "Shadowboxing rounds for fight-style cardio, footwork, rhythm, and upper-body endurance.",
+      "coverImage": "plan_covers/default_boxing_rounds_30.webp",
+      "activityIds": [
+        "shadowBoxing"
+      ],
+      "coverImagePill": "plan_covers/default_boxing_rounds_30_pill.webp",
+      "coverImagePillAlign": 0,
+      "preset": true,
+      "shipsWithApp": true,
+      "defaultId": "default_boxing_rounds_30"
     },
     {
       "id": "remote_dumbbell_shoulders_40",
