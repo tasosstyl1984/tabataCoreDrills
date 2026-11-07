@@ -1,8 +1,8 @@
 {
-  "version": 72,
-  "updatedAtMs": 1794012654924,
+  "version": 73,
+  "updatedAtMs": 1794012794066,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 2429542,
+  "totalBytes": 2587848,
   "images": [
     {
       "id": "abs",
@@ -67,8 +67,8 @@
     {
       "id": "bicycleCrunch",
       "file": "exercise_guides/bicycleCrunch.webp",
-      "bytes": 8072,
-      "sha256": "91f570d84965a814"
+      "bytes": 166378,
+      "sha256": "4bed6ca3b432e56c"
     },
     {
       "id": "bike",
