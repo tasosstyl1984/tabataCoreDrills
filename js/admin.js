@@ -2667,10 +2667,12 @@
     ) {
       return;
     }
-    const fitZoom = Math.min(
-      container.width / image.naturalWidth,
-      container.height / image.naturalHeight,
-    );
+    // Scale down so tall/wide sources fit entirely inside the stage (no overflow scroll).
+    const fitZoom =
+      Math.min(
+        container.width / image.naturalWidth,
+        container.height / image.naturalHeight,
+      ) * 0.98;
     if (fitZoom > 0 && Number.isFinite(fitZoom)) {
       inst.zoomTo(fitZoom);
     }

@@ -1376,7 +1376,7 @@ code {
   font-size: 0.78rem;
 }
 
-/* Exercise editor modal: height is driven by .exercise-images-editor-dialog rules below */
+/* Exercise editor: one strict 3:2 viewport in the zoom-stack (toolbar stays alongside). */
 .exercise-images-editor-dialog .exercise-images-zoom-stack {
   max-height: none;
   min-height: 0;
@@ -1384,26 +1384,21 @@ code {
   width: 100%;
 }
 
-/* Strict 3:2 slot (Tabata Core how-to). Do not stretch with height:100% or flex grow. */
-.exercise-images-editor-dialog .exercise-images-zoom {
-  width: 100%;
+.exercise-images-editor-dialog .zoom-stack > .zoom-viewport.exercise-images-zoom {
+  flex: 1 1 auto;
+  min-width: 0;
+  width: auto;
   height: auto;
-  flex: 0 0 auto;
-  min-height: 0;
-  max-height: none;
   aspect-ratio: 3 / 2;
+  max-height: min(40vh, 320px);
 }
 
 .exercise-images-editor-dialog .zoom-viewport.exercise-images-zoom {
-  max-height: none;
+  position: relative;
 }
 
-/* Current (left): show entire GitHub file, any aspect — letterbox inside 3:2 frame. */
+/* Current: letterbox source file inside the 3:2 slot (default .zoom-viewport-img contain). */
 .exercise-images-editor-dialog .exercise-images-zoom--fit .zoom-viewport-img {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
   object-fit: contain;
   object-position: center center;
 }
@@ -2338,12 +2333,16 @@ body.admin-authed .preview-footer-actions .btn-delete-admin {
   z-index: 0;
 }
 
-/* Tall/wide exercise PNGs: room to see crop handles (Cropper.js clips inside overflow:hidden). */
+/* Exercise crop: fixed stage height; Cropper scales the image to fit (no scrollbars). */
 .crop-dialog--exercise .crop-stage {
-  min-height: min(52vh, 360px);
-  max-height: min(70vh, 640px);
-  overflow: auto;
-  padding: 1rem 1.25rem;
+  height: min(52vh, 460px);
+  max-height: min(52vh, 460px);
+  min-height: 12rem;
+  overflow: hidden;
+  padding: 0.65rem 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .crop-stage img {
@@ -2356,8 +2355,9 @@ body.admin-authed .preview-footer-actions .btn-delete-admin {
   max-width: 100%;
 }
 
-.crop-stage .cropper-container {
-  margin: 0 auto;
+.crop-dialog--exercise .crop-stage .cropper-container {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 /* Hint sits on surface (not over the black stage); cropper overflow must not paint over this. */
@@ -2634,7 +2634,7 @@ body.admin-authed .preview-footer-actions .btn-delete-admin {
   .exercise-images-editor-columns {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    align-items: stretch;
+    align-items: start;
     column-gap: 0.65rem;
     row-gap: 0;
   }
@@ -2657,7 +2657,8 @@ body.admin-authed .preview-footer-actions .btn-delete-admin {
 }
 
 .exercise-images-editor-dialog .exercise-images-preview-wrap {
-  flex: 1 1 auto;
+  flex: 0 0 auto;
+  width: 100%;
   min-height: 0;
   display: flex;
   flex-direction: column;
@@ -2682,7 +2683,7 @@ body.admin-authed .preview-footer-actions .btn-delete-admin {
 .exercise-images-editor-dialog .zoom-stack.exercise-images-zoom-stack {
   flex: 0 0 auto;
   min-height: 0;
-  align-items: flex-start;
+  align-items: stretch;
   width: 100%;
 }
 
