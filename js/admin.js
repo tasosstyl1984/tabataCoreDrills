@@ -3383,8 +3383,8 @@
   if (loginClose) loginClose.addEventListener("click", () => hideModal(loginDialog));
   if (loginCancel) loginCancel.addEventListener("click", () => hideModal(loginDialog));
   if (loginDialog) {
-    loginDialog.addEventListener("click", (e) => {
-      if (e.target === loginDialog) hideModal(loginDialog);
+    loginDialog.addEventListener("cancel", (e) => {
+      e.preventDefault();
     });
   }
   if (loginForm) {
@@ -3452,12 +3452,8 @@
     });
   }
   if (weeklyEditorDialog) {
-    weeklyEditorDialog.addEventListener("click", (e) => {
-      if (e.target === weeklyEditorDialog) hideWeeklyEditor();
-    });
     weeklyEditorDialog.addEventListener("cancel", (e) => {
       e.preventDefault();
-      hideWeeklyEditor();
     });
   }
   const importJsonBtn = document.getElementById("admin-import-json");
@@ -3569,24 +3565,16 @@
     });
   }
   if (cropDialog) {
-    cropDialog.addEventListener("click", (e) => {
-      if (e.target === cropDialog) {
-        destroyCropper();
-        hideModal(cropDialog);
-      }
-    });
     cropDialog.addEventListener("cancel", (e) => {
       e.preventDefault();
-      destroyCropper();
-      hideModal(cropDialog);
     });
   }
   if (editorClose) editorClose.addEventListener("click", () => hideModal(editorDialog));
   if (editorCancel) editorCancel.addEventListener("click", () => hideModal(editorDialog));
   if (editorSave) editorSave.addEventListener("click", () => saveDrill());
   if (editorDialog) {
-    editorDialog.addEventListener("click", (e) => {
-      if (e.target === editorDialog) hideModal(editorDialog);
+    editorDialog.addEventListener("cancel", (e) => {
+      e.preventDefault();
     });
   }
   if (planToolbar) {
@@ -3635,12 +3623,8 @@
     });
   }
   if (activityPickerDialog) {
-    activityPickerDialog.addEventListener("click", (e) => {
-      if (e.target === activityPickerDialog) closeActivityPicker();
-    });
     activityPickerDialog.addEventListener("cancel", (e) => {
       e.preventDefault();
-      closeActivityPicker();
     });
   }
   if (planEditor) {
@@ -3711,12 +3695,8 @@
     exerciseImagesEditorCancel.addEventListener("click", () => closeExerciseImagesEditor());
   }
   if (exerciseImagesEditorDialog) {
-    exerciseImagesEditorDialog.addEventListener("click", (e) => {
-      if (e.target === exerciseImagesEditorDialog) closeExerciseImagesEditor();
-    });
     exerciseImagesEditorDialog.addEventListener("cancel", (e) => {
       e.preventDefault();
-      closeExerciseImagesEditor();
     });
   }
 
