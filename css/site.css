@@ -2324,9 +2324,19 @@ body.admin-authed .preview-footer-actions .btn-delete-admin {
   z-index: 0;
 }
 
+/* Tall exercise PNGs: taller stage so Cropper can show the full source (not a clipped slice). */
+.crop-dialog--exercise .crop-stage {
+  min-height: min(52vh, 360px);
+  max-height: min(70vh, 640px);
+}
+
 .crop-stage img {
   display: block;
   max-width: 100%;
+}
+
+.crop-stage .cropper-container {
+  max-height: 100%;
 }
 
 /* Hint sits on surface (not over the black stage); cropper overflow must not paint over this. */
