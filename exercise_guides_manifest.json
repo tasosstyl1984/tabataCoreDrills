@@ -1,8 +1,8 @@
 {
-  "version": 105,
-  "updatedAtMs": 1794044158790,
+  "version": 106,
+  "updatedAtMs": 1794044452460,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 5599866,
+  "totalBytes": 5741100,
   "images": [
     {
       "id": "abs",
@@ -235,8 +235,8 @@
     {
       "id": "farmerCarry",
       "file": "exercise_guides/farmerCarry.webp",
-      "bytes": 13706,
-      "sha256": "df6d69a6189b5177"
+      "bytes": 154940,
+      "sha256": "8ecb5e6385e68b74"
     },
     {
       "id": "footballBallMastery",
