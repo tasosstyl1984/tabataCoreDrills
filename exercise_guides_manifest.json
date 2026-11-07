@@ -1,8 +1,8 @@
 {
-  "version": 80,
-  "updatedAtMs": 1794035933442,
+  "version": 81,
+  "updatedAtMs": 1794036244834,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 3121996,
+  "totalBytes": 3257934,
   "images": [
     {
       "id": "abs",
@@ -577,8 +577,8 @@
     {
       "id": "shadowBoxing",
       "file": "exercise_guides/shadowBoxing.webp",
-      "bytes": 7744,
-      "sha256": "1b823f2de19493e3"
+      "bytes": 143682,
+      "sha256": "e2cfcefc250ab5fb"
     },
     {
       "id": "shoulderPressMachine",
