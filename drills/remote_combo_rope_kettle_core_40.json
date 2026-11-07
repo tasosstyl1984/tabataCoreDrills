@@ -1,7 +1,6 @@
 {
   "id": "remote_combo_rope_kettle_core_40",
   "name": "Rope Kettle Core",
-  "description": "Jump rope, kettlebells, and core in one stack \u2014 a complete conditioning day with strength baked in.",
   "createdAtMs": 1791622139758,
   "sets": 3,
   "repsPerSet": 8,
@@ -150,5 +149,8 @@
         "restAfterSetSeconds": 100
       }
     ]
-  }
+  },
+  "description": "Jump rope, kettlebells, and core in one stack — a complete conditioning day with strength baked in.",
+  "coverImagePath": "plan_covers/default_combo_rope_kettle_core_40.webp",
+  "coverImagePillAlign": 0
 }
