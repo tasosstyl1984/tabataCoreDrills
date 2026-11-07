@@ -629,7 +629,7 @@
     },
     {
       "id": "cableFly",
-      "label": "Cable fly",
+      "label": "Cable chest fly",
       "group": "Machines",
       "movement": "chestFly",
       "equipment": [

@@ -1,782 +1,789 @@
 {
   "version": 1,
-  "updatedAtMs": 1793899209919,
+  "updatedAtMs": 1794044662643,
   "guides": {
     "abs": {
-      "title": "Abdominal Crunch",
-      "setup": "Lying flat on back on a thin gym mat, knees bent at 90 degrees, feet flat on the ground. Lower back pressed flat and flush to the mat.",
-      "actionPhase": "Upper chest, shoulders, and shoulder blades are curled forcefully upward off the floor, tightly compressing the core blocks at maximum flexion.",
-      "formCheck": "Chest, rib cage, and hip creases remain neutral light-gray. Highlight strictly and exclusively the eight separate rectus blocks and lateral side-core ridges in blue.",
+      "title": "Crunches",
+      "setup": "Lie on your back with your knees bent, feet flat, and fingertips at your temples. Press your lower back into the mat.",
+      "actionPhase": "Curl your shoulders and upper back off the floor, then lower with control until your shoulder blades touch again.",
+      "formCheck": "Keep your chin slightly tucked and your neck relaxed. Do not pull on your head or lift your hips off the mat.",
+      "hasRemoteImage": true
+    },
+    "bicycleCrunch": {
+      "title": "Bicycle Crunch",
+      "setup": "Lie on your back with your hands at your temples and your knees bent. Press your lower back into the mat.",
+      "actionPhase": "Lift your shoulders and bring one elbow toward the opposite knee while the other leg reaches out. Switch sides in a steady pedal.",
+      "formCheck": "Turn from your ribs, not by yanking your neck. Keep the reaching leg long and your lower back on the mat.",
       "hasRemoteImage": true
     },
     "battleRopes": {
       "title": "Battle Ropes",
-      "setup": "Face anchor point, grip rope ends, drop hips down into a wide stable athletic half-squat stance with braced core.",
-      "actionPhase": "Alternately slam arms up and down rapidly, creating continuous, alternating fluid waves down the ropes to the anchor.",
-      "formCheck": "Do not stand up straight as you get tired. Keep lower body locked in squat and generate power from shoulders and core.",
+      "setup": "Face the anchor and hold one rope end in each hand. Sit into a wide half-squat with your chest up and your core tight.",
+      "actionPhase": "Slam one arm up and the other down so the ropes make alternating waves all the way to the anchor. Keep the waves moving without a pause.",
+      "formCheck": "Stay in the squat as you get tired. Make the waves with your shoulders and core, not by standing up and bouncing.",
       "hasRemoteImage": true
     },
     "bearCrawl": {
       "title": "Bear Crawl",
-      "setup": "On all fours, hands beneath shoulders, knees bent at 90 degrees directly under your hips.",
-      "actionPhase": "Brace core and hover knees exactly one inch off the ground. Crawl forward smoothly by moving opposite hand and foot simultaneously.",
-      "formCheck": "Keep hips low and maintain a flat tabletop back. Do not let knees rise higher than an inch off the ground.",
+      "setup": "Start on your hands and knees, with your hands under your shoulders and your knees under your hips. Keep your back flat.",
+      "actionPhase": "Brace your core and lift your knees just off the floor. Crawl forward by moving the opposite hand and foot at the same time.",
+      "formCheck": "Keep your hips low and your back flat like a table. Do not let your knees climb high or your hips sway side to side.",
       "hasRemoteImage": true
     },
     "benchPress": {
       "title": "Bench Press",
-      "setup": "Lying flat on a weight bench, eyes directly under the barbell, feet pinned flat and driven into the floor.",
-      "actionPhase": "Unrack the bar and lower it smoothly to the mid-chest line, keeping a strict 45-degree elbow tuck, then drive it vertically straight upward to full arm lockout.",
-      "formCheck": "Do not flare elbows to 90 degrees or let shoulders lift off the pad. Highlight front shoulders, chest panels, and triceps.",
+      "setup": "Lie on the bench with your eyes under the bar. Plant your feet, pinch your shoulder blades together, and grip the bar just outside your shoulders.",
+      "actionPhase": "Lift the bar off the rack, lower it to the middle of your chest with your elbows near your sides, then press it straight up until your arms are straight.",
+      "formCheck": "Keep your hips on the bench and your wrists over your elbows. Do not bounce the bar off your chest or let your elbows flare straight out.",
       "hasRemoteImage": true
     },
     "bicepCurls": {
-      "title": "Biceps Curl",
-      "setup": "Stand tall with feet shoulder-width apart, spine neutral, elbows pinned tightly against the side ribs.",
-      "actionPhase": "Flex at the elbow joints to curl weights up toward the front shoulders, supinating wrists at the top phase for peak contraction.",
-      "formCheck": "Do not swing the torso or use momentum to rock hips forward. Keep neon blue isolated strictly to the front upper arm muscle bellies.",
+      "title": "Dumbbell Biceps Curl",
+      "setup": "Stand tall with your feet about shoulder-width apart and a dumbbell in each hand. Pin your elbows to your sides.",
+      "actionPhase": "Curl the weights up toward your shoulders, turning your palms up as you reach the top. Lower them slowly back to your sides.",
+      "formCheck": "Keep your elbows still and your body quiet. Do not swing your hips or lean back to get the weights up.",
       "hasRemoteImage": true
     },
     "bike": {
       "title": "Indoor Bike",
-      "setup": "Adjust bike saddle for a slight 140-degree bend at bottom of stroke. Grip handlebars firmly with a flat neutral spine.",
-      "actionPhase": "Drive legs down in a continuous powerful pedaling cycle, pushing through ball of foot down while pulling up with hamstrings.",
-      "formCheck": "Keep hips stable on saddle; do not rock lower back side-to-side. Track knees straight forward without flaring out.",
+      "setup": "Set the saddle so your knee stays softly bent at the bottom of the pedal stroke. Hold the bars and sit tall with a flat back.",
+      "actionPhase": "Pedal in smooth circles, pushing down through the ball of your foot and pulling up on the way back. Keep an even rhythm on both legs.",
+      "formCheck": "Stay seated without rocking your hips side to side. Point your knees forward and do not let them cave in.",
       "hasRemoteImage": true
     },
     "birdDog": {
       "title": "Bird Dog",
-      "setup": "Quadruped position on the floor on all-fours (one knee and the opposite flat hand anchored firmly).",
-      "actionPhase": "Extend the active working arm straight forward parallel to the floor while simultaneously driving the opposite trailing leg completely straight back in mid-air.",
-      "formCheck": "raised limb, spine, and leg must form a horizontal tabletop line. Keep hips level. Highlight lower back, glutes, and rear shoulder caps in blue.",
+      "setup": "Start on your hands and knees, with your hands under your shoulders and your knees under your hips. Brace your core so your back stays flat.",
+      "actionPhase": "Reach one arm forward and the opposite leg straight back until both are about level with your body. Pause, then return and switch sides.",
+      "formCheck": "Keep your hips level and your reaching arm, back, and leg in one line. Do not arch your lower back or twist to lift higher.",
       "hasRemoteImage": true
     },
     "boxJumps": {
       "title": "Box Jumps",
-      "setup": "Stand facing a high plyometric box, feet set hip-width apart in an athletic starting stance.",
-      "actionPhase": "Drop into a quick counter-movement hinge, swing arms behind, then explode vertically to launch onto the top surface of the box, landing softly in a partial squat.",
-      "formCheck": "Stand completely tall on top of the box to complete extension. Highlight calves, quadriceps, glutes, and core wall blocks in a clean split layout.",
+      "setup": "Stand facing a box you can land on safely, with your feet about hip-width apart. Keep your knees soft and your arms ready to swing.",
+      "actionPhase": "Dip into a quick squat, swing your arms, and jump onto the box. Land softly with both feet, stand tall, then step down.",
+      "formCheck": "Land in a quiet squat and then stand all the way up. Do not slam your heels or jump down off a high box.",
       "hasRemoteImage": true
     },
     "broadJumps": {
       "title": "Broad Jump",
-      "setup": "Stand with a wide base, feet flat on the ground hip-width apart. Hips are loaded deeply backward, knees partially bent, and rigid torso hinged forward at a sharp 45-degree angle.",
-      "actionPhase": "Swing both arms forcefully straight back behind the hips to load explosive horizontal momentum, coiled tightly at peak counter-movement load phase right before push-off.",
-      "formCheck": "Map the total loading engine using an anatomical split style. Highlight only the individual muscle bellies of calf blocks, front thighs, back thighs, glute segments, core walls, lower back tracks, front/rear shoulder caps, and upper back panels.",
+      "setup": "Stand with your feet about hip-width apart and your arms at your sides. Hinge your hips back and bend your knees so you are ready to jump forward.",
+      "actionPhase": "Swing your arms back, then swing them forward as you jump as far as you can. Land on both feet and sit back into the landing so you stick it.",
+      "formCheck": "Push through both feet and land softly with your knees tracking over your toes. Do not reach so far that you fall forward on the landing.",
       "hasRemoteImage": true
     },
     "bulgarianSplitSquat": {
       "title": "Split Squat",
-      "setup": "Permanently anchored, static feet setup in a wide staggered stance. Front foot flat on the ground, rear heel raised vertically off the floor.",
-      "actionPhase": "Descend straight down dynamically by bending both knees simultaneously until the front thigh is parallel to the ground and the trailing knee hovers exactly one inch off the floor. Torso maintains a 15-degree forward tilt.",
-      "formCheck": "Keep feet fixed. Load 75%+ weight through front heel and hip posteriorly. Highlight front thigh, hip glute, and lower calf bellies in blue. Joints remain gray.",
+      "setup": "Stand in a long split with your front foot flat and your back heel lifted. Keep most of your weight on the front leg and your chest tall.",
+      "actionPhase": "Bend both knees and lower straight down until your front thigh is about level and your back knee hovers near the floor. Drive through the front heel to stand.",
+      "formCheck": "Keep both feet planted where they started. Do not let the front knee cave in or lean so far forward that the back leg does the work.",
       "hasRemoteImage": true
     },
     "burpees": {
       "title": "Burpees",
-      "setup": "Stand with feet shoulder-width apart, spine neutral. Drop into a squat, plant hands flat, snap feet back into a horizontal plank, and lower chest to floor.",
-      "actionPhase": "Explode dynamically out of the bottom push-up phase by snapping the feet forward under the hips, then immediately launch vertically into an intense mid-air leap.",
-      "formCheck": "Drive arms straight overhead parallel to ears at peak flight. Highlight only individual calf, quad, glute, core, chest, shoulder, and tricep bellies in blue. Joints remain gray.",
+      "setup": "Stand with your feet about shoulder-width apart and your arms by your sides.",
+      "actionPhase": "Squat down, put your hands on the floor, and jump your feet back into a plank. Jump your feet back in, then jump up and reach your arms overhead. Drop your chest to the floor on the way down if you want the full version.",
+      "formCheck": "Keep your body in one straight line in the plank, and land softly. Do not let your hips sag or your back round.",
       "hasRemoteImage": true
     },
     "calfRaises": {
-      "title": "Calf Raises",
-      "setup": "Stand tall holding a dumbbell in each hand, feet hip-width apart, core braced.",
-      "actionPhase": "Rise onto the toes as high as possible, then lower the heels under control.",
-      "formCheck": "Keep the knees soft and still. Move only at the ankles, and do not swing the dumbbells.",
-      "hasRemoteImage": true
-    },
-    "chestFlies": {
-      "title": "Chest Flies",
-      "setup": "Lying flat on the back on a horizontal workout bench, feet flat on the gym floor for a stable foundation.",
-      "actionPhase": "Open both arms wide out to the sides in an expansive, sweeping arc parallel to the floor, lowering weights exactly aligned with the mid-chest line with a fixed 15-degree elbow bend.",
-      "formCheck": "Keep arms below the shoulder joints, abdominal wall, and bench neutral light-gray. Apply neon blue strictly to the individual muscle fibers of the large front chest panels and front cap surfaces of both shoulders.",
-      "hasRemoteImage": true
-    },
-    "concentrationCurls": {
-      "title": "Concentration Curls",
-      "setup": "Seated on a flat workout bench with the upper torso leaned forward over the thighs, feet flat on the floor.",
-      "actionPhase": "Pin the back of the upper active arm flat against the inside of the matching-side inner thigh for absolute structural support, curling the dumbbell completely up near the front of the shoulder.",
-      "formCheck": "The triceps, forearm, wrist, shoulder joint, and torso must remain completely light-gray. Isolate the blue overlay strictly and exclusively onto the front bulging surface vertex group of the active upper arm (the flexing biceps brachii muscle belly).",
-      "hasRemoteImage": true
-    },
-    "deadBug": {
-      "title": "Dead Bug",
-      "setup": "Lying flat on the back on the floor, lumbar spine pressed perfectly flat and flush against the ground to eliminate any space.",
-      "actionPhase": "Extend one arm completely straight back overhead parallel to the floor while driving the opposite leg straight forward, hovering both limbs six inches off the ground.",
-      "formCheck": "Keep non-working limbs locked. Lower back must maintain constant floor compression. Highlight complete front abdominal wall grid in blue.",
-      "hasRemoteImage": true
-    },
-    "dips": {
-      "title": "Dips",
-      "setup": "Suspended completely in mid-air between parallel bars, hands firmly gripping the bars, knees slightly bent and ankles crossed behind the body.",
-      "actionPhase": "Lower the body by bending the elbows deeply into a strict 90-degree angle, keeping the forearms perfectly vertical and pitching the upper torso forward at 15 degrees.",
-      "formCheck": "Do not flare elbows or let shoulders pitch dangerously forward. Highlight lower chest, front shoulder caps, and back upper arm muscles in blue. Joints remain gray.",
-      "hasRemoteImage": true
-    },
-    "dumbbellChestPress": {
-      "title": "Dumbbell Chest Press",
-      "setup": "Lying flat on back on a weight bench, holding dumbbells vertically directly over the chest, feet flat on the floor.",
-      "actionPhase": "Lower the dumbbells smoothly toward the outside edges of the chest, maintaining a strict 45-degree elbow tuck angle, then press straight up to vertical lockout.",
-      "formCheck": "Ensure vertical forearm tracking throughout the entire path. Blue maps to lower chest fibers, triceps, and front shoulder caps.",
-      "hasRemoteImage": true
-    },
-    "dumbbellLunges": {
-      "title": "Dumbbell Lunges",
-      "setup": "Stand upright with feet hip-width apart, spine neutral, chest proud. Both hands grip heavy dumbbells hanging straight down vertically along the sides of the hips.",
-      "actionPhase": "Step one foot forward or backward into a deep stride split. Lower the hips vertically until the front thigh is completely parallel to the floor and the rear knee hovers exactly one inch off the ground, balancing on the ball of the back foot.",
-      "formCheck": "Torso upright. Arms hang completely straight along sides so weights do not swing. Highlight leading thigh, leading hip glute, and both calf bellies in blue.",
-      "hasRemoteImage": true
-    },
-    "dumbbellRow": {
-      "title": "Dumbbell Row",
-      "setup": "Supported on a flat workout bench with one knee and the matching bracing hand flat, maintaining a horizontal tabletop spine parallel to the floor.",
-      "actionPhase": "Flex the active pulling arm deeply at the elbow, pulling a heavy dumbbell tightly up into the lower ribs near the hip crease, driving the elbow high past the torso.",
-      "formCheck": "Chest and lower body remain neutral light-gray. Apply neon blue strictly to the individual muscle bellies of the active side latissimus dorsi, upper mid-back (rhomboids/traps), rear shoulder caps, pulling forearm panels, and side core obliques.",
-      "hasRemoteImage": true
-    },
-    "dumbbellShoulderPress": {
-      "title": "Shoulder Press",
-      "setup": "Sit completely flush against a vertical 90-degree workout bench. Hold dumbbells at shoulder height with palms facing forward.",
-      "actionPhase": "Press the dumbbells straight up overhead in a vertical line until your arms are fully extended and elbows lock out cleanly above your head.",
-      "formCheck": "Do not flare your elbows completely out or arch your lower back off the bench. Keep your core braced to maintain a tall, rigid posture.",
-      "hasRemoteImage": true
-    },
-    "farmerCarry": {
-      "title": "Farmer's Carry",
-      "setup": "Stand tall between two heavy weights. Deadlift them up safely and stand perfectly upright with core braced tightly.",
-      "actionPhase": "Pack shoulders down and away from ears. Take short, fast, completely controlled steps forward while keeping weights still.",
-      "formCheck": "Do not let weights pull shoulders into a slouch or cause side-leaning. Keep spine strictly vertical like a pillar.",
-      "hasRemoteImage": true
-    },
-    "footballBallMastery": {
-      "title": "Ball Mastery",
-      "setup": "Authentic natural football posture with a low center of gravity, knees softly flexed, torso pitched forward over a soccer ball.",
-      "actionPhase": "Active foot slightly raised, softly tapping the top of the soccer ball with the sole of the foot while stance leg balances on its ball.",
-      "formCheck": "Torso pitches forward over the ball. Arms wide and asymmetric. Highlight calves, front/back thighs, glutes, and core wall blocks in blue.",
-      "hasRemoteImage": true
-    },
-    "footballConeSlalom": {
-      "title": "Cone Slalom",
-      "setup": "Intense lateral body lean, center of gravity dropped heavily toward the turf, knees sharply bent next to a training cone.",
-      "actionPhase": "Player cuts around the cone, pushing forcefully off the inside edge of the trailing foot while torso pitches forward-sideways.",
-      "formCheck": "Intense lateral body lean. Arms flare wide to whip through turn. Highlight calves, quads, hamstrings, glutes, core blocks, and front shoulder caps in blue.",
-      "hasRemoteImage": true
-    },
-    "footballControl": {
-      "title": "Ball Control",
-      "setup": "Dropped low center of gravity, stance knee deeply flexed, torso tilted slightly backward to cushion an incoming mid-air ball.",
-      "actionPhase": "One active leg raised off the turf with the hip opened wide, using the inside arch of the foot or flat thigh to cushion the ball.",
-      "formCheck": "Torso leans back to absorb impact. Balancing arm acts as shield. Highlight calves, front/back thighs, glutes, core, and forward guarding shoulder cap in blue.",
-      "hasRemoteImage": true
-    },
-    "footballDribbling": {
-      "title": "Outside Laces",
-      "setup": "Dropped into an authentic match-play dribbling stance, knees bent sharply, torso pitched forward over the ball.",
-      "actionPhase": "Active foot uses the outside laces of the shoe to softly slice the ball forward, while trailing leg pushes forcefully off the turf through the toes.",
-      "formCheck": "One arm extended as a defensive shield. Lower center of gravity. Highlight lower-leg calves, front/back thighs, glutes, core, and shielding shoulder cap in blue.",
-      "hasRemoteImage": true
-    },
-    "footballElastico": {
-      "title": "Elastico",
-      "setup": "Approach an imaginary defender with a dropped center of gravity and wide knee split.",
-      "actionPhase": "Flick the ball rapidly outward using the outside laces of an airborne foot, then instantly hook the foot around the ball to snap it back inward with the inside arch mid-air.",
-      "formCheck": "Torso pitches forward-diagonal while arms whip wide asymmetrically. Blue accent covers calves, quads, hamstrings, glutes, core walls, and front shoulder caps driving the arm whip.",
-      "hasRemoteImage": true
-    },
-    "footballFootwork": {
-      "title": "Footwork",
-      "setup": "Dropped center of gravity, knees bent softly, upper torso pitched forward directly over a soccer ball, balancing on one stance foot.",
-      "actionPhase": "Active foot slightly raised, clicking the ball smoothly inward using the inside arch of the foot in a pendulum motion.",
-      "formCheck": "Heel of supporting stance foot must float off the ground. Torso forward pitch. Highlight calves, inner thigh segments, quads, and stance glutes in blue.",
-      "hasRemoteImage": true
-    },
-    "footballHeadStall": {
-      "title": "Head Stall",
-      "setup": "Standing with knees softly bent and hips set back slightly. Upper torso tilted backward at 30-degree angle, neck extended looking up.",
-      "actionPhase": "A soccer ball is nested perfectly still, balanced squarely on the flat center of the forehead with arms wide for balance.",
-      "formCheck": "Neck hyperextended, eyes to sky. Arms wide in an asymmetric wingspan. Highlight calves, quads, glutes, core wall blocks, and neck stabilizer tracks in blue.",
-      "hasRemoteImage": true
-    },
-    "footballReactionDrills": {
-      "title": "Reaction Drills",
-      "setup": "Wide, dynamic soccer stance with a deeply dropped center of gravity, knees bent compactly, feet spaced out to slam on the brakes.",
-      "actionPhase": "One foot planted out wide to slam on the brakes, forcing a sharp lateral weight shift while torso twists away from the braking foot.",
-      "formCheck": "Torso twists away from braking foot. Arms thrown out in wide asymmetric reaction. Highlight calves, quads, hamstrings, glutes, core, and front shoulder caps in blue.",
-      "hasRemoteImage": true
-    },
-    "footballWallPassing": {
-      "title": "Wall Passing",
-      "setup": "Standing at a realistic distance of exactly 6 feet away from a rectangular black soccer rebounder board wall device to allow natural ball clearance.",
-      "actionPhase": "Active striking leg is driven forward close to the ground, with the striking hip rotated wide open so that the flat inside arch of the foot faces directly forward at impact.",
-      "formCheck": "Ensure 6 feet of separation. Torso tilts slightly back. Inside arch faces the board. Highlight calf, quad, hamstring, glute, and core blocks in blue.",
-      "hasRemoteImage": true
-    },
-    "frontRaises": {
-      "title": "Front Raise",
-      "setup": "Stand tall, feet shoulder-width apart. Hold dumbbells in front of thighs with a pronated grip (palms facing body).",
-      "actionPhase": "Raise dumbbells straight forward parallel to ground at exact shoulder height, keeping a microscopic elbow bend.",
-      "formCheck": "Do not swing torso or lean back to rock weights up. Lower under complete control to isolate front shoulder caps.",
-      "hasRemoteImage": true
-    },
-    "gluteBridge": {
-      "title": "Glute Bridge",
-      "setup": "Lie flat on your back with your knees bent at 90 degrees, feet flat on the floor hip-width apart, and arms resting along your sides.",
-      "actionPhase": "Drive through your heels and squeeze your glutes forcefully to lift your hips toward the ceiling to form a rigid, straight line from shoulders to knees.",
-      "formCheck": "Do not over-arch your lower back at the peak. Focus the isolation entirely on your glutes and hamstrings, keeping trunk neutral.",
-      "hasRemoteImage": true
-    },
-    "gluteKickbacks": {
-      "title": "Glute Kickbacks",
-      "setup": "Hinged forward at the hips with a flat horizontal spine parallel to the floor, upper arms pinned strictly against the side ribs.",
-      "actionPhase": "Extend strictly at the elbow joint to push dumbbells straight back and upward behind the hips until the arms are fully locked out parallel to the back.",
-      "formCheck": "Do not drop or move the upper arms; elbow remains a fixed pivot point. Highlight strictly the back outer thickness blocks of the upper arms.",
-      "hasRemoteImage": true
-    },
-    "hammerCurls": {
-      "title": "Hammer Curls",
-      "setup": "Stand tall with your feet shoulder-width apart, holding dumbbells at your sides with a neutral grip (palms facing each other, thumbs pointing forward).",
-      "actionPhase": "Keeping your elbows pinned securely to your ribs, curl the dumbbells upward until your elbows reach a 90-degree bend, keeping your thumbs up.",
-      "formCheck": "Do not rock your shoulders or swing your elbows forward to cheat the weight up. Lower the weights slowly and under complete control.",
-      "hasRemoteImage": true
-    },
-    "hangingKneeRaises": {
-      "title": "Knee Raises",
-      "setup": "Hanging from an overhead pull-up bar or supported on a captain's chair station, legs extended straight down.",
-      "actionPhase": "Engage the lower abdominal wall to compress the spine and drive both knees straight up forcefully until the thighs break past parallel with the hips.",
-      "formCheck": "Avoid swinging the torso or using momentum to pull the legs up. Highlight strictly the lower abdominal core segments and hip flexors.",
-      "hasRemoteImage": true
-    },
-    "highKnees": {
-      "title": "High Knees",
-      "setup": "Stand tall with feet hip-width apart, core heavily braced, spine vertical and upright.",
-      "actionPhase": "Drive the leading leg explosively straight upward mid-air until the front thigh is completely horizontal and parallel to the floor at a strict 90-degree angle with the vertical torso.",
-      "formCheck": "Keep torso strictly straight with zero lean. Blue accent maps directly to the active kinetic chain: front hip flexor crease, front surface of both upper thighs, abdominal core walls, and lower calf blocks on the back of both lower legs.",
-      "hasRemoteImage": true
-    },
-    "hollowHold": {
-      "title": "Hollow Hold",
-      "setup": "Lie flat on back, legs zipped together, arms extended straight back overhead parallel to your ears.",
-      "actionPhase": "Press your lumbar spine flat against floor. Flex shoulder blades up off ground while hovering locked-out straight legs 6 inches high.",
-      "formCheck": "If your lower back arches or creates a gap off the floor, lift legs higher or lower arms until spine stays completely flush.",
-      "hasRemoteImage": true
-    },
-    "inchworm": {
-      "title": "Inchworm",
-      "setup": "Stand tall with feet hip-width apart and your core tightly braced.",
-      "actionPhase": "Hinge at hips to touch toes, then walk hands forward step-by-step into an extended plank position slightly past shoulders, holding a rigid straight line.",
-      "formCheck": "Do not let your hips sag at the bottom peak extension. Keep your head facing straight down toward the floor to ensure a neutral neck.",
-      "hasRemoteImage": true
-    },
-    "inclineBench": {
-      "title": "Incline Chest Press",
-      "setup": "Seated on a bench inclined at a 30 to 45-degree angle, feet driven flat into the ground, core braced tightly.",
-      "actionPhase": "Lower the weight smoothly down toward the upper chest collarbone line, then press vertically straight up over the face to a clean arm lockout position.",
-      "formCheck": "Maintain an unyielding flat wrist and strict 45-degree elbow path. Blue highlights upper chest panels, front shoulder caps, and triceps.",
-      "hasRemoteImage": true
-    },
-    "inclineFlies": {
-      "title": "Incline Fly",
-      "setup": "Recline back on an incline bench set to 30 degrees. Hold dumbbells straight up above upper chest, palms facing inward.",
-      "actionPhase": "Lower arms out wide to sides in a smooth, sweeping arc until deep upper chest stretch is felt, then squeeze back to top.",
-      "formCheck": "Keep dumbbells tracking over upper clavicle line, not lower stomach, to properly target the upper pectoral fibers.",
-      "hasRemoteImage": true
-    },
-    "jumpRope": {
-      "title": "Jump Rope",
-      "setup": "Stand upright, elbows tucked tightly near the side ribs, hands holding handles flared out at a 45-degree angle.",
-      "actionPhase": "Execute small, rapid bounding hops entirely on the balls of the feet while rotating wrists smoothly to swing the cable underneath.",
-      "formCheck": "Do not jump with high knee bends or stomp flat-footed. Highlights the lower leg calf muscle bellies, foot arches, and forearms in blue.",
-      "hasRemoteImage": true
-    },
-    "jumpingJacks": {
-      "title": "Jumping Jacks",
-      "setup": "Stand perfectly vertical with feet together and arms hanging straight down at the sides.",
-      "actionPhase": "Jump feet out wide to the sides while simultaneously abducting both arms out and straight up overhead into a wide star shape flight path.",
-      "formCheck": "Keep movements fluid and on the balls of the feet. Highlights calf heads, outer quads, glutes, and outer shoulder cap bellies in split map style.",
-      "hasRemoteImage": true
-    },
-    "jumpingLunges": {
-      "title": "Jump Lunges",
-      "setup": "Stationary lunge stance, front thigh parallel to floor, rear knee hovering just off the ground, torso held upright.",
-      "actionPhase": "Explode vertically into the air by driving through both feet. Switch your leg positions in mid-air, landing softly into a lunge.",
-      "formCheck": "Absorb impact smoothly. Ensure your front knee tracks straight over your toes and does not cave inward or smash the floor.",
-      "hasRemoteImage": true
-    },
-    "kettlebellCleanPress": {
-      "title": "Clean and Press",
-      "setup": "Stand tall with feet shoulder-width apart, holding a kettlebell in front of the hips.",
-      "actionPhase": "Execute an explosive hip hinge to clean the kettlebell up to a vertical forearm front rack position, then instantly drive it vertically straight up overhead past the ears.",
-      "formCheck": "Highlight the complete multi-phase kinetic engine in a clean split muscle style: calves, front upper thighs, back upper thighs (hamstrings), glutes, active front shoulder caps, upper triceps, and upper back sections between the shoulder blades.",
-      "hasRemoteImage": true
-    },
-    "kettlebellDeadlift": {
-      "title": "Kettlebell Deadlift",
-      "setup": "Stand directly over the kettlebell, handle aligned with ankle bones. Hinge deeply at hips, bend knees slightly, gripping handle flat-backed.",
-      "actionPhase": "Drive forcefully through your heels and push the floor away to stand straight up. Lock hips and squeeze glutes at peak.",
-      "formCheck": "Maintain a rigid, flat neutral spine from your head down to your hips. Do not let your lower back round off the floor.",
-      "hasRemoteImage": true
-    },
-    "kettlebellGobletSquat": {
-      "title": "Goblet Squat",
-      "setup": "Stand with feet shoulder-width apart, toes flared slightly. Hold kettlebell vertically by the horns close to your sternum, elbows pinned down.",
-      "actionPhase": "Drop hips straight down between your heels into a deep squat until your hip crease breaks parallel. Keep spine upright.",
-      "formCheck": "Do not lean forward. Keep your chest facing forward, your heels flat on the floor, and actively push knees outward over toes.",
-      "hasRemoteImage": true
-    },
-    "kettlebellGorillaRow": {
-      "title": "Gorilla Row",
-      "setup": "Place two heavy kettlebells on the floor, take an ultra-wide sumo stance over them. Hinge forward completely until back is flat.",
-      "actionPhase": "Push and brace one arm forcefully into the floor kettlebell for stability. Alternately pull the opposite bell tight into your side ribs.",
-      "formCheck": "Keep hips and chest completely square to the floor. Do not let your body twist or rock side-to-side as you row.",
-      "hasRemoteImage": true
-    },
-    "kettlebellHalo": {
-      "title": "Kettlebell Halo",
-      "setup": "Stand tall, feet hip-width apart. Hold the kettlebell upside-down tightly by the vertical horns against your upper chest, bracing the core.",
-      "actionPhase": "Orbit the kettlebell smoothly in a tight circle around your head, passing low behind the neck and returning over the opposite shoulder.",
-      "formCheck": "Keep your head and neck perfectly still. Do not duck your chin or tilt your torso; let your shoulders do all rotational work.",
-      "hasRemoteImage": true
-    },
-    "kettlebellRow": {
-      "title": "Kettlebell Row",
-      "setup": "Supported on a flat workout bench with one knee and matching-side bracing hand flat on the bench pad, maintaining a flat horizontal spine.",
-      "actionPhase": "Active pulling arm is flexed deeply at the elbow, pulling a heavy kettlebell tightly up into the lower ribs near the hip crease past the torso plane.",
-      "formCheck": "Chest, bracing limbs, and legs remain neutral light-gray. Highlight only active side lats, upper back rows, rear shoulder caps, pulling forearm, and core obliques in blue.",
-      "hasRemoteImage": true
-    },
-    "kettlebellSnatch": {
-      "title": "Kettlebell Snatch",
-      "setup": "Wide athletic stance over the bell. Hinge back at hips to grip handle with one hand, keeping the arm relaxed like a pendulum.",
-      "actionPhase": "Drive hips forward explosively to swing the kettlebell upward. At chest height, pull the elbow back and punch straight up to lockout.",
-      "formCheck": "Catch the bell smoothly on the back of the forearm. Keep core locked to avoid arching the lower back at peak overhead lockout.",
-      "hasRemoteImage": true
-    },
-    "kettlebellSwings": {
-      "title": "Kettlebell Swing",
-      "setup": "Stand a foot behind the kettlebell, feet wider than shoulder-width. Hinge at hips, tilt bell toward you, pack shoulders down.",
-      "actionPhase": "Hike the kettlebell back dynamically between the legs. Snap hips forward powerfully, driving the weight up to chest height as it floats.",
-      "formCheck": "This is a horizontal hip hinge, not a vertical squat. Stand perfectly upright at the top peak with glutes tight; do not lean back.",
-      "hasRemoteImage": true
-    },
-    "kettlebellTurkishGetUp": {
-      "title": "Turkish Get-Up",
-      "setup": "Lying flat on back on the floor, holding a kettlebell vertically locked out straight up overhead in one arm, same-side knee bent flat.",
-      "actionPhase": "Execute a precise technical sequence: roll onto elbow, push to hand, sweep leg back into a lunge posture, and stand tall while keeping the weight locked straight overhead.",
-      "formCheck": "Maintain continuous vertical visual tracking on the kettlebell throughout. Blue color highlights the entire tracking shoulder, tricep, core oblique panels, and lower legs.",
-      "hasRemoteImage": true
-    },
-    "lateralRaises": {
-      "title": "Lateral Raises",
-      "setup": "Stand perfectly upright with a locked-out, braced core, feet shoulder-width apart, holding dumbbells at the sides.",
-      "actionPhase": "Raise both arms wide out to the sides parallel to the ground at exact shoulder height, forming a wide 'T' shape with a pronated grip (palms facing down).",
-      "formCheck": "The chest, abs, and lower legs must stay light-gray. Accent color highlights strictly both outer shoulder caps, front shoulder caps, and the upper collar segment spanning between the shoulders and the base of the neck.",
-      "hasRemoteImage": true
-    },
-    "lunges": {
-      "title": "Lunges",
-      "setup": "Stand tall with feet hip-width apart. Step forward into a wide stance, keeping your core tight and hands positioned at your hips or chest.",
-      "actionPhase": "Lower your body vertically until your front thigh breaks parallel with the floor and your back knee hovers an inch above the ground.",
-      "formCheck": "Keep your front knee tracking in line with your toes without caving inward. Maintain a controlled, vertical path without rushing the step.",
-      "hasRemoteImage": true
-    },
-    "medBallSlams": {
-      "title": "Ball Slams",
-      "setup": "Stand with a wide base, holding a heavy medicine ball in front of the hips.",
-      "actionPhase": "Extend fully onto toes while driving the medicine ball straight up high overhead, then forcefully crunch the core down to slam the ball vertically into the floor.",
-      "formCheck": "Hinge hips back deeply during the down-slam to absorb force safely. Highlight abs, lat panels, chest, front shoulders, and quads.",
-      "hasRemoteImage": true
-    },
-    "mountainClimbers": {
-      "title": "Mountain Climbers",
-      "setup": "Straight-arm push-up plank, hands flat beneath shoulders, core braced, head facing straight down.",
-      "actionPhase": "Explosively drive one knee forward under chest, then instantly switch legs in a rapid, alternating running motion.",
-      "formCheck": "Keep hips down and level. Do not bounce your glutes up and down; hold upper body rigid while your legs sprint.",
-      "hasRemoteImage": true
-    },
-    "overheadTricepExtension": {
-      "title": "Triceps Extension",
-      "setup": "Stand upright with core braced, holding a weight completely straight up overhead past the ears with vertical upper arms.",
-      "actionPhase": "Flex strictly at the elbow joints to lower the weight down behind the head, then extend the elbows forcefully to return the arms to vertical overhead lockout.",
-      "formCheck": "Do not let the elbows flare outward or the lower back arch. Highlight strictly the back outer thickness blocks of the upper arms.",
-      "hasRemoteImage": true
-    },
-    "tricepKickbacks": {
-      "title": "Triceps Kickback",
-      "setup": "Hinge at the hips with one hand and the matching knee on a flat bench, torso parallel to the floor, free foot planted. Hold a dumbbell with the working arm, upper arm pinned tight to the side and elbow bent about 90 degrees.",
-      "actionPhase": "Keep the upper arm locked in place and extend only at the elbow until the forearm is straight back behind you, squeezing the triceps at full lockout, then control the return to the bent position.",
-      "formCheck": "Do not swing the upper arm or shrug the shoulder. Isolate the blue highlight on the rear upper-arm triceps belly of the working arm.",
-      "hasRemoteImage": true
-    },
-    "plank": {
-      "title": "Plank",
-      "setup": "Propped on forearms and toes. Elbows stacked directly under shoulders at a 90-degree angle, hands flat on floor.",
-      "actionPhase": "Squeeze abs, glutes, and quads to hold your body horizontally in a strictly straight line parallel to the floor.",
-      "formCheck": "Face straight down to keep a neutral spine. Do not let your lower back sag or your hips hike upward into the air.",
-      "hasRemoteImage": true
-    },
-    "plateRotations": {
-      "title": "Plate Rotations",
-      "setup": "Stand tall, wide base. Hold heavy weight plate straight out forward at chest height with both hands, locking arms completely.",
-      "actionPhase": "Keeping arms pinned straight, dynamically twist the weight plate 90 degrees left and right like a steering wheel.",
-      "formCheck": "Do not drop arms below chest height. Keep lower body locked and core braced tightly to resist the rotational weight.",
-      "hasRemoteImage": true
-    },
-    "pullUps": {
-      "title": "Pull-Ups",
-      "setup": "Suspended in mid-air holding an overhead bar with a wide pronated grip (palms facing forward), legs extended straight down or crossed at ankles.",
-      "actionPhase": "Pull the body vertically upward until the chin cleanly clears the top of the bar, pushing the chest upward and driving elbows completely down and back past the ribs.",
-      "formCheck": "Avoid using momentum or swinging legs. Squeeze upper back tightly. Highlight side back lats, upper back trapezius, and front upper arms in blue.",
-      "hasRemoteImage": true
-    },
-    "pullover": {
-      "title": "Dumbbell Pullover",
-      "setup": "Lie perpendicular across a flat workout bench so only your upper back/shoulders are supported. Cup hands under the top plate of a single dumbbell over your chest.",
-      "actionPhase": "Keeping arms straight but slightly unlocked, slowly lower the dumbbell backward overhead hanging just past the top of your head, then pull it back using your lats.",
-      "formCheck": "Do not bend your elbows like a tricep extension; the arm angle must stay completely fixed to ensure your back and rib muscles do all the work.",
-      "hasRemoteImage": true
-    },
-    "pushups": {
-      "title": "Push-Up",
-      "setup": "Rigid high plank posture, hands flat slightly wider than shoulder-width, fingers spread, feet together, bracing core.",
-      "actionPhase": "Lower your entire body in a straight line until your chest hovers an inch above the floor, elbows tucked at a safe 45-degree angle.",
-      "formCheck": "Do not let your hips sag or lower back arch. Keep your neck neutral by facing straight down at the floor between your hands.",
-      "hasRemoteImage": true
-    },
-    "renegadeRow": {
-      "title": "Renegade Row",
-      "setup": "Push-up plank stance over two dumbbells on floor. Set feet wider than shoulder-width for a wide anti-rotational base.",
-      "actionPhase": "Brace one arm forcefully into floor weight. Row opposite dumbbell tight into ribs, driving elbow high past your torso.",
-      "formCheck": "Hips must remain perfectly parallel and square to the floor. Do not twist or tilt lower body as you alternate rows.",
-      "hasRemoteImage": true
-    },
-    "reverseFly": {
-      "title": "Reverse Flies",
-      "setup": "Stand hip-width apart. Hinge forward 45 degrees at hips with a flat spine, letting dumbbells hang down, palms facing.",
-      "actionPhase": "Raise arms wide out to sides like wings parallel to floor with elbows slightly unlocked, squeezing shoulder blades together.",
-      "formCheck": "Do not lift torso up as you fly the weights. Focus entirely on rear shoulders and upper back pulling mechanics.",
-      "hasRemoteImage": true
-    },
-    "rowing": {
-      "title": "Rowing Machine",
-      "setup": "Sit on rower seat, strap feet securely into plates. Grip handle with straight arms, sliding forward with bent knees.",
-      "actionPhase": "Drive forcefully through legs to push seat back. Lean torso back slightly and pull handle smoothly into upper abdomen.",
-      "formCheck": "Follow correct sequence: Legs drive first, torso leans second, arms pull last. Reverse order exactly sliding forward.",
-      "hasRemoteImage": true
-    },
-    "russianTwists": {
-      "title": "Russian Twists",
-      "setup": "Sit on floor, knees bent. Lean upper torso back at 45 degrees to engage core, hovering feet off floor to balance on glutes.",
-      "actionPhase": "Interlock hands at chest. Dynamically rotate your shoulders and ribs from side to side, tapping hands to floor next to hips.",
-      "formCheck": "Rotate from your upper back and ribs, not just your arms. Keep knees as stable and still as possible throughout.",
-      "hasRemoteImage": true
-    },
-    "shadowBoxing": {
-      "title": "Shadow Boxing",
-      "setup": "Staggered boxing stance, knees soft, core active, hands up guarding the jaw.",
-      "actionPhase": "Throw fast combinations of jabs, crosses, hooks, and slips mid-air, shifting weight fluidly and rotating the trunk across the canvas.",
-      "formCheck": "Keep non-punching hand up tight next to face. Blue highlight covers active shoulder caps, side obliques, and the trailing calf blocks.",
-      "hasRemoteImage": true
-    },
-    "sidePlank": {
-      "title": "Side Plank",
-      "setup": "Lie on side, propped on forearm with elbow directly below shoulder. Stack ankles and hips.",
-      "actionPhase": "Lift hips high until body forms a strictly straight, rigid diagonal line from head to heels. Hold position statically.",
-      "formCheck": "Do not let bottom hip sag or rotate forward. Squeeze obliques tightly to maintain clean skeletal elevation.",
-      "hasRemoteImage": true
-    },
-    "skaterHops": {
-      "title": "Skater Hops",
-      "setup": "Stand in a partial single-leg squat, torso hinged forward athletically, weight loaded on one foot.",
-      "actionPhase": "Explode laterally out wide to the side, launching off the active leg and landing softly on the opposite foot, sweeping the trailing leg behind in a skater stride.",
-      "formCheck": "Absorb the landing load completely inside the hip and heel without letting the knee collapse. Highlight outer hips, glutes, quads, and calves.",
-      "hasRemoteImage": true
-    },
-    "sledPush": {
-      "title": "Sled Push",
-      "setup": "Torso leaned heavily forward at a rigid 45-degree angle, both arms extended completely straight forward gripping the vertical poles of a heavy prowler sled.",
-      "actionPhase": "Captured mid-step: one driving leg flexed deeply moving forward, while the trailing power leg is extended straight back pushing forcefully off the turf.",
-      "formCheck": "Upper framing chest and arms serve as neutral light-gray brace. Highlight only individual calf, quad, hamstring, and glute muscle bellies in blue.",
-      "hasRemoteImage": true
-    },
-    "squatJumps": {
-      "title": "Squat Jumps",
-      "setup": "Stand tall with feet flat on the ground shoulder-width apart, core braced, spine neutral.",
-      "actionPhase": "Descend into a clean partial squat, swing arms behind, then explosively drive both arms straight up overhead past the ears while jumping vertically high mid-air.",
-      "formCheck": "Capture full triple-extension mid-flight with toes pointing down. Highlight individual muscle bellies of calves, quadriceps, glutes, and core grids.",
-      "hasRemoteImage": true
-    },
-    "squats": {
-      "title": "Squats",
-      "setup": "Stand tall with feet set flat on the ground shoulder-width apart, toes flared slightly outward 15 to 30 degrees. Core braced, chest proud, eyes forward.",
-      "actionPhase": "Drive hips deeply downward and back as if sitting in a low chair. Descend smoothly until the hip crease breaks cleanly below parallel with the knee line. Knees track straight over the toes, keeping heels flat.",
-      "formCheck": "Maintain flat neutral spine. Do not let knees cave inward or heels lift. Highlight only separate quad strips, hip glutes, and hamstrings in blue. Joints remain gray.",
-      "hasRemoteImage": true
-    },
-    "stepUps": {
-      "title": "Step-Ups",
-      "setup": "Stand facing a plyo box. Place one active leading foot flat on top of the box, knee bent deeply.",
-      "actionPhase": "Lean torso forward 15 degrees over the box to load the heel. Drive through the front heel to ascend, hovering trailing foot in mid-air.",
-      "formCheck": "Trailing foot must remain completely airborne and suspended mid-ascent. Do not push off the floor with your back toes.",
-      "hasRemoteImage": true
-    },
-    "sumoSquats": {
-      "title": "Sumo Squats",
-      "setup": "Take an ultra-wide stance with your feet well past shoulder-width and flare your toes outward. Hold a kettlebell at your chest with both hands.",
-      "actionPhase": "Drop your hips straight down into a deep squat until your thighs are parallel to the floor, keeping the kettlebell close to your chest and knees over your toes.",
-      "formCheck": "Do not let your knees collapse inward. Drive through your heels to stand, squeezing the inner thighs without letting the kettlebell pull you forward.",
-      "hasRemoteImage": true
-    },
-    "thrusters": {
-      "title": "Thrusters",
-      "setup": "Stand feet shoulder-width apart. Hold weights tightly in front-rack shoulder position, elbows driven high pointing forward.",
-      "actionPhase": "Drop into a deep front squat below parallel. Explode up out of hole, using leg momentum to press weights straight overhead.",
-      "formCheck": "Do not press weights until legs fully extend. Maintain an upright vertical torso rack position during the deep squat.",
-      "hasRemoteImage": true
-    },
-    "tuckJumps": {
-      "title": "Tuck Jumps",
-      "setup": "Stand with feet shoulder-width apart, knees slightly unlocked, arms loose at your sides.",
-      "actionPhase": "Drop into shallow quarter-squat, explode vertically into peak height, driving both knees explosively up into the chest simultaneously.",
-      "formCheck": "Thighs must compress past parallel against lower torso in mid-air. Land softly on mid-foot, instantly absorbing impact.",
-      "hasRemoteImage": true
-    },
-    "wallBalls": {
-      "title": "Wall Balls",
-      "setup": "Stand facing target wall. Hold medicine ball at chest height by sides, feet shoulder-width apart.",
-      "actionPhase": "Drop into deep squat, then explosively drive up through legs to launch the ball high against wall target, catching it on rebound.",
-      "formCheck": "This is one fluid kinetic movement. Do not pause between squat and throw; use leg power to drive ball upward smoothly.",
-      "hasRemoteImage": true
-    },
-    "arnoldPress": {
-      "title": "Arnold Press",
-      "setup": "Sit tall on an incline bench holding dumbbells at shoulder height with palms facing you, elbows tucked slightly forward.",
-      "actionPhase": "Press the weights overhead while rotating the palms outward so they face forward at the top, then reverse the rotation on the way down.",
-      "formCheck": "Keep ribs down and avoid leaning back. Rotate smoothly through the press; do not shrug the traps to finish the lockout.",
-      "hasRemoteImage": true
-    },
-    "declineBench": {
-      "title": "Decline Bench Press",
-      "setup": "Lie on a decline bench with feet secured, eyes under the bar, shoulder blades packed into the pad.",
-      "actionPhase": "Unrack and lower the bar to the lower chest with a controlled elbow tuck, then press back to full lockout.",
-      "formCheck": "Keep wrists stacked over elbows. Do not bounce the bar off the chest or let the hips lift off the pad.",
-      "hasRemoteImage": true
-    },
-    "legPress": {
-      "title": "Leg Press",
-      "setup": "Sit in the leg press with low back and hips flush to the pad, feet shoulder-width on the platform.",
-      "actionPhase": "Unlock the sled and bend the knees to lower until thighs are near parallel, then drive through mid-foot to extend without locking hard.",
-      "formCheck": "Do not let the low back round off the pad at the bottom. Keep knees tracking over toes.",
-      "hasRemoteImage": true
-    },
-    "legExtension": {
-      "title": "Leg Extension",
-      "setup": "Sit upright with the pad on the lower shins and back supported against the seat.",
-      "actionPhase": "Extend both knees until the legs are straight, pause briefly, then lower under control.",
-      "formCheck": "Avoid swinging or lifting the hips. Keep the movement isolated to the quads.",
-      "hasRemoteImage": true
-    },
-    "legCurl": {
-      "title": "Leg Curl",
-      "setup": "Lie or sit in the curl machine with the pad just above the heels and hips anchored.",
-      "actionPhase": "Curl the heels toward the glutes through a full range, then lower slowly without dropping the weight.",
-      "formCheck": "Keep hips down. Do not yank with the low back to finish the curl.",
-      "hasRemoteImage": true
-    },
-    "hackSquat": {
-      "title": "Squats",
-      "setup": "Stand on the platform with back and shoulders against the pads, feet shoulder-width and slightly forward.",
-      "actionPhase": "Unlock and descend until thighs are near parallel, then drive up through the mid-foot to standing.",
-      "formCheck": "Keep heels down and knees tracking out. Avoid bouncing out of the bottom.",
-      "hasRemoteImage": true
-    },
-    "smithMachineSquat": {
-      "title": "Smith Machine Squat",
-      "setup": "Set the bar on the upper traps, feet slightly forward of the bar path, core braced.",
-      "actionPhase": "Unrack and squat down until hip crease is near knee height, then stand by driving through the mid-foot.",
-      "formCheck": "Keep torso braced against the fixed bar path. Do not let knees cave inward.",
-      "hasRemoteImage": true
-    },
-    "calfRaiseMachine": {
-      "title": "Calf Raise Machine",
-      "setup": "Place the balls of the feet on the platform with heels hanging free and pads on the shoulders or thighs.",
-      "actionPhase": "Drop the heels for a stretch, then rise onto the toes to a hard calf squeeze at the top.",
-      "formCheck": "Use a full stretch and full squeeze. Avoid bouncing or turning the knees inward.",
-      "hasRemoteImage": true
-    },
-    "hipAbductor": {
-      "title": "Hip Abductor",
-      "setup": "Sit with the pads on the outside of the knees or thighs and torso upright against the backrest.",
-      "actionPhase": "Drive the legs outward against the pads, pause, then return slowly to the start.",
-      "formCheck": "Keep the low back glued to the pad. Move from the hips, not by leaning the torso.",
-      "hasRemoteImage": true
-    },
-    "hipAdductor": {
-      "title": "Hip Adductor",
-      "setup": "Sit with the pads on the inside of the knees or thighs and upright posture.",
-      "actionPhase": "Squeeze the legs together against the pads, pause, then open slowly under control.",
-      "formCheck": "Avoid yanking with the torso. Keep the range smooth and the hips planted.",
-      "hasRemoteImage": true
-    },
-    "hipThrustMachine": {
-      "title": "Hip Thrust Machine",
-      "setup": "Sit with upper back against the pad, feet flat, and the belt or pad across the hips.",
-      "actionPhase": "Drive through the heels to extend the hips until the torso and thighs form a straight line, then lower with control.",
-      "formCheck": "Finish by squeezing the glutes, not by arching the low back. Keep the chin slightly tucked.",
-      "hasRemoteImage": true
-    },
-    "latPulldown": {
-      "title": "Lat Pulldown",
-      "setup": "Sit with thighs locked under the pads, grip the bar slightly wider than shoulders, chest tall.",
-      "actionPhase": "Pull the bar to the upper chest by driving the elbows down and back, then extend the arms under control.",
-      "formCheck": "Do not lean excessively or yank with momentum. Keep shoulders packed away from the ears.",
-      "hasRemoteImage": true
-    },
-    "seatedCableRow": {
-      "title": "Cable Row",
-      "setup": "Sit tall with feet on the platform, slight knee bend, and arms extended holding the handle.",
-      "actionPhase": "Pull the handle to the lower ribs by driving the elbows back, squeeze the shoulder blades, then return slowly.",
-      "formCheck": "Avoid rounding the low back on the stretch or leaning back to cheat the pull.",
-      "hasRemoteImage": true
-    },
-    "tBarRow": {
-      "title": "T-Bar Row",
-      "setup": "Hinge at the hips over the T-bar or chest-supported pad with a neutral spine and arms long.",
-      "actionPhase": "Row the weight toward the lower chest or belly, elbows close, then lower without dumping the shoulders forward.",
-      "formCheck": "Keep the torso angle fixed. Do not yank with the low back to finish reps.",
-      "hasRemoteImage": true
-    },
-    "assistedPullUp": {
-      "title": "Assisted Pull-Up",
-      "setup": "Kneel or stand on the assist pad, grip the handles overhead, and set enough counterweight to move with control.",
-      "actionPhase": "Pull the chest toward the bar until the chin clears, then lower to a near-full hang without dumping the shoulders.",
-      "formCheck": "Lead with the chest and elbows. Avoid kipping or excessive swing.",
-      "hasRemoteImage": true
-    },
-    "chestPressMachine": {
-      "title": "Chest Press Machine",
-      "setup": "Sit with back flat on the pad, handles at mid-chest height, feet planted.",
-      "actionPhase": "Press the handles forward to near lockout, then return until the elbows are just behind the torso line.",
-      "formCheck": "Keep shoulder blades on the pad. Do not shrug or bounce out of the stretch.",
-      "hasRemoteImage": true
-    },
-    "pecDeck": {
-      "title": "Pec Deck",
-      "setup": "Sit upright with forearms on the pads or hands on the handles, elbows slightly bent.",
-      "actionPhase": "Bring the arms together in front of the chest, squeeze, then open slowly to a controlled stretch.",
-      "formCheck": "Keep a soft elbow bend throughout. Do not let the shoulders roll forward at the finish.",
-      "hasRemoteImage": true
-    },
-    "cableFly": {
-      "title": "Cable Fly",
-      "setup": "Stand centered between high or mid pulleys with a soft elbow bend and staggered stance for balance.",
-      "actionPhase": "Sweep the handles together in a wide arc to meet in front of the chest, then reverse under control.",
-      "formCheck": "Keep the torso still. Move from the shoulder joint, not by pressing like a bench press.",
-      "hasRemoteImage": true
-    },
-    "shoulderPressMachine": {
-      "title": "Shoulder Press Machine",
-      "setup": "Sit with back against the pad, handles near ear height, feet flat on the floor.",
-      "actionPhase": "Press the handles overhead to near lockout, then lower until the upper arms are about parallel to the floor.",
-      "formCheck": "Keep ribs down and avoid leaning back. Do not shrug the traps at the top.",
-      "hasRemoteImage": true
-    },
-    "cableLateralRaise": {
-      "title": "Cable Lateral Raise",
-      "setup": "Stand beside a low cable with the handle in the far hand, soft elbow bend, torso tall.",
-      "actionPhase": "Raise the arm out to the side until the hand is near shoulder height, then lower slowly.",
-      "formCheck": "Lead with the elbow, not the wrist. Avoid swinging or leaning away from the stack.",
-      "hasRemoteImage": true
-    },
-    "facePull": {
-      "title": "Face Pull",
-      "setup": "Set a rope at upper-chest height, step back with arms extended, and brace the core.",
-      "actionPhase": "Pull the rope toward the face while externally rotating so the hands finish beside the ears.",
-      "formCheck": "Lead with the rear delts and upper back. Do not shrug or yank with the low back.",
-      "hasRemoteImage": true
-    },
-    "tricepPushdown": {
-      "title": "Tricep Pushdown",
-      "setup": "Stand tall at a high cable with elbows pinned to the ribs and a neutral grip on the bar or rope.",
-      "actionPhase": "Extend the elbows until the arms are straight, squeeze the triceps, then return without letting the elbows flare forward.",
-      "formCheck": "Keep upper arms still. Avoid leaning into the stack or using shoulder drive.",
-      "hasRemoteImage": true
-    },
-    "cableCurl": {
-      "title": "Biceps Curl",
-      "setup": "Stand facing a low cable with elbows pinned to the sides and palms facing up.",
-      "actionPhase": "Curl the handle toward the shoulders, squeeze the biceps, then lower under control.",
-      "formCheck": "Do not swing the torso. Keep elbows fixed beside the ribs throughout.",
-      "hasRemoteImage": true
-    },
-    "preacherCurl": {
-      "title": "Preacher Curl",
-      "setup": "Sit or stand with upper arms flat on the preacher pad and a full stretch at the bottom.",
-      "actionPhase": "Curl the weight toward the shoulders without lifting the elbows off the pad, then lower slowly.",
-      "formCheck": "Avoid bouncing out of the bottom stretch. Keep wrists neutral and shoulders relaxed.",
-      "hasRemoteImage": true
-    },
-    "cableCrunch": {
-      "title": "Cable Crunch",
-      "setup": "Kneel under a high cable with the rope behind the head or at the shoulders, hips stacked over knees.",
-      "actionPhase": "Crunch the ribs toward the hips by flexing the spine, pause, then return without yanking the arms.",
-      "formCheck": "Move from the abs, not by pulling the rope with the arms or hinging only at the hips.",
-      "hasRemoteImage": true
-    },
-    "backExtension": {
-      "title": "Back Extension",
-      "setup": "Anchor the ankles on a back-extension bench with hips on the pad and arms crossed at the chest.",
-      "actionPhase": "Hinge down with a flat back, then extend the hips and spine until the body forms a straight line.",
-      "formCheck": "Do not hyperextend hard past neutral. Squeeze glutes and keep the neck long.",
-      "hasRemoteImage": true
-    },
-    "cableKickback": {
-      "title": "Glute Kickback",
-      "setup": "Attach an ankle cuff to a low cable, face the stack, and hinge slightly with a soft standing knee.",
-      "actionPhase": "Drive the working heel back and up until the glute is fully squeezed, then return without touching down hard.",
-      "formCheck": "Keep the hips square. Avoid arching the low back to finish the kick.",
-      "hasRemoteImage": true
-    },
-    "aroundTheWorld": {
-      "title": "Around the World",
-      "setup": "Stand tall holding a plate at the center of the chest, elbows slightly bent and ribs down.",
-      "actionPhase": "Circle the plate around the head in a controlled path, then reverse direction for the next rep.",
-      "formCheck": "Keep the neck long and the hips quiet. Move from the shoulders, not by twisting the low back.",
-      "hasRemoteImage": true
-    },
-    "barbellCleanPress": {
-      "title": "Clean and Press",
-      "setup": "Stand with the bar over the mid-foot, hands just outside the shoulders, and a flat back.",
-      "actionPhase": "Pull the bar to the shoulders, catch it in a front rack, then press it overhead until the arms are straight.",
-      "formCheck": "Keep the bar close to the body. Finish the press with the ribs down and the head through the arms.",
-      "hasRemoteImage": true
-    },
-    "cableChestPress": {
-      "title": "Chest Press",
-      "setup": "Set two cables at chest height, face away from the stacks, and hold a handle in each hand beside the chest.",
-      "actionPhase": "Press both hands forward until the arms are straight, then return until the elbows are in line with the shoulders.",
-      "formCheck": "Keep the shoulders down and the wrists stacked over the elbows. Do not lock the elbows hard.",
-      "hasRemoteImage": true
-    },
-    "bodyweightSumoSquats": {
-      "title": "Sumo Squats",
-      "setup": "Take an ultra-wide stance with your feet well past shoulder-width and flare your toes outward at a sharp 45-degree angle, clasping hands at chest.",
-      "actionPhase": "Drop your hips straight down vertically into a deep squat until your thighs are parallel to the floor, forcing knees directly over toes.",
-      "formCheck": "Do not let your knees collapse inward toward each other. Drive through your heels to stand back up, squeezing inner thighs.",
-      "hasRemoteImage": true
-    },
-    "standingArnoldPress": {
-      "title": "Arnold Press",
-      "setup": "Stand tall holding dumbbells at shoulder height with palms facing you, elbows tucked slightly forward.",
-      "actionPhase": "Press the weights overhead while rotating the palms outward so they face forward at the top, then reverse the rotation on the way down.",
-      "formCheck": "Keep ribs down and avoid leaning back. Rotate smoothly through the press; do not shrug the traps to finish the lockout.",
+      "title": "Dumbbell Calf Raises",
+      "setup": "Stand tall with a dumbbell in each hand and your feet about hip-width apart. Keep a small bend in your knees and your body still.",
+      "actionPhase": "Rise onto the balls of your feet as high as you can, pause, then lower your heels slowly.",
+      "formCheck": "Move only at your ankles. Do not bounce, bend your knees more, or swing the dumbbells.",
       "hasRemoteImage": true
     },
     "bodyweightCalfRaises": {
       "title": "Calf Raises",
-      "setup": "Stand tall with a braced core. Feet hip-width apart on a flat floor or the edge of a raised block.",
-      "actionPhase": "Rise onto the toes as high as possible, then lower the heels under control.",
-      "formCheck": "Hold the top for a moment. Keep the knees soft and still, and move only at the ankles.",
+      "setup": "Stand tall with your feet about hip-width apart, on the floor or with your heels hanging off a low step. Hold a wall or rail if you need balance.",
+      "actionPhase": "Rise onto the balls of your feet as high as you can, pause, then lower your heels slowly. On a step, let the heels drop a little past flat for a stretch.",
+      "formCheck": "Keep your knees soft and still. Move only at your ankles, and do not rock your body to get higher.",
+      "hasRemoteImage": true
+    },
+    "chestFlies": {
+      "title": "Chest Flies",
+      "setup": "Lie on a flat bench with your feet planted and a dumbbell in each hand over your chest. Keep a small bend in your elbows.",
+      "actionPhase": "Open your arms out to the sides until you feel a stretch across your chest, about in line with the bench. Sweep the weights back together over your chest and squeeze.",
+      "formCheck": "Keep the same soft elbow bend the whole way. Do not turn it into a press, and do not drop the weights below the bench.",
+      "hasRemoteImage": true
+    },
+    "concentrationCurls": {
+      "title": "Concentration Curls",
+      "setup": "Sit on a bench and lean forward so your working arm hangs inside your thigh. Brace the back of that upper arm against the inside of your leg.",
+      "actionPhase": "Curl the dumbbell up toward your shoulder, squeeze, then lower it until your arm is almost straight.",
+      "formCheck": "Keep your upper arm glued to your thigh. Do not swing the weight or lift your elbow off your leg.",
+      "hasRemoteImage": true
+    },
+    "deadBug": {
+      "title": "Dead Bug",
+      "setup": "Lie on your back with your arms reaching toward the ceiling and your knees bent over your hips. Press your lower back flat into the floor.",
+      "actionPhase": "Reach one arm overhead and stretch the opposite leg forward, both hovering just off the floor. Bring them back, then switch sides.",
+      "formCheck": "Keep your lower back pressed down the whole time. If it lifts, shorten the reach instead of forcing a longer one.",
+      "hasRemoteImage": true
+    },
+    "dips": {
+      "title": "Dips",
+      "setup": "Grip the parallel bars and hold yourself up with your arms straight. Bend your knees and cross your ankles behind you so your feet stay clear.",
+      "actionPhase": "Lean your chest slightly forward and bend your elbows to lower until your upper arms are about level. Press back up until your arms are straight.",
+      "formCheck": "Keep your elbows close and your shoulders down. Do not drop so low that your shoulders roll forward or shrug up by your ears.",
+      "hasRemoteImage": true
+    },
+    "dumbbellChestPress": {
+      "title": "Dumbbell Chest Press",
+      "setup": "Lie on a bench with your feet flat and a dumbbell in each hand over your chest. Pinch your shoulder blades into the pad.",
+      "actionPhase": "Lower the dumbbells toward the outsides of your chest with your elbows near your sides, then press them straight up until your arms are straight.",
+      "formCheck": "Keep your wrists over your elbows and your hips on the bench. Do not bounce the weights or let your elbows flare straight out.",
+      "hasRemoteImage": true
+    },
+    "dumbbellLunges": {
+      "title": "Dumbbell Lunges",
+      "setup": "Stand tall with a dumbbell in each hand, arms hanging by your sides, and your feet about hip-width apart.",
+      "actionPhase": "Step forward or back into a long stride and lower until your front thigh is about level and your back knee hovers near the floor. Push through the front heel to stand, then switch legs.",
+      "formCheck": "Keep your torso tall and the dumbbells still. Do not let the front knee cave in or the weights swing you off balance.",
+      "hasRemoteImage": true
+    },
+    "dumbbellRow": {
+      "title": "Dumbbell Row",
+      "setup": "Put one knee and the same-side hand on a bench so your back is flat and about level with the floor. Hold a dumbbell in the free hand with that arm hanging straight.",
+      "actionPhase": "Pull the dumbbell up toward your hip, leading with your elbow, until it reaches your lower ribs. Lower it slowly until your arm is straight.",
+      "formCheck": "Keep your back flat and your hips still. Do not twist your body or shrug your shoulder to finish the pull.",
+      "hasRemoteImage": true
+    },
+    "dumbbellShoulderPress": {
+      "title": "Dumbbell Shoulder Press",
+      "setup": "Sit tall against a bench with your feet flat and a dumbbell in each hand at shoulder height, palms facing forward.",
+      "actionPhase": "Press the dumbbells straight up until your arms are straight overhead, then lower them until your elbows are about level with your shoulders.",
+      "formCheck": "Keep your ribs down and your back on the pad. Do not lean back or shrug your shoulders up to finish the press.",
+      "hasRemoteImage": true
+    },
+    "farmerCarry": {
+      "title": "Farmer's Carry",
+      "setup": "Stand between two heavy weights, hinge down with a flat back, and lift them to your sides. Stand tall with your shoulders down and your core tight.",
+      "actionPhase": "Walk forward in short, steady steps. Keep the weights still and your body tall until the carry is done, then set them down the same way you picked them up.",
+      "formCheck": "Do not let the weights pull you into a slouch or a lean to one side. Keep your shoulders packed down and your steps quiet.",
+      "hasRemoteImage": true
+    },
+    "footballBallMastery": {
+      "title": "Ball Mastery",
+      "setup": "Stand over the ball with your knees softly bent and your chest leaning slightly forward. Keep your arms out a little for balance.",
+      "actionPhase": "Tap the top of the ball lightly with the sole of one foot, then the other, in a steady rhythm. Stay on the balls of your feet as you switch.",
+      "formCheck": "Keep the touches soft and the ball close. Stay low, and do not stand up straight or kick the ball away.",
+      "hasRemoteImage": true
+    },
+    "footballConeSlalom": {
+      "title": "Cone Slalom",
+      "setup": "Start a step away from the first cone with your knees bent and your weight ready to shift. Keep the ball close to your feet.",
+      "actionPhase": "Cut around each cone by pushing off the inside of your back foot and guiding the ball with the inside or outside of the front foot. Lean into the turn, then accelerate to the next cone.",
+      "formCheck": "Stay low and take the ball with you through the turn. Do not stand tall or leave the ball behind the cone.",
+      "hasRemoteImage": true
+    },
+    "footballControl": {
+      "title": "Ball Control",
+      "setup": "Get ready to receive with your knees bent and your weight on one foot. Open your hips toward the ball so you can cushion it.",
+      "actionPhase": "Meet the ball with the inside of your foot or the middle of your thigh, and give a little as it arrives so it drops in front of you. Set it, then play your next touch.",
+      "formCheck": "Lean back slightly to take the pace off the ball. Do not stab at it with a stiff leg or let it bounce away.",
+      "hasRemoteImage": true
+    },
+    "footballDribbling": {
+      "title": "Outside Laces",
+      "setup": "Start in a low dribbling stance with the ball just ahead of your front foot and your knees bent. Keep one arm out a little to protect the ball.",
+      "actionPhase": "Push the ball forward with the outside of your foot, using the area around the laces. Push off your back foot and take your next touch before the ball gets away.",
+      "formCheck": "Stay over the ball and keep each touch small. Do not toe-poke it or stand up as you speed up.",
+      "hasRemoteImage": true
+    },
+    "footballElastico": {
+      "title": "Elastico",
+      "setup": "Face a cone or an imaginary defender with your knees bent and the ball just outside your front foot.",
+      "actionPhase": "Push the ball outward with the outside of that foot, then quickly hook it back inside with the inside of the same foot before you accelerate past.",
+      "formCheck": "Stay low and keep the touch small. Do both moves with the same foot, without stopping to reset.",
+      "hasRemoteImage": true
+    },
+    "footballFootwork": {
+      "title": "Footwork",
+      "setup": "Stand over the ball on the balls of your feet, knees bent, with your chest slightly forward. Balance on one foot so the other is free to touch the ball.",
+      "actionPhase": "Tap the ball inward with the inside of your free foot, then switch feet and tap it back the other way. Keep a light, even rhythm.",
+      "formCheck": "Stay on the ball of your standing foot and keep the ball under you. Do not plant your heel or take big, heavy touches.",
+      "hasRemoteImage": true
+    },
+    "footballHeadStall": {
+      "title": "Head Stall",
+      "setup": "Stand with your knees soft and your hips slightly back. Tip your chest and chin up so your forehead is the flat spot the ball can sit on.",
+      "actionPhase": "Let the ball settle on the center of your forehead and hold it still. Use small shifts of your feet and arms to keep your balance.",
+      "formCheck": "Look up at the ball and keep your neck long, not jammed. If the ball rolls off, reset it instead of chasing it with your head.",
+      "hasRemoteImage": true
+    },
+    "footballReactionDrills": {
+      "title": "Reaction Drills",
+      "setup": "Start in a wide, low stance with your knees bent and your weight on the balls of your feet. Keep your eyes up so you can react.",
+      "actionPhase": "On the cue, plant one foot wide to stop, shift your weight, and push off toward the new direction. Turn your chest with the move and get your feet set again.",
+      "formCheck": "Stay low when you brake and use your arms for balance. Do not stand up tall or cross your feet before you change direction.",
+      "hasRemoteImage": true
+    },
+    "footballWallPassing": {
+      "title": "Wall Passing",
+      "setup": "Stand about two steps from a wall or rebounder, with the ball beside your standing foot. Point your hips toward the wall.",
+      "actionPhase": "Pass with the inside of your foot so the ball hits the wall and comes back. Cushion the return with the inside of your foot, then pass again.",
+      "formCheck": "Keep the pass along the ground and your standing foot planted. Do not toe-poke the ball or stand so close that you have no time to control it.",
+      "hasRemoteImage": true
+    },
+    "frontRaises": {
+      "title": "Front Raise",
+      "setup": "Stand tall with a dumbbell in each hand in front of your thighs, palms facing your legs. Keep a tiny bend in your elbows.",
+      "actionPhase": "Raise the dumbbells forward until your hands are about shoulder height, then lower them slowly back to your thighs.",
+      "formCheck": "Keep your body still and lift with your shoulders. Do not swing the weights or lean back to help them up.",
+      "hasRemoteImage": true
+    },
+    "gluteBridge": {
+      "title": "Glute Bridge",
+      "setup": "Lie on your back with your knees bent, feet flat and about hip-width apart, and your arms by your sides.",
+      "actionPhase": "Push through your heels and lift your hips until your body makes a straight line from shoulders to knees. Squeeze, then lower your hips with control.",
+      "formCheck": "Finish by squeezing your glutes, not by arching your lower back. Keep your ribs down and your chin slightly tucked.",
+      "hasRemoteImage": true
+    },
+    "gluteKickbacks": {
+      "title": "Glute Kickbacks",
+      "setup": "Start on your hands and knees, with your shoulders over your wrists and your hips over your knees. Keep your back flat.",
+      "actionPhase": "Kick one leg back and up until your thigh is about level with your body, squeeze your glute, then lower the knee toward the floor.",
+      "formCheck": "Keep your hips square and your ribs down. Do not arch your lower back just to lift the leg higher.",
+      "hasRemoteImage": true
+    },
+    "hammerCurls": {
+      "title": "Hammer Curls",
+      "setup": "Stand tall with a dumbbell in each hand, palms facing each other and thumbs pointing forward. Pin your elbows to your sides.",
+      "actionPhase": "Curl the dumbbells up toward your shoulders without turning your wrists, then lower them slowly.",
+      "formCheck": "Keep your elbows still beside your ribs. Do not swing your shoulders or let the weights drift forward.",
+      "hasRemoteImage": true
+    },
+    "hangingKneeRaises": {
+      "title": "Knee Raises",
+      "setup": "Hang from a pull-up bar, or brace your forearms in a captain's chair, with your legs hanging straight. Keep your shoulders down.",
+      "actionPhase": "Draw both knees up until your thighs pass level with your hips, then lower your legs slowly without swinging.",
+      "formCheck": "Start the lift from your abs and keep your body still. Do not kip or swing your legs to get your knees up.",
+      "hasRemoteImage": true
+    },
+    "highKnees": {
+      "title": "High Knees",
+      "setup": "Stand tall with your feet about hip-width apart and your core tight. Stay on the balls of your feet.",
+      "actionPhase": "Drive one knee up until your thigh is about level, then switch legs in a quick running rhythm. Pump your arms with the steps.",
+      "formCheck": "Stay tall and land softly. Do not lean back or let your feet slap flat on the floor.",
+      "hasRemoteImage": true
+    },
+    "hollowHold": {
+      "title": "Hollow Hold",
+      "setup": "Lie on your back with your legs together and your arms reaching overhead. Press your lower back into the floor.",
+      "actionPhase": "Lift your shoulders and legs a little off the floor and hold that shape. Keep your arms and legs long.",
+      "formCheck": "If your lower back lifts off the floor, raise your legs or lower your arms until your back stays flat. Do not hold your breath.",
+      "hasRemoteImage": true
+    },
+    "inchworm": {
+      "title": "Inchworm",
+      "setup": "Stand tall with your feet about hip-width apart and your core tight.",
+      "actionPhase": "Hinge down and put your hands on the floor, then walk them forward until you are in a long plank. Walk your hands back to your feet and stand up.",
+      "formCheck": "Keep your legs as straight as you can and your hips from sagging in the plank. Look at the floor so your neck stays in line.",
+      "hasRemoteImage": true
+    },
+    "inclineBench": {
+      "title": "Dumbbell Incline Chest Press",
+      "setup": "Sit on a bench set on a moderate incline, feet planted, with a dumbbell in each hand at your shoulders. Pinch your shoulder blades into the pad.",
+      "actionPhase": "Press the dumbbells up over your upper chest until your arms are straight, then lower them until your elbows are about level with the bench.",
+      "formCheck": "Keep your wrists over your elbows and your back on the pad. Do not bounce the weights or flare your elbows straight out.",
+      "hasRemoteImage": true
+    },
+    "inclineFlies": {
+      "title": "Incline Fly",
+      "setup": "Lie on a moderate incline with a dumbbell in each hand over your upper chest and a small bend in your elbows. Plant your feet.",
+      "actionPhase": "Open your arms out to the sides until you feel a stretch in your upper chest, then sweep the weights back together and squeeze.",
+      "formCheck": "Keep the same soft elbow bend the whole way. Do not drop the weights toward your stomach or turn the move into a press.",
+      "hasRemoteImage": true
+    },
+    "jumpRope": {
+      "title": "Jump Rope",
+      "setup": "Stand tall with the rope behind your heels and your elbows close to your sides. Hold the handles so your wrists can turn the rope.",
+      "actionPhase": "Turn the rope with your wrists and make small hops on the balls of your feet so the rope passes under you. Keep a steady rhythm.",
+      "formCheck": "Jump just high enough to clear the rope. Do not donkey-kick your heels or stomp down on flat feet.",
+      "hasRemoteImage": true
+    },
+    "jumpingJacks": {
+      "title": "Jumping Jacks",
+      "setup": "Stand tall with your feet together and your arms by your sides.",
+      "actionPhase": "Jump your feet out wide as you raise your arms overhead, then jump back to the start. Land softly and keep the rhythm even.",
+      "formCheck": "Stay on the balls of your feet and keep your knees soft. Do not slam your heels or let your knees cave in as you land.",
+      "hasRemoteImage": true
+    },
+    "jumpingLunges": {
+      "title": "Jump Lunges",
+      "setup": "Start in a lunge with your front thigh about level, your back knee near the floor, and your torso tall.",
+      "actionPhase": "Jump up, switch your legs in the air, and land softly in a lunge on the other side. Sink into the landing, then jump again.",
+      "formCheck": "Land with your front knee over your toes, not caving in. Keep your torso tall and do not crash the back knee into the floor.",
+      "hasRemoteImage": true
+    },
+    "kettlebellCleanPress": {
+      "title": "Kettlebell Clean and Press",
+      "setup": "Stand with your feet about shoulder-width apart and the kettlebell on the floor between them. Hinge down and grip the handle with one hand.",
+      "actionPhase": "Hike the bell back a little, snap your hips, and pull it up so it lands in the rack at your shoulder with your elbow in. Then press it overhead until your arm is straight, and lower it back to the rack.",
+      "formCheck": "Keep the bell close to your body and your wrist straight in the rack. Do not lean back or let your elbow flare out on the press.",
+      "hasRemoteImage": true
+    },
+    "kettlebellDeadlift": {
+      "title": "Kettlebell Deadlift",
+      "setup": "Stand over the kettlebell so the handle lines up with the middle of your feet. Hinge your hips back, bend your knees a little, and grip the handle with a flat back.",
+      "actionPhase": "Push the floor away and stand up tall, squeezing your glutes at the top. Hinge the bell back down the same way until it settles between your feet.",
+      "formCheck": "Keep your back flat from your head to your hips. Do not round your lower back or yank the bell up with your arms.",
+      "hasRemoteImage": true
+    },
+    "kettlebellGobletSquat": {
+      "title": "Goblet Squat",
+      "setup": "Hold the kettlebell at your chest by the horns, with your elbows pointing down. Set your feet about shoulder-width apart and turn your toes out a little.",
+      "actionPhase": "Sit your hips down between your heels until your hips drop to about knee height, then drive through your feet to stand.",
+      "formCheck": "Keep your chest up, your heels down, and your knees tracking over your toes. Do not let the bell pull you forward.",
+      "hasRemoteImage": true
+    },
+    "kettlebellGorillaRow": {
+      "title": "Gorilla Row",
+      "setup": "Set two kettlebells on the floor and stand over them in a wide stance. Hinge forward until your back is flat and both hands can reach the handles.",
+      "actionPhase": "Brace one hand on its bell, then row the other bell up toward your ribs. Lower it, then row the other side.",
+      "formCheck": "Keep your hips and chest square to the floor. Do not twist or rock from side to side as you switch arms.",
+      "hasRemoteImage": true
+    },
+    "kettlebellHalo": {
+      "title": "Kettlebell Halo",
+      "setup": "Stand tall and hold the kettlebell upside down by the horns at your chest. Keep your ribs down and your feet about hip-width apart.",
+      "actionPhase": "Circle the bell slowly around your head, passing it behind your neck, then bring it back to your chest. Reverse the direction on the next rep.",
+      "formCheck": "Keep your head still and move from your shoulders. Do not duck your chin or twist your lower back to make the circle.",
+      "hasRemoteImage": true
+    },
+    "kettlebellRow": {
+      "title": "Kettlebell Row",
+      "setup": "Put one knee and the same-side hand on a bench so your back is flat. Hold the kettlebell in the free hand with that arm hanging straight.",
+      "actionPhase": "Pull the bell up toward your hip, leading with your elbow, until it reaches your lower ribs. Lower it until your arm is straight.",
+      "formCheck": "Keep your back flat and your hips still. Do not twist your body or shrug your shoulder to finish the pull.",
+      "hasRemoteImage": true
+    },
+    "kettlebellSnatch": {
+      "title": "Kettlebell Snatch",
+      "setup": "Stand over the bell with a wide stance, hinge back, and grip the handle with one hand. Let that arm stay loose.",
+      "actionPhase": "Hike the bell back between your legs, snap your hips, and let it swing up. As it reaches chest height, pull your elbow back and punch your hand up so the bell settles on the back of your forearm overhead.",
+      "formCheck": "Keep the bell close and catch it softly on your forearm. Stand tall at the top without arching your lower back.",
+      "hasRemoteImage": true
+    },
+    "kettlebellSwings": {
+      "title": "Kettlebell Swing",
+      "setup": "Set your feet a little wider than your shoulders, with the bell on the floor a short step in front of you. Hinge at your hips, grab the handle with both hands, and hike the bell back between your legs.",
+      "actionPhase": "Snap your hips forward and let the bell float up to about chest height. As it comes back down, hinge again and guide it between your legs.",
+      "formCheck": "Drive with your hips, not by squatting or lifting with your arms. Stand tall at the top without leaning back.",
+      "hasRemoteImage": true
+    },
+    "kettlebellTurkishGetUp": {
+      "title": "Turkish Get-Up",
+      "setup": "Lie on your back holding a light kettlebell straight up in one hand, and bend the knee on that same side. Keep your eyes on the bell.",
+      "actionPhase": "Roll onto your free elbow, then your hand. Sweep the straight leg back into a kneel, then stand up, keeping the bell locked overhead the whole way. Reverse the steps to lie back down.",
+      "formCheck": "Move slowly and keep the bell stacked over your shoulder. If your arm bends or you lose sight of the bell, go back a step.",
+      "hasRemoteImage": true
+    },
+    "lateralRaises": {
+      "title": "Lateral Raises",
+      "setup": "Stand tall with a dumbbell in each hand at your sides and your palms facing in. Keep a small bend in your elbows.",
+      "actionPhase": "Raise both arms out to the sides until your hands are about shoulder height, then lower them slowly.",
+      "formCheck": "Lead with your elbows and keep your body still. Do not swing the weights or shrug your shoulders up to your ears.",
+      "hasRemoteImage": true
+    },
+    "lunges": {
+      "title": "Lunges",
+      "setup": "Stand tall with your feet about hip-width apart and your hands at your hips or your chest.",
+      "actionPhase": "Step forward into a long stride and lower until your front thigh is about level and your back knee hovers near the floor. Push through the front heel to stand, then switch legs.",
+      "formCheck": "Keep your torso tall and your front knee over your toes. Do not let that knee cave in or rush the step.",
+      "hasRemoteImage": true
+    },
+    "medBallSlams": {
+      "title": "Ball Slams",
+      "setup": "Stand with your feet a little wider than your shoulders and hold a medicine ball that can bounce at your hips.",
+      "actionPhase": "Reach the ball overhead as you rise onto your toes, then slam it straight down in front of you. Catch the bounce, or pick it up, and go again.",
+      "formCheck": "Use your core to throw the ball down, and hinge your hips back as it hits so you stay balanced. Do not round your back or throw the ball behind you.",
+      "hasRemoteImage": true
+    },
+    "mountainClimbers": {
+      "title": "Mountain Climbers",
+      "setup": "Start in a straight-arm plank with your hands under your shoulders and your body in one line. Look at the floor.",
+      "actionPhase": "Drive one knee toward your chest, then switch legs in a steady running rhythm. Keep your hands planted.",
+      "formCheck": "Keep your hips level and your shoulders over your hands. Do not bounce your hips up or let your lower back sag.",
+      "hasRemoteImage": true
+    },
+    "overheadTricepExtension": {
+      "title": "Triceps Extension",
+      "setup": "Stand tall and hold one weight overhead with both hands, arms straight and close to your ears.",
+      "actionPhase": "Bend only your elbows to lower the weight behind your head, then straighten your arms to press it back up.",
+      "formCheck": "Keep your upper arms still and your ribs down. Do not flare your elbows wide or arch your lower back.",
+      "hasRemoteImage": true
+    },
+    "tricepKickbacks": {
+      "title": "Triceps Kickback",
+      "setup": "Hinge at your hips with one hand and the same-side knee on a bench, and plant your free foot. Pin your working upper arm to your side with the elbow bent.",
+      "actionPhase": "Keep that upper arm still and straighten your elbow until your forearm points back behind you. Bend the elbow to return.",
+      "formCheck": "Move only at the elbow. Do not swing your upper arm or shrug your shoulder to lift the weight.",
+      "hasRemoteImage": true
+    },
+    "plank": {
+      "title": "Plank",
+      "setup": "Rest on your forearms and toes, with your elbows under your shoulders and your hands flat on the floor.",
+      "actionPhase": "Brace your core and squeeze your glutes so your body holds a straight line from head to heels. Breathe and hold.",
+      "formCheck": "Look at the floor so your neck stays in line. Do not let your lower back sag or your hips hike up.",
+      "hasRemoteImage": true
+    },
+    "plateRotations": {
+      "title": "Plate Rotations",
+      "setup": "Stand with a wide stance and hold a plate straight out in front of your chest with both hands. Keep your arms mostly straight and your ribs down.",
+      "actionPhase": "Turn the plate like a steering wheel, about a quarter turn to each side, then return to the center. Keep your arms at chest height.",
+      "formCheck": "Keep your hips and legs still and let your core resist the turn. Do not drop the plate or twist from your lower back.",
+      "hasRemoteImage": true
+    },
+    "pullUps": {
+      "title": "Pull-Ups",
+      "setup": "Hang from a bar with your hands just outside your shoulders and your palms facing away. Let your shoulders settle down, away from your ears.",
+      "actionPhase": "Pull your chest toward the bar until your chin clears it, driving your elbows down and back. Lower yourself until your arms are almost straight.",
+      "formCheck": "Start each rep from a still hang. Do not kip, swing your legs, or shrug your shoulders up to your ears.",
+      "hasRemoteImage": true
+    },
+    "pullover": {
+      "title": "Dumbbell Pullover",
+      "setup": "Lie across a bench so only your upper back and shoulders are supported, and plant your feet. Hold one dumbbell with both hands over your chest.",
+      "actionPhase": "Keep a small bend in your elbows and lower the dumbbell in an arc until it is just past your head. Pull it back over your chest.",
+      "formCheck": "Keep that elbow bend the same the whole way. Do not turn it into a triceps extension or let your lower back over-arch off the bench.",
+      "hasRemoteImage": true
+    },
+    "pushups": {
+      "title": "Push-Up",
+      "setup": "Start in a high plank with your hands a little wider than your shoulders, fingers spread, and your feet together. Brace your core so your body is one line.",
+      "actionPhase": "Bend your elbows and lower your chest toward the floor, keeping your elbows near your sides. Press the floor away until your arms are straight.",
+      "formCheck": "Keep your hips in line with your shoulders. Look at the floor between your hands, and do not let your lower back sag.",
+      "hasRemoteImage": true
+    },
+    "renegadeRow": {
+      "title": "Renegade Row",
+      "setup": "Hold a plank on two dumbbells with your hands under your shoulders and your feet set wider than your hips. Keep your body in one line.",
+      "actionPhase": "Press one dumbbell into the floor and row the other up toward your ribs, then lower it. Switch sides.",
+      "formCheck": "Keep your hips square to the floor. Do not twist or hike one hip as you row.",
+      "hasRemoteImage": true
+    },
+    "reverseFly": {
+      "title": "Reverse Flies",
+      "setup": "Stand with your feet about hip-width apart and hinge forward until your back is flat and the dumbbells hang under your shoulders. Keep a small bend in your elbows.",
+      "actionPhase": "Raise your arms out to the sides until they are about level with your back, squeezing your shoulder blades together. Lower the weights slowly.",
+      "formCheck": "Keep your back angle still and lift from your upper back. Do not stand up or swing the weights to finish the rep.",
+      "hasRemoteImage": true
+    },
+    "rowing": {
+      "title": "Rowing Machine",
+      "setup": "Sit on the rower, strap your feet in, and hold the handle with your arms straight. Slide forward so your shins are about vertical and your back is flat.",
+      "actionPhase": "Push with your legs first, then lean back a little, then pull the handle to your lower ribs. Return in reverse: arms, then body, then legs.",
+      "formCheck": "Keep that order on every stroke. Do not pull with your arms before your legs finish, or round your back at the catch.",
+      "hasRemoteImage": true
+    },
+    "russianTwists": {
+      "title": "Russian Twists",
+      "setup": "Sit with your knees bent and lean your chest back until your core is working. Lift your feet if you can balance, and hold your hands together at your chest.",
+      "actionPhase": "Turn your ribs from side to side, tapping your hands near each hip. Keep the lean the same as you rotate.",
+      "formCheck": "Turn from your ribs, not just your arms. Keep your knees quiet, and do not round your back or use momentum.",
+      "hasRemoteImage": true
+    },
+    "shadowBoxing": {
+      "title": "Shadow Boxing",
+      "setup": "Stand in a staggered stance with your knees soft, your back heel light, and both hands guarding your cheeks.",
+      "actionPhase": "Throw jabs, crosses, and hooks, and slip your head off the center line between punches. Shift your weight and turn your hips with each punch, then bring the hand home.",
+      "formCheck": "Keep the hand that is not punching up by your face. Exhale on each punch, and do not drop your guard or lean back.",
+      "hasRemoteImage": true
+    },
+    "sidePlank": {
+      "title": "Side Plank",
+      "setup": "Lie on your side, propped on your forearm with your elbow under your shoulder. Stack your feet and your hips.",
+      "actionPhase": "Lift your hips until your body makes a straight line from your head to your heels. Hold, and breathe.",
+      "formCheck": "Keep your hips up and your chest facing the side, not the floor. Do not let the bottom hip sag or your shoulder shrug into your ear.",
+      "hasRemoteImage": true
+    },
+    "skaterHops": {
+      "title": "Skater Hops",
+      "setup": "Stand on one foot in a small squat, with your chest leaning slightly forward and the other leg ready to swing behind you.",
+      "actionPhase": "Hop sideways onto the other foot, land softly, and let the back leg sweep behind you. Pause just long enough to balance, then hop back.",
+      "formCheck": "Land on the middle of your foot and keep the knee over the toes. Do not let the knee cave in or land stiff-legged.",
+      "hasRemoteImage": true
+    },
+    "sledPush": {
+      "title": "Sled Push",
+      "setup": "Grip the sled poles with your arms straight and lean your body forward so your back stays flat. Set one foot behind you, ready to drive.",
+      "actionPhase": "Push the floor away with short, powerful steps, driving through the ball of each foot. Keep your arms long and the sled moving.",
+      "formCheck": "Stay in the lean and push with your legs. Do not stand up tall or bend your arms and pull with your back.",
+      "hasRemoteImage": true
+    },
+    "squatJumps": {
+      "title": "Squat Jumps",
+      "setup": "Stand with your feet about shoulder-width apart and your arms at your sides.",
+      "actionPhase": "Sit into a partial squat, swing your arms, and jump straight up. Land softly on both feet and sink back into the next squat.",
+      "formCheck": "Land with your knees tracking over your toes and your chest up. Do not land stiff or let your knees cave in.",
+      "hasRemoteImage": true
+    },
+    "squats": {
+      "title": "Squats",
+      "setup": "Stand with your feet about shoulder-width apart and your toes turned out a little. Brace your core and keep your chest up.",
+      "actionPhase": "Sit your hips down and back until your hips are about as low as your knees, then drive through your feet to stand tall.",
+      "formCheck": "Keep your heels down and your knees tracking over your toes. Do not let your knees cave in or your lower back round at the bottom.",
+      "hasRemoteImage": true
+    },
+    "stepUps": {
+      "title": "Step-Ups",
+      "setup": "Stand facing a box or bench and place one whole foot on top of it. Keep your chest tall.",
+      "actionPhase": "Drive through the heel on the box to stand up, and let the other foot come up without pushing off the floor. Step back down with control and switch legs.",
+      "formCheck": "The foot on the box does the work. Do not push off the floor with your back toes or let the front knee cave in.",
+      "hasRemoteImage": true
+    },
+    "bodyweightSumoSquats": {
+      "title": "Sumo Squats",
+      "setup": "Take a wide stance with your toes turned out and your hands together at your chest. Keep your chest up.",
+      "actionPhase": "Sit your hips straight down until your thighs are about level, with your knees tracking over your toes. Drive through your heels to stand and squeeze your inner thighs.",
+      "formCheck": "Keep your knees out over your toes and your heels down. Do not let your knees collapse in or your chest fall forward.",
+      "hasRemoteImage": true
+    },
+    "sumoSquats": {
+      "title": "Kettlebell Sumo Squats",
+      "setup": "Take a wide stance with your toes turned out and hold a kettlebell at your chest with both hands. Keep your elbows down.",
+      "actionPhase": "Sit your hips straight down until your thighs are about level, keeping the bell close to your chest. Drive through your heels to stand.",
+      "formCheck": "Keep your knees over your toes and your chest up. Do not let the bell pull you forward or your knees cave in.",
+      "hasRemoteImage": true
+    },
+    "thrusters": {
+      "title": "Thrusters",
+      "setup": "Stand with your feet about shoulder-width apart and hold the weights at your shoulders, elbows forward.",
+      "actionPhase": "Squat down until your hips are about as low as your knees, then drive up and use that momentum to press the weights overhead. Lower the weights to your shoulders as you sit into the next squat.",
+      "formCheck": "Keep your chest tall in the squat and press only as your legs finish standing. Do not press early or let your knees cave in.",
+      "hasRemoteImage": true
+    },
+    "tuckJumps": {
+      "title": "Tuck Jumps",
+      "setup": "Stand with your feet about shoulder-width apart, knees soft, and arms ready to swing.",
+      "actionPhase": "Dip into a small squat and jump up, pulling both knees toward your chest. Land softly on the middle of your feet and sink into the next dip.",
+      "formCheck": "Pull your knees up, then get your feet back under you before you land. Do not land stiff or with your knees locked.",
+      "hasRemoteImage": true
+    },
+    "wallBalls": {
+      "title": "Wall Balls",
+      "setup": "Face a wall and hold a medicine ball at your chest, with your feet about shoulder-width apart. Stand far enough back that the ball can travel up to the target.",
+      "actionPhase": "Squat down, then drive up and throw the ball to the target in the same motion. Catch it, bring it back to your chest, and sit into the next squat.",
+      "formCheck": "Use your legs to throw, and catch the ball with soft hands. Do not pause at the bottom or throw with your arms alone.",
+      "hasRemoteImage": true
+    },
+    "arnoldPress": {
+      "title": "Seated Arnold Press",
+      "setup": "Sit tall on a bench with your feet flat and a dumbbell in each hand at shoulder height, palms facing you.",
+      "actionPhase": "Press the weights up and turn your palms forward so they face away from you at the top. Reverse the turn as you lower them to your shoulders.",
+      "formCheck": "Keep your ribs down and your back on the bench. Turn the weights smoothly, and do not shrug your shoulders to finish.",
+      "hasRemoteImage": true
+    },
+    "standingArnoldPress": {
+      "title": "Dumbbell Arnold Press",
+      "setup": "Stand tall with a dumbbell in each hand at shoulder height, palms facing you, and your ribs down.",
+      "actionPhase": "Press the weights up and turn your palms forward so they face away from you at the top. Reverse the turn as you lower them to your shoulders.",
+      "formCheck": "Keep your glutes tight so you do not lean back. Turn the weights smoothly, and do not shrug your shoulders to finish.",
+      "hasRemoteImage": true
+    },
+    "declineBench": {
+      "title": "Decline Bench Press",
+      "setup": "Lie on a decline bench with your feet locked in and your eyes under the bar. Pinch your shoulder blades into the pad and grip the bar just outside your shoulders.",
+      "actionPhase": "Lift the bar off the rack, lower it to your lower chest with your elbows near your sides, then press it up until your arms are straight.",
+      "formCheck": "Keep your hips on the pad and your wrists over your elbows. Do not bounce the bar off your chest or let your elbows flare straight out.",
+      "hasRemoteImage": true
+    },
+    "legPress": {
+      "title": "Leg Press",
+      "setup": "Sit in the leg press with your lower back and hips flat on the pad. Place your feet about shoulder-width apart on the platform.",
+      "actionPhase": "Unlock the sled and bend your knees until your thighs are near the pad, then press through the middle of your feet until your legs are almost straight.",
+      "formCheck": "Keep your lower back on the pad the whole way. Do not lock your knees hard or let them cave in.",
+      "hasRemoteImage": true
+    },
+    "legExtension": {
+      "title": "Leg Extension",
+      "setup": "Sit tall with your back against the pad and the roller on your lower shins. Hold the handles so your hips stay down.",
+      "actionPhase": "Straighten both knees until your legs are straight, pause, then lower the weight slowly.",
+      "formCheck": "Move only at your knees. Do not swing the weight or lift your hips off the seat.",
+      "hasRemoteImage": true
+    },
+    "legCurl": {
+      "title": "Leg Curl",
+      "setup": "Lie or sit in the curl machine with the pad just above your heels and your hips held in place.",
+      "actionPhase": "Curl your heels toward your glutes as far as you can, pause, then lower the weight slowly.",
+      "formCheck": "Keep your hips down and still. Do not yank with your lower back to finish the curl.",
+      "hasRemoteImage": true
+    },
+    "hackSquat": {
+      "title": "Hack Squat",
+      "setup": "Stand on the platform with your back and shoulders against the pads and your feet about shoulder-width apart, slightly forward.",
+      "actionPhase": "Unlock the sled and lower until your thighs are about level, then drive through the middle of your feet to stand.",
+      "formCheck": "Keep your heels down and your knees over your toes. Do not bounce out of the bottom or let your lower back peel off the pad.",
+      "hasRemoteImage": true
+    },
+    "smithMachineSquat": {
+      "title": "Smith Machine Squat",
+      "setup": "Set the bar on your upper back and stand with your feet slightly in front of the bar so you can sit down. Brace your core.",
+      "actionPhase": "Unrack the bar and squat until your hips are about as low as your knees, then stand by driving through the middle of your feet.",
+      "formCheck": "Keep your chest up and your knees tracking over your toes. Do not let your knees cave in or your heels lift.",
+      "hasRemoteImage": true
+    },
+    "calfRaiseMachine": {
+      "title": "Calf Raise Machine",
+      "setup": "Place the balls of your feet on the platform with your heels hanging free, and set the pads on your shoulders or thighs.",
+      "actionPhase": "Let your heels drop for a stretch, then rise onto your toes and squeeze at the top. Lower slowly.",
+      "formCheck": "Use the full stretch and the full squeeze. Do not bounce, and keep your knees pointing forward.",
+      "hasRemoteImage": true
+    },
+    "hipAbductor": {
+      "title": "Hip Abductor",
+      "setup": "Sit tall with the pads on the outsides of your knees or thighs and your back against the pad.",
+      "actionPhase": "Push your legs apart against the pads, pause, then bring them back together slowly.",
+      "formCheck": "Keep your lower back on the pad and move from your hips. Do not lean your body to help the pads move.",
+      "hasRemoteImage": true
+    },
+    "hipAdductor": {
+      "title": "Hip Adductor",
+      "setup": "Sit tall with the pads on the insides of your knees or thighs and your back against the pad.",
+      "actionPhase": "Squeeze your legs together, pause, then let the pads open slowly.",
+      "formCheck": "Keep your hips planted and the squeeze smooth. Do not yank with your torso or bounce at the end.",
+      "hasRemoteImage": true
+    },
+    "hipThrustMachine": {
+      "title": "Hip Thrust Machine",
+      "setup": "Sit with your upper back against the pad, your feet flat, and the belt or pad across your hips.",
+      "actionPhase": "Drive through your heels until your body makes a straight line from shoulders to knees, then lower with control.",
+      "formCheck": "Finish by squeezing your glutes, not by arching your lower back. Keep your chin slightly tucked.",
+      "hasRemoteImage": true
+    },
+    "latPulldown": {
+      "title": "Lat Pulldown",
+      "setup": "Sit with your thighs locked under the pads and grip the bar a little wider than your shoulders. Sit tall with your chest up.",
+      "actionPhase": "Pull the bar to your upper chest by driving your elbows down and back, then let your arms straighten under control.",
+      "formCheck": "Keep your chest up and your shoulders down. Do not lean way back or yank the bar with momentum.",
+      "hasRemoteImage": true
+    },
+    "seatedCableRow": {
+      "title": "Cable Row",
+      "setup": "Sit tall with your feet on the platform, a small bend in your knees, and your arms straight holding the handle.",
+      "actionPhase": "Pull the handle to your lower ribs, driving your elbows back and squeezing your shoulder blades. Let your arms straighten slowly.",
+      "formCheck": "Keep your chest up on the way forward and your body mostly still on the pull. Do not round your lower back or lean way back to cheat it.",
+      "hasRemoteImage": true
+    },
+    "tBarRow": {
+      "title": "T-Bar Row",
+      "setup": "Hinge over the bar, or lie on the chest pad, with your back flat and your arms hanging long.",
+      "actionPhase": "Pull the weight toward your lower chest or belly with your elbows close to your sides, then lower it until your arms are straight.",
+      "formCheck": "Keep your back angle the same the whole set. Do not yank with your lower back or shrug to finish the pull.",
+      "hasRemoteImage": true
+    },
+    "assistedPullUp": {
+      "title": "Assisted Pull-Up",
+      "setup": "Kneel or stand on the assist pad, grip the handles overhead, and pick enough help that you can move smoothly. Let your shoulders settle down.",
+      "actionPhase": "Pull your chest toward the bar until your chin clears it, then lower until your arms are almost straight.",
+      "formCheck": "Lead with your chest and elbows. Do not kip, swing, or shrug your shoulders up to your ears.",
+      "hasRemoteImage": true
+    },
+    "chestPressMachine": {
+      "title": "Chest Press Machine",
+      "setup": "Sit with your back flat on the pad, your feet planted, and the handles at mid-chest height. Pinch your shoulder blades into the pad.",
+      "actionPhase": "Press the handles forward until your arms are almost straight, then bring them back until your elbows are just behind your body.",
+      "formCheck": "Keep your shoulder blades on the pad and your shoulders down. Do not shrug or bounce out of the stretch.",
+      "hasRemoteImage": true
+    },
+    "pecDeck": {
+      "title": "Pec Deck",
+      "setup": "Sit tall with your forearms on the pads, or your hands on the handles, and a small bend in your elbows. Set the seat so your arms start about level with your chest.",
+      "actionPhase": "Bring your arms together in front of your chest, squeeze, then open slowly until you feel a stretch.",
+      "formCheck": "Keep that soft elbow bend the whole way. Do not let your shoulders roll forward at the finish or bounce at the stretch.",
+      "hasRemoteImage": true
+    },
+    "cableFly": {
+      "title": "Cable Chest Fly",
+      "setup": "Stand between the cables with a small bend in your elbows and one foot slightly forward. Start with your arms open and your hands about shoulder height.",
+      "actionPhase": "Sweep your hands together in a wide arc until they meet in front of your chest, squeeze, then open slowly back to the start.",
+      "formCheck": "Keep your chest up and your body still. Move from your shoulders, and do not turn it into a press by bending and straightening your elbows.",
+      "hasRemoteImage": true
+    },
+    "shoulderPressMachine": {
+      "title": "Shoulder Press Machine",
+      "setup": "Sit with your back against the pad, your feet flat, and the handles near ear height. Keep your ribs down.",
+      "actionPhase": "Press the handles up until your arms are almost straight, then lower them until your upper arms are about level with the floor.",
+      "formCheck": "Keep your back on the pad and your shoulders down. Do not lean back or shrug at the top.",
+      "hasRemoteImage": true
+    },
+    "cableLateralRaise": {
+      "title": "Cable Lateral Raise",
+      "setup": "Stand beside a low cable and hold the handle in the hand farther from the stack. Keep a small bend in that elbow and stand tall.",
+      "actionPhase": "Raise that arm out to the side until your hand is about shoulder height, then lower it slowly.",
+      "formCheck": "Lead with your elbow, not your wrist. Do not swing the cable or lean away from the stack.",
+      "hasRemoteImage": true
+    },
+    "facePull": {
+      "title": "Face Pull",
+      "setup": "Set a rope at about upper-chest height, step back, and hold the rope with your arms straight. Stand tall with your core tight.",
+      "actionPhase": "Pull the rope toward your face and turn your hands out so they finish beside your ears. Let your arms straighten slowly.",
+      "formCheck": "Pull with your upper back and the back of your shoulders. Do not shrug or lean back to yank the rope.",
+      "hasRemoteImage": true
+    },
+    "tricepPushdown": {
+      "title": "Tricep Pushdown",
+      "setup": "Stand tall at a high cable with your elbows pinned to your sides and your hands on the bar or rope.",
+      "actionPhase": "Straighten your elbows until your arms are straight, squeeze, then bend them back without letting your elbows drift forward.",
+      "formCheck": "Keep your upper arms still beside your ribs. Do not lean into the stack or use your shoulders to push the weight down.",
+      "hasRemoteImage": true
+    },
+    "cableCurl": {
+      "title": "Cable Biceps Curl",
+      "setup": "Stand facing a low cable with your palms up and your elbows pinned to your sides.",
+      "actionPhase": "Curl the handle toward your shoulders, squeeze, then lower it until your arms are almost straight.",
+      "formCheck": "Keep your elbows still beside your ribs. Do not swing your body or let your elbows travel forward.",
+      "hasRemoteImage": true
+    },
+    "preacherCurl": {
+      "title": "Preacher Curl",
+      "setup": "Sit or stand so your upper arms rest flat on the preacher pad, with your arms almost straight at the bottom.",
+      "actionPhase": "Curl the weight toward your shoulders without lifting your elbows off the pad, then lower it slowly.",
+      "formCheck": "Keep your wrists straight and your shoulders relaxed. Do not bounce out of the bottom stretch.",
+      "hasRemoteImage": true
+    },
+    "cableCrunch": {
+      "title": "Cable Crunch",
+      "setup": "Kneel under a high cable with the rope behind your head or at your shoulders, and your hips stacked over your knees.",
+      "actionPhase": "Curl your ribs toward your hips, pause, then rise back up without pulling with your arms.",
+      "formCheck": "Move by rounding your spine, not by yanking the rope or only hinging at your hips. Keep the rope close to your head.",
+      "hasRemoteImage": true
+    },
+    "backExtension": {
+      "title": "Back Extension",
+      "setup": "Set your ankles under the pads and your hips on the pad, with your arms crossed at your chest. Start with your body in a straight line.",
+      "actionPhase": "Hinge forward with a flat back until you feel a stretch in your hamstrings, then lift until your body is straight again.",
+      "formCheck": "Squeeze your glutes to finish and keep your neck long. Do not throw your chest up past a straight line.",
+      "hasRemoteImage": true
+    },
+    "cableKickback": {
+      "title": "Cable Glute Kickback",
+      "setup": "Clip an ankle cuff to a low cable, face the stack, and stand on the other leg with a small hinge and a soft knee.",
+      "actionPhase": "Drive the working heel back and up until you feel your glute squeeze, then return without slamming your foot down.",
+      "formCheck": "Keep your hips square to the floor. Do not arch your lower back or turn your foot out just to get higher.",
+      "hasRemoteImage": true
+    },
+    "aroundTheWorld": {
+      "title": "Around the World",
+      "setup": "Stand tall holding a plate at the center of your chest, with a small bend in your elbows and your ribs down.",
+      "actionPhase": "Circle the plate around your head in a smooth path, then bring it back to your chest. Go the other way on the next rep.",
+      "formCheck": "Keep your neck long and your hips still. Move from your shoulders, not by twisting your lower back.",
+      "hasRemoteImage": true
+    },
+    "barbellCleanPress": {
+      "title": "Barbell Clean and Press",
+      "setup": "Stand with the bar over the middle of your feet and your hands just outside your shoulders. Hinge down with a flat back and grip the bar.",
+      "actionPhase": "Pull the bar up close to your body and catch it on the front of your shoulders. Then press it overhead until your arms are straight, and lower it back to your shoulders.",
+      "formCheck": "Keep the bar close on the pull and your elbows up in the catch. Finish the press with your ribs down and your head through your arms.",
+      "hasRemoteImage": true
+    },
+    "cableChestPress": {
+      "title": "Cable Chest Press",
+      "setup": "Set two cables at chest height, face away from the stacks, and hold a handle in each hand beside your chest. Stagger your feet so you stay balanced.",
+      "actionPhase": "Press both hands forward until your arms are straight, then bring them back until your elbows are in line with your shoulders.",
+      "formCheck": "Keep your shoulders down and your wrists over your elbows. Do not lock your elbows hard or let one side drift ahead.",
       "hasRemoteImage": true
     }
   }
