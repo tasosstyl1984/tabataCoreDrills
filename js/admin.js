@@ -3110,9 +3110,26 @@
             });
           }
 
-          const keptCoverPaths = new Set(
-            [newCoverPath, (editCover?.value || "").trim()].filter(Boolean),
-          );
+          // Cover and Ready pill are independent. Either, or both, may be new in this save.
+          const imageWrites = [];
+          if (newCoverPath && newCoverBase64) {
+            imageWrites.push({
+              path: newCoverPath,
+              content: newCoverBase64,
+              encoding: "base64",
+            });
+          }
+          if (newPillCoverPath && newPillCoverBase64) {
+            imageWrites.push({
+              path: newPillCoverPath,
+              content: newPillCoverBase64,
+              encoding: "base64",
+            });
+          }
+          const writtenPaths = new Set(imageWrites.map((w) => w.path));
+          const keptCoverPaths = new Set(writtenPaths);
+          const currentCover = (editCover?.value || "").trim();
+          if (currentCover) keptCoverPaths.add(currentCover);
           if (!newCoverPath) {
             const existingCover = (editingEntry?.coverImage || "").trim();
             if (existingCover) keptCoverPaths.add(existingCover);
@@ -3120,29 +3137,28 @@
           const queueCoverDelete = (path) => {
             const p = String(path || "").trim();
             if (!p.startsWith("plan_covers/") || keptCoverPaths.has(p)) return;
-            if (p === newPillCoverPath) return;
             if (changes.some((c) => c.delete && c.path === p)) return;
             changes.push({ path: p, delete: true });
           };
 
-          if (newCoverPath && newCoverBase64) {
-            changes.unshift({
-              path: newCoverPath,
-              content: newCoverBase64,
-              encoding: "base64",
-            });
-            queueCoverDelete(previousCoverPath);
-          }
-
+          for (const write of imageWrites) changes.unshift(write);
+          if (newCoverPath && newCoverBase64) queueCoverDelete(previousCoverPath);
           if (newPillCoverPath && newPillCoverBase64) {
-            changes.unshift({
-              path: newPillCoverPath,
-              content: newPillCoverBase64,
-              encoding: "base64",
-            });
             queueCoverDelete(previousPillCoverPath);
           } else if (!String(editCoverPill?.value || "").trim()) {
             queueCoverDelete(previousPillCoverPath);
+          }
+          if (
+            newCoverBase64 &&
+            !changes.some((c) => !c.delete && c.path === newCoverPath)
+          ) {
+            throw new Error("Cover image was left out of the save");
+          }
+          if (
+            newPillCoverBase64 &&
+            !changes.some((c) => !c.delete && c.path === newPillCoverPath)
+          ) {
+            throw new Error("Ready pill image was left out of the save");
           }
 
           await commitFilesAtomic(
