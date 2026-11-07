@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exercise overview — text ideas</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700;900&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #f8f9ff;
+      --bg-glow-a: #d3e4ff;
+      --surface: #ffffff;
+      --surface-high: #eceef4;
+      --text: #191c20;
+      --muted: #43474e;
+      --faint: #73777f;
+      --primary: #39608f;
+      --primary-soft: #d3e4ff;
+      --on-primary: #1d4875;
+      --line: #c3c6cf;
+      --warn: #8a5a12;
+      --warn-bg: #fff4df;
+      --good: #1d6b45;
+      --good-bg: #e5f6ec;
+      --shadow: 0 10px 28px rgba(25, 28, 32, 0.08);
+      --phone: #e7eaf2;
+    }
+    [data-theme="dark"] {
+      --bg: #111418;
+      --bg-glow-a: #1d4875;
+      --surface: #1d2024;
+      --surface-high: #272a2f;
+      --text: #e1e2e8;
+      --muted: #c3c6cf;
+      --faint: #8d9199;
+      --primary: #a3c9fe;
+      --primary-soft: #1d4875;
+      --on-primary: #d3e4ff;
+      --line: #43474e;
+      --warn: #f0c36a;
+      --warn-bg: #3a2e18;
+      --good: #8ed7ae;
+      --good-bg: #1c3328;
+      --shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+      --phone: #0c0e11;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Roboto, "Segoe UI", system-ui, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(900px 420px at 8% -10%, var(--bg-glow-a) 0%, transparent 55%),
+        var(--bg);
+      line-height: 1.45;
+    }
+    header.page {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 28px 24px 8px;
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: flex-end;
+    }
+    h1 { margin: 0 0 6px; font-size: 28px; letter-spacing: -0.02em; }
+    .lede { margin: 0; max-width: 640px; color: var(--muted); }
+    button.theme {
+      border: 1px solid var(--line);
+      background: var(--surface);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font: inherit;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .board {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 18px 24px 48px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px 22px;
+    }
+    @media (max-width: 860px) {
+      .board { grid-template-columns: 1fr; }
+    }
+    .idea h2 { margin: 0 0 4px; font-size: 16px; }
+    .idea p.why { margin: 0 0 12px; color: var(--muted); font-size: 14px; min-height: 2.8em; }
+    .phone {
+      background: var(--phone);
+      border-radius: 28px;
+      padding: 14px;
+      box-shadow: var(--shadow);
+    }
+    .sheet {
+      background: var(--surface);
+      border-radius: 18px;
+      padding: 16px 16px 14px;
+      min-height: 520px;
+    }
+    .kicker {
+      text-align: center;
+      color: var(--faint);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .title {
+      margin: 4px 0 12px;
+      text-align: center;
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: 0.01em;
+    }
+    .art {
+      height: 132px;
+      border-radius: 12px;
+      margin-bottom: 14px;
+      background:
+        linear-gradient(160deg, rgba(57, 96, 143, 0.18), transparent 55%),
+        var(--surface-high);
+      display: grid;
+      place-items: center;
+      color: var(--faint);
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .close {
+      margin-top: 14px;
+      width: 100%;
+      border: 0;
+      border-radius: 12px;
+      background: var(--primary);
+      color: #fff;
+      font: inherit;
+      font-weight: 700;
+      padding: 12px;
+    }
+    [data-theme="dark"] .close { color: #00315b; }
+
+    /* Today */
+    .sec { margin-bottom: 14px; }
+    .sec h3 {
+      margin: 0 0 4px;
+      color: var(--primary);
+      font-size: 14px;
+      font-weight: 900;
+    }
+    .sec p { margin: 0; font-weight: 600; font-size: 14px; }
+
+    /* Cards */
+    .card {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      gap: 10px;
+      padding: 12px;
+      margin-bottom: 8px;
+      border-radius: 14px;
+      background: var(--surface-high);
+    }
+    .card .n {
+      width: 28px;
+      height: 28px;
+      border-radius: 9px;
+      display: grid;
+      place-items: center;
+      font-size: 13px;
+      font-weight: 800;
+      background: var(--primary-soft);
+      color: var(--on-primary);
+    }
+    .card h3 {
+      margin: 2px 0 4px;
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--primary);
+    }
+    .card p { margin: 0; font-size: 14.5px; font-weight: 500; }
+    .card .more { display: block; margin-top: 4px; color: var(--muted); font-weight: 400; }
+
+    /* Lead sentence */
+    .beat { margin-bottom: 16px; }
+    .beat h3 {
+      margin: 0 0 2px;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--faint);
+      font-weight: 700;
+    }
+    .lead { margin: 0; font-size: 16px; font-weight: 600; letter-spacing: -0.01em; }
+    .rest { margin: 3px 0 0; color: var(--muted); font-size: 14px; font-weight: 400; }
+
+    /* Caution line */
+    .row { margin-bottom: 12px; }
+    .row h3 {
+      margin: 0 0 6px;
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--primary);
+    }
+    .line {
+      margin: 0 0 6px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      background: var(--surface-high);
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .line.warn { background: var(--warn-bg); color: var(--warn); }
+    .line.good { background: var(--good-bg); color: var(--good); }
+  </style>
+</head>
+<body>
+  <header class="page">
+    <div>
+      <h1>Exercise overview</h1>
+      <p class="lede">Same Barbell Chest Press words, four ways to set the type. Today is what the app and the site do now. The other three only change spacing, weight, and a little color.</p>
+    </div>
+    <button class="theme" type="button" id="theme">Dark</button>
+  </header>
+  <main class="board">
+    <article class="idea">
+      <h2>1. Today</h2>
+      <p class="why">One blue label, then a block of semibold text. The two sentences look the same, so the eye has nowhere to land.</p>
+      <div class="phone"><div class="sheet">
+        <div class="kicker">How to</div>
+        <div class="title">Barbell Chest Press</div>
+        <div class="art">Exercise image</div>
+        <section class="sec">
+          <h3>Setup</h3>
+          <p>Lie on the bench with your eyes under the bar. Plant your feet, pinch your shoulder blades together, and grip the bar just outside your shoulders.</p>
+        </section>
+        <section class="sec">
+          <h3>Action</h3>
+          <p>Lift the bar off the rack, lower it to the middle of your chest with your elbows near your sides, then press it straight up until your arms are straight.</p>
+        </section>
+        <section class="sec">
+          <h3>Form check</h3>
+          <p>Keep your hips on the bench and your wrists over your elbows. Do not bounce the bar off your chest or let your elbows flare straight out.</p>
+        </section>
+        <button class="close" type="button">Close</button>
+      </div></div>
+    </article>
+
+    <article class="idea">
+      <h2>2. Soft cards</h2>
+      <p class="why">Each step sits in its own card with a number. The first sentence stays darker. The extra cue drops to a quieter second line.</p>
+      <div class="phone"><div class="sheet">
+        <div class="kicker">How to</div>
+        <div class="title">Barbell Chest Press</div>
+        <div class="art">Exercise image</div>
+        <section class="card">
+          <div class="n">1</div>
+          <div>
+            <h3>Setup</h3>
+            <p>Lie on the bench with your eyes under the bar.<span class="more">Plant your feet, pinch your shoulder blades together, and grip the bar just outside your shoulders.</span></p>
+          </div>
+        </section>
+        <section class="card">
+          <div class="n">2</div>
+          <div>
+            <h3>Action</h3>
+            <p>Lower the bar to the middle of your chest, then press it straight up.<span class="more">Keep your elbows near your sides until your arms are straight.</span></p>
+          </div>
+        </section>
+        <section class="card">
+          <div class="n">3</div>
+          <div>
+            <h3>Form check</h3>
+            <p>Keep your hips on the bench and your wrists over your elbows.<span class="more">Do not bounce the bar off your chest or let your elbows flare straight out.</span></p>
+          </div>
+        </section>
+        <button class="close" type="button">Close</button>
+      </div></div>
+    </article>
+
+    <article class="idea">
+      <h2>3. Lead sentence</h2>
+      <p class="why">No cards. The label gets quiet, and the first sentence becomes the headline. Best if you want it to stay close to the current dialog.</p>
+      <div class="phone"><div class="sheet">
+        <div class="kicker">How to</div>
+        <div class="title">Barbell Chest Press</div>
+        <div class="art">Exercise image</div>
+        <section class="beat">
+          <h3>Setup</h3>
+          <p class="lead">Lie on the bench with your eyes under the bar.</p>
+          <p class="rest">Plant your feet, pinch your shoulder blades together, and grip the bar just outside your shoulders.</p>
+        </section>
+        <section class="beat">
+          <h3>Action</h3>
+          <p class="lead">Lower the bar to your chest, then press it straight up.</p>
+          <p class="rest">Keep your elbows near your sides until your arms are straight.</p>
+        </section>
+        <section class="beat">
+          <h3>Form check</h3>
+          <p class="lead">Hips stay on the bench. Wrists stay over the elbows.</p>
+          <p class="rest">Do not bounce the bar off your chest or let your elbows flare straight out.</p>
+        </section>
+        <button class="close" type="button">Close</button>
+      </div></div>
+    </article>
+
+    <article class="idea">
+      <h2>4. Cue lines</h2>
+      <p class="why">Each sentence is its own line. The “do this” line is green. The “do not” line is warm, so the mistake is the thing you notice.</p>
+      <div class="phone"><div class="sheet">
+        <div class="kicker">How to</div>
+        <div class="title">Barbell Chest Press</div>
+        <div class="art">Exercise image</div>
+        <section class="row">
+          <h3>Setup</h3>
+          <p class="line">Lie on the bench with your eyes under the bar.</p>
+          <p class="line">Feet planted, shoulder blades pinched, grip just outside your shoulders.</p>
+        </section>
+        <section class="row">
+          <h3>Action</h3>
+          <p class="line">Lower to the middle of your chest, elbows near your sides.</p>
+          <p class="line">Press straight up until your arms are straight.</p>
+        </section>
+        <section class="row">
+          <h3>Form check</h3>
+          <p class="line good">Hips on the bench. Wrists over your elbows.</p>
+          <p class="line warn">Do not bounce the bar or flare your elbows straight out.</p>
+        </section>
+        <button class="close" type="button">Close</button>
+      </div></div>
+    </article>
+  </main>
+  <script>
+    const root = document.documentElement;
+    const btn = document.getElementById("theme");
+    btn.addEventListener("click", () => {
+      const dark = root.getAttribute("data-theme") === "dark";
+      root.setAttribute("data-theme", dark ? "light" : "dark");
+      btn.textContent = dark ? "Dark" : "Light";
+    });
+  </script>
+</body>
+</html>
