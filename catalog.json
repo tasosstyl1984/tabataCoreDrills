@@ -1,6 +1,6 @@
 {
-  "version": 168,
-  "updatedAtMs": 1794070205066,
+  "version": 169,
+  "updatedAtMs": 1794070242285,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -259,10 +259,10 @@
       "id": "remote_tasos_workout",
       "name": "Shadow KB Circuit",
       "file": "drills/remote_tasos_workout.json",
-      "updatedAtMs": 1791624433060,
+      "updatedAtMs": 1794070241344,
       "category": "combos",
       "description": "Shadowboxing paired with kettlebell strength for fight-style cardio and functional power in one circuit.",
-      "coverImage": "plan_covers/remote_tasos_workout.webp",
+      "coverImage": "plan_covers/remote_tasos_workout_1794070241329.webp",
       "activityIds": [
         "shadowBoxing",
         "kettlebellSwings",
@@ -272,7 +272,9 @@
         "kettlebellCleanPress",
         "kettlebellSnatch",
         "bicepCurls"
-      ]
+      ],
+      "coverImagePill": "plan_covers/remote_tasos_workout_pill_1794070241337.webp",
+      "coverImagePillAlign": -1
     },
     {
       "id": "remote_start_back",

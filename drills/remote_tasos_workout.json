@@ -1,7 +1,6 @@
 {
   "id": "remote_tasos_workout",
   "name": "Shadow KB Circuit",
-  "description": "Shadowboxing paired with kettlebell strength for fight-style cardio and functional power in one circuit.",
   "createdAtMs": 1791564300000,
   "sets": 5,
   "repsPerSet": 8,
@@ -240,5 +239,8 @@
         "restAfterSetSeconds": 60
       }
     ]
-  }
+  },
+  "description": "Shadowboxing paired with kettlebell strength for fight-style cardio and functional power in one circuit.",
+  "coverImagePill": "plan_covers/remote_tasos_workout_pill_1794070241337.webp",
+  "coverImagePillAlign": -1
 }
