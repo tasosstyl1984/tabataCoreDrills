@@ -1,6 +1,6 @@
 {
-  "version": 58,
-  "updatedAtMs": 1794109522080,
+  "version": 59,
+  "updatedAtMs": 1794109685308,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -283,7 +283,7 @@
       "id": "remote_plate_rotations_40",
       "name": "Plate Rotations",
       "file": "drills/remote_plate_rotations_40.json",
-      "updatedAtMs": 1794090161872,
+      "updatedAtMs": 1794109684188,
       "category": "core",
       "description": "Rotational plate work to train core control, anti-rotation strength, and trunk mobility under load.",
       "coverImage": "plan_covers/default_plate_rotations_40.webp",
