@@ -1,6 +1,6 @@
 {
-  "version": 44,
-  "updatedAtMs": 1794107384877,
+  "version": 45,
+  "updatedAtMs": 1794107472738,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -197,7 +197,7 @@
       "id": "remote_kb_complex_40",
       "name": "KB Complex",
       "file": "drills/remote_kb_complex_40.json",
-      "updatedAtMs": 1794061674574,
+      "updatedAtMs": 1794107471461,
       "category": "kettlebell",
       "description": "Linked kettlebell complexes that keep the heart rate high while building strength, grip, and work capacity.",
       "coverImage": "plan_covers/default_kb_complex_40.webp",
