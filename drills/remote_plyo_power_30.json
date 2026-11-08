@@ -156,6 +156,7 @@
     ]
   },
   "description": "Explosive jumps and spring drills to develop athletic power, reactivity, and takeoff strength.",
+  "coverImagePath": "plan_covers/default_plyo_power_30.webp",
   "coverImagePill": "plan_covers/default_plyo_power_30_pill.webp",
   "coverImagePillAlign": -1
 }
