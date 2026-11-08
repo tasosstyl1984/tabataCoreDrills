@@ -156,6 +156,7 @@
     ]
   },
   "description": "Lateral hops and jumps for agility, change-of-direction power, and athletic footwork.",
+  "coverImagePath": "plan_covers/default_plyo_lateral_30.webp",
   "coverImagePill": "plan_covers/default_plyo_lateral_30_pill.webp",
-  "coverImagePillAlign": -0.54
+  "coverImagePillAlign": -1
 }

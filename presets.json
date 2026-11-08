@@ -1,6 +1,6 @@
 {
-  "version": 61,
-  "updatedAtMs": 1794113688825,
+  "version": 62,
+  "updatedAtMs": 1794114088187,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -300,7 +300,7 @@
       "id": "remote_plyo_lateral_30",
       "name": "Plyo Laterals",
       "file": "drills/remote_plyo_lateral_30.json",
-      "updatedAtMs": 1794070554484,
+      "updatedAtMs": 1794114086497,
       "category": "plyometrics",
       "description": "Lateral hops and jumps for agility, change-of-direction power, and athletic footwork.",
       "coverImage": "plan_covers/default_plyo_lateral_30.webp",
@@ -313,7 +313,7 @@
         "boxJumps"
       ],
       "coverImagePill": "plan_covers/default_plyo_lateral_30_pill.webp",
-      "coverImagePillAlign": -0.54,
+      "coverImagePillAlign": -1,
       "preset": true,
       "shipsWithApp": true,
       "defaultId": "default_plyo_lateral_30"
