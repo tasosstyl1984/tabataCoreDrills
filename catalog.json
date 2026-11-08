@@ -1,6 +1,6 @@
 {
-  "version": 195,
-  "updatedAtMs": 1794116400418,
+  "version": 196,
+  "updatedAtMs": 1794116440768,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -420,17 +420,19 @@
       "id": "remote_start_upper_body",
       "name": "Start Upper Body",
       "file": "drills/remote_start_upper_body.json",
-      "updatedAtMs": 1793916613617,
+      "updatedAtMs": 1794116439820,
       "category": "upper",
       "description": "Beginner upper-body circuit with no machines. Five moves, five rounds, 45 seconds of work and 60 seconds of rest, about 43 minutes.",
-      "coverImage": "plan_covers/remote_start_upper_body_1793916613604.webp",
+      "coverImage": "plan_covers/remote_start_upper_body_1794116439813.webp",
       "activityIds": [
         "pushups",
         "dumbbellShoulderPress",
         "dumbbellRow",
         "bicepCurls",
         "tricepKickbacks"
-      ]
+      ],
+      "coverImagePill": "plan_covers/remote_start_upper_body_pill_1794116439817.webp",
+      "coverImagePillAlign": -1
     },
     {
       "id": "remote_start_upper_body_machines",
