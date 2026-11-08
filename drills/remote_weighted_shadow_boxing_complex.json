@@ -1,7 +1,6 @@
 {
   "id": "remote_weighted_shadow_boxing_complex",
   "name": "Weighted Shadow Boxing Complex",
-  "description": "Shadowboxing rounds followed by kettlebell swings, halo, row, clean and press, and deadlift for fight cardio and strength.",
   "createdAtMs": 1792264583671,
   "sets": 4,
   "repsPerSet": 6,
@@ -156,5 +155,8 @@
       }
     ]
   },
-  "coverImagePill": "plan_covers/remote_weighted_shadow_boxing_complex_pill_1794005955887.webp"
+  "description": "Shadowboxing rounds followed by kettlebell swings, halo, row, clean and press, and deadlift for fight cardio and strength.",
+  "coverImagePath": "plan_covers/remote_weighted_shadow_boxing_complex_1794116309415.webp",
+  "coverImagePill": "plan_covers/remote_weighted_shadow_boxing_complex_pill_1794116309419.webp",
+  "coverImagePillAlign": -1
 }
