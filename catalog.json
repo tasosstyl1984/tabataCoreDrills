@@ -1,6 +1,6 @@
 {
-  "version": 180,
-  "updatedAtMs": 1794109955749,
+  "version": 181,
+  "updatedAtMs": 1794110162911,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -300,17 +300,19 @@
       "id": "remote_start_back_machines",
       "name": "Start Back Machines",
       "file": "drills/remote_start_back_machines.json",
-      "updatedAtMs": 1793916110679,
+      "updatedAtMs": 1794110161387,
       "category": "back",
       "description": "Beginner back circuit on machines and cables. Five moves, five rounds, 45 seconds of work and 60 seconds of rest, about 43 minutes.",
-      "coverImage": "plan_covers/remote_start_back_machines_1793916110664.webp",
+      "coverImage": "plan_covers/remote_start_back_machines_1794110161360.webp",
       "activityIds": [
         "latPulldown",
         "seatedCableRow",
         "assistedPullUp",
         "facePull",
         "backExtension"
-      ]
+      ],
+      "coverImagePill": "plan_covers/remote_start_back_machines_pill_1794110161378.webp",
+      "coverImagePillAlign": -1
     },
     {
       "id": "remote_start_chest",
