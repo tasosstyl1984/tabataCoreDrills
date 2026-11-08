@@ -1,7 +1,6 @@
 {
   "id": "remote_ladies_complex",
   "name": "Ladies Complex",
-  "description": "Long full-body mix — jumping jacks, climbers, high knees, box jumps, kettlebell swings and rows, push-ups, calves, glutes, and core.",
   "createdAtMs": 1792268247713,
   "sets": 12,
   "repsPerSet": 3,
@@ -256,6 +255,8 @@
       }
     ]
   },
-  "coverImagePill": "plan_covers/remote_ladies_complex_pill_1794062107884.webp",
+  "description": "Long full-body mix — jumping jacks, climbers, high knees, box jumps, kettlebell swings and rows, push-ups, calves, glutes, and core.",
+  "coverImagePath": "plan_covers/remote_ladies_complex_1794114925185.webp",
+  "coverImagePill": "plan_covers/remote_ladies_complex_pill_1794114925190.webp",
   "coverImagePillAlign": -1
 }
