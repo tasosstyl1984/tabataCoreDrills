@@ -156,6 +156,7 @@
     ]
   },
   "description": "Horizontal pressing for chest strength and push power, from bench to bodyweight finishers.",
+  "coverImagePath": "plan_covers/default_chest_press_40.webp",
   "coverImagePill": "plan_covers/default_chest_press_40_pill.webp",
-  "coverImagePillAlign": -0.54
+  "coverImagePillAlign": -1
 }

@@ -1,6 +1,6 @@
 {
-  "version": 43,
-  "updatedAtMs": 1794107346783,
+  "version": 44,
+  "updatedAtMs": 1794107384877,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -28,7 +28,7 @@
       "id": "remote_chest_press_40",
       "name": "Chest Press",
       "file": "drills/remote_chest_press_40.json",
-      "updatedAtMs": 1794061311513,
+      "updatedAtMs": 1794107383748,
       "category": "chest",
       "description": "Horizontal pressing for chest strength and push power, from bench to bodyweight finishers.",
       "coverImage": "plan_covers/default_chest_press_40.webp",
@@ -40,7 +40,7 @@
         "pullover"
       ],
       "coverImagePill": "plan_covers/default_chest_press_40_pill.webp",
-      "coverImagePillAlign": -0.54,
+      "coverImagePillAlign": -1,
       "preset": true,
       "shipsWithApp": true,
       "defaultId": "default_chest_press_40"
