@@ -53,6 +53,7 @@
     ]
   },
   "description": "The original 20-on / 10-off protocol — a short all-out cardio blast to build anaerobic capacity and mental grit.",
+  "coverImagePath": "plan_covers/default_tabata_classic.webp",
   "coverImagePill": "plan_covers/default_tabata_classic_pill.webp",
   "coverImagePillAlign": -1
 }
