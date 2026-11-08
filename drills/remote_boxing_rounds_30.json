@@ -123,5 +123,5 @@
   "description": "Shadowboxing rounds for fight-style cardio, footwork, rhythm, and upper-body endurance.",
   "coverImagePath": "plan_covers/default_boxing_rounds_30.webp",
   "coverImagePill": "plan_covers/default_boxing_rounds_30_pill.webp",
-  "coverImagePillAlign": 0
+  "coverImagePillAlign": -1
 }
