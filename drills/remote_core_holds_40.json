@@ -156,6 +156,7 @@
     ]
   },
   "description": "Isometric and controlled core holds for posture, stability, and injury-resilient trunk strength.",
+  "coverImagePath": "plan_covers/default_core_holds_40.webp",
   "coverImagePill": "plan_covers/default_core_holds_40_pill.webp",
-  "coverImagePillAlign": 0
+  "coverImagePillAlign": -1
 }

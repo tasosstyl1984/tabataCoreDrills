@@ -1,6 +1,6 @@
 {
-  "version": 60,
-  "updatedAtMs": 1794113522619,
+  "version": 61,
+  "updatedAtMs": 1794113688825,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -49,7 +49,7 @@
       "id": "remote_core_holds_40",
       "name": "Core Holds",
       "file": "drills/remote_core_holds_40.json",
-      "updatedAtMs": 1794056031427,
+      "updatedAtMs": 1794113687696,
       "category": "core",
       "description": "Isometric and controlled core holds for posture, stability, and injury-resilient trunk strength.",
       "coverImage": "plan_covers/default_core_holds_40.webp",
@@ -62,7 +62,7 @@
         "russianTwists"
       ],
       "coverImagePill": "plan_covers/default_core_holds_40_pill.webp",
-      "coverImagePillAlign": 0,
+      "coverImagePillAlign": -1,
       "preset": true,
       "shipsWithApp": true,
       "defaultId": "default_core_holds_40"
