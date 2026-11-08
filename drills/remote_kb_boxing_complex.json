@@ -156,6 +156,7 @@
     ]
   },
   "description": "Shadowboxing mixed with kettlebell work for fight fitness, punch endurance, and functional strength.",
+  "coverImagePath": "plan_covers/default_kb_boxing_complex.webp",
   "coverImagePill": "plan_covers/default_kb_boxing_complex_pill.webp",
-  "coverImagePillAlign": -1
+  "coverImagePillAlign": -0.94
 }
