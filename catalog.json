@@ -1,6 +1,6 @@
 {
-  "version": 185,
-  "updatedAtMs": 1794115024248,
+  "version": 186,
+  "updatedAtMs": 1794115122205,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -318,17 +318,19 @@
       "id": "remote_start_chest",
       "name": "Start Chest",
       "file": "drills/remote_start_chest.json",
-      "updatedAtMs": 1793916258192,
+      "updatedAtMs": 1794115121246,
       "category": "chest",
       "description": "Beginner chest circuit with dumbbells and push-ups. Five moves, five rounds, 45 seconds of work and 60 seconds of rest, about 43 minutes.",
-      "coverImage": "plan_covers/remote_start_chest_1793916160942.webp",
+      "coverImage": "plan_covers/remote_start_chest_1794115121239.webp",
       "activityIds": [
         "pushups",
         "dumbbellChestPress",
         "inclineBench",
         "chestFlies",
         "pullover"
-      ]
+      ],
+      "coverImagePill": "plan_covers/remote_start_chest_pill_1794115121243.webp",
+      "coverImagePillAlign": -1
     },
     {
       "id": "remote_start_chest_machines",
