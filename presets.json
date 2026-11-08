@@ -1,6 +1,6 @@
 {
-  "version": 53,
-  "updatedAtMs": 1794109049503,
+  "version": 54,
+  "updatedAtMs": 1794109154467,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -475,7 +475,7 @@
       "id": "remote_split_squat_lower_40",
       "name": "Split Squat Lower",
       "file": "drills/remote_split_squat_lower_40.json",
-      "updatedAtMs": 1794069953984,
+      "updatedAtMs": 1794109153125,
       "category": "strength",
       "description": "Unilateral lower-body work for balance, glutes, and single-leg strength that shows in running and lifting.",
       "coverImage": "plan_covers/default_split_squat_lower_40.webp",
