@@ -1,6 +1,7 @@
 {
   "id": "remote_test1",
   "name": "Test1",
+  "description": "Short machine sampler — leg press, chest press, and pec deck.",
   "createdAtMs": 1793304623350,
   "sets": 3,
   "repsPerSet": 3,

@@ -1,6 +1,7 @@
 {
   "id": "remote_kill_my_legs",
   "name": "Kill my Legs",
+  "description": "Hard lower-body circuit — lunges, squats, Bulgarian split squats, jumps, sumo squats, and leg press for quads and glutes.",
   "createdAtMs": 1793267596931,
   "sets": 4,
   "repsPerSet": 7,
