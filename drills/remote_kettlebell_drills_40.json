@@ -156,6 +156,7 @@
     ]
   },
   "description": "Foundational kettlebell moves to build hip power, full-body strength, and confident bell handling.",
-  "coverImagePill": "plan_covers/default_kettlebell_drills_40.webp",
+  "coverImagePath": "plan_covers/default_kettlebell_drills_40.webp",
+  "coverImagePill": "plan_covers/default_kettlebell_drills_40_pill.webp",
   "coverImagePillAlign": -1
 }
