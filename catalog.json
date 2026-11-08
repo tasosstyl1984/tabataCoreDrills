@@ -1,6 +1,6 @@
 {
-  "version": 179,
-  "updatedAtMs": 1794109834710,
+  "version": 180,
+  "updatedAtMs": 1794109955749,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -217,10 +217,10 @@
       "id": "remote_lower_body",
       "name": "Lower Body",
       "file": "drills/remote_lower_body.json",
-      "updatedAtMs": 1794055931922,
+      "updatedAtMs": 1794109954241,
       "category": "combos",
       "description": "Legs and hips focus with lunges, squats, kettlebell work, and plyo finishers for stronger, more athletic lower body.",
-      "coverImage": "plan_covers/remote_lower_body_1794055931911.webp",
+      "coverImage": "plan_covers/remote_lower_body_1794109954219.webp",
       "activityIds": [
         "gluteKickbacks",
         "lunges",
@@ -233,8 +233,8 @@
         "jumpingLunges",
         "squatJumps"
       ],
-      "coverImagePill": "plan_covers/remote_lower_body_pill_1794055931917.webp",
-      "coverImagePillAlign": -0.12
+      "coverImagePill": "plan_covers/remote_lower_body_pill_1794109954233.webp",
+      "coverImagePillAlign": -1
     },
     {
       "id": "remote_tyson",
