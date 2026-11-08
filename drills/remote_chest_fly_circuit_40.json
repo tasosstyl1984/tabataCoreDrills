@@ -156,6 +156,7 @@
     ]
   },
   "description": "Fly and press circuit for chest shape, controlled range, and pressing endurance.",
+  "coverImagePath": "plan_covers/default_chest_fly_circuit_40.webp",
   "coverImagePill": "plan_covers/default_chest_fly_circuit_40_pill.webp",
   "coverImagePillAlign": -1
 }
