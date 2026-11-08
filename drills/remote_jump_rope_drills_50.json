@@ -196,6 +196,7 @@
     ]
   },
   "description": "Steady jump-rope rounds for foot speed, coordination, and light cardio endurance you can do almost anywhere.",
-  "coverImagePill": "plan_covers/default_jump_rope_drills_50_pill.webp",
+  "coverImagePath": "plan_covers/default_jump_rope_drills_50.webp",
+  "coverImagePill": "plan_covers/default_jump_rope_drills_50.webp",
   "coverImagePillAlign": -1
 }
