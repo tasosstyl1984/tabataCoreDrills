@@ -1,6 +1,6 @@
 {
-  "version": 62,
-  "updatedAtMs": 1794114088187,
+  "version": 63,
+  "updatedAtMs": 1794114179656,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -343,7 +343,7 @@
       "id": "remote_push_pull_core_40",
       "name": "Push Pull Core",
       "file": "drills/remote_push_pull_core_40.json",
-      "updatedAtMs": 1794070587409,
+      "updatedAtMs": 1794114178364,
       "category": "core",
       "description": "Upper-body push and pull paired with core finishers for balanced strength and midsection control.",
       "coverImage": "plan_covers/default_push_pull_core_40.webp",
