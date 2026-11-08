@@ -1,6 +1,7 @@
 {
   "id": "remote_ladies_lower",
   "name": "Ladies Lower",
+  "description": "Lower-body strength with lunges, squats, step-ups, glute bridges, and kickbacks for hips and legs.",
   "createdAtMs": 1792267774557,
   "sets": 5,
   "repsPerSet": 4,

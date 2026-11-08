@@ -1,6 +1,6 @@
 {
   "version": 181,
-  "updatedAtMs": 1794110162911,
+  "updatedAtMs": 1794114053500,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -105,9 +105,9 @@
       "id": "remote_kill_my_legs",
       "name": "Kill my Legs",
       "file": "drills/remote_kill_my_legs.json",
-      "updatedAtMs": 1794062038108,
+      "updatedAtMs": 1794114053500,
       "category": "combos",
-      "description": "",
+      "description": "Hard lower-body circuit — lunges, squats, Bulgarian split squats, jumps, sumo squats, and leg press for quads and glutes.",
       "coverImage": "plan_covers/remote_kill_my_legs_1794062038086.webp",
       "activityIds": [
         "lunges",
@@ -125,9 +125,9 @@
       "id": "remote_ladies_complex",
       "name": "Ladies Complex",
       "file": "drills/remote_ladies_complex.json",
-      "updatedAtMs": 1794062107893,
+      "updatedAtMs": 1794114053500,
       "category": "combos",
-      "description": "",
+      "description": "Long full-body mix — jumping jacks, climbers, high knees, box jumps, kettlebell swings and rows, push-ups, calves, glutes, and core.",
       "coverImage": "plan_covers/remote_ladies_complex_1794062107866.webp",
       "activityIds": [
         "jumpingJacks",
@@ -151,9 +151,9 @@
       "id": "remote_ladies_first",
       "name": "Ladies First",
       "file": "drills/remote_ladies_first.json",
-      "updatedAtMs": 1794062187110,
+      "updatedAtMs": 1794114053500,
       "category": "combos",
-      "description": "",
+      "description": "Glutes and legs first — bird dog, lunges, bridges, squats, step-ups, and lateral raises — then abs, side plank, and dead bug.",
       "coverImage": "plan_covers/remote_ladies_first_1794062138524.webp",
       "activityIds": [
         "birdDog",
@@ -173,9 +173,9 @@
       "id": "remote_ladies_lower",
       "name": "Ladies Lower",
       "file": "drills/remote_ladies_lower.json",
-      "updatedAtMs": 1794070055220,
+      "updatedAtMs": 1794114053500,
       "category": "strength",
-      "description": "",
+      "description": "Lower-body strength with lunges, squats, step-ups, glute bridges, and kickbacks for hips and legs.",
       "coverImage": "plan_covers/remote_ladies_lower_1794070055209.webp",
       "activityIds": [
         "lunges",
@@ -444,9 +444,9 @@
       "id": "remote_test1",
       "name": "Test1",
       "file": "drills/remote_test1.json",
-      "updatedAtMs": 1793916298070,
+      "updatedAtMs": 1794114053500,
       "category": "classic",
-      "description": "",
+      "description": "Short machine sampler — leg press, chest press, and pec deck.",
       "coverImage": "plan_covers/remote_test1_1793916298056.webp",
       "activityIds": [
         "legPress",
@@ -475,9 +475,9 @@
       "id": "remote_weighted_shadow_boxing_complex",
       "name": "Weighted Shadow Boxing Complex",
       "file": "drills/remote_weighted_shadow_boxing_complex.json",
-      "updatedAtMs": 1794005955891,
+      "updatedAtMs": 1794114053500,
       "category": "combos",
-      "description": "",
+      "description": "Shadowboxing rounds followed by kettlebell swings, halo, row, clean and press, and deadlift for fight cardio and strength.",
       "coverImage": "plan_covers/remote_weighted_shadow_boxing_complex_1794005955882.webp",
       "activityIds": [
         "shadowBoxing",
