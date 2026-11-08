@@ -106,6 +106,7 @@
     ]
   },
   "description": "Starter core circuit with abs, planks, side plank, and twists for midsection strength and posture.",
-  "coverImagePill": "plan_covers/remote_core_basics_1794061788831.webp",
-  "coverImagePillAlign": 1
+  "coverImagePath": "plan_covers/remote_core_basics_1794114706824.webp",
+  "coverImagePill": "plan_covers/remote_core_basics_pill_1794114706830.webp",
+  "coverImagePillAlign": -1
 }
