@@ -1,6 +1,6 @@
 {
-  "version": 194,
-  "updatedAtMs": 1794116310461,
+  "version": 195,
+  "updatedAtMs": 1794116400418,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -446,20 +446,6 @@
         "shoulderPressMachine",
         "cableCurl",
         "tricepPushdown"
-      ]
-    },
-    {
-      "id": "remote_test1",
-      "name": "Test1",
-      "file": "drills/remote_test1.json",
-      "updatedAtMs": 1794114053500,
-      "category": "classic",
-      "description": "Short machine sampler — leg press, chest press, and pec deck.",
-      "coverImage": "plan_covers/remote_test1_1793916298056.webp",
-      "activityIds": [
-        "legPress",
-        "chestPressMachine",
-        "pecDeck"
       ]
     },
     {
