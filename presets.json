@@ -1,6 +1,6 @@
 {
-  "version": 54,
-  "updatedAtMs": 1794109154467,
+  "version": 55,
+  "updatedAtMs": 1794109354921,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -92,7 +92,7 @@
       "id": "remote_dumbbell_arms_40",
       "name": "Dumbbell Arms",
       "file": "drills/remote_dumbbell_arms_40.json",
-      "updatedAtMs": 1794054871010,
+      "updatedAtMs": 1794109353829,
       "category": "dumbbell",
       "description": "Focused dumbbell arm work for biceps and triceps — pump, control, and upper-arm strength.",
       "coverImage": "plan_covers/default_dumbbell_arms_40.webp",
