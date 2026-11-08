@@ -1,6 +1,6 @@
 {
-  "version": 191,
-  "updatedAtMs": 1794115736887,
+  "version": 192,
+  "updatedAtMs": 1794115929183,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -354,17 +354,19 @@
       "id": "remote_start_core",
       "name": "Start Core",
       "file": "drills/remote_start_core.json",
-      "updatedAtMs": 1793916397920,
+      "updatedAtMs": 1794115928094,
       "category": "core",
       "description": "Beginner core circuit on the floor. Five moves, five rounds, 45 seconds of work and 60 seconds of rest, about 43 minutes.",
-      "coverImage": "plan_covers/remote_start_core_1793916397903.webp",
+      "coverImage": "plan_covers/remote_start_core_1794115928086.webp",
       "activityIds": [
         "plank",
         "deadBug",
         "birdDog",
         "sidePlank",
         "abs"
-      ]
+      ],
+      "coverImagePill": "plan_covers/remote_start_core_pill_1794115928090.webp",
+      "coverImagePillAlign": -1
     },
     {
       "id": "remote_start_core_machines",
