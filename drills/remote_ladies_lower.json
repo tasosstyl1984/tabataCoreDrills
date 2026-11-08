@@ -1,7 +1,6 @@
 {
   "id": "remote_ladies_lower",
   "name": "Ladies Lower",
-  "description": "Lower-body strength with lunges, squats, step-ups, glute bridges, and kickbacks for hips and legs.",
   "createdAtMs": 1792267774557,
   "sets": 5,
   "repsPerSet": 4,
@@ -141,6 +140,8 @@
       }
     ]
   },
-  "coverImagePill": "plan_covers/remote_ladies_lower_pill_1794070055215.webp",
+  "description": "Lower-body strength with lunges, squats, step-ups, glute bridges, and kickbacks for hips and legs.",
+  "coverImagePath": "plan_covers/remote_ladies_lower_1794115643214.webp",
+  "coverImagePill": "plan_covers/remote_ladies_lower_pill_1794115643218.webp",
   "coverImagePillAlign": -1
 }
