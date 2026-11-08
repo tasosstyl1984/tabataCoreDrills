@@ -156,6 +156,7 @@
     ]
   },
   "description": "Press and pull with dumbbells to build shoulder strength, upper-back posture, and balanced pulling power.",
+  "coverImagePath": "plan_covers/default_dumbbell_shoulders_40.webp",
   "coverImagePill": "plan_covers/default_dumbbell_shoulders_40_pill.webp",
   "coverImagePillAlign": -1
 }

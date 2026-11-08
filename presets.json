@@ -1,6 +1,6 @@
 {
-  "version": 65,
-  "updatedAtMs": 1794114447611,
+  "version": 66,
+  "updatedAtMs": 1794114532375,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -454,7 +454,7 @@
       "id": "remote_dumbbell_shoulders_40",
       "name": "Shoulders and Back",
       "file": "drills/remote_dumbbell_shoulders_40.json",
-      "updatedAtMs": 1794070613118,
+      "updatedAtMs": 1794114530387,
       "category": "dumbbell",
       "description": "Press and pull with dumbbells to build shoulder strength, upper-back posture, and balanced pulling power.",
       "coverImage": "plan_covers/default_dumbbell_shoulders_40.webp",
