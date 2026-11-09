@@ -1,6 +1,6 @@
 {
-  "version": 205,
-  "updatedAtMs": 1794237375912,
+  "version": 206,
+  "updatedAtMs": 1794237556089,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -105,10 +105,10 @@
       "id": "remote_kill_my_legs",
       "name": "Kill my Legs",
       "file": "drills/remote_kill_my_legs.json",
-      "updatedAtMs": 1794115023281,
+      "updatedAtMs": 1794237554458,
       "category": "combos",
       "description": "Hard lower-body circuit — lunges, squats, Bulgarian split squats, jumps, sumo squats, and leg press for quads and glutes.",
-      "coverImage": "plan_covers/remote_kill_my_legs_1794115023273.webp",
+      "coverImage": "plan_covers/remote_kill_my_legs_1794237554430.webp",
       "activityIds": [
         "lunges",
         "squats",
@@ -118,7 +118,7 @@
         "sumoSquats",
         "legPress"
       ],
-      "coverImagePill": "plan_covers/remote_kill_my_legs_pill_1794115023278.webp",
+      "coverImagePill": "plan_covers/remote_kill_my_legs_pill_1794237554449.webp",
       "coverImagePillAlign": -1
     },
     {
