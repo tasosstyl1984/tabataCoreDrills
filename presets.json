@@ -1,6 +1,6 @@
 {
-  "version": 78,
-  "updatedAtMs": 1794231129549,
+  "version": 79,
+  "updatedAtMs": 1794231366502,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -157,7 +157,7 @@
       "id": "remote_jump_rope_drills_50",
       "name": "Jump Rope Drills",
       "file": "drills/remote_jump_rope_drills_50.json",
-      "updatedAtMs": 1794230627041,
+      "updatedAtMs": 1794231365423,
       "category": "conditioning",
       "description": "Steady jump-rope rounds for foot speed, coordination, and light cardio endurance you can do almost anywhere.",
       "coverImage": "plan_covers/default_jump_rope_drills_50.webp",
