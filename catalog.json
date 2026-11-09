@@ -1,6 +1,6 @@
 {
-  "version": 224,
-  "updatedAtMs": 1794256105144,
+  "version": 225,
+  "updatedAtMs": 1794256597007,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -278,6 +278,23 @@
         "bicepCurls"
       ],
       "coverImagePill": "plan_covers/remote_tasos_workout_pill_1794234511043.webp",
+      "coverImagePillAlign": -1
+    },
+    {
+      "id": "remote_soccer_footnall_dribbling",
+      "name": "Soccer footnall dribbling",
+      "file": "drills/remote_soccer_footnall_dribbling.json",
+      "updatedAtMs": 1794256596222,
+      "category": "football",
+      "description": "",
+      "coverImage": "plan_covers/remote_soccer_footnall_dribbling_1794256596201.webp",
+      "activityIds": [
+        "footballFootwork",
+        "footballWallPassing",
+        "footballReactionDrills",
+        "footballConeSlalom"
+      ],
+      "coverImagePill": "plan_covers/remote_soccer_footnall_dribbling_pill_1794256596214.webp",
       "coverImagePillAlign": -1
     },
     {

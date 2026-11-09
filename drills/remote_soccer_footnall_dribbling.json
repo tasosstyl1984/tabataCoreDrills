@@ -1,0 +1,141 @@
+{
+  "id": "remote_soccer_footnall_dribbling",
+  "name": "Soccer footnall dribbling",
+  "createdAtMs": 1794256596223,
+  "sets": 4,
+  "repsPerSet": 4,
+  "workSeconds": 60,
+  "restBetweenRepsSeconds": 50,
+  "restBetweenSetsSeconds": 60,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 50,
+            "activityId": "footballFootwork"
+          },
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 50,
+            "activityId": "footballFootwork"
+          },
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 50,
+            "activityId": "footballFootwork"
+          },
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 50,
+            "activityId": "footballFootwork"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 50,
+            "activityId": "footballWallPassing"
+          },
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 50,
+            "activityId": "footballWallPassing"
+          },
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 50,
+            "activityId": "footballWallPassing"
+          },
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 50,
+            "activityId": "footballWallPassing"
+          },
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 50,
+            "activityId": "footballWallPassing"
+          },
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 50,
+            "activityId": "footballWallPassing"
+          },
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 50,
+            "activityId": "footballWallPassing"
+          },
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 50,
+            "activityId": "footballWallPassing"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 50,
+            "activityId": "footballReactionDrills"
+          },
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 50,
+            "activityId": "footballReactionDrills"
+          },
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 50,
+            "activityId": "footballReactionDrills"
+          },
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 50,
+            "activityId": "footballReactionDrills"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 50,
+            "activityId": "footballConeSlalom"
+          },
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 50,
+            "activityId": "footballConeSlalom"
+          },
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 50,
+            "activityId": "footballConeSlalom"
+          },
+          {
+            "workSeconds": 60,
+            "restAfterSeconds": 50,
+            "activityId": "footballConeSlalom"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      }
+    ]
+  },
+  "coverImagePath": "plan_covers/remote_soccer_footnall_dribbling_1794256596201.webp",
+  "coverImagePill": "plan_covers/remote_soccer_footnall_dribbling_pill_1794256596214.webp",
+  "coverImagePillAlign": -1
+}
