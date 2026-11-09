@@ -1,6 +1,6 @@
 {
-  "version": 201,
-  "updatedAtMs": 1794235110005,
+  "version": 202,
+  "updatedAtMs": 1794235137243,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -386,10 +386,10 @@
       "id": "remote_start_lower_body",
       "name": "Start Lower Body",
       "file": "drills/remote_start_lower_body.json",
-      "updatedAtMs": 1794116070911,
+      "updatedAtMs": 1794235135950,
       "category": "lower",
       "description": "Beginner lower-body circuit with no machines. Five moves, five rounds, 45 seconds of work and 60 seconds of rest, about 43 minutes.",
-      "coverImage": "plan_covers/remote_start_lower_body_1794116070904.webp",
+      "coverImage": "plan_covers/remote_start_lower_body_1794235135928.webp",
       "activityIds": [
         "lunges",
         "gluteBridge",
@@ -397,7 +397,7 @@
         "bodyweightCalfRaises",
         "stepUps"
       ],
-      "coverImagePill": "plan_covers/remote_start_lower_body_pill_1794116070908.webp",
+      "coverImagePill": "plan_covers/remote_start_lower_body_pill_1794235135943.webp",
       "coverImagePillAlign": -1
     },
     {
