@@ -1,6 +1,6 @@
 {
-  "version": 199,
-  "updatedAtMs": 1794234839051,
+  "version": 200,
+  "updatedAtMs": 1794234982616,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -404,17 +404,19 @@
       "id": "remote_start_lower_body_machines",
       "name": "Start Lower Body Machines",
       "file": "drills/remote_start_lower_body_machines.json",
-      "updatedAtMs": 1793916714554,
+      "updatedAtMs": 1794234981293,
       "category": "lower",
       "description": "Beginner lower-body circuit on machines. Five moves, five rounds, 45 seconds of work and 60 seconds of rest, about 43 minutes.",
-      "coverImage": "plan_covers/remote_start_lower_body_machines_1793916714540.webp",
+      "coverImage": "plan_covers/remote_start_lower_body_machines_1794234981273.webp",
       "activityIds": [
         "legPress",
         "legCurl",
         "legExtension",
         "hipAbductor",
         "calfRaiseMachine"
-      ]
+      ],
+      "coverImagePill": "plan_covers/remote_start_lower_body_machines_pill_1794234981287.webp",
+      "coverImagePillAlign": -1
     },
     {
       "id": "remote_start_upper_body",
