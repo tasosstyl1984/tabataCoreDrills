@@ -1,6 +1,6 @@
 {
-  "version": 77,
-  "updatedAtMs": 1794230839589,
+  "version": 78,
+  "updatedAtMs": 1794231129549,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -113,7 +113,7 @@
       "id": "remote_engine_conditioning_45",
       "name": "Engine Conditioning",
       "file": "drills/remote_engine_conditioning_45.json",
-      "updatedAtMs": 1794230838234,
+      "updatedAtMs": 1794231128395,
       "category": "conditioning",
       "description": "Hard conditioning with ropes, carries, and slam-style work to raise work capacity and engine fitness.",
       "coverImage": "plan_covers/default_engine_conditioning_45.webp",
@@ -125,7 +125,7 @@
         "rowing",
         "mountainClimbers"
       ],
-      "coverImagePill": "plan_covers/default_engine_conditioning_45.webp",
+      "coverImagePill": "plan_covers/default_engine_conditioning_45_pill.webp",
       "coverImagePillAlign": -1,
       "preset": true,
       "shipsWithApp": true,
