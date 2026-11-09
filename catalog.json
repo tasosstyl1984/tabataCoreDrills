@@ -1,6 +1,6 @@
 {
-  "version": 219,
-  "updatedAtMs": 1794255605959,
+  "version": 220,
+  "updatedAtMs": 1794255821654,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -338,17 +338,19 @@
       "id": "remote_start_chest_machines",
       "name": "Start Chest Machines",
       "file": "drills/remote_start_chest_machines.json",
-      "updatedAtMs": 1793916356559,
+      "updatedAtMs": 1794255820291,
       "category": "chest",
       "description": "Beginner chest circuit on machines and cables. Five moves, five rounds, 45 seconds of work and 60 seconds of rest, about 43 minutes.",
-      "coverImage": "plan_covers/remote_start_chest_machines_1793916356542.webp",
+      "coverImage": "plan_covers/remote_start_chest_machines_1794255820266.webp",
       "activityIds": [
         "chestPressMachine",
         "pecDeck",
         "cableFly",
         "cableChestPress",
         "dips"
-      ]
+      ],
+      "coverImagePill": "plan_covers/remote_start_chest_machines_pill_1794255820283.webp",
+      "coverImagePillAlign": -1
     },
     {
       "id": "remote_start_core",
