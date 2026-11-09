@@ -1,6 +1,6 @@
 {
-  "version": 74,
-  "updatedAtMs": 1794230330031,
+  "version": 75,
+  "updatedAtMs": 1794230489855,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -135,7 +135,7 @@
       "id": "remote_hiit_strength_30",
       "name": "HIIT Strength",
       "file": "drills/remote_hiit_strength_30.json",
-      "updatedAtMs": 1794108729036,
+      "updatedAtMs": 1794230488661,
       "category": "strength",
       "description": "High-intensity strength circuits — power and conditioning in a compact, hard-hitting session.",
       "coverImage": "plan_covers/default_hiit_strength_30.webp",
