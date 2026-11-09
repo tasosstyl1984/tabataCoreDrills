@@ -165,5 +165,8 @@
       }
     ]
   },
-  "description": "Beginner upper-body circuit on machines. Five moves, five rounds, 45 seconds of work and 60 seconds of rest, about 43 minutes."
+  "description": "Beginner upper-body circuit on machines. Five moves, five rounds, 45 seconds of work and 60 seconds of rest, about 43 minutes.",
+  "coverImagePath": "plan_covers/remote_start_upper_body_machines_1794235108666.webp",
+  "coverImagePill": "plan_covers/remote_start_upper_body_machines_pill_1794235108681.webp",
+  "coverImagePillAlign": -1
 }
