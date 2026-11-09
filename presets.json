@@ -1,6 +1,6 @@
 {
-  "version": 98,
-  "updatedAtMs": 1794233693898,
+  "version": 99,
+  "updatedAtMs": 1794233748671,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -364,7 +364,7 @@
       "id": "remote_combo_rope_kettle_core_40",
       "name": "Rope Kettle Core",
       "file": "drills/remote_combo_rope_kettle_core_40.json",
-      "updatedAtMs": 1794233692928,
+      "updatedAtMs": 1794233747293,
       "category": "combos",
       "description": "Jump rope, kettlebells, and core in one stack — a complete conditioning day with strength baked in.",
       "coverImage": "plan_covers/default_combo_rope_kettle_core_40.webp",
