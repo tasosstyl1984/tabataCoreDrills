@@ -1,6 +1,6 @@
 {
-  "version": 202,
-  "updatedAtMs": 1794235137243,
+  "version": 203,
+  "updatedAtMs": 1794235216198,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -173,10 +173,10 @@
       "id": "remote_ladies_lower",
       "name": "Ladies Lower",
       "file": "drills/remote_ladies_lower.json",
-      "updatedAtMs": 1794115643221,
+      "updatedAtMs": 1794235214597,
       "category": "strength",
       "description": "Lower-body strength with lunges, squats, step-ups, glute bridges, and kickbacks for hips and legs.",
-      "coverImage": "plan_covers/remote_ladies_lower_1794115643214.webp",
+      "coverImage": "plan_covers/remote_ladies_lower_1794235214573.webp",
       "activityIds": [
         "lunges",
         "squats",
@@ -184,7 +184,7 @@
         "gluteBridge",
         "gluteKickbacks"
       ],
-      "coverImagePill": "plan_covers/remote_ladies_lower_pill_1794115643218.webp",
+      "coverImagePill": "plan_covers/remote_ladies_lower_pill_1794235214589.webp",
       "coverImagePillAlign": -1
     },
     {
