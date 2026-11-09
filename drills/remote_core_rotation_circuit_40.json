@@ -198,5 +198,5 @@
   "description": "Core circuit mixing rotation, abs, and holds for a stronger, more stable midsection.",
   "coverImagePath": "plan_covers/default_core_rotation_circuit_40.webp",
   "coverImagePill": "plan_covers/default_core_rotation_circuit_40_pill.webp",
-  "coverImagePillAlign": -0.94
+  "coverImagePillAlign": -1
 }
