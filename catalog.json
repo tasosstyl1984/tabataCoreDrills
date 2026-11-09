@@ -1,6 +1,6 @@
 {
-  "version": 225,
-  "updatedAtMs": 1794256597007,
+  "version": 226,
+  "updatedAtMs": 1794256863754,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -284,17 +284,17 @@
       "id": "remote_soccer_footnall_dribbling",
       "name": "Soccer footnall dribbling",
       "file": "drills/remote_soccer_footnall_dribbling.json",
-      "updatedAtMs": 1794256596222,
+      "updatedAtMs": 1794256862685,
       "category": "football",
       "description": "",
-      "coverImage": "plan_covers/remote_soccer_footnall_dribbling_1794256596201.webp",
+      "coverImage": "plan_covers/remote_soccer_footnall_dribbling_1794256862665.webp",
       "activityIds": [
         "footballFootwork",
         "footballWallPassing",
         "footballReactionDrills",
         "footballConeSlalom"
       ],
-      "coverImagePill": "plan_covers/remote_soccer_footnall_dribbling_pill_1794256596214.webp",
+      "coverImagePill": "plan_covers/remote_soccer_footnall_dribbling_pill_1794256862679.webp",
       "coverImagePillAlign": -1
     },
     {
