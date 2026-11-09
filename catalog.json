@@ -1,6 +1,6 @@
 {
-  "version": 206,
-  "updatedAtMs": 1794237556089,
+  "version": 207,
+  "updatedAtMs": 1794237720919,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -125,10 +125,10 @@
       "id": "remote_ladies_complex",
       "name": "Ladies Complex",
       "file": "drills/remote_ladies_complex.json",
-      "updatedAtMs": 1794114925193,
+      "updatedAtMs": 1794237719334,
       "category": "combos",
       "description": "Long full-body mix — jumping jacks, climbers, high knees, box jumps, kettlebell swings and rows, push-ups, calves, glutes, and core.",
-      "coverImage": "plan_covers/remote_ladies_complex_1794114925185.webp",
+      "coverImage": "plan_covers/remote_ladies_complex_1794237719307.webp",
       "activityIds": [
         "jumpingJacks",
         "mountainClimbers",
@@ -144,8 +144,8 @@
         "plank",
         "birdDog"
       ],
-      "coverImagePill": "plan_covers/remote_ladies_complex_pill_1794114925190.webp",
-      "coverImagePillAlign": -1
+      "coverImagePill": "plan_covers/remote_ladies_complex_pill_1794237719324.webp",
+      "coverImagePillAlign": -0.98
     },
     {
       "id": "remote_ladies_first",
