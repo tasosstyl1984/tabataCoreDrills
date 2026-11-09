@@ -1,19 +1,19 @@
 {
-  "version": 7,
-  "updatedAtMs": 1794089498030,
+  "version": 8,
+  "updatedAtMs": 1794229442127,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "weeks": [
     {
       "id": "remote_week_kb_boxing_complex",
       "name": "KB Boxing Complex",
       "description": "KB Boxing Complex",
-      "updatedAtMs": 1794069709530,
+      "updatedAtMs": 1794229441485,
       "slots": {
-        "mon": "remote_kb_boxing_complex",
+        "mon": "remote_weighted_shadow_boxing_complex",
         "tue": null,
-        "wed": "remote_kb_boxing_complex",
+        "wed": "remote_weighted_shadow_boxing_complex",
         "thu": null,
-        "fri": "remote_kb_boxing_complex",
+        "fri": "remote_weighted_shadow_boxing_complex",
         "sat": null,
         "sun": null
       }
