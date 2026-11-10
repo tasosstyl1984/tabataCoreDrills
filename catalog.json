@@ -1,6 +1,6 @@
 {
-  "version": 231,
-  "updatedAtMs": 1794322191832,
+  "version": 232,
+  "updatedAtMs": 1794322277122,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -84,10 +84,10 @@
       "id": "remote_hyrox_40",
       "name": "Hyrox Stations 40",
       "file": "drills/remote_hyrox_40.json",
-      "updatedAtMs": 1794253525734,
+      "updatedAtMs": 1794322275639,
       "category": "conditioning",
       "description": "Longer Hyrox station session with Peak-level volume — sustained work capacity across the full station mix.",
-      "coverImage": "plan_covers/remote_hyrox_40_1794253525706.webp",
+      "coverImage": "plan_covers/remote_hyrox_40_1794322275619.webp",
       "activityIds": [
         "battleRopes",
         "sledPush",
@@ -98,7 +98,7 @@
         "jumpingLunges",
         "wallBalls"
       ],
-      "coverImagePill": "plan_covers/remote_hyrox_40_pill_1794253525725.webp",
+      "coverImagePill": "plan_covers/remote_hyrox_40_pill_1794322275633.webp",
       "coverImagePillAlign": -1
     },
     {
