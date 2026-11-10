@@ -1,6 +1,6 @@
 {
-  "version": 226,
-  "updatedAtMs": 1794256863754,
+  "version": 227,
+  "updatedAtMs": 1794296148192,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -282,9 +282,9 @@
     },
     {
       "id": "remote_soccer_footnall_dribbling",
-      "name": "Soccer footnall dribbling",
+      "name": "Soccer football dribbling",
       "file": "drills/remote_soccer_footnall_dribbling.json",
-      "updatedAtMs": 1794256862685,
+      "updatedAtMs": 1794296147104,
       "category": "football",
       "description": "",
       "coverImage": "plan_covers/remote_soccer_footnall_dribbling_1794256862665.webp",
