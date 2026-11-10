@@ -1,6 +1,6 @@
 {
-  "version": 110,
-  "updatedAtMs": 1794320843830,
+  "version": 111,
+  "updatedAtMs": 1794321248880,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -389,7 +389,7 @@
       "id": "remote_combo_full_stack_50",
       "name": "Rope Stack",
       "file": "drills/remote_combo_full_stack_50.json",
-      "updatedAtMs": 1794236313314,
+      "updatedAtMs": 1794321247729,
       "category": "combos",
       "description": "Extended battle-rope and kettlebell stack for a long mixed session when you want volume and variety.",
       "coverImage": "plan_covers/default_combo_full_stack_50.webp",
