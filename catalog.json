@@ -1,6 +1,6 @@
 {
-  "version": 244,
-  "updatedAtMs": 1794331642683,
+  "version": 245,
+  "updatedAtMs": 1794331704008,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -496,10 +496,10 @@
       "id": "remote_weighted_shadow_boxing_complex",
       "name": "Weighted Shadow Boxing Complex",
       "file": "drills/remote_weighted_shadow_boxing_complex.json",
-      "updatedAtMs": 1794324876584,
+      "updatedAtMs": 1794331702836,
       "category": "combos",
       "description": "Shadowboxing rounds followed by kettlebell swings, halo, row, clean and press, and deadlift for fight cardio and strength.",
-      "coverImage": "plan_covers/remote_weighted_shadow_boxing_complex_1794324876558.webp",
+      "coverImage": "plan_covers/remote_weighted_shadow_boxing_complex_1794331702819.webp",
       "activityIds": [
         "shadowBoxing",
         "kettlebellSwings",
@@ -508,8 +508,8 @@
         "kettlebellCleanPress",
         "kettlebellDeadlift"
       ],
-      "coverImagePill": "plan_covers/remote_weighted_shadow_boxing_complex_pill_1794324876576.webp",
-      "coverImagePillAlign": -1
+      "coverImagePill": "plan_covers/remote_weighted_shadow_boxing_complex_pill_1794331702830.webp",
+      "coverImagePillAlign": 0
     }
   ]
 }
