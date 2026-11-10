@@ -1,6 +1,6 @@
 {
-  "version": 237,
-  "updatedAtMs": 1794323045662,
+  "version": 238,
+  "updatedAtMs": 1794323622277,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -240,10 +240,10 @@
       "id": "remote_tyson",
       "name": "Rope Boxing Mix",
       "file": "drills/remote_tyson.json",
-      "updatedAtMs": 1794255282607,
+      "updatedAtMs": 1794323621003,
       "category": "combos",
       "description": "Jump rope and boxing mixed with kettlebells and core — footwork, rhythm, and conditioning in one pack.",
-      "coverImage": "plan_covers/remote_tyson_1794255282583.webp",
+      "coverImage": "plan_covers/remote_tyson_1794323620981.webp",
       "activityIds": [
         "jumpRope",
         "shadowBoxing",
@@ -256,7 +256,7 @@
         "hollowHold",
         "russianTwists"
       ],
-      "coverImagePill": "plan_covers/remote_tyson_pill_1794255282599.webp",
+      "coverImagePill": "plan_covers/remote_tyson_pill_1794323620995.webp",
       "coverImagePillAlign": -1
     },
     {
