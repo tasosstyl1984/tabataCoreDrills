@@ -1,6 +1,6 @@
 {
-  "version": 113,
-  "updatedAtMs": 1794321622576,
+  "version": 114,
+  "updatedAtMs": 1794321797029,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -497,7 +497,7 @@
       "id": "remote_tabata_classic",
       "name": "Tabata Classic",
       "file": "drills/remote_tabata_classic.json",
-      "updatedAtMs": 1794256246740,
+      "updatedAtMs": 1794321795674,
       "category": "classic",
       "description": "The original 20-on / 10-off protocol — a short all-out cardio blast to build anaerobic capacity and mental grit.",
       "coverImage": "plan_covers/default_tabata_classic.webp",
