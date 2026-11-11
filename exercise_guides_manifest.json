@@ -1,8 +1,8 @@
 {
-  "version": 161,
-  "updatedAtMs": 1794434768836,
+  "version": 162,
+  "updatedAtMs": 1794434786656,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 10718840,
+  "totalBytes": 10880560,
   "images": [
     {
       "id": "abs",
@@ -717,6 +717,12 @@
       "file": "exercise_guides/seatedLowRow.webp",
       "bytes": 163274,
       "sha256": "b939d0fda873ae56"
+    },
+    {
+      "id": "tricepRopePushdown",
+      "file": "exercise_guides/tricepRopePushdown.webp",
+      "bytes": 161720,
+      "sha256": "ba3df530f306053c"
     }
   ]
 }
