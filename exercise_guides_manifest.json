@@ -1,8 +1,8 @@
 {
-  "version": 155,
-  "updatedAtMs": 1794434106066,
+  "version": 156,
+  "updatedAtMs": 1794434130947,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 9904460,
+  "totalBytes": 10060614,
   "images": [
     {
       "id": "abs",
@@ -687,6 +687,12 @@
       "file": "exercise_guides/cableCrossover.webp",
       "bytes": 174130,
       "sha256": "0a2c39f7c9f26b66"
+    },
+    {
+      "id": "cableExternalRotation",
+      "file": "exercise_guides/cableExternalRotation.webp",
+      "bytes": 156154,
+      "sha256": "19d745a78cb394f1"
     }
   ]
 }
