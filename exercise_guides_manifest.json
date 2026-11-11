@@ -1,8 +1,8 @@
 {
-  "version": 154,
-  "updatedAtMs": 1794257841002,
+  "version": 155,
+  "updatedAtMs": 1794434106066,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 9730330,
+  "totalBytes": 9904460,
   "images": [
     {
       "id": "abs",
@@ -681,6 +681,12 @@
       "file": "exercise_guides/wallBalls.webp",
       "bytes": 6134,
       "sha256": "ff663551a066a9ed"
+    },
+    {
+      "id": "cableCrossover",
+      "file": "exercise_guides/cableCrossover.webp",
+      "bytes": 174130,
+      "sha256": "0a2c39f7c9f26b66"
     }
   ]
 }
