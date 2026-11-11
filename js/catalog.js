@@ -873,8 +873,8 @@
 
   async function loadGuidesCopy() {
     try {
-      const res = await fetch(`exercise_guides_copy.json${guidesAssetQuery()}`, {
-        cache: guidesAssetVersion ? "default" : "no-store",
+      const res = await fetch(`exercise_guides_copy.json?_=${Date.now()}`, {
+        cache: "no-store",
       });
       if (!res.ok) return;
       const data = await res.json();
@@ -886,8 +886,8 @@
 
   async function loadActivityCatalog() {
     try {
-      const res = await fetch(`exercise_catalog.json${guidesAssetQuery()}`, {
-        cache: guidesAssetVersion ? "default" : "no-store",
+      const res = await fetch(`exercise_catalog.json?_=${Date.now()}`, {
+        cache: "no-store",
       });
       if (!res.ok) return;
       const data = await res.json();
