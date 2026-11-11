@@ -367,10 +367,8 @@
 
   function exerciseImagesActivitiesWithGuides() {
     const activities = site()?.activityCatalog() || [];
-    const imageIds = site()?.imageIds;
-    return activities
-      .filter((a) => a && a.id)
-      .filter((a) => !imageIds || imageIds.has(a.id));
+    // Full catalog — missing manifest WebPs show an empty card so admins can upload.
+    return activities.filter((a) => a && a.id);
   }
 
   function renderExerciseImagesCategoryChips() {
