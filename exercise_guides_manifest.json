@@ -1,8 +1,8 @@
 {
-  "version": 158,
-  "updatedAtMs": 1794434358442,
+  "version": 159,
+  "updatedAtMs": 1794434642787,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 10369158,
+  "totalBytes": 10555566,
   "images": [
     {
       "id": "abs",
@@ -705,6 +705,12 @@
       "file": "exercise_guides/reverseGripTricepPushdown.webp",
       "bytes": 160064,
       "sha256": "72f8ec31d47e2aec"
+    },
+    {
+      "id": "plateLoadedRow",
+      "file": "exercise_guides/plateLoadedRow.webp",
+      "bytes": 186408,
+      "sha256": "7dd5b1d0ee2cad82"
     }
   ]
 }
