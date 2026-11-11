@@ -1,6 +1,6 @@
 {
-  "version": 249,
-  "updatedAtMs": 1794428178792,
+  "version": 250,
+  "updatedAtMs": 1794431274748,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -515,9 +515,9 @@
       "id": "remote_gym_upper_full",
       "name": "Gym Upper Body Full",
       "file": "drills/remote_gym_upper_full.json",
-      "updatedAtMs": 1794428178792,
+      "updatedAtMs": 1794431274748,
       "category": "upper",
-      "description": "Gym upper-body day timed from your rep targets (~4 s per rep, plus a few seconds to finish the set). About 164 minutes of work and rest (63 min work, 100 min rest)\u2014no warmup or cooldown. Chest 4\u00d712, triceps and biceps 3\u00d712, back mostly 4\u00d712, pull-ups and external rotation 3\u20134\u00d710. Rest 75 s between sets of the same lift, 105 s when changing exercises or muscle groups.",
+      "description": "Gym upper body by muscle group (17 Tabata sets total). Each set is one full lap through that block's exercises, timed for your rep counts (~4 s/rep). Chest: 4 sets \u00d7 5 moves; Triceps: 3 sets \u00d7 3 moves; Back & traps: 4 sets \u00d7 6 moves; Biceps: 3 sets \u00d7 3 moves; Shoulders: 3 sets \u00d7 4 moves. About 186 min work + rest (64 min work, 121 min rest), no warmup or cooldown.",
       "coverImage": "exercise_guides/chestPressMachine.webp",
       "activityIds": [
         "chestPressMachine",
