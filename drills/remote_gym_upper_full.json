@@ -1,0 +1,749 @@
+{
+  "id": "remote_gym_upper_full",
+  "name": "Gym Upper Body Full",
+  "description": "Gym upper-body day timed from your rep targets (~4 s per rep, plus a few seconds to finish the set). About 164 minutes of work and rest (63 min work, 100 min rest)\u2014no warmup or cooldown. Chest 4\u00d712, triceps and biceps 3\u00d712, back mostly 4\u00d712, pull-ups and external rotation 3\u20134\u00d710. Rest 75 s between sets of the same lift, 105 s when changing exercises or muscle groups.",
+  "createdAtMs": 1794427951251,
+  "sets": 73,
+  "repsPerSet": 1,
+  "workSeconds": 53,
+  "restBetweenRepsSeconds": 75,
+  "restBetweenSetsSeconds": 105,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "chestPressMachine"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "chestPressMachine"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "chestPressMachine"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "chestPressMachine"
+          }
+        ],
+        "restAfterSetSeconds": 105
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "inclineBench"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "inclineBench"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "inclineBench"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "inclineBench"
+          }
+        ],
+        "restAfterSetSeconds": 105
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "declineBench"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "declineBench"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "declineBench"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "declineBench"
+          }
+        ],
+        "restAfterSetSeconds": 105
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "pecDeck"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "pecDeck"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "pecDeck"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "pecDeck"
+          }
+        ],
+        "restAfterSetSeconds": 105
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "cableCrossover"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "cableCrossover"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "cableCrossover"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "cableCrossover"
+          }
+        ],
+        "restAfterSetSeconds": 105
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "tricepRopePushdown"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "tricepRopePushdown"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "tricepRopePushdown"
+          }
+        ],
+        "restAfterSetSeconds": 105
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "overheadTricepExtension"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "overheadTricepExtension"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "overheadTricepExtension"
+          }
+        ],
+        "restAfterSetSeconds": 105
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "reverseGripTricepPushdown"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "reverseGripTricepPushdown"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "reverseGripTricepPushdown"
+          }
+        ],
+        "restAfterSetSeconds": 105
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "latPulldown"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "latPulldown"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "latPulldown"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "latPulldown"
+          }
+        ],
+        "restAfterSetSeconds": 105
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "seatedLowRow"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "seatedLowRow"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "seatedLowRow"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "seatedLowRow"
+          }
+        ],
+        "restAfterSetSeconds": 105
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "plateLoadedRow"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "plateLoadedRow"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "plateLoadedRow"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "plateLoadedRow"
+          }
+        ],
+        "restAfterSetSeconds": 105
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "dumbbellRow"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "dumbbellRow"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "dumbbellRow"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "dumbbellRow"
+          }
+        ],
+        "restAfterSetSeconds": 105
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 10,
+            "activityId": "pullUps"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 10,
+            "activityId": "pullUps"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 10,
+            "activityId": "pullUps"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 10,
+            "activityId": "pullUps"
+          }
+        ],
+        "restAfterSetSeconds": 105
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "dumbbellShrugs"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "dumbbellShrugs"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "dumbbellShrugs"
+          }
+        ],
+        "restAfterSetSeconds": 105
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "hammerCurls"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "hammerCurls"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "hammerCurls"
+          }
+        ],
+        "restAfterSetSeconds": 105
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "preacherCurl"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "preacherCurl"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "preacherCurl"
+          }
+        ],
+        "restAfterSetSeconds": 105
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "cableCurl"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "cableCurl"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "cableCurl"
+          }
+        ],
+        "restAfterSetSeconds": 105
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "frontRaises"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "frontRaises"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "frontRaises"
+          }
+        ],
+        "restAfterSetSeconds": 105
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "lateralRaises"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "lateralRaises"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "lateralRaises"
+          }
+        ],
+        "restAfterSetSeconds": 105
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "shoulderPressMachine"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "shoulderPressMachine"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 10,
+            "activityId": "shoulderPressMachine"
+          }
+        ],
+        "restAfterSetSeconds": 105
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 10,
+            "activityId": "cableExternalRotation"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 10,
+            "activityId": "cableExternalRotation"
+          }
+        ],
+        "restAfterSetSeconds": 75
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 45,
+            "restAfterSeconds": 10,
+            "activityId": "cableExternalRotation"
+          }
+        ],
+        "restAfterSetSeconds": 105
+      }
+    ]
+  }
+}

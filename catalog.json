@@ -1,6 +1,6 @@
 {
-  "version": 248,
-  "updatedAtMs": 1794332066674,
+  "version": 249,
+  "updatedAtMs": 1794428178792,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -9,7 +9,7 @@
       "file": "drills/remote_back_to_basics.json",
       "updatedAtMs": 1794321929972,
       "category": "combos",
-      "description": "Simple bodyweight foundations — jumping jacks, abs, plank, dead bug, and push-ups to rebuild a reliable base without equipment.",
+      "description": "Simple bodyweight foundations \u2014 jumping jacks, abs, plank, dead bug, and push-ups to rebuild a reliable base without equipment.",
       "coverImage": "plan_covers/remote_back_to_basics_1794321929944.webp",
       "activityIds": [
         "jumpingJacks",
@@ -44,7 +44,7 @@
       "file": "drills/remote_hyrox_20.json",
       "updatedAtMs": 1794296392847,
       "category": "conditioning",
-      "description": "Shorter Hyrox-style station ladder — ropes, sled, carries, and bodyweight moves for race-day work capacity.",
+      "description": "Shorter Hyrox-style station ladder \u2014 ropes, sled, carries, and bodyweight moves for race-day work capacity.",
       "coverImage": "plan_covers/remote_hyrox_20_1794296392821.webp",
       "activityIds": [
         "battleRopes",
@@ -65,7 +65,7 @@
       "file": "drills/remote_hyrox_30.json",
       "updatedAtMs": 1794322190736,
       "category": "conditioning",
-      "description": "Mid-length Hyrox station circuit with more volume — builds engine fitness and station familiarity for Peak effort.",
+      "description": "Mid-length Hyrox station circuit with more volume \u2014 builds engine fitness and station familiarity for Peak effort.",
       "coverImage": "plan_covers/remote_hyrox_30_1794322190714.webp",
       "activityIds": [
         "battleRopes",
@@ -86,7 +86,7 @@
       "file": "drills/remote_hyrox_40.json",
       "updatedAtMs": 1794322275639,
       "category": "conditioning",
-      "description": "Longer Hyrox station session with Peak-level volume — sustained work capacity across the full station mix.",
+      "description": "Longer Hyrox station session with Peak-level volume \u2014 sustained work capacity across the full station mix.",
       "coverImage": "plan_covers/remote_hyrox_40_1794322275619.webp",
       "activityIds": [
         "battleRopes",
@@ -107,7 +107,7 @@
       "file": "drills/remote_kill_my_legs.json",
       "updatedAtMs": 1794322575634,
       "category": "combos",
-      "description": "Hard lower-body circuit — lunges, squats, Bulgarian split squats, jumps, sumo squats, and leg press for quads and glutes.",
+      "description": "Hard lower-body circuit \u2014 lunges, squats, Bulgarian split squats, jumps, sumo squats, and leg press for quads and glutes.",
       "coverImage": "plan_covers/remote_kill_my_legs_1794322575606.webp",
       "activityIds": [
         "lunges",
@@ -127,7 +127,7 @@
       "file": "drills/remote_ladies_complex.json",
       "updatedAtMs": 1794322661633,
       "category": "combos",
-      "description": "Long full-body mix — jumping jacks, climbers, high knees, box jumps, kettlebell swings and rows, push-ups, calves, glutes, and core.",
+      "description": "Long full-body mix \u2014 jumping jacks, climbers, high knees, box jumps, kettlebell swings and rows, push-ups, calves, glutes, and core.",
       "coverImage": "plan_covers/remote_ladies_complex_1794322661611.webp",
       "activityIds": [
         "jumpingJacks",
@@ -153,7 +153,7 @@
       "file": "drills/remote_ladies_first.json",
       "updatedAtMs": 1794322758858,
       "category": "combos",
-      "description": "Glutes and legs first — bird dog, lunges, bridges, squats, step-ups, and lateral raises — then abs, side plank, and dead bug.",
+      "description": "Glutes and legs first \u2014 bird dog, lunges, bridges, squats, step-ups, and lateral raises \u2014 then abs, side plank, and dead bug.",
       "coverImage": "plan_covers/remote_ladies_first_1794322758832.webp",
       "activityIds": [
         "birdDog",
@@ -193,7 +193,7 @@
       "file": "drills/remote_lion_roar.json",
       "updatedAtMs": 1794322953336,
       "category": "combos",
-      "description": "High-energy full-body mix — rope, push-ups, pulls, thrusters, legs, and core when you want a long, varied conditioning day.",
+      "description": "High-energy full-body mix \u2014 rope, push-ups, pulls, thrusters, legs, and core when you want a long, varied conditioning day.",
       "coverImage": "plan_covers/remote_lion_roar_1794322953310.webp",
       "activityIds": [
         "jumpRope",
@@ -242,7 +242,7 @@
       "file": "drills/remote_tyson.json",
       "updatedAtMs": 1794323621003,
       "category": "combos",
-      "description": "Jump rope and boxing mixed with kettlebells and core — footwork, rhythm, and conditioning in one pack.",
+      "description": "Jump rope and boxing mixed with kettlebells and core \u2014 footwork, rhythm, and conditioning in one pack.",
       "coverImage": "plan_covers/remote_tyson_1794323620981.webp",
       "activityIds": [
         "jumpRope",
@@ -481,7 +481,7 @@
       "file": "drills/remote_upper_body.json",
       "updatedAtMs": 1794324721824,
       "category": "chest",
-      "description": "Chest-focused pressing and fly work — bench, incline, flies, and pullover for upper-body push strength.",
+      "description": "Chest-focused pressing and fly work \u2014 bench, incline, flies, and pullover for upper-body push strength.",
       "coverImage": "plan_covers/remote_upper_body_1794324721801.webp",
       "activityIds": [
         "benchPress",
@@ -510,6 +510,38 @@
       ],
       "coverImagePill": "plan_covers/remote_weighted_shadow_boxing_complex_1794331702819.webp",
       "coverImagePillAlign": -1
+    },
+    {
+      "id": "remote_gym_upper_full",
+      "name": "Gym Upper Body Full",
+      "file": "drills/remote_gym_upper_full.json",
+      "updatedAtMs": 1794428178792,
+      "category": "upper",
+      "description": "Gym upper-body day timed from your rep targets (~4 s per rep, plus a few seconds to finish the set). About 164 minutes of work and rest (63 min work, 100 min rest)\u2014no warmup or cooldown. Chest 4\u00d712, triceps and biceps 3\u00d712, back mostly 4\u00d712, pull-ups and external rotation 3\u20134\u00d710. Rest 75 s between sets of the same lift, 105 s when changing exercises or muscle groups.",
+      "coverImage": "exercise_guides/chestPressMachine.webp",
+      "activityIds": [
+        "chestPressMachine",
+        "inclineBench",
+        "declineBench",
+        "pecDeck",
+        "cableCrossover",
+        "tricepRopePushdown",
+        "overheadTricepExtension",
+        "reverseGripTricepPushdown",
+        "latPulldown",
+        "seatedLowRow",
+        "plateLoadedRow",
+        "dumbbellRow",
+        "pullUps",
+        "dumbbellShrugs",
+        "hammerCurls",
+        "preacherCurl",
+        "cableCurl",
+        "frontRaises",
+        "lateralRaises",
+        "shoulderPressMachine",
+        "cableExternalRotation"
+      ]
     }
   ]
 }

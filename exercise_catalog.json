@@ -1,6 +1,6 @@
 {
-  "version": 8,
-  "updatedAtMs": 1793900987861,
+  "version": 9,
+  "updatedAtMs": 1794427016797,
   "activities": [
     {
       "id": "jumpRope",
@@ -1028,6 +1028,73 @@
       "movement": "footballElastico",
       "equipment": [
         "Soccer ball"
+      ]
+    },
+    {
+      "id": "cableCrossover",
+      "label": "Cable crossover",
+      "group": "Machines",
+      "movement": "chestFly",
+      "equipment": [
+        "Dual adjustable cable machine",
+        "D handles"
+      ]
+    },
+    {
+      "id": "tricepRopePushdown",
+      "label": "Tricep rope pushdown",
+      "group": "Machines",
+      "movement": "tricepPushdown",
+      "equipment": [
+        "Cable machine",
+        "rope attachment"
+      ]
+    },
+    {
+      "id": "reverseGripTricepPushdown",
+      "label": "Reverse-grip tricep pushdown",
+      "group": "Machines",
+      "movement": "tricepPushdown",
+      "equipment": [
+        "Cable machine",
+        "straight bar"
+      ]
+    },
+    {
+      "id": "seatedLowRow",
+      "label": "Seated low row",
+      "group": "Machines",
+      "movement": "row",
+      "equipment": [
+        "Low row machine or low cable row"
+      ]
+    },
+    {
+      "id": "plateLoadedRow",
+      "label": "Plate-loaded row",
+      "group": "Machines",
+      "movement": "row",
+      "equipment": [
+        "Plate-loaded row machine"
+      ]
+    },
+    {
+      "id": "dumbbellShrugs",
+      "label": "Dumbbell shrugs",
+      "group": "Dumbbell",
+      "movement": "shrug",
+      "equipment": [
+        "Dumbbells"
+      ]
+    },
+    {
+      "id": "cableExternalRotation",
+      "label": "Cable external rotation",
+      "group": "Machines",
+      "movement": "externalRotation",
+      "equipment": [
+        "Cable machine",
+        "single handle"
       ]
     }
   ]

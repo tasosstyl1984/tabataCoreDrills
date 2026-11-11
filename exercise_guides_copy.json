@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAtMs": 1794044662643,
+  "updatedAtMs": 1794427016797,
   "guides": {
     "abs": {
       "title": "Crunches",
@@ -792,6 +792,55 @@
       "actionPhase": "Press both hands forward until your arms are straight, then bring them back until your elbows are in line with your shoulders.",
       "formCheck": "Keep your shoulders down and your wrists over your elbows. Do not lock your elbows hard or let one side drift ahead.",
       "hasRemoteImage": true
+    },
+    "cableCrossover": {
+      "title": "Cable Crossover",
+      "setup": "Stand between high cables with one foot slightly forward. Hold a handle in each hand and start with your arms open and a soft bend in your elbows.",
+      "actionPhase": "Sweep your hands down and together in a wide arc across the front of your body, squeeze at the bottom, then return slowly to the open position.",
+      "formCheck": "Keep your chest up and your elbows slightly bent the whole time. Do not turn the movement into a press by straightening your arms hard at the bottom.",
+      "hasRemoteImage": false
+    },
+    "tricepRopePushdown": {
+      "title": "Tricep Rope Pushdown",
+      "setup": "Face a high cable with a rope attachment. Grip the rope with your elbows tucked tight to your ribs and your forearms roughly parallel to the floor.",
+      "actionPhase": "Press the rope down until your arms are straight, spread the ends slightly at the bottom, then bend your elbows to return under control.",
+      "formCheck": "Keep your upper arms still beside your body. Do not lean over the stack or let your elbows drift forward.",
+      "hasRemoteImage": false
+    },
+    "reverseGripTricepPushdown": {
+      "title": "Reverse-Grip Tricep Pushdown",
+      "setup": "Face a high cable with a straight bar and take an underhand grip. Stand tall with your elbows pinned to your sides.",
+      "actionPhase": "Straighten your elbows to press the bar down until your arms are straight, squeeze, then bend your elbows back without letting them drift forward.",
+      "formCheck": "Keep your wrists neutral and your upper arms still. Do not use your shoulders or lean into the movement to move the weight.",
+      "hasRemoteImage": false
+    },
+    "seatedLowRow": {
+      "title": "Seated Low Row",
+      "setup": "Sit tall at the low row station with your feet on the platform, knees slightly bent, and your chest up. Grab the handle with your arms extended toward the stack.",
+      "actionPhase": "Pull the handle toward your lower belly, driving your elbows back and squeezing your shoulder blades. Return with control.",
+      "formCheck": "Keep your torso still and your chest lifted. Do not lean far back or use your lower back to yank the weight.",
+      "hasRemoteImage": false
+    },
+    "plateLoadedRow": {
+      "title": "Plate-Loaded Row",
+      "setup": "Set a plate-loaded row machine to a comfortable starting weight. Sit with your chest on the pad if it has one, feet flat, and a neutral grip on the handles.",
+      "actionPhase": "Pull the handles toward your ribs, leading with your elbows and squeezing your shoulder blades. Lower until your arms are almost straight.",
+      "formCheck": "Keep your shoulders down and your spine neutral. Do not shrug or let your chest lift off the pad to finish the rep.",
+      "hasRemoteImage": false
+    },
+    "dumbbellShrugs": {
+      "title": "Dumbbell Shrugs",
+      "setup": "Stand tall with a dumbbell in each hand at your sides, palms facing your body. Keep your arms straight and your core braced.",
+      "actionPhase": "Lift your shoulders straight up toward your ears as high as you can, pause, then lower them slowly back to the start.",
+      "formCheck": "Move only at your shoulder blades. Do not bend your elbows or roll your shoulders forward to make the weight move.",
+      "hasRemoteImage": false
+    },
+    "cableExternalRotation": {
+      "title": "Cable External Rotation",
+      "setup": "Set a cable at elbow height with a single handle. Stand sideways to the stack with your upper arm pinned to your side and your elbow bent to 90 degrees.",
+      "actionPhase": "Rotate your forearm away from your body, keeping your elbow at your side, then return slowly without letting your shoulder roll forward.",
+      "formCheck": "Use a light weight and move only at the shoulder. Do not lean away from the cable or swing your torso to get the handle back.",
+      "hasRemoteImage": false
     }
   }
 }
