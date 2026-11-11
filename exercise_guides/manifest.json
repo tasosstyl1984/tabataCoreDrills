@@ -1,8 +1,8 @@
 {
-    "version": 165,
-    "updatedAtMs": 1794436087711,
+    "version": 166,
+    "updatedAtMs": 1794439765100,
     "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-    "totalBytes": 24418094,
+    "totalBytes": 24313748,
     "images": [
         {
             "id": "abs",
@@ -667,8 +667,8 @@
         {
             "id": "tricepPushdown",
             "file": "exercise_guides/tricepPushdown.webp",
-            "bytes": 254088,
-            "sha256": "40f6a2dc60e2a95d"
+            "bytes": 149742,
+            "sha256": "c3792aea06d1b532"
         },
         {
             "id": "tuckJumps",
