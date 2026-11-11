@@ -1,8 +1,8 @@
 {
-  "version": 160,
-  "updatedAtMs": 1794434676838,
+  "version": 161,
+  "updatedAtMs": 1794434768836,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 10555566,
+  "totalBytes": 10718840,
   "images": [
     {
       "id": "abs",
@@ -711,6 +711,12 @@
       "file": "exercise_guides/plateLoadedRow.webp",
       "bytes": 186408,
       "sha256": "7dd5b1d0ee2cad82"
+    },
+    {
+      "id": "seatedLowRow",
+      "file": "exercise_guides/seatedLowRow.webp",
+      "bytes": 163274,
+      "sha256": "b939d0fda873ae56"
     }
   ]
 }
