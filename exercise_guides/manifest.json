@@ -1,8 +1,8 @@
 {
-    "version": 158,
-    "updatedAtMs": 1794434169052,
+    "version": 159,
+    "updatedAtMs": 1794434358442,
     "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-    "totalBytes": 23734308,
+    "totalBytes": 23894372,
     "images": [
         {
             "id": "abs",
@@ -699,6 +699,12 @@
             "file": "exercise_guides/dumbbellShrugs.webp",
             "bytes": 148480,
             "sha256": "433f345377457c88"
+        },
+        {
+            "id": "reverseGripTricepPushdown",
+            "file": "exercise_guides/reverseGripTricepPushdown.webp",
+            "bytes": 160064,
+            "sha256": "72f8ec31d47e2aec"
         }
     ]
 }
