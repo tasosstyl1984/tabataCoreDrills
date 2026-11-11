@@ -1,8 +1,8 @@
 {
-    "version": 157,
-    "updatedAtMs": 1794434130947,
+    "version": 158,
+    "updatedAtMs": 1794434169052,
     "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-    "totalBytes": 23585828,
+    "totalBytes": 23734308,
     "images": [
         {
             "id": "abs",
@@ -693,6 +693,12 @@
             "file": "exercise_guides/cableExternalRotation.webp",
             "bytes": 156154,
             "sha256": "19d745a78cb394f1"
+        },
+        {
+            "id": "dumbbellShrugs",
+            "file": "exercise_guides/dumbbellShrugs.webp",
+            "bytes": 148480,
+            "sha256": "433f345377457c88"
         }
     ]
 }
