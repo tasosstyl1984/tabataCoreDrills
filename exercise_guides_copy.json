@@ -31,7 +31,7 @@
       "hasRemoteImage": true
     },
     "benchPress": {
-      "title": "Barbell Chest Press",
+      "title": "Barbell Flat Bench",
       "setup": "Lie on the bench with your eyes under the bar. Plant your feet, pinch your shoulder blades together, and grip the bar just outside your shoulders.",
       "actionPhase": "Lift the bar off the rack, lower it to the middle of your chest with your elbows near your sides, then press it straight up until your arms are straight.",
       "formCheck": "Keep your hips on the bench and your wrists over your elbows. Do not bounce the bar off your chest or let your elbows flare straight out.",
@@ -101,7 +101,7 @@
       "hasRemoteImage": true
     },
     "chestFlies": {
-      "title": "Chest Flies",
+      "title": "Dumbbell Chest Flies",
       "setup": "Lie on a flat bench with your feet planted and a dumbbell in each hand over your chest. Keep a small bend in your elbows.",
       "actionPhase": "Open your arms out to the sides until you feel a stretch across your chest, about in line with the bench. Sweep the weights back together over your chest and squeeze.",
       "formCheck": "Keep the same soft elbow bend the whole way. Do not turn it into a press, and do not drop the weights below the bench.",
@@ -227,7 +227,7 @@
       "hasRemoteImage": true
     },
     "frontRaises": {
-      "title": "Front Raise",
+      "title": "Dumbbell Front Raise",
       "setup": "Stand tall with a dumbbell in each hand in front of your thighs, palms facing your legs. Keep a tiny bend in your elbows.",
       "actionPhase": "Raise the dumbbells forward until your hands are about shoulder height, then lower them slowly back to your thighs.",
       "formCheck": "Keep your body still and lift with your shoulders. Do not swing the weights or lean back to help them up.",
@@ -290,7 +290,7 @@
       "hasRemoteImage": true
     },
     "inclineFlies": {
-      "title": "Incline Fly",
+      "title": "Dumbbell Incline Fly",
       "setup": "Lie on a moderate incline with a dumbbell in each hand over your upper chest and a small bend in your elbows. Plant your feet.",
       "actionPhase": "Open your arms out to the sides until you feel a stretch in your upper chest, then sweep the weights back together and squeeze.",
       "formCheck": "Keep the same soft elbow bend the whole way. Do not drop the weights toward your stomach or turn the move into a press.",
@@ -332,7 +332,7 @@
       "hasRemoteImage": true
     },
     "kettlebellGobletSquat": {
-      "title": "Goblet Squat",
+      "title": "Kettlebell Goblet Squat",
       "setup": "Hold the kettlebell at your chest by the horns, with your elbows pointing down. Set your feet about shoulder-width apart and turn your toes out a little.",
       "actionPhase": "Sit your hips down between your heels until your hips drop to about knee height, then drive through your feet to stand.",
       "formCheck": "Keep your chest up, your heels down, and your knees tracking over your toes. Do not let the bell pull you forward.",
@@ -381,7 +381,7 @@
       "hasRemoteImage": true
     },
     "lateralRaises": {
-      "title": "Lateral Raises",
+      "title": "Dumbbell Lateral Raises",
       "setup": "Stand tall with a dumbbell in each hand at your sides and your palms facing in. Keep a small bend in your elbows.",
       "actionPhase": "Raise both arms out to the sides until your hands are about shoulder height, then lower them slowly.",
       "formCheck": "Lead with your elbows and keep your body still. Do not swing the weights or shrug your shoulders up to your ears.",
@@ -584,35 +584,35 @@
       "hasRemoteImage": true
     },
     "declineBench": {
-      "title": "Decline Bench Press",
+      "title": "Barbell Declined Bench Press",
       "setup": "Lie on a decline bench with your feet locked in and your eyes under the bar. Pinch your shoulder blades into the pad and grip the bar just outside your shoulders.",
       "actionPhase": "Lift the bar off the rack, lower it to your lower chest with your elbows near your sides, then press it up until your arms are straight.",
       "formCheck": "Keep your hips on the pad and your wrists over your elbows. Do not bounce the bar off your chest or let your elbows flare straight out.",
       "hasRemoteImage": true
     },
     "legPress": {
-      "title": "Leg Press",
+      "title": "Machine Leg Press",
       "setup": "Sit in the leg press with your lower back and hips flat on the pad. Place your feet about shoulder-width apart on the platform.",
       "actionPhase": "Unlock the sled and bend your knees until your thighs are near the pad, then press through the middle of your feet until your legs are almost straight.",
       "formCheck": "Keep your lower back on the pad the whole way. Do not lock your knees hard or let them cave in.",
       "hasRemoteImage": true
     },
     "legExtension": {
-      "title": "Leg Extension",
+      "title": "Machine Leg Extension",
       "setup": "Sit tall with your back against the pad and the roller on your lower shins. Hold the handles so your hips stay down.",
       "actionPhase": "Straighten both knees until your legs are straight, pause, then lower the weight slowly.",
       "formCheck": "Move only at your knees. Do not swing the weight or lift your hips off the seat.",
       "hasRemoteImage": true
     },
     "legCurl": {
-      "title": "Leg Curl",
+      "title": "Machine Leg Curl",
       "setup": "Lie or sit in the curl machine with the pad just above your heels and your hips held in place.",
       "actionPhase": "Curl your heels toward your glutes as far as you can, pause, then lower the weight slowly.",
       "formCheck": "Keep your hips down and still. Do not yank with your lower back to finish the curl.",
       "hasRemoteImage": true
     },
     "hackSquat": {
-      "title": "Hack Squat",
+      "title": "Machine Hack Squat",
       "setup": "Stand on the platform with your back and shoulders against the pads and your feet about shoulder-width apart, slightly forward.",
       "actionPhase": "Unlock the sled and lower until your thighs are about level, then drive through the middle of your feet to stand.",
       "formCheck": "Keep your heels down and your knees over your toes. Do not bounce out of the bottom or let your lower back peel off the pad.",
@@ -633,14 +633,14 @@
       "hasRemoteImage": true
     },
     "hipAbductor": {
-      "title": "Hip Abductor",
+      "title": "Machine Hip Abductor",
       "setup": "Sit tall with the pads on the outsides of your knees or thighs and your back against the pad.",
       "actionPhase": "Push your legs apart against the pads, pause, then bring them back together slowly.",
       "formCheck": "Keep your lower back on the pad and move from your hips. Do not lean your body to help the pads move.",
       "hasRemoteImage": true
     },
     "hipAdductor": {
-      "title": "Hip Adductor",
+      "title": "Machine Hip Adductor",
       "setup": "Sit tall with the pads on the insides of your knees or thighs and your back against the pad.",
       "actionPhase": "Squeeze your legs together, pause, then let the pads open slowly.",
       "formCheck": "Keep your hips planted and the squeeze smooth. Do not yank with your torso or bounce at the end.",
@@ -724,14 +724,14 @@
       "hasRemoteImage": true
     },
     "facePull": {
-      "title": "Face Pull",
+      "title": "Cable Face Pull",
       "setup": "Set a rope at about upper-chest height, step back, and hold the rope with your arms straight. Stand tall with your core tight.",
       "actionPhase": "Pull the rope toward your face and turn your hands out so they finish beside your ears. Let your arms straighten slowly.",
       "formCheck": "Pull with your upper back and the back of your shoulders. Do not shrug or lean back to yank the rope.",
       "hasRemoteImage": true
     },
     "tricepPushdown": {
-      "title": "Tricep Pushdown",
+      "title": "Cable Tricep Pushdown",
       "setup": "Stand tall at a high cable with your elbows pinned to your sides and your hands on the bar or rope.",
       "actionPhase": "Straighten your elbows until your arms are straight, squeeze, then bend them back without letting your elbows drift forward.",
       "formCheck": "Keep your upper arms still beside your ribs. Do not lean into the stack or use your shoulders to push the weight down.",
@@ -773,7 +773,7 @@
       "hasRemoteImage": true
     },
     "aroundTheWorld": {
-      "title": "Around the World",
+      "title": "Plate Around the World",
       "setup": "Stand tall holding a plate at the center of your chest, with a small bend in your elbows and your ribs down.",
       "actionPhase": "Circle the plate around your head in a smooth path, then bring it back to your chest. Go the other way on the next rep.",
       "formCheck": "Keep your neck long and your hips still. Move from your shoulders, not by twisting your lower back.",
@@ -801,14 +801,14 @@
       "hasRemoteImage": true
     },
     "tricepRopePushdown": {
-      "title": "Tricep Rope Pushdown",
+      "title": "Cable Tricep Rope Pushdown",
       "setup": "Face a high cable with a rope attachment. Grip the rope with your elbows tucked tight to your ribs and your forearms roughly parallel to the floor.",
       "actionPhase": "Press the rope down until your arms are straight, spread the ends slightly at the bottom, then bend your elbows to return under control.",
       "formCheck": "Keep your upper arms still beside your body. Do not lean over the stack or let your elbows drift forward.",
       "hasRemoteImage": true
     },
     "reverseGripTricepPushdown": {
-      "title": "Reverse-Grip Tricep Pushdown",
+      "title": "Cable Reverse-Grip Pushdown",
       "setup": "Face a high cable with a straight bar and take an underhand grip. Stand tall with your elbows pinned to your sides.",
       "actionPhase": "Straighten your elbows to press the bar down until your arms are straight, squeeze, then bend your elbows back without letting them drift forward.",
       "formCheck": "Keep your wrists neutral and your upper arms still. Do not use your shoulders or lean into the movement to move the weight.",
@@ -841,6 +841,13 @@
       "actionPhase": "Rotate your forearm away from your body, keeping your elbow at your side, then return slowly without letting your shoulder roll forward.",
       "formCheck": "Use a light weight and move only at the shoulder. Do not lean away from the cable or swing your torso to get the handle back.",
       "hasRemoteImage": true
+    },
+    "barbellInclineBench": {
+      "title": "Barbell Inclined Bench Press",
+      "setup": "Lie on an incline bench with your feet planted and your eyes under the bar. Pinch your shoulder blades into the pad and grip the bar just outside your shoulders.",
+      "actionPhase": "Lift the bar off the rack, lower it to your upper chest with your elbows near your sides, then press it up until your arms are straight.",
+      "formCheck": "Keep your hips on the pad and your wrists over your elbows. Do not bounce the bar off your chest or let your elbows flare straight out.",
+      "hasRemoteImage": false
     }
   }
 }

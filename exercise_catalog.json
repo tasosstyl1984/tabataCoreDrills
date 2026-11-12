@@ -119,7 +119,7 @@
     },
     {
       "id": "aroundTheWorld",
-      "label": "Around the world",
+      "label": "Plate around the world",
       "group": "Strength",
       "movement": "aroundTheWorld",
       "equipment": [
@@ -301,7 +301,7 @@
     },
     {
       "id": "lateralRaises",
-      "label": "Lateral raises",
+      "label": "DB lateral raises",
       "group": "Dumbbell",
       "movement": "lateralRaise",
       "equipment": [
@@ -310,7 +310,7 @@
     },
     {
       "id": "frontRaises",
-      "label": "Front raise",
+      "label": "DB front raise",
       "group": "Dumbbell",
       "movement": "frontRaises",
       "equipment": [
@@ -404,7 +404,11 @@
     },
     {
       "id": "benchPress",
+<<<<<<< Updated upstream
       "label": "Barbell chest press",
+=======
+      "label": "BB flat bench",
+>>>>>>> Stashed changes
       "group": "Chest",
       "movement": "chestPress",
       "equipment": [
@@ -425,8 +429,24 @@
       ]
     },
     {
+      "id": "barbellInclineBench",
+      "label": "BB inclined bench press",
+      "group": "Chest",
+      "movement": "barbellInclineBench",
+      "equipment": [
+        "Barbell",
+        "weight plates",
+        "incline bench",
+        "rack"
+      ]
+    },
+    {
       "id": "declineBench",
+<<<<<<< Updated upstream
       "label": "Decline bench press",
+=======
+      "label": "BB declined bench press",
+>>>>>>> Stashed changes
       "group": "Chest",
       "movement": "declineBench",
       "equipment": [
@@ -448,7 +468,7 @@
     },
     {
       "id": "chestFlies",
-      "label": "Chest flies",
+      "label": "DB chest flies",
       "group": "Chest",
       "movement": "chestFly",
       "equipment": [
@@ -457,7 +477,7 @@
     },
     {
       "id": "inclineFlies",
-      "label": "Incline fly",
+      "label": "DB incline fly",
       "group": "Chest",
       "movement": "inclineFlies",
       "equipment": [
@@ -477,7 +497,7 @@
     },
     {
       "id": "legPress",
-      "label": "Leg press",
+      "label": "Mach. leg press",
       "group": "Machines",
       "movement": "legPress",
       "equipment": [
@@ -486,7 +506,7 @@
     },
     {
       "id": "legExtension",
-      "label": "Leg extension",
+      "label": "Mach. leg extension",
       "group": "Machines",
       "movement": "legExtension",
       "equipment": [
@@ -495,7 +515,7 @@
     },
     {
       "id": "legCurl",
-      "label": "Leg curl",
+      "label": "Mach. leg curl",
       "group": "Machines",
       "movement": "legCurl",
       "equipment": [
@@ -504,7 +524,11 @@
     },
     {
       "id": "hackSquat",
+<<<<<<< Updated upstream
       "label": "Squats",
+=======
+      "label": "Mach. hack squat",
+>>>>>>> Stashed changes
       "group": "Machines",
       "movement": "squat",
       "equipment": [
@@ -531,7 +555,7 @@
     },
     {
       "id": "hipAbductor",
-      "label": "Hip abductor",
+      "label": "Mach. hip abductor",
       "group": "Machines",
       "movement": "hipAbductor",
       "equipment": [
@@ -540,7 +564,7 @@
     },
     {
       "id": "hipAdductor",
-      "label": "Hip adductor",
+      "label": "Mach. hip adductor",
       "group": "Machines",
       "movement": "hipAdductor",
       "equipment": [
@@ -661,7 +685,7 @@
     },
     {
       "id": "facePull",
-      "label": "Face pull",
+      "label": "Cable face pull",
       "group": "Machines",
       "movement": "facePull",
       "equipment": [
@@ -671,7 +695,7 @@
     },
     {
       "id": "tricepPushdown",
-      "label": "Tricep pushdown",
+      "label": "Cable tricep pushdown",
       "group": "Machines",
       "movement": "tricepPushdown",
       "equipment": [
@@ -740,7 +764,7 @@
     },
     {
       "id": "kettlebellGobletSquat",
-      "label": "Goblet squat",
+      "label": "KB goblet squat",
       "group": "Kettlebell",
       "movement": "squat",
       "equipment": [
@@ -1035,7 +1059,7 @@
     },
     {
       "id": "tricepRopePushdown",
-      "label": "Tricep rope pushdown",
+      "label": "Cable tricep rope pushdown",
       "group": "Machines",
       "movement": "tricepPushdown",
       "equipment": [
@@ -1045,7 +1069,11 @@
     },
     {
       "id": "reverseGripTricepPushdown",
+<<<<<<< Updated upstream
       "label": "Reverse-grip tricep pushdown",
+=======
+      "label": "Cable rev. grip pushdown",
+>>>>>>> Stashed changes
       "group": "Machines",
       "movement": "tricepPushdown",
       "equipment": [
