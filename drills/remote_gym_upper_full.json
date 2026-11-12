@@ -18,27 +18,27 @@
           {
             "workSeconds": 53,
             "restAfterSeconds": 75,
-            "activityId": "chestPressMachine"
-          },
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "chestPressMachine"
-          },
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "chestPressMachine"
-          },
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "chestPressMachine"
-          },
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
             "activityId": "cableChestPress"
+          },
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 75,
+            "activityId": "chestPressMachine"
+          },
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 75,
+            "activityId": "chestPressMachine"
+          },
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 75,
+            "activityId": "chestPressMachine"
+          },
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 75,
+            "activityId": "chestPressMachine"
           }
         ],
         "restAfterSetSeconds": 105
