@@ -108,7 +108,7 @@
       "hasRemoteImage": true
     },
     "concentrationCurls": {
-      "title": "Concentration Curls",
+      "title": "Dumbbell Concentration Curls",
       "setup": "Sit on a bench and lean forward so your working arm hangs inside your thigh. Brace the back of that upper arm against the inside of your leg.",
       "actionPhase": "Curl the dumbbell up toward your shoulder, squeeze, then lower it until your arm is almost straight.",
       "formCheck": "Keep your upper arm glued to your thigh. Do not swing the weight or lift your elbow off your leg.",
@@ -248,7 +248,7 @@
       "hasRemoteImage": true
     },
     "hammerCurls": {
-      "title": "Hammer Curls",
+      "title": "Dumbbell Hammer Curls",
       "setup": "Stand tall with a dumbbell in each hand, palms facing each other and thumbs pointing forward. Pin your elbows to your sides.",
       "actionPhase": "Curl the dumbbells up toward your shoulders without turning your wrists, then lower them slowly.",
       "formCheck": "Keep your elbows still beside your ribs. Do not swing your shoulders or let the weights drift forward.",
@@ -409,14 +409,14 @@
       "hasRemoteImage": true
     },
     "overheadTricepExtension": {
-      "title": "Triceps Extension",
+      "title": "Dumbbell Triceps Extension",
       "setup": "Stand tall and hold one weight overhead with both hands, arms straight and close to your ears.",
       "actionPhase": "Bend only your elbows to lower the weight behind your head, then straighten your arms to press it back up.",
       "formCheck": "Keep your upper arms still and your ribs down. Do not flare your elbows wide or arch your lower back.",
       "hasRemoteImage": true
     },
     "tricepKickbacks": {
-      "title": "Triceps Kickback",
+      "title": "Dumbbell Triceps Kickback",
       "setup": "Hinge at your hips with one hand and the same-side knee on a bench, and plant your free foot. Pin your working upper arm to your side with the elbow bent.",
       "actionPhase": "Keep that upper arm still and straighten your elbow until your forearm points back behind you. Bend the elbow to return.",
       "formCheck": "Move only at the elbow. Do not swing your upper arm or shrug your shoulder to lift the weight.",
@@ -458,14 +458,14 @@
       "hasRemoteImage": true
     },
     "renegadeRow": {
-      "title": "Renegade Row",
+      "title": "Dumbbell Renegade Row",
       "setup": "Hold a plank on two dumbbells with your hands under your shoulders and your feet set wider than your hips. Keep your body in one line.",
       "actionPhase": "Press one dumbbell into the floor and row the other up toward your ribs, then lower it. Switch sides.",
       "formCheck": "Keep your hips square to the floor. Do not twist or hike one hip as you row.",
       "hasRemoteImage": true
     },
     "reverseFly": {
-      "title": "Reverse Flies",
+      "title": "Dumbbell Reverse Fly",
       "setup": "Stand with your feet about hip-width apart and hinge forward until your back is flat and the dumbbells hang under your shoulders. Keep a small bend in your elbows.",
       "actionPhase": "Raise your arms out to the sides until they are about level with your back, squeezing your shoulder blades together. Lower the weights slowly.",
       "formCheck": "Keep your back angle still and lift from your upper back. Do not stand up or swing the weights to finish the rep.",
@@ -534,6 +534,13 @@
       "formCheck": "The foot on the box does the work. Do not push off the floor with your back toes or let the front knee cave in.",
       "hasRemoteImage": true
     },
+    "dumbbellStepUps": {
+      "title": "Dumbbell Step-Ups",
+      "setup": "Stand facing a box or bench with a dumbbell in each hand at your sides, and place one whole foot on top of the box. Keep your chest tall.",
+      "actionPhase": "Drive through the heel on the box to stand up, and let the other foot come up without pushing off the floor. Step back down with control and switch legs.",
+      "formCheck": "The foot on the box does the work. Do not push off the floor with your back toes, swing the dumbbells, or let the front knee cave in.",
+      "hasRemoteImage": false
+    },
     "bodyweightSumoSquats": {
       "title": "Sumo Squats",
       "setup": "Take a wide stance with your toes turned out and your hands together at your chest. Keep your chest up.",
@@ -570,14 +577,14 @@
       "hasRemoteImage": true
     },
     "arnoldPress": {
-      "title": "Seated Arnold Press",
+      "title": "Dumbbell Seated Arnold Press",
       "setup": "Sit tall on a bench with your feet flat and a dumbbell in each hand at shoulder height, palms facing you.",
       "actionPhase": "Press the weights up and turn your palms forward so they face away from you at the top. Reverse the turn as you lower them to your shoulders.",
       "formCheck": "Keep your ribs down and your back on the bench. Turn the weights smoothly, and do not shrug your shoulders to finish.",
       "hasRemoteImage": true
     },
     "standingArnoldPress": {
-      "title": "Dumbbell Arnold Press",
+      "title": "Dumbbell Standing Arnold Press",
       "setup": "Stand tall with a dumbbell in each hand at shoulder height, palms facing you, and your ribs down.",
       "actionPhase": "Press the weights up and turn your palms forward so they face away from you at the top. Reverse the turn as you lower them to your shoulders.",
       "formCheck": "Keep your glutes tight so you do not lean back. Turn the weights smoothly, and do not shrug your shoulders to finish.",
