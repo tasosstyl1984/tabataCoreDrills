@@ -132,6 +132,16 @@
       "group": "Strength",
       "movement": "stepUps",
       "equipment": [
+        "sturdy step",
+        "platform"
+      ]
+    },
+    {
+      "id": "dumbbellStepUps",
+      "label": "DB step-ups",
+      "group": "Strength",
+      "movement": "stepUps",
+      "equipment": [
         "Dumbbells",
         "sturdy step",
         "platform"
@@ -282,7 +292,7 @@
     },
     {
       "id": "hammerCurls",
-      "label": "Hammer curls",
+      "label": "DB hammer curls",
       "group": "Dumbbell",
       "movement": "hammerCurls",
       "equipment": [
@@ -291,7 +301,7 @@
     },
     {
       "id": "concentrationCurls",
-      "label": "Conc. curls",
+      "label": "DB conc. curls",
       "group": "Dumbbell",
       "movement": "concentrationCurls",
       "equipment": [
@@ -339,7 +349,7 @@
     },
     {
       "id": "reverseFly",
-      "label": "Reverse fly",
+      "label": "DB reverse fly",
       "group": "Dumbbell",
       "movement": "reverseFly",
       "equipment": [
@@ -348,7 +358,7 @@
     },
     {
       "id": "tricepKickbacks",
-      "label": "Triceps kickback",
+      "label": "DB triceps kickback",
       "group": "Dumbbell",
       "movement": "tricepKickbacks",
       "equipment": [
@@ -358,7 +368,7 @@
     },
     {
       "id": "overheadTricepExtension",
-      "label": "Triceps extension",
+      "label": "DB triceps extension",
       "group": "Dumbbell",
       "movement": "overheadTricepExtension",
       "equipment": [
@@ -367,7 +377,7 @@
     },
     {
       "id": "renegadeRow",
-      "label": "Renegade row",
+      "label": "DB renegade row",
       "group": "Dumbbell",
       "movement": "renegadeRow",
       "equipment": [
@@ -385,7 +395,7 @@
     },
     {
       "id": "arnoldPress",
-      "label": "Seated Arnold",
+      "label": "DB seated Arnold",
       "group": "Dumbbell",
       "movement": "arnoldPress",
       "equipment": [
@@ -395,7 +405,7 @@
     },
     {
       "id": "standingArnoldPress",
-      "label": "Standing Arnold",
+      "label": "DB standing Arnold",
       "group": "Dumbbell",
       "movement": "arnoldPress",
       "equipment": [
@@ -479,7 +489,7 @@
     },
     {
       "id": "pullover",
-      "label": "Pullover",
+      "label": "DB pullover",
       "group": "Chest",
       "movement": "pullover",
       "equipment": [
