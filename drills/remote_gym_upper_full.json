@@ -59,22 +59,12 @@
             "workSeconds": 53,
             "restAfterSeconds": 75,
             "activityId": "inclineBench"
-          },
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "inclineBench"
           }
         ],
         "restAfterSetSeconds": 105
       },
       {
         "rounds": [
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "declineBench"
-          },
           {
             "workSeconds": 53,
             "restAfterSeconds": 75,
