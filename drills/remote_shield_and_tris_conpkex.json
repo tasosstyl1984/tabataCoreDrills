@@ -129,11 +129,6 @@
             "workSeconds": 55,
             "restAfterSeconds": 75,
             "activityId": "tricepPushdown"
-          },
-          {
-            "workSeconds": 55,
-            "restAfterSeconds": 75,
-            "activityId": "tricepPushdown"
           }
         ],
         "restAfterSetSeconds": 60

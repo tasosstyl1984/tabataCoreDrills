@@ -1,6 +1,6 @@
 {
-  "version": 261,
-  "updatedAtMs": 1794469634923,
+  "version": 262,
+  "updatedAtMs": 1794469973230,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -306,7 +306,7 @@
       "id": "remote_shield_and_tris_conpkex",
       "name": "Shield and Tris Conplex",
       "file": "drills/remote_shield_and_tris_conpkex.json",
-      "updatedAtMs": 1794469633458,
+      "updatedAtMs": 1794469971772,
       "category": "classic",
       "description": "",
       "coverImage": "exercise_guides/latPulldown.webp",
