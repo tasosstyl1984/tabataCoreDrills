@@ -1,5 +1,5 @@
 {
-  "version": 9,
+  "version": 12,
   "updatedAtMs": 1794484800000,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "weeks": [
@@ -29,6 +29,21 @@
         "wed": "remote_hiit_strength_30",
         "thu": null,
         "fri": "remote_core_holds_40",
+        "sat": null,
+        "sun": null
+      }
+    },
+    {
+      "id": "remote_week_mon_thu_strength",
+      "name": "Mon/Wed Strength",
+      "description": "",
+      "updatedAtMs": 1794476045043,
+      "slots": {
+        "mon": "remote_gym_upper_full",
+        "tue": null,
+        "wed": "remote_shield_and_tris_conpkex",
+        "thu": null,
+        "fri": null,
         "sat": null,
         "sun": null
       }

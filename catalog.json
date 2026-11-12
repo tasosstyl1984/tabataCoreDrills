@@ -1,8 +1,30 @@
 {
-  "version": 252,
+  "version": 268,
   "updatedAtMs": 1794484800000,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
+    {
+      "id": "remote_gym_upper_full",
+      "name": "Armor and Arms Complex",
+      "file": "drills/remote_gym_upper_full.json",
+      "updatedAtMs": 1794471129130,
+      "category": "combos",
+      "description": "Chest Biceps & Rotor Cuff",
+      "coverImage": "plan_covers/remote_gym_upper_full_1794471117113.webp",
+      "activityIds": [
+        "chestPressMachine",
+        "inclineBench",
+        "declineBench",
+        "chestFlies",
+        "cableCrossover",
+        "hammerCurls",
+        "preacherCurl",
+        "cableCurl",
+        "cableExternalRotation"
+      ],
+      "coverImagePill": "plan_covers/remote_gym_upper_full_1794471117113.webp",
+      "coverImagePillAlign": -1
+    },
     {
       "id": "remote_back_to_basics",
       "name": "Back to Basics",
@@ -199,40 +221,6 @@
       "coverImagePillAlign": 0
     },
     {
-      "id": "remote_gym_upper_full",
-      "name": "Master Sotos",
-      "file": "drills/remote_gym_upper_full.json",
-      "updatedAtMs": 1794431469377,
-      "category": "upper",
-      "description": "Gym upper body by muscle group (17 Tabata sets total). Each set is one full lap through that block's exercises, timed for your rep counts (~4 s/rep). Chest: 4 sets × 5 moves; Triceps: 3 sets × 3 moves; Back & traps: 4 sets × 6 moves; Biceps: 3 sets × 3 moves; Shoulders: 3 sets × 4 moves. About 186 min work + rest (64 min work, 121 min rest), no warmup or cooldown.",
-      "coverImage": "exercise_guides/chestPressMachine.webp",
-      "activityIds": [
-        "chestPressMachine",
-        "inclineBench",
-        "declineBench",
-        "pecDeck",
-        "cableCrossover",
-        "tricepRopePushdown",
-        "overheadTricepExtension",
-        "reverseGripTricepPushdown",
-        "latPulldown",
-        "seatedLowRow",
-        "plateLoadedRow",
-        "dumbbellRow",
-        "pullUps",
-        "dumbbellShrugs",
-        "hammerCurls",
-        "preacherCurl",
-        "cableCurl",
-        "frontRaises",
-        "lateralRaises",
-        "shoulderPressMachine",
-        "cableExternalRotation"
-      ],
-      "coverImagePill": "exercise_guides/chestPressMachine.webp",
-      "coverImagePillAlign": -1
-    },
-    {
       "id": "remote_tyson",
       "name": "Rope Boxing Mix",
       "file": "drills/remote_tyson.json",
@@ -253,6 +241,31 @@
         "russianTwists"
       ],
       "coverImagePill": "plan_covers/remote_tyson_pill_1794323620995.webp",
+      "coverImagePillAlign": -1
+    },
+    {
+      "id": "remote_shield_and_tris_conpkex",
+      "name": "Shield and Tris Complex",
+      "file": "drills/remote_shield_and_tris_conpkex.json",
+      "updatedAtMs": 1794471154451,
+      "category": "combos",
+      "description": "",
+      "coverImage": "plan_covers/remote_shield_and_tris_conpkex_1794471070739.webp",
+      "activityIds": [
+        "latPulldown",
+        "seatedLowRow",
+        "dumbbellRow",
+        "pullUps",
+        "tricepPushdown",
+        "overheadTricepExtension",
+        "reverseGripTricepPushdown",
+        "frontRaises",
+        "lateralRaises",
+        "dumbbellShoulderPress",
+        "shoulderPressMachine",
+        "dumbbellShrugs"
+      ],
+      "coverImagePill": "plan_covers/remote_shield_and_tris_conpkex_1794471070739.webp",
       "coverImagePillAlign": -1
     },
     {

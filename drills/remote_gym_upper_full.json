@@ -1,9 +1,9 @@
 {
   "id": "remote_gym_upper_full",
-  "name": "Master Sotos",
+  "name": "Armor and Arms Complex",
   "createdAtMs": 1794431274748,
-  "sets": 17,
-  "repsPerSet": 5,
+  "sets": 9,
+  "repsPerSet": 4,
   "workSeconds": 53,
   "restBetweenRepsSeconds": 75,
   "restBetweenSetsSeconds": 105,
@@ -23,22 +23,17 @@
           {
             "workSeconds": 53,
             "restAfterSeconds": 75,
-            "activityId": "inclineBench"
+            "activityId": "chestPressMachine"
           },
           {
             "workSeconds": 53,
             "restAfterSeconds": 75,
-            "activityId": "declineBench"
+            "activityId": "chestPressMachine"
           },
           {
             "workSeconds": 53,
             "restAfterSeconds": 75,
-            "activityId": "pecDeck"
-          },
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "cableCrossover"
+            "activityId": "chestPressMachine"
           }
         ],
         "restAfterSetSeconds": 105
@@ -48,7 +43,7 @@
           {
             "workSeconds": 53,
             "restAfterSeconds": 75,
-            "activityId": "chestPressMachine"
+            "activityId": "inclineBench"
           },
           {
             "workSeconds": 53,
@@ -58,17 +53,12 @@
           {
             "workSeconds": 53,
             "restAfterSeconds": 75,
-            "activityId": "declineBench"
+            "activityId": "inclineBench"
           },
           {
             "workSeconds": 53,
             "restAfterSeconds": 75,
-            "activityId": "pecDeck"
-          },
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "cableCrossover"
+            "activityId": "inclineBench"
           }
         ],
         "restAfterSetSeconds": 105
@@ -78,12 +68,7 @@
           {
             "workSeconds": 53,
             "restAfterSeconds": 75,
-            "activityId": "chestPressMachine"
-          },
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "inclineBench"
+            "activityId": "declineBench"
           },
           {
             "workSeconds": 53,
@@ -93,12 +78,12 @@
           {
             "workSeconds": 53,
             "restAfterSeconds": 75,
-            "activityId": "pecDeck"
+            "activityId": "declineBench"
           },
           {
             "workSeconds": 53,
             "restAfterSeconds": 75,
-            "activityId": "cableCrossover"
+            "activityId": "declineBench"
           }
         ],
         "restAfterSetSeconds": 105
@@ -108,27 +93,22 @@
           {
             "workSeconds": 53,
             "restAfterSeconds": 75,
-            "activityId": "chestPressMachine"
+            "activityId": "chestFlies"
           },
           {
             "workSeconds": 53,
             "restAfterSeconds": 75,
-            "activityId": "inclineBench"
+            "activityId": "chestFlies"
           },
           {
             "workSeconds": 53,
             "restAfterSeconds": 75,
-            "activityId": "declineBench"
+            "activityId": "chestFlies"
           },
           {
             "workSeconds": 53,
             "restAfterSeconds": 75,
-            "activityId": "pecDeck"
-          },
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "cableCrossover"
+            "activityId": "chestFlies"
           }
         ],
         "restAfterSetSeconds": 120
@@ -138,217 +118,22 @@
           {
             "workSeconds": 53,
             "restAfterSeconds": 75,
-            "activityId": "tricepRopePushdown"
+            "activityId": "cableCrossover"
           },
           {
             "workSeconds": 53,
             "restAfterSeconds": 75,
-            "activityId": "overheadTricepExtension"
+            "activityId": "cableCrossover"
           },
           {
             "workSeconds": 53,
             "restAfterSeconds": 75,
-            "activityId": "reverseGripTricepPushdown"
-          }
-        ],
-        "restAfterSetSeconds": 105
-      },
-      {
-        "rounds": [
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "tricepRopePushdown"
+            "activityId": "cableCrossover"
           },
           {
             "workSeconds": 53,
             "restAfterSeconds": 75,
-            "activityId": "overheadTricepExtension"
-          },
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "reverseGripTricepPushdown"
-          }
-        ],
-        "restAfterSetSeconds": 105
-      },
-      {
-        "rounds": [
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "tricepRopePushdown"
-          },
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "overheadTricepExtension"
-          },
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "reverseGripTricepPushdown"
-          }
-        ],
-        "restAfterSetSeconds": 120
-      },
-      {
-        "rounds": [
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "latPulldown"
-          },
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "seatedLowRow"
-          },
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "plateLoadedRow"
-          },
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "dumbbellRow"
-          },
-          {
-            "workSeconds": 45,
-            "restAfterSeconds": 75,
-            "activityId": "pullUps"
-          },
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "dumbbellShrugs"
-          }
-        ],
-        "restAfterSetSeconds": 105
-      },
-      {
-        "rounds": [
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "latPulldown"
-          },
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "seatedLowRow"
-          },
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "plateLoadedRow"
-          },
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "dumbbellRow"
-          },
-          {
-            "workSeconds": 45,
-            "restAfterSeconds": 75,
-            "activityId": "pullUps"
-          },
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "dumbbellShrugs"
-          }
-        ],
-        "restAfterSetSeconds": 105
-      },
-      {
-        "rounds": [
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "latPulldown"
-          },
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "seatedLowRow"
-          },
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "plateLoadedRow"
-          },
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "dumbbellRow"
-          },
-          {
-            "workSeconds": 45,
-            "restAfterSeconds": 75,
-            "activityId": "pullUps"
-          },
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "dumbbellShrugs"
-          }
-        ],
-        "restAfterSetSeconds": 105
-      },
-      {
-        "rounds": [
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "latPulldown"
-          },
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "seatedLowRow"
-          },
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "plateLoadedRow"
-          },
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "dumbbellRow"
-          },
-          {
-            "workSeconds": 45,
-            "restAfterSeconds": 75,
-            "activityId": "pullUps"
-          },
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "dumbbellShrugs"
-          }
-        ],
-        "restAfterSetSeconds": 120
-      },
-      {
-        "rounds": [
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "hammerCurls"
-          },
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "preacherCurl"
-          },
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "cableCurl"
+            "activityId": "cableCrossover"
           }
         ],
         "restAfterSetSeconds": 105
@@ -363,7 +148,52 @@
           {
             "workSeconds": 53,
             "restAfterSeconds": 75,
+            "activityId": "hammerCurls"
+          },
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 75,
+            "activityId": "hammerCurls"
+          }
+        ],
+        "restAfterSetSeconds": 105
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 75,
             "activityId": "preacherCurl"
+          },
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 75,
+            "activityId": "preacherCurl"
+          },
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 75,
+            "activityId": "preacherCurl"
+          }
+        ],
+        "restAfterSetSeconds": 105
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 75,
+            "activityId": "cableCurl"
+          },
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 75,
+            "activityId": "cableCurl"
+          },
+          {
+            "workSeconds": 53,
+            "restAfterSeconds": 75,
+            "activityId": "cableCurl"
           },
           {
             "workSeconds": 53,
@@ -377,91 +207,21 @@
         "rounds": [
           {
             "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "hammerCurls"
-          },
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "preacherCurl"
-          },
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "cableCurl"
-          }
-        ],
-        "restAfterSetSeconds": 120
-      },
-      {
-        "rounds": [
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "frontRaises"
-          },
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "lateralRaises"
-          },
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "shoulderPressMachine"
-          },
-          {
-            "workSeconds": 45,
             "restAfterSeconds": 75,
             "activityId": "cableExternalRotation"
-          }
-        ],
-        "restAfterSetSeconds": 105
-      },
-      {
-        "rounds": [
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "frontRaises"
           },
           {
             "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "lateralRaises"
-          },
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "shoulderPressMachine"
-          },
-          {
-            "workSeconds": 45,
             "restAfterSeconds": 75,
             "activityId": "cableExternalRotation"
-          }
-        ],
-        "restAfterSetSeconds": 105
-      },
-      {
-        "rounds": [
-          {
-            "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "frontRaises"
           },
           {
             "workSeconds": 53,
             "restAfterSeconds": 75,
-            "activityId": "lateralRaises"
+            "activityId": "cableExternalRotation"
           },
           {
             "workSeconds": 53,
-            "restAfterSeconds": 75,
-            "activityId": "shoulderPressMachine"
-          },
-          {
-            "workSeconds": 45,
             "restAfterSeconds": 75,
             "activityId": "cableExternalRotation"
           }
@@ -470,8 +230,8 @@
       }
     ]
   },
-  "description": "Gym upper body by muscle group (17 Tabata sets total). Each set is one full lap through that block's exercises, timed for your rep counts (~4 s/rep). Chest: 4 sets × 5 moves; Triceps: 3 sets × 3 moves; Back & traps: 4 sets × 6 moves; Biceps: 3 sets × 3 moves; Shoulders: 3 sets × 4 moves. About 186 min work + rest (64 min work, 121 min rest), no warmup or cooldown.",
-  "coverImagePath": "exercise_guides/chestPressMachine.webp",
-  "coverImagePill": "exercise_guides/chestPressMachine.webp",
+  "description": "Chest Biceps & Rotor Cuff",
+  "coverImagePath": "plan_covers/remote_gym_upper_full_1794471117113.webp",
+  "coverImagePill": "plan_covers/remote_gym_upper_full_1794471117113.webp",
   "coverImagePillAlign": -1
 }
