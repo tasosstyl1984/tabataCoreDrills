@@ -1,6 +1,6 @@
 {
-  "version": 255,
-  "updatedAtMs": 1794444129199,
+  "version": 256,
+  "updatedAtMs": 1794468742202,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -25,18 +25,20 @@
       "id": "remote_gym_upper_full",
       "name": "Coach Sotos Upper",
       "file": "drills/remote_gym_upper_full.json",
-      "updatedAtMs": 1794444127763,
+      "updatedAtMs": 1794468740727,
       "category": "chest",
       "description": "Gym upper body!",
       "coverImage": "exercise_guides/chestPressMachine.webp",
       "activityIds": [
-        "cableChestPress",
         "chestPressMachine",
         "inclineBench",
         "declineBench",
-        "pecDeck",
-        "tricepRopePushdown",
-        "tricepPushdown"
+        "chestFlies",
+        "cableCrossover",
+        "hammerCurls",
+        "preacherCurl",
+        "cableCurl",
+        "cableExternalRotation"
       ],
       "coverImagePill": "exercise_guides/chestPressMachine.webp",
       "coverImagePillAlign": -1
