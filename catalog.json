@@ -1,6 +1,6 @@
 {
-  "version": 263,
-  "updatedAtMs": 1794470100605,
+  "version": 264,
+  "updatedAtMs": 1794471071811,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -304,12 +304,12 @@
     },
     {
       "id": "remote_shield_and_tris_conpkex",
-      "name": "Shield and Tris Conplex",
+      "name": "Shield and Tris Complex",
       "file": "drills/remote_shield_and_tris_conpkex.json",
-      "updatedAtMs": 1794469971772,
-      "category": "classic",
+      "updatedAtMs": 1794471070757,
+      "category": "combos",
       "description": "",
-      "coverImage": "exercise_guides/latPulldown.webp",
+      "coverImage": "plan_covers/remote_shield_and_tris_conpkex_1794471070739.webp",
       "activityIds": [
         "latPulldown",
         "seatedLowRow",

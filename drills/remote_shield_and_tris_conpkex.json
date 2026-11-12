@@ -1,6 +1,6 @@
 {
   "id": "remote_shield_and_tris_conpkex",
-  "name": "Shield and Tris Conplex",
+  "name": "Shield and Tris Complex",
   "createdAtMs": 1794469190813,
   "sets": 11,
   "repsPerSet": 4,
@@ -255,6 +255,6 @@
       }
     ]
   },
-  "coverImagePath": "exercise_guides/latPulldown.webp",
+  "coverImagePath": "plan_covers/remote_shield_and_tris_conpkex_1794471070739.webp",
   "coverImagePillAlign": 0
 }
