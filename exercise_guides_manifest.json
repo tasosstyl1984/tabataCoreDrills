@@ -1,8 +1,8 @@
 {
-  "version": 165,
-  "updatedAtMs": 1794439765100,
+  "version": 166,
+  "updatedAtMs": 1794470584217,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 11030280,
+  "totalBytes": 11185278,
   "images": [
     {
       "id": "abs",
@@ -199,8 +199,8 @@
     {
       "id": "declineBench",
       "file": "exercise_guides/declineBench.webp",
-      "bytes": 13396,
-      "sha256": "fde70f91b6ff390c"
+      "bytes": 168394,
+      "sha256": "7ae77a5a7e29cb25"
     },
     {
       "id": "dips",
