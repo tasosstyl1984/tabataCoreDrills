@@ -1,13 +1,13 @@
 {
-  "version": 265,
-  "updatedAtMs": 1794471118181,
+  "version": 266,
+  "updatedAtMs": 1794471130277,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
       "id": "remote_gym_upper_full",
       "name": "Armor and Arms Complex",
       "file": "drills/remote_gym_upper_full.json",
-      "updatedAtMs": 1794471117125,
+      "updatedAtMs": 1794471129130,
       "category": "combos",
       "description": "Chest Biceps & Rotor Cuff",
       "coverImage": "plan_covers/remote_gym_upper_full_1794471117113.webp",
@@ -22,7 +22,7 @@
         "cableCurl",
         "cableExternalRotation"
       ],
-      "coverImagePill": "exercise_guides/chestPressMachine.webp",
+      "coverImagePill": "plan_covers/remote_gym_upper_full_1794471117113.webp",
       "coverImagePillAlign": -1
     },
     {
