@@ -1,6 +1,6 @@
 {
-  "version": 257,
-  "updatedAtMs": 1794468846872,
+  "version": 258,
+  "updatedAtMs": 1794468965576,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -19,28 +19,6 @@
         "pushups"
       ],
       "coverImagePill": "plan_covers/remote_back_to_basics_pill_1794321929963.webp",
-      "coverImagePillAlign": -1
-    },
-    {
-      "id": "remote_gym_upper_full",
-      "name": "Chest Biceps & Rotor Cuff",
-      "file": "drills/remote_gym_upper_full.json",
-      "updatedAtMs": 1794468845546,
-      "category": "combos",
-      "description": "Chest Biceps & Rotor Cuff",
-      "coverImage": "exercise_guides/chestPressMachine.webp",
-      "activityIds": [
-        "chestPressMachine",
-        "inclineBench",
-        "declineBench",
-        "chestFlies",
-        "cableCrossover",
-        "hammerCurls",
-        "preacherCurl",
-        "cableCurl",
-        "cableExternalRotation"
-      ],
-      "coverImagePill": "exercise_guides/chestPressMachine.webp",
       "coverImagePillAlign": -1
     },
     {
@@ -495,6 +473,28 @@
         "tricepPushdown"
       ],
       "coverImagePill": "plan_covers/remote_start_upper_body_machines_pill_1794324242780.webp",
+      "coverImagePillAlign": -1
+    },
+    {
+      "id": "remote_gym_upper_full",
+      "name": "Torso & Arms Complex",
+      "file": "drills/remote_gym_upper_full.json",
+      "updatedAtMs": 1794468964266,
+      "category": "combos",
+      "description": "Chest Biceps & Rotor Cuff",
+      "coverImage": "exercise_guides/chestPressMachine.webp",
+      "activityIds": [
+        "chestPressMachine",
+        "inclineBench",
+        "declineBench",
+        "chestFlies",
+        "cableCrossover",
+        "hammerCurls",
+        "preacherCurl",
+        "cableCurl",
+        "cableExternalRotation"
+      ],
+      "coverImagePill": "exercise_guides/chestPressMachine.webp",
       "coverImagePillAlign": -1
     },
     {
