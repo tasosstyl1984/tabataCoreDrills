@@ -1,6 +1,6 @@
 {
-  "version": 11,
-  "updatedAtMs": 1794476046293,
+  "version": 12,
+  "updatedAtMs": 1794484800000,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "weeks": [
     {
@@ -9,26 +9,26 @@
       "description": "KB Boxing Complex",
       "updatedAtMs": 1794229441485,
       "slots": {
-        "mon": "remote_weighted_shadow_boxing_complex",
+        "mon": "remote_kb_boxing_complex",
         "tue": null,
-        "wed": "remote_weighted_shadow_boxing_complex",
+        "wed": "remote_kb_boxing_complex",
         "thu": null,
-        "fri": "remote_weighted_shadow_boxing_complex",
+        "fri": "remote_kb_boxing_complex",
         "sat": null,
         "sun": null
       }
     },
     {
       "id": "remote_week_core_basics",
-      "name": "Core Basics",
-      "description": "",
+      "name": "Core Holds",
+      "description": "Core Holds",
       "updatedAtMs": 1794089497437,
       "slots": {
-        "mon": "remote_core_basics",
+        "mon": "remote_core_holds_40",
         "tue": null,
         "wed": "remote_hiit_strength_30",
         "thu": null,
-        "fri": "remote_core_basics",
+        "fri": "remote_core_holds_40",
         "sat": null,
         "sun": null
       }

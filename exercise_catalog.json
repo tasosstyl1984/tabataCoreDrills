@@ -202,7 +202,7 @@
     },
     {
       "id": "bodyweightCalfRaises",
-      "label": "Calf raises",
+      "label": "BW calf raises",
       "group": "Strength",
       "movement": "calfRaise",
       "equipment": []
