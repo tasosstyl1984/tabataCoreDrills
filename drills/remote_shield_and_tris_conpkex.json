@@ -1,0 +1,30 @@
+{
+  "id": "remote_shield_and_tris_conpkex",
+  "name": "Shield and Tris Conpkex",
+  "createdAtMs": 1794469190813,
+  "sets": 1,
+  "repsPerSet": 1,
+  "workSeconds": 65,
+  "restBetweenRepsSeconds": 10,
+  "restBetweenSetsSeconds": 60,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 65,
+            "restAfterSeconds": 10,
+            "activityId": "latPulldown"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      }
+    ]
+  },
+  "coverImagePath": "exercise_guides/latPulldown.webp",
+  "coverImagePillAlign": 0
+}

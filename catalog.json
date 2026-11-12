@@ -1,6 +1,6 @@
 {
-  "version": 259,
-  "updatedAtMs": 1794469066419,
+  "version": 260,
+  "updatedAtMs": 1794469191736,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -301,6 +301,19 @@
       ],
       "coverImagePill": "plan_covers/remote_tasos_workout_pill_1794234511043.webp",
       "coverImagePillAlign": -1
+    },
+    {
+      "id": "remote_shield_and_tris_conpkex",
+      "name": "Shield and Tris Conpkex",
+      "file": "drills/remote_shield_and_tris_conpkex.json",
+      "updatedAtMs": 1794469190813,
+      "category": "classic",
+      "description": "",
+      "coverImage": "exercise_guides/latPulldown.webp",
+      "activityIds": [
+        "latPulldown"
+      ],
+      "coverImagePillAlign": 0
     },
     {
       "id": "remote_soccer_footnall_dribbling",
