@@ -1,6 +1,6 @@
 {
-  "version": 260,
-  "updatedAtMs": 1794469191736,
+  "version": 261,
+  "updatedAtMs": 1794469634923,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -304,14 +304,25 @@
     },
     {
       "id": "remote_shield_and_tris_conpkex",
-      "name": "Shield and Tris Conpkex",
+      "name": "Shield and Tris Conplex",
       "file": "drills/remote_shield_and_tris_conpkex.json",
-      "updatedAtMs": 1794469190813,
+      "updatedAtMs": 1794469633458,
       "category": "classic",
       "description": "",
       "coverImage": "exercise_guides/latPulldown.webp",
       "activityIds": [
-        "latPulldown"
+        "latPulldown",
+        "seatedLowRow",
+        "dumbbellRow",
+        "pullUps",
+        "tricepPushdown",
+        "overheadTricepExtension",
+        "reverseGripTricepPushdown",
+        "frontRaises",
+        "lateralRaises",
+        "dumbbellShoulderPress",
+        "shoulderPressMachine",
+        "dumbbellShrugs"
       ],
       "coverImagePillAlign": 0
     },

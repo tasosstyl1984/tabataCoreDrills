@@ -1,11 +1,11 @@
 {
   "id": "remote_shield_and_tris_conpkex",
-  "name": "Shield and Tris Conpkex",
+  "name": "Shield and Tris Conplex",
   "createdAtMs": 1794469190813,
-  "sets": 1,
-  "repsPerSet": 1,
-  "workSeconds": 65,
-  "restBetweenRepsSeconds": 10,
+  "sets": 11,
+  "repsPerSet": 4,
+  "workSeconds": 55,
+  "restBetweenRepsSeconds": 75,
   "restBetweenSetsSeconds": 60,
   "warmupEnabled": false,
   "warmupSeconds": 60,
@@ -16,9 +16,244 @@
       {
         "rounds": [
           {
-            "workSeconds": 65,
-            "restAfterSeconds": 10,
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
             "activityId": "latPulldown"
+          },
+          {
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
+            "activityId": "latPulldown"
+          },
+          {
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
+            "activityId": "latPulldown"
+          },
+          {
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
+            "activityId": "latPulldown"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
+            "activityId": "seatedLowRow"
+          },
+          {
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
+            "activityId": "seatedLowRow"
+          },
+          {
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
+            "activityId": "seatedLowRow"
+          },
+          {
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
+            "activityId": "seatedLowRow"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
+            "activityId": "dumbbellRow"
+          },
+          {
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
+            "activityId": "dumbbellRow"
+          },
+          {
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
+            "activityId": "dumbbellRow"
+          },
+          {
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
+            "activityId": "dumbbellRow"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
+            "activityId": "pullUps"
+          },
+          {
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
+            "activityId": "pullUps"
+          },
+          {
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
+            "activityId": "pullUps"
+          },
+          {
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
+            "activityId": "pullUps"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
+            "activityId": "tricepPushdown"
+          },
+          {
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
+            "activityId": "tricepPushdown"
+          },
+          {
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
+            "activityId": "tricepPushdown"
+          },
+          {
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
+            "activityId": "tricepPushdown"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
+            "activityId": "overheadTricepExtension"
+          },
+          {
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
+            "activityId": "overheadTricepExtension"
+          },
+          {
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
+            "activityId": "overheadTricepExtension"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
+            "activityId": "reverseGripTricepPushdown"
+          },
+          {
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
+            "activityId": "reverseGripTricepPushdown"
+          },
+          {
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
+            "activityId": "reverseGripTricepPushdown"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
+            "activityId": "frontRaises"
+          },
+          {
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
+            "activityId": "frontRaises"
+          },
+          {
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
+            "activityId": "frontRaises"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
+            "activityId": "lateralRaises"
+          },
+          {
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
+            "activityId": "lateralRaises"
+          },
+          {
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
+            "activityId": "lateralRaises"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
+            "activityId": "dumbbellShoulderPress"
+          },
+          {
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
+            "activityId": "shoulderPressMachine"
+          },
+          {
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
+            "activityId": "shoulderPressMachine"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
+            "activityId": "dumbbellShrugs"
+          },
+          {
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
+            "activityId": "dumbbellShrugs"
+          },
+          {
+            "workSeconds": 55,
+            "restAfterSeconds": 75,
+            "activityId": "dumbbellShrugs"
           }
         ],
         "restAfterSetSeconds": 60
