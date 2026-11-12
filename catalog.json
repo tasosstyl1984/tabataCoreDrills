@@ -1,6 +1,6 @@
 {
-  "version": 256,
-  "updatedAtMs": 1794468742202,
+  "version": 257,
+  "updatedAtMs": 1794468846872,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -23,11 +23,11 @@
     },
     {
       "id": "remote_gym_upper_full",
-      "name": "Coach Sotos Upper",
+      "name": "Chest Biceps & Rotor Cuff",
       "file": "drills/remote_gym_upper_full.json",
-      "updatedAtMs": 1794468740727,
-      "category": "chest",
-      "description": "Gym upper body!",
+      "updatedAtMs": 1794468845546,
+      "category": "combos",
+      "description": "Chest Biceps & Rotor Cuff",
       "coverImage": "exercise_guides/chestPressMachine.webp",
       "activityIds": [
         "chestPressMachine",

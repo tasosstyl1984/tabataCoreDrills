@@ -1,6 +1,6 @@
 {
   "id": "remote_gym_upper_full",
-  "name": "Coach Sotos Upper",
+  "name": "Chest Biceps & Rotor Cuff",
   "createdAtMs": 1794431274748,
   "sets": 9,
   "repsPerSet": 4,
@@ -240,7 +240,7 @@
       }
     ]
   },
-  "description": "Gym upper body!",
+  "description": "Chest Biceps & Rotor Cuff",
   "coverImagePath": "exercise_guides/chestPressMachine.webp",
   "coverImagePill": "exercise_guides/chestPressMachine.webp",
   "coverImagePillAlign": -1
