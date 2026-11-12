@@ -626,7 +626,7 @@
       "hasRemoteImage": true
     },
     "calfRaiseMachine": {
-      "title": "Calf Raise Machine",
+      "title": "Machine Calf Raise",
       "setup": "Place the balls of your feet on the platform with your heels hanging free, and set the pads on your shoulders or thighs.",
       "actionPhase": "Let your heels drop for a stretch, then rise onto your toes and squeeze at the top. Lower slowly.",
       "formCheck": "Use the full stretch and the full squeeze. Do not bounce, and keep your knees pointing forward.",
@@ -647,7 +647,7 @@
       "hasRemoteImage": true
     },
     "hipThrustMachine": {
-      "title": "Hip Thrust Machine",
+      "title": "Machine Hip Thrust",
       "setup": "Sit with your upper back against the pad, your feet flat, and the belt or pad across your hips.",
       "actionPhase": "Drive through your heels until your body makes a straight line from shoulders to knees, then lower with control.",
       "formCheck": "Finish by squeezing your glutes, not by arching your lower back. Keep your chin slightly tucked.",
@@ -682,7 +682,7 @@
       "hasRemoteImage": true
     },
     "chestPressMachine": {
-      "title": "Chest Press Machine",
+      "title": "Machine Chest Press",
       "setup": "Sit with your back flat on the pad, your feet planted, and the handles at mid-chest height. Pinch your shoulder blades into the pad.",
       "actionPhase": "Press the handles forward until your arms are almost straight, then bring them back until your elbows are just behind your body.",
       "formCheck": "Keep your shoulder blades on the pad and your shoulders down. Do not shrug or bounce out of the stretch.",
@@ -703,14 +703,14 @@
       "hasRemoteImage": true
     },
     "shoulderPressMachine": {
-      "title": "Shoulder Press Machine",
+      "title": "Machine Shoulder Press",
       "setup": "Sit with your back against the pad, your feet flat, and the handles near ear height. Keep your ribs down.",
       "actionPhase": "Press the handles up until your arms are almost straight, then lower them until your upper arms are about level with the floor.",
       "formCheck": "Keep your back on the pad and your shoulders down. Do not lean back or shrug at the top.",
       "hasRemoteImage": true
     },
     "cableFrontRaise": {
-      "title": "Cable Machine Front Raise",
+      "title": "Cable Front Raise",
       "setup": "Set the cable low and stand facing away from the stack, holding the handle in front of your thigh. Keep a small bend in your elbow and your ribs down.",
       "actionPhase": "Raise the handle forward until your hand is about shoulder height, then lower it slowly back to your thigh.",
       "formCheck": "Keep your body still and lift with your shoulder. Do not lean back or swing the cable to get the handle up.",

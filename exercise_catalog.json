@@ -84,7 +84,7 @@
     },
     {
       "id": "sumoSquats",
-      "label": "Sumo squats",
+      "label": "KB sumo squats",
       "group": "Kettlebell",
       "movement": "sumoSquat",
       "equipment": [
@@ -109,7 +109,7 @@
     },
     {
       "id": "barbellCleanPress",
-      "label": "Clean and press",
+      "label": "BB clean & press",
       "group": "Strength",
       "movement": "cleanAndPress",
       "equipment": [
@@ -193,7 +193,7 @@
     },
     {
       "id": "calfRaises",
-      "label": "Calf raises",
+      "label": "DB calf raises",
       "group": "Strength",
       "movement": "calfRaise",
       "equipment": [
@@ -202,7 +202,7 @@
     },
     {
       "id": "bodyweightCalfRaises",
-      "label": "Calf raises",
+      "label": "BW calf raises",
       "group": "Strength",
       "movement": "calfRaise",
       "equipment": []
@@ -273,7 +273,7 @@
     },
     {
       "id": "bicepCurls",
-      "label": "Biceps curl",
+      "label": "DB biceps curl",
       "group": "Dumbbell",
       "movement": "bicepsCurl",
       "equipment": [
@@ -319,7 +319,7 @@
     },
     {
       "id": "dumbbellShoulderPress",
-      "label": "Shoulder press",
+      "label": "DB shoulder press",
       "group": "Dumbbell",
       "movement": "shoulderPress",
       "equipment": [
@@ -385,7 +385,7 @@
     },
     {
       "id": "arnoldPress",
-      "label": "Arnold press",
+      "label": "Seated Arnold",
       "group": "Dumbbell",
       "movement": "arnoldPress",
       "equipment": [
@@ -395,7 +395,7 @@
     },
     {
       "id": "standingArnoldPress",
-      "label": "Arnold press",
+      "label": "Standing Arnold",
       "group": "Dumbbell",
       "movement": "arnoldPress",
       "equipment": [
@@ -404,7 +404,7 @@
     },
     {
       "id": "benchPress",
-      "label": "Barbell chest press",
+      "label": "BB chest press",
       "group": "Chest",
       "movement": "chestPress",
       "equipment": [
@@ -416,7 +416,7 @@
     },
     {
       "id": "inclineBench",
-      "label": "Dumbbell incline chest press",
+      "label": "DB incline press",
       "group": "Chest",
       "movement": "inclineBench",
       "equipment": [
@@ -426,7 +426,7 @@
     },
     {
       "id": "declineBench",
-      "label": "Decline bench press",
+      "label": "Decline bench",
       "group": "Chest",
       "movement": "declineBench",
       "equipment": [
@@ -504,7 +504,7 @@
     },
     {
       "id": "hackSquat",
-      "label": "Squats",
+      "label": "Hack squat",
       "group": "Machines",
       "movement": "squat",
       "equipment": [
@@ -522,7 +522,7 @@
     },
     {
       "id": "calfRaiseMachine",
-      "label": "Machine calves",
+      "label": "Mach. calf raise",
       "group": "Machines",
       "movement": "calfRaise",
       "equipment": [
@@ -549,7 +549,7 @@
     },
     {
       "id": "hipThrustMachine",
-      "label": "Hip thrust",
+      "label": "Mach. hip thrust",
       "group": "Machines",
       "movement": "gluteBridge",
       "equipment": [
@@ -595,7 +595,7 @@
     },
     {
       "id": "chestPressMachine",
-      "label": "Chest press",
+      "label": "Mach. chest press",
       "group": "Machines",
       "movement": "chestPress",
       "equipment": [
@@ -604,7 +604,7 @@
     },
     {
       "id": "cableChestPress",
-      "label": "Chest press",
+      "label": "Cable chest press",
       "group": "Machines",
       "movement": "chestPress",
       "equipment": [
@@ -632,7 +632,7 @@
     },
     {
       "id": "shoulderPressMachine",
-      "label": "Shoulder press",
+      "label": "Mach. shoulder press",
       "group": "Machines",
       "movement": "shoulderPress",
       "equipment": [
@@ -641,7 +641,7 @@
     },
     {
       "id": "cableFrontRaise",
-      "label": "Cable machine front raise",
+      "label": "Cable front raise",
       "group": "Machines",
       "movement": "frontRaises",
       "equipment": [
@@ -681,7 +681,7 @@
     },
     {
       "id": "cableCurl",
-      "label": "Biceps curl",
+      "label": "Cable curl",
       "group": "Machines",
       "movement": "bicepsCurl",
       "equipment": [
@@ -721,7 +721,7 @@
     },
     {
       "id": "cableKickback",
-      "label": "Glute kickback",
+      "label": "Cable kickback",
       "group": "Machines",
       "movement": "gluteKickback",
       "equipment": [
@@ -749,7 +749,7 @@
     },
     {
       "id": "kettlebellCleanPress",
-      "label": "Clean and press",
+      "label": "KB clean & press",
       "group": "Kettlebell",
       "movement": "cleanAndPress",
       "equipment": [
@@ -1045,7 +1045,7 @@
     },
     {
       "id": "reverseGripTricepPushdown",
-      "label": "Reverse-grip tricep pushdown",
+      "label": "Rev. grip pushdown",
       "group": "Machines",
       "movement": "tricepPushdown",
       "equipment": [
@@ -1073,7 +1073,7 @@
     },
     {
       "id": "dumbbellShrugs",
-      "label": "Dumbbell shrugs",
+      "label": "DB shrugs",
       "group": "Dumbbell",
       "movement": "shrug",
       "equipment": [
@@ -1082,7 +1082,7 @@
     },
     {
       "id": "cableExternalRotation",
-      "label": "Cable external rotation",
+      "label": "Cable ext. rot.",
       "group": "Machines",
       "movement": "externalRotation",
       "equipment": [
