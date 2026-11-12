@@ -28,12 +28,12 @@
           {
             "workSeconds": 53,
             "restAfterSeconds": 75,
-            "activityId": "cableChestPress"
+            "activityId": "chestPressMachine"
           },
           {
             "workSeconds": 53,
             "restAfterSeconds": 75,
-            "activityId": "dumbbellChestPress"
+            "activityId": "chestPressMachine"
           },
           {
             "workSeconds": 53,
@@ -98,7 +98,7 @@
           {
             "workSeconds": 53,
             "restAfterSeconds": 75,
-            "activityId": "cableCrossover"
+            "activityId": "declineBench"
           }
         ],
         "restAfterSetSeconds": 105
