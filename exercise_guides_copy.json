@@ -539,7 +539,7 @@
       "setup": "Stand facing a box or bench with a dumbbell in each hand at your sides, and place one whole foot on top of the box. Keep your chest tall.",
       "actionPhase": "Drive through the heel on the box to stand up, and let the other foot come up without pushing off the floor. Step back down with control and switch legs.",
       "formCheck": "The foot on the box does the work. Do not push off the floor with your back toes, swing the dumbbells, or let the front knee cave in.",
-      "hasRemoteImage": false
+      "hasRemoteImage": true
     },
     "bodyweightSumoSquats": {
       "title": "Sumo Squats",
@@ -854,7 +854,7 @@
       "setup": "Lie on an incline bench with your feet planted and your eyes under the bar. Pinch your shoulder blades into the pad and grip the bar just outside your shoulders.",
       "actionPhase": "Lift the bar off the rack, lower it to your upper chest with your elbows near your sides, then press it up until your arms are straight.",
       "formCheck": "Keep your hips on the pad and your wrists over your elbows. Do not bounce the bar off your chest or let your elbows flare straight out.",
-      "hasRemoteImage": false
+      "hasRemoteImage": true
     }
   }
 }
