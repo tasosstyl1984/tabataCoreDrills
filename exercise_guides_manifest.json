@@ -1,8 +1,8 @@
 {
-  "version": 167,
-  "updatedAtMs": 1794518500681,
+  "version": 168,
+  "updatedAtMs": 1794567302287,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 11368134,
+  "totalBytes": 11598760,
   "images": [
     {
       "id": "abs",
@@ -729,6 +729,12 @@
       "file": "exercise_guides/dumbbellStepUps.webp",
       "bytes": 182856,
       "sha256": "5491da18a253d88e"
+    },
+    {
+      "id": "barbellInclineBench",
+      "file": "exercise_guides/barbellInclineBench.webp",
+      "bytes": 230626,
+      "sha256": "2377b3429ed32ccc"
     }
   ]
 }
