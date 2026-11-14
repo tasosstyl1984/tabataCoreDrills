@@ -1,6 +1,6 @@
 {
-  "version": 268,
-  "updatedAtMs": 1794484800000,
+  "version": 269,
+  "updatedAtMs": 1794650605746,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -135,10 +135,10 @@
       "id": "remote_ladies_first",
       "name": "Ladies First",
       "file": "drills/remote_ladies_first.json",
-      "updatedAtMs": 1794322758858,
+      "updatedAtMs": 1794650604543,
       "category": "combos",
       "description": "Glutes and legs first — bird dog, lunges, bridges, squats, step-ups, and lateral raises — then abs, side plank, and dead bug.",
-      "coverImage": "plan_covers/remote_ladies_first_1794322758832.webp",
+      "coverImage": "plan_covers/remote_ladies_first_1794650604524.webp",
       "activityIds": [
         "birdDog",
         "lunges",
