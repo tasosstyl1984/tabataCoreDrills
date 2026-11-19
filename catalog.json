@@ -1,6 +1,6 @@
 {
-  "version": 269,
-  "updatedAtMs": 1795123200000,
+  "version": 270,
+  "updatedAtMs": 1795123300000,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -681,6 +681,20 @@
       "activityIds": [
         "rowing",
         "bike"
+      ]
+    },
+    {
+      "id": "remote_upper_bw",
+      "name": "Upper Bodyweight",
+      "file": "drills/remote_upper_bw.json",
+      "updatedAtMs": 1795123300000,
+      "category": "upper",
+      "description": "Push-ups, pike push-ups, inverted rows, and wide push-ups.",
+      "activityIds": [
+        "pushups",
+        "pikePushUp",
+        "invertedRow",
+        "widePushUp"
       ]
     }
   ]

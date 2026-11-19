@@ -436,6 +436,27 @@
       "formCheck": "Keep your hips and legs still and let your core resist the turn. Do not drop the plate or twist from your lower back.",
       "hasRemoteImage": true
     },
+    "invertedRow": {
+      "title": "Inverted Row",
+      "setup": "Set a bar about waist height, or hold a sturdy table edge. Lie underneath it, hands just outside your chest, body in a straight line from heels to head.",
+      "actionPhase": "Pull your chest up to the bar, driving your elbows back. Lower until your arms are straight and your shoulders stay packed.",
+      "formCheck": "Keep your hips up and your ribs down. Do not shrug, swing, or let your lower back sag.",
+      "hasRemoteImage": false
+    },
+    "pikePushUp": {
+      "title": "Pike Push-Up",
+      "setup": "Start on the floor with your hips high so your body makes an upside-down V. Hands are shoulder-width and your head is between your arms.",
+      "actionPhase": "Bend your elbows and lower the top of your head toward the floor. Press back up until your arms are straight.",
+      "formCheck": "Keep your hips high and your elbows tracking back. Do not drop into a regular push-up or let your head crash into the floor.",
+      "hasRemoteImage": false
+    },
+    "widePushUp": {
+      "title": "Wide Push-Up",
+      "setup": "Place your hands well outside your shoulders and set your body in a straight line from heels to head.",
+      "actionPhase": "Bend your elbows and lower your chest toward the floor. Press back up until your arms are straight.",
+      "formCheck": "Keep the wide hand position the whole set. Do not let your hips sag or your elbows flare past the hands.",
+      "hasRemoteImage": false
+    },
     "pullUps": {
       "title": "Pull-Ups",
       "setup": "Hang from a bar with your hands just outside your shoulders and your palms facing away. Let your shoulders settle down, away from your ears.",
