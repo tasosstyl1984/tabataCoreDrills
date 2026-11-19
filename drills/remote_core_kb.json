@@ -1,0 +1,199 @@
+{
+  "id": "remote_core_kb",
+  "name": "Core Kettlebell",
+  "createdAtMs": 1795123200000,
+  "sets": 6,
+  "repsPerSet": 5,
+  "workSeconds": 40,
+  "restBetweenRepsSeconds": 20,
+  "restBetweenSetsSeconds": 20,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "hollowHold"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "russianTwists"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "bicycleCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "deadBug"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "kettlebellHalo"
+          }
+        ],
+        "restAfterSetSeconds": 20
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "hollowHold"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "russianTwists"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "bicycleCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "deadBug"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "kettlebellHalo"
+          }
+        ],
+        "restAfterSetSeconds": 20
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "hollowHold"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "russianTwists"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "bicycleCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "deadBug"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "kettlebellHalo"
+          }
+        ],
+        "restAfterSetSeconds": 20
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "hollowHold"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "russianTwists"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "bicycleCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "deadBug"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "kettlebellHalo"
+          }
+        ],
+        "restAfterSetSeconds": 20
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "hollowHold"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "russianTwists"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "bicycleCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "deadBug"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "kettlebellHalo"
+          }
+        ],
+        "restAfterSetSeconds": 20
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "hollowHold"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "russianTwists"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "bicycleCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "deadBug"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "kettlebellHalo"
+          }
+        ],
+        "restAfterSetSeconds": 20
+      }
+    ]
+  },
+  "description": "Floor core with one kettlebell halo each round."
+}

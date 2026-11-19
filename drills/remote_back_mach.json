@@ -1,0 +1,179 @@
+{
+  "id": "remote_back_mach",
+  "name": "Back Machines",
+  "createdAtMs": 1795123200000,
+  "sets": 8,
+  "repsPerSet": 3,
+  "workSeconds": 40,
+  "restBetweenRepsSeconds": 20,
+  "restBetweenSetsSeconds": 20,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "latPulldown"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "seatedCableRow"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "assistedPullUp"
+          }
+        ],
+        "restAfterSetSeconds": 20
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "latPulldown"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "seatedCableRow"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "assistedPullUp"
+          }
+        ],
+        "restAfterSetSeconds": 20
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "latPulldown"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "seatedCableRow"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "assistedPullUp"
+          }
+        ],
+        "restAfterSetSeconds": 20
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "latPulldown"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "seatedCableRow"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "assistedPullUp"
+          }
+        ],
+        "restAfterSetSeconds": 20
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "latPulldown"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "seatedCableRow"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "assistedPullUp"
+          }
+        ],
+        "restAfterSetSeconds": 20
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "latPulldown"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "seatedCableRow"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "assistedPullUp"
+          }
+        ],
+        "restAfterSetSeconds": 20
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "latPulldown"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "seatedCableRow"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "assistedPullUp"
+          }
+        ],
+        "restAfterSetSeconds": 20
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "latPulldown"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "seatedCableRow"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "assistedPullUp"
+          }
+        ],
+        "restAfterSetSeconds": 20
+      }
+    ]
+  },
+  "description": "Lat pulldown, cable row, and assisted pull-ups."
+}

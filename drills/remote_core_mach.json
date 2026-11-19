@@ -1,0 +1,259 @@
+{
+  "id": "remote_core_mach",
+  "name": "Core Machines",
+  "createdAtMs": 1795123200000,
+  "sets": 8,
+  "repsPerSet": 5,
+  "workSeconds": 40,
+  "restBetweenRepsSeconds": 20,
+  "restBetweenSetsSeconds": 20,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "cableCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "cableCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "cableCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "cableCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "backExtension"
+          }
+        ],
+        "restAfterSetSeconds": 20
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "cableCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "cableCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "cableCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "cableCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "backExtension"
+          }
+        ],
+        "restAfterSetSeconds": 20
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "cableCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "cableCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "cableCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "cableCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "backExtension"
+          }
+        ],
+        "restAfterSetSeconds": 20
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "cableCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "cableCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "cableCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "cableCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "backExtension"
+          }
+        ],
+        "restAfterSetSeconds": 20
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "cableCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "cableCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "cableCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "cableCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "backExtension"
+          }
+        ],
+        "restAfterSetSeconds": 20
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "cableCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "cableCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "cableCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "cableCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "backExtension"
+          }
+        ],
+        "restAfterSetSeconds": 20
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "cableCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "cableCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "cableCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "cableCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "backExtension"
+          }
+        ],
+        "restAfterSetSeconds": 20
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "cableCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "cableCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "cableCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "cableCrunch"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "backExtension"
+          }
+        ],
+        "restAfterSetSeconds": 20
+      }
+    ]
+  },
+  "description": "Cable crunches with one back extension each round."
+}

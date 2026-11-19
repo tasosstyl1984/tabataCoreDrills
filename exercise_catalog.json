@@ -1,5 +1,5 @@
 {
-  "version": 11,
+  "version": 12,
   "updatedAtMs": 1794432000000,
   "activities": [
     {
@@ -63,6 +63,27 @@
       "equipment": [
         "Pull-up bar"
       ]
+    },
+    {
+      "id": "invertedRow",
+      "label": "Inverted row",
+      "group": "Strength",
+      "movement": "row",
+      "equipment": []
+    },
+    {
+      "id": "pikePushUp",
+      "label": "Pike push-up",
+      "group": "Strength",
+      "movement": "pikePushUp",
+      "equipment": []
+    },
+    {
+      "id": "widePushUp",
+      "label": "Wide push-up",
+      "group": "Strength",
+      "movement": "pushups",
+      "equipment": []
     },
     {
       "id": "squats",
@@ -212,7 +233,7 @@
     },
     {
       "id": "bodyweightCalfRaises",
-      "label": "BW calf raises",
+      "label": "Calf raises",
       "group": "Strength",
       "movement": "calfRaise",
       "equipment": []
