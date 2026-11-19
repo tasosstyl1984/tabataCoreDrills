@@ -1,0 +1,199 @@
+{
+  "id": "remote_legs_bw",
+  "name": "Legs Bodyweight",
+  "createdAtMs": 1795123200000,
+  "sets": 6,
+  "repsPerSet": 5,
+  "workSeconds": 30,
+  "restBetweenRepsSeconds": 15,
+  "restBetweenSetsSeconds": 15,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "squats"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "lunges"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "gluteBridge"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "stepUps"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "bodyweightCalfRaises"
+          }
+        ],
+        "restAfterSetSeconds": 15
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "squats"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "lunges"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "gluteBridge"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "stepUps"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "bodyweightCalfRaises"
+          }
+        ],
+        "restAfterSetSeconds": 15
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "squats"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "lunges"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "gluteBridge"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "stepUps"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "bodyweightCalfRaises"
+          }
+        ],
+        "restAfterSetSeconds": 15
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "squats"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "lunges"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "gluteBridge"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "stepUps"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "bodyweightCalfRaises"
+          }
+        ],
+        "restAfterSetSeconds": 15
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "squats"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "lunges"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "gluteBridge"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "stepUps"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "bodyweightCalfRaises"
+          }
+        ],
+        "restAfterSetSeconds": 15
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "squats"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "lunges"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "gluteBridge"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "stepUps"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "bodyweightCalfRaises"
+          }
+        ],
+        "restAfterSetSeconds": 15
+      }
+    ]
+  },
+  "description": "Squats, lunges, bridges, step-ups, and calf raises."
+}

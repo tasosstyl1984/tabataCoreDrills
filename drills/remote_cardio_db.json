@@ -1,0 +1,199 @@
+{
+  "id": "remote_cardio_db",
+  "name": "Cardio Dumbbells",
+  "createdAtMs": 1795123200000,
+  "sets": 6,
+  "repsPerSet": 5,
+  "workSeconds": 40,
+  "restBetweenRepsSeconds": 20,
+  "restBetweenSetsSeconds": 20,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "dumbbellRow"
+          }
+        ],
+        "restAfterSetSeconds": 20
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "dumbbellRow"
+          }
+        ],
+        "restAfterSetSeconds": 20
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "dumbbellRow"
+          }
+        ],
+        "restAfterSetSeconds": 20
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "dumbbellRow"
+          }
+        ],
+        "restAfterSetSeconds": 20
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "dumbbellRow"
+          }
+        ],
+        "restAfterSetSeconds": 20
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "jumpRope"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "dumbbellRow"
+          }
+        ],
+        "restAfterSetSeconds": 20
+      }
+    ]
+  },
+  "description": "Jump rope with one dumbbell row each round."
+}

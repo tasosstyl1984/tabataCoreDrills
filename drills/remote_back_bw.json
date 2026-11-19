@@ -1,0 +1,109 @@
+{
+  "id": "remote_back_bw",
+  "name": "Back Bodyweight",
+  "createdAtMs": 1795123200000,
+  "sets": 6,
+  "repsPerSet": 2,
+  "workSeconds": 30,
+  "restBetweenRepsSeconds": 15,
+  "restBetweenSetsSeconds": 15,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "pullUps"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "invertedRow"
+          }
+        ],
+        "restAfterSetSeconds": 15
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "pullUps"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "invertedRow"
+          }
+        ],
+        "restAfterSetSeconds": 15
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "pullUps"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "invertedRow"
+          }
+        ],
+        "restAfterSetSeconds": 15
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "pullUps"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "invertedRow"
+          }
+        ],
+        "restAfterSetSeconds": 15
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "pullUps"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "invertedRow"
+          }
+        ],
+        "restAfterSetSeconds": 15
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "pullUps"
+          },
+          {
+            "workSeconds": 30,
+            "restAfterSeconds": 15,
+            "activityId": "invertedRow"
+          }
+        ],
+        "restAfterSetSeconds": 15
+      }
+    ]
+  },
+  "description": "Pull-ups and inverted rows."
+}

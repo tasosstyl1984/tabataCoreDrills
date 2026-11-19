@@ -1,0 +1,169 @@
+{
+  "id": "remote_full_db",
+  "name": "Full Dumbbells",
+  "createdAtMs": 1795123200000,
+  "sets": 6,
+  "repsPerSet": 4,
+  "workSeconds": 40,
+  "restBetweenRepsSeconds": 20,
+  "restBetweenSetsSeconds": 20,
+  "warmupEnabled": false,
+  "warmupSeconds": 60,
+  "cooldownEnabled": false,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "dumbbellChestPress"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "dumbbellRow"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "kettlebellGobletSquat"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "lunges"
+          }
+        ],
+        "restAfterSetSeconds": 20
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "dumbbellChestPress"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "dumbbellRow"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "kettlebellGobletSquat"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "lunges"
+          }
+        ],
+        "restAfterSetSeconds": 20
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "dumbbellChestPress"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "dumbbellRow"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "kettlebellGobletSquat"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "lunges"
+          }
+        ],
+        "restAfterSetSeconds": 20
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "dumbbellChestPress"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "dumbbellRow"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "kettlebellGobletSquat"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "lunges"
+          }
+        ],
+        "restAfterSetSeconds": 20
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "dumbbellChestPress"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "dumbbellRow"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "kettlebellGobletSquat"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "lunges"
+          }
+        ],
+        "restAfterSetSeconds": 20
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "dumbbellChestPress"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "dumbbellRow"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "kettlebellGobletSquat"
+          },
+          {
+            "workSeconds": 40,
+            "restAfterSeconds": 20,
+            "activityId": "lunges"
+          }
+        ],
+        "restAfterSetSeconds": 20
+      }
+    ]
+  },
+  "description": "Dumbbell press and row with goblet squats and lunges."
+}
