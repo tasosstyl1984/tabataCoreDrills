@@ -1,0 +1,67 @@
+{
+  "id": "remote_tabata_bodyweight",
+  "name": "Tabata Bodyweight",
+  "createdAtMs": 1795209600000,
+  "sets": 1,
+  "repsPerSet": 8,
+  "workSeconds": 20,
+  "restBetweenRepsSeconds": 10,
+  "restBetweenSetsSeconds": 60,
+  "warmupEnabled": true,
+  "warmupSeconds": 60,
+  "cooldownEnabled": true,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "jumpingJacks"
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "squats"
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "lunges"
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "pushups"
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "abs"
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "squatThrusts"
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "mountainClimbers"
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "highKnees"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      }
+    ]
+  },
+  "description": "Classic Tabata timing with a full-body bodyweight rotation — strength, core, and cardio in four minutes of work.",
+  "coverImagePath": "plan_covers/default_tabata_classic.webp",
+  "coverImagePill": "plan_covers/default_tabata_classic_pill.webp",
+  "coverImagePillAlign": -1
+}

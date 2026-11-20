@@ -1,6 +1,6 @@
 {
-  "version": 270,
-  "updatedAtMs": 1795123300000,
+  "version": 271,
+  "updatedAtMs": 1795209600000,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -696,6 +696,48 @@
         "invertedRow",
         "widePushUp"
       ]
+    },
+    {
+      "id": "remote_tabata_bodyweight",
+      "name": "Tabata Bodyweight",
+      "file": "drills/remote_tabata_bodyweight.json",
+      "updatedAtMs": 1795209600000,
+      "category": "classic",
+      "description": "Classic Tabata timing with a full-body bodyweight rotation — strength, core, and cardio in four minutes of work.",
+      "coverImage": "plan_covers/default_tabata_classic.webp",
+      "activityIds": [
+        "jumpingJacks",
+        "squats",
+        "lunges",
+        "pushups",
+        "abs",
+        "squatThrusts",
+        "mountainClimbers",
+        "highKnees"
+      ],
+      "coverImagePill": "plan_covers/default_tabata_classic_pill.webp",
+      "coverImagePillAlign": -1
+    },
+    {
+      "id": "remote_tabata_power",
+      "name": "Tabata Power",
+      "file": "drills/remote_tabata_power.json",
+      "updatedAtMs": 1795209600000,
+      "category": "plyometrics",
+      "description": "Explosive Tabata — jumps, hops, and burpee-style work on strict 20/10 timing. Warm up well and land softly.",
+      "coverImage": "plan_covers/default_plyo_power_30.webp",
+      "activityIds": [
+        "squatJumps",
+        "burpees",
+        "tuckJumps",
+        "skaterHops",
+        "mountainClimbers",
+        "squatThrusts",
+        "highKnees",
+        "jumpingJacks"
+      ],
+      "coverImagePill": "plan_covers/default_plyo_power_30_pill.webp",
+      "coverImagePillAlign": -1
     }
   ]
 }

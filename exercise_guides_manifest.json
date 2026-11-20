@@ -1,6 +1,6 @@
 {
-  "version": 168,
-  "updatedAtMs": 1794567302287,
+  "version": 170,
+  "updatedAtMs": 1795213200000,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "totalBytes": 11598760,
   "images": [
@@ -625,8 +625,14 @@
     {
       "id": "squats",
       "file": "exercise_guides/squats.webp",
-      "bytes": 11064,
-      "sha256": "0ece75f92a9b3bd8"
+      "bytes": 318268,
+      "sha256": "7cc1e0663ed66279"
+    },
+    {
+      "id": "barbellSquats",
+      "file": "exercise_guides/barbellSquats.webp",
+      "bytes": 318268,
+      "sha256": "7cc1e0663ed66279"
     },
     {
       "id": "standingArnoldPress",

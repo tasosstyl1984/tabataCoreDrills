@@ -1,6 +1,6 @@
 {
-  "version": 12,
-  "updatedAtMs": 1794432000000,
+  "version": 14,
+  "updatedAtMs": 1795213200000,
   "activities": [
     {
       "id": "jumpRope",
@@ -90,10 +90,17 @@
       "label": "Squats",
       "group": "Strength",
       "movement": "squat",
+      "equipment": []
+    },
+    {
+      "id": "barbellSquats",
+      "label": "BB squats",
+      "group": "Strength",
+      "movement": "squat",
       "equipment": [
         "Barbell",
-        "weight plates",
-        "squat rack"
+        "Weight plates",
+        "Squat rack"
       ]
     },
     {
@@ -101,6 +108,13 @@
       "label": "Sumo squats",
       "group": "Strength",
       "movement": "sumoSquat",
+      "equipment": []
+    },
+    {
+      "id": "squatThrusts",
+      "label": "Squat thrusts",
+      "group": "General",
+      "movement": "burpees",
       "equipment": []
     },
     {

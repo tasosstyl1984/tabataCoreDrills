@@ -17,42 +17,50 @@
         "rounds": [
           {
             "workSeconds": 20,
-            "restAfterSeconds": 10
+            "restAfterSeconds": 10,
+            "activityId": "squats"
           },
           {
             "workSeconds": 20,
-            "restAfterSeconds": 10
+            "restAfterSeconds": 10,
+            "activityId": "squatThrusts"
           },
           {
             "workSeconds": 20,
-            "restAfterSeconds": 10
+            "restAfterSeconds": 10,
+            "activityId": "pushups"
           },
           {
             "workSeconds": 20,
-            "restAfterSeconds": 10
+            "restAfterSeconds": 10,
+            "activityId": "burpees"
           },
           {
             "workSeconds": 20,
-            "restAfterSeconds": 10
+            "restAfterSeconds": 10,
+            "activityId": "mountainClimbers"
           },
           {
             "workSeconds": 20,
-            "restAfterSeconds": 10
+            "restAfterSeconds": 10,
+            "activityId": "jumpingJacks"
           },
           {
             "workSeconds": 20,
-            "restAfterSeconds": 10
+            "restAfterSeconds": 10,
+            "activityId": "squatJumps"
           },
           {
             "workSeconds": 20,
-            "restAfterSeconds": 10
+            "restAfterSeconds": 10,
+            "activityId": "highKnees"
           }
         ],
         "restAfterSetSeconds": 60
       }
     ]
   },
-  "description": "The original 20-on / 10-off protocol — a short all-out cardio blast to build anaerobic capacity and mental grit.",
+  "description": "The original 20-on / 10-off protocol — eight all-out bodyweight stations with voice cues and rest-preview pictures.",
   "coverImagePath": "plan_covers/default_tabata_classic.webp",
   "coverImagePill": "plan_covers/default_tabata_classic_pill.webp",
   "coverImagePillAlign": -1

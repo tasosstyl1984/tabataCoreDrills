@@ -548,6 +548,13 @@
       "formCheck": "Keep your heels down and your knees tracking over your toes. Do not let your knees cave in or your lower back round at the bottom.",
       "hasRemoteImage": true
     },
+    "barbellSquats": {
+      "title": "Barbell Back Squats",
+      "setup": "Stand under the bar with your feet about shoulder-width apart and the bar across your upper back. Brace your core, pinch your shoulder blades together, and lift the bar out of the rack.",
+      "actionPhase": "Sit your hips down and back until your thighs are about level, then drive through the middle of your feet to stand tall.",
+      "formCheck": "Keep your chest up, heels down, and knees tracking over your toes. Do not let your lower back round or your knees cave in at the bottom.",
+      "hasRemoteImage": true
+    },
     "stepUps": {
       "title": "Step-Ups",
       "setup": "Stand facing a box or bench and place one whole foot on top of it. Keep your chest tall.",
@@ -561,6 +568,13 @@
       "actionPhase": "Drive through the heel on the box to stand up, and let the other foot come up without pushing off the floor. Step back down with control and switch legs.",
       "formCheck": "The foot on the box does the work. Do not push off the floor with your back toes, swing the dumbbells, or let the front knee cave in.",
       "hasRemoteImage": true
+    },
+    "squatThrusts": {
+      "title": "Squat Thrusts",
+      "setup": "Stand with your feet about shoulder-width apart and your arms by your sides.",
+      "actionPhase": "Squat down, plant your hands on the floor, and jump or step your feet back to a plank. Jump or step your feet in, then stand up—no push-up and no jump at the top unless you want more intensity.",
+      "formCheck": "Keep a straight line from head to heels in the plank. Land softly and stay controlled when you are tired.",
+      "hasRemoteImage": false
     },
     "bodyweightSumoSquats": {
       "title": "Sumo Squats",

@@ -1,0 +1,67 @@
+{
+  "id": "remote_tabata_power",
+  "name": "Tabata Power",
+  "createdAtMs": 1795209600000,
+  "sets": 1,
+  "repsPerSet": 8,
+  "workSeconds": 20,
+  "restBetweenRepsSeconds": 10,
+  "restBetweenSetsSeconds": 60,
+  "warmupEnabled": true,
+  "warmupSeconds": 90,
+  "cooldownEnabled": true,
+  "cooldownSeconds": 60,
+  "structuredPlan": {
+    "sets": [
+      {
+        "rounds": [
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "squatJumps"
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "burpees"
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "tuckJumps"
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "skaterHops"
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "mountainClimbers"
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "squatThrusts"
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "highKnees"
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "jumpingJacks"
+          }
+        ],
+        "restAfterSetSeconds": 60
+      }
+    ]
+  },
+  "description": "Explosive Tabata — jumps, hops, and burpee-style work on strict 20/10 timing. Warm up well and land softly.",
+  "coverImagePath": "plan_covers/default_plyo_power_30.webp",
+  "coverImagePill": "plan_covers/default_plyo_power_30_pill.webp",
+  "coverImagePillAlign": -1
+}
