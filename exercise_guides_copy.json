@@ -574,7 +574,7 @@
       "setup": "Stand with your feet about shoulder-width apart and your arms by your sides.",
       "actionPhase": "Squat down, plant your hands on the floor, and jump or step your feet back to a plank. Jump or step your feet in, then stand up—no push-up and no jump at the top unless you want more intensity.",
       "formCheck": "Keep a straight line from head to heels in the plank. Land softly and stay controlled when you are tired.",
-      "hasRemoteImage": false
+      "hasRemoteImage": true
     },
     "bodyweightSumoSquats": {
       "title": "Sumo Squats",
