@@ -1,6 +1,6 @@
 {
-  "version": 290,
-  "updatedAtMs": 1795516644872,
+  "version": 291,
+  "updatedAtMs": 1795516758630,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -218,13 +218,16 @@
       "id": "remote_core_mach",
       "name": "Core Machines",
       "file": "drills/remote_core_mach.json",
-      "updatedAtMs": 1795123200000,
+      "updatedAtMs": 1795516757328,
       "category": "core",
       "description": "Cable crunches with one back extension each round.",
+      "coverImage": "plan_covers/remote_core_mach_1795516757298.webp",
       "activityIds": [
         "cableCrunch",
         "backExtension"
-      ]
+      ],
+      "coverImagePill": "plan_covers/remote_core_mach_pill_1795516757318.webp",
+      "coverImagePillAlign": -1
     },
     {
       "id": "remote_full_bw",
