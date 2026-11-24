@@ -197,5 +197,6 @@
   },
   "description": "Jump rope with one dumbbell row each round.",
   "coverImagePath": "plan_covers/remote_cardio_db_1795514951999.webp",
-  "coverImagePillAlign": 0
+  "coverImagePill": "plan_covers/remote_cardio_db_1795514951999.webp",
+  "coverImagePillAlign": -1
 }

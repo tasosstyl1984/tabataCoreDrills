@@ -1,6 +1,6 @@
 {
-  "version": 282,
-  "updatedAtMs": 1795515360490,
+  "version": 283,
+  "updatedAtMs": 1795515398958,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -104,7 +104,7 @@
       "id": "remote_cardio_db",
       "name": "Cardio Dumbbells",
       "file": "drills/remote_cardio_db.json",
-      "updatedAtMs": 1795514952017,
+      "updatedAtMs": 1795515397839,
       "category": "conditioning",
       "description": "Jump rope with one dumbbell row each round.",
       "coverImage": "plan_covers/remote_cardio_db_1795514951999.webp",
@@ -112,7 +112,8 @@
         "jumpRope",
         "dumbbellRow"
       ],
-      "coverImagePillAlign": 0
+      "coverImagePill": "plan_covers/remote_cardio_db_1795514951999.webp",
+      "coverImagePillAlign": -1
     },
     {
       "id": "remote_cardio_mach",
