@@ -1,6 +1,6 @@
 {
-  "version": 272,
-  "updatedAtMs": 1795216800000,
+  "version": 273,
+  "updatedAtMs": 1795514457707,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -26,12 +26,51 @@
       "coverImagePillAlign": -1
     },
     {
+      "id": "remote_back_bw",
+      "name": "Back Bodyweight",
+      "file": "drills/remote_back_bw.json",
+      "updatedAtMs": 1795514456293,
+      "category": "back",
+      "description": "Pull-ups and inverted rows.",
+      "coverImage": "plan_covers/remote_back_bw_1795514456277.webp",
+      "activityIds": [
+        "pullUps",
+        "invertedRow"
+      ],
+      "coverImagePillAlign": 0
+    },
+    {
+      "id": "remote_back_db",
+      "name": "Back Dumbbells",
+      "file": "drills/remote_back_db.json",
+      "updatedAtMs": 1795123200000,
+      "category": "back",
+      "description": "Dumbbell rows and reverse flies.",
+      "activityIds": [
+        "dumbbellRow",
+        "reverseFly"
+      ]
+    },
+    {
+      "id": "remote_back_mach",
+      "name": "Back Machines",
+      "file": "drills/remote_back_mach.json",
+      "updatedAtMs": 1795123200000,
+      "category": "back",
+      "description": "Lat pulldown, cable row, and assisted pull-ups.",
+      "activityIds": [
+        "latPulldown",
+        "seatedCableRow",
+        "assistedPullUp"
+      ]
+    },
+    {
       "id": "remote_back_to_basics",
       "name": "Back to Basics",
       "file": "drills/remote_back_to_basics.json",
       "updatedAtMs": 1794321929972,
       "category": "combos",
-      "description": "Simple bodyweight foundations \u2014 jumping jacks, abs, plank, dead bug, and push-ups to rebuild a reliable base without equipment.",
+      "description": "Simple bodyweight foundations — jumping jacks, abs, plank, dead bug, and push-ups to rebuild a reliable base without equipment.",
       "coverImage": "plan_covers/remote_back_to_basics_1794321929944.webp",
       "activityIds": [
         "jumpingJacks",
@@ -44,12 +83,170 @@
       "coverImagePillAlign": -1
     },
     {
+      "id": "remote_cardio_bw",
+      "name": "Cardio Bodyweight",
+      "file": "drills/remote_cardio_bw.json",
+      "updatedAtMs": 1795123200000,
+      "category": "conditioning",
+      "description": "Jump rope and mountain climbers.",
+      "activityIds": [
+        "jumpRope",
+        "mountainClimbers"
+      ]
+    },
+    {
+      "id": "remote_cardio_db",
+      "name": "Cardio Dumbbells",
+      "file": "drills/remote_cardio_db.json",
+      "updatedAtMs": 1795123200000,
+      "category": "conditioning",
+      "description": "Jump rope with one dumbbell row each round.",
+      "activityIds": [
+        "jumpRope",
+        "dumbbellRow"
+      ]
+    },
+    {
+      "id": "remote_cardio_mach",
+      "name": "Cardio Machines",
+      "file": "drills/remote_cardio_mach.json",
+      "updatedAtMs": 1795123200000,
+      "category": "conditioning",
+      "description": "Rowing and bike.",
+      "activityIds": [
+        "rowing",
+        "bike"
+      ]
+    },
+    {
+      "id": "remote_chest_bw",
+      "name": "Chest Bodyweight",
+      "file": "drills/remote_chest_bw.json",
+      "updatedAtMs": 1795123200000,
+      "category": "chest",
+      "description": "Push-ups, wide push-ups, and dips. No equipment.",
+      "activityIds": [
+        "pushups",
+        "widePushUp",
+        "dips"
+      ]
+    },
+    {
+      "id": "remote_chest_db",
+      "name": "Chest Dumbbells",
+      "file": "drills/remote_chest_db.json",
+      "updatedAtMs": 1795123200000,
+      "category": "chest",
+      "description": "Dumbbell press and flies. No machines.",
+      "activityIds": [
+        "dumbbellChestPress",
+        "chestFlies"
+      ]
+    },
+    {
+      "id": "remote_chest_mach",
+      "name": "Chest Machines",
+      "file": "drills/remote_chest_mach.json",
+      "updatedAtMs": 1795123200000,
+      "category": "chest",
+      "description": "Chest press, pec deck, and cable fly.",
+      "activityIds": [
+        "chestPressMachine",
+        "pecDeck",
+        "cableFly"
+      ]
+    },
+    {
+      "id": "remote_core_bw",
+      "name": "Core Bodyweight",
+      "file": "drills/remote_core_bw.json",
+      "updatedAtMs": 1795123200000,
+      "category": "core",
+      "description": "Plank, dead bug, bird dog, side plank, and crunches.",
+      "activityIds": [
+        "plank",
+        "deadBug",
+        "birdDog",
+        "sidePlank",
+        "abs"
+      ]
+    },
+    {
+      "id": "remote_core_kb",
+      "name": "Core Kettlebell",
+      "file": "drills/remote_core_kb.json",
+      "updatedAtMs": 1795123200000,
+      "category": "core",
+      "description": "Floor core with one kettlebell halo each round.",
+      "activityIds": [
+        "hollowHold",
+        "russianTwists",
+        "bicycleCrunch",
+        "deadBug",
+        "kettlebellHalo"
+      ]
+    },
+    {
+      "id": "remote_core_mach",
+      "name": "Core Machines",
+      "file": "drills/remote_core_mach.json",
+      "updatedAtMs": 1795123200000,
+      "category": "core",
+      "description": "Cable crunches with one back extension each round.",
+      "activityIds": [
+        "cableCrunch",
+        "backExtension"
+      ]
+    },
+    {
+      "id": "remote_full_bw",
+      "name": "Full Bodyweight",
+      "file": "drills/remote_full_bw.json",
+      "updatedAtMs": 1795123200000,
+      "category": "combos",
+      "description": "Push-ups, squats, lunges, and crunches.",
+      "activityIds": [
+        "pushups",
+        "squats",
+        "lunges",
+        "abs"
+      ]
+    },
+    {
+      "id": "remote_full_db",
+      "name": "Full Dumbbells",
+      "file": "drills/remote_full_db.json",
+      "updatedAtMs": 1795123200000,
+      "category": "combos",
+      "description": "Dumbbell press and row with goblet squats and lunges.",
+      "activityIds": [
+        "dumbbellChestPress",
+        "dumbbellRow",
+        "kettlebellGobletSquat",
+        "lunges"
+      ]
+    },
+    {
+      "id": "remote_full_mach",
+      "name": "Full Machines",
+      "file": "drills/remote_full_mach.json",
+      "updatedAtMs": 1795123200000,
+      "category": "combos",
+      "description": "Chest press, lat pulldown, leg press, and shoulder press.",
+      "activityIds": [
+        "chestPressMachine",
+        "latPulldown",
+        "legPress",
+        "shoulderPressMachine"
+      ]
+    },
+    {
       "id": "remote_hyrox_20",
       "name": "Hyrox Stations 20",
       "file": "drills/remote_hyrox_20.json",
       "updatedAtMs": 1794296392847,
       "category": "conditioning",
-      "description": "Shorter Hyrox-style station ladder \u2014 ropes, sled, carries, and bodyweight moves for race-day work capacity.",
+      "description": "Shorter Hyrox-style station ladder — ropes, sled, carries, and bodyweight moves for race-day work capacity.",
       "coverImage": "plan_covers/remote_hyrox_20_1794296392821.webp",
       "activityIds": [
         "battleRopes",
@@ -70,7 +267,7 @@
       "file": "drills/remote_hyrox_30.json",
       "updatedAtMs": 1794322190736,
       "category": "conditioning",
-      "description": "Mid-length Hyrox station circuit with more volume \u2014 builds engine fitness and station familiarity for Peak effort.",
+      "description": "Mid-length Hyrox station circuit with more volume — builds engine fitness and station familiarity for Peak effort.",
       "coverImage": "plan_covers/remote_hyrox_30_1794322190714.webp",
       "activityIds": [
         "battleRopes",
@@ -91,7 +288,7 @@
       "file": "drills/remote_kill_my_legs.json",
       "updatedAtMs": 1794322575634,
       "category": "combos",
-      "description": "Hard lower-body circuit \u2014 lunges, squats, Bulgarian split squats, jumps, sumo squats, and leg press for quads and glutes.",
+      "description": "Hard lower-body circuit — lunges, squats, Bulgarian split squats, jumps, sumo squats, and leg press for quads and glutes.",
       "coverImage": "plan_covers/remote_kill_my_legs_1794322575606.webp",
       "activityIds": [
         "lunges",
@@ -111,7 +308,7 @@
       "file": "drills/remote_ladies_complex.json",
       "updatedAtMs": 1794322661633,
       "category": "combos",
-      "description": "Long full-body mix \u2014 jumping jacks, climbers, high knees, box jumps, kettlebell swings and rows, push-ups, calves, glutes, and core.",
+      "description": "Long full-body mix — jumping jacks, climbers, high knees, box jumps, kettlebell swings and rows, push-ups, calves, glutes, and core.",
       "coverImage": "plan_covers/remote_ladies_complex_1794322661611.webp",
       "activityIds": [
         "jumpingJacks",
@@ -172,12 +369,55 @@
       "coverImagePillAlign": -1
     },
     {
+      "id": "remote_legs_bw",
+      "name": "Legs Bodyweight",
+      "file": "drills/remote_legs_bw.json",
+      "updatedAtMs": 1795123200000,
+      "category": "lower",
+      "description": "Squats, lunges, bridges, step-ups, and calf raises.",
+      "activityIds": [
+        "squats",
+        "lunges",
+        "gluteBridge",
+        "stepUps",
+        "bodyweightCalfRaises"
+      ]
+    },
+    {
+      "id": "remote_legs_db",
+      "name": "Legs Dumbbells",
+      "file": "drills/remote_legs_db.json",
+      "updatedAtMs": 1795123200000,
+      "category": "lower",
+      "description": "Goblet squats, kettlebell deadlifts, and dumbbell step-ups.",
+      "activityIds": [
+        "kettlebellGobletSquat",
+        "kettlebellDeadlift",
+        "dumbbellStepUps"
+      ]
+    },
+    {
+      "id": "remote_legs_mach",
+      "name": "Legs Machines",
+      "file": "drills/remote_legs_mach.json",
+      "updatedAtMs": 1795123200000,
+      "category": "lower",
+      "description": "Leg press, curl, extension, hip abductor, and calf raise.",
+      "activityIds": [
+        "legPress",
+        "legCurl",
+        "legExtension",
+        "hipAbductor",
+        "calfRaiseMachine"
+      ]
+    },
+    {
       "id": "remote_lion_roar",
       "name": "Lion Roar",
       "file": "drills/remote_lion_roar.json",
       "updatedAtMs": 1794322953336,
       "category": "combos",
-      "description": "High-energy full-body mix \u2014 rope, push-ups, pulls, thrusters, legs, and core when you want a long, varied conditioning day.",
+      "description": "High-energy full-body mix — rope, push-ups, pulls, thrusters, legs, and core when you want a long, varied conditioning day.",
       "coverImage": "plan_covers/remote_lion_roar_1794322953310.webp",
       "activityIds": [
         "jumpRope",
@@ -226,7 +466,7 @@
       "file": "drills/remote_tyson.json",
       "updatedAtMs": 1794323621003,
       "category": "combos",
-      "description": "Jump rope and boxing mixed with kettlebells and core \u2014 footwork, rhythm, and conditioning in one pack.",
+      "description": "Jump rope and boxing mixed with kettlebells and core — footwork, rhythm, and conditioning in one pack.",
       "coverImage": "plan_covers/remote_tyson_1794323620981.webp",
       "activityIds": [
         "jumpRope",
@@ -446,258 +686,6 @@
       "coverImagePillAlign": -1
     },
     {
-      "id": "remote_chest_bw",
-      "name": "Chest Bodyweight",
-      "file": "drills/remote_chest_bw.json",
-      "updatedAtMs": 1795123200000,
-      "category": "chest",
-      "description": "Push-ups, wide push-ups, and dips. No equipment.",
-      "activityIds": [
-        "pushups",
-        "widePushUp",
-        "dips"
-      ]
-    },
-    {
-      "id": "remote_chest_db",
-      "name": "Chest Dumbbells",
-      "file": "drills/remote_chest_db.json",
-      "updatedAtMs": 1795123200000,
-      "category": "chest",
-      "description": "Dumbbell press and flies. No machines.",
-      "activityIds": [
-        "dumbbellChestPress",
-        "chestFlies"
-      ]
-    },
-    {
-      "id": "remote_chest_mach",
-      "name": "Chest Machines",
-      "file": "drills/remote_chest_mach.json",
-      "updatedAtMs": 1795123200000,
-      "category": "chest",
-      "description": "Chest press, pec deck, and cable fly.",
-      "activityIds": [
-        "chestPressMachine",
-        "pecDeck",
-        "cableFly"
-      ]
-    },
-    {
-      "id": "remote_back_bw",
-      "name": "Back Bodyweight",
-      "file": "drills/remote_back_bw.json",
-      "updatedAtMs": 1795123200000,
-      "category": "back",
-      "description": "Pull-ups and inverted rows.",
-      "activityIds": [
-        "pullUps",
-        "invertedRow"
-      ]
-    },
-    {
-      "id": "remote_back_db",
-      "name": "Back Dumbbells",
-      "file": "drills/remote_back_db.json",
-      "updatedAtMs": 1795123200000,
-      "category": "back",
-      "description": "Dumbbell rows and reverse flies.",
-      "activityIds": [
-        "dumbbellRow",
-        "reverseFly"
-      ]
-    },
-    {
-      "id": "remote_back_mach",
-      "name": "Back Machines",
-      "file": "drills/remote_back_mach.json",
-      "updatedAtMs": 1795123200000,
-      "category": "back",
-      "description": "Lat pulldown, cable row, and assisted pull-ups.",
-      "activityIds": [
-        "latPulldown",
-        "seatedCableRow",
-        "assistedPullUp"
-      ]
-    },
-    {
-      "id": "remote_legs_bw",
-      "name": "Legs Bodyweight",
-      "file": "drills/remote_legs_bw.json",
-      "updatedAtMs": 1795123200000,
-      "category": "lower",
-      "description": "Squats, lunges, bridges, step-ups, and calf raises.",
-      "activityIds": [
-        "squats",
-        "lunges",
-        "gluteBridge",
-        "stepUps",
-        "bodyweightCalfRaises"
-      ]
-    },
-    {
-      "id": "remote_legs_db",
-      "name": "Legs Dumbbells",
-      "file": "drills/remote_legs_db.json",
-      "updatedAtMs": 1795123200000,
-      "category": "lower",
-      "description": "Goblet squats, kettlebell deadlifts, and dumbbell step-ups.",
-      "activityIds": [
-        "kettlebellGobletSquat",
-        "kettlebellDeadlift",
-        "dumbbellStepUps"
-      ]
-    },
-    {
-      "id": "remote_legs_mach",
-      "name": "Legs Machines",
-      "file": "drills/remote_legs_mach.json",
-      "updatedAtMs": 1795123200000,
-      "category": "lower",
-      "description": "Leg press, curl, extension, hip abductor, and calf raise.",
-      "activityIds": [
-        "legPress",
-        "legCurl",
-        "legExtension",
-        "hipAbductor",
-        "calfRaiseMachine"
-      ]
-    },
-    {
-      "id": "remote_core_bw",
-      "name": "Core Bodyweight",
-      "file": "drills/remote_core_bw.json",
-      "updatedAtMs": 1795123200000,
-      "category": "core",
-      "description": "Plank, dead bug, bird dog, side plank, and crunches.",
-      "activityIds": [
-        "plank",
-        "deadBug",
-        "birdDog",
-        "sidePlank",
-        "abs"
-      ]
-    },
-    {
-      "id": "remote_core_kb",
-      "name": "Core Kettlebell",
-      "file": "drills/remote_core_kb.json",
-      "updatedAtMs": 1795123200000,
-      "category": "core",
-      "description": "Floor core with one kettlebell halo each round.",
-      "activityIds": [
-        "hollowHold",
-        "russianTwists",
-        "bicycleCrunch",
-        "deadBug",
-        "kettlebellHalo"
-      ]
-    },
-    {
-      "id": "remote_core_mach",
-      "name": "Core Machines",
-      "file": "drills/remote_core_mach.json",
-      "updatedAtMs": 1795123200000,
-      "category": "core",
-      "description": "Cable crunches with one back extension each round.",
-      "activityIds": [
-        "cableCrunch",
-        "backExtension"
-      ]
-    },
-    {
-      "id": "remote_full_bw",
-      "name": "Full Bodyweight",
-      "file": "drills/remote_full_bw.json",
-      "updatedAtMs": 1795123200000,
-      "category": "combos",
-      "description": "Push-ups, squats, lunges, and crunches.",
-      "activityIds": [
-        "pushups",
-        "squats",
-        "lunges",
-        "abs"
-      ]
-    },
-    {
-      "id": "remote_full_db",
-      "name": "Full Dumbbells",
-      "file": "drills/remote_full_db.json",
-      "updatedAtMs": 1795123200000,
-      "category": "combos",
-      "description": "Dumbbell press and row with goblet squats and lunges.",
-      "activityIds": [
-        "dumbbellChestPress",
-        "dumbbellRow",
-        "kettlebellGobletSquat",
-        "lunges"
-      ]
-    },
-    {
-      "id": "remote_full_mach",
-      "name": "Full Machines",
-      "file": "drills/remote_full_mach.json",
-      "updatedAtMs": 1795123200000,
-      "category": "combos",
-      "description": "Chest press, lat pulldown, leg press, and shoulder press.",
-      "activityIds": [
-        "chestPressMachine",
-        "latPulldown",
-        "legPress",
-        "shoulderPressMachine"
-      ]
-    },
-    {
-      "id": "remote_cardio_bw",
-      "name": "Cardio Bodyweight",
-      "file": "drills/remote_cardio_bw.json",
-      "updatedAtMs": 1795123200000,
-      "category": "conditioning",
-      "description": "Jump rope and mountain climbers.",
-      "activityIds": [
-        "jumpRope",
-        "mountainClimbers"
-      ]
-    },
-    {
-      "id": "remote_cardio_db",
-      "name": "Cardio Dumbbells",
-      "file": "drills/remote_cardio_db.json",
-      "updatedAtMs": 1795123200000,
-      "category": "conditioning",
-      "description": "Jump rope with one dumbbell row each round.",
-      "activityIds": [
-        "jumpRope",
-        "dumbbellRow"
-      ]
-    },
-    {
-      "id": "remote_cardio_mach",
-      "name": "Cardio Machines",
-      "file": "drills/remote_cardio_mach.json",
-      "updatedAtMs": 1795123200000,
-      "category": "conditioning",
-      "description": "Rowing and bike.",
-      "activityIds": [
-        "rowing",
-        "bike"
-      ]
-    },
-    {
-      "id": "remote_upper_bw",
-      "name": "Upper Bodyweight",
-      "file": "drills/remote_upper_bw.json",
-      "updatedAtMs": 1795123300000,
-      "category": "upper",
-      "description": "Push-ups, pike push-ups, inverted rows, and wide push-ups.",
-      "activityIds": [
-        "pushups",
-        "pikePushUp",
-        "invertedRow",
-        "widePushUp"
-      ]
-    },
-    {
       "id": "remote_tabata_bodyweight",
       "name": "Tabata Bodyweight",
       "file": "drills/remote_tabata_bodyweight.json",
@@ -738,6 +726,20 @@
       ],
       "coverImagePill": "plan_covers/default_plyo_power_30_pill.webp",
       "coverImagePillAlign": -1
+    },
+    {
+      "id": "remote_upper_bw",
+      "name": "Upper Bodyweight",
+      "file": "drills/remote_upper_bw.json",
+      "updatedAtMs": 1795123300000,
+      "category": "upper",
+      "description": "Push-ups, pike push-ups, inverted rows, and wide push-ups.",
+      "activityIds": [
+        "pushups",
+        "pikePushUp",
+        "invertedRow",
+        "widePushUp"
+      ]
     }
   ]
 }
