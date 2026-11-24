@@ -1,6 +1,6 @@
 {
-  "version": 289,
-  "updatedAtMs": 1795516387248,
+  "version": 290,
+  "updatedAtMs": 1795516644872,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -200,16 +200,19 @@
       "id": "remote_core_kb",
       "name": "Core Kettlebell",
       "file": "drills/remote_core_kb.json",
-      "updatedAtMs": 1795123200000,
+      "updatedAtMs": 1795516643424,
       "category": "core",
       "description": "Floor core with one kettlebell halo each round.",
+      "coverImage": "plan_covers/remote_core_kb_1795516643395.webp",
       "activityIds": [
         "hollowHold",
         "russianTwists",
         "bicycleCrunch",
         "deadBug",
         "kettlebellHalo"
-      ]
+      ],
+      "coverImagePill": "plan_covers/remote_core_kb_pill_1795516643415.webp",
+      "coverImagePillAlign": -1
     },
     {
       "id": "remote_core_mach",
