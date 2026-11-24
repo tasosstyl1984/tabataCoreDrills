@@ -1,6 +1,6 @@
 {
-  "version": 283,
-  "updatedAtMs": 1795515398958,
+  "version": 284,
+  "updatedAtMs": 1795515450504,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -90,7 +90,7 @@
       "id": "remote_cardio_bw",
       "name": "Cardio Bodyweight",
       "file": "drills/remote_cardio_bw.json",
-      "updatedAtMs": 1795514806906,
+      "updatedAtMs": 1795515449160,
       "category": "conditioning",
       "description": "Jump rope and mountain climbers.",
       "coverImage": "plan_covers/remote_cardio_bw_1795514806894.webp",
@@ -98,7 +98,8 @@
         "jumpRope",
         "mountainClimbers"
       ],
-      "coverImagePillAlign": 0
+      "coverImagePill": "plan_covers/remote_cardio_bw_1795514806894.webp",
+      "coverImagePillAlign": -1
     },
     {
       "id": "remote_cardio_db",
