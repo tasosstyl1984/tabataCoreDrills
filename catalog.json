@@ -1,6 +1,6 @@
 {
-  "version": 285,
-  "updatedAtMs": 1795515466024,
+  "version": 286,
+  "updatedAtMs": 1795515491529,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -135,7 +135,7 @@
       "id": "remote_chest_bw",
       "name": "Chest Bodyweight",
       "file": "drills/remote_chest_bw.json",
-      "updatedAtMs": 1795515240151,
+      "updatedAtMs": 1795515490513,
       "category": "chest",
       "description": "Push-ups, wide push-ups, and dips. No equipment.",
       "coverImage": "plan_covers/remote_chest_bw_1795515240135.webp",
@@ -144,7 +144,8 @@
         "widePushUp",
         "dips"
       ],
-      "coverImagePillAlign": 0
+      "coverImagePill": "plan_covers/remote_chest_bw_1795515240135.webp",
+      "coverImagePillAlign": -1
     },
     {
       "id": "remote_chest_db",

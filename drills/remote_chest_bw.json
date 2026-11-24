@@ -137,5 +137,6 @@
   },
   "description": "Push-ups, wide push-ups, and dips. No equipment.",
   "coverImagePath": "plan_covers/remote_chest_bw_1795515240135.webp",
-  "coverImagePillAlign": 0
+  "coverImagePill": "plan_covers/remote_chest_bw_1795515240135.webp",
+  "coverImagePillAlign": -1
 }
