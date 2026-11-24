@@ -175,5 +175,8 @@
       }
     ]
   },
-  "description": "Chest press, pec deck, and cable fly."
+  "description": "Chest press, pec deck, and cable fly.",
+  "coverImagePath": "plan_covers/remote_chest_mach_1795516222236.webp",
+  "coverImagePill": "plan_covers/remote_chest_mach_pill_1795516222258.webp",
+  "coverImagePillAlign": -1
 }

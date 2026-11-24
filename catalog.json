@@ -1,6 +1,6 @@
 {
-  "version": 287,
-  "updatedAtMs": 1795515507708,
+  "version": 288,
+  "updatedAtMs": 1795516223815,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -166,14 +166,17 @@
       "id": "remote_chest_mach",
       "name": "Chest Machines",
       "file": "drills/remote_chest_mach.json",
-      "updatedAtMs": 1795123200000,
+      "updatedAtMs": 1795516222268,
       "category": "chest",
       "description": "Chest press, pec deck, and cable fly.",
+      "coverImage": "plan_covers/remote_chest_mach_1795516222236.webp",
       "activityIds": [
         "chestPressMachine",
         "pecDeck",
         "cableFly"
-      ]
+      ],
+      "coverImagePill": "plan_covers/remote_chest_mach_pill_1795516222258.webp",
+      "coverImagePillAlign": -1
     },
     {
       "id": "remote_core_bw",
