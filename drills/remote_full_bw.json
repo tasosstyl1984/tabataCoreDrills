@@ -2,11 +2,11 @@
   "id": "remote_full_bw",
   "name": "Full Bodyweight",
   "createdAtMs": 1795123200000,
-  "sets": 6,
+  "sets": 4,
   "repsPerSet": 4,
   "workSeconds": 30,
-  "restBetweenRepsSeconds": 15,
-  "restBetweenSetsSeconds": 15,
+  "restBetweenRepsSeconds": 60,
+  "restBetweenSetsSeconds": 75,
   "warmupEnabled": false,
   "warmupSeconds": 60,
   "cooldownEnabled": false,
@@ -17,151 +17,101 @@
         "rounds": [
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "pushups"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "squats"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "lunges"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "abs"
           }
         ],
-        "restAfterSetSeconds": 15
+        "restAfterSetSeconds": 75
       },
       {
         "rounds": [
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "pushups"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "squats"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "lunges"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "abs"
           }
         ],
-        "restAfterSetSeconds": 15
+        "restAfterSetSeconds": 75
       },
       {
         "rounds": [
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "pushups"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "squats"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "lunges"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "abs"
           }
         ],
-        "restAfterSetSeconds": 15
+        "restAfterSetSeconds": 75
       },
       {
         "rounds": [
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "pushups"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "squats"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "lunges"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "abs"
           }
         ],
-        "restAfterSetSeconds": 15
-      },
-      {
-        "rounds": [
-          {
-            "workSeconds": 30,
-            "restAfterSeconds": 15,
-            "activityId": "pushups"
-          },
-          {
-            "workSeconds": 30,
-            "restAfterSeconds": 15,
-            "activityId": "squats"
-          },
-          {
-            "workSeconds": 30,
-            "restAfterSeconds": 15,
-            "activityId": "lunges"
-          },
-          {
-            "workSeconds": 30,
-            "restAfterSeconds": 15,
-            "activityId": "abs"
-          }
-        ],
-        "restAfterSetSeconds": 15
-      },
-      {
-        "rounds": [
-          {
-            "workSeconds": 30,
-            "restAfterSeconds": 15,
-            "activityId": "pushups"
-          },
-          {
-            "workSeconds": 30,
-            "restAfterSeconds": 15,
-            "activityId": "squats"
-          },
-          {
-            "workSeconds": 30,
-            "restAfterSeconds": 15,
-            "activityId": "lunges"
-          },
-          {
-            "workSeconds": 30,
-            "restAfterSeconds": 15,
-            "activityId": "abs"
-          }
-        ],
-        "restAfterSetSeconds": 15
+        "restAfterSetSeconds": 75
       }
     ]
   },

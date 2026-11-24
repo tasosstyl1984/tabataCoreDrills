@@ -1,6 +1,6 @@
 {
-  "version": 298,
-  "updatedAtMs": 1795518904318,
+  "version": 299,
+  "updatedAtMs": 1795556738197,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -233,7 +233,7 @@
       "id": "remote_full_bw",
       "name": "Full Bodyweight",
       "file": "drills/remote_full_bw.json",
-      "updatedAtMs": 1795516851141,
+      "updatedAtMs": 1795556736928,
       "category": "combos",
       "description": "Push-ups, squats, lunges, and crunches.",
       "coverImage": "plan_covers/remote_full_bw_1795516851112.webp",
