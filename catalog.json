@@ -1,6 +1,6 @@
 {
-  "version": 273,
-  "updatedAtMs": 1795514457707,
+  "version": 274,
+  "updatedAtMs": 1795514510594,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -29,10 +29,10 @@
       "id": "remote_back_bw",
       "name": "Back Bodyweight",
       "file": "drills/remote_back_bw.json",
-      "updatedAtMs": 1795514456293,
+      "updatedAtMs": 1795514508315,
       "category": "back",
       "description": "Pull-ups and inverted rows.",
-      "coverImage": "plan_covers/remote_back_bw_1795514456277.webp",
+      "coverImage": "plan_covers/remote_back_bw_1795514508298.webp",
       "activityIds": [
         "pullUps",
         "invertedRow"
