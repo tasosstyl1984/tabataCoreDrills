@@ -1,6 +1,6 @@
 {
-  "version": 295,
-  "updatedAtMs": 1795517453569,
+  "version": 296,
+  "updatedAtMs": 1795517588572,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -430,14 +430,17 @@
       "id": "remote_legs_db",
       "name": "Legs Dumbbells",
       "file": "drills/remote_legs_db.json",
-      "updatedAtMs": 1795123200000,
+      "updatedAtMs": 1795517587187,
       "category": "lower",
       "description": "Goblet squats, kettlebell deadlifts, and dumbbell step-ups.",
+      "coverImage": "plan_covers/remote_legs_db_1795517587157.webp",
       "activityIds": [
         "kettlebellGobletSquat",
         "kettlebellDeadlift",
         "dumbbellStepUps"
-      ]
+      ],
+      "coverImagePill": "plan_covers/remote_legs_db_pill_1795517587176.webp",
+      "coverImagePillAlign": -1
     },
     {
       "id": "remote_legs_mach",
