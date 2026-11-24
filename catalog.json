@@ -1,6 +1,6 @@
 {
-  "version": 288,
-  "updatedAtMs": 1795516223815,
+  "version": 289,
+  "updatedAtMs": 1795516387248,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -182,16 +182,19 @@
       "id": "remote_core_bw",
       "name": "Core Bodyweight",
       "file": "drills/remote_core_bw.json",
-      "updatedAtMs": 1795123200000,
+      "updatedAtMs": 1795516385906,
       "category": "core",
       "description": "Plank, dead bug, bird dog, side plank, and crunches.",
+      "coverImage": "plan_covers/remote_core_bw_1795516385876.webp",
       "activityIds": [
         "plank",
         "deadBug",
         "birdDog",
         "sidePlank",
         "abs"
-      ]
+      ],
+      "coverImagePill": "plan_covers/remote_core_bw_pill_1795516385895.webp",
+      "coverImagePillAlign": -1
     },
     {
       "id": "remote_core_kb",
