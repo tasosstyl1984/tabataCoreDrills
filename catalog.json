@@ -1,6 +1,6 @@
 {
-  "version": 284,
-  "updatedAtMs": 1795515450504,
+  "version": 285,
+  "updatedAtMs": 1795515466024,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -120,7 +120,7 @@
       "id": "remote_cardio_mach",
       "name": "Cardio Machines",
       "file": "drills/remote_cardio_mach.json",
-      "updatedAtMs": 1795515088721,
+      "updatedAtMs": 1795515464940,
       "category": "conditioning",
       "description": "Rowing and bike.",
       "coverImage": "plan_covers/remote_cardio_mach_1795515088707.webp",
@@ -128,7 +128,8 @@
         "rowing",
         "bike"
       ],
-      "coverImagePillAlign": 0
+      "coverImagePill": "plan_covers/remote_cardio_mach_1795515088707.webp",
+      "coverImagePillAlign": -1
     },
     {
       "id": "remote_chest_bw",
