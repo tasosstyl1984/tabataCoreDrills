@@ -165,5 +165,8 @@
       }
     ]
   },
-  "description": "Dumbbell press and row with goblet squats and lunges."
+  "description": "Dumbbell press and row with goblet squats and lunges.",
+  "coverImagePath": "plan_covers/remote_full_db_1795516952486.webp",
+  "coverImagePill": "plan_covers/remote_full_db_pill_1795516952503.webp",
+  "coverImagePillAlign": -1
 }

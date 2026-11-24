@@ -1,6 +1,6 @@
 {
-  "version": 292,
-  "updatedAtMs": 1795516852431,
+  "version": 293,
+  "updatedAtMs": 1795516953871,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -250,15 +250,18 @@
       "id": "remote_full_db",
       "name": "Full Dumbbells",
       "file": "drills/remote_full_db.json",
-      "updatedAtMs": 1795123200000,
+      "updatedAtMs": 1795516952512,
       "category": "combos",
       "description": "Dumbbell press and row with goblet squats and lunges.",
+      "coverImage": "plan_covers/remote_full_db_1795516952486.webp",
       "activityIds": [
         "dumbbellChestPress",
         "dumbbellRow",
         "kettlebellGobletSquat",
         "lunges"
-      ]
+      ],
+      "coverImagePill": "plan_covers/remote_full_db_pill_1795516952503.webp",
+      "coverImagePillAlign": -1
     },
     {
       "id": "remote_full_mach",
