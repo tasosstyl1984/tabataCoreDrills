@@ -4,9 +4,9 @@
   "createdAtMs": 1795123200000,
   "sets": 8,
   "repsPerSet": 3,
-  "workSeconds": 40,
-  "restBetweenRepsSeconds": 20,
-  "restBetweenSetsSeconds": 20,
+  "workSeconds": 30,
+  "restBetweenRepsSeconds": 60,
+  "restBetweenSetsSeconds": 80,
   "warmupEnabled": false,
   "warmupSeconds": 60,
   "cooldownEnabled": false,
@@ -16,162 +16,162 @@
       {
         "rounds": [
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "latPulldown"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "seatedCableRow"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "assistedPullUp"
           }
         ],
-        "restAfterSetSeconds": 20
+        "restAfterSetSeconds": 80
       },
       {
         "rounds": [
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "latPulldown"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "seatedCableRow"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "assistedPullUp"
           }
         ],
-        "restAfterSetSeconds": 20
+        "restAfterSetSeconds": 80
       },
       {
         "rounds": [
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "latPulldown"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "seatedCableRow"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "assistedPullUp"
           }
         ],
-        "restAfterSetSeconds": 20
+        "restAfterSetSeconds": 80
       },
       {
         "rounds": [
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "latPulldown"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "seatedCableRow"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "assistedPullUp"
           }
         ],
-        "restAfterSetSeconds": 20
+        "restAfterSetSeconds": 80
       },
       {
         "rounds": [
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "latPulldown"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "seatedCableRow"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "assistedPullUp"
           }
         ],
-        "restAfterSetSeconds": 20
+        "restAfterSetSeconds": 80
       },
       {
         "rounds": [
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "latPulldown"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "seatedCableRow"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "assistedPullUp"
           }
         ],
-        "restAfterSetSeconds": 20
+        "restAfterSetSeconds": 80
       },
       {
         "rounds": [
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "latPulldown"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "seatedCableRow"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "assistedPullUp"
           }
         ],
-        "restAfterSetSeconds": 20
+        "restAfterSetSeconds": 80
       },
       {
         "rounds": [
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "latPulldown"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "seatedCableRow"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "assistedPullUp"
           }
         ],
-        "restAfterSetSeconds": 20
+        "restAfterSetSeconds": 80
       }
     ]
   },

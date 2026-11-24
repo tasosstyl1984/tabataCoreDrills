@@ -5,9 +5,9 @@
   "sets": 4,
   "repsPerSet": 6,
   "workSeconds": 70,
-  "restBetweenRepsSeconds": 60,
-  "restBetweenSetsSeconds": 60,
-  "warmupEnabled": false,
+  "restBetweenRepsSeconds": 75,
+  "restBetweenSetsSeconds": 90,
+  "warmupEnabled": true,
   "warmupSeconds": 60,
   "cooldownEnabled": false,
   "cooldownSeconds": 60,
@@ -17,141 +17,141 @@
         "rounds": [
           {
             "workSeconds": 70,
-            "restAfterSeconds": 60,
+            "restAfterSeconds": 75,
             "activityId": "shadowBoxing"
           },
           {
             "workSeconds": 70,
-            "restAfterSeconds": 60,
+            "restAfterSeconds": 75,
             "activityId": "shadowBoxing"
           },
           {
             "workSeconds": 70,
-            "restAfterSeconds": 60,
+            "restAfterSeconds": 75,
             "activityId": "shadowBoxing"
           },
           {
             "workSeconds": 70,
-            "restAfterSeconds": 60,
+            "restAfterSeconds": 75,
             "activityId": "shadowBoxing"
           },
           {
             "workSeconds": 70,
-            "restAfterSeconds": 60,
+            "restAfterSeconds": 75,
             "activityId": "shadowBoxing"
           },
           {
             "workSeconds": 70,
-            "restAfterSeconds": 60,
+            "restAfterSeconds": 75,
             "activityId": "shadowBoxing"
           }
         ],
-        "restAfterSetSeconds": 60
+        "restAfterSetSeconds": 90
       },
       {
         "rounds": [
           {
             "workSeconds": 60,
-            "restAfterSeconds": 60,
+            "restAfterSeconds": 75,
             "activityId": "kettlebellSwings"
           },
           {
             "workSeconds": 70,
-            "restAfterSeconds": 60,
+            "restAfterSeconds": 75,
             "activityId": "kettlebellHalo"
           },
           {
             "workSeconds": 70,
-            "restAfterSeconds": 60,
+            "restAfterSeconds": 75,
             "activityId": "kettlebellCleanPress"
           },
           {
             "workSeconds": 70,
-            "restAfterSeconds": 60,
+            "restAfterSeconds": 75,
             "activityId": "kettlebellRow"
           },
           {
             "workSeconds": 70,
-            "restAfterSeconds": 60,
+            "restAfterSeconds": 75,
             "activityId": "kettlebellSnatch"
           },
           {
             "workSeconds": 70,
-            "restAfterSeconds": 60,
+            "restAfterSeconds": 75,
             "activityId": "kettlebellGorillaRow"
           }
         ],
-        "restAfterSetSeconds": 60
+        "restAfterSetSeconds": 90
       },
       {
         "rounds": [
           {
             "workSeconds": 60,
-            "restAfterSeconds": 60,
+            "restAfterSeconds": 75,
             "activityId": "kettlebellSwings"
           },
           {
             "workSeconds": 70,
-            "restAfterSeconds": 60,
+            "restAfterSeconds": 75,
             "activityId": "kettlebellHalo"
           },
           {
             "workSeconds": 70,
-            "restAfterSeconds": 60,
+            "restAfterSeconds": 75,
             "activityId": "kettlebellCleanPress"
           },
           {
             "workSeconds": 70,
-            "restAfterSeconds": 60,
+            "restAfterSeconds": 75,
             "activityId": "kettlebellRow"
           },
           {
             "workSeconds": 70,
-            "restAfterSeconds": 60,
+            "restAfterSeconds": 75,
             "activityId": "kettlebellSnatch"
           },
           {
             "workSeconds": 70,
-            "restAfterSeconds": 60,
+            "restAfterSeconds": 75,
             "activityId": "kettlebellGorillaRow"
           }
         ],
-        "restAfterSetSeconds": 60
+        "restAfterSetSeconds": 90
       },
       {
         "rounds": [
           {
             "workSeconds": 60,
-            "restAfterSeconds": 60,
+            "restAfterSeconds": 75,
             "activityId": "kettlebellSwings"
           },
           {
             "workSeconds": 70,
-            "restAfterSeconds": 60,
+            "restAfterSeconds": 75,
             "activityId": "kettlebellHalo"
           },
           {
             "workSeconds": 70,
-            "restAfterSeconds": 60,
+            "restAfterSeconds": 75,
             "activityId": "kettlebellCleanPress"
           },
           {
             "workSeconds": 70,
-            "restAfterSeconds": 60,
+            "restAfterSeconds": 75,
             "activityId": "kettlebellRow"
           },
           {
             "workSeconds": 70,
-            "restAfterSeconds": 60,
+            "restAfterSeconds": 75,
             "activityId": "kettlebellSnatch"
           },
           {
             "workSeconds": 70,
-            "restAfterSeconds": 60,
+            "restAfterSeconds": 75,
             "activityId": "kettlebellGorillaRow"
           }
         ],
-        "restAfterSetSeconds": 60
+        "restAfterSetSeconds": 90
       }
     ]
   },

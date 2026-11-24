@@ -4,9 +4,9 @@
   "createdAtMs": 1795123200000,
   "sets": 6,
   "repsPerSet": 5,
-  "workSeconds": 40,
-  "restBetweenRepsSeconds": 20,
-  "restBetweenSetsSeconds": 20,
+  "workSeconds": 30,
+  "restBetweenRepsSeconds": 60,
+  "restBetweenSetsSeconds": 80,
   "warmupEnabled": false,
   "warmupSeconds": 60,
   "cooldownEnabled": false,
@@ -16,182 +16,182 @@
       {
         "rounds": [
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "hollowHold"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "russianTwists"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "bicycleCrunch"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "deadBug"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "kettlebellHalo"
           }
         ],
-        "restAfterSetSeconds": 20
+        "restAfterSetSeconds": 80
       },
       {
         "rounds": [
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "hollowHold"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "russianTwists"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "bicycleCrunch"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "deadBug"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "kettlebellHalo"
           }
         ],
-        "restAfterSetSeconds": 20
+        "restAfterSetSeconds": 80
       },
       {
         "rounds": [
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "hollowHold"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "russianTwists"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "bicycleCrunch"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "deadBug"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "kettlebellHalo"
           }
         ],
-        "restAfterSetSeconds": 20
+        "restAfterSetSeconds": 80
       },
       {
         "rounds": [
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "hollowHold"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "russianTwists"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "bicycleCrunch"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "deadBug"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "kettlebellHalo"
           }
         ],
-        "restAfterSetSeconds": 20
+        "restAfterSetSeconds": 80
       },
       {
         "rounds": [
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "hollowHold"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "russianTwists"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "bicycleCrunch"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "deadBug"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "kettlebellHalo"
           }
         ],
-        "restAfterSetSeconds": 20
+        "restAfterSetSeconds": 80
       },
       {
         "rounds": [
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "hollowHold"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "russianTwists"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "bicycleCrunch"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "deadBug"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 60,
             "activityId": "kettlebellHalo"
           }
         ],
-        "restAfterSetSeconds": 20
+        "restAfterSetSeconds": 80
       }
     ]
   },

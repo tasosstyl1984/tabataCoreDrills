@@ -2,14 +2,14 @@
   "id": "remote_tabata_classic",
   "name": "Tabata Classic",
   "createdAtMs": 1791622139758,
-  "sets": 1,
+  "sets": 3,
   "repsPerSet": 8,
   "workSeconds": 20,
   "restBetweenRepsSeconds": 10,
-  "restBetweenSetsSeconds": 60,
-  "warmupEnabled": false,
-  "warmupSeconds": 60,
-  "cooldownEnabled": false,
+  "restBetweenSetsSeconds": 180,
+  "warmupEnabled": true,
+  "warmupSeconds": 90,
+  "cooldownEnabled": true,
   "cooldownSeconds": 60,
   "structuredPlan": {
     "sets": [
@@ -56,11 +56,101 @@
             "activityId": "highKnees"
           }
         ],
-        "restAfterSetSeconds": 60
+        "restAfterSetSeconds": 180
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "squats"
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "squatThrusts"
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "pushups"
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "burpees"
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "mountainClimbers"
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "jumpingJacks"
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "squatJumps"
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "highKnees"
+          }
+        ],
+        "restAfterSetSeconds": 180
+      },
+      {
+        "rounds": [
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "squats"
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "squatThrusts"
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "pushups"
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "burpees"
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "mountainClimbers"
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "jumpingJacks"
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "squatJumps"
+          },
+          {
+            "workSeconds": 20,
+            "restAfterSeconds": 10,
+            "activityId": "highKnees"
+          }
+        ],
+        "restAfterSetSeconds": 180
       }
     ]
   },
-  "description": "The original 20-on / 10-off protocol — eight all-out bodyweight stations with voice cues and rest-preview pictures.",
+  "description": "Classic 20-on / 10-off stations — repeat the eight-move circuit for three rounds with full rest between rounds. Work strong and controlled; shorten rest in the app when you want more challenge.",
   "coverImagePath": "plan_covers/default_tabata_classic.webp",
   "coverImagePill": "plan_covers/default_tabata_classic_pill.webp",
   "coverImagePillAlign": -1
