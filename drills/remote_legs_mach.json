@@ -255,5 +255,7 @@
       }
     ]
   },
-  "description": "Leg press, curl, extension, hip abductor, and calf raise."
+  "description": "Leg press, curl, extension, hip abductor, and calf raise.",
+  "coverImagePath": "plan_covers/remote_legs_mach_1795517703395.webp",
+  "coverImagePillAlign": 0
 }

@@ -1,6 +1,6 @@
 {
-  "version": 296,
-  "updatedAtMs": 1795517588572,
+  "version": 297,
+  "updatedAtMs": 1795517704503,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -446,16 +446,18 @@
       "id": "remote_legs_mach",
       "name": "Legs Machines",
       "file": "drills/remote_legs_mach.json",
-      "updatedAtMs": 1795123200000,
+      "updatedAtMs": 1795517703408,
       "category": "lower",
       "description": "Leg press, curl, extension, hip abductor, and calf raise.",
+      "coverImage": "plan_covers/remote_legs_mach_1795517703395.webp",
       "activityIds": [
         "legPress",
         "legCurl",
         "legExtension",
         "hipAbductor",
         "calfRaiseMachine"
-      ]
+      ],
+      "coverImagePillAlign": 0
     },
     {
       "id": "remote_lion_roar",
