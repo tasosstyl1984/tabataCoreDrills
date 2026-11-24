@@ -1,8 +1,8 @@
 {
-  "version": 170,
-  "updatedAtMs": 1795213200000,
+  "version": 171,
+  "updatedAtMs": 1795514056847,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-  "totalBytes": 11598760,
+  "totalBytes": 12369436,
   "images": [
     {
       "id": "abs",
@@ -741,6 +741,12 @@
       "file": "exercise_guides/barbellInclineBench.webp",
       "bytes": 230626,
       "sha256": "2377b3429ed32ccc"
+    },
+    {
+      "id": "pikePushUp",
+      "file": "exercise_guides/pikePushUp.webp",
+      "bytes": 145204,
+      "sha256": "47e5c0ad42976da3"
     }
   ]
 }
