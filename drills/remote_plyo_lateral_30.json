@@ -6,8 +6,8 @@
   "repsPerSet": 6,
   "workSeconds": 40,
   "restBetweenRepsSeconds": 50,
-  "restBetweenSetsSeconds": 90,
-  "warmupEnabled": false,
+  "restBetweenSetsSeconds": 120,
+  "warmupEnabled": true,
   "warmupSeconds": 60,
   "cooldownEnabled": false,
   "cooldownSeconds": 60,
@@ -46,7 +46,7 @@
             "activityId": "boxJumps"
           }
         ],
-        "restAfterSetSeconds": 90
+        "restAfterSetSeconds": 120
       },
       {
         "rounds": [
@@ -81,7 +81,7 @@
             "activityId": "boxJumps"
           }
         ],
-        "restAfterSetSeconds": 90
+        "restAfterSetSeconds": 120
       },
       {
         "rounds": [
@@ -116,7 +116,7 @@
             "activityId": "boxJumps"
           }
         ],
-        "restAfterSetSeconds": 90
+        "restAfterSetSeconds": 120
       },
       {
         "rounds": [
@@ -151,7 +151,7 @@
             "activityId": "boxJumps"
           }
         ],
-        "restAfterSetSeconds": 90
+        "restAfterSetSeconds": 120
       }
     ]
   },

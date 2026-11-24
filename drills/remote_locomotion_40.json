@@ -7,7 +7,7 @@
   "workSeconds": 40,
   "restBetweenRepsSeconds": 50,
   "restBetweenSetsSeconds": 100,
-  "warmupEnabled": false,
+  "warmupEnabled": true,
   "warmupSeconds": 60,
   "cooldownEnabled": false,
   "cooldownSeconds": 60,

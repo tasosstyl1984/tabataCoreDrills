@@ -1655,6 +1655,30 @@
     }
   }
 
+  function warnMultiActivityRestTiming(template) {
+    const title = (template?.name || editName?.value || "").toLowerCase();
+    if (title.includes("tabata")) return;
+    const sets = template?.structuredPlan?.sets || [];
+    for (const set of sets) {
+      const rounds = set?.rounds || [];
+      const ids = new Set();
+      for (const r of rounds) {
+        if (r?.activityId) ids.add(r.activityId);
+      }
+      if (ids.size < 2) continue;
+      for (const r of rounds) {
+        const work = Number(r?.workSeconds) || 0;
+        const rest = Number(r?.restAfterSeconds) || 0;
+        if (work > 0 && rest < work) {
+          toast(
+            "Round rest is shorter than work — athletes may struggle to switch stations.",
+          );
+          return;
+        }
+      }
+    }
+  }
+
   function buildTemplateFromForm(id) {
     plan = normalizePlan(plan);
     const firstSet = plan.sets[0];
@@ -3022,6 +3046,8 @@
       }
 
       const { template, catalogEntry } = buildTemplateFromForm(id);
+
+      warnMultiActivityRestTiming(template);
 
       // Preserve createdAtMs when editing — read via Contents API (no CDN).
       if (editingEntry) {

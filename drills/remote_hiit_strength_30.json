@@ -5,9 +5,9 @@
   "sets": 3,
   "repsPerSet": 6,
   "workSeconds": 45,
-  "restBetweenRepsSeconds": 45,
+  "restBetweenRepsSeconds": 60,
   "restBetweenSetsSeconds": 120,
-  "warmupEnabled": false,
+  "warmupEnabled": true,
   "warmupSeconds": 60,
   "cooldownEnabled": false,
   "cooldownSeconds": 60,
@@ -17,32 +17,32 @@
         "rounds": [
           {
             "workSeconds": 45,
-            "restAfterSeconds": 45,
+            "restAfterSeconds": 60,
             "activityId": "burpees"
           },
           {
             "workSeconds": 45,
-            "restAfterSeconds": 45,
+            "restAfterSeconds": 60,
             "activityId": "thrusters"
           },
           {
             "workSeconds": 45,
-            "restAfterSeconds": 45,
+            "restAfterSeconds": 60,
             "activityId": "boxJumps"
           },
           {
             "workSeconds": 45,
-            "restAfterSeconds": 45,
+            "restAfterSeconds": 60,
             "activityId": "medBallSlams"
           },
           {
             "workSeconds": 45,
-            "restAfterSeconds": 45,
+            "restAfterSeconds": 60,
             "activityId": "farmerCarry"
           },
           {
             "workSeconds": 45,
-            "restAfterSeconds": 45,
+            "restAfterSeconds": 60,
             "activityId": "mountainClimbers"
           }
         ],
@@ -52,32 +52,32 @@
         "rounds": [
           {
             "workSeconds": 45,
-            "restAfterSeconds": 45,
+            "restAfterSeconds": 60,
             "activityId": "burpees"
           },
           {
             "workSeconds": 45,
-            "restAfterSeconds": 45,
+            "restAfterSeconds": 60,
             "activityId": "thrusters"
           },
           {
             "workSeconds": 45,
-            "restAfterSeconds": 45,
+            "restAfterSeconds": 60,
             "activityId": "boxJumps"
           },
           {
             "workSeconds": 45,
-            "restAfterSeconds": 45,
+            "restAfterSeconds": 60,
             "activityId": "medBallSlams"
           },
           {
             "workSeconds": 45,
-            "restAfterSeconds": 45,
+            "restAfterSeconds": 60,
             "activityId": "farmerCarry"
           },
           {
             "workSeconds": 45,
-            "restAfterSeconds": 45,
+            "restAfterSeconds": 60,
             "activityId": "mountainClimbers"
           }
         ],
@@ -87,32 +87,32 @@
         "rounds": [
           {
             "workSeconds": 45,
-            "restAfterSeconds": 45,
+            "restAfterSeconds": 60,
             "activityId": "burpees"
           },
           {
             "workSeconds": 45,
-            "restAfterSeconds": 45,
+            "restAfterSeconds": 60,
             "activityId": "thrusters"
           },
           {
             "workSeconds": 45,
-            "restAfterSeconds": 45,
+            "restAfterSeconds": 60,
             "activityId": "boxJumps"
           },
           {
             "workSeconds": 45,
-            "restAfterSeconds": 45,
+            "restAfterSeconds": 60,
             "activityId": "medBallSlams"
           },
           {
             "workSeconds": 45,
-            "restAfterSeconds": 45,
+            "restAfterSeconds": 60,
             "activityId": "farmerCarry"
           },
           {
             "workSeconds": 45,
-            "restAfterSeconds": 45,
+            "restAfterSeconds": 60,
             "activityId": "mountainClimbers"
           }
         ],
@@ -120,7 +120,7 @@
       }
     ]
   },
-  "description": "High-intensity strength circuits — power and conditioning in a compact, hard-hitting session.",
+  "description": "Strength and conditioning circuits at a strong, repeatable pace. Shorten rest in the app when you want more challenge.",
   "coverImagePath": "plan_covers/default_hiit_strength_30.webp",
   "coverImagePill": "plan_covers/default_hiit_strength_30_pill.webp",
   "coverImagePillAlign": -1

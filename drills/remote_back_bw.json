@@ -2,11 +2,11 @@
   "id": "remote_back_bw",
   "name": "Back Bodyweight",
   "createdAtMs": 1795123200000,
-  "sets": 6,
+  "sets": 4,
   "repsPerSet": 2,
   "workSeconds": 30,
-  "restBetweenRepsSeconds": 15,
-  "restBetweenSetsSeconds": 15,
+  "restBetweenRepsSeconds": 60,
+  "restBetweenSetsSeconds": 75,
   "warmupEnabled": false,
   "warmupSeconds": 60,
   "cooldownEnabled": false,
@@ -17,91 +17,61 @@
         "rounds": [
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "pullUps"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "invertedRow"
           }
         ],
-        "restAfterSetSeconds": 15
+        "restAfterSetSeconds": 75
       },
       {
         "rounds": [
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "pullUps"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "invertedRow"
           }
         ],
-        "restAfterSetSeconds": 15
+        "restAfterSetSeconds": 75
       },
       {
         "rounds": [
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "pullUps"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "invertedRow"
           }
         ],
-        "restAfterSetSeconds": 15
+        "restAfterSetSeconds": 75
       },
       {
         "rounds": [
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "pullUps"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "invertedRow"
           }
         ],
-        "restAfterSetSeconds": 15
-      },
-      {
-        "rounds": [
-          {
-            "workSeconds": 30,
-            "restAfterSeconds": 15,
-            "activityId": "pullUps"
-          },
-          {
-            "workSeconds": 30,
-            "restAfterSeconds": 15,
-            "activityId": "invertedRow"
-          }
-        ],
-        "restAfterSetSeconds": 15
-      },
-      {
-        "rounds": [
-          {
-            "workSeconds": 30,
-            "restAfterSeconds": 15,
-            "activityId": "pullUps"
-          },
-          {
-            "workSeconds": 30,
-            "restAfterSeconds": 15,
-            "activityId": "invertedRow"
-          }
-        ],
-        "restAfterSetSeconds": 15
+        "restAfterSetSeconds": 75
       }
     ]
   },
