@@ -1,6 +1,6 @@
 {
-  "version": 281,
-  "updatedAtMs": 1795515343273,
+  "version": 282,
+  "updatedAtMs": 1795515360490,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -147,7 +147,7 @@
       "id": "remote_chest_db",
       "name": "Chest Dumbbells",
       "file": "drills/remote_chest_db.json",
-      "updatedAtMs": 1795515341927,
+      "updatedAtMs": 1795515359395,
       "category": "chest",
       "description": "Dumbbell press and flies. No machines.",
       "coverImage": "plan_covers/remote_chest_db_1795515341909.webp",
@@ -155,7 +155,8 @@
         "dumbbellChestPress",
         "chestFlies"
       ],
-      "coverImagePillAlign": 0
+      "coverImagePill": "plan_covers/remote_chest_db_1795515341909.webp",
+      "coverImagePillAlign": -1
     },
     {
       "id": "remote_chest_mach",

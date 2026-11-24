@@ -107,5 +107,6 @@
   },
   "description": "Dumbbell press and flies. No machines.",
   "coverImagePath": "plan_covers/remote_chest_db_1795515341909.webp",
-  "coverImagePillAlign": 0
+  "coverImagePill": "plan_covers/remote_chest_db_1795515341909.webp",
+  "coverImagePillAlign": -1
 }
