@@ -1,8 +1,8 @@
 {
-    "version": 175,
-    "updatedAtMs": 1795514184717,
+    "version": 176,
+    "updatedAtMs": 1795514224877,
     "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-    "totalBytes": 25587826,
+    "totalBytes": 25534142,
     "images": [
         {
             "id": "abs",
@@ -625,8 +625,8 @@
         {
             "id": "squatThrusts",
             "file": "exercise_guides/squatThrusts.webp",
-            "bytes": 199570,
-            "sha256": "3b202e80137a90a5"
+            "bytes": 145886,
+            "sha256": "c461ad6f7a3fcecd"
         },
         {
             "id": "squats",
