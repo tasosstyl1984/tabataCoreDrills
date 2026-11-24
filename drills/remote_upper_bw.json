@@ -2,11 +2,11 @@
   "id": "remote_upper_bw",
   "name": "Upper Bodyweight",
   "createdAtMs": 1795123300000,
-  "sets": 6,
+  "sets": 5,
   "repsPerSet": 4,
   "workSeconds": 30,
-  "restBetweenRepsSeconds": 15,
-  "restBetweenSetsSeconds": 15,
+  "restBetweenRepsSeconds": 60,
+  "restBetweenSetsSeconds": 95,
   "warmupEnabled": false,
   "warmupSeconds": 60,
   "cooldownEnabled": false,
@@ -17,151 +17,126 @@
         "rounds": [
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "pushups"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "pikePushUp"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "invertedRow"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "widePushUp"
           }
         ],
-        "restAfterSetSeconds": 15
+        "restAfterSetSeconds": 95
       },
       {
         "rounds": [
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "pushups"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "pikePushUp"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "invertedRow"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "widePushUp"
           }
         ],
-        "restAfterSetSeconds": 15
+        "restAfterSetSeconds": 95
       },
       {
         "rounds": [
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "pushups"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "pikePushUp"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "invertedRow"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "widePushUp"
           }
         ],
-        "restAfterSetSeconds": 15
+        "restAfterSetSeconds": 95
       },
       {
         "rounds": [
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "pushups"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "pikePushUp"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "invertedRow"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "widePushUp"
           }
         ],
-        "restAfterSetSeconds": 15
+        "restAfterSetSeconds": 95
       },
       {
         "rounds": [
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "pushups"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "pikePushUp"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "invertedRow"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 60,
             "activityId": "widePushUp"
           }
         ],
-        "restAfterSetSeconds": 15
-      },
-      {
-        "rounds": [
-          {
-            "workSeconds": 30,
-            "restAfterSeconds": 15,
-            "activityId": "pushups"
-          },
-          {
-            "workSeconds": 30,
-            "restAfterSeconds": 15,
-            "activityId": "pikePushUp"
-          },
-          {
-            "workSeconds": 30,
-            "restAfterSeconds": 15,
-            "activityId": "invertedRow"
-          },
-          {
-            "workSeconds": 30,
-            "restAfterSeconds": 15,
-            "activityId": "widePushUp"
-          }
-        ],
-        "restAfterSetSeconds": 15
+        "restAfterSetSeconds": 95
       }
     ]
   },
