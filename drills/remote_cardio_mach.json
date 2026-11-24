@@ -135,5 +135,7 @@
       }
     ]
   },
-  "description": "Rowing and bike."
+  "description": "Rowing and bike.",
+  "coverImagePath": "plan_covers/remote_cardio_mach_1795515088707.webp",
+  "coverImagePillAlign": 0
 }
