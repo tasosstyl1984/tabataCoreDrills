@@ -1,6 +1,6 @@
 {
-  "version": 286,
-  "updatedAtMs": 1795515491529,
+  "version": 287,
+  "updatedAtMs": 1795515507708,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -151,7 +151,7 @@
       "id": "remote_chest_db",
       "name": "Chest Dumbbells",
       "file": "drills/remote_chest_db.json",
-      "updatedAtMs": 1795515359395,
+      "updatedAtMs": 1795515506390,
       "category": "chest",
       "description": "Dumbbell press and flies. No machines.",
       "coverImage": "plan_covers/remote_chest_db_1795515341909.webp",
