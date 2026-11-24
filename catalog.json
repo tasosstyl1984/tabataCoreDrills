@@ -1,6 +1,6 @@
 {
-  "version": 294,
-  "updatedAtMs": 1795517252532,
+  "version": 295,
+  "updatedAtMs": 1795517453569,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -412,16 +412,19 @@
       "id": "remote_legs_bw",
       "name": "Legs Bodyweight",
       "file": "drills/remote_legs_bw.json",
-      "updatedAtMs": 1795123200000,
+      "updatedAtMs": 1795517452218,
       "category": "lower",
       "description": "Squats, lunges, bridges, step-ups, and calf raises.",
+      "coverImage": "plan_covers/remote_legs_bw_1795517452190.webp",
       "activityIds": [
         "squats",
         "lunges",
         "gluteBridge",
         "stepUps",
         "bodyweightCalfRaises"
-      ]
+      ],
+      "coverImagePill": "plan_covers/remote_legs_bw_pill_1795517452208.webp",
+      "coverImagePillAlign": -1
     },
     {
       "id": "remote_legs_db",

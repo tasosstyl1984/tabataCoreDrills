@@ -195,5 +195,8 @@
       }
     ]
   },
-  "description": "Squats, lunges, bridges, step-ups, and calf raises."
+  "description": "Squats, lunges, bridges, step-ups, and calf raises.",
+  "coverImagePath": "plan_covers/remote_legs_bw_1795517452190.webp",
+  "coverImagePill": "plan_covers/remote_legs_bw_pill_1795517452208.webp",
+  "coverImagePillAlign": -1
 }
