@@ -2,11 +2,11 @@
   "id": "remote_legs_bw",
   "name": "Legs Bodyweight",
   "createdAtMs": 1795123200000,
-  "sets": 6,
+  "sets": 5,
   "repsPerSet": 5,
   "workSeconds": 30,
-  "restBetweenRepsSeconds": 15,
-  "restBetweenSetsSeconds": 15,
+  "restBetweenRepsSeconds": 50,
+  "restBetweenSetsSeconds": 85,
   "warmupEnabled": false,
   "warmupSeconds": 60,
   "cooldownEnabled": false,
@@ -17,181 +17,151 @@
         "rounds": [
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 50,
             "activityId": "squats"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 50,
             "activityId": "lunges"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 50,
             "activityId": "gluteBridge"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 50,
             "activityId": "stepUps"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 50,
             "activityId": "bodyweightCalfRaises"
           }
         ],
-        "restAfterSetSeconds": 15
+        "restAfterSetSeconds": 85
       },
       {
         "rounds": [
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 50,
             "activityId": "squats"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 50,
             "activityId": "lunges"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 50,
             "activityId": "gluteBridge"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 50,
             "activityId": "stepUps"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 50,
             "activityId": "bodyweightCalfRaises"
           }
         ],
-        "restAfterSetSeconds": 15
+        "restAfterSetSeconds": 85
       },
       {
         "rounds": [
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 50,
             "activityId": "squats"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 50,
             "activityId": "lunges"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 50,
             "activityId": "gluteBridge"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 50,
             "activityId": "stepUps"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 50,
             "activityId": "bodyweightCalfRaises"
           }
         ],
-        "restAfterSetSeconds": 15
+        "restAfterSetSeconds": 85
       },
       {
         "rounds": [
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 50,
             "activityId": "squats"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 50,
             "activityId": "lunges"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 50,
             "activityId": "gluteBridge"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 50,
             "activityId": "stepUps"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 50,
             "activityId": "bodyweightCalfRaises"
           }
         ],
-        "restAfterSetSeconds": 15
+        "restAfterSetSeconds": 85
       },
       {
         "rounds": [
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 50,
             "activityId": "squats"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 50,
             "activityId": "lunges"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 50,
             "activityId": "gluteBridge"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 50,
             "activityId": "stepUps"
           },
           {
             "workSeconds": 30,
-            "restAfterSeconds": 15,
+            "restAfterSeconds": 50,
             "activityId": "bodyweightCalfRaises"
           }
         ],
-        "restAfterSetSeconds": 15
-      },
-      {
-        "rounds": [
-          {
-            "workSeconds": 30,
-            "restAfterSeconds": 15,
-            "activityId": "squats"
-          },
-          {
-            "workSeconds": 30,
-            "restAfterSeconds": 15,
-            "activityId": "lunges"
-          },
-          {
-            "workSeconds": 30,
-            "restAfterSeconds": 15,
-            "activityId": "gluteBridge"
-          },
-          {
-            "workSeconds": 30,
-            "restAfterSeconds": 15,
-            "activityId": "stepUps"
-          },
-          {
-            "workSeconds": 30,
-            "restAfterSeconds": 15,
-            "activityId": "bodyweightCalfRaises"
-          }
-        ],
-        "restAfterSetSeconds": 15
+        "restAfterSetSeconds": 85
       }
     ]
   },
