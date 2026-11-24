@@ -1,6 +1,6 @@
 {
-  "version": 274,
-  "updatedAtMs": 1795514510594,
+  "version": 275,
+  "updatedAtMs": 1795514636933,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -43,13 +43,15 @@
       "id": "remote_back_db",
       "name": "Back Dumbbells",
       "file": "drills/remote_back_db.json",
-      "updatedAtMs": 1795123200000,
+      "updatedAtMs": 1795514635485,
       "category": "back",
       "description": "Dumbbell rows and reverse flies.",
+      "coverImage": "plan_covers/remote_back_db_1795514635465.webp",
       "activityIds": [
         "dumbbellRow",
         "reverseFly"
-      ]
+      ],
+      "coverImagePillAlign": 0
     },
     {
       "id": "remote_back_mach",
