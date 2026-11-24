@@ -1,6 +1,6 @@
 {
-  "version": 293,
-  "updatedAtMs": 1795516953871,
+  "version": 294,
+  "updatedAtMs": 1795517252532,
   "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
   "drills": [
     {
@@ -267,15 +267,18 @@
       "id": "remote_full_mach",
       "name": "Full Machines",
       "file": "drills/remote_full_mach.json",
-      "updatedAtMs": 1795123200000,
+      "updatedAtMs": 1795517251246,
       "category": "combos",
       "description": "Chest press, lat pulldown, leg press, and shoulder press.",
+      "coverImage": "plan_covers/remote_full_mach_1795517251216.webp",
       "activityIds": [
         "chestPressMachine",
         "latPulldown",
         "legPress",
         "shoulderPressMachine"
-      ]
+      ],
+      "coverImagePill": "plan_covers/remote_full_mach_pill_1795517251238.webp",
+      "coverImagePillAlign": -1
     },
     {
       "id": "remote_hyrox_20",

@@ -215,5 +215,8 @@
       }
     ]
   },
-  "description": "Chest press, lat pulldown, leg press, and shoulder press."
+  "description": "Chest press, lat pulldown, leg press, and shoulder press.",
+  "coverImagePath": "plan_covers/remote_full_mach_1795517251216.webp",
+  "coverImagePill": "plan_covers/remote_full_mach_pill_1795517251238.webp",
+  "coverImagePillAlign": -1
 }
