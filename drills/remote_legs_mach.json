@@ -2,10 +2,10 @@
   "id": "remote_legs_mach",
   "name": "Legs Machines",
   "createdAtMs": 1795123200000,
-  "sets": 8,
+  "sets": 5,
   "repsPerSet": 5,
-  "workSeconds": 40,
-  "restBetweenRepsSeconds": 20,
+  "workSeconds": 30,
+  "restBetweenRepsSeconds": 50,
   "restBetweenSetsSeconds": 20,
   "warmupEnabled": false,
   "warmupSeconds": 60,
@@ -16,28 +16,28 @@
       {
         "rounds": [
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
             "activityId": "legPress"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
             "activityId": "legCurl"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
             "activityId": "legExtension"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
             "activityId": "hipAbductor"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
             "activityId": "calfRaiseMachine"
           }
         ],
@@ -46,28 +46,28 @@
       {
         "rounds": [
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
             "activityId": "legPress"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
             "activityId": "legCurl"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
             "activityId": "legExtension"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
             "activityId": "hipAbductor"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
             "activityId": "calfRaiseMachine"
           }
         ],
@@ -76,28 +76,28 @@
       {
         "rounds": [
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
             "activityId": "legPress"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
             "activityId": "legCurl"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
             "activityId": "legExtension"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
             "activityId": "hipAbductor"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
             "activityId": "calfRaiseMachine"
           }
         ],
@@ -106,28 +106,28 @@
       {
         "rounds": [
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
             "activityId": "legPress"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
             "activityId": "legCurl"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
             "activityId": "legExtension"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
             "activityId": "hipAbductor"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
             "activityId": "calfRaiseMachine"
           }
         ],
@@ -136,118 +136,28 @@
       {
         "rounds": [
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
             "activityId": "legPress"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
             "activityId": "legCurl"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
             "activityId": "legExtension"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
             "activityId": "hipAbductor"
           },
           {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
-            "activityId": "calfRaiseMachine"
-          }
-        ],
-        "restAfterSetSeconds": 20
-      },
-      {
-        "rounds": [
-          {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
-            "activityId": "legPress"
-          },
-          {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
-            "activityId": "legCurl"
-          },
-          {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
-            "activityId": "legExtension"
-          },
-          {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
-            "activityId": "hipAbductor"
-          },
-          {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
-            "activityId": "calfRaiseMachine"
-          }
-        ],
-        "restAfterSetSeconds": 20
-      },
-      {
-        "rounds": [
-          {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
-            "activityId": "legPress"
-          },
-          {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
-            "activityId": "legCurl"
-          },
-          {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
-            "activityId": "legExtension"
-          },
-          {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
-            "activityId": "hipAbductor"
-          },
-          {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
-            "activityId": "calfRaiseMachine"
-          }
-        ],
-        "restAfterSetSeconds": 20
-      },
-      {
-        "rounds": [
-          {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
-            "activityId": "legPress"
-          },
-          {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
-            "activityId": "legCurl"
-          },
-          {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
-            "activityId": "legExtension"
-          },
-          {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
-            "activityId": "hipAbductor"
-          },
-          {
-            "workSeconds": 40,
-            "restAfterSeconds": 20,
+            "workSeconds": 30,
+            "restAfterSeconds": 50,
             "activityId": "calfRaiseMachine"
           }
         ],
