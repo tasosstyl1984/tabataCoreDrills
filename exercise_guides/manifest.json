@@ -1,8 +1,8 @@
 {
-    "version": 173,
-    "updatedAtMs": 1795514101797,
+    "version": 174,
+    "updatedAtMs": 1795514135924,
     "baseUrl": "https://raw.githubusercontent.com/tasosstyl1984/tabataCoreDrills/main/",
-    "totalBytes": 25439524,
+    "totalBytes": 25588164,
     "images": [
         {
             "id": "abs",
@@ -759,6 +759,12 @@
             "file": "exercise_guides/invertedRow.webp",
             "bytes": 144080,
             "sha256": "70eeb228dcec7c33"
+        },
+        {
+            "id": "widePushUp",
+            "file": "exercise_guides/widePushUp.webp",
+            "bytes": 148640,
+            "sha256": "66fc99ce785bdf60"
         }
     ]
 }
